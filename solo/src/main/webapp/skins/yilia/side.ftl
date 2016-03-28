@@ -2,18 +2,18 @@
     <div class="overlay"></div>
     <header class="content">
         <a href="${servePath}">
-            <img class="avatar" src="${adminUser.userAvatar}" title="${userName}"/>
+            <img class="avatar" src="/solo/images/nocoder.png" title="${userName}"/>
         </a>
         <hgroup>
             <h1>
                 <a href="${servePath}">${blogTitle}</a>
             </h1>
         </hgroup>
-        <#if "" != noticeBoard>
+        
         <p class="subtitle">
-            ${blogSubtitle}
+        	Standing on the Shoulder of Giants
         </p>
-        </#if>
+        
         <nav>
             <ul>
                 <#list pageNavigations as page>
