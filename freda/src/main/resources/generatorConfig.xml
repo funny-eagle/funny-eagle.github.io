@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="/home/jason/m2/repo/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar" />
+	<context id="context1" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/freda_db?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root" password="0225" />
+		<javaModelGenerator targetPackage="org.nocoder.model"
+			targetProject="/home/jason/workspace/freda/src/main/java" />
+		<sqlMapGenerator targetPackage="org.nocoder.mapper"
+			targetProject="/home/jason/workspace/freda/src/main/java" />
+		<javaClientGenerator
+			targetPackage="org.nocoder.mapper" targetProject="/home/jason/workspace/freda/src/main/java" type="XMLMAPPER" />
+		<table schema="freda_db" tableName="user" />
+	</context>
+</generatorConfiguration>
