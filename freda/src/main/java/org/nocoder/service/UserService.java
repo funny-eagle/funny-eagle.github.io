@@ -4,6 +4,6 @@ import org.nocoder.model.User;
 
 public interface UserService {
 
-	public User queryUserByd(Integer id);
+	public User queryUserByd(String id);
 
 }

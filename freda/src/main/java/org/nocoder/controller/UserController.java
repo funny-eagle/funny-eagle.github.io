@@ -14,11 +14,11 @@ public class UserController {
 	@Resource  
     private UserService userService;  
       
-    @RequestMapping("/user")  
+    @RequestMapping("/index")  
     public String toIndex(HttpServletRequest request,Model model){  
-        int userId = Integer.parseInt(request.getParameter("id"));  
+        String userId = request.getParameter("id");  
         User user = this.userService.queryUserByd(userId);  
         model.addAttribute("user", user);  
-        return "user";  
+        return "index";  
     } 
 }

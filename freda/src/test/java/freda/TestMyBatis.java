@@ -19,7 +19,7 @@ public class TestMyBatis {
 	private UserService userService;
 	@Test  
     public void test1() {  
-        User user = userService.queryUserByd(1);  
+        User user = userService.queryUserByd("1");  
         logger.info(JSON.toJSONString(user));  
     }
 }
