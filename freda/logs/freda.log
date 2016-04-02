@@ -208,3 +208,14 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 [INFO] [2016-04-02 18:07:28][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
 [INFO] [2016-04-02 18:07:29][freda.TestMyBatis]{"id":"1","password":"123456","username":"yangjinlong"}
 [INFO] [2016-04-02 18:07:29][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@48026592: startup date [Sat Apr 02 18:07:27 CST 2016]; root of context hierarchy
+[INFO] [2016-04-03 00:26:55][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-04-03 00:26:56][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@48026592: startup date [Sun Apr 03 00:26:56 CST 2016]; root of context hierarchy
+[INFO] [2016-04-03 00:26:56][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-04-03 00:26:56][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2016-04-03 00:26:57][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@48026592: startup date [Sun Apr 03 00:26:56 CST 2016]; root of context hierarchy
+[INFO] [2016-04-03 00:30:53][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybatis.xml]
+[INFO] [2016-04-03 00:30:54][org.springframework.context.support.GenericApplicationContext]Refreshing org.springframework.context.support.GenericApplicationContext@48026592: startup date [Sun Apr 03 00:30:54 CST 2016]; root of context hierarchy
+[INFO] [2016-04-03 00:30:54][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2016-04-03 00:30:54][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2016-04-03 00:30:56][freda.TestMyBatis]{"id":"1","password":"123456","username":"yangjinlong"}
+[INFO] [2016-04-03 00:30:56][org.springframework.context.support.GenericApplicationContext]Closing org.springframework.context.support.GenericApplicationContext@48026592: startup date [Sun Apr 03 00:30:54 CST 2016]; root of context hierarchy

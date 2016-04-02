@@ -4,6 +4,6 @@ import org.nocoder.model.User;
 
 public interface UserService {
 
-	public User queryUserByd(String id);
+	User queryUserByNameAndPwd(String username, String password);
 
 }

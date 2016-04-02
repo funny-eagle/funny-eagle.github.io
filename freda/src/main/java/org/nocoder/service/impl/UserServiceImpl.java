@@ -1,7 +1,10 @@
 package org.nocoder.service.impl;
 
+import java.util.List;
+
 import org.nocoder.mapper.UserMapper;
 import org.nocoder.model.User;
+import org.nocoder.model.UserExample;
 import org.nocoder.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,8 +14,10 @@ public class UserServiceImpl implements UserService {
 	private UserMapper userMapper;
 	
 	@Override
-	public User queryUserByd(String id){
-		return userMapper.selectByPrimaryKey(id);
-		
+	public User queryUserByNameAndPwd(String username, String password){
+		UserExample example = new UserExample();
+		example.createCriteria().andUsernameEqualTo(username).andPasswordEqualTo(password);
+		List<User> list = userMapper.selectByExample(example);
+		return (list!=null && list.size()>0) ? list.get(0) : null;
 	}
 }
