@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-	<%
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 %>
@@ -26,106 +28,36 @@
       <script src="<%=basePath %>/bootstrap/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body style="padding: 80px;">
+<body>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="<%=basePath %>/bootstrap/js/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="<%=basePath %>/bootstrap/js/bootstrap.min.js"></script>
-
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	
+	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="#">NOCODER</a>
+			<a class="navbar-brand" href="<%=basePath %>">NOCODER</a>
 		</div>
 		<div>
 			<p class="navbar-text">Standing on the Shoulder of Giants</p>
 		</div>
 	</nav>
+	
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<div class="row clearfix">
 				<div class="col-md-1 column"></div>
 				<div class="col-md-7 column">
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
-					<a class="btn" href="#"><h2>50个Java线程题</h2></a>
-					<p>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位。
-						程序员可以通过它进行多处理器编程，你可以使用多线程对运算密集 型任务提速。
-						比如，如果一个线程完成一个任务要100毫秒，那么用十个线程完成改任务只需10毫秒。
-						Java在语言层面对多线程提供了卓越的支持，它也是 一个很好的卖点。</p>
-					<p>
-						<a class="btn" href="#">查看全文 »</a>
-					</p>
+					<div id="main-content-area">
+						<c:forEach items="${articleList }" var="article">
+							<a id="titleLink" class="btn" href="<%=basePath%>/article.html?id=${article.id}" style="font-size:20px;">${article.title }</a>
+							<p>${article.preview }</p>
+							<p>
+								<a class="btn" href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
+							</p>
+						</c:forEach>
+					</div>
 				</div>
 				<div class="col-md-3 column">
 					<div class="panel panel-default">
@@ -156,43 +88,23 @@
 									<span class="label label-danger">危险标签</span>
 								</div>
 							</div>
-
-							<div class="row clearfix" style="padding: 5px;">
-								<div class="col-md-4 column">
-									<span class="label label-info">信息标签</span>
-								</div>
-								<div class="col-md-4 column">
-									<span class="label label-warning">警告标签</span>
-								</div>
-								<div class="col-md-4 column">
-									<span class="label label-danger">危险标签</span>
-								</div>
-							</div>
-
-							<div class="row clearfix" style="padding: 5px;">
-								<div class="col-md-4 column">
-									<span class="label label-info">信息标签</span>
-								</div>
-								<div class="col-md-4 column">
-									<span class="label label-warning">警告标签</span>
-								</div>
-								<div class="col-md-4 column">
-									<span class="label label-danger">危险标签</span>
-								</div>
-							</div>
 						</div>
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h3 class="panel-title">最近更新</h3>
 						</div>
-						<div class="panel-body">面板内容</div>
+						<div class="panel-body">
+							<!-- 最新内容 -->
+						</div>
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h3 class="panel-title">热门</h3>
 						</div>
-						<div class="panel-body">面板内容</div>
+						<div class="panel-body">
+							<!-- 热门内容 -->
+						</div>
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -206,18 +118,37 @@
 				<div class="col-md-1 column"></div>
 			</div>
 		</div>
-		<div style="text-align: center;">
+		<div style="text-align: center;" id="page-area">
 			<ul class="pagination">
-				<li><a href="#">Prev</a></li>
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-				<li><a href="#">Next</a></li>
+				<li><a href="<%=basePath%>/index.html?page=${(page==1)?page: page-1}">&laquo; Prev</a></li>
+				<c:forEach var="i" begin="1" end="${totalPages }">
+				  	<li><a href="<%=basePath%>/index.html?page=${i}">${i }</a></li>
+				</c:forEach>
+				<li><a href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next &raquo;</a></li>
 			</ul>
 		</div>
 	</div>
+	
+	<footer style="text-align: center;">
+		<script type="text/javascript">
+			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+			document.write(unescape("%3Cspan id='cnzz_stat_icon_1257391581'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol 
+					+ "s4.cnzz.com/z_stat.php%3Fid%3D1257391581%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		© 2016 nocoder.org by Jason Yang
+	</footer>
+	<script type="text/javascript">
+		function viewArticle(id){
+			$.ajax({
+				url: "<%=basePath%>/viewArticle.html",
+				data:{"id":id},
+				success:function(result){
+					$("#main-content-area").html(result);
+					$("#page-area").hide();
+				}
+			});
+		};
+	</script>
+
 </body>
-<footer style="text-align: center;">© 2016 NOCODER.ORG By Jason Yang</footer>
 </html>

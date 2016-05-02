@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 	<classPathEntry
-		location="/home/jason/m2/repo/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar" />
+		location="D:\mvn-repo\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar" />
 	<context id="context1" targetRuntime="MyBatis3">
+		<commentGenerator >  
+            <property name="suppressAllComments" value="true"/><!-- 是否取消注释 -->  
+            <property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳-->  
+        </commentGenerator> 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/freda_db?useUnicode=true&amp;characterEncoding=UTF-8"
+			connectionURL="jdbc:mysql://103.192.176.62:3306/freda_db?useUnicode=true&amp;characterEncoding=UTF-8"
 			userId="root" password="0225" />
 		<javaModelGenerator targetPackage="org.nocoder.model"
-			targetProject="/home/jason/git/freda/src/main/java" />
-		<sqlMapGenerator targetPackage="org.nocoder.mapper"
-			targetProject="/home/jason/git/freda/src/main/java" />
+			targetProject="D:\git\nocoder\freda" />
+		<sqlMapGenerator targetPackage="org.nocoder.mapper1"
+			targetProject="D:\git\nocoder\freda" />
 		<javaClientGenerator
-			targetPackage="org.nocoder.mapper" targetProject="/home/jason/git/freda/src/main/java" type="XMLMAPPER" />
-		<table schema="freda_db" tableName="user" />
-		<table schema="freda_db" tableName="article" />
+			targetPackage="org.nocoder.mapper" targetProject="D:\git\nocoder\freda/freda/src/main/java" type="XMLMAPPER" />
+<!-- 		<table schema="freda_db" tableName="user" /> -->
+		<table schema="freda_db" tableName="user" >
+		</table>
 	</context>
 </generatorConfiguration>

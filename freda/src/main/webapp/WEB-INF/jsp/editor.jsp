@@ -10,7 +10,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-<title>NOCODER</title>
+<title>NOCODER-ADMIN</title>
 
 <!-- Bootstrap -->
 <link href="<%=basePath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,16 +34,62 @@
     <![endif]-->
 </head>
 <body>
-<div id="summernote">Hello <h1>Summernote</h1></div>
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#summernote').summernote({
-	  height: 300,                 // set editor height
-	  minHeight: null,             // set minimum height of editor
-	  maxHeight: null,             // set maximum height of editor
-	  focus: true                  // set focus to editable area after initializing summernote
-  });
-});
-</script>
+<form role="form" action="<%=basePath %>/article/save.html" method="post">
+	<div class="container">
+	<h2>NOCODER <small>文章编辑</small></h2>
+	   <div class="row clearfix">
+			<div class="col-md-4 column">
+				<div class="form-group">
+			      <label for="title">标题</label>
+			      <input type="text" class="form-control" id="title" name="title"
+			         placeholder="请输入标题">
+			   </div>
+			</div>
+			<div class="col-md-4 column">
+				<div class="form-group">
+			      <label for="author">作者</label>
+			      <input type="text" class="form-control" id="author" name="author"
+			         placeholder="请输入作者">
+			   </div>
+			</div>
+			<div class="col-md-4 column">
+			   <div class="form-group">
+			      <label for="tag">标签</label>
+			      <input type="text" class="form-control" id="标签" name="tag"
+			         placeholder="输入标签，多个标签使用英文状态下的逗号分隔">
+			   </div>				
+			</div>
+		</div>
+		<div class="form-group">
+	   		<label for="preview">预览</label>
+	   		<textarea id="preview" name="preview">输入预览内容</textarea>
+	    </div>
+		<div class="form-group">
+	   		<label for="content">正文</label>
+	   		<textarea id="content" name="content">输入正文内容</textarea>
+	   	</div>
+	    
+		<script type="text/javascript">
+			$(document).ready(function() {
+			  $('#content').summernote({
+				  height: 300,                 // set editor height
+				  minHeight: null,             // set minimum height of editor
+				  maxHeight: null,             // set maximum height of editor
+				  focus: true                  // set focus to editable area after initializing summernote
+			  });
+			  $('#preview').summernote({
+				  height: 200,                 // set editor height
+				  minHeight: null,             // set minimum height of editor
+				  maxHeight: null,             // set maximum height of editor
+				  focus: true                  // set focus to editable area after initializing summernote
+			  });
+			});
+		</script>
+	   	<div style="text-align:center;">
+	   		<button type="submit" class="btn btn-primary">发布文章</button>
+	   	</div>
+	</div>						
+</form>
+
 </body>
 </html>
