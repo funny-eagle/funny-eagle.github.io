@@ -67,25 +67,13 @@
 						<div class="panel-body">
 							<div class="row clearfix" style="padding: 5px;">
 								<div class="col-md-4 column">
-									<span class="label label-default">默认标签</span>
+									<span class="label label-default">Java</span>
 								</div>
 								<div class="col-md-4 column">
-									<span class="label label-primary">主要标签</span>
+									<span class="label label-primary">Python</span>
 								</div>
 								<div class="col-md-4 column">
-									<span class="label label-success">成功标签</span>
-								</div>
-							</div>
-
-							<div class="row clearfix" style="padding: 5px;">
-								<div class="col-md-4 column">
-									<span class="label label-info">信息标签</span>
-								</div>
-								<div class="col-md-4 column">
-									<span class="label label-warning">警告标签</span>
-								</div>
-								<div class="col-md-4 column">
-									<span class="label label-danger">危险标签</span>
+									<span class="label label-success">Linux</span>
 								</div>
 							</div>
 						</div>
@@ -96,6 +84,7 @@
 						</div>
 						<div class="panel-body">
 							<!-- 最新内容 -->
+							<a>Java装饰器模式</a>
 						</div>
 					</div>
 					<div class="panel panel-default">
@@ -104,6 +93,7 @@
 						</div>
 						<div class="panel-body">
 							<!-- 热门内容 -->
+							<a>Java装饰器模式</a>
 						</div>
 					</div>
 					<div class="panel panel-default">
@@ -111,7 +101,7 @@
 							<h3 class="panel-title">友情链接</h3>
 						</div>
 						<div class="panel-body">
-							<a href="http://davepu.info">Dave Pu Blog</a>
+							<a href="#">Dave Pu's Blog</a>
 						</div>
 					</div>
 				</div>
