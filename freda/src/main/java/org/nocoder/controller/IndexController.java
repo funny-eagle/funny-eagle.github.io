@@ -20,8 +20,7 @@ public class IndexController {
 	@RequestMapping({ "/index" })
 	public String toIndex(HttpServletRequest request, Model model) {
 		String tag = request.getParameter("tag");
-		Integer page = Integer
-				.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
+		Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
 		Integer pageSize = Integer.valueOf(5);
 		Object[] result = queryArticlesByPage(tag, page, pageSize);
 
@@ -42,9 +41,7 @@ public class IndexController {
 		}
 		int articlesCount = this.articleService.countArticles(tag);
 		if (articlesCount > 0) {
-			// System.out.println("====>����" + articlesCount + "������");
-			List<Article> articleList = this.articleService.queryArticleList(tag,
-					Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
+			List<Article> articleList = this.articleService.queryArticleList(tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
 			result[0] = articleList;
 			int totalPages = (int) (articlesCount / pageSize.intValue());
 			result[1] = Integer.valueOf(totalPages);
@@ -55,9 +52,8 @@ public class IndexController {
 	@RequestMapping({ "/article.html" })
 	public String viewArticle(HttpServletRequest request, Model model) {
 		String id = request.getParameter("id");
-		// this.logger.info("=============>����ID��" + id);
 		Article article = this.articleService.viewArticle(id);
 		model.addAttribute("article", article);
-		return "articleDetail";
+		return "index";
 	}
 }

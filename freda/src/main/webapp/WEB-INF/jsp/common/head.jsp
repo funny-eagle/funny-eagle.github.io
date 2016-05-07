@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
@@ -13,7 +13,8 @@
 <title>NOCODER</title>
 
 <!-- Bootstrap -->
-<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<%=basePath %>/bootstrap/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->

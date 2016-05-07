@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
@@ -22,25 +23,29 @@
 		</thead>
 		<tbody>
 			<c:forEach items="${articleList }" var="article">
-			   <tr>
+				<tr>
 					<td>${article.title }</td>
 					<td>${article.author }</td>
 					<td>${article.tag }</td>
-					<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${article.createTime }" /></td>
-					<td width="30px;"><a class="btn" href="<%=basePath%>/article/edit.html?id=${article.id}">编辑</a></td>
+					<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
+							value="${article.createTime }" /></td>
+					<td width="30px;"><a class="btn"
+						href="<%=basePath%>/article/edit.html?id=${article.id}">编辑</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
-	
-	
-	<div style="text-align:center;">
+
+
+	<div style="text-align: center;">
 		<ul class="pagination">
-		  <li><a href="<%=basePath%>/article.html?page=${(page==1)?page: page-1}">&laquo;</a></li>
-		  <c:forEach var="i" begin="1" end="${totalPages }">
-		  	<li><a href="<%=basePath%>/article.html?page=${i}">${i }</a></li>
-		  </c:forEach>
-		  <li><a href="<%=basePath%>/article.html?page=${page == totalPages ? page : page+1}">&raquo;</a></li>
+			<li><a
+				href="<%=basePath%>/article.html?page=${(page==1)?page: page-1}">&laquo;</a></li>
+			<c:forEach var="i" begin="1" end="${totalPages }">
+				<li><a href="<%=basePath%>/article.html?page=${i}">${i }</a></li>
+			</c:forEach>
+			<li><a
+				href="<%=basePath%>/article.html?page=${page == totalPages ? page : page+1}">&raquo;</a></li>
 		</ul>
 	</div>
 </body>

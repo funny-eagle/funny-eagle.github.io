@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-	<%
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 %>
@@ -13,7 +14,8 @@
 <title>NOCODER-ADMIN</title>
 
 <!-- Bootstrap -->
-<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<%=basePath %>/bootstrap/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -22,8 +24,8 @@
 <link href="<%=basePath %>/summernote/summernote.css" rel="stylesheet">
 <script src="<%=basePath %>/summernote/summernote.min.js"></script>
 <style type="text/css">
-.label{
-	cursor:pointer;
+.label {
+	cursor: pointer;
 }
 </style>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,42 +36,44 @@
     <![endif]-->
 </head>
 <body>
-<form role="form" action="<%=basePath %>/article/save.html" method="post">
-	<div class="container">
-	<h2>NOCODER <small>文章编辑</small></h2>
-	   <div class="row clearfix">
-			<div class="col-md-4 column">
-				<div class="form-group">
-			      <label for="title">标题</label>
-			      <input type="text" class="form-control" id="title" name="title"
-			         placeholder="请输入标题">
-			   </div>
+	<form role="form" action="<%=basePath %>/article/save.html"
+		method="post">
+		<div class="container">
+			<h2>
+				NOCODER <small>文章编辑</small>
+			</h2>
+			<div class="row clearfix">
+				<div class="col-md-4 column">
+					<div class="form-group">
+						<label for="title">标题</label> <input type="text"
+							class="form-control" id="title" name="title" placeholder="请输入标题">
+					</div>
+				</div>
+				<div class="col-md-4 column">
+					<div class="form-group">
+						<label for="author">作者</label> <input type="text"
+							class="form-control" id="author" name="author"
+							placeholder="请输入作者">
+					</div>
+				</div>
+				<div class="col-md-4 column">
+					<div class="form-group">
+						<label for="tag">标签</label> <input type="text"
+							class="form-control" id="标签" name="tag"
+							placeholder="输入标签，多个标签使用英文状态下的逗号分隔">
+					</div>
+				</div>
 			</div>
-			<div class="col-md-4 column">
-				<div class="form-group">
-			      <label for="author">作者</label>
-			      <input type="text" class="form-control" id="author" name="author"
-			         placeholder="请输入作者">
-			   </div>
+			<div class="form-group">
+				<label for="preview">预览</label>
+				<textarea id="preview" name="preview">输入预览内容</textarea>
 			</div>
-			<div class="col-md-4 column">
-			   <div class="form-group">
-			      <label for="tag">标签</label>
-			      <input type="text" class="form-control" id="标签" name="tag"
-			         placeholder="输入标签，多个标签使用英文状态下的逗号分隔">
-			   </div>				
+			<div class="form-group">
+				<label for="content">正文</label>
+				<textarea id="content" name="content">输入正文内容</textarea>
 			</div>
-		</div>
-		<div class="form-group">
-	   		<label for="preview">预览</label>
-	   		<textarea id="preview" name="preview">输入预览内容</textarea>
-	    </div>
-		<div class="form-group">
-	   		<label for="content">正文</label>
-	   		<textarea id="content" name="content">输入正文内容</textarea>
-	   	</div>
-	    
-		<script type="text/javascript">
+
+			<script type="text/javascript">
 			$(document).ready(function() {
 			  $('#content').summernote({
 				  height: 300,                 // set editor height
@@ -85,11 +89,11 @@
 			  });
 			});
 		</script>
-	   	<div style="text-align:center;">
-	   		<button type="submit" class="btn btn-primary">发布文章</button>
-	   	</div>
-	</div>						
-</form>
+			<div style="text-align: center;">
+				<button type="submit" class="btn btn-primary">发布文章</button>
+			</div>
+		</div>
+	</form>
 
 </body>
 </html>

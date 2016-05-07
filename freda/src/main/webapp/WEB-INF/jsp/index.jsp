@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
@@ -15,10 +16,11 @@
 <title>NOCODER</title>
 
 <!-- Bootstrap -->
-<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
 <style type="text/css">
-.label{
-	cursor:pointer;
+.label {
+	cursor: pointer;
 }
 </style>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,7 +36,7 @@
 	<script src="<%=basePath %>/bootstrap/js/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="<%=basePath %>/bootstrap/js/bootstrap.min.js"></script>
-	
+
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="<%=basePath %>">NOCODER</a>
@@ -43,20 +45,41 @@
 			<p class="navbar-text">Standing on the Shoulder of Giants</p>
 		</div>
 	</nav>
-	
+
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<div class="row clearfix">
 				<div class="col-md-1 column"></div>
 				<div class="col-md-7 column">
 					<div id="main-content-area">
-						<c:forEach items="${articleList }" var="article">
-							<a id="titleLink" class="btn" href="<%=basePath%>/article.html?id=${article.id}" style="font-size:20px;">${article.title }</a>
-							<p>${article.preview }</p>
-							<p>
-								<a class="btn" href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
-							</p>
-						</c:forEach>
+						<c:choose>
+							<c:when test="${articleList == null }">
+								<ol class="breadcrumb">
+									<li><a href="<%=basePath %>/">首页</a></li>
+									<li class="active">${article.title }</li>
+								</ol>
+								<h4>
+									${article.title } <small><br />${article.author } - <fmt:formatDate
+											pattern="yyyy-MM-dd HH:mm:ss" value="${article.createTime }" /></small>
+								</h4>
+								<div>${article.content }</div>
+							</c:when>
+							<c:otherwise>
+								<c:forEach items="${articleList }" var="article">
+									<a id="titleLink" class="btn"
+										href="<%=basePath%>/article.html?id=${article.id}"
+										style="font-size: 20px;">${article.title }</a>
+									<p>${article.preview }</p>
+									<p>
+										<a class="btn"
+											href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
+									</p>
+								</c:forEach>
+							</c:otherwise>
+						</c:choose>
+
+
+
 					</div>
 				</div>
 				<div class="col-md-3 column">
@@ -110,15 +133,19 @@
 		</div>
 		<div style="text-align: center;" id="page-area">
 			<ul class="pagination">
-				<li><a href="<%=basePath%>/index.html?page=${(page==1)?page: page-1}">&laquo; Prev</a></li>
+				<li><a
+					href="<%=basePath%>/index.html?page=${(page==1)?page: page-1}">&laquo;
+						Prev</a></li>
 				<c:forEach var="i" begin="1" end="${totalPages }">
-				  	<li><a href="<%=basePath%>/index.html?page=${i}">${i }</a></li>
+					<li><a href="<%=basePath%>/index.html?page=${i}">${i }</a></li>
 				</c:forEach>
-				<li><a href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next &raquo;</a></li>
+				<li><a
+					href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next
+						&raquo;</a></li>
 			</ul>
 		</div>
 	</div>
-	
+
 	<footer style="text-align: center;">
 		<script type="text/javascript">
 			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");

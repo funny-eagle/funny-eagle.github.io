@@ -3,63 +3,63 @@ package org.nocoder.model;
 import java.util.Date;
 
 public class User {
-    private String id;
+	private String id;
 
-    private String username;
+	private String username;
 
-    private String password;
+	private String password;
 
-    private Date createTime;
+	private Date createTime;
 
-    private Date lastLoginTime;
+	private Date lastLoginTime;
 
-    private String lastLoginIp;
+	private String lastLoginIp;
 
-    public String getId() {
-        return id;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public String getUsername() {
-        return username;
-    }
+	public String getUsername() {
+		return username;
+	}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+	public void setUsername(String username) {
+		this.username = username;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public String getPassword() {
+		return password;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+	public Date getCreateTime() {
+		return createTime;
+	}
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 
-    public Date getLastLoginTime() {
-        return lastLoginTime;
-    }
+	public Date getLastLoginTime() {
+		return lastLoginTime;
+	}
 
-    public void setLastLoginTime(Date lastLoginTime) {
-        this.lastLoginTime = lastLoginTime;
-    }
+	public void setLastLoginTime(Date lastLoginTime) {
+		this.lastLoginTime = lastLoginTime;
+	}
 
-    public String getLastLoginIp() {
-        return lastLoginIp;
-    }
+	public String getLastLoginIp() {
+		return lastLoginIp;
+	}
 
-    public void setLastLoginIp(String lastLoginIp) {
-        this.lastLoginIp = lastLoginIp;
-    }
+	public void setLastLoginIp(String lastLoginIp) {
+		this.lastLoginIp = lastLoginIp;
+	}
 }
