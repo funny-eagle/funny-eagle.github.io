@@ -11,13 +11,13 @@
 			connectionURL="jdbc:mysql://103.192.176.62:3306/freda_db?useUnicode=true&amp;characterEncoding=UTF-8"
 			userId="root" password="0225" />
 		<javaModelGenerator targetPackage="org.nocoder.model"
-			targetProject="D:\git\nocoder\freda" />
-		<sqlMapGenerator targetPackage="org.nocoder.mapper1"
-			targetProject="D:\git\nocoder\freda" />
+			targetProject="D:\git\nocoder\freda\src\main\java" />
+		<sqlMapGenerator targetPackage="org.nocoder.mapper"
+			targetProject="D:\git\nocoder\freda\src\main\java" />
 		<javaClientGenerator targetPackage="org.nocoder.mapper"
-			targetProject="D:\git\nocoder\freda/freda/src/main/java" type="XMLMAPPER" />
+			targetProject="D:\git\nocoder\freda\src\main\java" type="XMLMAPPER" />
 		<!-- <table schema="freda_db" tableName="user" /> -->
-		<table schema="freda_db" tableName="user">
-		</table>
+		<table schema="freda_db" tableName="dict"></table>
+		<table schema="freda_db" tableName="dict_type"></table>
 	</context>
 </generatorConfiguration>

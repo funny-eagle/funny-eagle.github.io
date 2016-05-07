@@ -24,7 +24,7 @@ public class IndexController {
 		Integer pageSize = Integer.valueOf(5);
 		Object[] result = queryArticlesByPage(tag, page, pageSize);
 
-		List<Article> articleList = (List) result[0];
+		List<Article> articleList = (List<Article>) result[0];
 		model.addAttribute("articleList", articleList);
 		model.addAttribute("page", page);
 		model.addAttribute("totalPages", result[1]);
@@ -36,14 +36,17 @@ public class IndexController {
 		if (page == null) {
 			page = Integer.valueOf(1);
 		}
+
 		if (pageSize == null) {
 			pageSize = Integer.valueOf(10);
 		}
+
 		int articlesCount = this.articleService.countArticles(tag);
 		if (articlesCount > 0) {
 			List<Article> articleList = this.articleService.queryArticleList(tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
 			result[0] = articleList;
-			int totalPages = (int) (articlesCount / pageSize.intValue());
+			// 总页数 取天花板值
+			int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize.intValue());
 			result[1] = Integer.valueOf(totalPages);
 		}
 		return result;

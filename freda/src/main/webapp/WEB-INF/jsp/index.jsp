@@ -13,7 +13,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-<title>NOCODER</title>
+<title>NOCODER.ORG</title>
 
 <!-- Bootstrap -->
 <link href="<%=basePath %>/bootstrap/css/bootstrap.min.css"
@@ -39,7 +39,7 @@
 
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="<%=basePath %>">NOCODER</a>
+			<a class="navbar-brand" href="<%=basePath %>">NOCODER.ORG</a>
 		</div>
 		<div>
 			<p class="navbar-text">Standing on the Shoulder of Giants</p>
@@ -52,6 +52,7 @@
 				<div class="col-md-1 column"></div>
 				<div class="col-md-7 column">
 					<div id="main-content-area">
+					
 						<c:choose>
 							<c:when test="${articleList == null }">
 								<ol class="breadcrumb">
@@ -71,14 +72,11 @@
 										style="font-size: 20px;">${article.title }</a>
 									<p>${article.preview }</p>
 									<p>
-										<a class="btn"
-											href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
+										<a class="btn" href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
 									</p>
 								</c:forEach>
 							</c:otherwise>
 						</c:choose>
-
-
 
 					</div>
 				</div>
@@ -131,22 +129,23 @@
 				<div class="col-md-1 column"></div>
 			</div>
 		</div>
-		<div style="text-align: center;" id="page-area">
-			<ul class="pagination">
-				<li><a
-					href="<%=basePath%>/index.html?page=${(page==1)?page: page-1}">&laquo;
-						Prev</a></li>
-				<c:forEach var="i" begin="1" end="${totalPages }">
-					<li><a href="<%=basePath%>/index.html?page=${i}">${i }</a></li>
-				</c:forEach>
-				<li><a
-					href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next
-						&raquo;</a></li>
-			</ul>
-		</div>
+		<c:choose>
+			<c:when test="${articleList != null }">
+				<div style="text-align: center;" id="page-area">
+					<ul class="pagination">
+						<li><a href="<%=basePath%>/index.html?page=${(page==1)? page : page-1}">Prev</a></li>
+						<c:forEach var="i" begin="1" end="${totalPages }">
+							<li><a href="<%=basePath%>/index.html?page=${i}">${i}</a></li>
+						</c:forEach>
+						<li><a href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next</a></li>
+					</ul>
+				</div>
+			</c:when>
+		</c:choose>
 	</div>
 
 	<footer style="text-align: center;">
+		<!--CNZZ数据统计  -->
 		<script type="text/javascript">
 			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 			document.write(unescape("%3Cspan id='cnzz_stat_icon_1257391581'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol 

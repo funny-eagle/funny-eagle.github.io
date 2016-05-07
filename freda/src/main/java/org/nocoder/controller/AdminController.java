@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.nocoder.model.Article;
 import org.nocoder.model.User;
@@ -25,14 +26,20 @@ public class AdminController {
 
 	@RequestMapping({ "/login.html" })
 	public String toIndex(HttpServletRequest request, Model model) {
+		if (request.getSession().getAttribute("user") != null) {
+			return "admin/articles";
+		}
 		final String username = request.getParameter("username");
 		final String password = request.getParameter("password");
-		final User user = this.userService.queryUserByNameAndPwd(username, password);
-		if (user != null) {
-			model.addAttribute("user", user);
-			return "admin";
+		if (StringUtils.isNotBlank(username) && StringUtils.isNotBlank(password)) {
+			final User user = this.userService.queryUserByNameAndPwd(username, password);
+			if (user != null) {
+				model.addAttribute("user", user);
+				request.getSession().setAttribute("user", user);
+				return "admin/articles";
+			}
 		}
-		return "login";
+		return "admin/login";
 	}
 
 	@RequestMapping({ "/editor.html" })
