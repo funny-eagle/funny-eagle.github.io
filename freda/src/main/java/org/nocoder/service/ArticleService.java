@@ -10,5 +10,5 @@ public abstract interface ArticleService {
 
 	public abstract int saveArticle(Article paramArticle);
 
-	public abstract Article viewArticle(String paramString);
+	public abstract Article queryArticleById(String paramString);
 }

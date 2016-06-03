@@ -56,7 +56,7 @@ public class IndexController {
 	@RequestMapping({ "/article.html" })
 	public String viewArticle(HttpServletRequest request, Model model) {
 		String id = request.getParameter("id");
-		Article article = this.articleService.viewArticle(id);
+		Article article = this.articleService.queryArticleById(id);
 		model.addAttribute("article", article);
 		return "index";
 	}

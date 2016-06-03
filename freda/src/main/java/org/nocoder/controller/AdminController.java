@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AdminController {
-	private final Logger logger = Logger.getLogger(AdminController.class);
+	
 	@Resource
 	private UserService userService;
 	@Autowired
@@ -64,6 +64,7 @@ public class AdminController {
 
 	@RequestMapping({ "/editor.html" })
 	public String toCFEditor() {
+		
 		return "admin/editor";
 	}
 
@@ -86,32 +87,17 @@ public class AdminController {
 		return result;
 	}
 
-	/*
-	 * @RequestMapping({ "/articles.html" }) public String
-	 * articles(HttpServletRequest request, Model model) { final String tag =
-	 * request.getParameter("tag"); final Integer page =
-	 * Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ?
-	 * "1" : request.getParameter("page"))); final Integer pageSize =
-	 * Integer.valueOf(5); final Object[] result = queryArticlesByPage(tag,
-	 * page, pageSize);
-	 * 
-	 * final List<Article> articleList = (List) result[0];
-	 * model.addAttribute("articleList", articleList);
-	 * model.addAttribute("page", page); model.addAttribute("totalPages",
-	 * result[1]); return "admin/articles"; }
-	 */
 
 	@RequestMapping({ "/article/save.html" })
 	public String saveArticle(HttpServletRequest request, Model model, Article article) {
-		final int resCount = this.articleService.saveArticle(article);
-		if (resCount > 0) {
-			this.logger.info("====>文章 " + article.getTitle() + " 保存成功！");
-		}
+		this.articleService.saveArticle(article);
 		return "redirect:/index.html";
 	}
 
 	@RequestMapping({ "/article/edit.html" })
-	public String toEdit(HttpServletRequest request, Model model) {
+	public String toEdit(HttpServletRequest request,  String id, Model model) {
+		Article article = this.articleService.queryArticleById(id);
+		model.addAttribute("article", article);
 		return "admin/editor";
 	}
 }

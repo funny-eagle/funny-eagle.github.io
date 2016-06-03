@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.log4j.Logger;
+import org.nocoder.controller.AdminController;
 import org.nocoder.mapper.ArticleMapper;
 import org.nocoder.model.Article;
 import org.nocoder.model.ArticleExample;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ArticleServiceImpl implements ArticleService {
+	private final Logger logger = Logger.getLogger(ArticleServiceImpl.class);
 	@Autowired
 	private ArticleMapper mapper;
 
@@ -42,14 +45,20 @@ public class ArticleServiceImpl implements ArticleService {
 			article.setId(UUID.randomUUID().toString().replace("-", ""));
 			article.setCreateTime(new Date());
 			resCount = this.mapper.insertSelective(article);
+			if (resCount > 0) {
+				this.logger.info("====>文章 " + article.getTitle() + " 保存成功！");
+			}
 		} else {
 			article.setUpdateTime(new Date());
 			resCount = this.mapper.updateByPrimaryKeySelective(article);
+			if (resCount > 0) {
+				this.logger.info("====>文章 " + article.getTitle() + " 更新成功！");
+			}
 		}
 		return resCount;
 	}
 
-	public Article viewArticle(String id) {
+	public Article queryArticleById(String id) {
 		if (id != null) {
 			ArticleExample example = new ArticleExample();
 			example.createCriteria().andIdEqualTo(id);

@@ -63,10 +63,11 @@
 									<li><a href="<%=basePath %>/">首页</a></li>
 									<li class="active">${article.title }</li>
 								</ol>
-								<h4>
-									${article.title } <small><br />${article.author } - <fmt:formatDate
-											pattern="yyyy-MM-dd HH:mm:ss" value="${article.createTime }" /></small>
-								</h4>
+								<div style="text-align:right">
+									<small>
+										作者:${article.author } - <fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${article.createTime }" />
+									</small>
+								</div>
 								<div>${article.content }</div>
 							</c:when>
 							<c:otherwise>
@@ -78,6 +79,7 @@
 									<p>
 										<a class="btn" href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
 									</p>
+									<hr/>
 								</c:forEach>
 							</c:otherwise>
 						</c:choose>

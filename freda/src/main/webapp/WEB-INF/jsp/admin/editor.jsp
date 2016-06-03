@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
@@ -42,53 +44,55 @@
 			<h2>
 				NOCODER <small>文章编辑</small>
 			</h2>
+			<input type="hidden" name="id" id="id" value="${article.id }"/>
 			<div class="row clearfix">
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="title">标题</label> <input type="text" required
-							class="form-control" id="title" name="title" placeholder="请输入标题">
+						<label for="title">标题</label> 
+						<input type="text" required class="form-control" id="title" name="title" placeholder="请输入标题" value="${article.title }">
 					</div>
 				</div>
 				<div class="col-md-4 column">
 					<div class="form-group">
 						<label for="author">作者</label> <input type="text" required
 							class="form-control" id="author" name="author"
-							placeholder="请输入作者">
+							placeholder="请输入作者" value="${article.author }">
 					</div>
 				</div>
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="tag">标签</label> <input type="text" required
+						<label for="tag">标签</label> 
+						<input type="text" required
 							class="form-control" id="标签" name="tag"
-							placeholder="输入标签，多个标签使用英文状态下的逗号分隔">
+							placeholder="输入标签，多个标签使用英文状态下的逗号分隔" value="${article.tag }">
 					</div>
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="preview">预览</label>
-				<textarea id="preview" name="preview"></textarea>
+				<textarea id="preview" name="preview">${article.preview }</textarea>
 			</div>
 			<div class="form-group">
 				<label for="content">正文</label>
-				<textarea id="content" name="content"></textarea>
+				<textarea id="content" name="content">${article.content }</textarea>
 			</div>
 
 			<script type="text/javascript">
-			$(document).ready(function() {
-			  $('#content').summernote({
-				  height: 300,                 // set editor height
-				  minHeight: null,             // set minimum height of editor
-				  maxHeight: null,             // set maximum height of editor
-				  focus: true                  // set focus to editable area after initializing summernote
-			  });
-			  $('#preview').summernote({
-				  height: 200,                 // set editor height
-				  minHeight: null,             // set minimum height of editor
-				  maxHeight: null,             // set maximum height of editor
-				  focus: true                  // set focus to editable area after initializing summernote
-			  });
-			});
-		</script>
+				$(document).ready(function() {
+				  $('#content').summernote({
+					  height: 300,                 // set editor height
+					  minHeight: null,             // set minimum height of editor
+					  maxHeight: null,             // set maximum height of editor
+					  focus: true                  // set focus to editable area after initializing summernote
+				  });
+				  $('#preview').summernote({
+					  height: 200,                 // set editor height
+					  minHeight: null,             // set minimum height of editor
+					  maxHeight: null,             // set maximum height of editor
+					  focus: true                  // set focus to editable area after initializing summernote
+				  });
+				});
+			</script>
 			<div style="text-align: center;">
 				<button type="submit" class="btn btn-primary">发布文章</button>
 			</div>
