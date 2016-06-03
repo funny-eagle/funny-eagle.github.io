@@ -39,13 +39,11 @@
 
 	<div style="text-align: center;">
 		<ul class="pagination">
-			<li><a
-				href="<%=basePath%>/article.html?page=${(page==1)?page: page-1}">&laquo;</a></li>
+			<li><a href="<%=basePath%>/article.html?page=${(page==1)?page: page-1}">上一页</a></li>
 			<c:forEach var="i" begin="1" end="${totalPages }">
 				<li><a href="<%=basePath%>/article.html?page=${i}">${i }</a></li>
 			</c:forEach>
-			<li><a
-				href="<%=basePath%>/article.html?page=${page == totalPages ? page : page+1}">&raquo;</a></li>
+			<li><a href="<%=basePath%>/article.html?page=${page == totalPages ? page : page+1}">下一页</a></li>
 		</ul>
 	</div>
 </body>

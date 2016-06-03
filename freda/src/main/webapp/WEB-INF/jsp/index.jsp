@@ -46,7 +46,7 @@
 			<a class="navbar-brand" href="<%=basePath %>">NOCODER.ORG</a>
 		</div>
 		<div>
-			<p class="navbar-text">Standing on the Shoulder of Giants</p>
+			<p class="navbar-text">Standing Shoulders of Giants</p>
 		</div>
 	</nav>
 

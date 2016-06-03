@@ -45,20 +45,20 @@
 			<div class="row clearfix">
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="title">标题</label> <input type="text"
+						<label for="title">标题</label> <input type="text" required
 							class="form-control" id="title" name="title" placeholder="请输入标题">
 					</div>
 				</div>
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="author">作者</label> <input type="text"
+						<label for="author">作者</label> <input type="text" required
 							class="form-control" id="author" name="author"
 							placeholder="请输入作者">
 					</div>
 				</div>
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="tag">标签</label> <input type="text"
+						<label for="tag">标签</label> <input type="text" required
 							class="form-control" id="标签" name="tag"
 							placeholder="输入标签，多个标签使用英文状态下的逗号分隔">
 					</div>
@@ -66,11 +66,11 @@
 			</div>
 			<div class="form-group">
 				<label for="preview">预览</label>
-				<textarea id="preview" name="preview">输入预览内容</textarea>
+				<textarea id="preview" name="preview"></textarea>
 			</div>
 			<div class="form-group">
 				<label for="content">正文</label>
-				<textarea id="content" name="content">输入正文内容</textarea>
+				<textarea id="content" name="content"></textarea>
 			</div>
 
 			<script type="text/javascript">

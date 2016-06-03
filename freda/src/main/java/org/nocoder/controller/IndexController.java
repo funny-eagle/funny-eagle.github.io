@@ -24,6 +24,7 @@ public class IndexController {
 		Integer pageSize = Integer.valueOf(5);
 		Object[] result = queryArticlesByPage(tag, page, pageSize);
 
+		@SuppressWarnings("unchecked")
 		List<Article> articleList = (List<Article>) result[0];
 		model.addAttribute("articleList", articleList);
 		model.addAttribute("page", page);

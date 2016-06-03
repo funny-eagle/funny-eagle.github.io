@@ -24,10 +24,30 @@ public class AdminController {
 	@Autowired
 	private ArticleService articleService;
 
+	@RequestMapping({ "/admin.html" })
+	public String toAdmin(HttpServletRequest request, Model model) {
+		if (request.getSession().getAttribute("user") != null) {
+
+			final String tag = request.getParameter("tag");
+			final Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
+			final Integer pageSize = Integer.valueOf(5);
+			final Object[] result = queryArticlesByPage(tag, page, pageSize);
+
+			@SuppressWarnings("unchecked")
+			final List<Article> articleList = (List<Article>) result[0];
+			model.addAttribute("articleList", articleList);
+			model.addAttribute("page", page);
+			model.addAttribute("totalPages", result[1]);
+
+			return "admin/admin";
+		}
+		return "redirect:login.html";
+	}
+
 	@RequestMapping({ "/login.html" })
 	public String toIndex(HttpServletRequest request, Model model) {
 		if (request.getSession().getAttribute("user") != null) {
-			return "admin/articles";
+			return "redirect:admin.html";
 		}
 		final String username = request.getParameter("username");
 		final String password = request.getParameter("password");
@@ -36,7 +56,7 @@ public class AdminController {
 			if (user != null) {
 				model.addAttribute("user", user);
 				request.getSession().setAttribute("user", user);
-				return "admin/articles";
+				return "redirect:admin.html";
 			}
 		}
 		return "admin/login";
@@ -44,7 +64,7 @@ public class AdminController {
 
 	@RequestMapping({ "/editor.html" })
 	public String toCFEditor() {
-		return "editor";
+		return "admin/editor";
 	}
 
 	private Object[] queryArticlesByPage(String tag, Integer page, Integer pageSize) {
@@ -57,27 +77,29 @@ public class AdminController {
 		}
 		final int articlesCount = this.articleService.countArticles(tag);
 		if (articlesCount > 0) {
-			final List<Article> articleList = this.articleService.queryArticleList(tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
+			List<Article> articleList = this.articleService.queryArticleList(tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
 			result[0] = articleList;
-			final int totalPages = articlesCount / pageSize.intValue();
+			// 总页数 取天花板值
+			int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize.intValue());
 			result[1] = Integer.valueOf(totalPages);
 		}
 		return result;
 	}
 
-	@RequestMapping({ "/articles.html" })
-	public String articles(HttpServletRequest request, Model model) {
-		final String tag = request.getParameter("tag");
-		final Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
-		final Integer pageSize = Integer.valueOf(5);
-		final Object[] result = queryArticlesByPage(tag, page, pageSize);
-
-		final List<Article> articleList = (List) result[0];
-		model.addAttribute("articleList", articleList);
-		model.addAttribute("page", page);
-		model.addAttribute("totalPages", result[1]);
-		return "admin/articles";
-	}
+	/*
+	 * @RequestMapping({ "/articles.html" }) public String
+	 * articles(HttpServletRequest request, Model model) { final String tag =
+	 * request.getParameter("tag"); final Integer page =
+	 * Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ?
+	 * "1" : request.getParameter("page"))); final Integer pageSize =
+	 * Integer.valueOf(5); final Object[] result = queryArticlesByPage(tag,
+	 * page, pageSize);
+	 * 
+	 * final List<Article> articleList = (List) result[0];
+	 * model.addAttribute("articleList", articleList);
+	 * model.addAttribute("page", page); model.addAttribute("totalPages",
+	 * result[1]); return "admin/articles"; }
+	 */
 
 	@RequestMapping({ "/article/save.html" })
 	public String saveArticle(HttpServletRequest request, Model model, Article article) {
@@ -90,6 +112,6 @@ public class AdminController {
 
 	@RequestMapping({ "/article/edit.html" })
 	public String toEdit(HttpServletRequest request, Model model) {
-		return "admin/articles";
+		return "admin/editor";
 	}
 }

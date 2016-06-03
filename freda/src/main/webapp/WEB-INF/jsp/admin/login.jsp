@@ -10,10 +10,10 @@
 <html>
 <jsp:include page="../common/head.jsp"></jsp:include>
 <body>
-	<form class="bs-example bs-example-form" role="form" method="post">
+	<form class="bs-example bs-example-form" method="post">
 		<div class="row" style="text-align:center;">
 			<div class="col-lg-2">
-				<p>NOCODER控制台</p>
+				<p>NOCODER ADMIN</p>
 				<div class="input-group input-group-sm">
 					<span class="input-group-addon">用户名</span> 
 					<input type="text" name="username" class="form-control">
