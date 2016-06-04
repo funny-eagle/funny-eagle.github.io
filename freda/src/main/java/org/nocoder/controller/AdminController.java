@@ -6,7 +6,6 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.nocoder.model.Article;
 import org.nocoder.model.User;
 import org.nocoder.service.ArticleService;
@@ -63,7 +62,7 @@ public class AdminController {
 	}
 
 	@RequestMapping({ "/editor.html" })
-	public String toCFEditor() {
+	public String editor() {
 		
 		return "admin/editor";
 	}
