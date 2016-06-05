@@ -4,8 +4,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
-import org.nocoder.controller.AdminController;
 import org.nocoder.mapper.ArticleMapper;
 import org.nocoder.model.Article;
 import org.nocoder.model.ArticleExample;
@@ -41,25 +41,25 @@ public class ArticleServiceImpl implements ArticleService {
 
 	public int saveArticle(Article article) {
 		int resCount = 0;
-		if (article.getId() == null) {
+		if (StringUtils.isBlank(article.getId())) {
 			article.setId(UUID.randomUUID().toString().replace("-", ""));
 			article.setCreateTime(new Date());
 			resCount = this.mapper.insertSelective(article);
 			if (resCount > 0) {
-				this.logger.info("====>文章 " + article.getTitle() + " 保存成功！");
+				this.logger.info("====>新增文章 " + article.getTitle() + "成功！");
 			}
 		} else {
 			article.setUpdateTime(new Date());
 			resCount = this.mapper.updateByPrimaryKeySelective(article);
 			if (resCount > 0) {
-				this.logger.info("====>文章 " + article.getTitle() + " 更新成功！");
+				this.logger.info("====>修改文章 " + article.getTitle() + "成功！");
 			}
 		}
 		return resCount;
 	}
 
 	public Article queryArticleById(String id) {
-		if (id != null) {
+		if (StringUtils.isNotBlank(id)) {
 			ArticleExample example = new ArticleExample();
 			example.createCriteria().andIdEqualTo(id);
 			List<Article> articles = this.mapper.selectByExample(example);

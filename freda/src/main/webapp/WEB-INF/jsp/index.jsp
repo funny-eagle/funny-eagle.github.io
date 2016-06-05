@@ -43,11 +43,21 @@
 
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
-			<a class="navbar-brand" href="<%=basePath %>">NOCODER.ORG</a>
+			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="witdh:40px; height:40px; float:left; padding-left:10px;padding-top:8px;"/>
+			<a class="navbar-brand" href="<%=basePath %>" style="float:left;">NoCoder</a>
 		</div>
 		<div>
 			<p class="navbar-text">Standing Shoulders of Giants</p>
 		</div>
+		<!-- <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+            <a href="#" class="" data-toggle="dropdown">
+               <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+               
+            </a>
+            
+         </li>
+      </ul> -->
 	</nav>
 
 	<div class="row clearfix">
@@ -157,7 +167,7 @@
 			document.write(unescape("%3Cspan id='cnzz_stat_icon_1257391581'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol 
 					+ "s4.cnzz.com/z_stat.php%3Fid%3D1257391581%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
 		</script>
-		© 2016 nocoder.org by Jason Yang
+		Copyright © 2016 nocoder.org
 	</footer>
 	<script type="text/javascript">
 		function viewArticle(id){

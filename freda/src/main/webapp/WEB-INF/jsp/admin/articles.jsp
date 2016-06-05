@@ -9,6 +9,7 @@
 <html lang="zh-CN">
 <jsp:include page="../common/head.jsp"></jsp:include>
 <body>
+	<a class="btn btn-primary" href="<%=basePath%>/editor.html">新增文章</a>
 	<table class="table table-responsive">
 		<caption>文章列表</caption>
 		<thead>

@@ -62,9 +62,11 @@ public class AdminController {
 	}
 
 	@RequestMapping({ "/editor.html" })
-	public String editor() {
-		
-		return "admin/editor";
+	public String editor(HttpServletRequest request) {
+		if (request.getSession().getAttribute("user") != null) {
+			return "admin/editor";
+		}
+		return "redirect:login.html";
 	}
 
 	private Object[] queryArticlesByPage(String tag, Integer page, Integer pageSize) {
