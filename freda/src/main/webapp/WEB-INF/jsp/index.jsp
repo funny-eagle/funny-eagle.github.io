@@ -97,6 +97,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 column">
+					
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h3 class="panel-title">标签</h3>
@@ -117,7 +118,7 @@
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">最近更新</h3>
+							<h3 class="panel-title">最新</h3>
 						</div>
 						<div class="panel-body">
 							<!-- 最新内容 -->
@@ -135,10 +136,12 @@
 					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h3 class="panel-title">友情链接</h3>
+							<h3 class="panel-title">关于</h3>
 						</div>
 						<div class="panel-body">
-							<a href="#">Dave Pu's Blog</a>
+							<img alt="" src="<%=basePath %>/imgs/monkey.jpg" class="img-responsive"/>
+							GitHub:<a href="https://github.com/no-coder">https://github.com/no-coder</a><br/>
+							E-Mail:<a href="#">yangjinlong86@gmail.com</a>
 						</div>
 					</div>
 				</div>
