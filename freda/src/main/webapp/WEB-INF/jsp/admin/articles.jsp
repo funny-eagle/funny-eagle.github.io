@@ -9,15 +9,15 @@
 <html lang="zh-CN">
 <jsp:include page="../common/head.jsp"></jsp:include>
 <body>
-	<a class="btn btn-primary" href="<%=basePath%>/editor.html">新增文章</a>
-	<table class="table table-responsive">
+	<div style="text-align:right;margin-right:15px;"><a class="btn btn-primary" href="<%=basePath%>/editor.html">写文章</a></div>
+	<table class="table table-responsive table-bordered" style="margin-left:12px; width:98%;" >
 		<caption>文章列表</caption>
-		<thead>
-			<tr>
+		<thead align="center">
+			<tr style="background-color: #EDEDED;">
 				<th>标题</th>
-				<th>作者</th>
-				<th>标签</th>
-				<th>创建日期</th>
+				<th width="20%">作者</th>
+				<th width="10%">标签</th>
+				<th width="20%">创建日期</th>
 				<th>操作</th>
 			</tr>
 		</thead>

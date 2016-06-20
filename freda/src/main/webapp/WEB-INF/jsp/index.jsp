@@ -3,8 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
-    String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ path;
 %>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -16,35 +17,38 @@
 <title>NOCODER.ORG</title>
 
 <!-- Bootstrap -->
-<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css"
+<link href="<%=basePath%>/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
 <style type="text/css">
 .label {
 	cursor: pointer;
 }
-.row{
-	margin-left:0px;
-	margin-right:0px;
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
 }
 </style>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
-      <script src="<%=basePath %>/bootstrap/js/html5shiv.min.js"></script>
-      <script src="<%=basePath %>/bootstrap/js/respond.min.js"></script>
+      <script src="<%=basePath%>/bootstrap/js/html5shiv.min.js"></script>
+      <script src="<%=basePath%>/bootstrap/js/respond.min.js"></script>
     <![endif]-->
 </head>
 <body>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="<%=basePath %>/bootstrap/js/jquery.min.js"></script>
+	<script src="<%=basePath%>/bootstrap/js/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="<%=basePath %>/bootstrap/js/bootstrap.min.js"></script>
+	<script src="<%=basePath%>/bootstrap/js/bootstrap.min.js"></script>
 
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
-			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="witdh:40px; height:40px; float:left; padding-left:10px;padding-top:8px;"/>
-			<a class="navbar-brand" href="<%=basePath %>" style="float:left;">NoCoder</a>
+			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png"
+				class='img-responsive'
+				style="witdh: 40px; height: 40px; float: left; padding-left: 10px; padding-top: 8px;" />
+			<a class="navbar-brand" href="<%=basePath%>" style="float: left;">NoCoder</a>
 		</div>
 		<div>
 			<p class="navbar-text">Standing Shoulders of Giants</p>
@@ -66,16 +70,16 @@
 				<div class="col-md-1 column"></div>
 				<div class="col-md-7 column">
 					<div id="main-content-area">
-					
+
 						<c:choose>
 							<c:when test="${articleList == null }">
 								<ol class="breadcrumb">
-									<li><a href="<%=basePath %>/">首页</a></li>
+									<li><a href="<%=basePath%>/">首页</a></li>
 									<li class="active">${article.title }</li>
 								</ol>
-								<div style="text-align:right">
-									<small>
-										作者:${article.author } - <fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${article.createTime }" />
+								<div style="text-align: right">
+									<small> 作者:${article.author } - <fmt:formatDate
+											pattern="yyyy-MM-dd HH:mm" value="${article.createTime }" />
 									</small>
 								</div>
 								<div>${article.content }</div>
@@ -86,10 +90,19 @@
 										href="<%=basePath%>/article.html?id=${article.id}"
 										style="font-size: 20px;">${article.title }</a>
 									<p>${article.preview }</p>
+
+									<div class="container">
+										<div class="row clearfix">
+											<div class="col-md-2 column">${article.title}</div>
+											<div class="col-md-5 column">${article.preview}</div>
+										</div>
+									</div>
+
 									<p>
-										<a class="btn" href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
+										<a class="btn"
+											href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
 									</p>
-									<hr/>
+									<hr />
 								</c:forEach>
 							</c:otherwise>
 						</c:choose>
@@ -97,7 +110,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 column">
-					
+
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h3 class="panel-title">标签</h3>
@@ -139,8 +152,9 @@
 							<h3 class="panel-title">关于</h3>
 						</div>
 						<div class="panel-body">
-							<img alt="" src="<%=basePath %>/imgs/monkey.jpg" class="img-responsive"/>
-							GitHub:<a href="https://github.com/no-coder">https://github.com/no-coder</a><br/>
+							<img alt="" src="<%=basePath%>/imgs/monkey.jpg"
+								class="img-responsive" /> GitHub:<a
+								href="https://github.com/no-coder">https://github.com/no-coder</a><br />
 							E-Mail:<a href="#">yangjinlong86@gmail.com</a>
 						</div>
 					</div>
@@ -152,11 +166,13 @@
 			<c:when test="${articleList != null }">
 				<div style="text-align: center;" id="page-area">
 					<ul class="pagination">
-						<li><a href="<%=basePath%>/index.html?page=${(page==1)? page : page-1}">Prev</a></li>
+						<li><a
+							href="<%=basePath%>/index.html?page=${(page==1)? page : page-1}">Prev</a></li>
 						<c:forEach var="i" begin="1" end="${totalPages }">
 							<li><a href="<%=basePath%>/index.html?page=${i}">${i}</a></li>
 						</c:forEach>
-						<li><a href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next</a></li>
+						<li><a
+							href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next</a></li>
 					</ul>
 				</div>
 			</c:when>
@@ -175,9 +191,12 @@
 	<script type="text/javascript">
 		function viewArticle(id){
 			$.ajax({
-				url: "<%=basePath%>/viewArticle.html",
-				data:{"id":id},
-				success:function(result){
+				url: "<%=basePath%>
+		/viewArticle.html",
+				data : {
+					"id" : id
+				},
+				success : function(result) {
 					$("#main-content-area").html(result);
 					$("#page-area").hide();
 				}
