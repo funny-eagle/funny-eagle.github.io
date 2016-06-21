@@ -48,10 +48,10 @@
 			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png"
 				class='img-responsive'
 				style="witdh: 40px; height: 40px; float: left; padding-left: 10px; padding-top: 8px;" />
-			<a class="navbar-brand" href="<%=basePath%>" style="float: left;">NoCoder</a>
+			<a class="navbar-brand" href="<%=basePath%>" style="float: left;">NOCODER</a>
 		</div>
 		<div>
-			<p class="navbar-text">Standing Shoulders of Giants</p>
+			<p class="navbar-text">站在巨人的肩膀上</p>
 		</div>
 		<!-- <ul class="nav navbar-nav navbar-right">
          <li class="dropdown">
@@ -90,14 +90,6 @@
 										href="<%=basePath%>/article.html?id=${article.id}"
 										style="font-size: 20px;">${article.title }</a>
 									<p>${article.preview }</p>
-
-									<div class="container">
-										<div class="row clearfix">
-											<div class="col-md-2 column">${article.title}</div>
-											<div class="col-md-5 column">${article.preview}</div>
-										</div>
-									</div>
-
 									<p>
 										<a class="btn"
 											href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
@@ -153,9 +145,11 @@
 						</div>
 						<div class="panel-body">
 							<img alt="" src="<%=basePath%>/imgs/monkey.jpg"
-								class="img-responsive" /> GitHub:<a
-								href="https://github.com/no-coder">https://github.com/no-coder</a><br />
-							E-Mail:<a href="#">yangjinlong86@gmail.com</a>
+								class="img-responsive" />
+								<span class="label label-primary" onclick="window.open('https://github.com/no-coder')">GitHub</span>
+								<a target="_blank" href="https://github.com/no-coder">https://github.com/no-coder</a><br>
+								<span class="label label-success" onclick="window.open('http://weibo.com/227307890')">Weibo</span>
+								<a target="_blank" href="http://weibo.com/227307890">http://weibo.com/227307890</a><br />
 						</div>
 					</div>
 				</div>
