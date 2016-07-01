@@ -1,11 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
-			+ path;
+String path = request.getContextPath();
+String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 %>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -36,23 +34,23 @@
       <script src="<%=basePath%>/bootstrap/js/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body style="padding-top:100px;">
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="<%=basePath%>/bootstrap/js/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="<%=basePath%>/bootstrap/js/bootstrap.min.js"></script>
 
-	<nav class="navbar navbar-default" role="navigation">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 		<div class="navbar-header">
-			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png"
+			<a href="<%=basePath%>"><img alt="" src="<%=basePath%>/imgs/nocoder-logo.png"
 				class='img-responsive'
-				style="witdh: 40px; height: 40px; float: left; padding-left: 10px; padding-top: 8px;" />
-			<a class="navbar-brand" href="<%=basePath%>" style="float: left;">NOCODER</a>
+				style="witdh: 40px; height: 40px; float: left; padding-left: 10px; padding-top: 8px;" /></a>
+			<a class="navbar-brand" href="<%=basePath%>" style="float: left;"><span>Nocoder.Org</span></a>
 		</div>
-		<div>
-			<p class="navbar-text">站在巨人的肩膀上</p>
-		</div>
+<!-- 		<div> -->
+<!-- 			<p class="navbar-text">  站在巨人的肩膀上</p> -->
+<!-- 		</div> -->
 		<!-- <ul class="nav navbar-nav navbar-right">
          <li class="dropdown">
             <a href="#" class="" data-toggle="dropdown">
@@ -67,8 +65,8 @@
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<div class="row clearfix">
-				<div class="col-md-1 column"></div>
-				<div class="col-md-7 column">
+<!-- 				<div class="col-md-1 column"></div> -->
+				<div class="col-md-9 column">
 					<div id="main-content-area">
 
 						<c:choose>
@@ -86,14 +84,10 @@
 							</c:when>
 							<c:otherwise>
 								<c:forEach items="${articleList }" var="article">
-									<a id="titleLink" class="btn"
+									<a id="titleLink" title="点击标题查看全文"
 										href="<%=basePath%>/article.html?id=${article.id}"
 										style="font-size: 20px;">${article.title }</a>
 									<p>${article.preview }</p>
-									<p>
-										<a class="btn"
-											href="<%=basePath%>/article.html?id=${article.id}">查看全文 »</a>
-									</p>
 									<hr />
 								</c:forEach>
 							</c:otherwise>
@@ -103,24 +97,6 @@
 				</div>
 				<div class="col-md-3 column">
 
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">标签</h3>
-						</div>
-						<div class="panel-body">
-							<div class="row clearfix" style="padding: 5px;">
-								<div class="col-md-4 column">
-									<span class="label label-default">Java</span>
-								</div>
-								<div class="col-md-4 column">
-									<span class="label label-primary">Python</span>
-								</div>
-								<div class="col-md-4 column">
-									<span class="label label-success">Linux</span>
-								</div>
-							</div>
-						</div>
-					</div>
 					<div class="panel panel-default">
 						<div class="panel-heading">
 							<h3 class="panel-title">最新</h3>
@@ -153,7 +129,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-1 column"></div>
+<!-- 				<div class="col-md-1 column"></div> -->
 			</div>
 		</div>
 		<c:choose>
@@ -185,8 +161,7 @@
 	<script type="text/javascript">
 		function viewArticle(id){
 			$.ajax({
-				url: "<%=basePath%>
-		/viewArticle.html",
+				url: "<%=basePath%>/viewArticle.html",
 				data : {
 					"id" : id
 				},
