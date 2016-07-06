@@ -27,4 +27,8 @@ public abstract interface ArticleMapper {
 	public abstract int updateByPrimaryKeySelective(Article paramArticle);
 
 	public abstract int updateByPrimaryKey(Article paramArticle);
+	
+	public List<String> getArticleTimeList();
+	
+	public List<Article> queryArticleListByCreateTime(String time);
 }

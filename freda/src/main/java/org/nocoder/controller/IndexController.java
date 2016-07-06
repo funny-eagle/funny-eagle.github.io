@@ -21,17 +21,31 @@ public class IndexController {
 	public String toIndex(HttpServletRequest request, Model model) {
 		String tag = request.getParameter("tag");
 		Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
-		Integer pageSize = Integer.valueOf(5);
+		Integer pageSize = Integer.valueOf(1);
 		Object[] result = queryArticlesByPage(tag, page, pageSize);
-
+		// 获取文章时间列表
+		List<String> timeList = articleService.getArticleTimeList();
+		
 		@SuppressWarnings("unchecked")
 		List<Article> articleList = (List<Article>) result[0];
 		model.addAttribute("articleList", articleList);
+		model.addAttribute("timeList", timeList);
 		model.addAttribute("page", page);
 		model.addAttribute("totalPages", result[1]);
 		return "index";
 	}
-
+	
+	@RequestMapping("/articlesByMonth")
+	public String articlesByCreateTime(HttpServletRequest request, Model model){
+		String month = request.getParameter("month");
+		List<Article> articleList = articleService.queryArticleListByCreateTime(month);
+		// 获取文章时间列表
+		List<String> timeList = articleService.getArticleTimeList();
+		model.addAttribute("articleList", articleList);
+		model.addAttribute("timeList", timeList);
+		return "index";
+	}
+	
 	private Object[] queryArticlesByPage(String tag, Integer page, Integer pageSize) {
 		Object[] result = new Object[2];
 		if (page == null) {
@@ -53,7 +67,7 @@ public class IndexController {
 		return result;
 	}
 
-	@RequestMapping({ "/article.html" })
+	@RequestMapping({ "/article" })
 	public String viewArticle(HttpServletRequest request, Model model) {
 		String id = request.getParameter("id");
 		Article article = this.articleService.queryArticleById(id);

@@ -9,7 +9,7 @@
 <html lang="zh-CN">
 <jsp:include page="../common/head.jsp"></jsp:include>
 <body>
-	<div style="text-align:right;margin-right:15px;"><a class="btn btn-primary" href="<%=basePath%>/editor.html">写文章</a></div>
+	<div style="text-align:right;margin-right:15px;"><a class="btn btn-primary" href="<%=basePath%>/editor">写文章</a></div>
 	<table class="table table-responsive table-bordered" style="margin-left:12px; width:98%;" >
 		<caption>文章列表</caption>
 		<thead align="center">
@@ -30,7 +30,7 @@
 					<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
 							value="${article.createTime }" /></td>
 					<td width="30px;"><a class="btn"
-						href="<%=basePath%>/article/edit.html?id=${article.id}">编辑</a></td>
+						href="<%=basePath%>/article/edit?id=${article.id}">编辑</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>
@@ -39,11 +39,11 @@
 
 	<div style="text-align: center;">
 		<ul class="pagination">
-			<li><a href="<%=basePath%>/article.html?page=${(page==1)?page: page-1}">上一页</a></li>
+			<li><a href="<%=basePath%>/article?page=${(page==1)?page: page-1}">上一页</a></li>
 			<c:forEach var="i" begin="1" end="${totalPages }">
-				<li><a href="<%=basePath%>/article.html?page=${i}">${i }</a></li>
+				<li><a href="<%=basePath%>/article?page=${i}">${i }</a></li>
 			</c:forEach>
-			<li><a href="<%=basePath%>/article.html?page=${page == totalPages ? page : page+1}">下一页</a></li>
+			<li><a href="<%=basePath%>/article?page=${page == totalPages ? page : page+1}">下一页</a></li>
 		</ul>
 	</div>
 </body>

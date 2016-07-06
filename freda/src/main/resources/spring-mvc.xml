@@ -29,10 +29,14 @@
 			</list>
 		</property>
 	</bean>
+	<mvc:annotation-driven />
+	<mvc:resources location="/bootstrap/" mapping="/bootstrap/**"/>
+	<mvc:resources location="/editor.md-master/" mapping="/editor.md-master/**"/>
+	<mvc:resources location="/imgs/" mapping="/imgs/**"/>
+	<mvc:default-servlet-handler />
 	<!-- 定义跳转的文件的前后缀 ，视图模式配置 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<!-- 这里的配置我的理解是自动给后面action的方法return的字符串加上前缀和后缀，变成一个 可用的url地址 -->
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
@@ -47,5 +51,5 @@
 		<!-- 内存中的最大值 -->
 		<property name="maxInMemorySize" value="40960" />
 	</bean>
-
+	
 </beans>  

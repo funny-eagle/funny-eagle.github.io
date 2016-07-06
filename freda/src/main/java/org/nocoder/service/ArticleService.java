@@ -11,4 +11,8 @@ public abstract interface ArticleService {
 	public abstract int saveArticle(Article paramArticle);
 
 	public abstract Article queryArticleById(String paramString);
+	
+	public List<String> getArticleTimeList();
+	
+	public List<Article> queryArticleListByCreateTime(String time);
 }

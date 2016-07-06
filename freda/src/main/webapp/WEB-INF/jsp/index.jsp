@@ -6,172 +6,171 @@ String path = request.getContextPath();
 String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 %>
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-<title>NOCODER.ORG</title>
+<!-- saved from url=(0037)<%=basePath%> -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="<%=basePath%>/imgs/command.ico">
 
-<!-- Bootstrap -->
-<link href="<%=basePath%>/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet">
-<style type="text/css">
-.label {
-	cursor: pointer;
-}
+    <title>Nocoder.Org</title>
 
-.row {
-	margin-left: 0px;
-	margin-right: 0px;
-}
-</style>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="<%=basePath%>/bootstrap/js/html5shiv.min.js"></script>
-      <script src="<%=basePath%>/bootstrap/js/respond.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="<%=basePath%>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="<%=basePath%>/bootstrap/css/blog.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="<%=basePath%>/bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
-<body style="padding-top:100px;">
+  <link rel="stylesheet" type="text/css" href="chrome-extension://fidicgekecdkdmkjghdgadgdmcfodfid/themes/default/content.css"></head>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="<%=basePath%>/bootstrap/js/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="<%=basePath%>/bootstrap/js/bootstrap.min.js"></script>
+  <body>
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="navbar-header">
-			<a href="<%=basePath%>"><img alt="" src="<%=basePath%>/imgs/nocoder-logo.png"
-				class='img-responsive'
-				style="witdh: 40px; height: 40px; float: left; padding-left: 10px; padding-top: 8px;" /></a>
-			<a class="navbar-brand" href="<%=basePath%>" style="float: left;"><span>Nocoder.Org</span></a>
-		</div>
-<!-- 		<div> -->
-<!-- 			<p class="navbar-text">  站在巨人的肩膀上</p> -->
-<!-- 		</div> -->
-		<!-- <ul class="nav navbar-nav navbar-right">
-         <li class="dropdown">
-            <a href="#" class="" data-toggle="dropdown">
-               <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-               
-            </a>
-            
-         </li>
-      </ul> -->
-	</nav>
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          	<a id="homeLink" class="blog-nav-item active" href="<%=basePath %>" onclick="toHome();">Home</a>
+          	<a id="techLink" class="blog-nav-item" href="javascript:void(0);" onclick="toTech();">Technology</a>
+          	<a id="otherLink" class="blog-nav-item" href="javascript:void(0);" onclick="toOther();">Other</a>
+          	<a id="aboutLink" class="blog-nav-item" href="javascript:void(0);" onclick="toAbout();">About</a>
+        </nav>
+        <script type="text/javascript">
+        	function toHome(){
+        		$("#homeLink").addClass("active");
+        		$("#techLink").removeClass("active");
+        		$("#otherLink").removeClass("active");
+        		$("#aboutLink").removeClass("active");
+        	}
+        	function toTech(){
+        		$("#homeLink").removeClass("active");
+        		$("#techLink").addClass("active");
+        		$("#otherLink").removeClass("active");
+        		$("#aboutLink").removeClass("active");
+        	}
+        	function toOther(){
+        		$("#homeLink").removeClass("active");
+        		$("#techLink").removeClass("active");
+        		$("#otherLink").addClass("active");
+        		$("#aboutLink").removeClass("active");
+        	}
+        	function toAbout(){
+        		$("#homeLink").removeClass("active");
+        		$("#techLink").removeClass("active");
+        		$("#otherLink").removeClass("active");
+        		$("#aboutLink").addClass("active");
+        	}
+        </script>
+      </div>
+    </div>
 
-	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<div class="row clearfix">
-<!-- 				<div class="col-md-1 column"></div> -->
-				<div class="col-md-9 column">
-					<div id="main-content-area">
+    <div class="container">
 
-						<c:choose>
-							<c:when test="${articleList == null }">
-								<ol class="breadcrumb">
-									<li><a href="<%=basePath%>/">首页</a></li>
-									<li class="active">${article.title }</li>
-								</ol>
-								<div style="text-align: right">
-									<small> 作者:${article.author } - <fmt:formatDate
-											pattern="yyyy-MM-dd HH:mm" value="${article.createTime }" />
-									</small>
-								</div>
-								<div>${article.content }</div>
-							</c:when>
-							<c:otherwise>
-								<c:forEach items="${articleList }" var="article">
-									<a id="titleLink" title="点击标题查看全文"
-										href="<%=basePath%>/article.html?id=${article.id}"
-										style="font-size: 20px;">${article.title }</a>
-									<p>${article.preview }</p>
-									<hr />
-								</c:forEach>
-							</c:otherwise>
-						</c:choose>
+      <div class="blog-header">
+        <h1 class="blog-title">JASON YANG</h1>
+        <p class="lead blog-description">千磨万击还坚劲，任尔东西南北风。</p>
+      </div>
 
-					</div>
-				</div>
-				<div class="col-md-3 column">
+      <div class="row">
 
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">最新</h3>
-						</div>
-						<div class="panel-body">
-							<!-- 最新内容 -->
-							<a>Java装饰器模式</a>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">热门</h3>
-						</div>
-						<div class="panel-body">
-							<!-- 热门内容 -->
-							<a>Java装饰器模式</a>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">关于</h3>
-						</div>
-						<div class="panel-body">
-							<img alt="" src="<%=basePath%>/imgs/monkey.jpg"
-								class="img-responsive" />
-								<span class="label label-primary" onclick="window.open('https://github.com/no-coder')">GitHub</span>
-								<a target="_blank" href="https://github.com/no-coder">https://github.com/no-coder</a><br>
-								<span class="label label-success" onclick="window.open('http://weibo.com/227307890')">Weibo</span>
-								<a target="_blank" href="http://weibo.com/227307890">http://weibo.com/227307890</a><br />
-						</div>
-					</div>
-				</div>
-<!-- 				<div class="col-md-1 column"></div> -->
-			</div>
-		</div>
-		<c:choose>
-			<c:when test="${articleList != null }">
-				<div style="text-align: center;" id="page-area">
-					<ul class="pagination">
-						<li><a
-							href="<%=basePath%>/index.html?page=${(page==1)? page : page-1}">Prev</a></li>
-						<c:forEach var="i" begin="1" end="${totalPages }">
-							<li><a href="<%=basePath%>/index.html?page=${i}">${i}</a></li>
-						</c:forEach>
-						<li><a
-							href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next</a></li>
-					</ul>
-				</div>
-			</c:when>
-		</c:choose>
-	</div>
+        <div class="col-sm-8 blog-main">
+          <div class="blog-post">
+          	<c:forEach items="${articleList }" var="article">
+	      		<h2 class="blog-post-title">${article.title}</h2>
+	            <p class="blog-post-meta">
+	            	<!-- 日期 -->
+	            	<fmt:formatDate pattern="yyyy-MM-dd" value="${article.createTime }" /> 
+	            	<!-- 作者 -->
+	            	by <a href="<%=basePath%>">${article.author}</a>
+				</p>
+          			${article.content}
+          		<hr>
+			</c:forEach>
+          </div><!-- /.blog-post -->
+			
+			<c:choose>
+				<c:when test="${totalPages != null }">
+					<nav>
+			            <ul class="pager">
+			              <li><a href="<%=basePath%>/index.html?page=${(page==1)? page : page-1}">Previous</a></li>
+			              <li><a href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next</a></li>
+			            </ul>
+		          	</nav>
+				</c:when>
+			</c:choose>
+        </div><!-- /.blog-main -->
 
-	<footer style="text-align: center;">
-		<!--CNZZ数据统计  -->
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>
+            	<em>Hey, I'm Jason,</em>
+			</p>
+			<p>
+            	<em>A Java programmer,</em>
+			</p>
+            <p>
+            	<em>I love Linux, Python, Freda...</em>
+			</p>
+			<p>
+				<em>except you, man, haha!</em>
+			</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+            	<c:forEach items="${timeList}" var="time">
+                	<li><a href="<%=basePath%>/articlesByMonth?month=${time}">${time}</a></li>
+            	</c:forEach>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a target="_blank" href="https://github.com/no-coder">GitHub</a></li>
+              <li><a target="_blank" href="http://weibo.com/227307890">Weibo</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+    	
+      <p>
+      	Copyright © 2016  <a href="http://www.nocoder.org">nocoder.org</a> by <a href="http://www.nocoder.org">@Jason Yang</a>.
+      	<!--CNZZ数据统计  -->
 		<script type="text/javascript">
 			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 			document.write(unescape("%3Cspan id='cnzz_stat_icon_1257391581'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol 
 					+ "s4.cnzz.com/z_stat.php%3Fid%3D1257391581%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
 		</script>
-		Copyright © 2016 nocoder.org
-	</footer>
-	<script type="text/javascript">
-		function viewArticle(id){
-			$.ajax({
-				url: "<%=basePath%>/viewArticle.html",
-				data : {
-					"id" : id
-				},
-				success : function(result) {
-					$("#main-content-area").html(result);
-					$("#page-area").hide();
-				}
-			});
-		};
-	</script>
+      </p>
+      <p>
+        <a href="<%=basePath%>">↑ Back to top</a>
+      </p>
+    </footer>
 
-</body>
-</html>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="<%=basePath%>/bootstrap/js/jquery.min.js"></script>
+    <script src="<%=basePath%>/bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="<%=basePath%>/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+  
+
+</body></html>

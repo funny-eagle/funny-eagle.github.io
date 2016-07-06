@@ -23,7 +23,7 @@ public class AdminController {
 	@Autowired
 	private ArticleService articleService;
 
-	@RequestMapping({ "/admin.html" })
+	@RequestMapping({ "/admin" })
 	public String toAdmin(HttpServletRequest request, Model model) {
 		if (request.getSession().getAttribute("user") != null) {
 
@@ -40,13 +40,13 @@ public class AdminController {
 
 			return "admin/admin";
 		}
-		return "redirect:login.html";
+		return "redirect:login";
 	}
 
-	@RequestMapping({ "/login.html" })
+	@RequestMapping({ "/login" })
 	public String toIndex(HttpServletRequest request, Model model) {
 		if (request.getSession().getAttribute("user") != null) {
-			return "redirect:admin.html";
+			return "redirect:admin";
 		}
 		final String username = request.getParameter("username");
 		final String password = request.getParameter("password");
@@ -55,18 +55,18 @@ public class AdminController {
 			if (user != null) {
 				model.addAttribute("user", user);
 				request.getSession().setAttribute("user", user);
-				return "redirect:admin.html";
+				return "redirect:admin";
 			}
 		}
 		return "admin/login";
 	}
 
-	@RequestMapping({ "/editor.html" })
+	@RequestMapping({ "/editor" })
 	public String editor(HttpServletRequest request) {
 		if (request.getSession().getAttribute("user") != null) {
 			return "admin/editor";
 		}
-		return "redirect:login.html";
+		return "redirect:login";
 	}
 
 	private Object[] queryArticlesByPage(String tag, Integer page, Integer pageSize) {
@@ -89,13 +89,13 @@ public class AdminController {
 	}
 
 
-	@RequestMapping({ "/article/save.html" })
+	@RequestMapping({ "/article/save" })
 	public String saveArticle(HttpServletRequest request, Model model, Article article) {
 		this.articleService.saveArticle(article);
-		return "redirect:/index.html";
+		return "redirect:/index";
 	}
 
-	@RequestMapping({ "/article/edit.html" })
+	@RequestMapping({ "/article/edit" })
 	public String toEdit(HttpServletRequest request,  String id, Model model) {
 		Article article = this.articleService.queryArticleById(id);
 		model.addAttribute("article", article);

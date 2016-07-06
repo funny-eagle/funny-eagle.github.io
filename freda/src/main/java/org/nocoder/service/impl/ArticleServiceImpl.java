@@ -30,6 +30,11 @@ public class ArticleServiceImpl implements ArticleService {
 		List<Article> list = this.mapper.selectByExample(example);
 		return list;
 	}
+	
+	public List<Article> queryArticleListByCreateTime(String time){
+		List<Article> list = this.mapper.queryArticleListByCreateTime(time);
+		return list;
+	}
 
 	public int countArticles(String tag) {
 		ArticleExample example = new ArticleExample();
@@ -66,5 +71,11 @@ public class ArticleServiceImpl implements ArticleService {
 			return (articles != null) && (articles.size() > 0) ? (Article) articles.get(0) : null;
 		}
 		return null;
+	}
+
+	@Override
+	public List<String> getArticleTimeList() {
+		List<String> timeList = this.mapper.getArticleTimeList();
+		return timeList;
 	}
 }
