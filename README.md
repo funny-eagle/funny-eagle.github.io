@@ -1,14 +1,14 @@
 ## Freda 是基于Java的博客系统
 ### 技术框架：JDK1.8, Spring4.0.2, Mybatis3.2.6, Bootstrap3
 ### 数据库：MySQL5.7
-### 富文本编辑器：summernote
-### MarkDown编辑器：editor.md
+### 富文本编辑器：summernote 
+### 推荐使用Chrome插件马克飞象markdown语法写文章
 
 ##开发日记
 
 ###2016年6月22日
 
-- article表增加［文章来源］字段值：原创或转载
+- article表增加［文章来源］字段，值：原创、转载
 
 ###2016年7月3日
 - article表增加 ［作者网站连接］
@@ -18,12 +18,14 @@
 - 集成markdown编辑器
 
 ###2016年7月6日
-- article表增加文章类别：1、技术；2、其他
+- article表增加［文章类别］字段，值：技术、其他
 - 增加按月份显示文章
 - 更新about信息
 
+###2016年7月9日
+- 删除editor.md组件
+
 ###TODO
-- markdown编辑器完善
 - 从缓存读取文章日期列表
 - 定时刷新文章日期缓存
 - 集成评论插件
