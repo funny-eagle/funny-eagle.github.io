@@ -23,10 +23,9 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<%=basePath %>/bootstrap/js/bootstrap.min.js"></script>
 <!-- include summernote css/js-->
-<%-- <link href="<%=basePath %>/summernote/summernote.css" rel="stylesheet"> --%>
-<%-- <script src="<%=basePath %>/summernote/summernote.min.js"></script> --%>
+<link href="<%=basePath %>/summernote/summernote.css" rel="stylesheet">
+<script src="<%=basePath %>/summernote/summernote.min.js"></script>
 
-<link href="<%=basePath %>/editor.md-master/css/editormd.css">
 <style type="text/css">
 .label {
 	cursor: pointer;
@@ -71,10 +70,6 @@
 				</div>
 			</div>
 			
-			<div id="test-editormd">
-			    <textarea name="blogContent" id="blogContent"></textarea>
-			</div>
-			<!-- 
 			<div class="form-group">
 				<label for="preview">预览</label>
 				<textarea id="preview" name="preview">${article.preview }</textarea>
@@ -100,39 +95,13 @@
 				  });
 				});
 			</script>
-			-->
+			
 			
 			<div style="text-align: center;">
 				<button type="submit" class="btn btn-primary">发布文章</button>
 			</div>
 		</div>
 	</form>
-	<script src="<%=basePath%>/editor.md-master/editormd.js"></script>
-	<script>
-			     var testEditor;
-			        $(function() {
-			            testEditor = editormd("test-editormd", {
-			                width   : "90%", 
-			                height  : 800,
-			                syncScrolling : "single",
-			                saveHTMLToTextarea : true, //设置可保存为html 获取的时候testEditor.getHtml();就可以了
-			                /*theme : "dark",*/  //设置主题，有默认
-			                /*previewTheme : "dark",*/
-			                /*editorTheme : "pastel-on-dark",*/
-			                searchReplace : true,
-			                emoji : true,
-			                taskList : true,
-			                tocm            : true,         // Using [TOCM]
-			                tex : true,                   // 开启科学公式TeX语言支持，默认关闭
-			                flowChart : true,             // 开启流程图支持，默认关闭
-			                sequenceDiagram : true,       // 开启时序/序列图支持，默认关闭,
-			                dialogLockScreen : false,   // 设置弹出层对话框不锁屏，全局通用，默认为true
-			                imageUpload : true,
-			                imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-			                imageUploadURL : "./php/upload.php",
-			                path    : "<%=basePath%>/editor.md-master/lib/"
-			            });
-			        });
-			  </script>
 </body>
+
 </html>

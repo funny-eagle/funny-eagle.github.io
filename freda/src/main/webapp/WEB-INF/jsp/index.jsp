@@ -102,8 +102,8 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 				<c:when test="${totalPages != null }">
 					<nav>
 			            <ul class="pager">
-			              <li><a href="<%=basePath%>/index.html?page=${(page==1)? page : page-1}">Previous</a></li>
-			              <li><a href="<%=basePath%>/index.html?page=${page == totalPages ? page : page+1}">Next</a></li>
+			              <li><a href="<%=basePath%>/index?page=${(page==1)? page : page-1}">Previous</a></li>
+			              <li><a href="<%=basePath%>/index?page=${page == totalPages ? page : page+1}">Next</a></li>
 			            </ul>
 		          	</nav>
 				</c:when>
