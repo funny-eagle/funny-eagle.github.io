@@ -92,7 +92,7 @@ public class AdminController {
 	@RequestMapping({ "/article/save" })
 	public String saveArticle(HttpServletRequest request, Model model, Article article) {
 		this.articleService.saveArticle(article);
-		return "redirect:/index";
+		return "redirect:/admin";
 	}
 
 	@RequestMapping({ "/article/edit" })

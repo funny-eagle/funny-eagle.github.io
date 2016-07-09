@@ -49,22 +49,23 @@
 			<div class="row clearfix">
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="title">标题</label> 
-						<input type="text" required class="form-control" id="title" name="title" placeholder="请输入标题" value="${article.title }">
+						<label for="title">标题</label> <span style="color:grey;font-size:8px;">最大长度20个字符</span>
+						<input type="text" maxlength="20" required class="form-control" id="title" name="title" placeholder="请输入标题" value="${article.title }">
 					</div>
 				</div>
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="author">作者</label> <input type="text" required
+						<label for="author">作者</label> <span style="color:grey;font-size:8px;">最大长度20个字符</span>
+						<input type="text" required maxlength="20" 
 							class="form-control" id="author" name="author"
 							placeholder="请输入作者" value="${article.author }">
 					</div>
 				</div>
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="tag">标签</label> 
+						<label for="tag">标签</label> <span style="color:grey;font-size:8px;">最大长度20个字符</span>
 						<input type="text" required
-							class="form-control" id="标签" name="tag"
+							class="form-control" id="标签" name="tag" maxlength="10" 
 							placeholder="输入标签，多个标签使用英文状态下的逗号分隔" value="${article.tag }">
 					</div>
 				</div>
