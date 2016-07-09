@@ -30,5 +30,10 @@ public abstract interface ArticleMapper {
 	
 	public List<String> getArticleTimeList();
 	
+	public List<String> getArticleTagList();
+	
 	public List<Article> queryArticleListByCreateTime(String time);
+	
+	public List<Article> queryArticleListByTag(String time);
+	
 }

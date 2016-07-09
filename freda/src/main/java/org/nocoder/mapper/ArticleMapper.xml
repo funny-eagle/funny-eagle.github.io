@@ -108,11 +108,20 @@
 	<select id="getArticleTimeList" resultType="java.lang.String">
 		select distinct(DATE_FORMAT(create_time, '%Y-%m')) as create_time from article order by create_time asc
 	</select>
+	<select id="getArticleTagList" resultType="java.lang.String">
+		select distinct(tag) as tag from article
+	</select>
 	<select id="queryArticleListByCreateTime" parameterType="java.lang.String" resultMap="BaseResultMap">
 		select 
 		<include refid="Base_Column_List" />
 		from article 
 		where DATE_FORMAT(create_time, '%Y-%m')=#{time,jdbcType=VARCHAR}
+	</select>
+	<select id="queryArticleListByTag" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select 
+		<include refid="Base_Column_List" />
+		from article 
+		where tag=#{tag,jdbcType=VARCHAR}
 	</select>
 	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
 		delete from

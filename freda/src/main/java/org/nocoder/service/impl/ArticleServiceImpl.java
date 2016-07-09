@@ -78,4 +78,16 @@ public class ArticleServiceImpl implements ArticleService {
 		List<String> timeList = this.mapper.getArticleTimeList();
 		return timeList;
 	}
+
+	@Override
+	public List<String> getArticleTagList() {
+		List<String> tagList = this.mapper.getArticleTagList();
+		return tagList;
+	}
+
+	@Override
+	public List<Article> queryArticleListByTag(String tag) {
+		List<Article> list = this.mapper.queryArticleListByTag(tag);
+		return list;
+	}
 }

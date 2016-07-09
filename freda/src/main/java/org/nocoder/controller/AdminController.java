@@ -29,7 +29,7 @@ public class AdminController {
 
 			final String tag = request.getParameter("tag");
 			final Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
-			final Integer pageSize = Integer.valueOf(5);
+			final Integer pageSize = Integer.valueOf(20);
 			final Object[] result = queryArticlesByPage(tag, page, pageSize);
 
 			@SuppressWarnings("unchecked")

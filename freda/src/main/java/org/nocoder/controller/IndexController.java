@@ -25,11 +25,13 @@ public class IndexController {
 		Object[] result = queryArticlesByPage(tag, page, pageSize);
 		// 获取文章时间列表
 		List<String> timeList = articleService.getArticleTimeList();
-		
+		// get article tags
+		List<String> tagList = articleService.getArticleTagList();
 		@SuppressWarnings("unchecked")
 		List<Article> articleList = (List<Article>) result[0];
 		model.addAttribute("articleList", articleList);
 		model.addAttribute("timeList", timeList);
+		model.addAttribute("tagList", tagList);
 		model.addAttribute("page", page);
 		model.addAttribute("totalPages", result[1]);
 		return "index";
@@ -41,8 +43,24 @@ public class IndexController {
 		List<Article> articleList = articleService.queryArticleListByCreateTime(month);
 		// 获取文章时间列表
 		List<String> timeList = articleService.getArticleTimeList();
+		// get article tags
+		List<String> tagList = articleService.getArticleTagList();
 		model.addAttribute("articleList", articleList);
 		model.addAttribute("timeList", timeList);
+		model.addAttribute("tagList", tagList);
+		return "index";
+	}
+	@RequestMapping("/articlesByTag")
+	public String articlesByTag(HttpServletRequest request, Model model){
+		String tag = request.getParameter("tag");
+		List<Article> articleList = articleService.queryArticleListByTag(tag);
+		// 获取文章时间列表
+		List<String> timeList = articleService.getArticleTimeList();
+		// get article tags
+		List<String> tagList = articleService.getArticleTagList();
+		model.addAttribute("articleList", articleList);
+		model.addAttribute("timeList", timeList);
+		model.addAttribute("tagList", tagList);
 		return "index";
 	}
 	

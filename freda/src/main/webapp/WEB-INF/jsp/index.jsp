@@ -127,6 +127,14 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 			</p>
           </div>
           <div class="sidebar-module">
+            <h4>Tags</h4>
+            <ol class="list-unstyled">
+            	<c:forEach items="${tagList}" var="tag">
+                	<li><a href="<%=basePath%>/articlesByTag?tag=${tag}">${tag}</a></li>
+            	</c:forEach>
+            </ol>
+          </div>
+          <div class="sidebar-module">
             <h4>Archives</h4>
             <ol class="list-unstyled">
             	<c:forEach items="${timeList}" var="time">
