@@ -4,7 +4,7 @@ import java.util.List;
 import org.nocoder.model.Article;
 
 public abstract interface ArticleService {
-	public abstract List<Article> queryArticleList(String paramString, Integer paramInteger1, Integer paramInteger2);
+	public abstract List<Article> queryArticleList(int state, String tag, Integer pageNum, Integer pageSize);
 
 	public abstract int countArticles(String paramString);
 
@@ -19,4 +19,6 @@ public abstract interface ArticleService {
 	public List<Article> queryArticleListByCreateTime(String time);
 	
 	public List<Article> queryArticleListByTag(String tag);
+	
+	public int deleteArticleById(String id);
 }

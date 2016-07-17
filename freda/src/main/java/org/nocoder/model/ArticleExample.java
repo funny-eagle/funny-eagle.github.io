@@ -662,6 +662,10 @@ public class ArticleExample {
 			addCriterion("UPDATE_TIME not between", value1, value2, "updateTime");
 			return (Criteria) this;
 		}
+		public Criteria andStateEqualTo(int value) {
+			addCriterion("STATE =", value, "state");
+			return (Criteria) this;
+		}
 	}
 
 	public static class Criteria extends GeneratedCriteria {

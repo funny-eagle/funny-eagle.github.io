@@ -18,6 +18,8 @@ public class Article {
 	private Date createTime;
 
 	private Date updateTime;
+	
+	private int state;
 
 	public String getId() {
 		return id;
@@ -82,4 +84,13 @@ public class Article {
 	public void setUpdateTime(Date updateTime) {
 		this.updateTime = updateTime;
 	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
+	}
+	
 }

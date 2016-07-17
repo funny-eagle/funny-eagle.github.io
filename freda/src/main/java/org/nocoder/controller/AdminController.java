@@ -28,9 +28,10 @@ public class AdminController {
 		if (request.getSession().getAttribute("user") != null) {
 
 			final String tag = request.getParameter("tag");
+			int state = 0;
 			final Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
-			final Integer pageSize = Integer.valueOf(20);
-			final Object[] result = queryArticlesByPage(tag, page, pageSize);
+			final Integer pageSize = Integer.valueOf(10);
+			final Object[] result = queryArticlesByPage(state, tag, page, pageSize);
 
 			@SuppressWarnings("unchecked")
 			final List<Article> articleList = (List<Article>) result[0];
@@ -69,7 +70,7 @@ public class AdminController {
 		return "redirect:login";
 	}
 
-	private Object[] queryArticlesByPage(String tag, Integer page, Integer pageSize) {
+	private Object[] queryArticlesByPage(int state, String tag, Integer page, Integer pageSize) {
 		final Object[] result = new Object[2];
 		if (page == null) {
 			page = Integer.valueOf(1);
@@ -79,7 +80,7 @@ public class AdminController {
 		}
 		final int articlesCount = this.articleService.countArticles(tag);
 		if (articlesCount > 0) {
-			List<Article> articleList = this.articleService.queryArticleList(tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
+			List<Article> articleList = this.articleService.queryArticleList(state, tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
 			result[0] = articleList;
 			// 总页数 取天花板值
 			int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize.intValue());
@@ -100,5 +101,11 @@ public class AdminController {
 		Article article = this.articleService.queryArticleById(id);
 		model.addAttribute("article", article);
 		return "admin/editor";
+	}
+	
+	@RequestMapping({ "/article/delete" })
+	public String delete(HttpServletRequest request,  String id, Model model) {
+		this.articleService.deleteArticleById(id);
+		return "redirect:/admin";
 	}
 }

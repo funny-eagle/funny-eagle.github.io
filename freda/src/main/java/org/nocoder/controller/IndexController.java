@@ -20,9 +20,10 @@ public class IndexController {
 	@RequestMapping({ "/index" })
 	public String toIndex(HttpServletRequest request, Model model) {
 		String tag = request.getParameter("tag");
+		int state = 2;
 		Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
 		Integer pageSize = Integer.valueOf(1);
-		Object[] result = queryArticlesByPage(tag, page, pageSize);
+		Object[] result = queryArticlesByPage(state, tag, page, pageSize);
 		// 获取文章时间列表
 		List<String> timeList = articleService.getArticleTimeList();
 		// get article tags
@@ -64,7 +65,7 @@ public class IndexController {
 		return "index";
 	}
 	
-	private Object[] queryArticlesByPage(String tag, Integer page, Integer pageSize) {
+	private Object[] queryArticlesByPage(int state, String tag, Integer page, Integer pageSize) {
 		Object[] result = new Object[2];
 		if (page == null) {
 			page = Integer.valueOf(1);
@@ -76,7 +77,7 @@ public class IndexController {
 
 		int articlesCount = this.articleService.countArticles(tag);
 		if (articlesCount > 0) {
-			List<Article> articleList = this.articleService.queryArticleList(tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
+			List<Article> articleList = this.articleService.queryArticleList(state, tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
 			result[0] = articleList;
 			// 总页数 取天花板值
 			int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize.intValue());

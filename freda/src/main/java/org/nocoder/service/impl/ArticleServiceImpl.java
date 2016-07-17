@@ -19,8 +19,11 @@ public class ArticleServiceImpl implements ArticleService {
 	@Autowired
 	private ArticleMapper mapper;
 
-	public List<Article> queryArticleList(String tag, Integer pageNum, Integer pageSize) {
+	public List<Article> queryArticleList(int state, String tag, Integer pageNum, Integer pageSize) {
 		ArticleExample example = new ArticleExample();
+		if (state >0) {
+			example.createCriteria().andStateEqualTo(state);
+		}
 		if ((tag != null) && (!"".equals(tag))) {
 			example.createCriteria().andTagEqualTo(tag);
 		}
@@ -89,5 +92,10 @@ public class ArticleServiceImpl implements ArticleService {
 	public List<Article> queryArticleListByTag(String tag) {
 		List<Article> list = this.mapper.queryArticleListByTag(tag);
 		return list;
+	}
+
+	@Override
+	public int deleteArticleById(String id) {
+		return this.mapper.deleteByPrimaryKey(id);
 	}
 }

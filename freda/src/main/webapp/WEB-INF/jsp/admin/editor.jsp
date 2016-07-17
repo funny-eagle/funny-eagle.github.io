@@ -39,13 +39,20 @@
     <![endif]-->
 </head>
 <body>
-	<form role="form" action="<%=basePath %>/article/save"
-		method="post">
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="witdh:40px; height:40px; float:left; padding-left:10px;padding-top:8px;"/>
+			<a class="navbar-brand" href="<%=basePath %>/admin" style="float:left;">NoCoder Admin</a>
+			<a class="navbar-brand" href="<%=basePath %>" style="float:left;">NoCoder.Org</a>
+		</div>
+		<div>
+			<p class="navbar-text">文章编辑</p>
+		</div>
+	</nav>
+	<form id="articleForm" role="form" action="<%=basePath %>/article/save" method="post">
 		<div class="container">
-			<h2>
-				NOCODER <small>文章编辑</small>
-			</h2>
 			<input type="hidden" name="id" id="id" value="${article.id }"/>
+			<input type="hidden" name="state" id="state" value="${article.state}"/>
 			<div class="row clearfix">
 				<div class="col-md-4 column">
 					<div class="form-group">
@@ -70,11 +77,12 @@
 					</div>
 				</div>
 			</div>
-			
+			<!-- 
 			<div class="form-group">
 				<label for="preview">预览</label>
 				<textarea id="preview" name="preview">${article.preview }</textarea>
 			</div>
+			 -->
 			<div class="form-group">
 				<label for="content">正文</label>
 				<textarea id="content" name="content">${article.content }</textarea>
@@ -83,26 +91,40 @@
 			<script type="text/javascript">
 				$(document).ready(function() {
 				  $('#content').summernote({
-					  height: 300,                 // set editor height
+					  height: 400,                 // set editor height
 					  minHeight: null,             // set minimum height of editor
 					  maxHeight: null,             // set maximum height of editor
 					  focus: true                  // set focus to editable area after initializing summernote
 				  });
+				  /*
 				  $('#preview').summernote({
 					  height: 200,                 // set editor height
 					  minHeight: null,             // set minimum height of editor
 					  maxHeight: null,             // set maximum height of editor
 					  focus: true                  // set focus to editable area after initializing summernote
 				  });
+				  */
 				});
 			</script>
 			
-			
 			<div style="text-align: center;">
-				<button type="submit" class="btn btn-primary">发布文章</button>
+				<button type="button" onclick="saveAticle();" class="btn btn-success">保存为草稿</button>
+				<button type="button" onclick="submitAticle();" class="btn btn-primary" style="margin-left:20px;">发布到博客</button>
 			</div>
 		</div>
 	</form>
+	<script type="text/javascript">
+		// 保存为草稿
+		function saveAticle () {
+			$("#state").val(1);
+			$("#articleForm").submit();
+		}
+		// 发布文章
+		function submitAticle () {
+			$("#state").val(2);
+			$("#articleForm").submit();
+		}
+	</script>
 </body>
 
 </html>
