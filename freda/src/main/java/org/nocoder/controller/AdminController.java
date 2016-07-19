@@ -14,7 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class AdminController {
+public class AdminController extends BaseController{
 	
 	@Resource
 	private UserService userService;
@@ -66,25 +66,6 @@ public class AdminController {
 			return "admin/editor";
 		}
 		return "redirect:login";
-	}
-
-	private Object[] queryArticlesByPage(int state, String tag, Integer page, Integer pageSize) {
-		final Object[] result = new Object[2];
-		if (page == null) {
-			page = Integer.valueOf(1);
-		}
-		if (pageSize == null) {
-			pageSize = Integer.valueOf(10);
-		}
-		final int articlesCount = this.articleService.countArticles(tag);
-		if (articlesCount > 0) {
-			List<Article> articleList = this.articleService.queryArticleList(state, tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
-			result[0] = articleList;
-			// 总页数 取天花板值
-			int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize.intValue());
-			result[1] = Integer.valueOf(totalPages);
-		}
-		return result;
 	}
 
 

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.codehaus.jackson.map.deser.ValueInstantiators;
 import org.nocoder.model.Article;
 import org.nocoder.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class IndexController {
+public class IndexController extends BaseController{
 	// private Logger logger = Logger.getLogger(IndexController.class);
 	@Autowired
 	private ArticleService articleService;
@@ -63,27 +64,6 @@ public class IndexController {
 		model.addAttribute("timeList", timeList);
 		model.addAttribute("tagList", tagList);
 		return "index";
-	}
-	
-	private Object[] queryArticlesByPage(int state, String tag, Integer page, Integer pageSize) {
-		Object[] result = new Object[2];
-		if (page == null) {
-			page = Integer.valueOf(1);
-		}
-
-		if (pageSize == null) {
-			pageSize = Integer.valueOf(10);
-		}
-
-		int articlesCount = this.articleService.countArticles(tag);
-		if (articlesCount > 0) {
-			List<Article> articleList = this.articleService.queryArticleList(state, tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
-			result[0] = articleList;
-			// 总页数 取天花板值
-			int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize.intValue());
-			result[1] = Integer.valueOf(totalPages);
-		}
-		return result;
 	}
 
 	@RequestMapping({ "/article" })
