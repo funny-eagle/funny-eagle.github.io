@@ -18,6 +18,7 @@ public class AdminController extends BaseController{
 	
 	@Resource
 	private UserService userService;
+
 	@Autowired
 	private ArticleService articleService;
 
@@ -27,11 +28,9 @@ public class AdminController extends BaseController{
 
 			final String tag = request.getParameter("tag");
 			int state = 0;
-			final Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
-			final Integer pageSize = Integer.valueOf(10);
+			final Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
+			final Integer pageSize = 10;
 			final Object[] result = queryArticlesByPage(state, tag, page, pageSize);
-
-			@SuppressWarnings("unchecked")
 			final List<Article> articleList = (List<Article>) result[0];
 			model.addAttribute("articleList", articleList);
 			model.addAttribute("page", page);
@@ -70,20 +69,20 @@ public class AdminController extends BaseController{
 
 
 	@RequestMapping({ "/article/save" })
-	public String saveArticle(HttpServletRequest request, Model model, Article article) {
+	public String saveArticle(Article article) {
 		this.articleService.saveArticle(article);
 		return "redirect:/admin";
 	}
 
 	@RequestMapping({ "/article/edit" })
-	public String toEdit(HttpServletRequest request,  String id, Model model) {
+	public String toEdit(String id, Model model) {
 		Article article = this.articleService.queryArticleById(id);
 		model.addAttribute("article", article);
 		return "admin/editor";
 	}
 	
 	@RequestMapping({ "/article/delete" })
-	public String delete(HttpServletRequest request,  String id, Model model) {
+	public String delete(String id) {
 		this.articleService.deleteArticleById(id);
 		return "redirect:/admin";
 	}

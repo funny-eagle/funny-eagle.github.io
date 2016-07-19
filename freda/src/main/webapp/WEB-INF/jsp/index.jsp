@@ -83,7 +83,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 
       <div class="row">
 
-        <div class="col-sm-8 blog-main">
+        <div class="col-sm-9 blog-main">
           <div class="blog-post">
           	<c:forEach items="${articleList }" var="article">
 	      		<h2 class="blog-post-title">${article.title}</h2>
@@ -100,17 +100,17 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 			
 			<c:choose>
 				<c:when test="${totalPages != null }">
-					<nav>
-			            <ul class="pager">
-			              <li><a href="<%=basePath%>/index?page=${(page==1)? page : page-1}">Previous</a></li>
-			              <li><a href="<%=basePath%>/index?page=${page == totalPages ? page : page+1}">Next</a></li>
+					<div>
+			            <ul class="pager" style="text-align: center;">
+			              <li style="margin-right: 10px;"><a href="<%=basePath%>/index?page=${(page==1)? page : page-1}">Previous</a></li>
+			              <li style="margin-left: 10px;"><a href="<%=basePath%>/index?page=${page == totalPages ? page : page+1}">Next</a></li>
 			            </ul>
-		          	</nav>
+		          	</div>
 				</c:when>
 			</c:choose>
         </div><!-- /.blog-main -->
 
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+        <div class="col-sm-2 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
             <p>
@@ -123,7 +123,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
             	<em>I love Linux, Python, Freda...</em>
 			</p>
 			<p>
-				<em>except you, man, haha!</em>
+				<em>Except you, man, Haha!</em>
 			</p>
           </div>
           <div class="sidebar-module">

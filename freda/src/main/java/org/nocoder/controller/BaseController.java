@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
- * Created by yangjinlong on 16/7/19.
+ * Created by jason on 16/7/19.
  */
 public class BaseController {
     @Autowired
@@ -15,18 +15,18 @@ public class BaseController {
     public Object[] queryArticlesByPage(int state, String tag, Integer page, Integer pageSize) {
         final Object[] result = new Object[2];
         if (page == null) {
-            page = Integer.valueOf(1);
+            page = 1;
         }
         if (pageSize == null) {
-            pageSize = Integer.valueOf(10);
+            pageSize = 10;
         }
         final int articlesCount = this.articleService.countArticles(tag);
         if (articlesCount > 0) {
-            List<Article> articleList = this.articleService.queryArticleList(state, tag, Integer.valueOf((page.intValue() - 1) * pageSize.intValue()), pageSize);
+            List<Article> articleList = this.articleService.queryArticleList(state, tag, (page - 1) * pageSize, pageSize);
             result[0] = articleList;
             // 总页数 取天花板值
-            int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize.intValue());
-            result[1] = Integer.valueOf(totalPages);
+            int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize);
+            result[1] = totalPages;
         }
         return result;
     }
