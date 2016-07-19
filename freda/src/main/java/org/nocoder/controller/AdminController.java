@@ -1,10 +1,8 @@
 package org.nocoder.controller;
 
 import java.util.List;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.lang3.StringUtils;
 import org.nocoder.model.Article;
 import org.nocoder.model.User;
