@@ -1,10 +1,7 @@
 package org.nocoder.controller;
 
 import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-
-import org.codehaus.jackson.map.deser.ValueInstantiators;
 import org.nocoder.model.Article;
 import org.nocoder.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +19,8 @@ public class IndexController extends BaseController{
 	public String toIndex(HttpServletRequest request, Model model) {
 		String tag = request.getParameter("tag");
 		int state = 2;
-		Integer page = Integer.valueOf(Integer.parseInt(request.getParameter("page") == null ? "1" : request.getParameter("page")));
-		Integer pageSize = Integer.valueOf(1);
+		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
+		Integer pageSize = 1;
 		Object[] result = queryArticlesByPage(state, tag, page, pageSize);
 		// 获取文章时间列表
 		List<String> timeList = articleService.getArticleTimeList();
