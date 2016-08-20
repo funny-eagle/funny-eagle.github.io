@@ -1,6 +1,7 @@
 package org.nocoder.controller;
 
 import java.util.List;
+import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
@@ -30,11 +31,11 @@ public class AdminController extends BaseController{
 			int state = 0;
 			final Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 			final Integer pageSize = 10;
-			final Object[] result = queryArticlesByPage(state, tag, page, pageSize);
-			final List<Article> articleList = (List<Article>) result[0];
+			final Map<String, Object> resMap = queryArticlesByPage(state, tag, page, pageSize);
+			final List<Article> articleList = (List<Article>) resMap.get("articleList");
 			model.addAttribute("articleList", articleList);
 			model.addAttribute("page", page);
-			model.addAttribute("totalPages", result[1]);
+			model.addAttribute("totalPages", resMap.get("totalPages"));
 
 			return "admin/admin";
 		}
@@ -84,6 +85,20 @@ public class AdminController extends BaseController{
 	@RequestMapping({ "/article/delete" })
 	public String delete(String id) {
 		this.articleService.deleteArticleById(id);
+		return "redirect:/admin";
+	}
+
+	@RequestMapping({ "/article/refreshTimeList" })
+	public String refreshTimeList(){
+		this.articleService.getArticleTimeList();
+		//logger.debug("==============刷新时间列表完成==========");
+		return "redirect:/admin";
+	}
+
+	@RequestMapping({ "/article/refreshTagList" })
+	public String refreshTagList(){
+		this.articleService.getArticleTagList();
+		//logger.debug("==============刷新标签列表完成==========");
 		return "redirect:/admin";
 	}
 }

@@ -9,7 +9,9 @@
 <html lang="zh-CN">
 <jsp:include page="../common/head.jsp"></jsp:include>
 <body>
-	<div style="text-align:left;margin-left:15px;"><a class="btn btn-success" href="<%=basePath%>/editor">写文章</a></div>
+	<div style="text-align:left;margin-left:15px; float:left;"><a class="btn btn-success" href="<%=basePath%>/editor">写文章</a></div>
+	<div style="text-align:right;margin-left:15px;float:right;"><a class="btn btn-warning" href="javascript:void(0);" onclick="refreshTimeList();">刷新首页时间列表</a></div>
+	<div style="text-align:right;margin-left:15px;float:right;"><a class="btn btn-warning" href="javascript:void(0);" onclick="refreshTagList()">刷新首页标签列表</a></div>
 	<table class="table table-responsive table-bordered" style="margin-left:12px; width:98%;" >
 		<caption>文章列表</caption>
 		<thead align="center">
@@ -49,5 +51,26 @@
 			<li><a href="<%=basePath%>/admin?page=${page == totalPages ? page : page+1}">下一页</a></li>
 		</ul>
 	</div>
+	<script type="text/javascript">
+		function refreshTagList(){
+			$.ajax({
+				url:"<%=basePath%>/article/refreshTagList",
+				success:function(){
+					alert("标签刷新成功!");
+				}
+			});
+
+		}
+
+		function refreshTimeList(){
+			$.ajax({
+				url:"<%=basePath%>/article/refreshTimeList",
+				success:function(){
+					alert("时间刷新成功");
+				}
+			});
+
+		}
+	</script>
 </body>
 </html>

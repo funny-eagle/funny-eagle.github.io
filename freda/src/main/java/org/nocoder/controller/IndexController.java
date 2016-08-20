@@ -1,6 +1,7 @@
 package org.nocoder.controller;
 
 import java.util.List;
+import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.nocoder.model.Article;
 import org.nocoder.service.ArticleService;
@@ -21,18 +22,18 @@ public class IndexController extends BaseController{
 		int state = 2;
 		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 		Integer pageSize = 1;
-		Object[] result = queryArticlesByPage(state, tag, page, pageSize);
+		Map<String, Object> resMap = queryArticlesByPage(state, tag, page, pageSize);
 		// 获取文章时间列表
-		List<String> timeList = articleService.getArticleTimeList();
+		List<String> timeList = articleService.getTimeList();
 		// get article tags
-		List<String> tagList = articleService.getArticleTagList();
-		@SuppressWarnings("unchecked")
-		List<Article> articleList = (List<Article>) result[0];
+		List<String> tagList = articleService.getTagList();
+
+		List<Article> articleList = (List<Article>) resMap.get("articleList");
 		model.addAttribute("articleList", articleList);
 		model.addAttribute("timeList", timeList);
 		model.addAttribute("tagList", tagList);
 		model.addAttribute("page", page);
-		model.addAttribute("totalPages", result[1]);
+		model.addAttribute("totalPages", resMap.get("totalPages"));
 		return "index";
 	}
 	
@@ -41,9 +42,9 @@ public class IndexController extends BaseController{
 		String month = request.getParameter("month");
 		List<Article> articleList = articleService.queryArticleListByCreateTime(month);
 		// 获取文章时间列表
-		List<String> timeList = articleService.getArticleTimeList();
+		List<String> timeList = articleService.getTimeList();
 		// get article tags
-		List<String> tagList = articleService.getArticleTagList();
+		List<String> tagList = articleService.getTagList();
 		model.addAttribute("articleList", articleList);
 		model.addAttribute("timeList", timeList);
 		model.addAttribute("tagList", tagList);
@@ -52,14 +53,20 @@ public class IndexController extends BaseController{
 	@RequestMapping("/articlesByTag")
 	public String articlesByTag(HttpServletRequest request, Model model){
 		String tag = request.getParameter("tag");
-		List<Article> articleList = articleService.queryArticleListByTag(tag);
+		int state = 2;
+		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
+		Integer pageSize = 1;
+		Map<String, Object> resMap = queryArticlesByPage(state, tag, page, pageSize);
+		//List<Article> articleList = articleService.queryArticleListByTag(tag);
 		// 获取文章时间列表
-		List<String> timeList = articleService.getArticleTimeList();
+		List<String> timeList = articleService.getTimeList();
 		// get article tags
-		List<String> tagList = articleService.getArticleTagList();
-		model.addAttribute("articleList", articleList);
+		List<String> tagList = articleService.getTagList();
+		model.addAttribute("articleList", resMap.get("articleList"));
 		model.addAttribute("timeList", timeList);
 		model.addAttribute("tagList", tagList);
+		model.addAttribute("page", page);
+		model.addAttribute("totalPages", resMap.get("totalPages"));
 		return "index";
 	}
 
