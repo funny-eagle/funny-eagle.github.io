@@ -88,17 +88,15 @@ public class AdminController extends BaseController{
 		return "redirect:/admin";
 	}
 
-	@RequestMapping({ "/article/refreshTimeList" })
+	@RequestMapping({ "/article/refreshCache" })
 	public String refreshTimeList(){
 		this.articleService.getArticleTimeList();
-		//logger.debug("==============刷新时间列表完成==========");
+		//logger.debug("==============刷新时间列表成功==========");
+		this.articleService.getArticleTagList();
+		//logger.debug("==============刷新标签列表成功==========");
+		this.articleService.queryRecently10ArticlesList();
+		//logger.debug("==============刷新最新文章列表成功=======");
 		return "redirect:/admin";
 	}
 
-	@RequestMapping({ "/article/refreshTagList" })
-	public String refreshTagList(){
-		this.articleService.getArticleTagList();
-		//logger.debug("==============刷新标签列表完成==========");
-		return "redirect:/admin";
-	}
 }

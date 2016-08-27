@@ -32,6 +32,7 @@ public abstract interface ArticleService {
 	public List<Article> queryArticleListByTag(String tag);
 	
 	public int deleteArticleById(String id);
+	public List<Article> queryRecently10ArticlesList();
 
     /**
      * 从缓存读取标签列表
@@ -44,4 +45,10 @@ public abstract interface ArticleService {
      * @return
      */
     public List<String> getTimeList();
+
+	/**
+	 * 从缓存读取最近10篇文章
+	 * @return
+     */
+	public List<Article> getRecently10ArticlesList();
 }

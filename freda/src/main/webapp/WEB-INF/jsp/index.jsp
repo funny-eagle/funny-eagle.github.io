@@ -16,7 +16,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
     <meta name="author" content="">
     <link rel="icon" href="<%=basePath%>/imgs/command.ico">
 
-    <title>Nocoder.Org</title>
+    <title>NoCoder.Org</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<%=basePath%>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -77,8 +77,8 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">JASON YANG</h1>
-        <p class="lead blog-description">千磨万击还坚劲，任尔东西南北风。</p>
+        <!--<h1 class="blog-title">NoCoder</h1>-->
+        <p class="lead blog-description">NOCODER - JASON YANG'S BLOG</p>
       </div>
 
       <div class="row">
@@ -86,8 +86,9 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
         <div class="col-sm-9 blog-main">
           <div class="blog-post">
           	<c:forEach items="${articleList }" var="article">
-	      		<h2 class="blog-post-title">${article.title}</h2>
+	      		<h2 class="blog-post-title">${article.title}</h2 class="blog-post-title">
 	            <p class="blog-post-meta">
+                    <span class="label label-info">${article.tag}</span>
 	            	<!-- 日期 -->
 	            	<fmt:formatDate pattern="yyyy-MM-dd" value="${article.createTime }" /> 
 	            	<!-- 作者 -->
@@ -111,21 +112,24 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
         </div><!-- /.blog-main -->
 
         <div class="col-sm-2 col-sm-offset-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>
-            	<em>Hey, I'm Jason,</em>
-			</p>
-			<p>
-            	<em>A Java programmer,</em>
-			</p>
-            <p>
-            	<em>I love Linux, Python, Freda...</em>
-			</p>
-			<p>
-				<em>Except you, man, Haha!</em>
-			</p>
+          <div class="sidebar-module">
+            <h4>Recently</h4>
+            <ol class="list-unstyled">
+              <c:forEach items="${recently10ArticlesList}" var="article">
+                <li><a href="<%=basePath%>/article?id=${article.id}">${article.title}</a></li>
+              </c:forEach>
+            </ol>
           </div>
+
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <c:forEach items="${timeList}" var="time">
+                <li><a href="<%=basePath%>/articlesByMonth?month=${time}">${time}</a></li>
+              </c:forEach>
+            </ol>
+          </div>
+
           <div class="sidebar-module">
             <h4>Tags</h4>
             <ol class="list-unstyled">
@@ -134,14 +138,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
             	</c:forEach>
             </ol>
           </div>
-          <div class="sidebar-module">
-            <h4>Archives</h4>
-            <ol class="list-unstyled">
-            	<c:forEach items="${timeList}" var="time">
-                	<li><a href="<%=basePath%>/articlesByMonth?month=${time}">${time}</a></li>
-            	</c:forEach>
-            </ol>
-          </div>
+
           <div class="sidebar-module">
             <h4>Elsewhere</h4>
             <ol class="list-unstyled">
@@ -149,6 +146,20 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
               <li><a target="_blank" href="http://weibo.com/227307890">Weibo</a></li>
             </ol>
           </div>
+
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+            <p>
+              <em>Jason Yang</em>
+            </p>
+            <p>
+              yangjinlong86@gmail.com
+            </p>
+            <p>
+              <em>QQ</em> 88131182
+            </p>
+          </div>
+
         </div><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->

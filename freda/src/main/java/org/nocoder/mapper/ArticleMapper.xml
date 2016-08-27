@@ -124,6 +124,12 @@
 		from article 
 		where tag=#{tag,jdbcType=VARCHAR}
 	</select>
+	<select id="queryRecently10ArticlesList" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from article
+		order by create_time desc limit 0,10
+	</select>
 	<delete id="deleteByPrimaryKey" parameterType="java.lang.String">
 		delete from
 		article

@@ -22,22 +22,29 @@ public class ArticleServiceImpl implements ArticleService {
 
     private List<String> tagList;
     private List<String> timeList;
+	private List<Article> recently10ArticlesList;
 
     public List<Article> queryArticleList(int state, String tag, Integer pageNum, Integer pageSize) {
 		ArticleExample example = new ArticleExample();
+		ArticleExample.Criteria criteria = example.createCriteria();
 		if (state >0) {
-			example.createCriteria().andStateEqualTo(state);
+			criteria.andStateEqualTo(state);
 		}
-		if ((tag != null) && (!"".equals(tag))) {
-			example.createCriteria().andTagEqualTo(tag);
+		if (tag != null && !"".equals(tag)) {
+			criteria.andTagEqualTo(tag);
 		}
-		example.setOrderByClause("create_time desc, id desc");
+		example.setOrderByClause("create_time desc");
 		example.setPageNum(pageNum);
 		example.setPageSize(pageSize);
 		List<Article> list = this.articleMapper.selectByExample(example);
 		return list;
 	}
-	
+
+	/**
+	 * 根据日期查找文章列表
+	 * @param time
+	 * @return
+     */
 	public List<Article> queryArticleListByCreateTime(String time){
 		List<Article> list = this.articleMapper.queryArticleListByCreateTime(time);
 		return list;
@@ -95,6 +102,18 @@ public class ArticleServiceImpl implements ArticleService {
 	}
 
 	@Override
+	@PostConstruct
+	public List<Article> queryRecently10ArticlesList(){
+		this.recently10ArticlesList = this.articleMapper.queryRecently10ArticlesList();
+		return recently10ArticlesList;
+	}
+
+	/**
+	 * 根据标签查找文章列表
+	 * @param tag
+	 * @return
+     */
+	@Override
 	public List<Article> queryArticleListByTag(String tag) {
 		List<Article> list = this.articleMapper.queryArticleListByTag(tag);
 		return list;
@@ -102,6 +121,7 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Override
 	public int deleteArticleById(String id) {
+
 		return this.articleMapper.deleteByPrimaryKey(id);
 	}
 
@@ -115,5 +135,11 @@ public class ArticleServiceImpl implements ArticleService {
     public List<String> getTimeList(){
         return this.timeList;
     }
+
+	@Override
+	public List<Article> getRecently10ArticlesList(){
+		return this.recently10ArticlesList;
+	}
+
 
 }
