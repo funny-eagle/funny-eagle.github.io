@@ -40,12 +40,13 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          	<a id="homeLink" class="blog-nav-item active" href="<%=basePath %>" onclick="toHome();">Home</a>
-          	<a id="techLink" class="blog-nav-item" href="javascript:void(0);" onclick="toTech();">Technology</a>
-          	<a id="otherLink" class="blog-nav-item" href="javascript:void(0);" onclick="toOther();">Other</a>
-          	<a id="aboutLink" class="blog-nav-item" href="javascript:void(0);" onclick="toAbout();">About</a>
+          	<a id="homeLink" class="blog-nav-item active" href="<%=basePath %>">NoCoder.Org - Jason Yang's Blog</a>
+          	<%--<a id="techLink" class="blog-nav-item" href="javascript:void(0);" onclick="toTech();">Technology</a>--%>
+          	<%--<a id="otherLink" class="blog-nav-item" href="javascript:void(0);" onclick="toOther();">Other</a>--%>
+          	<%--<a id="aboutLink" class="blog-nav-item" href="javascript:void(0);" onclick="toAbout();">About</a>--%>
         </nav>
         <script type="text/javascript">
+          /**
         	function toHome(){
         		$("#homeLink").addClass("active");
         		$("#techLink").removeClass("active");
@@ -70,6 +71,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
         		$("#otherLink").removeClass("active");
         		$("#aboutLink").addClass("active");
         	}
+          **/
         </script>
       </div>
     </div>
@@ -78,7 +80,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 
       <div class="blog-header">
         <!--<h1 class="blog-title">NoCoder</h1>-->
-        <p class="lead blog-description">NOCODER - JASON YANG'S BLOG</p>
+        <%--<p class="lead blog-description">NOCODER - JASON YANG'S BLOG</p>--%>
       </div>
 
       <div class="row">
