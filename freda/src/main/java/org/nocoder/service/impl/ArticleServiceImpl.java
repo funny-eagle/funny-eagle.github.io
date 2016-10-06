@@ -7,9 +7,12 @@ import org.apache.log4j.Logger;
 import org.nocoder.mapper.ArticleMapper;
 import org.nocoder.model.Article;
 import org.nocoder.model.ArticleExample;
+import org.nocoder.redis.RedisUtils;
 import org.nocoder.service.ArticleService;
+import org.nocoder.utils.SerializeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import redis.clients.jedis.Jedis;
 
 import javax.annotation.PostConstruct;
 
@@ -19,10 +22,6 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Autowired
 	private ArticleMapper articleMapper;
-
-    private List<String> tagList;
-    private List<String> timeList;
-	private List<Article> recently10ArticlesList;
 
     public List<Article> queryArticleList(int state, String tag, Integer pageNum, Integer pageSize) {
 		ArticleExample example = new ArticleExample();
@@ -89,23 +88,26 @@ public class ArticleServiceImpl implements ArticleService {
 
 	@Override
     @PostConstruct
-	public List<String> getArticleTimeList() {
-		this.timeList = this.articleMapper.getArticleTimeList();
-		return timeList;
+	public void setArticleTimeListToRedis() {
+		Jedis jedis = RedisUtils.getJedis();
+		jedis.set("timeList".getBytes(), SerializeUtil.serializeList(this.articleMapper.getArticleTimeList()));
+		jedis.close();
 	}
 
 	@Override
     @PostConstruct
-	public List<String> getArticleTagList() {
-		this.tagList = this.articleMapper.getArticleTagList();
-		return tagList;
+	public void setArticleTagListToRedis() {
+        Jedis jedis = RedisUtils.getJedis();
+        jedis.set("tagList".getBytes(), SerializeUtil.serializeList(this.articleMapper.getArticleTagList()));
+        jedis.close();
 	}
 
 	@Override
 	@PostConstruct
-	public List<Article> queryRecently10ArticlesList(){
-		this.recently10ArticlesList = this.articleMapper.queryRecently10ArticlesList();
-		return recently10ArticlesList;
+	public void setRecently10ArticlesListToRedis(){
+        Jedis jedis = RedisUtils.getJedis();
+        jedis.set("recently10ArticlesList".getBytes(), SerializeUtil.serializeList(this.articleMapper.queryRecently10ArticlesList()));
+        jedis.close();
 	}
 
 	/**
@@ -128,17 +130,20 @@ public class ArticleServiceImpl implements ArticleService {
 
     @Override
     public List<String> getTagList() {
-        return this.tagList;
+        Jedis jedis = RedisUtils.getJedis();
+        return (List<String>) SerializeUtil.unserializeList(jedis.get("tagList".getBytes()));
     }
 
     @Override
     public List<String> getTimeList(){
-        return this.timeList;
+		Jedis jedis = RedisUtils.getJedis();
+		return (List<String>) SerializeUtil.unserializeList(jedis.get("timeList".getBytes()));
     }
 
 	@Override
 	public List<Article> getRecently10ArticlesList(){
-		return this.recently10ArticlesList;
+        Jedis jedis = RedisUtils.getJedis();
+        return (List<Article>) SerializeUtil.unserializeList(jedis.get("recently10ArticlesList".getBytes()));
 	}
 
 

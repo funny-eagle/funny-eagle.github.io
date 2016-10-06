@@ -90,12 +90,12 @@ public class AdminController extends BaseController{
 
 	@RequestMapping({ "/article/refreshCache" })
 	public String refreshTimeList(){
-		this.articleService.getArticleTimeList();
-		//logger.debug("==============刷新时间列表成功==========");
-		this.articleService.getArticleTagList();
-		//logger.debug("==============刷新标签列表成功==========");
-		this.articleService.queryRecently10ArticlesList();
-		//logger.debug("==============刷新最新文章列表成功=======");
+		// 刷新日期列表redis缓存
+		this.articleService.setArticleTimeListToRedis();
+		// 刷新标签列表缓存
+		this.articleService.setArticleTagListToRedis();
+		// 刷新近10篇文章列表缓存
+		this.articleService.setRecently10ArticlesListToRedis();
 		return "redirect:/admin";
 	}
 

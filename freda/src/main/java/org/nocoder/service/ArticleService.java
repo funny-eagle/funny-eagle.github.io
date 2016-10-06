@@ -16,23 +16,33 @@ public abstract interface ArticleService {
 	public abstract Article queryArticleById(String paramString);
 
     /**
-     * 从数据库查询时间列表
+     * 从数据库查询时间列表保存到redis缓存
      * @return
      */
-	public List<String> getArticleTimeList();
+	public void setArticleTimeListToRedis();
 
     /**
-     * 从数据库查询标签列表
+     * 从数据库查询标签列表保存到redis缓存
      * @return
      */
-	public List<String> getArticleTagList();
-	
+	public void setArticleTagListToRedis();
+
+	/**
+	 * 按创建日期查询文章
+	 * @param time
+	 * @return
+     */
 	public List<Article> queryArticleListByCreateTime(String time);
 	
 	public List<Article> queryArticleListByTag(String tag);
 	
 	public int deleteArticleById(String id);
-	public List<Article> queryRecently10ArticlesList();
+
+	/**
+	 * 最近10篇文章
+	 * @return
+     */
+	public void setRecently10ArticlesListToRedis();
 
     /**
      * 从缓存读取标签列表
