@@ -32,6 +32,7 @@
 	<mvc:annotation-driven />
 	<mvc:resources location="/bootstrap/" mapping="/bootstrap/**"/>
 	<mvc:resources location="/imgs/" mapping="/imgs/**"/>
+	<mvc:resources mapping="/editor.md-master/**" location="/editor.md-master/"/>
 	<mvc:default-servlet-handler />
 	<!-- 定义跳转的文件的前后缀 ，视图模式配置 -->
 	<bean

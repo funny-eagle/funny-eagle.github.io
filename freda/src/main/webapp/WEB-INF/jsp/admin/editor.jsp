@@ -77,12 +77,8 @@
 					</div>
 				</div>
 			</div>
-			<!-- 
-			<div class="form-group">
-				<label for="preview">预览</label>
-				<textarea id="preview" name="preview">${article.preview }</textarea>
-			</div>
-			 -->
+
+            <!--
 			<div class="form-group">
 				<label for="content">正文</label>
 				<textarea id="content" name="content">${article.content }</textarea>
@@ -91,22 +87,33 @@
 			<script type="text/javascript">
 				$(document).ready(function() {
 				  $('#content').summernote({
-					  height: 400,                 // set editor height
+					  height: 100,                 // set editor height
 					  minHeight: null,             // set minimum height of editor
 					  maxHeight: null,             // set maximum height of editor
 					  focus: true                  // set focus to editable area after initializing summernote
 				  });
-				  /*
-				  $('#preview').summernote({
-					  height: 200,                 // set editor height
-					  minHeight: null,             // set minimum height of editor
-					  maxHeight: null,             // set maximum height of editor
-					  focus: true                  // set focus to editable area after initializing summernote
-				  });
-				  */
 				});
 			</script>
-			
+			-->
+			<link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
+			<div id="test-editormd" class="form-group">
+				<textarea id="md-content" name="md-content">${article.content }</textarea>
+                <!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
+                <textarea id="content" class="editormd-html-textarea" name="content"></textarea>
+			</div>
+
+			<script src="<%=basePath %>/editor.md-master/lib/jquery.flowchart.min.js"></script>
+			<script src="<%=basePath %>/editor.md-master/src/editormd.js"></script>
+			<script type="text/javascript">
+				$(function() {
+					var testEditor = editormd("test-editormd", {
+						path : '<%=basePath %>/editor.md-master/lib/',
+                        height:400,
+                        saveHTMLToTextarea : true
+					});
+				});
+			</script>
+
 			<div style="text-align: center;">
 				<button type="button" onclick="saveAticle();" class="btn btn-success">保存为草稿</button>
 				<button type="button" onclick="submitAticle();" class="btn btn-primary" style="margin-left:20px;">发布到博客</button>
