@@ -25,7 +25,8 @@
 <!-- include summernote css/js-->
 <link href="<%=basePath %>/summernote/summernote.css" rel="stylesheet">
 <script src="<%=basePath %>/summernote/summernote.min.js"></script>
-
+<script src="<%=basePath %>/editor.md-master/lib/jquery.flowchart.min.js"></script>
+<script src="<%=basePath %>/editor.md-master/src/editormd.js"></script>
 <style type="text/css">
 .label {
 	cursor: pointer;
@@ -56,8 +57,8 @@
 			<div class="row clearfix">
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="title">标题</label> <span style="color:grey;font-size:8px;">最大长度20个字符</span>
-						<input type="text" maxlength="20" required class="form-control" id="title" name="title" placeholder="请输入标题" value="${article.title }">
+						<label for="title">标题</label> <span style="color:grey;font-size:8px;">最大长度30个字符</span>
+						<input type="text" maxlength="30" required class="form-control" id="title" name="title" placeholder="请输入标题" value="${article.title }">
 					</div>
 				</div>
 				<div class="col-md-4 column">
@@ -78,32 +79,18 @@
 				</div>
 			</div>
 
-            <!--
-			<div class="form-group">
-				<label for="content">正文</label>
-				<textarea id="content" name="content">${article.content }</textarea>
-			</div>
-			 
-			<script type="text/javascript">
-				$(document).ready(function() {
-				  $('#content').summernote({
-					  height: 100,                 // set editor height
-					  minHeight: null,             // set minimum height of editor
-					  maxHeight: null,             // set maximum height of editor
-					  focus: true                  // set focus to editable area after initializing summernote
-				  });
-				});
-			</script>
-			-->
+
 			<link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
 			<div id="test-editormd" class="form-group">
+				<!-- preview 保存markdown代码-->
 				<textarea id="preview" name="preview">${article.preview }</textarea>
+
+				<!-- content保存html代码-->
                 <!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
                 <textarea id="content" class="editormd-html-textarea" name="content"></textarea>
 			</div>
 
-			<script src="<%=basePath %>/editor.md-master/lib/jquery.flowchart.min.js"></script>
-			<script src="<%=basePath %>/editor.md-master/src/editormd.js"></script>
+
 			<script type="text/javascript">
 				$(function() {
 					var testEditor = editormd("test-editormd", {
