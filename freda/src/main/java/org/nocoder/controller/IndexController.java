@@ -77,7 +77,7 @@ public class IndexController extends BaseController{
 	private void getRightBar(Model model){
 		// 获取文章时间列表
 		List<String> timeList = articleService.getTimeList();
-		// get article tags
+		// 获取标签列表
 		List<String> tagList = articleService.getTagList();
 
 		List<Article> recently10ArticlesList = articleService.getRecently10ArticlesList();
