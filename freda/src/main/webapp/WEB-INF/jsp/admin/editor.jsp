@@ -97,7 +97,7 @@
 			-->
 			<link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
 			<div id="test-editormd" class="form-group">
-				<textarea id="md-content" name="md-content">${article.content }</textarea>
+				<textarea id="preview" name="preview">${article.preview }</textarea>
                 <!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
                 <textarea id="content" class="editormd-html-textarea" name="content"></textarea>
 			</div>
