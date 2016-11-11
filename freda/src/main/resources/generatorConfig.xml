@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?><!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 	<classPathEntry
-		location="D:\mvn-repo\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar" />
+		location="/Users/jason/.m2/repository/org/postgresql/postgresql/9.4.1211.jre7/postgresql-9.4.1211.jre7.jar" />
 	<context id="context1" targetRuntime="MyBatis3">
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
 			<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
 		</commentGenerator>
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://103.192.176.62:3306/freda_db?useUnicode=true&amp;characterEncoding=UTF-8"
-			userId="root" password="0225" />
+		<jdbcConnection driverClass="org.postgresql.Driver"
+			connectionURL="jdbc:postgresql://45.58.52.59:5432/freda_db"
+			userId="postgres" password="jason@nocoder.org" />
 		<javaModelGenerator targetPackage="org.nocoder.model"
-			targetProject="D:\git\nocoder\freda\src\main\java" />
+			targetProject="/Users/jason/git/nocoder.org/freda/src/main/java" />
 		<sqlMapGenerator targetPackage="org.nocoder.mapper"
-			targetProject="D:\git\nocoder\freda\src\main\java" />
+			targetProject="/Users/jason/git/nocoder.org/freda/src/main/java" />
 		<javaClientGenerator targetPackage="org.nocoder.mapper"
-			targetProject="D:\git\nocoder\freda\src\main\java" type="XMLMAPPER" />
-		<!-- <table schema="freda_db" tableName="user" /> -->
-		<table schema="freda_db" tableName="dict"></table>
-		<table schema="freda_db" tableName="dict_type"></table>
+			targetProject="/Users/jason/git/nocoder.org/freda/src/main/java" type="XMLMAPPER" />
+		
+		<table schema="public" tableName="archive" domainObjectName="Archive"
+    			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+    			enableSelectByExample="false" selectByExampleQueryId="false" >
+    		<property name="useActualColumnNames" value="true"/>
+		</table>
+		
 	</context>
 </generatorConfiguration>

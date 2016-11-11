@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Article implements Serializable{
+	private static final long serialVersionUID = -2284899224505669809L;
+
 	private String id;
 
 	private String title;

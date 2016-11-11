@@ -14,7 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <title>NOCODER-ADMIN</title>
-
+<link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
 <!-- Bootstrap -->
 <link href="<%=basePath %>/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -80,7 +80,7 @@
 			</div>
 
 
-			<link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
+			
 			<div id="test-editormd" class="form-group">
 				<!-- preview 保存markdown代码-->
 				<textarea id="preview" name="preview">${article.preview }</textarea>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.nocoder.mapper.ArchiveMapper">
+  <resultMap id="BaseResultMap" type="org.nocoder.model.Archive">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="author" jdbcType="VARCHAR" property="author" />
+    <result column="md_content" jdbcType="VARCHAR" property="md_content" />
+    <result column="html_content" jdbcType="VARCHAR" property="html_content" />
+    <result column="tag" jdbcType="VARCHAR" property="tag" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="source_link" jdbcType="VARCHAR" property="source_link" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, title, author, md_content, html_content, tag, type, source_link, state, create_time, 
+    update_time
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from public.archive
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from public.archive
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.nocoder.model.Archive">
+    insert into public.archive (id, title, author, 
+      md_content, html_content, tag, 
+      type, source_link, state, 
+      create_time, update_time)
+    values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
+      #{md_content,jdbcType=VARCHAR}, #{html_content,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, 
+      #{type,jdbcType=VARCHAR}, #{source_link,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
+      #{create_time,jdbcType=TIMESTAMP}, #{update_time,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="org.nocoder.model.Archive">
+    insert into public.archive
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="author != null">
+        author,
+      </if>
+      <if test="md_content != null">
+        md_content,
+      </if>
+      <if test="html_content != null">
+        html_content,
+      </if>
+      <if test="tag != null">
+        tag,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="source_link != null">
+        source_link,
+      </if>
+      <if test="state != null">
+        state,
+      </if>
+      <if test="create_time != null">
+        create_time,
+      </if>
+      <if test="update_time != null">
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="md_content != null">
+        #{md_content,jdbcType=VARCHAR},
+      </if>
+      <if test="html_content != null">
+        #{html_content,jdbcType=VARCHAR},
+      </if>
+      <if test="tag != null">
+        #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="source_link != null">
+        #{source_link,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="create_time != null">
+        #{create_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        #{update_time,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.nocoder.model.Archive">
+    update public.archive
+    <set>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="author != null">
+        author = #{author,jdbcType=VARCHAR},
+      </if>
+      <if test="md_content != null">
+        md_content = #{md_content,jdbcType=VARCHAR},
+      </if>
+      <if test="html_content != null">
+        html_content = #{html_content,jdbcType=VARCHAR},
+      </if>
+      <if test="tag != null">
+        tag = #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="source_link != null">
+        source_link = #{source_link,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        state = #{state,jdbcType=VARCHAR},
+      </if>
+      <if test="create_time != null">
+        create_time = #{create_time,jdbcType=TIMESTAMP},
+      </if>
+      <if test="update_time != null">
+        update_time = #{update_time,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.nocoder.model.Archive">
+    update public.archive
+    set title = #{title,jdbcType=VARCHAR},
+      author = #{author,jdbcType=VARCHAR},
+      md_content = #{md_content,jdbcType=VARCHAR},
+      html_content = #{html_content,jdbcType=VARCHAR},
+      tag = #{tag,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      source_link = #{source_link,jdbcType=VARCHAR},
+      state = #{state,jdbcType=VARCHAR},
+      create_time = #{create_time,jdbcType=TIMESTAMP},
+      update_time = #{update_time,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -88,7 +88,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
         <div class="col-sm-9 blog-main">
           <div class="blog-post">
           	<c:forEach items="${articleList }" var="article">
-	      		<h2 class="blog-post-title">${article.title}</h2 class="blog-post-title">
+	      		<h2 class="blog-post-title">${article.title}</h2>
 	            <p class="blog-post-meta">
                     <span class="label label-info">${article.tag}</span>
 	            	<!-- 日期 -->

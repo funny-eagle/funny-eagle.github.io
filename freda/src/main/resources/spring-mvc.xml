@@ -7,7 +7,7 @@
                             http://www.springframework.org/schema/beans/spring-beans-3.1.xsd    
                             http://www.springframework.org/schema/context    
                             http://www.springframework.org/schema/context/spring-context-3.1.xsd    
-                            http://www.springframework.org/schema/mvc    
+                            http://www.springframework.org/schema/mvc
                             http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 	<!-- 自动扫描该包，使SpringMVC认为包下用了@controller注解的类是控制器 -->
 	<context:component-scan base-package="org.nocoder.controller" />
@@ -33,7 +33,6 @@
 	<mvc:resources location="/bootstrap/" mapping="/bootstrap/**"/>
 	<mvc:resources location="/imgs/" mapping="/imgs/**"/>
 	<mvc:resources mapping="/editor.md-master/**" location="/editor.md-master/"/>
-	<mvc:default-servlet-handler />
 	<!-- 定义跳转的文件的前后缀 ，视图模式配置 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
