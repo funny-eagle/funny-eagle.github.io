@@ -20,7 +20,13 @@
 		<table schema="public" tableName="archive" domainObjectName="Archive"
     			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
     			enableSelectByExample="false" selectByExampleQueryId="false" >
-    		<property name="useActualColumnNames" value="true"/>
+    		<property name="useActualColumnNames" value="false"/>
+		</table>
+		
+		<table schema="public" tableName="user" domainObjectName="User"
+    			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+    			enableSelectByExample="false" selectByExampleQueryId="false" >
+    		<property name="useActualColumnNames" value="false"/>
 		</table>
 		
 	</context>

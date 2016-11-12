@@ -2,12 +2,14 @@ package org.nocoder.controller;
 
 import java.util.List;
 import java.util.Map;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang3.StringUtils;
-import org.nocoder.model.Article;
+import org.nocoder.model.Archive;
 import org.nocoder.model.User;
-import org.nocoder.service.ArticleService;
+import org.nocoder.service.ArchiveService;
 import org.nocoder.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,8 +23,9 @@ public class AdminController extends BaseController{
 	private UserService userService;
 
 	@Autowired
-	private ArticleService articleService;
+	private ArchiveService archiveService;
 
+	@SuppressWarnings("unchecked")
 	@RequestMapping({ "/admin" })
 	public String toAdmin(HttpServletRequest request, Model model) {
 		if (request.getSession().getAttribute("user") != null) {
@@ -31,9 +34,9 @@ public class AdminController extends BaseController{
 			int state = 0;
 			final Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 			final Integer pageSize = 10;
-			final Map<String, Object> resMap = queryArticlesByPage(state, tag, page, pageSize);
-			final List<Article> articleList = (List<Article>) resMap.get("articleList");
-			model.addAttribute("articleList", articleList);
+			final Map<String, Object> resMap = queryArchivesByPage(state, tag, page, pageSize);
+			final List<Archive> archiveList = (List<Archive>) resMap.get("ArchiveList");
+			model.addAttribute("ArchiveList", archiveList);
 			model.addAttribute("page", page);
 			model.addAttribute("totalPages", resMap.get("totalPages"));
 
@@ -50,9 +53,10 @@ public class AdminController extends BaseController{
 		final String username = request.getParameter("username");
 		final String password = request.getParameter("password");
 		if (StringUtils.isNotBlank(username) && StringUtils.isNotBlank(password)) {
-			final User user = this.userService.queryUserByNameAndPwd(username, password);
+			final User user = this.userService.UserAuthentication(username, password);
 			if (user != null) {
 				model.addAttribute("user", user);
+				// 将用户信息存放至session中
 				request.getSession().setAttribute("user", user);
 				return "redirect:admin";
 			}
@@ -69,33 +73,34 @@ public class AdminController extends BaseController{
 	}
 
 
-	@RequestMapping({ "/article/save" })
-	public String saveArticle(Article article) {
-		this.articleService.saveArticle(article);
+	@RequestMapping({ "/archive/save" })
+	public String saveArchive(Archive archive) {
+		this.archiveService.saveArchive(archive);
 		return "redirect:/admin";
 	}
 
-	@RequestMapping({ "/article/edit" })
+	@RequestMapping({ "/archive/edit" })
 	public String toEdit(String id, Model model) {
-		Article article = this.articleService.queryArticleById(id);
-		model.addAttribute("article", article);
+		Archive archive = this.archiveService.queryArchiveById(id);
+		model.addAttribute("Archive", archive);
 		return "admin/editor";
 	}
 	
-	@RequestMapping({ "/article/delete" })
+	@RequestMapping({ "/archive/delete" })
 	public String delete(String id) {
-		this.articleService.deleteArticleById(id);
+		this.archiveService.deleteArchiveById(id);
 		return "redirect:/admin";
 	}
 
-	@RequestMapping({ "/article/refreshCache" })
+	@RequestMapping({ "/Archive/refreshCache" })
 	public String refreshTimeList(){
 		// 刷新日期列表redis缓存
-		this.articleService.setArticleTimeListToRedis();
+		this.archiveService.setArchiveTimeListToRedis();
 		// 刷新标签列表缓存
-		this.articleService.setArticleTagListToRedis();
+		this.archiveService.setArchiveTagListToRedis();
 		// 刷新近10篇文章列表缓存
-		this.articleService.setRecently10ArticlesListToRedis();
+		this.archiveService.setRecently10ArchivesListToRedis();
+		
 		return "redirect:/admin";
 	}
 

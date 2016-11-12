@@ -5,14 +5,14 @@
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="author" jdbcType="VARCHAR" property="author" />
-    <result column="md_content" jdbcType="VARCHAR" property="md_content" />
-    <result column="html_content" jdbcType="VARCHAR" property="html_content" />
+    <result column="md_content" jdbcType="VARCHAR" property="mdContent" />
+    <result column="html_content" jdbcType="VARCHAR" property="htmlContent" />
     <result column="tag" jdbcType="VARCHAR" property="tag" />
     <result column="type" jdbcType="VARCHAR" property="type" />
-    <result column="source_link" jdbcType="VARCHAR" property="source_link" />
+    <result column="source_link" jdbcType="VARCHAR" property="sourceLink" />
     <result column="state" jdbcType="VARCHAR" property="state" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="create_time" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="update_time" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
   </resultMap>
   <sql id="Base_Column_List">
     id, title, author, md_content, html_content, tag, type, source_link, state, create_time, 
@@ -34,9 +34,9 @@
       type, source_link, state, 
       create_time, update_time)
     values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
-      #{md_content,jdbcType=VARCHAR}, #{html_content,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, 
-      #{type,jdbcType=VARCHAR}, #{source_link,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
-      #{create_time,jdbcType=TIMESTAMP}, #{update_time,jdbcType=TIMESTAMP})
+      #{mdContent,jdbcType=VARCHAR}, #{htmlContent,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, 
+      #{type,jdbcType=VARCHAR}, #{sourceLink,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="org.nocoder.model.Archive">
     insert into public.archive
@@ -50,10 +50,10 @@
       <if test="author != null">
         author,
       </if>
-      <if test="md_content != null">
+      <if test="mdContent != null">
         md_content,
       </if>
-      <if test="html_content != null">
+      <if test="htmlContent != null">
         html_content,
       </if>
       <if test="tag != null">
@@ -62,16 +62,16 @@
       <if test="type != null">
         type,
       </if>
-      <if test="source_link != null">
+      <if test="sourceLink != null">
         source_link,
       </if>
       <if test="state != null">
         state,
       </if>
-      <if test="create_time != null">
+      <if test="createTime != null">
         create_time,
       </if>
-      <if test="update_time != null">
+      <if test="updateTime != null">
         update_time,
       </if>
     </trim>
@@ -85,11 +85,11 @@
       <if test="author != null">
         #{author,jdbcType=VARCHAR},
       </if>
-      <if test="md_content != null">
-        #{md_content,jdbcType=VARCHAR},
+      <if test="mdContent != null">
+        #{mdContent,jdbcType=VARCHAR},
       </if>
-      <if test="html_content != null">
-        #{html_content,jdbcType=VARCHAR},
+      <if test="htmlContent != null">
+        #{htmlContent,jdbcType=VARCHAR},
       </if>
       <if test="tag != null">
         #{tag,jdbcType=VARCHAR},
@@ -97,17 +97,17 @@
       <if test="type != null">
         #{type,jdbcType=VARCHAR},
       </if>
-      <if test="source_link != null">
-        #{source_link,jdbcType=VARCHAR},
+      <if test="sourceLink != null">
+        #{sourceLink,jdbcType=VARCHAR},
       </if>
       <if test="state != null">
         #{state,jdbcType=VARCHAR},
       </if>
-      <if test="create_time != null">
-        #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="update_time != null">
-        #{update_time,jdbcType=TIMESTAMP},
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -120,11 +120,11 @@
       <if test="author != null">
         author = #{author,jdbcType=VARCHAR},
       </if>
-      <if test="md_content != null">
-        md_content = #{md_content,jdbcType=VARCHAR},
+      <if test="mdContent != null">
+        md_content = #{mdContent,jdbcType=VARCHAR},
       </if>
-      <if test="html_content != null">
-        html_content = #{html_content,jdbcType=VARCHAR},
+      <if test="htmlContent != null">
+        html_content = #{htmlContent,jdbcType=VARCHAR},
       </if>
       <if test="tag != null">
         tag = #{tag,jdbcType=VARCHAR},
@@ -132,17 +132,17 @@
       <if test="type != null">
         type = #{type,jdbcType=VARCHAR},
       </if>
-      <if test="source_link != null">
-        source_link = #{source_link,jdbcType=VARCHAR},
+      <if test="sourceLink != null">
+        source_link = #{sourceLink,jdbcType=VARCHAR},
       </if>
       <if test="state != null">
         state = #{state,jdbcType=VARCHAR},
       </if>
-      <if test="create_time != null">
-        create_time = #{create_time,jdbcType=TIMESTAMP},
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="update_time != null">
-        update_time = #{update_time,jdbcType=TIMESTAMP},
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
@@ -151,14 +151,14 @@
     update public.archive
     set title = #{title,jdbcType=VARCHAR},
       author = #{author,jdbcType=VARCHAR},
-      md_content = #{md_content,jdbcType=VARCHAR},
-      html_content = #{html_content,jdbcType=VARCHAR},
+      md_content = #{mdContent,jdbcType=VARCHAR},
+      html_content = #{htmlContent,jdbcType=VARCHAR},
       tag = #{tag,jdbcType=VARCHAR},
       type = #{type,jdbcType=VARCHAR},
-      source_link = #{source_link,jdbcType=VARCHAR},
+      source_link = #{sourceLink,jdbcType=VARCHAR},
       state = #{state,jdbcType=VARCHAR},
-      create_time = #{create_time,jdbcType=TIMESTAMP},
-      update_time = #{update_time,jdbcType=TIMESTAMP}
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

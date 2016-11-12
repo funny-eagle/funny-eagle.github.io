@@ -40,7 +40,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          	<a id="homeLink" class="blog-nav-item active" href="<%=basePath %>">NoCoder.Org - Jason Yang's Blog</a>
+          	<a id="homeLink" class="blog-nav-item active" href="<%=basePath %>">Jason Yang's Blog</a>
           	<%--<a id="techLink" class="blog-nav-item" href="javascript:void(0);" onclick="toTech();">Technology</a>--%>
           	<%--<a id="otherLink" class="blog-nav-item" href="javascript:void(0);" onclick="toOther();">Other</a>--%>
           	<%--<a id="aboutLink" class="blog-nav-item" href="javascript:void(0);" onclick="toAbout();">About</a>--%>

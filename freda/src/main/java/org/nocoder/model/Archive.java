@@ -9,21 +9,21 @@ public class Archive {
 
     private String author;
 
-    private String md_content;
+    private String mdContent;
 
-    private String html_content;
+    private String htmlContent;
 
     private String tag;
 
     private String type;
 
-    private String source_link;
+    private String sourceLink;
 
     private String state;
 
-    private Date create_time;
+    private Date createTime;
 
-    private Date update_time;
+    private Date updateTime;
 
     public String getId() {
         return id;
@@ -49,20 +49,20 @@ public class Archive {
         this.author = author;
     }
 
-    public String getMd_content() {
-        return md_content;
+    public String getMdContent() {
+        return mdContent;
     }
 
-    public void setMd_content(String md_content) {
-        this.md_content = md_content;
+    public void setMdContent(String mdContent) {
+        this.mdContent = mdContent;
     }
 
-    public String getHtml_content() {
-        return html_content;
+    public String getHtmlContent() {
+        return htmlContent;
     }
 
-    public void setHtml_content(String html_content) {
-        this.html_content = html_content;
+    public void setHtmlContent(String htmlContent) {
+        this.htmlContent = htmlContent;
     }
 
     public String getTag() {
@@ -81,12 +81,12 @@ public class Archive {
         this.type = type;
     }
 
-    public String getSource_link() {
-        return source_link;
+    public String getSourceLink() {
+        return sourceLink;
     }
 
-    public void setSource_link(String source_link) {
-        this.source_link = source_link;
+    public void setSourceLink(String sourceLink) {
+        this.sourceLink = sourceLink;
     }
 
     public String getState() {
@@ -97,19 +97,19 @@ public class Archive {
         this.state = state;
     }
 
-    public Date getCreate_time() {
-        return create_time;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Date create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
-    public Date getUpdate_time() {
-        return update_time;
+    public Date getUpdateTime() {
+        return updateTime;
     }
 
-    public void setUpdate_time(Date update_time) {
-        this.update_time = update_time;
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
     }
 }

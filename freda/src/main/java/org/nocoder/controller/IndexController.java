@@ -3,9 +3,11 @@ package org.nocoder.controller;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
-import org.nocoder.model.Article;
-import org.nocoder.service.ArticleService;
+
+import org.nocoder.model.Archive;
+import org.nocoder.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,42 +15,46 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class IndexController extends BaseController{
-	// private Logger logger = Logger.getLogger(IndexController.class);
 	@Autowired
-	private ArticleService articleService;
+	private ArchiveService ArchiveService;
 
+	@SuppressWarnings("unchecked")
 	@RequestMapping({ "/index" })
 	public String toIndex(HttpServletRequest request, Model model) {
 		String tag = request.getParameter("tag");
 		int state = 2;
 		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 		Integer pageSize = 1;
-		Map<String, Object> resMap = queryArticlesByPage(state, tag, page, pageSize);
-		List<Article> articleList = (List<Article>) resMap.get("articleList");
-		model.addAttribute("articleList", articleList);
+		Map<String, Object> resMap = queryArchivesByPage(state, tag, page, pageSize);
+		Object object = resMap.get("ArchiveList");
+		List<Archive> archiveList = null;
+		if(object instanceof List<?>){
+			archiveList = (List<Archive>) object;
+		}
+		model.addAttribute("ArchiveList", archiveList);
 		model.addAttribute("page", page);
 		model.addAttribute("totalPages", resMap.get("totalPages"));
 		getRightBar(model);
 		return "index";
 	}
 	
-	@RequestMapping("/articlesByMonth")
-	public String articlesByCreateTime(HttpServletRequest request, Model model){
+	@RequestMapping("/ArchivesByMonth")
+	public String ArchivesByCreateTime(HttpServletRequest request, Model model){
 		String month = request.getParameter("month");
-		List<Article> articleList = articleService.queryArticleListByCreateTime(month);
-		model.addAttribute("articleList", articleList);
+		List<Archive> archiveList = ArchiveService.queryArchiveListByCreateTime(month);
+		model.addAttribute("ArchiveList", archiveList);
 		getRightBar(model);
 		return "index";
 	}
-	@RequestMapping("/articlesByTag")
-	public String articlesByTag(HttpServletRequest request, Model model){
+	@RequestMapping("/ArchivesByTag")
+	public String ArchivesByTag(HttpServletRequest request, Model model){
 		String tag = request.getParameter("tag");
 		int state = 2;
 		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 		Integer pageSize = 1;
-		Map<String, Object> resMap = queryArticlesByPage(state, tag, page, pageSize);
+		Map<String, Object> resMap = queryArchivesByPage(state, tag, page, pageSize);
 
-		model.addAttribute("articleList", resMap.get("articleList"));
+		model.addAttribute("ArchiveList", resMap.get("ArchiveList"));
 		model.addAttribute("page", page);
 		model.addAttribute("totalPages", resMap.get("totalPages"));
 
@@ -56,13 +62,13 @@ public class IndexController extends BaseController{
 		return "index";
 	}
 
-	@RequestMapping({ "/article" })
-	public String viewArticle(HttpServletRequest request, Model model) {
+	@RequestMapping({ "/Archive" })
+	public String viewArchive(HttpServletRequest request, Model model) {
 		String id = request.getParameter("id");
-		Article article = this.articleService.queryArticleById(id);
-		List<Article> articleList = new ArrayList<Article>();
-		articleList.add(article);
-		model.addAttribute("articleList", articleList);
+		Archive archive = this.ArchiveService.queryArchiveById(id);
+		List<Archive> archiveList = new ArrayList<Archive>();
+		archiveList.add(archive);
+		model.addAttribute("ArchiveList", archiveList);
 		getRightBar(model);
 		return "index";
 	}
@@ -76,14 +82,14 @@ public class IndexController extends BaseController{
      */
 	private void getRightBar(Model model){
 		// 获取文章时间列表
-		List<String> timeList = articleService.getTimeList();
+		List<String> timeList = ArchiveService.getTimeList();
 		// 获取标签列表
-		List<String> tagList = articleService.getTagList();
+		List<String> tagList = ArchiveService.getTagList();
 
-		List<Article> recently10ArticlesList = articleService.getRecently10ArticlesList();
+		List<Archive> recently10ArchivesList = ArchiveService.getRecently10ArchivesList();
 
 		model.addAttribute("timeList", timeList);
 		model.addAttribute("tagList", tagList);
-		model.addAttribute("recently10ArticlesList", recently10ArticlesList);
+		model.addAttribute("recently10ArchivesList", recently10ArchivesList);
 	}
 }

@@ -1,10 +1,7 @@
 package org.nocoder.service.impl;
 
-import java.util.List;
-
 import org.nocoder.mapper.UserMapper;
 import org.nocoder.model.User;
-import org.nocoder.model.UserExample;
 import org.nocoder.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +12,9 @@ public class UserServiceImpl implements UserService {
 	private UserMapper userMapper;
 
 	@Override
-	public User queryUserByNameAndPwd(String username, String password) {
-		UserExample example = new UserExample();
-		example.createCriteria().andUsernameEqualTo(username).andPasswordEqualTo(password);
-		List<User> list = this.userMapper.selectByExample(example);
-		return (list != null) && (list.size() > 0) ? (User) list.get(0) : null;
+	public User UserAuthentication(String username, String password) {
+		//TODO 从数据库验证用户
+		userMapper.selectByPrimaryKey("1");
+		return new User();
 	}
 }

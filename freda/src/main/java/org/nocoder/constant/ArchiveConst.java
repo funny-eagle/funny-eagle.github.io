@@ -3,7 +3,7 @@ package org.nocoder.constant;
 /**
  * Created by yangjinlong on 16/8/21.
  */
-public class ArticleConst {
+public class ArchiveConst {
 
     // 技术类文章
     public final String ARTICLE_TYPE_TECH = "1";

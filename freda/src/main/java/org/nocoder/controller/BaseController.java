@@ -1,7 +1,7 @@
 package org.nocoder.controller;
 
-import org.nocoder.model.Article;
-import org.nocoder.service.ArticleService;
+import org.nocoder.model.Archive;
+import org.nocoder.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashMap;
@@ -13,8 +13,8 @@ import java.util.Map;
  */
 public class BaseController {
     @Autowired
-    private ArticleService articleService;
-    public Map<String, Object> queryArticlesByPage(int state, String tag, Integer page, Integer pageSize) {
+    private ArchiveService ArchiveService;
+    public Map<String, Object> queryArchivesByPage(int state, String tag, Integer page, Integer pageSize) {
         final Map<String, Object> resMap = new HashMap<String, Object>();
         if (page == null) {
             page = 1;
@@ -22,13 +22,13 @@ public class BaseController {
         if (pageSize == null) {
             pageSize = 10;
         }
-        final int articlesCount = this.articleService.countArticles(tag);
-        if (articlesCount > 0) {
-            List<Article> articleList = this.articleService.queryArticleList(state, tag, (page - 1) * pageSize, pageSize);
-            //result[0] = articleList;
-            resMap.put("articleList", articleList);
+        final int ArchivesCount = this.ArchiveService.countArchives(tag);
+        if (ArchivesCount > 0) {
+            List<Archive> ArchiveList = this.ArchiveService.queryArchiveList(state, tag, (page - 1) * pageSize, pageSize);
+            //result[0] = ArchiveList;
+            resMap.put("ArchiveList", ArchiveList);
             // 总页数 取天花板值
-            int totalPages = (int) Math.ceil((double) articlesCount / (double) pageSize);
+            int totalPages = (int) Math.ceil((double) ArchivesCount / (double) pageSize);
             // result[1] = totalPages;
             resMap.put("totalPages", totalPages);
         }

@@ -1,30 +1,17 @@
 package org.nocoder.mapper;
 
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 import org.nocoder.model.User;
-import org.nocoder.model.UserExample;
 
-public abstract interface UserMapper {
-	public abstract int countByExample(UserExample paramUserExample);
+public interface UserMapper {
+    int deleteByPrimaryKey(String id);
 
-	public abstract int deleteByExample(UserExample paramUserExample);
+    int insert(User record);
 
-	public abstract int deleteByPrimaryKey(String paramString);
+    int insertSelective(User record);
 
-	public abstract int insert(User paramUser);
+    User selectByPrimaryKey(String id);
 
-	public abstract int insertSelective(User paramUser);
+    int updateByPrimaryKeySelective(User record);
 
-	public abstract List<User> selectByExample(UserExample paramUserExample);
-
-	public abstract User selectByPrimaryKey(String paramString);
-
-	public abstract int updateByExampleSelective(@Param("record") User paramUser, @Param("example") UserExample paramUserExample);
-
-	public abstract int updateByExample(@Param("record") User paramUser, @Param("example") UserExample paramUserExample);
-
-	public abstract int updateByPrimaryKeySelective(User paramUser);
-
-	public abstract int updateByPrimaryKey(User paramUser);
+    int updateByPrimaryKey(User record);
 }
