@@ -1,53 +1,53 @@
--- Table: public."ARCHIVE"
+-- table: public.archive
 
--- DROP TABLE public."ARCHIVE";
+-- drop table public.archive;
 
-CREATE TABLE public."ARCHIVE"
+create table public.archive
 (
-    "ID" character varying(32) COLLATE pg_catalog."default" NOT NULL,
-    "TITLE" character varying(100) COLLATE pg_catalog."default",
-    "AUTHOR" character varying(50) COLLATE pg_catalog."default",
-    "MD_CONTENT" text COLLATE pg_catalog."default",
-    "HTML_CONTENT" text COLLATE pg_catalog."default",
-    "TAG" character varying(50) COLLATE pg_catalog."default",
-    "TYPE" character varying(50) COLLATE pg_catalog."default",
-    "SOURCE_LINK" character varying(300) COLLATE pg_catalog."default",
-    "STATE" character varying(50) COLLATE pg_catalog."default",
-    "CREATE_TIME" timestamp with time zone,
-    "UPDATE_TIME" timestamp with time zone,
-    CONSTRAINT "ARCHIVE_pkey" PRIMARY KEY ("ID")
+    id character varying(32) collate pg_catalog.default not null,
+    title character varying(100) collate pg_catalog.default,
+    author character varying(50) collate pg_catalog.default,
+    md_content text collate pg_catalog.default,
+    html_content text collate pg_catalog.default,
+    tag character varying(50) collate pg_catalog.default,
+    type character varying(50) collate pg_catalog.default,
+    source_link character varying(300) collate pg_catalog.default,
+    state character varying(50) collate pg_catalog.default,
+    create_time timestamp with time zone,
+    update_time timestamp with time zone,
+    constraint archive_pkey primary key (id)
 )
-WITH (
-    OIDS = FALSE
+with (
+    oids = false
 )
-TABLESPACE pg_default;
+tablespace pg_default;
 
-ALTER TABLE public."ARCHIVE"
-    OWNER to postgres;
-COMMENT ON TABLE public."ARCHIVE"
-    IS '文档表';
+alter table public.archive
+    owner to postgres;
+comment on table public.archive
+    is '文档表';
     
 
--- Table: public."USER"
+-- table: public.user
 
--- DROP TABLE public."USER";
+-- drop table public.user;
 
-CREATE TABLE public."USER"
+create table public.user
 (
-    "ID" character varying(32) COLLATE pg_catalog."default" NOT NULL,
-    "USERNAME" character varying(50) COLLATE pg_catalog."default",
-    "PASSWORD" character varying(100) COLLATE pg_catalog."default",
-    "CREATE_TIME" timestamp with time zone,
-    "LAST_LOGIN_TIME" timestamp with time zone,
-    "LAST_LOGIN_IP" character varying(50) COLLATE pg_catalog."default",
-    CONSTRAINT "USER_pkey" PRIMARY KEY ("ID")
+    id character varying(32) collate pg_catalog.default not null,
+    username character varying(50) collate pg_catalog.default,
+    password character varying(100) collate pg_catalog.default,
+    create_time timestamp with time zone,
+    last_login_time timestamp with time zone,
+    last_login_ip character varying(50) collate pg_catalog.default,
+    constraint user_pkey primary key (id)
 )
-WITH (
-    OIDS = FALSE
+with (
+    oids = false
 )
-TABLESPACE pg_default;
+tablespace pg_default;
 
-ALTER TABLE public."USER"
-    OWNER to postgres;
-COMMENT ON TABLE public."USER"
-    IS '用户表';
+alter table public.user
+    owner to postgres;
+comment on table public.user
+    is '用户表';
