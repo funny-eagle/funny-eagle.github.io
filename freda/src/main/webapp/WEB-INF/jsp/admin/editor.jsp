@@ -50,15 +50,15 @@
 			<p class="navbar-text">文章编辑</p>
 		</div>
 	</nav>
-	<form id="articleForm" role="form" action="<%=basePath %>/article/save" method="post">
+	<form id="archiveForm" role="form" action="<%=basePath %>/archive/save" method="post">
 		<div class="container">
-			<input type="hidden" name="id" id="id" value="${article.id }"/>
-			<input type="hidden" name="state" id="state" value="${article.state}"/>
+			<input type="hidden" name="id" id="id" value="${archive.id }"/>
+			<input type="hidden" name="state" id="state" value="${archive.state}"/>
 			<div class="row clearfix">
 				<div class="col-md-4 column">
 					<div class="form-group">
 						<label for="title">标题</label> <span style="color:grey;font-size:8px;">最大长度30个字符</span>
-						<input type="text" maxlength="30" required class="form-control" id="title" name="title" placeholder="请输入标题" value="${article.title }">
+						<input type="text" maxlength="30" required class="form-control" id="title" name="title" placeholder="请输入标题" value="${archive.title }">
 					</div>
 				</div>
 				<div class="col-md-4 column">
@@ -66,7 +66,7 @@
 						<label for="author">作者</label> <span style="color:grey;font-size:8px;">最大长度20个字符</span>
 						<input type="text" required maxlength="20" 
 							class="form-control" id="author" name="author"
-							placeholder="请输入作者" value="${article.author }">
+							placeholder="请输入作者" value="${archive.author }">
 					</div>
 				</div>
 				<div class="col-md-4 column">
@@ -74,7 +74,7 @@
 						<label for="tag">标签</label> <span style="color:grey;font-size:8px;">最大长度20个字符</span>
 						<input type="text" required
 							class="form-control" id="标签" name="tag" maxlength="10" 
-							placeholder="输入标签，多个标签使用英文状态下的逗号分隔" value="${article.tag }">
+							placeholder="输入标签，多个标签使用英文状态下的逗号分隔" value="${archive.tag }">
 					</div>
 				</div>
 			</div>
@@ -83,7 +83,7 @@
 			
 			<div id="test-editormd" class="form-group">
 				<!-- preview 保存markdown代码-->
-				<textarea id="preview" name="preview">${article.preview }</textarea>
+				<textarea id="preview" name="preview">${archive.preview }</textarea>
 
 				<!-- content保存html代码-->
                 <!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
@@ -111,12 +111,12 @@
 		// 保存为草稿
 		function saveAticle () {
 			$("#state").val(1);
-			$("#articleForm").submit();
+			$("#archiveForm").submit();
 		}
 		// 发布文章
 		function submitAticle () {
 			$("#state").val(2);
-			$("#articleForm").submit();
+			$("#archiveForm").submit();
 		}
 	</script>
 </body>

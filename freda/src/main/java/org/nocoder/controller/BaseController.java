@@ -22,13 +22,13 @@ public class BaseController {
         if (pageSize == null) {
             pageSize = 10;
         }
-        final int ArchivesCount = this.ArchiveService.countArchives(tag);
-        if (ArchivesCount > 0) {
-            List<Archive> ArchiveList = this.ArchiveService.queryArchiveList(state, tag, (page - 1) * pageSize, pageSize);
+        final int archivesCount = this.ArchiveService.countArchives(tag);
+        if (archivesCount > 0) {
+            List<Archive> archiveList = this.ArchiveService.queryArchiveList(state, tag, (page - 1) * pageSize, pageSize);
             //result[0] = ArchiveList;
-            resMap.put("ArchiveList", ArchiveList);
+            resMap.put("archiveList", archiveList);
             // 总页数 取天花板值
-            int totalPages = (int) Math.ceil((double) ArchivesCount / (double) pageSize);
+            int totalPages = (int) Math.ceil((double) archivesCount / (double) pageSize);
             // result[1] = totalPages;
             resMap.put("totalPages", totalPages);
         }

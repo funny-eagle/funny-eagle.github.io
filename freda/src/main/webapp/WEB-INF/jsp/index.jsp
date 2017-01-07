@@ -87,16 +87,16 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 
         <div class="col-sm-9 blog-main">
           <div class="blog-post">
-          	<c:forEach items="${articleList }" var="article">
-	      		<h2 class="blog-post-title">${article.title}</h2>
+          	<c:forEach items="${archiveList }" var="archive">
+	      		<h2 class="blog-post-title">${archive.title}</h2>
 	            <p class="blog-post-meta">
-                    <span class="label label-info">${article.tag}</span>
+                    <span class="label label-info">${archive.tag}</span>
 	            	<!-- 日期 -->
-	            	<fmt:formatDate pattern="yyyy-MM-dd" value="${article.createTime }" /> 
+	            	<fmt:formatDate pattern="yyyy-MM-dd" value="${archive.createTime }" /> 
 	            	<!-- 作者 -->
-	            	by <a href="<%=basePath%>">${article.author}</a>
+	            	by <a href="<%=basePath%>">${archive.author}</a>
 				</p>
-          			${article.content}
+          			${archive.htmlContent}
           		<hr>
 			</c:forEach>
           </div><!-- /.blog-post -->
@@ -117,8 +117,8 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
           <div class="sidebar-module">
             <h4>Recently</h4>
             <ol class="list-unstyled">
-              <c:forEach items="${recently10ArticlesList}" var="article">
-                <li><a href="<%=basePath%>/article?id=${article.id}">${article.title}</a></li>
+              <c:forEach items="${recently10archivesList}" var="archive">
+                <li><a href="<%=basePath%>/archive?id=${archive.id}">${archive.title}</a></li>
               </c:forEach>
             </ol>
           </div>
@@ -127,7 +127,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
             <h4>Archives</h4>
             <ol class="list-unstyled">
               <c:forEach items="${timeList}" var="time">
-                <li><a href="<%=basePath%>/articlesByMonth?month=${time}">${time}</a></li>
+                <li><a href="<%=basePath%>/archivesByMonth?month=${time}">${time}</a></li>
               </c:forEach>
             </ol>
           </div>
@@ -136,7 +136,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
             <h4>Tags</h4>
             <ol class="list-unstyled">
             	<c:forEach items="${tagList}" var="tag">
-                	<li><a href="<%=basePath%>/articlesByTag?tag=${tag}">${tag}</a></li>
+                	<li><a href="<%=basePath%>/archivesByTag?tag=${tag}">${tag}</a></li>
             	</c:forEach>
             </ol>
           </div>

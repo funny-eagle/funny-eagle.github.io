@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController extends BaseController{
 	@Autowired
-	private ArchiveService ArchiveService;
+	private ArchiveService archiveService;
 
 	@SuppressWarnings("unchecked")
 	@RequestMapping({ "/index" })
@@ -26,23 +26,23 @@ public class IndexController extends BaseController{
 		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 		Integer pageSize = 1;
 		Map<String, Object> resMap = queryArchivesByPage(state, tag, page, pageSize);
-		Object object = resMap.get("ArchiveList");
+		Object object = resMap.get("archiveList");
 		List<Archive> archiveList = null;
 		if(object instanceof List<?>){
 			archiveList = (List<Archive>) object;
 		}
-		model.addAttribute("ArchiveList", archiveList);
+		model.addAttribute("archiveList", archiveList);
 		model.addAttribute("page", page);
 		model.addAttribute("totalPages", resMap.get("totalPages"));
 		getRightBar(model);
 		return "index";
 	}
 	
-	@RequestMapping("/ArchivesByMonth")
+	@RequestMapping("/archivesByMonth")
 	public String ArchivesByCreateTime(HttpServletRequest request, Model model){
 		String month = request.getParameter("month");
-		List<Archive> archiveList = ArchiveService.queryArchiveListByCreateTime(month);
-		model.addAttribute("ArchiveList", archiveList);
+		List<Archive> archiveList = archiveService.queryArchiveListByCreateTime(month);
+		model.addAttribute("archiveList", archiveList);
 		getRightBar(model);
 		return "index";
 	}
@@ -62,13 +62,13 @@ public class IndexController extends BaseController{
 		return "index";
 	}
 
-	@RequestMapping({ "/Archive" })
+	@RequestMapping({ "/archive" })
 	public String viewArchive(HttpServletRequest request, Model model) {
 		String id = request.getParameter("id");
-		Archive archive = this.ArchiveService.queryArchiveById(id);
+		Archive archive = this.archiveService.queryArchiveById(id);
 		List<Archive> archiveList = new ArrayList<Archive>();
 		archiveList.add(archive);
-		model.addAttribute("ArchiveList", archiveList);
+		model.addAttribute("archiveList", archiveList);
 		getRightBar(model);
 		return "index";
 	}
@@ -82,11 +82,11 @@ public class IndexController extends BaseController{
      */
 	private void getRightBar(Model model){
 		// 获取文章时间列表
-		List<String> timeList = ArchiveService.getTimeList();
+		List<String> timeList = archiveService.getTimeList();
 		// 获取标签列表
-		List<String> tagList = ArchiveService.getTagList();
+		List<String> tagList = archiveService.getTagList();
 
-		List<Archive> recently10ArchivesList = ArchiveService.getRecently10ArchivesList();
+		List<Archive> recently10ArchivesList = archiveService.getRecently10ArchivesList();
 
 		model.addAttribute("timeList", timeList);
 		model.addAttribute("tagList", tagList);

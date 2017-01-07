@@ -35,8 +35,8 @@ public class AdminController extends BaseController{
 			final Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 			final Integer pageSize = 10;
 			final Map<String, Object> resMap = queryArchivesByPage(state, tag, page, pageSize);
-			final List<Archive> archiveList = (List<Archive>) resMap.get("ArchiveList");
-			model.addAttribute("ArchiveList", archiveList);
+			final List<Archive> archiveList = (List<Archive>) resMap.get("archiveList");
+			model.addAttribute("archiveList", archiveList);
 			model.addAttribute("page", page);
 			model.addAttribute("totalPages", resMap.get("totalPages"));
 
@@ -82,7 +82,7 @@ public class AdminController extends BaseController{
 	@RequestMapping({ "/archive/edit" })
 	public String toEdit(String id, Model model) {
 		Archive archive = this.archiveService.queryArchiveById(id);
-		model.addAttribute("Archive", archive);
+		model.addAttribute("archive", archive);
 		return "admin/editor";
 	}
 	
@@ -92,7 +92,7 @@ public class AdminController extends BaseController{
 		return "redirect:/admin";
 	}
 
-	@RequestMapping({ "/Archive/refreshCache" })
+	@RequestMapping({ "/archive/refreshCache" })
 	public String refreshTimeList(){
 		// 刷新日期列表redis缓存
 		this.archiveService.setArchiveTimeListToRedis();

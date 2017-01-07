@@ -19,11 +19,11 @@ public class ArchiveServiceImpl implements ArchiveService {
 	private final Logger logger = Logger.getLogger(ArchiveServiceImpl.class);
 
 	@Autowired
-	private ArchiveMapper ArchiveMapper;
+	private ArchiveMapper archiveMapper;
 
     public List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer pageSize) {
-		//List<Archive> list = this.ArchiveMapper.select
-		return null;
+		List<Archive> list = this.archiveMapper.selectArchives();
+		return list;
 	}
 
 	/**
@@ -37,7 +37,7 @@ public class ArchiveServiceImpl implements ArchiveService {
 	}
 
 	public int countArchives(String tag) {
-		return 0;
+		return archiveMapper.selectCountArchives(tag);
 	}
 
 	public int saveArchive(Archive Archive) {
@@ -45,13 +45,13 @@ public class ArchiveServiceImpl implements ArchiveService {
 		if (StringUtils.isBlank(Archive.getId())) {
 			Archive.setId(UUID.randomUUID().toString().replace("-", ""));
 			Archive.setCreateTime(new Date());
-			resCount = this.ArchiveMapper.insertSelective(Archive);
+			resCount = this.archiveMapper.insertSelective(Archive);
 			if (resCount > 0) {
 				this.logger.debug("====>新增文章 " + Archive.getTitle() + "成功！");
 			}
 		} else {
 			Archive.setUpdateTime(new Date());
-			resCount = this.ArchiveMapper.updateByPrimaryKeySelective(Archive);
+			resCount = this.archiveMapper.updateByPrimaryKeySelective(Archive);
 			if (resCount > 0) {
 				this.logger.debug("====>修改文章 " + Archive.getTitle() + "成功！");
 			}
@@ -108,7 +108,7 @@ public class ArchiveServiceImpl implements ArchiveService {
 	@Override
 	public int deleteArchiveById(String id) {
 
-		return this.ArchiveMapper.deleteByPrimaryKey(id);
+		return this.archiveMapper.deleteByPrimaryKey(id);
 	}
 
 

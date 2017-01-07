@@ -24,6 +24,16 @@
     from public.archive
     where id = #{id,jdbcType=VARCHAR}
   </select>
+  <select id="selectCountArchives" resultType="int">
+  	select count(1) from public.archive
+  </select>
+  
+  <select id="selectArchives" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from public.archive
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from public.archive
     where id = #{id,jdbcType=VARCHAR}
