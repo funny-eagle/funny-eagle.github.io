@@ -60,13 +60,10 @@ public class ArchiveServiceImpl implements ArchiveService {
 	}
 
 	public Archive queryArchiveById(String id) {
-//		if (StringUtils.isNotBlank(id)) {
-//			ArchiveExample example = new ArchiveExample();
-//			example.createCriteria().andIdEqualTo(id);
-//			List<Archive> Archives = this.ArchiveMapper.selectByExample(example);
-//			return (Archives != null) && (Archives.size() > 0) ? (Archive) Archives.get(0) : null;
-//		}
-		return null;
+		if (StringUtils.isBlank(id)) {
+			return null;
+		}
+		return this.archiveMapper.selectByPrimaryKey(id);
 	}
 
 	@Override

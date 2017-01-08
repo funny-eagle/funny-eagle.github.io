@@ -16,15 +16,11 @@
 <title>NOCODER-ADMIN</title>
 <link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
 <!-- Bootstrap -->
-<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css"
-	rel="stylesheet">
+<link href="<%=basePath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="<%=basePath %>/bootstrap/js/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<%=basePath %>/bootstrap/js/bootstrap.min.js"></script>
-<!-- include summernote css/js-->
-<link href="<%=basePath %>/summernote/summernote.css" rel="stylesheet">
-<script src="<%=basePath %>/summernote/summernote.min.js"></script>
 <script src="<%=basePath %>/editor.md-master/lib/jquery.flowchart.min.js"></script>
 <script src="<%=basePath %>/editor.md-master/src/editormd.js"></script>
 <style type="text/css">
@@ -78,18 +74,15 @@
 					</div>
 				</div>
 			</div>
-
-
 			
 			<div id="test-editormd" class="form-group">
 				<!-- preview 保存markdown代码-->
-				<textarea id="preview" name="preview">${archive.preview }</textarea>
+				<textarea id="mdContent" name="mdContent">${archive.mdContent }</textarea>
 
 				<!-- content保存html代码-->
                 <!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
-                <textarea id="content" class="editormd-html-textarea" name="content"></textarea>
+                <textarea id="htmlContent" class="editormd-html-textarea" name="htmlContent"></textarea>
 			</div>
-
 
 			<script type="text/javascript">
 				$(function() {
