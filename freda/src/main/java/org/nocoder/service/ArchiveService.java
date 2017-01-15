@@ -6,6 +6,14 @@ import org.nocoder.model.Archive;
 
 public abstract interface ArchiveService {
 
+	/**
+	 * 
+	 * @param state    文档状态
+	 * @param tag      文档标签
+	 * @param pageNum  页数
+	 * @param pageSize 每页行数 
+	 * @return
+	 */
 	public abstract List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer pageSize);
 
 	public abstract int countArchives(String paramString);

@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class BaseController {
     @Autowired
-    private ArchiveService ArchiveService;
+    private ArchiveService archiveService;
     public Map<String, Object> queryArchivesByPage(int state, String tag, Integer page, Integer pageSize) {
         final Map<String, Object> resMap = new HashMap<String, Object>();
         if (page == null) {
@@ -22,14 +22,12 @@ public class BaseController {
         if (pageSize == null) {
             pageSize = 10;
         }
-        final int archivesCount = this.ArchiveService.countArchives(tag);
+        final int archivesCount = this.archiveService.countArchives(tag);
         if (archivesCount > 0) {
-            List<Archive> archiveList = this.ArchiveService.queryArchiveList(state, tag, (page - 1) * pageSize, pageSize);
-            //result[0] = ArchiveList;
+            List<Archive> archiveList = this.archiveService.queryArchiveList(state, tag, (page - 1) * pageSize, pageSize);
             resMap.put("archiveList", archiveList);
             // 总页数 取天花板值
             int totalPages = (int) Math.ceil((double) archivesCount / (double) pageSize);
-            // result[1] = totalPages;
             resMap.put("totalPages", totalPages);
         }
         return resMap;

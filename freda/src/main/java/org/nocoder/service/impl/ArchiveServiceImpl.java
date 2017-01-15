@@ -22,7 +22,7 @@ public class ArchiveServiceImpl implements ArchiveService {
 	private ArchiveMapper archiveMapper;
 
     public List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer pageSize) {
-		List<Archive> list = this.archiveMapper.selectArchives();
+		List<Archive> list = this.archiveMapper.selectArchives();//.selectArchives(state, tag, pageNum, pageSize);
 		return list;
 	}
 

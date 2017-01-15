@@ -32,6 +32,7 @@
     select 
     <include refid="Base_Column_List" />
     from public.archive
+    limit 10 offset 0
   </select>
   
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">

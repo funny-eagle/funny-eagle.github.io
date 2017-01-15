@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
+import org.nocoder.constant.ArchiveConst;
 import org.nocoder.model.Archive;
 import org.nocoder.model.User;
 import org.nocoder.service.ArchiveService;
@@ -15,7 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+/**
+ * 后台维护controller
+ * @author jason
+ */
 @Controller
 public class AdminController extends BaseController{
 	
@@ -25,16 +29,19 @@ public class AdminController extends BaseController{
 	@Autowired
 	private ArchiveService archiveService;
 
+	/**
+	 * 转到后台维护首页，如未登录转到登录页面
+	 * @param request
+	 * @param model
+	 * @return 后台首页或登录页面
+	 */
 	@SuppressWarnings("unchecked")
 	@RequestMapping({ "/admin" })
 	public String toAdmin(HttpServletRequest request, Model model) {
 		if (request.getSession().getAttribute("user") != null) {
-
-			final String tag = request.getParameter("tag");
-			int state = 0;
-			final Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
-			final Integer pageSize = 10;
-			final Map<String, Object> resMap = queryArchivesByPage(state, tag, page, pageSize);
+			String pageStr = request.getParameter("page");
+			final Integer page = Integer.valueOf(pageStr == null ? "1" : pageStr);
+			final Map<String, Object> resMap = queryArchivesByPage(ArchiveConst.STATE_0, request.getParameter("tag"), page, ArchiveConst.PAGE_SIZE);
 			final List<Archive> archiveList = (List<Archive>) resMap.get("archiveList");
 			model.addAttribute("archiveList", archiveList);
 			model.addAttribute("page", page);

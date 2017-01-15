@@ -45,9 +45,9 @@
 
 	<div style="text-align: center;">
 		<ul class="pagination">
-			<li><a href="<%=basePath%>/admin?page=${(page==1)?page: page-1}">上一页</a></li>
+			<li><a href="<%=basePath%>/admin?page=${(page==1) ? page : page-1}">上一页</a></li>
 			<c:forEach var="i" begin="1" end="${totalPages }">
-				<li><a href="<%=basePath%>/admin?page=${i}">${i }</a></li>
+				<li><a href="<%=basePath%>/admin?page=${i}">${i}</a></li>
 			</c:forEach>
 			<li><a href="<%=basePath%>/admin?page=${page == totalPages ? page : page+1}">下一页</a></li>
 		</ul>
