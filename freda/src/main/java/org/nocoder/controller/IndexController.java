@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.nocoder.constant.ArchiveConst;
 import org.nocoder.model.Archive;
 import org.nocoder.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +23,9 @@ public class IndexController extends BaseController{
 	@RequestMapping({ "/index" })
 	public String toIndex(HttpServletRequest request, Model model) {
 		String tag = request.getParameter("tag");
-		int state = 2;
 		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
-		Integer pageSize = 1;
-		Map<String, Object> resMap = queryArchivesByPage(state, tag, page, pageSize);
+		Integer pageSize = 10;
+		Map<String, Object> resMap = queryArchivesByPage(ArchiveConst.STATE_SUBMITED, tag, page, pageSize);
 		Object object = resMap.get("archiveList");
 		List<Archive> archiveList = null;
 		if(object instanceof List<?>){
@@ -49,10 +49,9 @@ public class IndexController extends BaseController{
 	@RequestMapping("/ArchivesByTag")
 	public String ArchivesByTag(HttpServletRequest request, Model model){
 		String tag = request.getParameter("tag");
-		int state = 2;
 		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 		Integer pageSize = 1;
-		Map<String, Object> resMap = queryArchivesByPage(state, tag, page, pageSize);
+		Map<String, Object> resMap = queryArchivesByPage(ArchiveConst.STATE_SUBMITED, tag, page, pageSize);
 
 		model.addAttribute("ArchiveList", resMap.get("ArchiveList"));
 		model.addAttribute("page", page);

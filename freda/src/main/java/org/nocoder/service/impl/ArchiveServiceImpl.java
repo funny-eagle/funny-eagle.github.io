@@ -1,7 +1,9 @@
 package org.nocoder.service.impl;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import javax.annotation.PostConstruct;
@@ -21,8 +23,13 @@ public class ArchiveServiceImpl implements ArchiveService {
 	@Autowired
 	private ArchiveMapper archiveMapper;
 
-    public List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer pageSize) {
-		List<Archive> list = this.archiveMapper.selectArchives();//.selectArchives(state, tag, pageNum, pageSize);
+    public List<Archive> queryArchiveList(String state, String tag, Integer pageNum, Integer pageSize) {
+    	Map<String, Object> paramsMap = new HashMap<String, Object>();
+    	paramsMap.put("state", state);
+    	paramsMap.put("tag", tag);
+    	paramsMap.put("limit", pageSize);
+    	paramsMap.put("offset", pageSize * (pageNum - 1));
+		List<Archive> list = this.archiveMapper.selectArchives(paramsMap);
 		return list;
 	}
 

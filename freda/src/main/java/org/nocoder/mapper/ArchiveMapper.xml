@@ -28,11 +28,17 @@
   	select count(1) from public.archive
   </select>
   
-  <select id="selectArchives" resultMap="BaseResultMap">
+  <select id="selectArchives" resultMap="BaseResultMap" parameterType="java.util.Map">
     select 
     <include refid="Base_Column_List" />
     from public.archive
-    limit 10 offset 0
+    <where>
+    	state = #{state, jdbcType=VARCHAR}
+    	<if test="tag != null">
+    		tag = #{tag, jdbcType=VARCHAR}
+    	</if>
+    </where>
+    limit #{limit, jdbcType=VARCHAR} offset #{offset, jdbcType=VARCHAR}
   </select>
   
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">

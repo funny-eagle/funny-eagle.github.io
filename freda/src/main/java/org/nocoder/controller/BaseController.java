@@ -14,7 +14,7 @@ import java.util.Map;
 public class BaseController {
     @Autowired
     private ArchiveService archiveService;
-    public Map<String, Object> queryArchivesByPage(int state, String tag, Integer page, Integer pageSize) {
+    public Map<String, Object> queryArchivesByPage(String state, String tag, Integer page, Integer pageSize) {
         final Map<String, Object> resMap = new HashMap<String, Object>();
         if (page == null) {
             page = 1;
@@ -24,7 +24,7 @@ public class BaseController {
         }
         final int archivesCount = this.archiveService.countArchives(tag);
         if (archivesCount > 0) {
-            List<Archive> archiveList = this.archiveService.queryArchiveList(state, tag, (page - 1) * pageSize, pageSize);
+            List<Archive> archiveList = this.archiveService.queryArchiveList(state, tag, page, pageSize);
             resMap.put("archiveList", archiveList);
             // 总页数 取天花板值
             int totalPages = (int) Math.ceil((double) archivesCount / (double) pageSize);

@@ -14,7 +14,9 @@ public class ArchiveConst {
     // 每页个数，初始化为10
     public final static Integer PAGE_SIZE = 10;
     
-    public final static Integer STATE_0 = 0;
+    public final static String STATE_0 = "0";
+    public final static String STATE_SAVED = "1";
+    public final static String STATE_SUBMITED = "2";
 
 
 

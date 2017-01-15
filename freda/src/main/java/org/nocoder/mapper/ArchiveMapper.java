@@ -1,6 +1,7 @@
 package org.nocoder.mapper;
 
 import java.util.List;
+import java.util.Map;
 
 import org.nocoder.model.Archive;
 
@@ -20,5 +21,5 @@ public interface ArchiveMapper {
     
     int selectCountArchives(String tag);
     
-    List<Archive> selectArchives();
+    List<Archive> selectArchives(Map<String, Object> paramsMap);
 }
