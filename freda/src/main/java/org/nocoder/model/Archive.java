@@ -1,8 +1,12 @@
 package org.nocoder.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Archive {
+public class Archive implements Serializable{
+	
+	private static final long serialVersionUID = -3035889003507233607L;
+	
     private String id;
 
     private String title;
