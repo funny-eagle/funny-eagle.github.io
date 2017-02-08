@@ -38,17 +38,24 @@ public class AdminController extends BaseController{
 	@SuppressWarnings("unchecked")
 	@RequestMapping({ "/admin" })
 	public String toAdmin(HttpServletRequest request, Model model) {
+		// 查看HttpSession中是否存在用户，不存在直接返回登录界面
 		if (request.getSession().getAttribute("user") != null) {
+			
+			//分页信息-页数
 			String pageStr = request.getParameter("page");
 			final Integer page = Integer.valueOf(pageStr == null ? "1" : pageStr);
-			final Map<String, Object> resMap = queryArchivesByPage(ArchiveConst.STATE_0, request.getParameter("tag"), page, ArchiveConst.PAGE_SIZE);
+			
+			//查询文档信息(文章和总页数)
+			final Map<String, Object> resMap = queryArchivesByPage(null, request.getParameter("tag"), page, ArchiveConst.PAGE_SIZE);
 			final List<Archive> archiveList = (List<Archive>) resMap.get("archiveList");
+			
 			model.addAttribute("archiveList", archiveList);
 			model.addAttribute("page", page);
 			model.addAttribute("totalPages", resMap.get("totalPages"));
 
 			return "admin/admin";
 		}
+		
 		return "redirect:login";
 	}
 

@@ -15,7 +15,7 @@ import java.util.List;
 public class SerializeUtil {
 
     /**
-     * 序列化
+     * 对象序列化
      * @param obj
      * @return bytes
      */
@@ -36,7 +36,7 @@ public class SerializeUtil {
     }
 
     /**
-     * 反序列化
+     * 反序列化对象
      * @param bytes
      * @return object
      */
@@ -86,7 +86,7 @@ public class SerializeUtil {
      * @return
      */
     public static List<?> unserializeList(byte[] bytes){
-        List<Object> list = new ArrayList<>();
+        List<Object> list = new ArrayList<Object>();
         ObjectInputStream objectInputStream  = null;
         ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
         try {

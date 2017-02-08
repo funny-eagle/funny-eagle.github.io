@@ -11,11 +11,19 @@ public class ArchiveConst {
     // 其他类型文章
     public final static String ARTICLE_TYPE_OTHER = "2";
     
-    // 每页个数，初始化为10
-    public final static Integer PAGE_SIZE = 10;
+    /**
+     * 每页个数
+     */
+    public final static Integer PAGE_SIZE = 5;
     
-    public final static String STATE_0 = "0";
+    /**
+     * 文档状态 - 草稿
+     */
     public final static String STATE_SAVED = "1";
+    
+    /**
+     * 文档状态 - 已发布
+     */
     public final static String STATE_SUBMITED = "2";
 
 

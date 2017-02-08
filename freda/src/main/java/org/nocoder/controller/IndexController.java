@@ -21,16 +21,24 @@ public class IndexController extends BaseController{
 
 	@SuppressWarnings("unchecked")
 	@RequestMapping({ "/index" })
-	public String toIndex(HttpServletRequest request, Model model) {
+	public String toHomepage(HttpServletRequest request, Model model) {
+		// 文档标签
 		String tag = request.getParameter("tag");
+		
+		// 页数（第几页）
 		Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
-		Integer pageSize = 10;
+		
+		// 每页个数
+		Integer pageSize = ArchiveConst.PAGE_SIZE; 
+		
+		// 获取文档信息
 		Map<String, Object> resMap = queryArchivesByPage(ArchiveConst.STATE_SUBMITED, tag, page, pageSize);
 		Object object = resMap.get("archiveList");
 		List<Archive> archiveList = null;
 		if(object instanceof List<?>){
 			archiveList = (List<Archive>) object;
 		}
+		
 		model.addAttribute("archiveList", archiveList);
 		model.addAttribute("page", page);
 		model.addAttribute("totalPages", resMap.get("totalPages"));
@@ -46,6 +54,7 @@ public class IndexController extends BaseController{
 		getRightBar(model);
 		return "index";
 	}
+	
 	@RequestMapping("/ArchivesByTag")
 	public String ArchivesByTag(HttpServletRequest request, Model model){
 		String tag = request.getParameter("tag");
