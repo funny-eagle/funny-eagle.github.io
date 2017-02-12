@@ -16,7 +16,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
     <meta name="author" content="">
     <link rel="icon" href="<%=basePath%>/imgs/command.ico">
 
-    <title>NoCoder.Org</title>
+    <title>JASON YANG'S BLOG</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<%=basePath%>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -180,7 +180,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 		</script>
       </p>
       <p>
-        <a href="<%=basePath%>">↑ Back to top</a>
+        <a href="#">↑ Back to top</a>
       </p>
     </footer>
 

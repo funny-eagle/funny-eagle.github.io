@@ -33,11 +33,15 @@
     <include refid="Base_Column_List" />
     from public.archive
     <where>
-    	state = #{state, jdbcType=VARCHAR}
+    	<if test="state != null">
+    		state = #{state, jdbcType=VARCHAR}
+    	</if>
+    	
     	<if test="tag != null">
     		tag = #{tag, jdbcType=VARCHAR}
     	</if>
     </where>
+    order by create_time desc
     limit #{limit, jdbcType=VARCHAR} offset #{offset, jdbcType=VARCHAR}
   </select>
   

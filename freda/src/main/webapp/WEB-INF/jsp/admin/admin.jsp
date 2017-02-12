@@ -8,13 +8,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>NoCoder Admin</title>
+<title>博客维护</title>
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
 			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="witdh:40px; height:40px; float:left; padding-left:10px;padding-top:8px;"/>
-			<a class="navbar-brand" href="<%=basePath %>/admin" style="float:left;">Nocoder Admin</a>
+			<a class="navbar-brand" href="<%=basePath %>/admin" style="float:left;">博客维护</a>
 			<a target="_blank" class="navbar-brand" href="<%=basePath %>" style="float:left;">Blog</a>
 		</div>
 	</nav>
