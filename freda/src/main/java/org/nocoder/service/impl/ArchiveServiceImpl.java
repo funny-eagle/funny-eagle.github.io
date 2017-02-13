@@ -47,20 +47,26 @@ public class ArchiveServiceImpl implements ArchiveService {
 		return archiveMapper.selectCountArchives(tag);
 	}
 
-	public int saveArchive(Archive Archive) {
+	public int saveArchive(Archive archive) {
 		int resCount = 0;
-		if (StringUtils.isBlank(Archive.getId())) {
-			Archive.setId(UUID.randomUUID().toString().replace("-", ""));
-			Archive.setCreateTime(new Date());
-			resCount = this.archiveMapper.insertSelective(Archive);
+		if (archive == null) return resCount;
+		if(archive.getPreview() != null){
+			//可以替换大部分空白字符， 不限于空格    
+			// \s 可以匹配空格、制表符、换页符等空白字符的其中任意一个
+			archive.setPreview(archive.getPreview().replaceAll("\\s*", ""));
+		}
+		if (StringUtils.isBlank(archive.getId())) {
+			archive.setId(UUID.randomUUID().toString().replace("-", ""));
+			archive.setCreateTime(new Date());
+			resCount = this.archiveMapper.insertSelective(archive);
 			if (resCount > 0) {
-				this.logger.debug("====>新增文章 " + Archive.getTitle() + "成功！");
+				this.logger.debug("====>新增文章 " + archive.getTitle() + "成功！");
 			}
 		} else {
-			Archive.setUpdateTime(new Date());
-			resCount = this.archiveMapper.updateByPrimaryKeySelective(Archive);
+			archive.setUpdateTime(new Date());
+			resCount = this.archiveMapper.updateByPrimaryKeySelective(archive);
 			if (resCount > 0) {
-				this.logger.debug("====>修改文章 " + Archive.getTitle() + "成功！");
+				this.logger.debug("====>修改文章 " + archive.getTitle() + "成功！");
 			}
 		}
 		return resCount;

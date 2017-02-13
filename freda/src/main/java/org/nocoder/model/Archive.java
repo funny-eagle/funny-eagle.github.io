@@ -29,6 +29,8 @@ public class Archive implements Serializable{
 
     private Date updateTime;
 
+    private String preview;
+    
     public String getId() {
         return id;
     }
@@ -116,4 +118,14 @@ public class Archive implements Serializable{
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
     }
+
+	public String getPreview() {
+		return preview;
+	}
+
+	public void setPreview(String preview) {
+		this.preview = preview;
+	}
+    
+    
 }

@@ -13,10 +13,11 @@
     <result column="state" jdbcType="VARCHAR" property="state" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="preview" jdbcType="VARCHAR" property="preview" />
   </resultMap>
   <sql id="Base_Column_List">
     id, title, author, md_content, html_content, tag, type, source_link, state, create_time, 
-    update_time
+    update_time, preview
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -53,11 +54,11 @@
     insert into public.archive (id, title, author, 
       md_content, html_content, tag, 
       type, source_link, state, 
-      create_time, update_time)
+      create_time, update_time, preview)
     values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
       #{mdContent,jdbcType=VARCHAR}, #{htmlContent,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, 
       #{type,jdbcType=VARCHAR}, #{sourceLink,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{preview, jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="org.nocoder.model.Archive">
     insert into public.archive
@@ -95,6 +96,9 @@
       <if test="updateTime != null">
         update_time,
       </if>
+      <if test="preview != null">
+        preview,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -129,6 +133,9 @@
       </if>
       <if test="updateTime != null">
         #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="preview != null">
+      	#{preview, jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -165,6 +172,9 @@
       <if test="updateTime != null">
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="preview != null">
+      	preview = #{preview, jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
@@ -179,7 +189,8 @@
       source_link = #{sourceLink,jdbcType=VARCHAR},
       state = #{state,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP}
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      preview = #{preview,jdbcType=VARCHAR}
     where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

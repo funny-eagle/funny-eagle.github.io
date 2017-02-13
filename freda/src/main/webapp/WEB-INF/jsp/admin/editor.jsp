@@ -67,14 +67,20 @@
 				</div>
 				<div class="col-md-4 column">
 					<div class="form-group">
-						<label for="tag">标签</label> <span style="color:grey;font-size:8px;">最大长度20个字符</span>
+						<label for="tag">标签</label> <span style="color:grey;font-size:8px;"></span>
 						<input type="text" required
 							class="form-control" id="标签" name="tag" maxlength="10" 
 							placeholder="输入标签，多个标签使用英文状态下的逗号分隔" value="${archive.tag }">
 					</div>
 				</div>
 			</div>
-			
+			<div class="row clearfix col-md-12 column">
+					<div class="form-group">
+						<label for="preview">预览</label> <span style="color:grey;font-size:8px;">最大长度200个字符</span>
+						<textarea rows="3" cols="" required
+							class="form-control" id="预览" name="preview">${archive.preview }</textarea>
+					</div>
+				</div>
 			<div id="test-editormd" class="form-group">
 				<!-- preview 保存markdown代码-->
 				<textarea id="mdContent" name="mdContent">${archive.mdContent }</textarea>

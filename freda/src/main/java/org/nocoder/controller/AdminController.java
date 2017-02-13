@@ -60,7 +60,7 @@ public class AdminController extends BaseController{
 	}
 
 	@RequestMapping({ "/login" })
-	public String toIndex(HttpServletRequest request, Model model) {
+	public String login(HttpServletRequest request, Model model) {
 		if (request.getSession().getAttribute("user") != null) {
 			return "redirect:admin";
 		}
