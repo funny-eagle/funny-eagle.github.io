@@ -8,22 +8,23 @@
 			<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
 		</commentGenerator>
 		<jdbcConnection driverClass="org.postgresql.Driver"
-			connectionURL="jdbc:postgresql://45.58.52.59:5432/freda_db"
-			userId="postgres" password="jason@nocoder.org" />
+			connectionURL="jdbc:postgresql://27.122.58.208:5432/freda_db"
+			userId="postgres" password="123456" />
 		<javaModelGenerator targetPackage="org.nocoder.model"
-			targetProject="/Users/jason/git/nocoder.org/freda/src/main/java" />
+			targetProject="D:/git/nocoder.org/freda/src/main/java" />
 		<sqlMapGenerator targetPackage="org.nocoder.mapper"
-			targetProject="/Users/jason/git/nocoder.org/freda/src/main/java" />
+			targetProject="D:/git/nocoder.org/freda/src/main/java" />
 		<javaClientGenerator targetPackage="org.nocoder.mapper"
-			targetProject="/Users/jason/git/nocoder.org/freda/src/main/java" type="XMLMAPPER" />
+			targetProject="D:/git/nocoder.org/freda/src/main/java" type="XMLMAPPER" />
 		
-		<table schema="public" tableName="archive" domainObjectName="Archive"
+		
+		<table schema="public" tableName="dict" domainObjectName="Dict"
     			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
     			enableSelectByExample="false" selectByExampleQueryId="false" >
     		<property name="useActualColumnNames" value="false"/>
 		</table>
 		
-		<table schema="public" tableName="user" domainObjectName="User"
+		<table schema="public" tableName="dict_type" domainObjectName="DictType"
     			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
     			enableSelectByExample="false" selectByExampleQueryId="false" >
     		<property name="useActualColumnNames" value="false"/>
