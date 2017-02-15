@@ -18,6 +18,15 @@
     from public.user
     where id = #{id,jdbcType=VARCHAR}
   </select>
+  
+  <select id="selectUserByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+  	select
+  	<include refid="Base_Column_List"/>
+  	from public.user
+  	where username = #{username,jdbcType=VARCHAR}
+  </select>
+  
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from public.user
     where id = #{id,jdbcType=VARCHAR}

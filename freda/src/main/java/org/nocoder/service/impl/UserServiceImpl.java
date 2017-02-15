@@ -12,9 +12,8 @@ public class UserServiceImpl implements UserService {
 	private UserMapper userMapper;
 
 	@Override
-	public User UserAuthentication(String username, String password) {
-		//TODO 从数据库验证用户
-		userMapper.selectByPrimaryKey("1");
-		return new User();
+	public User UserAuthentication(String username) {
+		User user = userMapper.selectUserByName(username);
+		return user;
 	}
 }

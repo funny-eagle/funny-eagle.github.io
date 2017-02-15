@@ -5,16 +5,20 @@ package org.nocoder.constant;
  */
 public class ArchiveConst {
 
-    // 技术类文章
+    /**
+     *  技术类文章
+     */
     public final static String ARTICLE_TYPE_TECH = "1";
 
-    // 其他类型文章
+    /**
+     * 其他类型文章
+     */
     public final static String ARTICLE_TYPE_OTHER = "2";
     
     /**
      * 每页个数
      */
-    public final static Integer PAGE_SIZE = 5;
+    public final static Integer PAGE_SIZE = 1;
     
     /**
      * 文档状态 - 草稿

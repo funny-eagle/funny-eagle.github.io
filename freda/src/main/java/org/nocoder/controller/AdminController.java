@@ -46,7 +46,7 @@ public class AdminController extends BaseController{
 			final Integer page = Integer.valueOf(pageStr == null ? "1" : pageStr);
 			
 			//查询文档信息(文章和总页数)
-			final Map<String, Object> resMap = queryArchivesByPage(null, request.getParameter("tag"), page, ArchiveConst.PAGE_SIZE);
+			final Map<String, Object> resMap = queryArchivesByPage(null, request.getParameter("tag"), page, 15);
 			final List<Archive> archiveList = (List<Archive>) resMap.get("archiveList");
 			
 			model.addAttribute("archiveList", archiveList);
@@ -67,8 +67,8 @@ public class AdminController extends BaseController{
 		final String username = request.getParameter("username");
 		final String password = request.getParameter("password");
 		if (StringUtils.isNotBlank(username) && StringUtils.isNotBlank(password)) {
-			final User user = this.userService.UserAuthentication(username, password);
-			if (user != null) {
+			final User user = this.userService.UserAuthentication(username);
+			if (user != null && password.equals(user.getPassword())) {
 				model.addAttribute("user", user);
 				// 将用户信息存放至session中
 				request.getSession().setAttribute("user", user);
