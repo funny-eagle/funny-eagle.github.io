@@ -13,7 +13,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-<title>NOCODER-ADMIN</title>
+<title>博客管理系统</title>
 <link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
 <!-- Bootstrap -->
 <link href="<%=basePath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,8 +39,7 @@
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
 			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="witdh:40px; height:40px; float:left; padding-left:10px;padding-top:8px;"/>
-			<a class="navbar-brand" href="<%=basePath %>/admin" style="float:left;">NoCoder Admin</a>
-			<a class="navbar-brand" href="<%=basePath %>" style="float:left;">NoCoder.Org</a>
+			<a class="navbar-brand" href="<%=basePath %>/admin" style="float:left;">返回</a>
 		</div>
 		<div>
 			<p class="navbar-text">文章编辑</p>

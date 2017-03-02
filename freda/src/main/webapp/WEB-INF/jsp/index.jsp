@@ -173,11 +173,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
       <p>
       	Copyright © 2016  <a href="http://www.nocoder.org">nocoder.org</a> by <a href="http://www.nocoder.org">@Jason Yang</a>.
       	<!--CNZZ数据统计  -->
-		<script type="text/javascript">
-			var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-			document.write(unescape("%3Cspan id='cnzz_stat_icon_1257391581'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol 
-					+ "s4.cnzz.com/z_stat.php%3Fid%3D1257391581%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));
-		</script>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257391581'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1257391581%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
       </p>
       <p>
         <a href="#">↑ Back to top</a>
