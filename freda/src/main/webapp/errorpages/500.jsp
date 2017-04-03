@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>NOCODER.ORG</title>
+<title>system error!</title>
 </head>
 <body>
 500 该页面不存在！

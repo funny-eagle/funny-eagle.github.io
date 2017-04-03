@@ -15,13 +15,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class IndexController extends BaseController{
+public class ArchiveController extends BaseController{
 	@Autowired
 	private ArchiveService archiveService;
 
 	@SuppressWarnings("unchecked")
-	@RequestMapping({ "/index" })
-	public String toHomepage(HttpServletRequest request, Model model) {
+	@RequestMapping({ "/archive_list" })
+	public String toArchiveListPage(HttpServletRequest request, Model model) {
 		// 文档标签
 		String tag = request.getParameter("tag");
 		
@@ -43,8 +43,9 @@ public class IndexController extends BaseController{
 		model.addAttribute("page", page);
 		model.addAttribute("totalPages", resMap.get("totalPages"));
 		getRightBar(model);
-		return "index";
+		return "phantom/index";
 	}
+
 	
 	@RequestMapping("/archivesByMonth")
 	public String ArchivesByCreateTime(HttpServletRequest request, Model model){
@@ -52,7 +53,7 @@ public class IndexController extends BaseController{
 		List<Archive> archiveList = archiveService.queryArchiveListByCreateTime(month);
 		model.addAttribute("archiveList", archiveList);
 		getRightBar(model);
-		return "index";
+		return "default/index";
 	}
 	
 	@RequestMapping("/ArchivesByTag")
@@ -67,7 +68,7 @@ public class IndexController extends BaseController{
 		model.addAttribute("totalPages", resMap.get("totalPages"));
 
 		getRightBar(model);
-		return "index";
+		return "default/index";
 	}
 
 	@RequestMapping({ "/archive" })
@@ -78,7 +79,7 @@ public class IndexController extends BaseController{
 		archiveList.add(archive);
 		model.addAttribute("archiveList", archiveList);
 		getRightBar(model);
-		return "index";
+		return "phantom/archive";
 	}
 
 	/**

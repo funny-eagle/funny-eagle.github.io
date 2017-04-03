@@ -140,7 +140,7 @@
      "foo [link http://www.example.com/index.html] bar");
 
   MT("vanillaLinkEmphasis",
-     "foo [em *][em&link http://www.example.com/index.html][em *] bar");
+     "foo [em *][em&link http://www.example.com/index.jsp][em *] bar");
 
   MT("notALink",
      "[comment ```css]",

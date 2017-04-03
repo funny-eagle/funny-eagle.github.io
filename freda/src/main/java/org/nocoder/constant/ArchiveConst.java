@@ -18,7 +18,7 @@ public class ArchiveConst {
     /**
      * 每页个数
      */
-    public final static Integer PAGE_SIZE = 1;
+    public final static Integer PAGE_SIZE = 10;
     
     /**
      * 文档状态 - 草稿

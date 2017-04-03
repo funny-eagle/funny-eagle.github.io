@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>NOCODER.ORG</title>
+<title>Page not found!</title>
 </head>
 <body>
 404 该页面不存在！

@@ -2,7 +2,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	version="3.0">
-	<display-name>nocoder.org.freda</display-name>
+	<display-name>freda</display-name>
 	<!-- Spring和mybatis的配置文件 -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -56,11 +56,11 @@
 	   
 	<servlet-mapping>
 		<servlet-name>SpringMVC</servlet-name>
-		<url-pattern>/index</url-pattern>
+		<url-pattern>/archive_list</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
-		<welcome-file>index</welcome-file>
+		<welcome-file>archive_list</welcome-file>
 	</welcome-file-list>
 	<error-page>
 		<error-code>404</error-code>
