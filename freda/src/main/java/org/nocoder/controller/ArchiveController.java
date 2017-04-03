@@ -75,10 +75,8 @@ public class ArchiveController extends BaseController{
 	public String viewArchive(HttpServletRequest request, Model model) {
 		String id = request.getParameter("id");
 		Archive archive = this.archiveService.queryArchiveById(id);
-		List<Archive> archiveList = new ArrayList<Archive>();
-		archiveList.add(archive);
-		model.addAttribute("archiveList", archiveList);
-		getRightBar(model);
+		model.addAttribute("archive", archive);
+		//getRightBar(model);
 		return "phantom/archive";
 	}
 

@@ -40,11 +40,11 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 							</header>
 							<section class="tiles">
 								<c:forEach items="${archiveList }" var="archive">
-									<article class="style2">
+									<article class="style<%=1+new java.util.Random().nextInt(6)%>">
 										<span class="image">
 											<img src="<%=basePath%>/phantom/images/pic03.jpg" alt="" />
 										</span>
-										<a href="archive">
+										<a href="archive?id=${archive.id}">
 											<h2>${archive.title}</h2>
 											<div class="content">
 												<p>${archive.preview}</p>
@@ -53,7 +53,21 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 									</article>
 								</c:forEach>
 							</section>
+
+							<c:choose>
+								<c:when test="${totalPages != null }">
+									<section style="position:absolute;left:50%;margin-left:-5%; margin-top:3%;">
+										<ul class="actions">
+											<li><a href="<%=basePath%>/archive_list?page=${(page==1)? page : page-1}" class="button">上一页</a></li>
+											<li><a href="<%=basePath%>/archive_list?page=${page == totalPages ? page : page+1}" class="button">下一页</a></li>
+										</ul>
+									</section>
+								</c:when>
+							</c:choose>
+
+
 						</div>
+
 					</div>
 
 				<!-- Footer -->
