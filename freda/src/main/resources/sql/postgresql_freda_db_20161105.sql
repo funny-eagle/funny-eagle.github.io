@@ -7,6 +7,7 @@ create table public.archive
     id character varying(32) collate pg_catalog.default not null,
     title character varying(100) collate pg_catalog.default,
     author character varying(50) collate pg_catalog.default,
+    preview character varying(200) collate pg_catalog.default,
     md_content text collate pg_catalog.default,
     html_content text collate pg_catalog.default,
     tag character varying(50) collate pg_catalog.default,
