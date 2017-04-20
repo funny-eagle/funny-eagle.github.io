@@ -36,13 +36,14 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 						<div class="inner">
 							<header>
 								<h1>Standing on the shoulders of giants</h1>
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+								<p>拥抱变化，迎接挑战</p>
 							</header>
 							<section class="tiles">
 								<c:forEach items="${archiveList }" var="archive">
-									<article class="style<%=1+new java.util.Random().nextInt(6)%>">
+								<!--	<article class="style<%=1+new java.util.Random().nextInt(6)%>">-->
+										<article>
 										<span class="image">
-											<img src="<%=basePath%>/phantom/images/pic03.jpg" alt="" />
+											<img src="<%=basePath%>/phantom/images/<%=1+new java.util.Random().nextInt(5)%>.jpg" alt="" />
 										</span>
 										<a href="archive?id=${archive.id}">
 											<h2>${archive.title}</h2>
