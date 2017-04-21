@@ -17,3 +17,5 @@
 - 持续进行代码重构
 - 数据库改为PostgreSQL
 - 集成评论插件
+
+欢迎来访我的博客 http://www.jasonyang.org
