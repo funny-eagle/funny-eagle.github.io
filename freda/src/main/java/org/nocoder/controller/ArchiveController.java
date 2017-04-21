@@ -1,6 +1,5 @@
 package org.nocoder.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -13,15 +12,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ArchiveController extends BaseController{
 	@Autowired
 	private ArchiveService archiveService;
 
-	@SuppressWarnings("unchecked")
+	@RequestMapping({ "/index" })
+	public String toHomePage(){
+		return "phantom/index";
+	}
+
+	@ResponseBody
 	@RequestMapping({ "/archive_list" })
-	public String toArchiveListPage(HttpServletRequest request, Model model) {
+	public List<Archive> toArchiveListPage(HttpServletRequest request) {
 		// 文档标签
 		String tag = request.getParameter("tag");
 		
@@ -39,11 +44,7 @@ public class ArchiveController extends BaseController{
 			archiveList = (List<Archive>) object;
 		}
 		
-		model.addAttribute("archiveList", archiveList);
-		model.addAttribute("page", page);
-		model.addAttribute("totalPages", resMap.get("totalPages"));
-		getRightBar(model);
-		return "phantom/index";
+		return archiveList;
 	}
 
 	
