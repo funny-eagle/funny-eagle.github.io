@@ -1,5 +1,7 @@
 ## Freda 是一个基于JavaEE的博客项目
 
+欢迎来访我的博客 http://www.jasonyang.org
+
 ### 技术框架：
 - JDK-1.8 
 - Spring-4.0.2
@@ -18,4 +20,3 @@
 - 数据库改为PostgreSQL
 - 集成评论插件
 
-欢迎来访我的博客 http://www.jasonyang.org
