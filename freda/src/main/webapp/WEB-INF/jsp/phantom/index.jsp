@@ -23,6 +23,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <link rel="stylesheet" href="<%=basePath%>/phantom/assets/css/ie9.css"/><![endif]-->
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="<%=basePath%>/phantom/assets/css/ie8.css"/><![endif]-->
+    <link rel="icon" href="<%=basePath%>/imgs/command.ico">
 </head>
 <body>
 <!-- Wrapper -->
