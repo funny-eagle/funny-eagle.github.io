@@ -41,27 +41,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <header>
                 <h2>拥抱变化，迎接挑战</h2>
             </header>
-            <!--
-            <section id="article_section" class="tiles">
-                <c:forEach items="${archiveList }" var="archive">
-                    <article class="style<%=1+new java.util.Random().nextInt(6)%>">
-                        <span class="image">
-                            <img src="<%=basePath%>/phantom/images/<%=1+new java.util.Random().nextInt(5)%>.jpg" alt=""/>
-                        </span>
-                        <a href="archive?id=${archive.id}">
-                            <h2>${archive.title}</h2>
 
-                            <div class="content">
-                                <p>${archive.preview}</p>
-                            </div>
-                        </a>
-                    </article>
-                </c:forEach>
-            </section>
-            -->
             <section id="article_section" class="tiles">
 
             </section>
+            <div style="text-align: center;">
+                <a href="" class="">加载更多⬇️</a>
+            </div>
             <c:choose>
                 <c:when test="${totalPages != null }">
                     <section style="position:absolute;left:50%;margin-left:-5%; margin-top:3%;">
