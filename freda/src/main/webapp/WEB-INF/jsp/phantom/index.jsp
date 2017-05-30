@@ -41,12 +41,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <header>
                 <h2>即使你已经在正确的轨道上，但如果只是停止不前，也仍然会被淘汰出局。</h2>
             </header>
-
+            <!--文档区域-->
             <section id="article_section" class="tiles">
-
             </section>
-            <div style="text-align: center; padding-top:2em;">
-                <input type="button" value="查看更多" class="button small" />
+
+            <!--"加载中，查看更多"区域-->
+            <div id="div_load" style="text-align: center; padding-top:2em;">
             </div>
             <c:choose>
                 <c:when test="${totalPages != null }">
@@ -79,7 +79,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <script src="<%=basePath%>/phantom/assets/js/main.js"></script>
 <script type="text/javascript">
     $(function () {
-        $("#article_section").append('<article>Loading...</article>');
+        $("#div_load").append('<div style="text-align: center;"><h3>Loading...</h3></div>');
         var path = "<%=basePath%>";
         $.post(
                 path + "/archive_list",
@@ -105,6 +105,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             + '</article>');
                         index ++;
                     }
+                    $("#div_load").html("");
+                    $("#div_load").append('<input type="button" value="查看更多" class="button small" />')
                 }
         );
     });
