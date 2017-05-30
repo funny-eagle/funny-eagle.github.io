@@ -27,7 +27,7 @@
                     <textarea name="message" id="message" placeholder="Message"></textarea>
                 </div>
                 <ul class="actions">
-                    <li><input type="submit" value="Send" class="special" /></li>
+                    <li><input type="button" value="Send" class="special" /></li>
                 </ul>
             </form>
         </section>

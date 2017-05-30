@@ -68,7 +68,11 @@
 	</error-page>
 	<error-page>
 		<error-code>500</error-code>
-		<location>/errorpages/404.jsp</location>
+		<location>/errorpages/500.jsp</location>
 	</error-page>
+
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
 
 </web-app>

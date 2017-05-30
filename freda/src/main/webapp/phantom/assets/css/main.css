@@ -2775,7 +2775,7 @@
 			}
 
 		* + .tiles {
-			margin-top: 2em;
+
 		}
 
 		body.is-loading .tiles article {
@@ -3178,7 +3178,7 @@
 /* Main */
 
 	#main {
-		padding: 0em 0 6em 0 ;
+		padding: 0em 0 2em 0 ;
 	}
 
 		@media screen and (max-width: 736px) {

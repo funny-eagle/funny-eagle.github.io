@@ -10,18 +10,18 @@
 <html>
 <jsp:include page="../common/head.jsp"></jsp:include>
 <body>
-<!-- 
+<!--
 	<form class="bs-example bs-example-form" method="post">
 		<div class="row"  style="margin:0 auto;">
 			<div class="col-lg-2">
 				<p>Nocoder.Org后台管理系统</p>
 				<div class="input-group input-group-sm">
-					<span class="input-group-addon">用户名</span> 
+					<span class="input-group-addon">用户名</span>
 					<input type="text" name="username" class="form-control">
 				</div>
 				<br/>
 				<div class="input-group input-group-sm">
-					<span class="input-group-addon">密　码</span> 
+					<span class="input-group-addon">密　码</span>
 					<input type="password" name="password" class="form-control">
 				</div>
 				<br/>

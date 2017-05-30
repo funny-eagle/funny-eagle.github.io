@@ -39,20 +39,23 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <div id="main">
         <div class="inner">
             <header>
-                <h2>拥抱变化，迎接挑战</h2>
+                <h2>即使你已经在正确的轨道上，但如果只是停止不前，也仍然会被淘汰出局。</h2>
             </header>
 
             <section id="article_section" class="tiles">
 
             </section>
-            <div style="text-align: center;">
-                <a href="" class="">加载更多⬇️</a>
+            <div style="text-align: center; padding-top:2em;">
+                <input type="button" value="查看更多" class="button small" />
             </div>
             <c:choose>
                 <c:when test="${totalPages != null }">
                     <section style="position:absolute;left:50%;margin-left:-5%; margin-top:3%;">
                         <ul class="actions">
-                            <li><a href="<%=basePath%>/archive_list?page=${page == totalPages ? page : page+1}" class="button">加载更多⬇️</a></li>
+                            <li>
+                                <!--<a href="<%=basePath%>/archive_list?page=${page == totalPages ? page : page+1}" class="button">加载更多⬇️</a>-->
+                                <input type="button" value="查看更多" class="special" />
+                            </li>
                         </ul>
                     </section>
                 </c:when>
@@ -91,7 +94,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         $("#article_section").append(
                             '<article class="style'+index+'">'
                             + '<span class="image">'
-                            + '<img src="' + path + '/phantom/images/'+index+'.jpg" alt=""/>'
+                            + '<img src="' + path + '/phantom/images/pic0'+index+'.jpg" alt=""/>'
                             + '</span>'
                             + '<a href="archive?id=' + archives[i].id + '">'
                             + '<h2>' + archives[i].title + '</h2>'
