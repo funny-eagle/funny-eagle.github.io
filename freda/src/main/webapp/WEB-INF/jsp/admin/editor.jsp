@@ -14,6 +14,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
 <title>博客管理系统</title>
+<link rel="icon" href="<%=basePath%>/imgs/command.ico">
 <link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
 <!-- Bootstrap -->
 <link href="<%=basePath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">

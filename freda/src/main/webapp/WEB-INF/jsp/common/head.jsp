@@ -18,8 +18,8 @@
     <title>Jason Yang's Blog</title>
 
     <!-- Bootstrap -->
-    <link href="<%=basePath %>/bootstrap/css/bootstrap.min.css"
-          rel="stylesheet">
+    <link href="<%=basePath %>/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="<%=basePath%>/imgs/command.ico">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<%=basePath %>/bootstrap/js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

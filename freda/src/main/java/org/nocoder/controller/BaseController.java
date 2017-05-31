@@ -39,6 +39,7 @@ public class BaseController {
             // 总页数(取天花板值 ) = 文档总数 / 每页个数 
             int totalPages = (int) Math.ceil((double) archivesCount / (double) pageSize);
             resMap.put("totalPages", totalPages);
+            resMap.put("page", page);
         }
         return resMap;
     }

@@ -34,7 +34,6 @@ public class AdminController extends BaseController{
 	 * @param model
 	 * @return 后台首页或登录页面
 	 */
-	@SuppressWarnings("unchecked")
 	@RequestMapping({ "/admin" })
 	public String toAdmin(HttpServletRequest request, Model model) {
 		// 查看HttpSession中是否存在用户，不存在直接返回登录界面

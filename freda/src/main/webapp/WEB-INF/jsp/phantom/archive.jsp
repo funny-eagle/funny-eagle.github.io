@@ -16,6 +16,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<title>Jason Yang's Blog</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="<%=basePath%>/imgs/command.ico">
 	<!--[if lte IE 8]><script src="<%=basePath%>/phantom/assets/js/ie/html5shiv.js"></script><![endif]-->
 	<link rel="stylesheet" href="<%=basePath%>/phantom/assets/css/main.css" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="<%=basePath%>/phantom/assets/css/ie9.css" /><![endif]-->

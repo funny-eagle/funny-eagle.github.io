@@ -78,39 +78,52 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <script src="<%=basePath%>/phantom/assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="<%=basePath%>/phantom/assets/js/main.js"></script>
 <script type="text/javascript">
+    var _page = 1;
     $(function () {
+        loadArchives(_page);
+    });
+
+    /**
+     * 加载文档
+     * @param page
+     */
+    function loadArchives(_page){
+
         $("#div_load").append('<div style="text-align: center;"><h3>Loading...</h3></div>');
         var path = "<%=basePath%>";
         $.post(
                 path + "/archive_list",
-                {page: "1"},
-                function (archives) {
-                    $("#article_section").html("");
+                {page: _page},
+                function (res) {
+                    var archives = res.archiveList;
                     var index = 1;
                     for (var i = 0; i < archives.length; i++) {
                         if(index > 5){
                             index = 1;
                         }
                         $("#article_section").append(
-                            '<article class="style'+index+'">'
-                            + '<span class="image">'
-                            + '<img src="' + path + '/phantom/images/pic0'+index+'.jpg" alt=""/>'
-                            + '</span>'
-                            + '<a href="archive?id=' + archives[i].id + '">'
-                            + '<h2>' + archives[i].title + '</h2>'
-                            + '<div class="content">'
-                            + '<p>' + archives[i].preview + '</p>'
-                            + '</div>'
-                            + '</a>'
-                            + '</article>');
+                                '<article class="style'+index+'">'
+                                + '<span class="image">'
+                                + '<img src="' + path + '/phantom/images/pic0'+index+'.jpg" alt=""/>'
+                                + '</span>'
+                                + '<a href="archive?id=' + archives[i].id + '">'
+                                + '<h2>' + archives[i].title + '</h2>'
+                                + '<div class="content">'
+                                + '<p>' + archives[i].preview + '</p>'
+                                + '</div>'
+                                + '</a>'
+                                + '</article>');
                         index ++;
                     }
+                    _page = res.page == res.totalPages ? -1 : res.page+1;
                     $("#div_load").html("");
-                    $("#div_load").append('<input type="button" value="查看更多" class="button small" />')
+                    // _page == -1 表示已经是最后一页，不再显示查看更多
+                    if(_page != -1){
+                        $("#div_load").append('<input type="button" value="加载更多" class="button small" onclick="loadArchives('+_page+');"/>');
+                    }
                 }
         );
-    });
-
+    }
 </script>
 </body>
 </html>
