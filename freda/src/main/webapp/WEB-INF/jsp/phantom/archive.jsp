@@ -36,10 +36,17 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<div id="main">
 		<div class="inner">
 			<h1>${archive.title}</h1>
-			<%--<span class="image main"><img src="<%=basePath%>/phantom/images/pic13.jpg" alt="" /></span>--%>
+			<div style="color: #969696;font-size:13px;">
+				<span style="color:#6496e7;border:1px solid;border-radius: 5px;margin-right: 3px;padding:2px;letter-spacing:1px;">作者</span>
+				<a href="#">${archive.author}</a><br>
+				<fmt:formatDate value="${archive.createTime}" pattern="yyyy.MM.dd HH:mm"></fmt:formatDate>
+				<span style="margin-left:0.5em;">字数 817</span>
+				<span style="margin-left:0.5em;">阅读 7</span>
+				<span style="margin-left:0.5em;">评论 0</span>
+				<span style="margin-left:0.5em;">喜欢 0</span>
+			</div>
 			<p>
 				${archive.htmlContent}
-
 			</p>
 		</div>
 	</div>

@@ -98,7 +98,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     var archives = res.archiveList;
                     var index = 1;
                     for (var i = 0; i < archives.length; i++) {
-                        if(index > 5){
+                        if(index > 9){
                             index = 1;
                         }
                         $("#article_section").append(
