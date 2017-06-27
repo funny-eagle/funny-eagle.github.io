@@ -45,9 +45,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<span style="margin-left:0.5em;">评论 0</span>
 				<span style="margin-left:0.5em;">喜欢 0</span>
 			</div>
-			<p>
+			<p id="archive_content">
 				${archive.htmlContent}
 			</p>
+
+			<!-- 友言评论 UY BEGIN -->
+			<div id="uyan_frame"></div>
+			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2115022"></script>
+			<!-- 友言评论 UY END -->
 		</div>
 	</div>
 
@@ -62,7 +67,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 <script src="<%=basePath%>/phantom/assets/js/util.js"></script>
 <!--[if lte IE 8]><script src="<%=basePath%>/phantom/assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="<%=basePath%>/phantom/assets/js/main.js"></script>
-
 </body>
 </html>
 
