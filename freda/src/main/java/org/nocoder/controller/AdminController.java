@@ -93,7 +93,7 @@ public class AdminController extends BaseController{
 
 	@RequestMapping({ "/archive/edit" })
 	public String toEdit(String id, Model model) {
-		Archive archive = this.archiveService.queryArchiveById(id);
+		Archive archive = this.archiveService.queryArchiveById(id,0);
 		model.addAttribute("archive", archive);
 		return "admin/editor";
 	}

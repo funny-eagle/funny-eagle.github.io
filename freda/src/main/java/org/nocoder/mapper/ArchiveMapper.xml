@@ -19,15 +19,29 @@
     id, title, author, md_content, html_content, tag, type, source_link, state, create_time, 
     update_time, preview
   </sql>
-  <sql id="Simple_Column_List">
-    id, title, author, tag, type, source_link, state, create_time, update_time, preview
+  <sql id="Base_Column_List_Front">
+    id, title, author, html_content, tag, type, create_time, update_time, preview
   </sql>
+
+  <sql id="Simple_Column_List">
+    id, title, preview, author, tag, create_time
+  </sql>
+
+  <!-- 根据主键查询文档-->
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from public.archive
     where id = #{id,jdbcType=VARCHAR}
   </select>
+
+  <select id="selectArchiveById" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List_Front" />
+    from public.archive
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+
   <select id="selectCountArchives" resultType="int">
   	select count(1) from public.archive
   </select>
@@ -181,19 +195,5 @@
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="org.nocoder.model.Archive">
-    update public.archive
-    set title = #{title,jdbcType=VARCHAR},
-      author = #{author,jdbcType=VARCHAR},
-      md_content = #{mdContent,jdbcType=VARCHAR},
-      html_content = #{htmlContent,jdbcType=VARCHAR},
-      tag = #{tag,jdbcType=VARCHAR},
-      type = #{type,jdbcType=VARCHAR},
-      source_link = #{sourceLink,jdbcType=VARCHAR},
-      state = #{state,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP},
-      preview = #{preview,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=VARCHAR}
-  </update>
+
 </mapper>

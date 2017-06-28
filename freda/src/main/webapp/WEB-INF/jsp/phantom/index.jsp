@@ -48,18 +48,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <!--"加载中，查看更多"区域-->
             <div id="div_load" style="text-align: center; padding-top:2em;">
             </div>
-            <c:choose>
-                <c:when test="${totalPages != null }">
-                    <section style="position:absolute;left:50%;margin-left:-5%; margin-top:3%;">
-                        <ul class="actions">
-                            <li>
-                                <!--<a href="<%=basePath%>/archive_list?page=${page == totalPages ? page : page+1}" class="button">加载更多⬇️</a>-->
-                                <input type="button" value="查看更多" class="special" />
-                            </li>
-                        </ul>
-                    </section>
-                </c:when>
-            </c:choose>
 
         </div>
 
@@ -89,7 +77,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
      */
     function loadArchives(_page){
 
-        $("#div_load").append('<div style="text-align: center;"><h3>Loading...</h3></div>');
+        $("#div_load").html('<div style="text-align: center;"><h3>Loading...</h3></div>');
+
         var path = "<%=basePath%>";
         $.post(
                 path + "/archive_list",

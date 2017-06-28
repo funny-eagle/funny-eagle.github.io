@@ -13,11 +13,21 @@ public interface ArchiveMapper {
 
     int insertSelective(Archive record);
 
+    /**
+     * 根据ID查询文档（后台管理用）
+     * @param id
+     * @return
+     */
     Archive selectByPrimaryKey(String id);
 
-    int updateByPrimaryKeySelective(Archive record);
+    /**
+     * 根据ID查询文档（前台用，不查询markdown内容）
+     * @param id
+     * @return
+     */
+    Archive selectArchiveById(String id);
 
-    int updateByPrimaryKey(Archive record);
+    int updateByPrimaryKeySelective(Archive record);
     
     int selectCountArchives(String tag);
     

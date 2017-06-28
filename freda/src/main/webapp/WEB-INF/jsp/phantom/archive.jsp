@@ -21,6 +21,16 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<link rel="stylesheet" href="<%=basePath%>/phantom/assets/css/main.css" />
 	<!--[if lte IE 9]><link rel="stylesheet" href="<%=basePath%>/phantom/assets/css/ie9.css" /><![endif]-->
 	<!--[if lte IE 8]><link rel="stylesheet" href="<%=basePath%>/phantom/assets/css/ie8.css" /><![endif]-->
+	<style type="text/css">
+		#span_author{
+			color:#6496e7;
+			border:1px solid;
+			border-radius: 5px;
+			margin-right: 3px;
+			padding:1px;
+			letter-spacing:1px;
+		}
+	</style>
 </head>
 <body>
 <!-- Wrapper -->
@@ -36,26 +46,20 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<div id="main">
 		<div class="inner">
 			<h1>${archive.title}</h1>
-			<div style="color: #969696;font-size:13px;">
-				<span style="color:#6496e7;border:1px solid;border-radius: 5px;margin-right: 3px;padding:2px;letter-spacing:1px;">作者</span>
-				<a href="#">${archive.author}</a><br>
+			<div style="color: #969696;font-size:14px;padding-top: 1em;">
+				<a href="#"><span id="span_author">${archive.tag}</span></a>${archive.author}&nbsp;|&nbsp;
 				<fmt:formatDate value="${archive.createTime}" pattern="yyyy.MM.dd HH:mm"></fmt:formatDate>
-				<span style="margin-left:0.5em;">字数 817</span>
-				<span style="margin-left:0.5em;">阅读 7</span>
-				<span style="margin-left:0.5em;">评论 0</span>
-				<span style="margin-left:0.5em;">喜欢 0</span>
 			</div>
-			<p id="archive_content">
+			<div id="archive_content" style="margin-top: 1em;">
 				${archive.htmlContent}
-			</p>
+			</div>
 
 			<!-- JiaThis Button BEGIN -->
-			<div class="jiathis_style_24x24">
-				<a class="jiathis_button_tsina"></a>
+			<div class="jiathis_style_32x32" style="margin-top: 1em; margin-bottom:1em;">
 				<a class="jiathis_button_weixin"></a>
-				<a class="jiathis_button_tqq"></a>
+				<a class="jiathis_button_tsina"></a>
 				<a class="jiathis_button_qzone"></a>
-				<a class="jiathis_button_renren"></a>
+				<a class="jiathis_button_tqq"></a>
 				<a href="http://www.jiathis.com/share?uid=2115022" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 				<a class="jiathis_counter_style"></a>
 			</div>
@@ -64,7 +68,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			</script>
 			<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2115022" charset="utf-8"></script>
 			<!-- JiaThis Button END -->
-
+			<div style="padding-bottom:3em;"></div>
 			<!-- 友言评论 UY BEGIN -->
 			<div id="uyan_frame"></div>
 			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2115022"></script>

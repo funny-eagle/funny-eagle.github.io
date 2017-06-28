@@ -20,7 +20,7 @@ public abstract interface ArchiveService {
 
 	public abstract int saveArchive(Archive paramArchive);
 
-	public abstract Archive queryArchiveById(String paramString);
+	public abstract Archive queryArchiveById(String id, int type);
 
     /**
      * 从数据库查询时间列表保存到redis缓存

@@ -72,9 +72,18 @@ public class ArchiveServiceImpl implements ArchiveService {
 		return resCount;
 	}
 
-	public Archive queryArchiveById(String id) {
+	/**
+	 * 根据ID查询文档
+	 * @param id
+	 * @param type 1：表示前台用，不查询markdown内容
+     * @return
+     */
+	public Archive queryArchiveById(String id, int type) {
 		if (StringUtils.isBlank(id)) {
 			return null;
+		}
+		if(type == 1){
+			return this.archiveMapper.selectArchiveById(id);
 		}
 		return this.archiveMapper.selectByPrimaryKey(id);
 	}
