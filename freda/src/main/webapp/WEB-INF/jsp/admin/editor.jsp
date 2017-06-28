@@ -39,7 +39,7 @@
 <body>
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
-			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="witdh:40px; height:40px; float:left; padding-left:10px;padding-top:8px;"/>
+			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="border:1em;border-radius:3em;height:3em;width: 3em;float: left;margin-top: 4px;"/>
 			<a class="navbar-brand" href="<%=basePath %>/admin" style="float:left;">返回</a>
 		</div>
 		<div>
@@ -47,7 +47,7 @@
 		</div>
 	</nav>
 	<form id="archiveForm" role="form" action="<%=basePath %>/archive/save" method="post">
-		<div class="container">
+		<div style="margin:1em;">
 			<input type="hidden" name="id" id="id" value="${archive.id }"/>
 			<input type="hidden" name="state" id="state" value="${archive.state}"/>
 			<div class="row clearfix">
@@ -74,13 +74,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="row clearfix col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
 					<div class="form-group">
 						<label for="preview">预览</label> <span style="color:grey;font-size:8px;">最大长度200个字符</span>
-						<textarea rows="3" cols="" required
+						<textarea rows="3" required
 							class="form-control" id="预览" name="preview">${archive.preview }</textarea>
 					</div>
 				</div>
+			</div>
 			<div id="test-editormd" class="form-group">
 				<!-- preview 保存markdown代码-->
 				<textarea id="mdContent" name="mdContent">${archive.mdContent }</textarea>

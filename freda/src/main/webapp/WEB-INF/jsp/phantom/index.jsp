@@ -13,7 +13,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 <head>
-    <title>Jason Yang</title>
+    <title>Jason Yang's Blog</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!--[if lte IE 8]>
@@ -41,16 +41,15 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <header>
                 <h2>即使你已经在正确的轨道上，但如果只是停止不前，也仍然会被淘汰出局。</h2>
             </header>
-            <!--文档区域-->
+
             <section id="article_section" class="tiles">
+                <!--文档区域-->
             </section>
 
-            <!--"加载中，查看更多"区域-->
             <div id="div_load" style="text-align: center; padding-top:2em;">
+                <!--"加载中，查看更多"区域-->
             </div>
-
         </div>
-
     </div>
 
     <!-- Footer -->

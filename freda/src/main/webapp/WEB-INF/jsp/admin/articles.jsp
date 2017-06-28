@@ -9,20 +9,20 @@
 <html lang="zh-CN">
 <jsp:include page="../common/head.jsp"></jsp:include>
 <body>
-	<div style="text-align:left;margin-left:15px; float:left;"><a class="btn btn-success" href="<%=basePath%>/editor">写文章</a></div>
+	<div style="text-align:left;margin-left:15px; float:left;"><a class="btn btn-primary" href="<%=basePath%>/editor">写文章</a></div>
 	<!--
 	<div style="text-align:right;margin-left:15px;float:right;"><a class="btn btn-warning" href="javascript:void(0);" onclick="refreshCache();">刷新缓存</a></div>
 	-->
-	<table class="table table-responsive table-bordered" style="margin-left:12px; width:98%;" >
+	<table class="table table-responsive table-striped table-hover" style="margin:1em; width:98%;" >
 		<caption>文章列表</caption>
 		<thead align="center">
 			<tr>
-				<th>标题</th>
-				<th width="20%">作者</th>
+				<th width="30%">标题</th>
+				<th width="10%">作者</th>
 				<th width="10%">标签</th>
 				<th width="20%">创建日期</th>
 				<th width="10%">发布状态</th>
-				<th width="10%">操作</th>
+				<th width="10%" style="text-align: center;">操 作</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -34,8 +34,8 @@
 					<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
 							value="${archive.createTime }" /></td>
 					<td>${archive.state == 1 ? "草稿" : "已发布" }</td>
-					<td width="30px;">
-						<a href="<%=basePath%>/archive/edit?id=${archive.id}">编辑</a>
+					<td style="text-align: center;">
+						<a href="<%=basePath%>/archive/edit?id=${archive.id}">编辑</a>&nbsp;&nbsp;&nbsp;
 						<a href="javascript:if(confirm('确实要删除吗?'))location='<%=basePath%>/archive/delete?id=${archive.id}'">删除</a>
 					</td>
 				</tr>

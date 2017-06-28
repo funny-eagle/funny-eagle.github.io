@@ -13,7 +13,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 <head>
-	<title>Jason Yang - ${archive.title}</title>
+	<title>Jason Yang's Blog - ${archive.title}</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="icon" href="<%=basePath%>/imgs/command.ico">
@@ -47,7 +47,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<div class="inner">
 			<h1>${archive.title}</h1>
 			<div style="color: #969696;font-size:14px;padding-top: 1em;">
-				<a href="#"><span id="span_author">${archive.tag}</span></a>${archive.author}&nbsp;|&nbsp;
+				<a href="#"><span id="span_author">&nbsp;${archive.tag}&nbsp;</span></a>&nbsp;${archive.author}&nbsp;|&nbsp;
 				<fmt:formatDate value="${archive.createTime}" pattern="yyyy.MM.dd HH:mm"></fmt:formatDate>
 			</div>
 			<div id="archive_content" style="margin-top: 1em;">

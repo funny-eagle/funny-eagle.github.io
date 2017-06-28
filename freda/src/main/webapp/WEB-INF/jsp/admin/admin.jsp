@@ -13,9 +13,9 @@
 <body>
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="navbar-header">
-			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="witdh:40px; height:40px; float:left; padding-left:10px;padding-top:8px;"/>
-			<a class="navbar-brand" href="<%=basePath %>/admin" style="float:left;">Freda博客后台维护系统</a>
-			<a target="_blank" class="navbar-brand" href="<%=basePath %>" style="float:left;">Blog主页</a>
+			<img alt="" src="<%=basePath%>/imgs/nocoder-logo.png" class='img-responsive' style="border:1em;border-radius:3em;height:3em;width: 3em;float: left;margin-top: 4px;"/>
+			<a class="navbar-brand" href="<%=basePath %>/admin" style="float:left;">后台维护</a>
+			<a target="_blank" class="navbar-brand" href="<%=basePath %>" style="float:left;">Blog</a>
 		</div>
 	</nav>
 	<jsp:include page="articles.jsp"></jsp:include>
