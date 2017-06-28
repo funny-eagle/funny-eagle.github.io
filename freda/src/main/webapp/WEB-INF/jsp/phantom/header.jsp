@@ -18,7 +18,7 @@
 
         <!-- Logo -->
         <a href="<%=basePath%>" class="logo">
-            <span class="symbol"><img src="<%=basePath%>/imgs/monkey.jpg" alt="" /></span><span class="title">Jason Yang's Blog</span>
+            <span class="symbol"><img src="<%=basePath%>/imgs/monkey.jpg" alt="" /></span><span class="title">Jason Yang</span>
         </a>
 
         <!-- Nav -->
