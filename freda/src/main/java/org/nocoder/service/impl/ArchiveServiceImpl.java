@@ -23,7 +23,7 @@ public class ArchiveServiceImpl implements ArchiveService {
 	@Autowired
 	private ArchiveMapper archiveMapper;
 
-    public List<Archive> queryArchiveList(String state, String tag, Integer pageNum, Integer pageSize) {
+    public List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer pageSize) {
     	Map<String, Object> paramsMap = new HashMap<String, Object>();
     	paramsMap.put("state", state);
     	paramsMap.put("tag", tag);

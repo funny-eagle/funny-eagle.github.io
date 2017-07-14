@@ -103,21 +103,25 @@
 			</script>
 
 			<div style="text-align: center;">
-				<button type="button" onclick="saveAticle();" class="btn btn-success">保存为草稿</button>
-				<button type="button" onclick="submitAticle();" class="btn btn-primary" style="margin-left:20px;">发布到博客</button>
+				<button id="btn_save_article" type="button" onclick="saveArchive();" class="btn btn-success">保存为草稿</button>
+				<button id="btn_subm_article" type="button" onclick="submitArchive();" class="btn btn-primary" style="margin-left:20px;">发布到博客</button>
 			</div>
 		</div>
 	</form>
 	<script type="text/javascript">
 		// 保存为草稿
-		function saveAticle () {
+		function saveArchive () {
+			$("#btn_save_article").attr("disabled","true");
 			$("#state").val(1);
 			$("#archiveForm").submit();
+			$("#btn_save_article").attr("disabled","false");
 		}
 		// 发布文章
-		function submitAticle () {
+		function submitArchive () {
+			$("#btn_save_article").attr("disabled","true");
 			$("#state").val(2);
 			$("#archiveForm").submit();
+			$("#btn_save_article").attr("disabled","false");
 		}
 	</script>
 </body>

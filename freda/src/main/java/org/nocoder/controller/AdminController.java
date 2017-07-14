@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.commons.lang3.StringUtils;
+import org.nocoder.enumeration.ArchiveStatus;
 import org.nocoder.model.Archive;
 import org.nocoder.model.User;
 import org.nocoder.service.ArchiveService;
@@ -44,7 +45,7 @@ public class AdminController extends BaseController{
 			final Integer page = Integer.valueOf(pageStr == null ? "1" : pageStr);
 			
 			//查询文档信息(文章和总页数)
-			final Map<String, Object> resMap = queryArchivesByPage(null, request.getParameter("tag"), page, 15);
+			final Map<String, Object> resMap = queryArchivesByPage(ArchiveStatus.ALL.getValue(), request.getParameter("tag"), page, 15);
 			final List<Archive> archiveList = (List<Archive>) resMap.get("archiveList");
 			
 			model.addAttribute("archiveList", archiveList);

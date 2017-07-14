@@ -27,7 +27,9 @@ alter table public.archive
     owner to postgres;
 comment on table public.archive
     is '文档表';
-    
+
+-- 20170714 修改state字段类型为integer
+ALTER TABLE public.archive ALTER state TYPE integer USING state::integer;
 
 -- table: public.user
 

@@ -14,7 +14,7 @@ public abstract interface ArchiveService {
 	 * @param pageSize 每页行数 
 	 * @return
 	 */
-	public abstract List<Archive> queryArchiveList(String state, String tag, Integer pageNum, Integer pageSize);
+	public abstract List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer pageSize);
 
 	public abstract int countArchives(String paramString);
 

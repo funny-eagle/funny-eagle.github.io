@@ -23,7 +23,7 @@ public class Archive implements Serializable{
 
     private String sourceLink;
 
-    private String state;
+    private int state;
 
     private Date createTime;
 
@@ -95,11 +95,11 @@ public class Archive implements Serializable{
         this.sourceLink = sourceLink;
     }
 
-    public String getState() {
+    public int getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(int state) {
         this.state = state;
     }
 

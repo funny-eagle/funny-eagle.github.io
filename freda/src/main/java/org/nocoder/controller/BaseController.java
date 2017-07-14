@@ -1,6 +1,6 @@
 package org.nocoder.controller;
 
-import org.nocoder.constant.ArchiveConst;
+import org.nocoder.enumeration.PageEnum;
 import org.nocoder.model.Archive;
 import org.nocoder.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +24,13 @@ public class BaseController {
      * @param pageSize
      * @return resMap archiveList, totalPages
      */
-    public Map<String, Object> queryArchivesByPage(String state, String tag, Integer page, Integer pageSize) {
+    public Map<String, Object> queryArchivesByPage(int state, String tag, Integer page, Integer pageSize) {
         final Map<String, Object> resMap = new HashMap<String, Object>();
         if (page == null) {
             page = 1;
         }
         if (pageSize == null) {
-            pageSize = ArchiveConst.PAGE_SIZE;
+            pageSize = PageEnum.PAGE_SIZE.getValue();
         }
         final int archivesCount = this.archiveService.countArchives(tag);
         if (archivesCount > 0) {

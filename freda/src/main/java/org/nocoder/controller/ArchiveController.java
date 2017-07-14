@@ -1,11 +1,9 @@
 package org.nocoder.controller;
 
-import java.util.List;
 import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
-
-import org.nocoder.constant.ArchiveConst;
+import org.nocoder.enumeration.ArchiveStatus;
+import org.nocoder.enumeration.PageEnum;
 import org.nocoder.model.Archive;
 import org.nocoder.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,10 +37,11 @@ public class ArchiveController extends BaseController {
         Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 
         // 每页个数
-        Integer pageSize = ArchiveConst.PAGE_SIZE;
+        Integer pageSize = PageEnum.PAGE_SIZE.getValue();
+
 
         // 获取文档信息
-        Map<String, Object> resMap = queryArchivesByPage(ArchiveConst.STATE_SUBMITED, tag, page, pageSize);
+        Map<String, Object> resMap = queryArchivesByPage(ArchiveStatus.PUBLISHED.getValue(), tag, page, pageSize);
         return resMap;
     }
 
