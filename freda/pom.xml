@@ -4,7 +4,7 @@
 	<groupId>org.jasonyang</groupId>
 	<artifactId>freda</artifactId>
 	<packaging>war</packaging>
-	<version>2.2</version>
+	<version>2.3</version>
 	<name>freda Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 
@@ -75,6 +75,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-crypto</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
 		<!-- mybatis核心包 -->
@@ -155,7 +161,7 @@
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
-			<version>1.9</version>
+			<version>1.10</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
