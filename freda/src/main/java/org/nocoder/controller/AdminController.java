@@ -117,4 +117,10 @@ public class AdminController extends BaseController{
 		return "redirect:/admin";
 	}
 
+	@RequestMapping({ "/gentelella" })
+	public String gentelella(HttpServletRequest request) {
+
+		return "gentelella/index";
+	}
+
 }
