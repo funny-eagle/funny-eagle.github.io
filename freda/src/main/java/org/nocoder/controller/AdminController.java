@@ -35,8 +35,8 @@ public class AdminController extends BaseController{
 	 * @param model
 	 * @return 后台首页或登录页面
 	 */
-	@RequestMapping({ "/admin" })
-	public String toAdmin(HttpServletRequest request, Model model) {
+	@RequestMapping({ "/archiveList" })
+	public String archiveList(HttpServletRequest request, Model model) {
 		// 查看HttpSession中是否存在用户，不存在直接返回登录界面
 		if (request.getSession().getAttribute("user") != null) {
 			
@@ -52,7 +52,7 @@ public class AdminController extends BaseController{
 			model.addAttribute("page", page);
 			model.addAttribute("totalPages", resMap.get("totalPages"));
 
-			return "admin/admin";
+			return "admin/articles";
 		}
 		
 		return "redirect:login";
@@ -61,7 +61,7 @@ public class AdminController extends BaseController{
 	@RequestMapping({ "/login" })
 	public String login(HttpServletRequest request, Model model) {
 		if (request.getSession().getAttribute("user") != null) {
-			return "redirect:admin";
+			return "redirect:gentelella";
 		}
 		final String username = request.getParameter("username");
 		final String password = request.getParameter("password");
@@ -71,16 +71,16 @@ public class AdminController extends BaseController{
 				model.addAttribute("user", user);
 				// 将用户信息存放至session中
 				request.getSession().setAttribute("user", user);
-				return "redirect:admin";
+				return "redirect:gentelella";
 			}
 		}
-		return "admin/login";
+		return "gentelella/login";
 	}
 
 	@RequestMapping({ "/editor" })
 	public String editor(HttpServletRequest request) {
 		if (request.getSession().getAttribute("user") != null) {
-			return "admin/editor";
+			return "admin/editor_form";
 		}
 		return "redirect:login";
 	}
@@ -96,7 +96,7 @@ public class AdminController extends BaseController{
 	public String toEdit(String id, Model model) {
 		Archive archive = this.archiveService.queryArchiveById(id,0);
 		model.addAttribute("archive", archive);
-		return "admin/editor";
+		return "admin/editor_form";
 	}
 	
 	@RequestMapping({ "/archive/delete" })
@@ -119,8 +119,16 @@ public class AdminController extends BaseController{
 
 	@RequestMapping({ "/gentelella" })
 	public String gentelella(HttpServletRequest request) {
+		// 查看HttpSession中是否存在用户，不存在直接返回登录界面
+		if (request.getSession().getAttribute("user") != null) {
+			return "gentelella/index";
+		}
+		return "redirect:login";
+	}
 
-		return "gentelella/index";
+	@RequestMapping("/homeContent")
+	public String homeContent(HttpServletRequest request){
+		return "gentelella/home_content";
 	}
 
 }

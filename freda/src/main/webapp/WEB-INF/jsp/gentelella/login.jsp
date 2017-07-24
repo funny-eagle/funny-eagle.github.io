@@ -1,3 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
+%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,19 +15,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Jason Yang's Blog | 登录 </title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=basePath%>/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<%=basePath%>/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="<%=basePath%>/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- Animate.css -->
-    <link href="../vendors/animate.css/animate.min.css" rel="stylesheet">
+    <link href="<%=basePath%>/gentelella/vendors/animate.css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="<%=basePath%>/gentelella/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="login">
@@ -30,17 +38,17 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form>
-              <h1>Login Form</h1>
+            <form id="login_form" method="post" action="<%=basePath %>/login">
+              <h1>Jason Yang's Blog</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
+                <input type="text" class="form-control" placeholder="Username" required="" id="username" name="username"/>
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
+                <input type="password" class="form-control" placeholder="Password" required="" id="password" name="password"/>
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Log in</a>
-                <a class="reset_pass" href="#">Lost your password?</a>
+                <a id="login_link" class="btn btn-default submit">登录</a>
+                <a class="reset_pass" href="#">忘记密码?</a>
               </div>
 
               <div class="clearfix"></div>
@@ -76,7 +84,7 @@
                 <input type="password" class="form-control" placeholder="Password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Submit</a>
+                <a class="btn btn-default submit" href="javascript:void(0);">Submit</a>
               </div>
 
               <div class="clearfix"></div>
@@ -100,4 +108,13 @@
       </div>
     </div>
   </body>
+  <script src="<%=basePath%>/gentelella/vendors/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $(function(){
+      $("#login_link").click(function(){
+        $("#login_form").submit();
+      });
+    });
+  </script>
 </html>
