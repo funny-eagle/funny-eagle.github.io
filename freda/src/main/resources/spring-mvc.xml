@@ -30,6 +30,7 @@
 		</property>
 	</bean>
 	<mvc:annotation-driven />
+	<mvc:view-controller path="/" view-name="phantom/index"/>
 	<mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
 	<mvc:resources mapping="/imgs/**" location="/imgs/"/>
 	<mvc:resources mapping="/phantom/**" location="/phantom/"/>

@@ -17,7 +17,7 @@ public class ArchiveController extends BaseController {
     @Autowired
     private ArchiveService archiveService;
 
-    @RequestMapping({"/index"})
+    @RequestMapping({"/blog"})
     public String toHomePage() {
         return "phantom/index";
     }

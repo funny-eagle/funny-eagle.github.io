@@ -247,23 +247,32 @@
     <script src="<%=basePath %>/editor.md-master/src/editormd.js"></script>
     <script type="text/javascript">
       $(function(){
+        /**
+         * 绑定【首页】点击事件
+         */
         $("#home_content_link").click(function(){
           var htmlObj = $.ajax({
             url:"<%=basePath%>/homeContent",
             async:false
           });
-
+          // 替换右侧内容区域的html
           $(".right_col").html(htmlObj.responseText);
         });
 
+        /**
+         * 默认点击【首页】
+         */
         $("#home_content_link").click();
 
+        /**
+         * 绑定【文档管理】事件
+         */
         $("#archive_management_link").click(function(){
           var htmlObj = $.ajax({
             url:"<%=basePath%>/archiveList",
             async:false
           });
-
+          //替换右侧内容区域的html
           $(".right_col").html(htmlObj.responseText);
 
         });
