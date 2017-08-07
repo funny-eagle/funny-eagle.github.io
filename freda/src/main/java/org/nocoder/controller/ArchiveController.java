@@ -52,6 +52,7 @@ public class ArchiveController extends BaseController {
      * @param model
      * @return
      */
+    @ResponseBody
     @RequestMapping({"/archive"})
     public String viewArchive(HttpServletRequest request, Model model) {
         String id = request.getParameter("id");

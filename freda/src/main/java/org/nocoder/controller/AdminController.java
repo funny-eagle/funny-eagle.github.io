@@ -6,6 +6,7 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import com.alibaba.fastjson.JSON;
 import org.apache.commons.lang3.StringUtils;
 import org.nocoder.enumeration.ArchiveStatus;
 import org.nocoder.model.Archive;
@@ -15,7 +16,11 @@ import org.nocoder.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 /**
  * 后台维护controller
  * @author jason
@@ -89,20 +94,21 @@ public class AdminController extends BaseController{
 	@RequestMapping({ "/archive/save" })
 	public String saveArchive(Archive archive) {
 		this.archiveService.saveArchive(archive);
-		return "redirect:/admin";
+		return "redirect:/gentelella";
 	}
 
-	@RequestMapping({ "/archive/edit" })
-	public String toEdit(String id, Model model) {
+	@ResponseBody
+	@RequestMapping({ "/archive/edit/{id}" })
+	public String toEdit(@PathVariable("id") String id, Model model) {
 		Archive archive = this.archiveService.queryArchiveById(id,0);
-		model.addAttribute("archive", archive);
-		return "admin/editor_form";
+		return JSON.toJSONString(archive);
 	}
+
 	
-	@RequestMapping({ "/archive/delete" })
-	public String delete(String id) {
+	@RequestMapping({ "/archive/delete/{id}" })
+	public String delete(@PathVariable("id") String id) {
 		this.archiveService.deleteArchiveById(id);
-		return "redirect:/admin";
+		return "redirect:/gentelella";
 	}
 
 	@RequestMapping({ "/archive/refreshCache" })
@@ -114,7 +120,7 @@ public class AdminController extends BaseController{
 		// 刷新近10篇文章列表缓存
 		this.archiveService.setRecently10ArchivesListToRedis();
 		
-		return "redirect:/admin";
+		return "redirect:/gentelella";
 	}
 
 	@RequestMapping({ "/gentelella" })

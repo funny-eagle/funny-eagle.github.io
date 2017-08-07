@@ -9,6 +9,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Freda博客后台维护系统</title>
+
 </head>
 <body>
 	<nav class="navbar navbar-default" role="navigation">

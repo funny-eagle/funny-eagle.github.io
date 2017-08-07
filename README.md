@@ -3,7 +3,7 @@
 欢迎来访我的博客 http://www.jasonyang.org
 
 ### 技术框架：
-- JDK 1.8 
+- JDK 1.8
 - Spring 4.0.2
 - Mybatis 3.2.6
 - Bootstrap 3
@@ -18,3 +18,7 @@
 ### 评论
 - 友言 http://www.uyan.cc/
 
+### 待开发
+- 前后端分离，使用HTML + AngularJS + Ajax
+- 弃用JSP，引入AngularJS
+- Spring MVC controller返回JSON数据

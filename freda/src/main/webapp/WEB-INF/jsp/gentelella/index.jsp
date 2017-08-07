@@ -243,6 +243,7 @@
 
     <!-- Custom Theme Scripts -->
     <script src="<%=basePath%>/gentelella/build/js/custom.min.js"></script>
+    <script src="<%=basePath%>/gentelella/build/js/admin.js"></script>
     <script src="<%=basePath %>/editor.md-master/lib/jquery.flowchart.min.js"></script>
     <script src="<%=basePath %>/editor.md-master/src/editormd.js"></script>
     <script type="text/javascript">
@@ -251,12 +252,7 @@
          * 绑定【首页】点击事件
          */
         $("#home_content_link").click(function(){
-          var htmlObj = $.ajax({
-            url:"<%=basePath%>/homeContent",
-            async:false
-          });
-          // 替换右侧内容区域的html
-          $(".right_col").html(htmlObj.responseText);
+          replaceRightAreaContent("<%=basePath%>/homeContent");
         });
 
         /**
@@ -268,13 +264,7 @@
          * 绑定【文档管理】事件
          */
         $("#archive_management_link").click(function(){
-          var htmlObj = $.ajax({
-            url:"<%=basePath%>/archiveList",
-            async:false
-          });
-          //替换右侧内容区域的html
-          $(".right_col").html(htmlObj.responseText);
-
+          replaceRightAreaContent("<%=basePath%>/archiveList");
         });
 
 

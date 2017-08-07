@@ -5,8 +5,8 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 %>
-
-<div style="text-align:left;margin-left:15px; float:left;"><a class="btn btn-primary" href="<%=basePath%>/editor">写文章</a></div>
+<script src="<%=basePath%>/gentelella/build/js/admin.js"></script>
+<div style="text-align:left;margin-left:15px; float:left;"><a id="addArticle" class="btn btn-primary" href="javascript:void(0);">写文章</a></div>
 <!--
 <div style="text-align:right;margin-left:15px;float:right;"><a class="btn btn-warning" href="javascript:void(0);" onclick="refreshCache();">刷新缓存</a></div>
 -->
@@ -58,6 +58,10 @@
 			});
 			$(".right_col").html(htmlObj.responseText);
 
+		});
+
+		$("#addArticle").click(function(){
+			replaceRightAreaContent("<%=basePath%>/editor");
 		});
 	});
 
