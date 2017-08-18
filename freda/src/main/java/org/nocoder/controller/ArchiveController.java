@@ -9,6 +9,7 @@ import org.nocoder.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -52,10 +53,8 @@ public class ArchiveController extends BaseController {
      * @param model
      * @return
      */
-    @ResponseBody
-    @RequestMapping({"/archive"})
-    public String viewArchive(HttpServletRequest request, Model model) {
-        String id = request.getParameter("id");
+    @RequestMapping({"/archive/{id}"})
+    public String viewArchive(HttpServletRequest request, @PathVariable("id") String id, Model model) {
         Archive archive = this.archiveService.queryArchiveById(id,1);
         model.addAttribute("archive", archive);
         return "phantom/archive";

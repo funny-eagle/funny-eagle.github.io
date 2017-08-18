@@ -36,7 +36,6 @@
 	<mvc:resources mapping="/phantom/**" location="/phantom/"/>
 	<mvc:resources mapping="/editor.md-master/**" location="/editor.md-master/"/>
 	<mvc:resources mapping="/gentelella/**" location="/gentelella/"/>
-
 	<!-- 定义跳转的文件的前后缀 ，视图模式配置 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">

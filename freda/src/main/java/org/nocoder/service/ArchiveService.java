@@ -68,4 +68,7 @@ public abstract interface ArchiveService {
 	 * @return
      */
 	public List<Archive> getRecently10ArchivesList();
+
+	public void setAllArchivesInfoToRedis();
+	public List<Archive> getAllArchivesInfo();
 }

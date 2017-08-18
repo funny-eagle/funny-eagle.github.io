@@ -5,6 +5,7 @@ import org.nocoder.model.Archive;
 import org.nocoder.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +35,15 @@ public class BaseController {
         }
         final int archivesCount = this.archiveService.countArchives(tag);
         if (archivesCount > 0) {
-            List<Archive> archiveList = this.archiveService.queryArchiveList(state, tag, page, pageSize);
+            //List<Archive> archiveList = this.archiveService.queryArchiveList(state, tag, page, pageSize);
+            List<Archive> archiveList = this.archiveService.getAllArchivesInfo();
+            if(archiveList != null && archiveList.size() > 0){
+                if(archiveList.size() >= page * pageSize){
+                    archiveList = archiveList.subList((page-1) * pageSize, page * pageSize);
+                }else{
+                    archiveList = archiveList.subList((page-1) * pageSize, archiveList.size());
+                }
+            }
             resMap.put("archiveList", archiveList);
             // 总页数(取天花板值 ) = 文档总数 / 每页个数 
             int totalPages = (int) Math.ceil((double) archivesCount / (double) pageSize);

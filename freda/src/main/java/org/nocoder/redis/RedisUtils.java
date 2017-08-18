@@ -2,6 +2,7 @@ package org.nocoder.redis;
 
 import java.util.List;
 
+import org.nocoder.utils.PropUtils;
 import org.nocoder.utils.SerializeUtil;
 
 import redis.clients.jedis.Jedis;
@@ -21,7 +22,7 @@ public class RedisUtils {
         config.setMaxTotal(500);
         config.setMaxIdle(5);
         config.setMaxWaitMillis(100000);
-        pool = new JedisPool(config, "192.168.1.16", 6379, 100000);
+        pool = new JedisPool(config, PropUtils.getConfigValue("redis_server_host"), Integer.valueOf(PropUtils.getConfigValue("redis_server_port")), 100000);
 	}
 	
     public static void setList(String key, List<?> list){
@@ -35,12 +36,13 @@ public class RedisUtils {
 
     public static Jedis getJedis(){
     	Jedis jedis = pool.getResource();
-    	jedis.auth("123456");
+    	jedis.auth(PropUtils.getConfigValue("redis_server_auth"));
         return jedis;
     }
     
     public static void main(String[] args) {
     	Jedis jedis = RedisUtils.getJedis();
     	jedis.set("aaa","bbb");
+        System.out.println(jedis.get("aaa"));
 	}
 }

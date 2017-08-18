@@ -12,9 +12,12 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.nocoder.mapper.ArchiveMapper;
 import org.nocoder.model.Archive;
+import org.nocoder.redis.RedisUtils;
 import org.nocoder.service.ArchiveService;
+import org.nocoder.utils.SerializeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import redis.clients.jedis.Jedis;
 
 @Service
 public class ArchiveServiceImpl implements ArchiveService {
@@ -112,6 +115,19 @@ public class ArchiveServiceImpl implements ArchiveService {
 //        jedis.close();
 	}
 
+	@Override
+	@PostConstruct
+	public void setAllArchivesInfoToRedis(){
+		Jedis jedis = RedisUtils.getJedis();
+        Map paramsMap = new HashMap();
+		paramsMap.put("state",2);
+		paramsMap.put("tag", null);
+		paramsMap.put("limit", 0);
+		paramsMap.put("offset", 0);
+		jedis.set("allArchivesInfo".getBytes(), SerializeUtil.serializeList(this.archiveMapper.selectArchives(paramsMap)));
+		jedis.close();
+	}
+
 	/**
 	 * 根据标签查找文章列表
 	 * @param tag
@@ -152,5 +168,12 @@ public class ArchiveServiceImpl implements ArchiveService {
 		return null;
 	}
 
+	@Override
+	public List<Archive> getAllArchivesInfo(){
+		Jedis jedis = RedisUtils.getJedis();
+		List<Archive> archiveList = (List<Archive>) SerializeUtil.unserializeList(jedis.get("allArchivesInfo".getBytes()));
+		jedis.close();
+		return archiveList;
+	}
 
 }

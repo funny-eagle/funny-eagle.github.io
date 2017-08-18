@@ -38,10 +38,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
     <!-- Main -->
     <div id="main">
         <div class="inner">
-            <header>
+           <%-- <header>
                 <h2>即使你已经在正确的轨道上，但如果只是停止不前，也仍然会被淘汰出局。</h2>
             </header>
-
+--%>
             <section id="article_section" class="tiles">
                 <!--文档区域-->
             </section>
@@ -94,7 +94,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                                 + '<span class="image">'
                                 + '<img src="' + path + '/phantom/images/pic0'+index+'.jpg" alt=""/>'
                                 + '</span>'
-                                + '<a href="archive?id=' + archives[i].id + '">'
+                                + '<a href="archive/' + archives[i].id + '">'
                                 + '<h2>' + archives[i].title + '</h2>'
                                 + '<div class="content">'
                                 + '<p>' + archives[i].preview + '</p>'
