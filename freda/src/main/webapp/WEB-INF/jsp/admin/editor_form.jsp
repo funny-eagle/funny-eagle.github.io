@@ -6,7 +6,7 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 %>
-<form id="archiveForm" role="form" action="<%=basePath %>/archive/save" method="post">
+<form id="archiveForm" role="form" action="<%=basePath%>/archive/save" method="post">
 	<div style="margin:1em;">
 		<input type="hidden" name="id" id="id" value="${archive.id }"/>
 		<input type="hidden" name="state" id="state" value="${archive.state}"/>
@@ -29,7 +29,7 @@
 				<div class="form-group">
 					<label for="tag">标签</label> <span style="color:grey;font-size:8px;"></span>
 					<input type="text" required
-						class="form-control" id="标签" name="tag" maxlength="10"
+						class="form-control" id="tag" name="tag" maxlength="10"
 						placeholder="输入标签，多个标签使用英文状态下的逗号分隔" value="${archive.tag }">
 				</div>
 			</div>
@@ -39,7 +39,7 @@
 				<div class="form-group">
 					<label for="preview">预览</label> <span style="color:grey;font-size:8px;">最大长度200个字符</span>
 					<textarea rows="3" required
-						class="form-control" id="预览" name="preview">${archive.preview }</textarea>
+						class="form-control" id="preview" name="preview">${archive.preview }</textarea>
 				</div>
 			</div>
 		</div>
@@ -63,24 +63,38 @@
 		</script>
 
 		<div style="text-align: center;">
-			<button id="btn_save_article" type="button" onclick="saveArchive();" class="btn btn-success">保存为草稿</button>
-			<button id="btn_subm_article" type="button" onclick="submitArchive();" class="btn btn-primary" style="margin-left:20px;">发布到博客</button>
+			<button id="btn_save_article" type="button" onclick="submitArchive(1);" class="btn btn-success">保存为草稿</button>
+			<button id="btn_subm_article" type="button" onclick="submitArchive(2);" class="btn btn-primary" style="margin-left:20px;">发布到博客</button>
 		</div>
 	</div>
 </form>
+<script src="<%=basePath%>/gentelella/build/js/admin.js"></script>
 <script type="text/javascript">
-	// 保存为草稿
-	function saveArchive () {
+	/**
+	 * 保存/发布文档
+	 * @param status
+	 */
+	function submitArchive (status) {
 		$("#btn_save_article").attr("disabled","true");
-		$("#state").val(1);
-		$("#archiveForm").submit();
-		$("#btn_save_article").attr("disabled","false");
-	}
-	// 发布文章
-	function submitArchive () {
-		$("#btn_save_article").attr("disabled","true");
-		$("#state").val(2);
-		$("#archiveForm").submit();
-		$("#btn_save_article").attr("disabled","false");
+		$("#state").val(status);
+		$.post(
+				{
+					"state" : $("state").val(),
+					"title" : $("title").val(),
+					"author" : $("author").val(),
+					"tag" : $("tag").val(),
+					"preview" : $("preview").val(),
+					"mdContent" : $("mdContent").val(),
+					"htmlContent" : $("htmlContent").html()
+
+				},
+				function(result){
+					if(result == "success"){
+						// 重新加载文档列表
+						replaceRightAreaContent("<%=basePath%>/archiveList/1");
+						$("#btn_save_article").attr("disabled","false");
+					}
+				}
+		);
 	}
 </script>

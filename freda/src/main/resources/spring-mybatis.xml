@@ -10,10 +10,10 @@
                             http://www.springframework.org/schema/mvc
                             http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 	<!-- 自动扫描 -->
-	<context:component-scan base-package="org.nocoder.*" />
+	<context:component-scan base-package="org.jasonyang.*" />
 
 	<!-- 引入配置文件 -->
-	<bean id="encryptPropertyConfigurer" class="org.nocoder.security.EncryptPropertyPlaceholderConfigurer">
+	<bean id="encryptPropertyConfigurer" class="org.jasonyang.security.EncryptPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
 				<value>classpath:config.properties</value>
@@ -54,7 +54,7 @@
 
 	<!-- Mapper接口所在包名，Spring会自动查找其下的类 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="org.nocoder.mapper" />
+		<property name="basePackage" value="org.jasonyang.mapper" />
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 	</bean>
 

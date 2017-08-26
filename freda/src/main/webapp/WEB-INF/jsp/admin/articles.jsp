@@ -32,8 +32,8 @@
 						value="${archive.createTime }" /></td>
 				<td>${archive.state == 1 ? "草稿" : "已发布" }</td>
 				<td style="text-align: center;">
-					<a id="edit_archive_link" href="javascript:void(0);">编辑</a>&nbsp;&nbsp;&nbsp;
-					<a id="del_archive_link" href="javascript:if(confirm('确实要删除吗?'))location='<%=basePath%>/archive/delete?id=${archive.id}'">删除</a>
+					<a id="edit_archive_link" href="javascript:void(0);" onclick="editArchive('${archive.id}');">编辑</a>&nbsp;&nbsp;&nbsp;
+					<a id="del_archive_link" href="javascript:if(confirm('确实要删除吗?'))location='<%=basePath%>/archive/delete/${archive.id}'">删除</a>
 				</td>
 			</tr>
 		</c:forEach>
@@ -42,27 +42,26 @@
 
 <div style="text-align: center;">
 	<ul class="pagination">
-		<li><a href="<%=basePath%>/admin?page=${(page==1) ? page : page-1}">上一页</a></li>
+		<li><a href="javascript:void(0);" onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${(page==1) ? page : page-1}');">上一页</a></li>
 		<c:forEach var="i" begin="1" end="${totalPages }">
-			<li><a href="<%=basePath%>/admin?page=${i}">${i}</a></li>
+			<li><a  href="javascript:void(0);" onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${i}');">${i}</a></li>
 		</c:forEach>
-		<li><a href="<%=basePath%>/admin?page=${page == totalPages ? page : page+1}">下一页</a></li>
+		<li><a href="javascript:void(0);" onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${page == totalPages ? page : page+1}');">下一页</a></li>
 	</ul>
 </div>
 <script type="text/javascript">
 	$(function(){
-		$("#edit_archive_link").click(function(){
-			var htmlObj = $.ajax({
-				url:"<%=basePath%>/archive/edit?id=${archive.id}",
-				async:false
-			});
-			$(".right_col").html(htmlObj.responseText);
-
-		});
-
 		$("#addArticle").click(function(){
 			replaceRightAreaContent("<%=basePath%>/editor");
 		});
 	});
+	function editArchive(id){
+		var htmlObj = $.ajax({
+			url:"<%=basePath%>/archive/edit/"+id,
+			async:false
+		});
+		$(".right_col").html(htmlObj.responseText);
+
+	}
 
 </script>

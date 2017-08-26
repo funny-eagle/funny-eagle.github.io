@@ -264,7 +264,7 @@
          * 绑定【文档管理】事件
          */
         $("#archive_management_link").click(function(){
-          replaceRightAreaContent("<%=basePath%>/archiveList");
+          replaceRightAreaContent("<%=basePath%>/archiveList/1");
         });
 
 

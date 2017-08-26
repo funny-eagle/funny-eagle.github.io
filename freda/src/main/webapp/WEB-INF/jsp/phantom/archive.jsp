@@ -69,10 +69,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2115022" charset="utf-8"></script>
 			<!-- JiaThis Button END -->
 			<div style="padding-bottom:3em;"></div>
-			<!-- 友言评论 UY BEGIN -->
-			<div id="uyan_frame"></div>
-			<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2115022"></script>
-			<!-- 友言评论 UY END -->
+
 
 		</div>
 	</div>

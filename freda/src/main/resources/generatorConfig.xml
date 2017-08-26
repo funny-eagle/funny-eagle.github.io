@@ -8,13 +8,13 @@
 			<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
 		</commentGenerator>
 		<jdbcConnection driverClass="org.postgresql.Driver"
-			connectionURL="jdbc:postgresql://27.122.58.208:5432/freda_db"
-			userId="postgres" password="123456" />
-		<javaModelGenerator targetPackage="org.nocoder.model"
+			connectionURL="jdbc:postgresql://127.0.0.1:5432/freda_db"
+			userId="postgres" password="jasonyang" />
+		<javaModelGenerator targetPackage="org.jasonyang.model"
 			targetProject="D:/git/nocoder.org/freda/src/main/java" />
-		<sqlMapGenerator targetPackage="org.nocoder.mapper"
+		<sqlMapGenerator targetPackage="org.jasonyang.mapper"
 			targetProject="D:/git/nocoder.org/freda/src/main/java" />
-		<javaClientGenerator targetPackage="org.nocoder.mapper"
+		<javaClientGenerator targetPackage="org.jasonyang.mapper"
 			targetProject="D:/git/nocoder.org/freda/src/main/java" type="XMLMAPPER" />
 		
 		
