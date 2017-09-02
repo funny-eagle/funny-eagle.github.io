@@ -18,13 +18,13 @@
 			targetProject="D:/git/nocoder.org/freda/src/main/java" type="XMLMAPPER" />
 		
 		
-		<table schema="public" tableName="dict" domainObjectName="Dict"
+		<table schema="public" tableName="comment" domainObjectName="Comment"
     			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
     			enableSelectByExample="false" selectByExampleQueryId="false" >
     		<property name="useActualColumnNames" value="false"/>
 		</table>
 		
-		<table schema="public" tableName="dict_type" domainObjectName="DictType"
+		<table schema="public" tableName="comment_reply" domainObjectName="CommentReply"
     			enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
     			enableSelectByExample="false" selectByExampleQueryId="false" >
     		<property name="useActualColumnNames" value="false"/>

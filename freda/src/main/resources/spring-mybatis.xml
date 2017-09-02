@@ -49,7 +49,7 @@
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<!-- 自动扫描mapping.xml文件 -->
-		<property name="mapperLocations" value="classpath:org/nocoder/mapper/*.xml"></property>
+		<property name="mapperLocations" value="classpath:org/jasonyang/mapper/*.xml"></property>
 	</bean>
 
 	<!-- Mapper接口所在包名，Spring会自动查找其下的类 -->

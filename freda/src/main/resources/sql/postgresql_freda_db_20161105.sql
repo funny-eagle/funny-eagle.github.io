@@ -54,3 +54,27 @@ alter table public.user
     owner to postgres;
 comment on table public.user
     is '用户表';
+
+-- 评论表
+create table comment (
+    id varchar(32),
+    archive_id varchar(32),
+    comment_username varchar(32),
+    comment_user_email varchar(100),
+    comment_user_ip_address varchar(50),
+    comment_content text,
+    create_time timestamp,
+    constraint comment_pkey primary key (id)
+);
+
+-- 评论回复表
+create table comment_reply(
+    id varchar(32),
+    comment_id varchar(32),
+    reply_username varchar(100),
+    reply_user_email varchar(100),
+    reply_user_ip_address varchar(50),
+    reply_content varchar(300),
+    crate_time timestamp,
+    constraint comment_reply_pkey primary key (id)
+);
