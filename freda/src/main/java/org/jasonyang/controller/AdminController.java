@@ -7,6 +7,8 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.PatternCodec;
+import com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
 import org.apache.commons.lang3.StringUtils;
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.ResponseResult;
@@ -17,6 +19,7 @@ import org.jasonyang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -44,7 +47,6 @@ public class AdminController extends BaseController{
 	public String archiveList(HttpServletRequest request, @PathVariable("pageStr") String pageStr, Model model) {
 		// 查看HttpSession中是否存在用户，不存在直接返回登录界面
 		if (request.getSession().getAttribute("user") != null) {
-
 			final Integer page = Integer.valueOf(pageStr == null ? "1" : pageStr);
 			
 			//查询文档信息(文章和总页数)
@@ -90,7 +92,7 @@ public class AdminController extends BaseController{
  
 	@ResponseBody
 	@RequestMapping({ "/archive/save" })
-	public String saveArchive(Archive archive) {
+	public String saveArchive(@ModelAttribute Archive archive) {
 		if(this.archiveService.saveArchive(archive) > 0){
 			// 保存成功后,刷新redis缓存
 			this.archiveService.setAllArchivesInfoToRedis();

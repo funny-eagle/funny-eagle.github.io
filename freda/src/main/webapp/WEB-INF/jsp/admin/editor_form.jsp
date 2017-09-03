@@ -78,16 +78,17 @@
 		$("#btn_save_article").attr("disabled","true");
 		$("#state").val(status);
 		$.post(
+				"<%=basePath%>/archive/save",
 				{
-					"state" : $("state").val(),
-					"title" : $("title").val(),
-					"author" : $("author").val(),
-					"tag" : $("tag").val(),
-					"preview" : $("preview").val(),
-					"mdContent" : $("mdContent").val(),
-					"htmlContent" : $("htmlContent").html()
-
+					state : $("#state").val(),
+					title : $("#title").val(),
+					author : $("#author").val(),
+					tag : $("#tag").val(),
+					preview : $("#preview").val(),
+					mdContent : $("#mdContent").val(),
+					htmlContent : $("#htmlContent").text()
 				},
+
 				function(result){
 					if(result == "success"){
 						// 重新加载文档列表

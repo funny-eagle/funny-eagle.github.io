@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib  uri ="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
@@ -51,7 +52,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 				<fmt:formatDate value="${archive.createTime}" pattern="yyyy.MM.dd HH:mm"></fmt:formatDate>
 			</div>
 			<div id="archive_content" style="margin-top: 1em;">
-				${archive.htmlContent}
+				<c:out value="${archive.htmlContent}" escapeXml="false"/>
 			</div>
 
 			<!-- JiaThis Button BEGIN -->
@@ -69,8 +70,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2115022" charset="utf-8"></script>
 			<!-- JiaThis Button END -->
 			<div style="padding-bottom:3em;"></div>
-
-
 		</div>
 	</div>
 
