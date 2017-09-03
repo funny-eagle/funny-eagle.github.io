@@ -10,6 +10,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.PatternCodec;
 import com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
 import org.apache.commons.lang3.StringUtils;
+import org.jasonyang.enumeration.AdminPageEnum;
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.ResponseResult;
 import org.jasonyang.model.Archive;
@@ -37,8 +38,32 @@ public class AdminController extends BaseController{
 	@Autowired
 	private ArchiveService archiveService;
 
+    // 默认打开首页
+    @RequestMapping({ "/admin" })
+    public String admin(HttpServletRequest request){
+       return admin(request, AdminPageEnum.HOME.getPage());
+    }
+
+    @RequestMapping({ "/admin/{operation}" })
+    public String admin(HttpServletRequest request, @PathVariable("operation") String operation) {
+        // 验证用户是否登录
+        if (request.getSession().getAttribute("user") == null) {
+            return "redirect:/login";
+        }
+
+        // 与枚举中配置的页面匹配, 跳转到对应操作的jsp页面
+        if(StringUtils.isNotBlank(operation)){
+            for (AdminPageEnum adminPageEnum : AdminPageEnum.values()){
+                if(adminPageEnum.getPage().equals(operation)){
+                    return "admin/" + operation;
+                }
+            }
+        }
+        return "admin/home";
+    }
+
 	/**
-	 * 转到后台维护首页，如未登录转到登录页面
+	 * 文档列表
 	 * @param request
 	 * @param model
 	 * @return 后台首页或登录页面
@@ -66,7 +91,7 @@ public class AdminController extends BaseController{
 	@RequestMapping({ "/login" })
 	public String login(HttpServletRequest request, Model model) {
 		if (request.getSession().getAttribute("user") != null) {
-			return "redirect:gentelella";
+			return "redirect:admin/home";
 		}
 		final String username = request.getParameter("username");
 		final String password = request.getParameter("password");
@@ -76,18 +101,10 @@ public class AdminController extends BaseController{
 				model.addAttribute("user", user);
 				// 将用户信息存放至session中
 				request.getSession().setAttribute("user", user);
-				return "redirect:gentelella";
+				return "redirect:admin/home";
 			}
 		}
-		return "gentelella/login";
-	}
-
-	@RequestMapping({ "/editor" })
-	public String editor(HttpServletRequest request) {
-		if (request.getSession().getAttribute("user") != null) {
-			return "admin/editor_form";
-		}
-		return "redirect:login";
+		return "admin/login";
 	}
  
 	@ResponseBody
@@ -111,28 +128,13 @@ public class AdminController extends BaseController{
 	@RequestMapping({ "/archive/delete/{id}" })
 	public String delete(@PathVariable("id") String id) {
 		this.archiveService.deleteArchiveById(id);
-		return "redirect:/gentelella";
+		return "redirect:/gentelella/home";
 	}
 
 	@RequestMapping({ "/archive/refreshCache" })
 	public String refreshArchivesCache(){
 		// 刷新redis缓存
 		this.archiveService.setAllArchivesInfoToRedis();
-		return "redirect:/gentelella";
+		return "redirect:/gentelella/home";
 	}
-
-	@RequestMapping({ "/gentelella" })
-	public String gentelella(HttpServletRequest request) {
-		// 查看HttpSession中是否存在用户，不存在直接返回登录界面
-		if (request.getSession().getAttribute("user") != null) {
-			return "gentelella/index";
-		}
-		return "redirect:login";
-	}
-
-	@RequestMapping("/homeContent")
-	public String homeContent(HttpServletRequest request){
-		return "gentelella/home_content";
-	}
-
 }

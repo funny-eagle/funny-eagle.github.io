@@ -3,7 +3,7 @@ package org.jasonyang.controller;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import org.jasonyang.enumeration.ArchiveStatus;
-import org.jasonyang.enumeration.PageEnum;
+import org.jasonyang.enumeration.PageSizeEnum;
 import org.jasonyang.model.Archive;
 import org.jasonyang.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class ArchiveController extends BaseController {
         Integer page = Integer.valueOf(request.getParameter("page") == null ? "1" : request.getParameter("page"));
 
         // 每页个数
-        Integer pageSize = PageEnum.PAGE_SIZE.getValue();
+        Integer pageSize = PageSizeEnum.PAGE_SIZE.getValue();
 
 
         // 获取文档信息

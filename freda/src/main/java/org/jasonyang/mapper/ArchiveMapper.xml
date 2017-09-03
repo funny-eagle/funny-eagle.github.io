@@ -43,7 +43,7 @@
   </select>
 
   <select id="selectCountArchives" resultType="int">
-  	select count(1) from public.archive
+  	select count(1) from public.archive where state = 2
   </select>
   
   <select id="selectArchives" resultMap="BaseResultMap" parameterType="java.util.Map">

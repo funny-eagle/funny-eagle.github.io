@@ -6,12 +6,14 @@
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 %>
 <script src="<%=basePath%>/gentelella/build/js/admin.js"></script>
-<div style="text-align:left;margin-left:15px; float:left;"><a id="addArticle" class="btn btn-primary" href="javascript:void(0);">写文章</a></div>
+<div style="text-align:left;margin-left:15px; float:left;">
+    <a id="addArticle" class="btn btn-primary" href="javascript:void(0);">写作</a>
+</div>
 <!--
 <div style="text-align:right;margin-left:15px;float:right;"><a class="btn btn-warning" href="javascript:void(0);" onclick="refreshCache();">刷新缓存</a></div>
 -->
+
 <table class="table table-responsive table-striped table-hover" style="margin:1em; width:98%;" >
-	<caption>文章列表</caption>
 	<thead align="center">
 		<tr>
 			<th width="30%">标题</th>
@@ -42,17 +44,20 @@
 
 <div style="text-align: center;">
 	<ul class="pagination">
-		<li><a href="javascript:void(0);" onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${(page==1) ? page : page-1}');">上一页</a></li>
-		<c:forEach var="i" begin="1" end="${totalPages }">
-			<li><a  href="javascript:void(0);" onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${i}');">${i}</a></li>
+		<li><a href="javascript:void(0);"
+               onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${(page==1) ? page : page-1}');">上一页</a></li>
+		<c:forEach var="i" begin="1" end="${totalPages}">
+			<li><a  href="javascript:void(0);"
+                    onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${i}');">${i}</a></li>
 		</c:forEach>
-		<li><a href="javascript:void(0);" onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${page == totalPages ? page : page+1}');">下一页</a></li>
+		<li><a href="javascript:void(0);"
+               onclick="replaceRightAreaContent('<%=basePath%>/archiveList/${page == totalPages ? page : page+1}');">下一页</a></li>
 	</ul>
 </div>
 <script type="text/javascript">
 	$(function(){
 		$("#addArticle").click(function(){
-			replaceRightAreaContent("<%=basePath%>/editor");
+			replaceRightAreaContent("<%=basePath%>/admin/editor");
 		});
 	});
 	function editArchive(id){

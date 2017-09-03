@@ -35,7 +35,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-coffee"></i> <span>Jason Yang's Blog</span></a>
+              <a href="<%=basePath %>/admin/home" class="site_title"><i class="fa fa-code"></i> <span>Jason Yang's Blog</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -60,8 +60,8 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
 
-                  <li><a id="home_content_link" href="javascript:void(0)"><i class="fa fa-home"></i> 首页</a></li>
-                  <li><a id="archive_management_link" href="javascript:void(0)"><i class="fa fa-book"></i> 文档管理</a></li>
+                  <li><a id="home_content_link" href="<%=basePath%>/admin/home"><i class="fa fa-home"></i> 首页</a></li>
+                  <li><a id="archive_management_link" href="<%=basePath%>/admin/archive_management"><i class="fa fa-book"></i> 文档管理</a></li>
 
                   <li><a><i class="fa fa-bookmark"></i> 标签管理 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
@@ -246,29 +246,5 @@
     <script src="<%=basePath%>/gentelella/build/js/admin.js"></script>
     <script src="<%=basePath %>/editor.md-master/lib/jquery.flowchart.min.js"></script>
     <script src="<%=basePath %>/editor.md-master/src/editormd.js"></script>
-    <script type="text/javascript">
-      $(function(){
-        /**
-         * 绑定【首页】点击事件
-         */
-        $("#home_content_link").click(function(){
-          replaceRightAreaContent("<%=basePath%>/homeContent");
-        });
-
-        /**
-         * 默认点击【首页】
-         */
-        $("#home_content_link").click();
-
-        /**
-         * 绑定【文档管理】事件
-         */
-        $("#archive_management_link").click(function(){
-          replaceRightAreaContent("<%=basePath%>/archiveList/1");
-        });
-
-
-      });
-    </script>
   </body>
 </html>

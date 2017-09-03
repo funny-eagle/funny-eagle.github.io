@@ -115,6 +115,10 @@ public class ArchiveServiceImpl implements ArchiveService {
 		return this.archiveMapper.deleteByPrimaryKey(id);
 	}
 
+    /**
+     * 从缓存中获取所有文档基本信息
+     * @return archive list
+     */
 	@Override
 	public List<Archive> getAllArchivesInfo(){
 		Jedis jedis = RedisUtils.getJedis();

@@ -30,9 +30,7 @@
         </section>
         <ul class="copyright">
             <li>
-                Copyright &copy; 2017 Jason Yang. All rights reserved
-                <!-- cnzz统计-->
-                <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261783730'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261783730%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+                Copyright &copy; 2016 Jason Yang's Blog. All rights reserved
             </li>
         </ul>
     </div>

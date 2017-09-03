@@ -36,6 +36,6 @@ public class EncryptUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(EncryptUtil.encode("123456"));
+        System.out.println(EncryptUtil.encode("jasonyang"));
     }
 }

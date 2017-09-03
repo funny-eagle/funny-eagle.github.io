@@ -1,6 +1,6 @@
 package org.jasonyang.controller;
 
-import org.jasonyang.enumeration.PageEnum;
+import org.jasonyang.enumeration.PageSizeEnum;
 import org.jasonyang.model.Archive;
 import org.jasonyang.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,11 +30,12 @@ public class BaseController {
             page = 1;
         }
         if (pageSize == null) {
-            pageSize = PageEnum.PAGE_SIZE.getValue();
+            pageSize = PageSizeEnum.PAGE_SIZE.getValue();
         }
         final int archivesCount = this.archiveService.countArchives(tag);
         if (archivesCount > 0) {
             //List<Archive> archiveList = this.archiveService.queryArchiveList(state, tag, page, pageSize);
+            // 获取文档基本信息
             List<Archive> archiveList = this.archiveService.getAllArchivesInfo();
             if(archiveList != null && archiveList.size() > 0){
                 if(archiveList.size() >= page * pageSize){
