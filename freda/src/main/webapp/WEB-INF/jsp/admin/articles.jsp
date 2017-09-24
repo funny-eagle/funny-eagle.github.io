@@ -6,8 +6,9 @@
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 %>
 <script src="<%=basePath%>/gentelella/build/js/admin.js"></script>
+
 <div style="text-align:left;margin-left:15px; float:left;">
-    <a id="addArticle" class="btn btn-primary" href="javascript:void(0);">写作</a>
+    <a id="addArticle" class="btn btn-primary" href="javascript:void(0);">写文章</a>
 </div>
 <!--
 <div style="text-align:right;margin-left:15px;float:right;"><a class="btn btn-warning" href="javascript:void(0);" onclick="refreshCache();">刷新缓存</a></div>
@@ -35,10 +36,31 @@
 				<td>${archive.state == 1 ? "草稿" : "已发布" }</td>
 				<td style="text-align: center;">
 					<a id="edit_archive_link" href="javascript:void(0);" onclick="editArchive('${archive.id}');">编辑</a>&nbsp;&nbsp;&nbsp;
-					<a id="del_archive_link" href="javascript:if(confirm('确实要删除吗?'))location='<%=basePath%>/archive/delete/${archive.id}'">删除</a>
-				</td>
+					<a data-toggle="modal" data-target="" href="#delCfmModal">删除</a>
+                    <input type="hidden" id="archiveId" value="${archive.id}"/>
+
+                    <!-- Modal -->
+                    <div class="modal" id="delCfmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">提示</h4>
+                                </div>
+                                <div class="modal-body">
+                                    确定要删除?
+                                </div>
+                                <div class="modal-footer">
+                                    <a type="button" class="btn btn-default" data-dismiss="modal">取消</a>
+                                    <a href="javascript:void(0);" type="button" data-dismiss="modal" class="btn btn-primary btn-del-ok" onclick="delArchive();">删除</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
 			</tr>
 		</c:forEach>
+
 	</tbody>
 </table>
 
@@ -68,5 +90,10 @@
 		$(".right_col").html(htmlObj.responseText);
 
 	}
+
+    function delArchive(){
+        var url = "<%=basePath%>/archive/delete/"+$("#archiveId").val();
+        window.location.href = url;
+    }
 
 </script>

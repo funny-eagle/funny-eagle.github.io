@@ -107,7 +107,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     $("#div_load").html("");
                     // _page == -1 表示已经是最后一页，不再显示查看更多
                     if(_page != -1){
-                        $("#div_load").append('<input type="button" value="加载更多" class="button small" onclick="loadArchives('+_page+');"/>');
+                        $("#div_load").append('<a type="button" class="button small" onclick="loadArchives('+_page+');">加载更多<i class="icon-arrow-down"></i></a>');
                     }
                 }
         );

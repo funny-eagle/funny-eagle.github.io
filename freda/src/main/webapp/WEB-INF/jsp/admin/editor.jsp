@@ -49,7 +49,7 @@
 
 			<!-- content保存html代码-->
 			<!-- html textarea 需要开启配置项 saveHTMLToTextarea == true -->
-			<textarea id="htmlContent" class="editormd-html-textarea" name="htmlContent"></textarea>
+			<textarea id="htmlContent" class="editormd-html-textarea" name="htmlContent">${archive.htmlContent }</textarea>
 		</div>
 
 		<script type="text/javascript">
@@ -76,10 +76,17 @@
 	 */
 	function submitArchive (status) {
 		$("#btn_save_article").attr("disabled","true");
+        $("#btn_subm_article").attr("disabled","true");
 		$("#state").val(status);
+        if(status == 1){
+            $("#btn_save_article").text("保存中...");
+        }else{
+            $("#btn_subm_article").text("提交中...");
+        }
 		$.post(
 				"<%=basePath%>/archive/save",
 				{
+                    id : $("#id").val(),
 					state : $("#state").val(),
 					title : $("#title").val(),
 					author : $("#author").val(),
@@ -91,9 +98,8 @@
 
 				function(result){
 					if(result == "success"){
-						// 重新加载文档列表
-						replaceRightAreaContent("<%=basePath%>/archiveList/1");
-						$("#btn_save_article").attr("disabled","false");
+                        // 重新加载文档列表
+                        setTimeout('replaceRightAreaContent("<%=basePath%>/archiveList/1");',2000);
 					}
 				}
 		);

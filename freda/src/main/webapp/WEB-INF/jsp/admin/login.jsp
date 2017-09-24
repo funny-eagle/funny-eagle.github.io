@@ -63,41 +63,7 @@
           </section>
         </div>
 
-        <div id="register" class="animate form registration_form">
-          <section class="login_content">
-            <form>
-              <h1>Create Account</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" />
-              </div>
-              <div>
-                <input type="email" class="form-control" placeholder="Email" required="" />
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" />
-              </div>
-              <div>
-                <a class="btn btn-default submit" href="javascript:void(0);">Submit</a>
-              </div>
 
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <p class="change_link">Already a member ?
-                  <a href="#signin" class="to_register"> Log in </a>
-                </p>
-
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <h1><i class="fa fa-paw"></i> Gentelella Alela!</h1>
-                  <p>©2016 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
       </div>
     </div>
   </body>
@@ -105,19 +71,17 @@
   <script type="text/javascript">
 
     $(function(){
+        // 登录按钮点击事件
+        $("#login_link").click(function(){
+            $("#login_form").submit();
+        });
 
-      $("#login_link").click(function(){
-        $("#login_form").submit();
-      });
-
-      /**
-       * 回车键提交表单
-       */
-      $(document).keydown(function(event){
-        if(event.keyCode == "13"){
-            $("#login_link").click();
-        }
-      });
+        // 回车键提交表单
+        $(document).keydown(function(event){
+            if(event.keyCode == "13"){
+                $("#login_link").click();
+            }
+        });
 
     });
   </script>

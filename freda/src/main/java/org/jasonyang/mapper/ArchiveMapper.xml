@@ -42,8 +42,13 @@
     where id = #{id,jdbcType=VARCHAR}
   </select>
 
-  <select id="selectCountArchives" resultType="int">
-  	select count(1) from public.archive where state = 2
+  <select id="selectCountArchives" parameterType="map" resultType="int">
+  	select count(1) from public.archive
+      <where>
+          <if test="state != 0">
+              state = #{state}
+          </if>
+      </where>
   </select>
   
   <select id="selectArchives" resultMap="BaseResultMap" parameterType="java.util.Map">

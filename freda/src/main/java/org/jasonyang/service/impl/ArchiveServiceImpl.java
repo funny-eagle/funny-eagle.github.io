@@ -47,8 +47,8 @@ public class ArchiveServiceImpl implements ArchiveService {
 		return null;
 	}
 
-	public int countArchives(String tag) {
-		return archiveMapper.selectCountArchives(tag);
+	public int countArchives(Map<String, Object> paramsMap) {
+		return archiveMapper.selectCountArchives(paramsMap);
 	}
 
 	public int saveArchive(Archive archive) {
@@ -92,9 +92,12 @@ public class ArchiveServiceImpl implements ArchiveService {
 		return this.archiveMapper.selectByPrimaryKey(id);
 	}
 
+    /**
+     *
+     */
 	@Override
 	@PostConstruct
-	public void setAllArchivesInfoToRedis(){
+	public void setAllPublishedArchivesInfoToRedis(){
 		Jedis jedis = RedisUtils.getJedis();
 		if(jedis == null){
 			return;
@@ -120,7 +123,7 @@ public class ArchiveServiceImpl implements ArchiveService {
      * @return archive list
      */
 	@Override
-	public List<Archive> getAllArchivesInfo(){
+	public List<Archive> getAllPublishedArchivesInfo(){
 		Jedis jedis = RedisUtils.getJedis();
 		if(jedis == null){
 			return null;

@@ -112,29 +112,31 @@ public class AdminController extends BaseController{
 	public String saveArchive(@ModelAttribute Archive archive) {
 		if(this.archiveService.saveArchive(archive) > 0){
 			// 保存成功后,刷新redis缓存
-			this.archiveService.setAllArchivesInfoToRedis();
+			this.archiveService.setAllPublishedArchivesInfoToRedis();
 		}
 		return ResponseResult.SUCCESS.getStatus();
 	}
 
-	@ResponseBody
 	@RequestMapping({ "/archive/edit/{id}" })
 	public String toEdit(@PathVariable("id") String id, Model model) {
-		Archive archive = this.archiveService.queryArchiveById(id,0);
-		return JSON.toJSONString(archive);
+        Archive archive = this.archiveService.queryArchiveById(id,0);
+        model.addAttribute("archive", archive);
+		return "admin/editor";
 	}
-
 	
 	@RequestMapping({ "/archive/delete/{id}" })
 	public String delete(@PathVariable("id") String id) {
 		this.archiveService.deleteArchiveById(id);
-		return "redirect:/gentelella/home";
+		return "redirect:/admin/archive_management";
 	}
 
+    /**
+     * 刷新redis缓存
+     * @return 文档管理页面
+     */
 	@RequestMapping({ "/archive/refreshCache" })
 	public String refreshArchivesCache(){
-		// 刷新redis缓存
-		this.archiveService.setAllArchivesInfoToRedis();
-		return "redirect:/gentelella/home";
+		this.archiveService.setAllPublishedArchivesInfoToRedis();
+		return "redirect:/archive_management";
 	}
 }

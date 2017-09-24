@@ -26,12 +26,12 @@ public enum AdminPageEnum {
         this.page = page;
     }
 
-    public static void main(String[] args){
-        String page = "home";
-        for (AdminPageEnum adminPageEnum : AdminPageEnum.values()){
-            if(adminPageEnum.getPage().equals(page)){
-                System.out.println(adminPageEnum.getPage());
-            }
-        }
-    }
+//    public static void main(String[] args){
+//        String page = "home";
+//        for (AdminPageEnum adminPageEnum : AdminPageEnum.values()){
+//            if(adminPageEnum.getPage().equals(page)){
+//                System.out.println(adminPageEnum.getPage());
+//            }
+//        }
+//    }
 }

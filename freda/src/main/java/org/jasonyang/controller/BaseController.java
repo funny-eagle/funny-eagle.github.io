@@ -1,5 +1,6 @@
 package org.jasonyang.controller;
 
+import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.PageSizeEnum;
 import org.jasonyang.model.Archive;
 import org.jasonyang.service.ArchiveService;
@@ -32,18 +33,27 @@ public class BaseController {
         if (pageSize == null) {
             pageSize = PageSizeEnum.PAGE_SIZE.getValue();
         }
-        final int archivesCount = this.archiveService.countArchives(tag);
+        final Map<String, Object> paramsMap = new HashMap<String, Object>();
+        paramsMap.put("state", state);
+        paramsMap.put("tag", tag);
+        final int archivesCount = this.archiveService.countArchives(paramsMap);
         if (archivesCount > 0) {
-            //List<Archive> archiveList = this.archiveService.queryArchiveList(state, tag, page, pageSize);
-            // 获取文档基本信息
-            List<Archive> archiveList = this.archiveService.getAllArchivesInfo();
-            if(archiveList != null && archiveList.size() > 0){
-                if(archiveList.size() >= page * pageSize){
-                    archiveList = archiveList.subList((page-1) * pageSize, page * pageSize);
-                }else{
-                    archiveList = archiveList.subList((page-1) * pageSize, archiveList.size());
+            List<Archive> archiveList = null;
+            // 从数据库查询所有文档信息
+            if(state == ArchiveStatus.ALL.getValue()){
+                archiveList = this.archiveService.queryArchiveList(state, tag, page, pageSize);
+            }else{
+                // 从缓存获取已发布的文档基本信息
+                archiveList = this.archiveService.getAllPublishedArchivesInfo();
+                if(archiveList != null && archiveList.size() > 0){
+                    if(archiveList.size() >= page * pageSize){
+                        archiveList = archiveList.subList((page-1) * pageSize, page * pageSize);
+                    }else{
+                        archiveList = archiveList.subList((page-1) * pageSize, archiveList.size());
+                    }
                 }
             }
+
             resMap.put("archiveList", archiveList);
             // 总页数(取天花板值 ) = 文档总数 / 每页个数 
             int totalPages = (int) Math.ceil((double) archivesCount / (double) pageSize);

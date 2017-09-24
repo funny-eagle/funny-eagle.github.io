@@ -29,7 +29,7 @@ public interface ArchiveMapper {
 
     int updateByPrimaryKeySelective(Archive record);
     
-    int selectCountArchives(String tag);
+    int selectCountArchives(Map<String, Object> paramsMap);
     
     List<Archive> selectArchives(Map<String, Object> paramsMap);
 }
