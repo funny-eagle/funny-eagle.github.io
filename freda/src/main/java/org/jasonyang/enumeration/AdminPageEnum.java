@@ -4,11 +4,17 @@ package org.jasonyang.enumeration;
  * Created by jason on 17/9/3.
  */
 public enum AdminPageEnum {
+    // 首页
     HOME("home"),
+    // 首页内容
     HOME_CONTENT("home_content"),
+    // 文档管理
     ARCHIVE("archive_management"),
+    // 标签管理
     TAG("tag_management"),
+    // 用户设置
     USER_SETTINGS("user_settings"),
+    // 文档编辑
     EDITOR("editor");
 
 

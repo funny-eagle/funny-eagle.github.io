@@ -27,6 +27,7 @@ public class ArchiveServiceImpl implements ArchiveService {
 	@Autowired
 	private ArchiveMapper archiveMapper;
 
+	@Override
     public List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer pageSize) {
     	Map<String, Object> paramsMap = new HashMap<String, Object>();
     	paramsMap.put("state", state);
@@ -46,14 +47,16 @@ public class ArchiveServiceImpl implements ArchiveService {
 		//List<Archive> list = this.ArchiveMapper.queryArchiveListByCreateTime(time);
 		return null;
 	}
-
+	@Override
 	public int countArchives(Map<String, Object> paramsMap) {
 		return archiveMapper.selectCountArchives(paramsMap);
 	}
-
+	@Override
 	public int saveArchive(Archive archive) {
 		int resCount = 0;
-		if (archive == null) return resCount;
+		if (archive == null) {
+			return resCount;
+		}
 		if(archive.getPreview() != null){
 			//可以替换大部分空白字符， 不限于空格    
 			// \s 可以匹配空格、制表符、换页符等空白字符的其中任意一个
@@ -82,6 +85,7 @@ public class ArchiveServiceImpl implements ArchiveService {
 	 * @param type 1：表示前台用，不查询markdown内容
      * @return
      */
+	@Override
 	public Archive queryArchiveById(String id, int type) {
 		if (StringUtils.isBlank(id)) {
 			return null;
