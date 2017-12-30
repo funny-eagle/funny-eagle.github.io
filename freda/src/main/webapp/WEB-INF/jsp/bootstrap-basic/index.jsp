@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+              <a class="nav-link" href="<%=basePath%>">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -140,7 +140,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; NoCoder.Org 2017</p>
       </div>
       <!-- /.container -->
     </footer>
@@ -176,13 +176,17 @@
                             }
                             $("#article_section").append (
                                     '<div class="row">'
-                                        + '<div class="col-lg-2" onclick="" style="cursor: pointer">'
+                                        + '<div class="col-lg-2">'
+                                            + '<a href="archive/'+archives[i].id+'">'
                                             + '<img class="img-fluid rounded" src="' + path + '/phantom/images/pic0'+index+'.jpg"/>'
+                                            + '<a/>'
                                         + '</div>'
                                         + '<div class="col-lg-10">'
-                                            + '<p class="lead"  onclick="" style="cursor: pointer">'
+                                            + '<a href="archive/'+archives[i].id+'">'
+                                            + '<p class="lead" >'
                                                 + archives[i].title
                                             + '</p>'
+                                            + '<a/>'
                                             + '<p  onclick="" style="cursor: pointer">'+ archives[i].preview + '</p>'
                                         + '</div>'
                                     + '</div>'

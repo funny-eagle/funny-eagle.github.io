@@ -57,7 +57,7 @@ public class ArchiveController extends BaseController {
     public String viewArchive(HttpServletRequest request, @PathVariable("id") String id, Model model) {
         Archive archive = this.archiveService.queryArchiveById(id,1);
         model.addAttribute("archive", archive);
-        return "phantom/archive";
+        return "bootstrap-basic/archive";
     }
 
 }
