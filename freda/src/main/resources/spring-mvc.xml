@@ -34,6 +34,7 @@
 	<mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
 	<mvc:resources mapping="/imgs/**" location="/imgs/"/>
 	<mvc:resources mapping="/phantom/**" location="/phantom/"/>
+    <mvc:resources mapping="/bootstrap-basic/**" location="/bootstrap-basic/"/>
 	<mvc:resources mapping="/editor.md-master/**" location="/editor.md-master/"/>
 	<mvc:resources mapping="/gentelella/**" location="/gentelella/"/>
 	<!-- 定义跳转的文件的前后缀 ，视图模式配置 -->

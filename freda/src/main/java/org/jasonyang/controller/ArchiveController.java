@@ -20,7 +20,7 @@ public class ArchiveController extends BaseController {
 
     @RequestMapping({"/blog"})
     public String toHomePage() {
-        return "phantom/index";
+        return "bootstrap-basic/index";
     }
 
     /**
