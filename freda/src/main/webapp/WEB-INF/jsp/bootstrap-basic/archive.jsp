@@ -24,6 +24,7 @@
 
     <!-- Custom styles for this template -->
     <link href="<%=basePath%>/bootstrap-basic/css/blog-post.css" rel="stylesheet">
+      <link rel="icon" href="<%=basePath%>/imgs/command.ico">
   </head>
 
   <body>
@@ -31,7 +32,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="<%=basePath%>">Jason Yang's Blog</a>
+        <a class="navbar-brand" href="<%=basePath%>"><span class="symbol fa fa-code"></span><span class="title">Jason Yang's Blog</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,7 +69,7 @@
           <h1 class="mt-4">${archive.title}</h1>
 
             <style type="text/css">
-                #span_author{
+                #span_tag{
                     color:#6496e7;
                     border:1px solid;
                     border-radius: 5px;
@@ -80,7 +81,7 @@
           <!-- Author -->
           <p class="lead">
             <div style="color: #969696;">
-                <a href="#"><span id="span_author">&nbsp;${archive.tag}&nbsp;</span></a>&nbsp;${archive.author}&nbsp;|&nbsp;
+                <a href="#"><span id="span_tag">&nbsp;${archive.tag}&nbsp;</span></a>&nbsp;${archive.author}&nbsp;|&nbsp;
                 <fmt:formatDate value="${archive.createTime}" pattern="yyyy.MM.dd HH:mm"></fmt:formatDate>
             </div>
           </p>

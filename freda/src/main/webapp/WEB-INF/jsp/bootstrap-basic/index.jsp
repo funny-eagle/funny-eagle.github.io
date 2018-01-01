@@ -22,7 +22,29 @@
 
     <!-- Custom styles for this template -->
     <link href="<%=basePath%>/bootstrap-basic/css/blog-post.css" rel="stylesheet">
+    <link rel="icon" href="<%=basePath%>/imgs/command.ico">
+      <style>
+          a {
+              color:#3b6caa;
+              text-decoration:none;
+          }
+          a:visited {
+              color:#4178be;
+              text-decoration:none;
+          }
 
+      </style>
+      <style type="text/css">
+          .span_tag{
+              color:#6496e7;
+              border:1px solid;
+              border-radius: 5px;
+              margin-right: 3px;
+              padding:1px;
+              letter-spacing:1px;
+              font-size:0.8em;
+          }
+      </style>
   </head>
 
   <body>
@@ -30,7 +52,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Jason Yang's Blog</a>
+        <a class="navbar-brand" href="#"><span class="symbol fa fa-code"></span><span class="title">Jason Yang's Blog</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -65,7 +87,7 @@
             <div id="article_section">
 
             </div>
-            <div id="div_load" style="text-align: center; padding-top:2em;">
+            <div id="div_load" style="text-align: center;padding-bottom:1em;">
                 <!--"加载中，查看更多"区域-->
             </div>
         </div>
@@ -174,6 +196,7 @@
                             if(index > 9){
                                 index = 1;
                             }
+                            archives[i].createTime = new Date(archives[i].createTime).format("yyyy-MM-dd hh:mm");
                             $("#article_section").append (
                                     '<div class="row">'
                                         + '<div class="col-lg-2">'
@@ -183,11 +206,16 @@
                                         + '</div>'
                                         + '<div class="col-lg-10">'
                                             + '<a href="archive/'+archives[i].id+'">'
-                                            + '<p class="lead" >'
+                                            + '<span style="font-size:1.2em;">'
                                                 + archives[i].title
-                                            + '</p>'
+                                            + '</span>'
                                             + '<a/>'
-                                            + '<p  onclick="" style="cursor: pointer">'+ archives[i].preview + '</p>'
+                                            + '<br/>'
+                                            + '<span style="font-size:0.8em;color:dimgrey;">'
+                                            + archives[i].createTime + '  '+ archives[i].author
+                                            + '</span>'
+                                            + '<br/>'
+                                            + '<span style="color:dimgrey;font-style: italic;padding-top: 0.2em;">'+ archives[i].preview + '</span>'
                                         + '</div>'
                                     + '</div>'
                                     + '<hr/>'
@@ -198,10 +226,31 @@
                         $("#div_load").html("");
                         // _page == -1 表示已经是最后一页，不再显示查看更多
                         if(_page != -1){
-                            $("#div_load").append('<a type="button" class="button small" onclick="loadArchives('+_page+');">加载更多<i class="icon-arrow-down"></i></a>');
+                            $("#div_load").append('<a class="btn btn-info" href="javascript:void(0)"  onclick="loadArchives('+_page+');">加载更多››<i class="icon-arrow-down"></i></a>');
                         }
                     }
             );
+        }
+
+        Date.prototype.format = function(fmt) {
+            var o = {
+                "M+" : this.getMonth()+1,                 //月份
+                "d+" : this.getDate(),                    //日
+                "h+" : this.getHours(),                   //小时
+                "m+" : this.getMinutes(),                 //分
+                "s+" : this.getSeconds(),                 //秒
+                "q+" : Math.floor((this.getMonth()+3)/3), //季度
+                "S"  : this.getMilliseconds()             //毫秒
+            };
+            if(/(y+)/.test(fmt)) {
+                fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+            }
+            for(var k in o) {
+                if(new RegExp("("+ k +")").test(fmt)){
+                    fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+                }
+            }
+            return fmt;
         }
     </script>
   </body>
