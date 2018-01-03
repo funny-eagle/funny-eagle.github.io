@@ -5,7 +5,7 @@ package org.jasonyang.enumeration;
  * Created by jason on 2017/7/14.
  */
 public enum PageSizeEnum {
-    PAGE_SIZE(9);
+    PAGE_SIZE(5);
 
     private int value;
 

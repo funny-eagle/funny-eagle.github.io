@@ -39,18 +39,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="<%=basePath%>">Home
-                <span class="sr-only">(current)</span>
-              </a>
+              <a class="nav-link" href="<%=basePath%>">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="<%=basePath%>/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="<%=basePath%>/contact">Contact</a>
             </li>
           </ul>
         </div>
