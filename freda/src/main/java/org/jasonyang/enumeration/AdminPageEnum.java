@@ -1,7 +1,7 @@
 package org.jasonyang.enumeration;
 
 /**
- * Created by jason on 17/9/3.
+ * @author jason
  */
 public enum AdminPageEnum {
     // 首页
@@ -16,7 +16,6 @@ public enum AdminPageEnum {
     USER_SETTINGS("user_settings"),
     // 文档编辑
     EDITOR("editor");
-
 
     private String page;
 

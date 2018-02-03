@@ -13,6 +13,7 @@ import java.util.Properties;
 /**
  * 通过继承spring配置类并重写处理方法实现密文解密
  * Created by jason on 2017/7/18.
+ * @author jason
  */
 public class EncryptPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer{
     Logger logger = Logger.getLogger(EncryptPropertyPlaceholderConfigurer.class);

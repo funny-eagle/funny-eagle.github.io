@@ -2,6 +2,7 @@ package org.jasonyang.enumeration;
 
 /**
  * Created by jason on 2017/8/20.
+ * @author jason
  */
 public enum ResponseResult {
     /**

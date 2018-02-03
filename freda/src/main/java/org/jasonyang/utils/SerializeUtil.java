@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * 序列化工具
  * Created by yangjinlong on 16/9/25.
+ * @author jason
  */
 public class SerializeUtil {
 

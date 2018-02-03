@@ -3,6 +3,10 @@ package org.jasonyang.model;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 评论
+ * @author jason
+ */
 public class Comment implements Serializable{
     private String id;
 
@@ -17,6 +21,16 @@ public class Comment implements Serializable{
     private String commentContent;
 
     private Date createTime;
+
+    private String pid;
+
+    public String getPid() {
+        return pid;
+    }
+
+    public void setPid(String pid) {
+        this.pid = pid;
+    }
 
     public String getId() {
         return id;

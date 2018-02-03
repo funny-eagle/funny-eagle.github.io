@@ -60,7 +60,6 @@
                 </td>
 			</tr>
 		</c:forEach>
-
 	</tbody>
 </table>
 
@@ -82,13 +81,13 @@
 			replaceRightAreaContent("<%=basePath%>/admin/editor");
 		});
 	});
+
 	function editArchive(id){
 		var htmlObj = $.ajax({
 			url:"<%=basePath%>/archive/edit/"+id,
 			async:false
 		});
 		$(".right_col").html(htmlObj.responseText);
-
 	}
 
     function delArchive(){

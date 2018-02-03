@@ -13,6 +13,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.jasonyang.enumeration.AdminPageEnum;
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.ResponseResult;
+import org.jasonyang.enumeration.UserEnum;
 import org.jasonyang.model.Archive;
 import org.jasonyang.model.User;
 import org.jasonyang.service.ArchiveService;
@@ -47,7 +48,7 @@ public class AdminController extends BaseController{
     @RequestMapping({ "/admin/{operation}" })
     public String admin(HttpServletRequest request, @PathVariable("operation") String operation) {
         // 验证用户是否登录
-        if (request.getSession().getAttribute("user") == null) {
+        if (request.getSession().getAttribute(UserEnum.USER.getProperty()) == null) {
             return "redirect:/login";
         }
 
@@ -71,7 +72,7 @@ public class AdminController extends BaseController{
 	@RequestMapping({ "/archiveList/{pageStr}" })
 	public String archiveList(HttpServletRequest request, @PathVariable("pageStr") String pageStr, Model model) {
 		// 查看HttpSession中是否存在用户，不存在直接返回登录界面
-		if (request.getSession().getAttribute("user") != null) {
+		if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
 			final Integer page = Integer.valueOf(pageStr == null ? "1" : pageStr);
 			
 			//查询文档信息(文章和总页数)
@@ -90,7 +91,7 @@ public class AdminController extends BaseController{
 
 	@RequestMapping({ "/login" })
 	public String login(HttpServletRequest request, Model model) {
-		if (request.getSession().getAttribute("user") != null) {
+		if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
 			return "redirect:admin/home";
 		}
 		final String username = request.getParameter("username");

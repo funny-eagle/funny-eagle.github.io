@@ -7,14 +7,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Jason Yang's Blog </title>
-
     <!-- Bootstrap -->
     <link href="<%=basePath%>/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -23,7 +21,6 @@
     <link href="<%=basePath%>/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="<%=basePath%>/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
     <!-- Custom Theme Style -->
     <link href="<%=basePath%>/gentelella/build/css/custom.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<%=basePath %>/editor.md-master/css/editormd.css" />
@@ -35,7 +32,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="<%=basePath %>/admin/home" class="site_title"><i class="fa fa-code"></i> <span>Jason Yang's Blog</span></a>
+                <a href="<%=basePath %>/admin/home" class="site_title"><i class="fa fa-code"></i> <span>Jason Yang's Blog</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -54,15 +51,13 @@
 
             <br />
 
-            <!-- sidebar menu -->
+            <!-- 左侧菜单栏 -->
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-
                   <li><a id="home_content_link" href="<%=basePath%>/admin/home"><i class="fa fa-home"></i> 首页</a></li>
                   <li><a id="archive_management_link" href="<%=basePath%>/admin/archive_management"><i class="fa fa-book"></i> 文档管理</a></li>
-
                   <li><a><i class="fa fa-bookmark"></i> 标签管理 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="<%=basePath%>/gentelella/production/form.html">General Form</a></li>
@@ -73,10 +68,8 @@
                       <li><a href="<%=basePath%>/gentelella/production/form.html">General Form</a></li>
                     </ul>
                   </li>
-
                 </ul>
               </div>
-
             </div>
             <!-- /sidebar menu -->
 
@@ -125,49 +118,13 @@
                     <li><a href="login.jsp"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
-
+                <!-- 信息提醒 -->
                 <li role="presentation" class="dropdown">
                   <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-envelope-o"></i>
                     <span class="badge bg-green">6</span>
                   </a>
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="<%=basePath%>/imgs/monkey.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="<%=basePath%>/imgs/monkey.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="<%=basePath%>/imgs/monkey.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
                     <li>
                       <a>
                         <span class="image"><img src="<%=basePath%>/imgs/monkey.jpg" alt="Profile Image" /></span>
@@ -196,11 +153,9 @@
         </div>
         <!-- /top navigation -->
 
-        <!-- page content -->
         <div class="right_col" role="main">
           <!-- 右侧内容-->
         </div>
-        <!-- /page content -->
 
         <!-- footer content -->
         <footer>
@@ -219,28 +174,8 @@
     <script src="<%=basePath%>/gentelella/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
     <script src="<%=basePath%>/gentelella/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="<%=basePath%>/gentelella/vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="<%=basePath%>/gentelella/vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- jQuery Sparklines -->
     <script src="<%=basePath%>/gentelella/vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-    <!-- Flot -->
-    <script src="<%=basePath%>/gentelella/vendors/Flot/jquery.flot.js"></script>
-    <script src="<%=basePath%>/gentelella/vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="<%=basePath%>/gentelella/vendors/Flot/jquery.flot.time.js"></script>
-    <script src="<%=basePath%>/gentelella/vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="<%=basePath%>/gentelella/vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="<%=basePath%>/gentelella/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="<%=basePath%>/gentelella/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="<%=basePath%>/gentelella/vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="<%=basePath%>/gentelella/vendors/DateJS/build/date.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="<%=basePath%>/gentelella/vendors/moment/min/moment.min.js"></script>
-    <script src="<%=basePath%>/gentelella/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="<%=basePath%>/gentelella/build/js/custom.min.js"></script>
     <script src="<%=basePath%>/gentelella/build/js/admin.js"></script>

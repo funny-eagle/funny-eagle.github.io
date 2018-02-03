@@ -6,6 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * EncryptUtil
  * Created by jason on 2017/7/18.
+ * @author jason
  */
 public class EncryptUtil {
 

@@ -6,11 +6,8 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 %>
-<!DOCTYPE html>
 <html>
-
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <link rel="icon" href="<%=basePath%>/imgs/command.ico">
@@ -100,39 +97,8 @@
             </div>
           </div>
 
-          <!-- Single Comment -->
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-          </div>
-
-          <!-- Comment with nested comments -->
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Commenter Name</h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-              <div class="media mt-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Commenter Name</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-              </div>
-
-              <div class="media mt-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Commenter Name</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- 评论区域 -->
+          <div id="comments_fields"></div>
 
         </div>
 
@@ -157,6 +123,36 @@
     <!-- Bootstrap core JavaScript -->
     <script src="<%=basePath%>/bootstrap-basic/vendor/jquery/jquery.min.js"></script>
     <script src="<%=basePath%>/bootstrap-basic/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<%=basePath%>/bootstrap-basic/dateformat.js"></script>
+    <script>
+        var archiveId = "${archive.id}";
+        $(function(){
+            // console.log("查询评论: 文档ID:" + archiveId);
+            queryComments(archiveId);
+        });
+        function queryComments(archiveId){
+            $.ajax({
+                url:"<%=basePath%>/queryCommentsByArchiveId/" + archiveId,
+                success: function(res){
+                    if(res != null && res.length > 0){
+                        $("#comments_fields").html("");
+                        for(var i=0; i<res.length; i++){
+                            var createTime = new Date(res[i].createTime).format("yyyy-MM-dd hh:mm");
+                            $("#comments_fields").append(
+                                    '<div class="media mb-4">'+
+                                    '    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">'+
+                                    '        <div class="media-body">'+
+                                    '            <h5 class="mt-0" id="commenterName">'+ res[i].commentUsername +'</h5>'+
+                                    '            <span id="commentContent">'+ res[i].commentContent +'</span><br/>'+ createTime +
+                                    '        </div>'+
+                                    '</div>'
+                            );
+                        }
+                    }
+                }
+            });
+        }
+    </script>
   </body>
 
 </html>

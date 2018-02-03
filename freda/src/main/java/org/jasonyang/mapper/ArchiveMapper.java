@@ -4,13 +4,29 @@ import java.util.List;
 import java.util.Map;
 
 import org.jasonyang.model.Archive;
-
+/**
+ * @author jason
+ */
 public interface ArchiveMapper {
-	
+    /**
+     * 根据主键删除文档
+     * @param id
+     * @return
+     */
     int deleteByPrimaryKey(String id);
 
+    /**
+     * 插入文档
+     * @param record
+     * @return
+     */
     int insert(Archive record);
 
+    /**
+     * 插入文档
+     * @param record
+     * @return
+     */
     int insertSelective(Archive record);
 
     /**
@@ -27,9 +43,24 @@ public interface ArchiveMapper {
      */
     Archive selectArchiveById(String id);
 
+    /**
+     * 更新文档
+     * @param record
+     * @return
+     */
     int updateByPrimaryKeySelective(Archive record);
-    
+
+    /**
+     * 统计文档个数
+     * @param paramsMap
+     * @return
+     */
     int selectCountArchives(Map<String, Object> paramsMap);
-    
+
+    /**
+     * 查询文档
+     * @param paramsMap
+     * @return
+     */
     List<Archive> selectArchives(Map<String, Object> paramsMap);
 }

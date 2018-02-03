@@ -3,6 +3,10 @@ package org.jasonyang.model;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 文档
+ * @author jason
+ */
 public class Archive implements Serializable{
 	
 	private static final long serialVersionUID = -3035889003507233607L;

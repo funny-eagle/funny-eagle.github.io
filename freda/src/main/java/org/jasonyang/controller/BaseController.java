@@ -11,7 +11,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 控制器基类
  * Created by jason on 16/7/19.
+ * @author jason
  */
 public class BaseController {
     @Autowired

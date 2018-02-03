@@ -14,6 +14,7 @@ import redis.clients.jedis.JedisPoolConfig;
  * Redis工具类
  *
  * Created by yangjinlong on 16/9/25.
+ * @author jason
  */
 public class RedisUtils {
     private static Logger logger = Logger.getLogger(RedisUtils.class);

@@ -3,6 +3,7 @@ package org.jasonyang.enumeration;
 /**
  * 分页信息
  * Created by jason on 2017/7/14.
+ * @author jason
  */
 public enum PageSizeEnum {
     /**

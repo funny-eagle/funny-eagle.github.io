@@ -6,7 +6,9 @@ import java.net.URLDecoder;
 import java.util.Properties;
 
 /**
+ * 配置信息工具类
  * Created by jason on 2017/8/19.
+ * @author jason
  */
 public class PropUtils {
     public static String LOCATION;

@@ -4,6 +4,7 @@
   <resultMap id="BaseResultMap" type="org.jasonyang.model.Comment">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="archive_id" jdbcType="VARCHAR" property="archiveId" />
+    <result column="pid" jdbcType="VARCHAR" property="pid" />
     <result column="comment_username" jdbcType="VARCHAR" property="commentUsername" />
     <result column="comment_user_email" jdbcType="VARCHAR" property="commentUserEmail" />
     <result column="comment_user_ip_address" jdbcType="VARCHAR" property="commentUserIpAddress" />
@@ -12,7 +13,7 @@
   </resultMap>
   <sql id="Base_Column_List">
     id, archive_id, comment_username, comment_user_email, comment_user_ip_address, comment_content, 
-    create_time
+    create_time, pid
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -20,6 +21,12 @@
     from public.comment
     where id = #{id,jdbcType=VARCHAR}
   </select>
+    <select id="selectByArchiveId" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from comment c
+        where c.archive_id=#{archive_id,jdbcType=VARCHAR}
+    </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from public.comment
     where id = #{id,jdbcType=VARCHAR}
@@ -49,6 +56,9 @@
       <if test="createTime != null">
         create_time,
       </if>
+        <if test="pid != null">
+            pid,
+        </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -72,6 +82,9 @@
       <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
       </if>
+        <if test="pid != null">
+            #{pid,jdbcType=VARCHAR},
+        </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="org.jasonyang.model.Comment">
@@ -95,6 +108,9 @@
       <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
+        <if test="pid != null">
+            pid = #{pid,jdbcType=VARCHAR},
+        </if>
     </set>
     where id = #{id,jdbcType=VARCHAR}
   </update>
