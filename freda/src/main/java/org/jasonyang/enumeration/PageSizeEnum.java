@@ -5,6 +5,9 @@ package org.jasonyang.enumeration;
  * Created by jason on 2017/7/14.
  */
 public enum PageSizeEnum {
+    /**
+     * 每页显示数据的记录数
+     */
     PAGE_SIZE(5);
 
     private int value;

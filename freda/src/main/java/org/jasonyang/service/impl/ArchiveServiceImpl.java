@@ -3,8 +3,7 @@ package org.jasonyang.service.impl;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.Map;;
 
 import javax.annotation.PostConstruct;
 
@@ -16,6 +15,7 @@ import org.jasonyang.model.Archive;
 import org.jasonyang.redis.RedisUtils;
 import org.jasonyang.service.ArchiveService;
 import org.jasonyang.utils.SerializeUtil;
+import org.jasonyang.utils.UUIDUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
@@ -57,24 +57,14 @@ public class ArchiveServiceImpl implements ArchiveService {
 		if (archive == null) {
 			return resCount;
 		}
-		if(archive.getPreview() != null){
-			//可以替换大部分空白字符， 不限于空格    
-			// \s 可以匹配空格、制表符、换页符等空白字符的其中任意一个
-			archive.setPreview(archive.getPreview().replaceAll("\\s*", ""));
-		}
+
 		if (StringUtils.isBlank(archive.getId())) {
-			archive.setId(UUID.randomUUID().toString().replace("-", ""));
+			archive.setId(UUIDUtil.getUUID());
 			archive.setCreateTime(new Date());
 			resCount = this.archiveMapper.insertSelective(archive);
-			if (resCount > 0) {
-				this.logger.debug("====>新增文章 " + archive.getTitle() + "成功！");
-			}
 		} else {
 			archive.setUpdateTime(new Date());
 			resCount = this.archiveMapper.updateByPrimaryKeySelective(archive);
-			if (resCount > 0) {
-				this.logger.debug("====>修改文章 " + archive.getTitle() + "成功！");
-			}
 		}
 		return resCount;
 	}

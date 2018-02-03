@@ -4,7 +4,14 @@ package org.jasonyang.enumeration;
  * Created by jason on 2017/8/20.
  */
 public enum ResponseResult {
-    SUCCESS("success"),FAILED("failed");
+    /**
+     * success
+     */
+    SUCCESS("success"),
+    /**
+     * failed
+     */
+    FAILED("failed");
 
     private String status;
 

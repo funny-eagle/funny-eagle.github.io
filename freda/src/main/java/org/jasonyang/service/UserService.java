@@ -9,5 +9,5 @@ public abstract interface UserService {
 	 * @param username
 	 * @return User
 	 */
-	User UserAuthentication(String username);
+	User userAuthentication(String username);
 }

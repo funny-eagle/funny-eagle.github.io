@@ -11,11 +11,11 @@
 			connectionURL="jdbc:postgresql://127.0.0.1:5432/freda_db"
 			userId="postgres" password="jasonyang" />
 		<javaModelGenerator targetPackage="org.jasonyang.model"
-			targetProject="D:/git/nocoder.org/freda/src/main/java" />
+			targetProject="/Users/jason/local/git/FredaBlog/freda/src/main/java" />
 		<sqlMapGenerator targetPackage="org.jasonyang.mapper"
-			targetProject="D:/git/nocoder.org/freda/src/main/java" />
+			targetProject="/Users/jason/local/git/FredaBlog/freda/src/main/java" />
 		<javaClientGenerator targetPackage="org.jasonyang.mapper"
-			targetProject="D:/git/nocoder.org/freda/src/main/java" type="XMLMAPPER" />
+			targetProject="/Users/jason/local/git/FredaBlog/freda/src/main/java" type="XMLMAPPER" />
 		
 		
 		<table schema="public" tableName="comment" domainObjectName="Comment"

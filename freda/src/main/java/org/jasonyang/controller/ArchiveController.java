@@ -18,11 +18,6 @@ public class ArchiveController extends BaseController {
     @Autowired
     private ArchiveService archiveService;
 
-    @RequestMapping({"/blog"})
-    public String toHomePage() {
-        return "bootstrap-basic/index";
-    }
-
     /**
      * 查询文章列表
      * @param request

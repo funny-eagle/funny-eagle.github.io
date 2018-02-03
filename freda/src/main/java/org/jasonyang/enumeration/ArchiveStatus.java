@@ -5,7 +5,18 @@ package org.jasonyang.enumeration;
  * Created by jason on 2017/7/14.
  */
 public enum ArchiveStatus {
-    ALL(0), DRAFT(1), PUBLISHED(2);
+    /**
+     *  全部文章
+     */
+    ALL(0),
+    /**
+     * 草稿
+     */
+    DRAFT(1),
+    /**
+     * 已发布文章
+     */
+    PUBLISHED(2);
 
     private int value;
 

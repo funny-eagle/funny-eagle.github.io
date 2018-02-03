@@ -96,7 +96,7 @@ public class AdminController extends BaseController{
 		final String username = request.getParameter("username");
 		final String password = request.getParameter("password");
 		if (StringUtils.isNotBlank(username) && StringUtils.isNotBlank(password)) {
-			final User user = this.userService.UserAuthentication(username);
+			final User user = this.userService.userAuthentication(username);
 			if (user != null && password.equals(user.getPassword())) {
 				model.addAttribute("user", user);
 				// 将用户信息存放至session中
