@@ -98,7 +98,7 @@
                   <textarea id="commentContent" class="form-control" rows="3" placeholder="请输入评论内容"></textarea>
                   <span id="commentContentTips" style="color: orangered"></span>
                 </div>
-                <button type="button" class="btn btn-primary" onclick="saveComment();">提交</button>
+                <button id="submitCommentBtn" type="button" class="btn btn-primary" onclick="saveComment();">提交</button>
               </form>
             </div>
           </div>
@@ -179,7 +179,7 @@
             if(!validateComment(commentUsername, commentContent)){
                 return;
             }
-
+            $("#submitCommentBtn").attr("disabled","true");
             $.ajax({
                 type:"post",
                 url:"<%=basePath%>/saveComment",
@@ -190,15 +190,19 @@
                 },
                 success:function(res){
                     if("success" == res){
+                        $("#submitCommentBtn").attr("disabled",false);
                         $("#comment_tips").html(
                                 '<div class="hidden alert alert-success alert-dismissable" style="margin-top: 1.5em;">'+
                                     '<button type="button" class="close" data-dismiss="alert" aria-hidden="true"> &times;'+
                                     '</button>评论提交成功!'+
                                 '</div>'
                         );
+                        $("#commentUsername").val("");
+                        $("#commentContent").val("");
                         // 评论保存成功后刷新评论列表
                         queryComments(archiveId);
                     }
+
                 }
             });
         }
