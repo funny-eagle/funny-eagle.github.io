@@ -25,7 +25,7 @@
         select
         <include refid="Base_Column_List" />
         from comment c
-        where c.archive_id=#{archive_id,jdbcType=VARCHAR}
+        where c.archive_id=#{archive_id,jdbcType=VARCHAR} order by create_time desc
     </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from public.comment

@@ -85,14 +85,20 @@
             <!-- JiaThis Button END -->
             <br/>
           <!-- Comments Form -->
+          <div id="comment_tips"></div>
           <div class="card my-4">
-            <h5 class="card-header">评论:</h5>
+            <h5 class="card-header">评论</h5>
             <div class="card-body">
               <form>
+                  <div class="form-group">
+                      <input id="commentUsername" class="form-control" type="text"  value="" placeholder="请输入您的昵称">
+                      <span id="commentUsernameTips" style="color: orangered"></span>
+                  </div>
                 <div class="form-group">
-                  <textarea class="form-control" rows="3"></textarea>
+                  <textarea id="commentContent" class="form-control" rows="3" placeholder="请输入评论内容"></textarea>
+                  <span id="commentContentTips" style="color: orangered"></span>
                 </div>
-                <button type="submit" class="btn btn-primary">提交</button>
+                <button type="button" class="btn btn-primary" onclick="saveComment();">提交</button>
               </form>
             </div>
           </div>
@@ -127,30 +133,91 @@
     <script>
         var archiveId = "${archive.id}";
         $(function(){
-            // console.log("查询评论: 文档ID:" + archiveId);
             queryComments(archiveId);
         });
+
+        /**
+         *根据文档ID查询评论
+         */
         function queryComments(archiveId){
             $.ajax({
                 url:"<%=basePath%>/queryCommentsByArchiveId/" + archiveId,
                 success: function(res){
-                    if(res != null && res.length > 0){
-                        $("#comments_fields").html("");
-                        for(var i=0; i<res.length; i++){
-                            var createTime = new Date(res[i].createTime).format("yyyy-MM-dd hh:mm");
-                            $("#comments_fields").append(
-                                    '<div class="media mb-4">'+
-                                    '    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">'+
-                                    '        <div class="media-body">'+
-                                    '            <h5 class="mt-0" id="commenterName">'+ res[i].commentUsername +'</h5>'+
-                                    '            <span id="commentContent">'+ res[i].commentContent +'</span><br/>'+ createTime +
-                                    '        </div>'+
-                                    '</div>'
-                            );
-                        }
+                    showComments(res);
+                }
+            });
+        }
+
+        /**
+         * 遍历评论数据,展示到页面
+         */
+        function showComments(res) {
+            if (res != null && res.length > 0) {
+                $("#comments_fields").html("");
+                for (var i = 0; i < res.length; i++) {
+                    var createTime = new Date(res[i].createTime).format("yyyy-MM-dd hh:mm");
+                    $("#comments_fields").append(
+                            '<div class="media mb-4">' +
+                            '    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">' +
+                            '        <div class="media-body">' +
+                            '            <h5 class="mt-0" id="commenterName">' + res[i].commentUsername + '</h5>' +
+                            '            <span>' + res[i].commentContent + '</span><br/>' + createTime +
+                            '        </div>' +
+                            '</div>'
+                    );
+                }
+            }
+        }
+
+        /**
+         * 保存评论
+         */
+        function saveComment(){
+            var commentUsername = $("#commentUsername").val();
+            var commentContent = $("#commentContent").val();
+            // 评论昵称及内容校验
+            if(!validateComment(commentUsername, commentContent)){
+                return;
+            }
+
+            $.ajax({
+                type:"post",
+                url:"<%=basePath%>/saveComment",
+                data:{
+                    "archiveId":archiveId,
+                    "commentUsername": commentUsername,
+                    "commentContent":commentContent
+                },
+                success:function(res){
+                    if("success" == res){
+                        $("#comment_tips").html(
+                                '<div class="hidden alert alert-success alert-dismissable" style="margin-top: 1.5em;">'+
+                                    '<button type="button" class="close" data-dismiss="alert" aria-hidden="true"> &times;'+
+                                    '</button>评论提交成功!'+
+                                '</div>'
+                        );
+                        // 评论保存成功后刷新评论列表
+                        queryComments(archiveId);
                     }
                 }
             });
+        }
+
+        function validateComment(commentUsername, commentContent){
+            if(commentUsername == "" || commentContent == "" || commentUsername.trim() == "" || commentContent.trim() == ""){
+                $("#commentContentTips").html("昵称和内容都不能为空");
+                return false;
+            }
+            if(commentUsername.length>50){
+                $("#commentContentTips").html("朋友,昵称也太长了吧?");
+                return false;
+            }
+            if(commentContent.length>3000){
+                $("#commentContentTips").html("朋友,你这也评论也太长了,走点心,三千字够不够?");
+                return false;
+            }
+            $("#commentContentTips").html("");
+            return true;
         }
     </script>
   </body>
