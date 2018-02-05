@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServletRequest;
 public class IndexController extends BaseController{
     @RequestMapping({"/blog"})
     public String toHomePage() {
-        return "bootstrap-basic/index";
+        return "blog/index";
     }
 
     @RequestMapping({"/about"})
     public String toAboutPage(){
-        return "bootstrap-basic/about";
+        return "blog/about";
     }
 
     @RequestMapping({"/contact"})
     public String toContactPage(){
-        return "bootstrap-basic/contact";
+        return "blog/contact";
     }
 }

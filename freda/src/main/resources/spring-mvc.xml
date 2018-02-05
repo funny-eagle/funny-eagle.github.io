@@ -30,13 +30,8 @@
 		</property>
 	</bean>
 	<mvc:annotation-driven />
-	<mvc:view-controller path="/" view-name="phantom/index"/>
-	<mvc:resources mapping="/bootstrap/**" location="/bootstrap/"/>
-	<mvc:resources mapping="/imgs/**" location="/imgs/"/>
-	<mvc:resources mapping="/phantom/**" location="/phantom/"/>
-    <mvc:resources mapping="/bootstrap-basic/**" location="/bootstrap-basic/"/>
-	<mvc:resources mapping="/editor.md-master/**" location="/editor.md-master/"/>
-	<mvc:resources mapping="/gentelella/**" location="/gentelella/"/>
+	<mvc:resources mapping="/vendor/**" location="/vendor/"/>
+	<mvc:resources mapping="/images/**" location="/images/"/>
 	<!-- 定义跳转的文件的前后缀 ，视图模式配置 -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
