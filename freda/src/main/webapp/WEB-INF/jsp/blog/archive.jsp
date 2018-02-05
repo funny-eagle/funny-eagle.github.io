@@ -43,7 +43,7 @@
           <hr>
 
           <!-- Preview Image -->
-          <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+          <img class="img-fluid rounded" src="<%=basePath%>/images/car.png" alt="">
 
           <hr>
             <div id="archive_content" style="margin-top: 1em;">
