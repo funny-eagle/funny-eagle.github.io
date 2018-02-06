@@ -6,11 +6,8 @@ import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.serializer.PatternCodec;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.Pattern;
 import org.apache.commons.lang3.StringUtils;
-import org.jasonyang.enumeration.AdminPageEnum;
+import org.jasonyang.enumeration.ConsolePageEnum;
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.ResponseResult;
 import org.jasonyang.enumeration.UserEnum;
@@ -39,28 +36,38 @@ public class ConsoleController extends BaseController{
 	@Autowired
 	private ArchiveService archiveService;
 
-    // 默认打开首页
+    /**
+     * 默认打开首页
+     * @param request
+     * @return
+     */
     @RequestMapping({ "/console" })
-    public String admin(HttpServletRequest request){
-       return admin(request, AdminPageEnum.HOME.getPage());
+    public String index(HttpServletRequest request){
+       return linkTo(request, ConsolePageEnum.HOME.getPage());
     }
 
+    /**
+     * 根据操作链接到指定页面
+     * @param request
+     * @param operation
+     * @return
+     */
     @RequestMapping({ "/console/{operation}" })
-    public String admin(HttpServletRequest request, @PathVariable("operation") String operation) {
-        // 验证用户是否登录
+    public String linkTo(HttpServletRequest request, @PathVariable("operation") String operation) {
+        // 验证用户是否登录,否则跳转到登录页面
         if (request.getSession().getAttribute(UserEnum.USER.getProperty()) == null) {
             return "redirect:/login";
         }
 
         // 与枚举中配置的页面匹配, 跳转到对应操作的jsp页面
         if(StringUtils.isNotBlank(operation)){
-            for (AdminPageEnum adminPageEnum : AdminPageEnum.values()){
-                if(adminPageEnum.getPage().equals(operation)){
-                    return "admin/" + operation;
+            for (ConsolePageEnum consolePageEnum : ConsolePageEnum.values()){
+                if(consolePageEnum.getPage().equals(operation)){
+                    return "console/" + operation;
                 }
             }
         }
-        return "admin/home";
+        return "console/index";
     }
 
 	/**

@@ -7,7 +7,7 @@
 %>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -15,60 +15,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Jason Yang's Blog | 登录 </title>
+    <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="<%=basePath%>/images/command.ico">
+</head>
 
-    <!-- Bootstrap -->
-    <link href="<%=basePath%>/gentelella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="<%=basePath%>/gentelella/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="<%=basePath%>/gentelella/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="<%=basePath%>/gentelella/vendors/animate.css/animate.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="<%=basePath%>/gentelella/build/css/custom.min.css" rel="stylesheet">
-  </head>
-
-  <body class="login">
-    <div>
-      <a class="hiddenanchor" id="signup"></a>
-      <a class="hiddenanchor" id="signin"></a>
-
-      <div class="login_wrapper">
-        <div class="animate form login_form">
-          <section class="login_content">
-            <form id="login_form" method="post" action="<%=basePath %>/login">
-              <h1><i class="fa fa-code"></i> Jason Yang's Blog</h1>
-              <div>
-                <input type="text" class="form-control" placeholder="Username" required="" id="username" name="username"/>
-              </div>
-              <div>
-                <input type="password" class="form-control" placeholder="Password" required="" id="password" name="password"/>
-              </div>
-              <div>
-                <a id="login_link" class="btn btn-default submit">Login</a>
-              </div>
-
-              <div class="clearfix"></div>
-
-              <div class="separator">
-                <div class="clearfix"></div>
-                <br />
-
-                <div>
-                  <p>©2016 All Rights Reserved. jasonyang.org</p>
+<body class="login">
+<div class="container" style="margin-top: 10em;">
+    <div class="row clearfix">
+        <div class="col-md-12 column">
+            <div class="row clearfix">
+                <div class="col-md-3 column">
                 </div>
-              </div>
-            </form>
-          </section>
+                <div class="col-md-6 column">
+                    <form class="form-horizontal" role="form" method="post">
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-12" style="text-align: center;">
+                                <div style="text-align: center;">
+                                    <h3>
+                                        Console
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="input" class="form-control" id="username" name="username" placeholder="Username"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-12" style="text-align: center;">
+                                <button id="login_link" class="btn btn-success">Sign in</button>
+                                <div style="text-align: center;margin-top: 2em;color: gray;">
+                                    <p>©2016 NoCoder.Org All Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="col-md-3 column">
+                </div>
+            </div>
         </div>
-
-
-      </div>
     </div>
-  </body>
-  <script src="<%=basePath%>/gentelella/vendors/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript">
+</div>
+
+</body>
+<script src="<%=basePath%>/vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript">
 
     $(function(){
         // 登录按钮点击事件
@@ -84,5 +83,5 @@
         });
 
     });
-  </script>
+</script>
 </html>

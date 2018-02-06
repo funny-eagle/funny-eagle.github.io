@@ -3,17 +3,15 @@ package org.jasonyang.enumeration;
 /**
  * @author jason
  */
-public enum AdminPageEnum {
+public enum ConsolePageEnum {
     // 首页
-    HOME("home"),
-    // 首页内容
-    HOME_CONTENT("home_content"),
+    HOME("index"),
     // 文档管理
-    ARCHIVE("archive_management"),
+    ARCHIVE("archive"),
     // 标签管理
-    TAG("tag_management"),
+    TAG("tag"),
     // 用户设置
-    USER_SETTINGS("user_settings"),
+    USER_SETTINGS("user-settings"),
     // 文档编辑
     EDITOR("editor");
 
@@ -27,13 +25,13 @@ public enum AdminPageEnum {
         this.page = page;
     }
 
-    AdminPageEnum(String page){
+    ConsolePageEnum(String page){
         this.page = page;
     }
 
 //    public static void main(String[] args){
 //        String page = "home";
-//        for (AdminPageEnum adminPageEnum : AdminPageEnum.values()){
+//        for (ConsolePageEnum adminPageEnum : ConsolePageEnum.values()){
 //            if(adminPageEnum.getPage().equals(page)){
 //                System.out.println(adminPageEnum.getPage());
 //            }
