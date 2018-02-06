@@ -21,7 +21,7 @@ public class CommentTest {
 
     @org.junit.Test
     public void testCommentMapper(){
-        String archiveId = "580efd290b414b5d8a38b0a96747d7da";
+        String archiveId = "32";
         /*Comment comment = new Comment();
         comment.setId(UUIDUtil.getUUID());
         comment.setArchiveId(archiveId);
