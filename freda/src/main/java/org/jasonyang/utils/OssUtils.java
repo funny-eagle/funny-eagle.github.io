@@ -8,6 +8,7 @@ import com.aliyun.oss.model.OSSObject;
 import com.aliyun.oss.model.OSSObjectSummary;
 import com.aliyun.oss.model.ObjectListing;
 import org.apache.log4j.Logger;
+
 import java.io.*;
 import java.util.List;
 
@@ -37,16 +38,17 @@ public class OssUtils {
 
     /**
      * 上传文件
+     *
      * @param filePath
      * @param fileName
      */
-    public static void putObject(String filePath, String fileName){
+    public static void putObject(String filePath, String fileName) {
         OSSClient ossClient = new OSSClient(endpoint, accessKeyId, accessKeySecret);
         ossClient.putObject(bucketName, fileName, new File(filePath));
         System.out.println("文件上传成功!");
     }
 
-    public static void getObject(String fileName){
+    public static void getObject(String fileName) {
         OSSClient ossClient = new OSSClient(endpoint, accessKeyId, accessKeySecret);
         OSSObject ossObject = ossClient.getObject(bucketName, fileName);
         InputStream inputStream = ossObject.getObjectContent();
@@ -74,7 +76,7 @@ public class OssUtils {
         System.out.println("Object：" + fileName + "的内容是：" + objectContent);
     }
 
-    public static void test(){
+    public static void test() {
         String firstKey = "jason_test_object";
         OSSClient ossClient = new OSSClient(endpoint, accessKeyId, accessKeySecret);
         try {
@@ -137,10 +139,6 @@ public class OssUtils {
 
             // 删除Object。详细请参看“SDK手册 > Java-SDK > 管理文件”。
             // 链接地址是：https://help.aliyun.com/document_detail/oss/sdk/java-sdk/manage_object.html?spm=5176.docoss/sdk/java-sdk/manage_bucket
-//            ossClient.deleteObject(bucketName, firstKey);
-//            System.out.println("删除Object：" + firstKey + "成功。");
-//            ossClient.deleteObject(bucketName, fileKey);
-//            System.out.println("删除Object：" + fileKey + "成功。");
 
         } catch (OSSException oe) {
             oe.printStackTrace();
@@ -155,9 +153,9 @@ public class OssUtils {
         logger.info("Completed");
     }
 
-    public static void main(String[] args){
-        String filePath="/Users/jason/Pictures/Eric-Capton-and-B.B.-King-Riding-with-The-King-Rolex-Watches.jpg";
-        String fileName="eric.jpg";
+    public static void main(String[] args) {
+        String filePath = "/Users/jason/Pictures/Eric-Capton-and-B.B.-King-Riding-with-The-King-Rolex-Watches.jpg";
+        String fileName = "eric.jpg";
         OssUtils.putObject(filePath, fileName);
     }
 }

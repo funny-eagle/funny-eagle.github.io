@@ -13,14 +13,16 @@ import java.util.Map;
 /**
  * 控制器基类
  * Created by jason on 16/7/19.
+ *
  * @author jason
  */
 public class BaseController {
     @Autowired
     private ArchiveService archiveService;
-    
+
     /**
      * 查询文档信息（返回 文档列表 archiveList 和 总页数 totalPages）
+     *
      * @param state
      * @param tag
      * @param page
@@ -42,16 +44,16 @@ public class BaseController {
         if (archivesCount > 0) {
             List<Archive> archiveList = null;
             // 从数据库查询所有文档信息
-            if(state == ArchiveStatus.ALL.getValue()){
+            if (state == ArchiveStatus.ALL.getValue()) {
                 archiveList = this.archiveService.queryArchiveList(state, tag, page, pageSize);
-            }else{
+            } else {
                 // 从缓存获取已发布的文档基本信息
                 archiveList = this.archiveService.getAllPublishedArchivesInfo();
-                if(archiveList != null && archiveList.size() > 0){
-                    if(archiveList.size() >= page * pageSize){
-                        archiveList = archiveList.subList((page-1) * pageSize, page * pageSize);
-                    }else{
-                        archiveList = archiveList.subList((page-1) * pageSize, archiveList.size());
+                if (archiveList != null && archiveList.size() > 0) {
+                    if (archiveList.size() >= page * pageSize) {
+                        archiveList = archiveList.subList((page - 1) * pageSize, page * pageSize);
+                    } else {
+                        archiveList = archiveList.subList((page - 1) * pageSize, archiveList.size());
                     }
                 }
             }

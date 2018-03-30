@@ -1,118 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.jasonyang.mapper.CommentMapper">
-  <resultMap id="BaseResultMap" type="org.jasonyang.model.Comment">
-    <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="archive_id" jdbcType="VARCHAR" property="archiveId" />
-    <result column="pid" jdbcType="VARCHAR" property="pid" />
-    <result column="comment_username" jdbcType="VARCHAR" property="commentUsername" />
-    <result column="comment_user_email" jdbcType="VARCHAR" property="commentUserEmail" />
-    <result column="comment_user_ip_address" jdbcType="VARCHAR" property="commentUserIpAddress" />
-    <result column="comment_content" jdbcType="VARCHAR" property="commentContent" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, archive_id, comment_username, comment_user_email, comment_user_ip_address, comment_content, 
-    create_time, pid
-  </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from public.comment
-    where id = #{id,jdbcType=VARCHAR}
-  </select>
+    <resultMap id="BaseResultMap" type="org.jasonyang.model.Comment">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="archive_id" jdbcType="VARCHAR" property="archiveId"/>
+        <result column="pid" jdbcType="VARCHAR" property="pid"/>
+        <result column="comment_username" jdbcType="VARCHAR" property="commentUsername"/>
+        <result column="comment_user_email" jdbcType="VARCHAR" property="commentUserEmail"/>
+        <result column="comment_user_ip_address" jdbcType="VARCHAR" property="commentUserIpAddress"/>
+        <result column="comment_content" jdbcType="VARCHAR" property="commentContent"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, archive_id, comment_username, comment_user_email, comment_user_ip_address, comment_content,
+        create_time, pid
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from public.comment
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
     <select id="selectByArchiveId" parameterType="java.lang.String" resultMap="BaseResultMap">
         select
-        <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         from comment c
         where c.archive_id=#{archive_id,jdbcType=VARCHAR} order by create_time desc
     </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from public.comment
-    where id = #{id,jdbcType=VARCHAR}
-  </delete>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        delete from public.comment
+        where id = #{id,jdbcType=VARCHAR}
+    </delete>
 
-  <insert id="insertSelective" parameterType="org.jasonyang.model.Comment">
-    insert into public.comment
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="archiveId != null">
-        archive_id,
-      </if>
-      <if test="commentUsername != null">
-        comment_username,
-      </if>
-      <if test="commentUserEmail != null">
-        comment_user_email,
-      </if>
-      <if test="commentUserIpAddress != null">
-        comment_user_ip_address,
-      </if>
-      <if test="commentContent != null">
-        comment_content,
-      </if>
-      <if test="createTime != null">
-        create_time,
-      </if>
-        <if test="pid != null">
-            pid,
-        </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=VARCHAR},
-      </if>
-      <if test="archiveId != null">
-        #{archiveId,jdbcType=VARCHAR},
-      </if>
-      <if test="commentUsername != null">
-        #{commentUsername,jdbcType=VARCHAR},
-      </if>
-      <if test="commentUserEmail != null">
-        #{commentUserEmail,jdbcType=VARCHAR},
-      </if>
-      <if test="commentUserIpAddress != null">
-        #{commentUserIpAddress,jdbcType=VARCHAR},
-      </if>
-      <if test="commentContent != null">
-        #{commentContent,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-        <if test="pid != null">
-            #{pid,jdbcType=VARCHAR},
-        </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="org.jasonyang.model.Comment">
-    update public.comment
-    <set>
-      <if test="archiveId != null">
-        archive_id = #{archiveId,jdbcType=VARCHAR},
-      </if>
-      <if test="commentUsername != null">
-        comment_username = #{commentUsername,jdbcType=VARCHAR},
-      </if>
-      <if test="commentUserEmail != null">
-        comment_user_email = #{commentUserEmail,jdbcType=VARCHAR},
-      </if>
-      <if test="commentUserIpAddress != null">
-        comment_user_ip_address = #{commentUserIpAddress,jdbcType=VARCHAR},
-      </if>
-      <if test="commentContent != null">
-        comment_content = #{commentContent,jdbcType=VARCHAR},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-        <if test="pid != null">
-            pid = #{pid,jdbcType=VARCHAR},
-        </if>
-    </set>
-    where id = #{id,jdbcType=VARCHAR}
-  </update>
+    <insert id="insertSelective" parameterType="org.jasonyang.model.Comment">
+        insert into public.comment
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="archiveId != null">
+                archive_id,
+            </if>
+            <if test="commentUsername != null">
+                comment_username,
+            </if>
+            <if test="commentUserEmail != null">
+                comment_user_email,
+            </if>
+            <if test="commentUserIpAddress != null">
+                comment_user_ip_address,
+            </if>
+            <if test="commentContent != null">
+                comment_content,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="pid != null">
+                pid,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="archiveId != null">
+                #{archiveId,jdbcType=VARCHAR},
+            </if>
+            <if test="commentUsername != null">
+                #{commentUsername,jdbcType=VARCHAR},
+            </if>
+            <if test="commentUserEmail != null">
+                #{commentUserEmail,jdbcType=VARCHAR},
+            </if>
+            <if test="commentUserIpAddress != null">
+                #{commentUserIpAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="commentContent != null">
+                #{commentContent,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="pid != null">
+                #{pid,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.jasonyang.model.Comment">
+        update public.comment
+        <set>
+            <if test="archiveId != null">
+                archive_id = #{archiveId,jdbcType=VARCHAR},
+            </if>
+            <if test="commentUsername != null">
+                comment_username = #{commentUsername,jdbcType=VARCHAR},
+            </if>
+            <if test="commentUserEmail != null">
+                comment_user_email = #{commentUserEmail,jdbcType=VARCHAR},
+            </if>
+            <if test="commentUserIpAddress != null">
+                comment_user_ip_address = #{commentUserIpAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="commentContent != null">
+                comment_content = #{commentContent,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="pid != null">
+                pid = #{pid,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
 
 </mapper>

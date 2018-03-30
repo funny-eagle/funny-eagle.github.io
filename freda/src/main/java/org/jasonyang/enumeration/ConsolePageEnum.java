@@ -25,7 +25,7 @@ public enum ConsolePageEnum {
         this.page = page;
     }
 
-    ConsolePageEnum(String page){
+    ConsolePageEnum(String page) {
         this.page = page;
     }
 

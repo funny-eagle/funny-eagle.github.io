@@ -5,13 +5,14 @@ import java.util.Date;
 
 /**
  * 用户
+ *
  * @author jason
  */
-public class User implements Serializable{
-	
-	private static final long serialVersionUID = -3035889003507183607L;
+public class User implements Serializable {
 
-	private String id;
+    private static final long serialVersionUID = -3035889003507183607L;
+
+    private String id;
 
     private String username;
 

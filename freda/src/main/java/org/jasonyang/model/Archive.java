@@ -5,12 +5,13 @@ import java.util.Date;
 
 /**
  * 文档
+ *
  * @author jason
  */
-public class Archive implements Serializable{
-	
-	private static final long serialVersionUID = -3035889003507233607L;
-	
+public class Archive implements Serializable {
+
+    private static final long serialVersionUID = -3035889003507233607L;
+
     private String id;
 
     private String title;
@@ -34,7 +35,7 @@ public class Archive implements Serializable{
     private Date updateTime;
 
     private String preview;
-    
+
     public String getId() {
         return id;
     }
@@ -123,13 +124,13 @@ public class Archive implements Serializable{
         this.updateTime = updateTime;
     }
 
-	public String getPreview() {
-		return preview;
-	}
+    public String getPreview() {
+        return preview;
+    }
 
-	public void setPreview(String preview) {
-		this.preview = preview;
-	}
-    
-    
+    public void setPreview(String preview) {
+        this.preview = preview;
+    }
+
+
 }

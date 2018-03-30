@@ -8,6 +8,7 @@ import java.util.Properties;
 /**
  * 配置信息工具类
  * Created by jason on 2017/8/19.
+ *
  * @author jason
  */
 public class PropUtils {
@@ -15,7 +16,7 @@ public class PropUtils {
 
     public static final String CONFIG = "config.properties";
 
-    static{
+    static {
         try {
             String temp = URLDecoder.decode(PropUtils.class.getProtectionDomain().getCodeSource().getLocation().getFile(), "UTF-8");
             LOCATION = "/" + temp.substring(1, temp.lastIndexOf('/'));
@@ -24,13 +25,14 @@ public class PropUtils {
         }
 
     }
+
     /**
      * @param args
      * @throws Exception
      */
     public static Properties getProperties(String filepath) throws Exception {
         Properties prop = new Properties();
-        FileInputStream fis = new FileInputStream(LOCATION+"/"+filepath);
+        FileInputStream fis = new FileInputStream(LOCATION + "/" + filepath);
         prop.load(fis);
         return prop;
     }
@@ -38,7 +40,7 @@ public class PropUtils {
     public static String getConfigValue(String key) {
         try {
             Properties properties = getProperties(CONFIG);
-            if(properties.get(key)!=null){
+            if (properties.get(key) != null) {
                 return properties.get(key).toString();
             }
         } catch (Exception e) {
@@ -47,7 +49,7 @@ public class PropUtils {
         return "";
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         try {
             String host = getConfigValue("redis_server_host");
             String port = getConfigValue("redis_server_port");

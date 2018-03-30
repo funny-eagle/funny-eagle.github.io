@@ -10,19 +10,19 @@ import javax.servlet.http.HttpServletRequest;
  * @date 18/1/4.
  */
 @Controller
-public class IndexController extends BaseController{
+public class IndexController extends BaseController {
     @RequestMapping({"/blog"})
     public String toHomePage() {
         return "blog/index";
     }
 
     @RequestMapping({"/about"})
-    public String toAboutPage(){
+    public String toAboutPage() {
         return "blog/about";
     }
 
     @RequestMapping({"/contact"})
-    public String toContactPage(){
+    public String toContactPage() {
         return "blog/contact";
     }
 }

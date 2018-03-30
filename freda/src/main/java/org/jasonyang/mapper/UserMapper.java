@@ -1,14 +1,18 @@
 package org.jasonyang.mapper;
 
 import org.jasonyang.model.User;
+import org.springframework.stereotype.Repository;
 
 /**
  * 用户mapper接口
+ *
  * @author jason
  */
+@Repository
 public interface UserMapper {
     /**
      * 删除用户
+     *
      * @param id
      * @return
      */
@@ -16,6 +20,7 @@ public interface UserMapper {
 
     /**
      * 插入用户
+     *
      * @param record
      * @return
      */
@@ -23,6 +28,7 @@ public interface UserMapper {
 
     /**
      * 插入用户
+     *
      * @param record
      * @return
      */
@@ -30,6 +36,7 @@ public interface UserMapper {
 
     /**
      * 根据主键查询用户
+     *
      * @param id
      * @return
      */
@@ -37,6 +44,7 @@ public interface UserMapper {
 
     /**
      * 更新用户
+     *
      * @param record
      * @return
      */
@@ -44,6 +52,7 @@ public interface UserMapper {
 
     /**
      * 更新用户
+     *
      * @param record
      * @return
      */
@@ -51,6 +60,7 @@ public interface UserMapper {
 
     /**
      * 根据名称查询用户
+     *
      * @param username
      * @return
      */

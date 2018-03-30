@@ -5,9 +5,10 @@ import java.util.Date;
 
 /**
  * 评论
+ *
  * @author jason
  */
-public class Comment implements Serializable{
+public class Comment implements Serializable {
     private String id;
 
     private String archiveId;

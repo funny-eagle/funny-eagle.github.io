@@ -2,6 +2,7 @@ package org.jasonyang.controller;
 
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
+
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.PageSizeEnum;
 import org.jasonyang.model.Archive;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
+ * 文章Controller
  * @author jason
  */
 @Controller
@@ -23,6 +25,7 @@ public class ArchiveController extends BaseController {
 
     /**
      * 查询文章列表
+     *
      * @param request
      * @return
      */
@@ -47,13 +50,14 @@ public class ArchiveController extends BaseController {
 
     /**
      * 根据ID获取文章
+     *
      * @param request
      * @param model
      * @return
      */
     @RequestMapping({"/archive/{id}"})
     public String viewArchive(HttpServletRequest request, @PathVariable("id") String id, Model model) {
-        Archive archive = this.archiveService.queryArchiveById(id,1);
+        Archive archive = this.archiveService.queryArchiveById(id, 1);
         model.addAttribute("archive", archive);
         return "blog/archive";
     }

@@ -11,16 +11,18 @@ import java.util.List;
 /**
  * 序列化工具
  * Created by yangjinlong on 16/9/25.
+ *
  * @author jason
  */
 public class SerializeUtil {
 
     /**
      * 对象序列化
+     *
      * @param obj
      * @return bytes
      */
-    public static byte[] serialize(Object obj){
+    public static byte[] serialize(Object obj) {
         ObjectOutputStream objectOutputStream = null;
         ByteArrayOutputStream byteArrayOutputStream = null;
         byteArrayOutputStream = new ByteArrayOutputStream();
@@ -38,10 +40,11 @@ public class SerializeUtil {
 
     /**
      * 反序列化对象
+     *
      * @param bytes
      * @return object
      */
-    public static Object unserialize(byte[] bytes){
+    public static Object unserialize(byte[] bytes) {
         ObjectInputStream objectInputStream = null;
         ByteArrayInputStream byteArrayInputStream = null;
         Object obj = null;
@@ -62,10 +65,11 @@ public class SerializeUtil {
 
     /**
      * 列表对象序列化
+     *
      * @param list
      * @return
      */
-    public static byte[] serializeList(List<?> list){
+    public static byte[] serializeList(List<?> list) {
         ObjectOutputStream objectOutputStream = null;
         ByteArrayOutputStream baot = new ByteArrayOutputStream();
         try {
@@ -83,16 +87,17 @@ public class SerializeUtil {
 
     /**
      * 列表对象反序列化
+     *
      * @param bytes
      * @return
      */
-    public static List<?> unserializeList(byte[] bytes){
+    public static List<?> unserializeList(byte[] bytes) {
         List<Object> list = new ArrayList<Object>();
-        ObjectInputStream objectInputStream  = null;
+        ObjectInputStream objectInputStream = null;
         ByteArrayInputStream bais = new ByteArrayInputStream(bytes);
         try {
             objectInputStream = new ObjectInputStream(bais);
-            while(bais.available()>0){
+            while (bais.available() > 0) {
                 try {
                     list.add(objectInputStream.readObject());
                 } catch (ClassNotFoundException e) {

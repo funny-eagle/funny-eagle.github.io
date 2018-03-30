@@ -6,17 +6,19 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * EncryptUtil
  * Created by jason on 2017/7/18.
+ *
  * @author jason
  */
 public class EncryptUtil {
 
     /**
      * 加密
+     *
      * @param value
      * @return
      */
-    public static String encode(String value){
-        if(StringUtils.isNotBlank(value)){
+    public static String encode(String value) {
+        if (StringUtils.isNotBlank(value)) {
             Base64 base64 = new Base64();
             return new String(base64.encode(base64.encode(value.getBytes())));
         }
@@ -25,11 +27,12 @@ public class EncryptUtil {
 
     /**
      * 解密
+     *
      * @param value
      * @return
      */
-    public static String decode(String value){
-        if(StringUtils.isNotBlank(value)){
+    public static String decode(String value) {
+        if (StringUtils.isNotBlank(value)) {
             Base64 base64 = new Base64();
             return new String(base64.decode(base64.decode(value.getBytes())));
         }

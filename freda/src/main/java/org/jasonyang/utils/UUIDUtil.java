@@ -5,7 +5,7 @@ package org.jasonyang.utils;
  * @date 18/1/7.
  */
 public class UUIDUtil {
-    public static String getUUID(){
+    public static String getUUID() {
         return java.util.UUID.randomUUID().toString().replace("-", "");
     }
 
