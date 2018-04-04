@@ -22,6 +22,7 @@
     <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%=basePath%>/vendor/blog/css/blog-post.css" rel="stylesheet">
     <link rel="icon" href="<%=basePath%>/images/command.ico">
+    <link href="<%=basePath%>/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <style>
         a {
             color:#3b6caa;
