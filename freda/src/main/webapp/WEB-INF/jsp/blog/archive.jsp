@@ -141,8 +141,8 @@
          * 保存评论
          */
         function saveComment(){
-            var commentUsername = $("#commentUsername").val();
-            var commentContent = $("#commentContent").val();
+            var commentUsername = htmlEncode($("#commentUsername").val());
+            var commentContent = htmlEncode($("#commentContent").val());
             // 评论昵称及内容校验
             if(!validateComment(commentUsername, commentContent)){
                 return;
@@ -154,7 +154,7 @@
                 data:{
                     "archiveId":archiveId,
                     "commentUsername": commentUsername,
-                    "commentContent":commentContent
+                    "commentContent": commentContent
                 },
                 success:function(res){
                     if("success" == res){
@@ -190,6 +190,17 @@
             }
             $("#commentContentTips").html("");
             return true;
+        }
+
+        function htmlEncode(str) {
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+        function htmlDecode(str) {
+            var div = document.createElement("div");
+            div.innerHTML = str;
+            return div.innerHTML;
         }
     </script>
   </body>

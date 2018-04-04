@@ -10,7 +10,7 @@ public enum PageSizeEnum {
     /**
      * 每页显示数据的记录数
      */
-    PAGE_SIZE(5);
+    PAGE_SIZE(10);
 
     private int value;
 

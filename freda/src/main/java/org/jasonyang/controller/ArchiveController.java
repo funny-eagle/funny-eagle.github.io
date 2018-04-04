@@ -24,7 +24,7 @@ public class ArchiveController extends BaseController {
     private ArchiveService archiveService;
 
     /**
-     * 查询文章列表
+     * 分页查询文章列表
      *
      * @param request
      * @return

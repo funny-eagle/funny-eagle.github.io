@@ -9,6 +9,7 @@ import java.util.List;
  * 评论Mapper
  * @author jason
  */
+@Repository
 public interface CommentMapper {
     int deleteByPrimaryKey(String id);
 

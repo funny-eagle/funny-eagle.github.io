@@ -45,7 +45,7 @@ public class ConsoleController extends BaseController {
      */
     @RequestMapping({"/console"})
     public String index(HttpServletRequest request) {
-        return linkTo(request, ConsolePageEnum.HOME.getPage());
+        return linkTo(request, ConsolePageEnum.INDEX.getPage());
     }
 
     /**
@@ -64,11 +64,16 @@ public class ConsoleController extends BaseController {
 
         // 与枚举中配置的页面匹配, 跳转到对应操作的jsp页面
         if (StringUtils.isNotBlank(operation)) {
-            for (ConsolePageEnum consolePageEnum : ConsolePageEnum.values()) {
-                if (consolePageEnum.getPage().equals(operation)) {
-                    return "console/" + operation;
+            if(ConsolePageEnum.INDEX.getPage().equals(operation)){
+                //TODO
+            }else{
+                for (ConsolePageEnum consolePageEnum : ConsolePageEnum.values()) {
+                    if (consolePageEnum.getPage().equals(operation)) {
+                        return "console/" + operation;
+                    }
                 }
             }
+
         }
         return "console/index";
     }
@@ -80,7 +85,7 @@ public class ConsoleController extends BaseController {
      * @param model
      * @return 后台首页或登录页面
      */
-    @RequestMapping({"/archiveList/{pageStr}"})
+    @RequestMapping({"/console/index/{pageStr}"})
     public String archiveList(HttpServletRequest request, @PathVariable("pageStr") String pageStr, Model model) {
         // 查看HttpSession中是否存在用户，不存在直接返回登录界面
         if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
@@ -94,7 +99,7 @@ public class ConsoleController extends BaseController {
             model.addAttribute("page", page);
             model.addAttribute("totalPages", resMap.get("totalPages"));
 
-            return "console/articles";
+            return "console/index";
         }
 
         return "redirect:login";
@@ -120,7 +125,7 @@ public class ConsoleController extends BaseController {
                 model.addAttribute("user", user);
                 // 将用户信息存放至session中
                 request.getSession().setAttribute("user", user);
-                return "redirect:console/home";
+                return "redirect:console/index";
             }
         }
         return "console/login";
