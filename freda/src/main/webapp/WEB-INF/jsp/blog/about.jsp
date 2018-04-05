@@ -19,13 +19,11 @@
             <div class="card my-4">
                 <h5 class="card-header">About me</h5>
                 <div class="card-body">
-                    <h2>杨金龙（Jason Yang）</h2>
-                    <p>来自新疆, 80后, 喜欢编程, 弹吉他</p>
-                    <p>Mail:<a href="mailto:yangjinlong86@126.com">yangjinlong86@126.com</a></p>
-                    <p>Github:<a target="_blank" href="https://github.com/yangjinlong86">https://github.com/yangjinlong86</a>
-                    </p>
-                    <p>Blog:<a target="_blank" href="http://nocoder.org">http://nocoder.org</a></p>
-                    <p>QQ/微信:88131182</p>
+                    <h2>Jason Yang</h2>
+                    <p>E-Mail:<a href="mailto:yangjinlong86@126.com">yangjinlong86@126.com</a></p>
+                    <p>Github:<a target="_blank" href="https://github.com/yangjinlong86">https://github.com/yangjinlong86</a></p>
+                    <p>Website:<a target="_blank" href="http://nocoder.org">http://nocoder.org</a></p>
+                    <p>QQ/WeChat:88131182</p>
                 </div>
             </div>
             <div id="div_load" style="text-align: center;padding-bottom:1em;">

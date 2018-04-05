@@ -6,6 +6,7 @@ import org.jasonyang.model.Archive;
 import org.jasonyang.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.servlet.ServletContext;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +18,8 @@ import java.util.Map;
  * @author jason
  */
 public class BaseController {
+    @Autowired
+    ServletContext context;
     @Autowired
     private ArchiveService archiveService;
 
@@ -43,12 +46,18 @@ public class BaseController {
         final int archivesCount = this.archiveService.countArchives(paramsMap);
         if (archivesCount > 0) {
             List<Archive> archiveList = null;
-            // 从数据库查询所有文档信息
+            List<Archive> recentlyArchiveList = null;
+
+            // 从数据库查询所有文档信息(后台Console使用)
             if (state == ArchiveStatus.ALL.getValue()) {
                 archiveList = this.archiveService.queryArchiveList(state, tag, page, pageSize);
             } else {
-                // 从缓存获取已发布的文档基本信息
+                // 从缓存获取已发布的文档基本信息(Blog首页使用)
                 archiveList = this.archiveService.getAllPublishedArchivesInfo();
+                // 先把最新的5篇文档拿出来
+                recentlyArchiveList = archiveList.subList(0, (archiveList.size() >=5) ? 5 : archiveList.size());
+                context.setAttribute("recentlyArchiveList", recentlyArchiveList);
+
                 if (archiveList != null && archiveList.size() > 0) {
                     if (archiveList.size() >= page * pageSize) {
                         archiveList = archiveList.subList((page - 1) * pageSize, page * pageSize);
@@ -57,7 +66,6 @@ public class BaseController {
                     }
                 }
             }
-
             resMap.put("archiveList", archiveList);
             // 总页数(取天花板值 ) = 文档总数 / 每页个数 
             int totalPages = (int) Math.ceil((double) archivesCount / (double) pageSize);

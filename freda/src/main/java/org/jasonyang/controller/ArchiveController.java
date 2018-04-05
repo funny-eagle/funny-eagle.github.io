@@ -1,6 +1,8 @@
 package org.jasonyang.controller;
 
+import java.util.List;
 import java.util.Map;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 
 import org.jasonyang.enumeration.ArchiveStatus;
@@ -57,6 +59,7 @@ public class ArchiveController extends BaseController {
      */
     @RequestMapping({"/archive/{id}"})
     public String viewArchive(HttpServletRequest request, @PathVariable("id") String id, Model model) {
+        // 1 表示前台使用不查询markdown内容字段
         Archive archive = this.archiveService.queryArchiveById(id, 1);
         model.addAttribute("archive", archive);
         return "blog/archive";
