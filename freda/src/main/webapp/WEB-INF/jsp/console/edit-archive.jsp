@@ -16,6 +16,19 @@
     <title>Console</title>
     <link href="<%=basePath%>/vendor/simplemde/simplemde.min.css" rel="stylesheet">
     <script src="<%=basePath%>/vendor/simplemde/simplemde.min.js"></script>
+    <style>
+
+        .editor-toolbar.fullscreen{
+            z-index:1031
+        }
+        .CodeMirror-fullscreen{
+            z-index:1031
+        }
+
+        .editor-preview-side{
+            z-index:1031
+        }
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -44,16 +57,20 @@
             <!-- 文档区域-->
             <div id="article_section">
                 文档编辑页面
+                <textarea id="simplemde"></textarea>
             </div>
             <!-- loading -->
             <div id="div_load" style="text-align: center;padding-bottom:1em;"></div>
         </div>
     </div>
     <!-- /.row -->
-
 </div>
 <!-- /.container -->
-
 <jsp:include page="../blog/commons/foot.jsp"/>
+<script>
+    var simplemde = new SimpleMDE({
+        element: $("#simplemde")[0]
+    });
+</script>
 </body>
 </html>

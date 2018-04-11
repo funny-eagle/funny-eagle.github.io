@@ -43,6 +43,7 @@
             <div class="col-lg-12">
                 <!-- 文档列表区域-->
                 <div id="article_section">
+                    <p>文章列表</p>
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
@@ -64,7 +65,7 @@
                                     <td>${archive.author}</td>
                                     <td><fmt:formatDate value="${archive.createTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
                                     <td><fmt:formatDate value="${archive.updateTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
-                                    <td>编辑</td>
+                                    <td><a href="<%=basePath%>/archive/edit/${archive.id}">编辑</a></td>
                                 </tr>
                             </c:forEach>
 

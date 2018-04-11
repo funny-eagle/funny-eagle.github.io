@@ -63,19 +63,15 @@ public class ConsoleController extends BaseController {
         }
 
         // 与枚举中配置的页面匹配, 跳转到对应操作的jsp页面
-        if (StringUtils.isNotBlank(operation)) {
-            if(ConsolePageEnum.INDEX.getPage().equals(operation)){
-                //TODO
-            }else{
-                for (ConsolePageEnum consolePageEnum : ConsolePageEnum.values()) {
-                    if (consolePageEnum.getPage().equals(operation)) {
-                        return "console/" + operation;
-                    }
+        if (StringUtils.isNotBlank(operation) && !ConsolePageEnum.INDEX.getPage().equals(operation)) {
+            for (ConsolePageEnum consolePageEnum : ConsolePageEnum.values()) {
+                if (consolePageEnum.getPage().equals(operation)) {
+                    return "console/" + operation;
                 }
             }
-
         }
-        return "console/index";
+
+        return "redirect:console/index/1";
     }
 
     /**
@@ -115,7 +111,7 @@ public class ConsoleController extends BaseController {
     @RequestMapping({"/login"})
     public String login(HttpServletRequest request, Model model) {
         if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
-            return "redirect:console/home";
+            return "redirect:console/index/1";
         }
         final String username = request.getParameter("username");
         final String password = request.getParameter("password");
@@ -125,7 +121,7 @@ public class ConsoleController extends BaseController {
                 model.addAttribute("user", user);
                 // 将用户信息存放至session中
                 request.getSession().setAttribute("user", user);
-                return "redirect:console/index";
+                return "redirect:console/index/1";
             }
         }
         return "console/login";
@@ -145,7 +141,7 @@ public class ConsoleController extends BaseController {
     public String toEdit(@PathVariable("id") String id, Model model) {
         Archive archive = this.archiveService.queryArchiveById(id, 0);
         model.addAttribute("archive", archive);
-        return "console/editor";
+        return "console/edit-archive";
     }
 
     @RequestMapping({"/archive/delete/{id}"})
