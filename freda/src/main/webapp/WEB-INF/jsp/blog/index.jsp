@@ -16,13 +16,12 @@
 <div class="container">
     <div class="row">
         <!-- Post Content Column -->
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <!-- 文档区域-->
             <div id="article_section"></div>
             <!-- loading -->
             <div id="div_load" style="text-align: center;padding-bottom:1em;"></div>
         </div>
-        <jsp:include page="commons/side-widget.jsp"/>
     </div>
     <!-- /.row -->
 
@@ -59,12 +58,7 @@
                         archives[i].createTime = new Date(archives[i].createTime).format("yyyy-MM-dd hh:mm");
                         $("#article_section").append(
                                 '<div class="row">'
-                                + '<div class="col-lg-2">'
-                                + '<a href="archive/' + archives[i].id + '">'
-                                + '<img class="img-fluid rounded" src="' + path + '/images/pic01.jpg"/>'
-                                + '<a/>'
-                                + '</div>'
-                                + '<div class="col-lg-10">'
+                                + '<div class="col-lg-12">'
                                 + '<a href="archive/' + archives[i].id + '">'
                                 + '<span style="font-size:1.2em;">'
                                 + archives[i].title
@@ -86,7 +80,7 @@
                     $("#div_load").html("");
                     // _page == -1 表示已经是最后一页，不再显示查看更多
                     if (_page != -1) {
-                        $("#div_load").append('<a class="btn btn-info" href="javascript:void(0)"  onclick="loadArchives(' + _page + ');">加载更多››<i class="icon-arrow-down"></i></a>');
+                        $("#div_load").append('<a class="btn btn-primary" href="javascript:void(0)"  onclick="loadArchives(' + _page + ');">加载更多 <span class="fa fa-angle-double-down"/><i class="icon-arrow-down"></i></a>');
                     }
                 }
         );

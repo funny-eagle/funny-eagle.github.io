@@ -11,29 +11,18 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 %>
-<div class="col-md-4">
-    <!-- 搜索 -->
-    <div class="card my-4">
-        <h5 class="card-header">Search</h5>
-        <div class="card-body">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Go!</button>
-                </span>
-            </div>
-        </div>
-    </div>
-
+<div class="col-md-4" style="padding-top:2em;">
     <!-- 最新文章 -->
-    <div class="card my-4">
-        <h5 class="card-header">Recently</h5>
-        <div class="card-body">
-            <div class="" id="recentlyArchiveList">
-                <c:forEach var="archive" items="${applicationScope.recentlyArchiveList}">
-                    <a href="<%=basePath%>/archive/${archive.id}">${archive.title}</a><br/>
-                </c:forEach>
-            </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                Recently
+            </h3>
+        </div>
+        <div class="panel-body" id="recentlyArchiveList">
+            <c:forEach var="archive" items="${applicationScope.recentlyArchiveList}">
+                <a href="<%=basePath%>/archive/${archive.id}">${archive.title}</a><br/>
+            </c:forEach>
         </div>
     </div>
 

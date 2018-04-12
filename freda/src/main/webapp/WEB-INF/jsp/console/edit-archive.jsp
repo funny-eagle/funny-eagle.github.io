@@ -12,8 +12,13 @@
 %>
 <html>
 <head>
-    <jsp:include page="../blog/commons/head.jsp"/>
-    <title>Console</title>
+    <title>Jason Yang's Blog Console</title>
+    <!-- Bootstrap core CSS -->
+    <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=basePath%>/vendor/blog/css/blog-post.css" rel="stylesheet">
+    <link href="<%=basePath%>/vendor/github-markdown/github-markdown.css" rel="stylesheet">
+    <link rel="icon" href="<%=basePath%>/images/command.ico">
+    <link href="<%=basePath%>/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="<%=basePath%>/vendor/simplemde/simplemde.min.css" rel="stylesheet">
     <script src="<%=basePath%>/vendor/simplemde/simplemde.min.js"></script>
     <style>
@@ -31,20 +36,22 @@
     </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-        <a class="navbar-brand" href="<%=basePath%>/console"><span class="symbol fa fa-code"></span><span class="title">Jason Yang's Blog Console</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="<%=basePath%>">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<%=basePath%>/about">About</a>
-                </li>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<%=basePath%>/console"><span class="symbol fa fa-code" style="margin-right: 0.5em;"></span><span class="title">Blog Console</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbar-link" href="<%=basePath%>"><span class="symbol fa fa-home"></span> Home</a></li>
+                <li><a class="navbar-link" href="<%=basePath%>/about"><span class="symbol fa fa-user-secret"></span> About</a></li>
             </ul>
         </div>
     </div>
@@ -55,9 +62,8 @@
         <!-- Post Content Column -->
         <div class="col-lg-12">
             <!-- 文档区域-->
-            <div id="article_section">
-                文档编辑页面
-                <textarea id="simplemde"></textarea>
+            <div id="article_section" class="markdown-body">
+                <textarea id="simplemde">${archive.mdContent}</textarea>
             </div>
             <!-- loading -->
             <div id="div_load" style="text-align: center;padding-bottom:1em;"></div>

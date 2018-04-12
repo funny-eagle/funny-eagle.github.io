@@ -14,74 +14,88 @@
 %>
 <html>
 <head>
-    <jsp:include page="../blog/commons/head.jsp"/>
     <title>Jason Yang's Blog Console</title>
+    <!-- Bootstrap core CSS -->
+    <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<%=basePath%>/vendor/blog/css/blog-post.css" rel="stylesheet">
+    <link rel="icon" href="<%=basePath%>/images/command.ico">
+    <link href="<%=basePath%>/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="<%=basePath%>/console"><span class="symbol fa fa-code"></span><span class="title">Jason Yang's Blog Console</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<%=basePath%>">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="<%=basePath%>/about">About</a>
-                    </li>
-                </ul>
-            </div>
+            <a class="navbar-brand" href="<%=basePath%>/console"><span class="symbol fa fa-code" style="margin-right: 0.5em;"></span><span class="title">Blog Console</span></a>
         </div>
-    </nav>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbar-link" href="<%=basePath%>"><span class="symbol fa fa-home"></span> Home</a></li>
+                <li><a class="navbar-link" href="<%=basePath%>/about"><span class="symbol fa fa-user-secret"></span> About</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
     <!-- Page Content -->
     <div class="container">
         <div class="row">
             <!-- Post Content Column -->
             <div class="col-lg-12">
-                <!-- 文档列表区域-->
-                <div id="article_section">
-                    <p>文章列表</p>
-                    <table class="table table-striped table-bordered table-hover">
-                        <thead>
-                            <tr>
-                                <td><input type="checkbox" class="form-check"/></td>
-                                <td>ID</td>
-                                <td>标题</td>
-                                <td>作者</td>
-                                <td>创建日期</td>
-                                <td>更新日期</td>
-                                <td>操作</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach var="archive" items="${archiveList}">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <button type="button" class="btn btn-default btn-primary">撰写文章</button>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="article_section">
+                            <table class="table table-striped table-bordered table-hover">
+                                <thead>
                                 <tr>
                                     <td><input type="checkbox" class="form-check"/></td>
-                                    <td>${archive.id}</td>
-                                    <td>${archive.title}</td>
-                                    <td>${archive.author}</td>
-                                    <td><fmt:formatDate value="${archive.createTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
-                                    <td><fmt:formatDate value="${archive.updateTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
-                                    <td><a href="<%=basePath%>/archive/edit/${archive.id}">编辑</a></td>
+                                    <td>ID</td>
+                                    <td>标题</td>
+                                    <td>作者</td>
+                                    <td>创建日期</td>
+                                    <td>更新日期</td>
+                                    <td>操作</td>
                                 </tr>
-                            </c:forEach>
+                                </thead>
+                                <tbody>
+                                <c:forEach var="archive" items="${archiveList}">
+                                    <tr>
+                                        <td><input type="checkbox" class="form-check"/></td>
+                                        <td>${archive.id}</td>
+                                        <td>${archive.title}</td>
+                                        <td>${archive.author}</td>
+                                        <td><fmt:formatDate value="${archive.createTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
+                                        <td><fmt:formatDate value="${archive.updateTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
+                                        <td><a href="<%=basePath%>/archive/edit/${archive.id}">编辑</a></td>
+                                    </tr>
+                                </c:forEach>
 
-                        </tbody>
-                    </table>
-                    <!-- 分页栏 -->
-                    <ul class="pagination">
-                        <li><a href="#">&laquo;</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li class="disabled"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
+                                </tbody>
+                            </table>
+                            <!-- 分页栏 -->
+                            <ul class="pagination">
+                                <li><a href="#">&laquo;</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li class="disabled"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">&raquo;</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+
                 <!-- loading -->
                 <div id="div_load" style="text-align: center;padding-bottom:1em;"></div>
             </div>
