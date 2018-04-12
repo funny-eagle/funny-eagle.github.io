@@ -16,27 +16,27 @@ import java.util.List;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:spring-mybatis.xml"})
 public class CommentTest {
-    @Autowired
-    private CommentMapper commentMapper;
-
-    @org.junit.Test
-    public void testCommentMapper(){
-        String archiveId = "32";
-        /*Comment comment = new Comment();
-        comment.setId(UUIDUtil.getUUID());
-        comment.setArchiveId(archiveId);
-        comment.setCommentContent("very good!");
-        comment.setCommentUserEmail("yjl@mail.com");
-        comment.setCommentUserIpAddress("1212312312");
-        comment.setCommentUsername("Jason Yang");
-        comment.setCreateTime(new Date());
-        comment.setPid("1");
-        assert commentMapper.insertSelective(comment)>0;*/
-        List<Comment> comments = commentMapper.selectByArchiveId(archiveId);
-        assert comments != null;
-        assert comments.size()>0;
-        for(Comment c : comments){
-            System.out.println(c.getId()+","+c.getCommentContent());
-        }
-    }
+//    @Autowired
+//    private CommentMapper commentMapper;
+//
+//    @org.junit.Test
+//    public void testCommentMapper(){
+//        String archiveId = "32";
+//        /*Comment comment = new Comment();
+//        comment.setId(UUIDUtil.getUUID());
+//        comment.setArchiveId(archiveId);
+//        comment.setCommentContent("very good!");
+//        comment.setCommentUserEmail("yjl@mail.com");
+//        comment.setCommentUserIpAddress("1212312312");
+//        comment.setCommentUsername("Jason Yang");
+//        comment.setCreateTime(new Date());
+//        comment.setPid("1");
+//        assert commentMapper.insertSelective(comment)>0;*/
+//        List<Comment> comments = commentMapper.selectByArchiveId(archiveId);
+//        assert comments != null;
+//        assert comments.size()>0;
+//        for(Comment c : comments){
+//            System.out.println(c.getId()+","+c.getCommentContent());
+//        }
+//    }
 }

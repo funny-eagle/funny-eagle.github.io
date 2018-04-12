@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.jasonyang.model.Archive;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Repository;
 
 /**
