@@ -144,10 +144,15 @@ public class ConsoleController extends BaseController {
         return "console/edit-archive";
     }
 
+    @RequestMapping({"/console/archive/new"})
+    public String newArchive() {
+        return "console/edit-archive";
+    }
+
     @RequestMapping({"/archive/delete/{id}"})
     public String delete(@PathVariable("id") String id) {
         this.archiveService.deleteArchiveById(id);
-        return "redirect:/console/archive_management";
+        return "redirect:/console/index/1";
     }
 
     /**
@@ -158,6 +163,6 @@ public class ConsoleController extends BaseController {
     @RequestMapping({"/archive/refreshCache"})
     public String refreshArchivesCache() {
         this.archiveService.setAllPublishedArchivesInfoToRedis();
-        return "redirect:/console/archive_management";
+        return "redirect:/console/index/1";
     }
 }

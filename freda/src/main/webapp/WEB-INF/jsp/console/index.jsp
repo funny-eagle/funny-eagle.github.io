@@ -50,7 +50,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">
-                            <button type="button" class="btn btn-default btn-primary">撰写文章</button>
+                            <a type="button" class="btn btn-default btn-primary" href="<%=basePath%>/console/archive/new">撰写文章</a>
                         </h3>
                     </div>
                     <div class="panel-body">
