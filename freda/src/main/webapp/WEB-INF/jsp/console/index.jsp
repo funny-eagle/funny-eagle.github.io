@@ -14,7 +14,7 @@
 %>
 <html>
 <head>
-    <title>Jason Yang's Blog Console</title>
+    <title>Nocoder Console</title>
     <!-- Bootstrap core CSS -->
     <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%=basePath%>/vendor/blog/css/blog-post.css" rel="stylesheet">

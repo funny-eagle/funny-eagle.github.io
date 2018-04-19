@@ -7,7 +7,7 @@
 %>
 <!DOCTYPE html>
 <html>
-<title>Jason Yang's Blog - About</title>
+<title>Nocoder - About</title>
 <jsp:include page="commons/head.jsp"/>
 <body>
 <!-- Navigation -->

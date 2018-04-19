@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jason Yang's Blog | 登录 </title>
+    <title>Nocoder | 登录 </title>
     <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="<%=basePath%>/images/command.ico">
 </head>

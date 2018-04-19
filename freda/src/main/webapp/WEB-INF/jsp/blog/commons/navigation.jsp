@@ -20,7 +20,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<%=basePath%>"><span class="symbol fa fa-code" style="margin-right: 0.5em;"></span><span class="title">Jason Yang's Blog</span></a>
+            <a class="navbar-brand" href="<%=basePath%>"><span class="symbol fa fa-code" style="margin-right: 0.5em;"></span><span class="title">Nocoder</span></a>
         </div>
         <div class="collapse navbar-collapse" id="example-navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
