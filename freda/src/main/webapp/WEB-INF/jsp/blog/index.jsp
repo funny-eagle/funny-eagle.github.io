@@ -80,7 +80,7 @@
                     $("#div_load").html("");
                     // _page == -1 表示已经是最后一页，不再显示查看更多
                     if (_page != -1) {
-                        $("#div_load").append('<a class="btn btn-primary" href="javascript:void(0)"  onclick="loadArchives(' + _page + ');">加载更多 <span class="fa fa-angle-double-down"/><i class="icon-arrow-down"></i></a>');
+                        $("#div_load").append('<a class="btn btn-primary" href="javascript:void(0)"  onclick="loadArchives(' + _page + ');">Load more <span class="fa fa-angle-double-down"/><i class="icon-arrow-down"></i></a>');
                     }
                 }
         );

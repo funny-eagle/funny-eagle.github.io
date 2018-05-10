@@ -12,7 +12,7 @@
 %>
 <html>
 <head>
-    <title>Nocoder Console</title>
+    <title>NoCoder Console</title>
     <!-- Bootstrap core CSS -->
     <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%=basePath%>/vendor/blog/css/blog-post.css" rel="stylesheet">
@@ -62,7 +62,7 @@
         <!-- Post Content Column -->
         <div class="col-lg-12">
             <form method="post">
-                主键：<input id="id" name="id" value="${archive.id}" disabled="disabled"/>
+                主键：<input id="id" name="id" value="${archive.id}" disabled="disabled" type="hidden"/>
                 标题：<input id="title" name="title" value="${archive.title}"/>
                 作者：<input id="author" name="author" value="${archive.author}"/>
                 标签：<input id="tag" name="tag" value="${archive.tag}"/>

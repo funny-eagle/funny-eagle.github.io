@@ -7,7 +7,7 @@
 %>
 <!DOCTYPE html>
 <html>
-<title>Nocoder - About</title>
+<title>NoCoder - About</title>
 <jsp:include page="commons/head.jsp"/>
 <body>
 <!-- Navigation -->
@@ -16,11 +16,37 @@
 <div class="container">
     <div class="row" style="padding-top:2em;">
         <div class="col-lg-8">
-            <h2>Jason Yang</h2>
-            <p>E-Mail:<a href="mailto:yangjinlong86@126.com">yangjinlong86@126.com</a></p>
-            <p>Github:<a target="_blank" href="https://github.com/yangjinlong86">https://github.com/yangjinlong86</a></p>
-            <p>Website:<a target="_blank" href="http://nocoder.org">http://nocoder.org</a></p>
-            <p>QQ/WeChat:88131182</p>
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-2 column">
+                        <img class="img-rounded" height="150em;" width="150em;" src="https://raw.githubusercontent.com/jasonyang86/nocoder/master/data/images/201805/nocoder_monkey.jpeg">
+                    </div>
+                    <div class="col-md-10 column">
+                        <blockquote>
+                            <ul>
+                                <li>
+                                    NoCoder(NoCoder = Not Only Coder)
+                                </li>
+                                <li>
+                                    E-Mail:<a href="mailto:yangjinlong86@126.com">yangjinlong86@126.com</a>
+                                </li>
+                                <li>
+                                    Github:<a target="_blank" href="https://github.com/yangjinlong86">https://github.com/yangjinlong86</a>
+                                </li>
+                                <li>
+                                    Website:<a target="_blank" href="http://nocoder.org">http://nocoder.org</a>
+                                </li>
+
+                            </ul>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+
+
         </div>
     </div>
     <!-- /.row -->

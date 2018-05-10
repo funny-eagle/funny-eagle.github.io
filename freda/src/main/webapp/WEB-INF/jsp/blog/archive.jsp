@@ -7,7 +7,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 %>
 <html>
-<title>Nocoder - ${archive.title}</title>
+<title>NoCoder - ${archive.title}</title>
 <link href="<%=basePath%>/vendor/github-markdown/github-markdown.css" rel="stylesheet">
 <jsp:include page="commons/head.jsp"/>
 <body>

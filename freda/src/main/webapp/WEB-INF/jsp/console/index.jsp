@@ -14,7 +14,7 @@
 %>
 <html>
 <head>
-    <title>Nocoder Console</title>
+    <title>NoCoder Console</title>
     <!-- Bootstrap core CSS -->
     <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%=basePath%>/vendor/blog/css/blog-post.css" rel="stylesheet">
@@ -48,18 +48,14 @@
             <!-- Post Content Column -->
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            <a type="button" class="btn btn-default btn-primary" href="<%=basePath%>/console/archive/new">撰写文章</a>
-                        </h3>
-                    </div>
                     <div class="panel-body">
+                        <a type="button" class="btn btn-default btn-primary" href="<%=basePath%>/console/archive/new">撰写文章</a>
                         <div id="article_section">
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
                                 <tr>
                                     <td><input type="checkbox" class="form-check"/></td>
-                                    <td>ID</td>
+                                    <td style="display:none;">ID</td>
                                     <td>标题</td>
                                     <td>作者</td>
                                     <td>创建日期</td>
@@ -70,7 +66,7 @@
                                 <tbody>
                                 <c:forEach var="archive" items="${archiveList}">
                                     <tr>
-                                        <td><input type="checkbox" class="form-check"/></td>
+                                        <td style="display:none;"><input type="checkbox" class="form-check"/></td>
                                         <td>${archive.id}</td>
                                         <td>${archive.title}</td>
                                         <td>${archive.author}</td>
@@ -101,7 +97,7 @@
             </div>
         </div>
         <!-- /.row -->
-
+        <img src="http://localhost:8001/imagekeeper/view"/>
     </div>
     <!-- /.container -->
     <jsp:include page="../blog/commons/foot.jsp"/>
