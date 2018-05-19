@@ -24,7 +24,7 @@
     </sql>
 
     <sql id="Simple_Column_List">
-        id, title, preview, author, tag, create_time, state
+        id, title, preview, author, tag, create_time, update_time, state
     </sql>
 
     <!-- 根据主键查询文档-->

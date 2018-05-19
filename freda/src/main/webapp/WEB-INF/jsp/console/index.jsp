@@ -49,30 +49,33 @@
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <a type="button" class="btn btn-default btn-primary" href="<%=basePath%>/console/archive/new">撰写文章</a>
+                        <a type="button" class="btn btn-default btn-primary" href="<%=basePath%>/console/archive/new"><span class="symbol fa fa-plus"/> New Archive</a>
+                        <hr/>
                         <div id="article_section">
                             <table class="table table-striped table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                    <td><input type="checkbox" class="form-check"/></td>
+                                    <td style="display:none;"><input type="checkbox" class="form-check"/></td>
                                     <td style="display:none;">ID</td>
-                                    <td>标题</td>
-                                    <td>作者</td>
-                                    <td>创建日期</td>
-                                    <td>更新日期</td>
-                                    <td>操作</td>
+                                    <td>Title</td>
+                                    <td>Author</td>
+                                    <td>Create Time</td>
+                                    <td>Update Time</td>
+                                    <td>Status</td>
+                                    <td>Operation</td>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <c:forEach var="archive" items="${archiveList}">
                                     <tr>
                                         <td style="display:none;"><input type="checkbox" class="form-check"/></td>
-                                        <td>${archive.id}</td>
+                                        <td style="display: none">${archive.id}</td>
                                         <td>${archive.title}</td>
                                         <td>${archive.author}</td>
                                         <td><fmt:formatDate value="${archive.createTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
                                         <td><fmt:formatDate value="${archive.updateTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
-                                        <td><a href="<%=basePath%>/archive/edit/${archive.id}">编辑</a></td>
+                                        <td>${archive.state == 2 ? 'published' : 'draft'}</td>
+                                        <td><a href="<%=basePath%>/archive/edit/${archive.id}">Edit</a>  <a href="<%=basePath%>/archive/unpublish/${archive.id}">Unpublish</a></td>
                                     </tr>
                                 </c:forEach>
 
@@ -97,7 +100,6 @@
             </div>
         </div>
         <!-- /.row -->
-        <img src="http://localhost:8001/imagekeeper/view"/>
     </div>
     <!-- /.container -->
     <jsp:include page="../blog/commons/foot.jsp"/>

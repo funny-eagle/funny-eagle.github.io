@@ -69,7 +69,7 @@
                                 + archives[i].createTime + '  ' + archives[i].author
                                 + '</span>'
                                 + '<br/>'
-                                + '<span style="color:dimgrey;font-style: italic;padding-top: 0.2em;">' + archives[i].preview + '</span>'
+                                + '<span style="color:dimgrey;padding-top: 0.2em;">' + archives[i].preview + '</span>'
                                 + '</div>'
                                 + '</div>'
                                 + '<hr/>'

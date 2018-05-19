@@ -2,6 +2,7 @@ package org.jasonyang.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -11,17 +12,17 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 public class IndexController extends BaseController {
-    @RequestMapping({"/blog"})
+    @RequestMapping(value = {"/blog"}, method = RequestMethod.GET)
     public String toHomePage() {
         return "blog/index";
     }
 
-    @RequestMapping({"/about"})
+    @RequestMapping(value = {"/about"}, method = RequestMethod.GET)
     public String toAboutPage() {
         return "blog/about";
     }
 
-    @RequestMapping({"/contact"})
+    @RequestMapping(value = {"/contact"}, method = RequestMethod.GET)
     public String toContactPage() {
         return "blog/contact";
     }

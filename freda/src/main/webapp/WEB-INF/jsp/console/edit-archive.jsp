@@ -62,18 +62,18 @@
         <!-- Post Content Column -->
         <div class="col-lg-12">
             <form method="post">
-                主键：<input id="id" name="id" value="${archive.id}" disabled="disabled" type="hidden"/>
-                标题：<input id="title" name="title" value="${archive.title}"/>
-                作者：<input id="author" name="author" value="${archive.author}"/>
-                标签：<input id="tag" name="tag" value="${archive.tag}"/>
+                <input id="id" name="id" value="${archive.id}" disabled="disabled" type="hidden"/>
+                <div class="col-lg-4"><input placeholder="标题" class="form-control" id="title" name="title" value="${archive.title}"/></div>
+                <div class="col-lg-4"><input placeholder="作者" class="form-control" id="author" name="author" value="${archive.author}"/></div>
+                <div class="col-lg-4"><input placeholder="标签" class="form-control" id="tag" name="tag" value="${archive.tag}"/></div>
                 <br/><br/>
-                <textarea class="form-control" id="preview" name="preview">${archive.preview}</textarea>
+                <textarea placeholder="预览" class="form-control" id="preview" name="preview">${archive.preview}</textarea>
                 <br/>
                 <!-- 文档区域-->
                 <div id="article_section" class="markdown-body">
                     <textarea id="simplemde">${archive.mdContent}</textarea>
                 </div>
-                <button class="btn btn-primary" type="button" onclick="submitArchive();">发布</button>
+                <button class="btn btn-primary" type="button" onclick="submitArchive();">Publish</button>
             </form>
             <!-- loading -->
             <div id="div_load" style="text-align: center;padding-bottom:1em;"></div>

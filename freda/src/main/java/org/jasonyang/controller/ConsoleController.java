@@ -18,10 +18,7 @@ import org.jasonyang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 后台维护controller
@@ -43,7 +40,7 @@ public class ConsoleController extends BaseController {
      * @param request
      * @return
      */
-    @RequestMapping({"/console"})
+    @RequestMapping(value = {"/console"}, method = RequestMethod.GET)
     public String index(HttpServletRequest request) {
         return linkTo(request, ConsolePageEnum.INDEX.getPage());
     }
@@ -55,7 +52,7 @@ public class ConsoleController extends BaseController {
      * @param operation
      * @return
      */
-    @RequestMapping({"/console/{operation}"})
+    @RequestMapping(value = {"/console/{operation}"}, method = RequestMethod.GET)
     public String linkTo(HttpServletRequest request, @PathVariable("operation") String operation) {
         // 验证用户是否登录,否则跳转到登录页面
         if (request.getSession().getAttribute(UserEnum.USER.getProperty()) == null) {
@@ -71,7 +68,7 @@ public class ConsoleController extends BaseController {
             }
         }
 
-        return "redirect:console/index/1";
+        return "redirect:/console/index/1";
     }
 
     /**
@@ -81,7 +78,7 @@ public class ConsoleController extends BaseController {
      * @param model
      * @return 后台首页或登录页面
      */
-    @RequestMapping({"/console/index/{pageStr}"})
+    @RequestMapping(value = {"/console/index/{pageStr}"})
     public String archiveList(HttpServletRequest request, @PathVariable("pageStr") String pageStr, Model model) {
         // 查看HttpSession中是否存在用户，不存在直接返回登录界面
         if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
@@ -98,7 +95,7 @@ public class ConsoleController extends BaseController {
             return "console/index";
         }
 
-        return "redirect:login";
+        return "redirect:/login";
     }
 
     /**
@@ -111,7 +108,7 @@ public class ConsoleController extends BaseController {
     @RequestMapping({"/login"})
     public String login(HttpServletRequest request, Model model) {
         if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
-            return "redirect:console/index/1";
+            return "redirect:/console/index/1";
         }
         final String username = request.getParameter("username");
         final String password = request.getParameter("password");
@@ -121,7 +118,7 @@ public class ConsoleController extends BaseController {
                 model.addAttribute("user", user);
                 // 将用户信息存放至session中
                 request.getSession().setAttribute("user", user);
-                return "redirect:console/index/1";
+                return "redirect:/console/index/1";
             }
         }
         return "console/login";

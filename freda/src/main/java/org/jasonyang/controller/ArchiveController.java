@@ -15,7 +15,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import sun.misc.Request;
 
 /**
  * 文章Controller
@@ -33,7 +35,7 @@ public class ArchiveController extends BaseController {
      * @return
      */
     @ResponseBody
-    @RequestMapping({"/archive_list"})
+    @RequestMapping(value = {"/archive_list"}, method = RequestMethod.GET)
     public Map<String, Object> toArchiveListPage(HttpServletRequest request) {
         // 文档标签
         String tag = request.getParameter("tag");
@@ -58,7 +60,7 @@ public class ArchiveController extends BaseController {
      * @param model
      * @return
      */
-    @RequestMapping({"/archive/{id}"})
+    @RequestMapping(value = {"/archive/{id}"}, method = RequestMethod.GET)
     public String viewArchive(HttpServletRequest request, @PathVariable("id") String id, Model model) {
         // 1 表示前台使用不查询markdown内容字段
         Archive archive = this.archiveService.queryArchiveById(id, 1);

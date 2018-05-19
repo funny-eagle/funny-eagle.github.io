@@ -25,7 +25,7 @@
                         <blockquote>
                             <ul>
                                 <li>
-                                    NoCoder(NoCoder = Not Only Coder)
+                                    NoCoder = Not Only a Coder
                                 </li>
                                 <li>
                                     E-Mail:<a href="mailto:yangjinlong86@126.com">yangjinlong86@126.com</a>
@@ -42,10 +42,6 @@
                     </div>
                 </div>
             </div>
-            
-            
-            
-
 
         </div>
     </div>
