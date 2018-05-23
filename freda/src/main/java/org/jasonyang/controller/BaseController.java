@@ -1,5 +1,6 @@
 package org.jasonyang.controller;
 
+import com.google.common.collect.Maps;
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.PageSizeEnum;
 import org.jasonyang.model.Archive;
@@ -7,7 +8,6 @@ import org.jasonyang.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.ServletContext;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -33,20 +33,20 @@ public class BaseController {
      * @return resMap archiveList, totalPages
      */
     public Map<String, Object> queryArchivesByPage(int state, String tag, Integer page, Integer pageSize) {
-        final Map<String, Object> resMap = new HashMap<String, Object>();
+        final Map<String, Object> resMap = Maps.newHashMap();
         if (page == null) {
             page = 1;
         }
         if (pageSize == null) {
             pageSize = PageSizeEnum.PAGE_SIZE.getValue();
         }
-        final Map<String, Object> paramsMap = new HashMap<String, Object>();
+        final Map<String, Object> paramsMap = Maps.newHashMap();
         paramsMap.put("state", state);
         paramsMap.put("tag", tag);
         final int archivesCount = this.archiveService.countArchives(paramsMap);
         if (archivesCount > 0) {
-            List<Archive> archiveList = null;
-            List<Archive> recentlyArchiveList = null;
+            List<Archive> archiveList;
+            List<Archive> recentlyArchiveList;
 
             // 从数据库查询所有文档信息(后台Console使用)
             if (state == ArchiveStatus.ALL.getValue()) {

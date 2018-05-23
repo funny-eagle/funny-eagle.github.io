@@ -10,6 +10,11 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface PersonRepository extends JpaRepository<Person, Integer> {
+    /**
+     * findByFirstName
+     * @param firstName
+     * @return
+     */
     Person findByFirstName(String firstName);
 
 }
