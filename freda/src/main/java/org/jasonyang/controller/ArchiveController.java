@@ -1,11 +1,5 @@
 package org.jasonyang.controller;
 
-import java.util.List;
-import java.util.Map;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.commons.lang3.StringUtils;
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.PageSizeEnum;
 import org.jasonyang.model.Archive;
@@ -17,7 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sun.misc.Request;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 /**
  * 文章Controller
@@ -46,7 +42,6 @@ public class ArchiveController extends BaseController {
         // 每页个数
         Integer pageSize = PageSizeEnum.PAGE_SIZE.getValue();
 
-
         // 获取文档信息
         Map<String, Object> resMap = queryArchivesByPage(ArchiveStatus.PUBLISHED.getValue(), tag, page, pageSize);
         return resMap;
@@ -55,15 +50,16 @@ public class ArchiveController extends BaseController {
 
     /**
      * 根据ID获取文章
-     *
-     * @param request
      * @param model
      * @return
      */
     @RequestMapping(value = {"/archive/{id}"}, method = RequestMethod.GET)
-    public String viewArchive(HttpServletRequest request, @PathVariable("id") String id, Model model) {
+    public String viewArchive(@PathVariable("id") String id, Model model) {
         // 1 表示前台使用不查询markdown内容字段
         Archive archive = this.archiveService.queryArchiveById(id, 1);
+        if(archive == null){
+            return "redirect:/";
+        }
         model.addAttribute("archive", archive);
         return "blog/archive";
     }

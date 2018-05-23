@@ -44,7 +44,7 @@
         // $("#div_load").html('<div style="text-align: center;"><h3>Loading...</h3></div>');
 
         var path = "<%=basePath%>";
-        $.post(
+        $.get(
                 path + "/archive_list",
                 {page: _page},
                 function (res) {
