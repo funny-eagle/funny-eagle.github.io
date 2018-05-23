@@ -1,19 +1,17 @@
-## Freda博客系统
+## Freda Blog System
 
-[http://nocoder.org]()
+### My Website
+`NoCoder` [http://nocoder.org](http://nocoder.org)
 
-### 技术及框架
-- JDK 1.8
-- Spring 4.0.2
-- Sping MVC
-- Mybatis 3.2.6
-- Bootstrap 3
-- Simplemde
+### Frameworks
+`Bootstrap, jQuery, Simplemde(Markdown Editor)`
 
-### 数据库
-- PostgreSQL 9
-- Redis 3
+`
+Spring, Spring MVC, Spring Data Jpa, Mybatis, Hibernate, 
+`
+### Databases
+` PostgreSQL9, Redis3`
 
-### 分享
-- 友言 [http://www.uyan.cc/]()
+### Plugins
+- `Uyan` [http://www.uyan.cc](http://www.uyan.cc)
 
