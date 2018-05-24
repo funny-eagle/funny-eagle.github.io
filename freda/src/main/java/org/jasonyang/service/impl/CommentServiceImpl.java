@@ -1,6 +1,6 @@
 package org.jasonyang.service.impl;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.jasonyang.mapper.CommentMapper;
 import org.jasonyang.model.Comment;
 import org.jasonyang.service.CommentService;

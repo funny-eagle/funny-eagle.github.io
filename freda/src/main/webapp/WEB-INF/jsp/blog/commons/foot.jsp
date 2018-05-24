@@ -14,7 +14,7 @@
 <footer class="py-5 bg-dark">
     <div class="container">
         <p class="text-center">
-            &copy; nocoder.org 2017
+            &copy; nocoder.org 2016
             <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
             document.write(
                 unescape("%3Cspan id='cnzz_stat_icon_1257391581'%3E%3C/span%3E%3Cscript src='" +
