@@ -10,7 +10,7 @@
 Spring, Spring MVC, Spring Data Jpa, Mybatis, Hibernate, 
 `
 ### Databases
-` PostgreSQL9, Redis3`
+` PostgreSQL 9.x, Redis 3.x`
 
 ### Plugins
 - `Uyan` [http://www.uyan.cc](http://www.uyan.cc)
