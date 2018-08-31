@@ -19,7 +19,6 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
-            <!-- 表示开发的时候引入，发布的时候不会加载此包 -->
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -99,7 +98,6 @@
             <version>1.0.0.Final</version>
         </dependency>
 
-        <!-- mybatis核心包 -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
@@ -116,19 +114,16 @@
             <artifactId>javaee-api</artifactId>
             <version>7.0</version>
         </dependency>
-        <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
             <version>1.2.2</version>
         </dependency>
-        <!-- JSTL标签类 -->
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
-        <!-- 日志文件管理包 -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -136,7 +131,6 @@
         </dependency>
 
 
-        <!-- 格式化对象，方便输出日志 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
@@ -154,7 +148,6 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-        <!-- JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
@@ -234,7 +227,6 @@
             </plugins>
         </pluginManagement>
 
-        <!-- maven打包时默认未包含xml文件 -->
         <resources>
             <resource>
                 <directory>src/main/java</directory>

@@ -40,6 +40,10 @@ public class EncryptUtil {
     }
 
     public static void main(String[] args) {
+        // username=Y0c5emRHZHlaWE09
+        // password=Wm5KbFpHRndadz09
         System.out.println(EncryptUtil.encode("jasonyang"));
+        System.out.println(EncryptUtil.decode("Y0c5emRHZHlaWE09"));
+        System.out.println(EncryptUtil.decode("Wm5KbFpHRndadz09"));
     }
 }

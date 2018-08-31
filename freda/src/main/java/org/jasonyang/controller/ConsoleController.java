@@ -1,6 +1,7 @@
 package org.jasonyang.controller;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.ConsolePageEnum;
 import org.jasonyang.enumeration.ResponseResult;
@@ -26,6 +27,8 @@ import java.util.Map;
  */
 @Controller
 public class ConsoleController extends BaseController {
+
+    Logger logger = Logger.getLogger(ConsoleController.class);
 
     @Resource
     private UserService userService;
@@ -117,7 +120,10 @@ public class ConsoleController extends BaseController {
                 model.addAttribute("user", user);
                 // 将用户信息存放至session中
                 request.getSession().setAttribute("user", user);
+                logger.info("login success! username: " + username);
                 return "redirect:/console/index/1";
+            }else{
+                logger.warn("login failed! username: " + username + ", password: " + password);
             }
         }
         return "console/login";
