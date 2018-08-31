@@ -14,7 +14,7 @@ import java.util.Properties;
 public class PropUtils {
     public static String LOCATION;
 
-    public static final String CONFIG = "config.properties";
+    public static final String CONFIG = "application.properties";
 
     static {
         try {

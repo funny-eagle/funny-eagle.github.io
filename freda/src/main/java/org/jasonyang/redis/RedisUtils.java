@@ -1,14 +1,13 @@
 package org.jasonyang.redis;
 
-import java.util.List;
-
 import org.apache.log4j.Logger;
 import org.jasonyang.utils.PropUtils;
 import org.jasonyang.utils.SerializeUtil;
-
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
+
+import java.util.List;
 
 /**
  * Redis工具类

@@ -1,12 +1,5 @@
 package org.jasonyang.service.impl;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;;
-
-import javax.annotation.PostConstruct;
-
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.jasonyang.enumeration.ArchiveStatus;
@@ -19,6 +12,14 @@ import org.jasonyang.utils.UUIDUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
+
+import javax.annotation.PostConstruct;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+;
 
 @Service
 public class ArchiveServiceImpl implements ArchiveService {

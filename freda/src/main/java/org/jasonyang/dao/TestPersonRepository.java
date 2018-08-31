@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
  * @date 18/5/23.
  */
 @Repository
-public interface PersonRepository extends JpaRepository<Person, Integer> {
+public interface TestPersonRepository extends JpaRepository<Person, Integer> {
     /**
      * findByFirstName
      * @param firstName

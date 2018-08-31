@@ -4,7 +4,6 @@ import org.jasonyang.mapper.UserMapper;
 import org.jasonyang.model.User;
 import org.jasonyang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 /**

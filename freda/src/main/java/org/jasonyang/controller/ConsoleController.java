@@ -1,14 +1,8 @@
 package org.jasonyang.controller;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.lang3.StringUtils;
-import org.jasonyang.enumeration.ConsolePageEnum;
 import org.jasonyang.enumeration.ArchiveStatus;
+import org.jasonyang.enumeration.ConsolePageEnum;
 import org.jasonyang.enumeration.ResponseResult;
 import org.jasonyang.enumeration.UserEnum;
 import org.jasonyang.model.Archive;
@@ -19,6 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 后台维护controller

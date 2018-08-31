@@ -13,7 +13,7 @@
 	<bean id="encryptPropertyConfigurer" class="org.jasonyang.security.EncryptPropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:config.properties</value>
+				<value>classpath:application.properties</value>
 			</list>
 		</property>
 	</bean>
