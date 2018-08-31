@@ -20,7 +20,7 @@ public class JacksonConfiguration extends WebMvcConfigurerAdapter {
     }
 
     @Bean
-    public MappingJackson2HttpMessageConverter jackson2HttpMessageConverter(){
+    public MappingJackson2HttpMessageConverter jackson2HttpMessageConverter() {
         MappingJackson2HttpMessageConverter jackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
         return jackson2HttpMessageConverter;
     }
