@@ -1,7 +1,7 @@
 ## Freda Blog System
 
 ### My Website
-`NoCoder` [http://nocoder.org](http://nocoder.org)
+[http://nocoder.org](http://nocoder.org)
 
 ### Frameworks
 `Bootstrap, jQuery, Simplemde(Markdown Editor)`
