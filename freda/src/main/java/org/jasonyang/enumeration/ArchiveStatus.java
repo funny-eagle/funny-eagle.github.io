@@ -2,11 +2,12 @@ package org.jasonyang.enumeration;
 
 /**
  * 文档状态
+ *
  * @author jason
  */
 public enum ArchiveStatus {
     /**
-     *  全部文章
+     * 全部文章
      */
     ALL(0),
     /**
@@ -28,7 +29,7 @@ public enum ArchiveStatus {
         this.value = value;
     }
 
-    ArchiveStatus(int value){
+    ArchiveStatus(int value) {
         this.value = value;
     }
 }

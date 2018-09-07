@@ -5,7 +5,7 @@ package org.jasonyang.enumeration;
  */
 public enum ConsolePageEnum {
     // 首页
-    HOME("index"),
+    INDEX("index"),
     // 文档管理
     ARCHIVE("archive"),
     // 标签管理
@@ -13,7 +13,7 @@ public enum ConsolePageEnum {
     // 用户设置
     USER_SETTINGS("user-settings"),
     // 文档编辑
-    EDITOR("editor");
+    EDIT_ARCHIVE("edit-archive");
 
     private String page;
 
@@ -25,7 +25,7 @@ public enum ConsolePageEnum {
         this.page = page;
     }
 
-    ConsolePageEnum(String page){
+    ConsolePageEnum(String page) {
         this.page = page;
     }
 

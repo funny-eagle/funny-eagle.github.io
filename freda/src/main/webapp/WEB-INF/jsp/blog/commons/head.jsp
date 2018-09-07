@@ -15,13 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Jason Yang's Blog</title>
-
     <!-- Bootstrap core CSS -->
     <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<%=basePath%>/vendor/blog/css/blog-post.css" rel="stylesheet">
     <link rel="icon" href="<%=basePath%>/images/command.ico">
+    <link href="<%=basePath%>/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <style>
         a {
             color:#3b6caa;

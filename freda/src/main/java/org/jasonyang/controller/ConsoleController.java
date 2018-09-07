@@ -1,14 +1,9 @@
 package org.jasonyang.controller;
 
-import java.util.List;
-import java.util.Map;
-
-import javax.annotation.Resource;
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.commons.lang3.StringUtils;
-import org.jasonyang.enumeration.ConsolePageEnum;
+import org.apache.log4j.Logger;
 import org.jasonyang.enumeration.ArchiveStatus;
+import org.jasonyang.enumeration.ConsolePageEnum;
 import org.jasonyang.enumeration.ResponseResult;
 import org.jasonyang.enumeration.UserEnum;
 import org.jasonyang.model.Archive;
@@ -18,41 +13,48 @@ import org.jasonyang.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 后台维护controller
+ *
  * @author jason
  */
 @Controller
-public class ConsoleController extends BaseController{
-	
-	@Resource
-	private UserService userService;
+public class ConsoleController extends BaseController {
 
-	@Autowired
-	private ArchiveService archiveService;
+    Logger logger = Logger.getLogger(ConsoleController.class);
+
+    @Resource
+    private UserService userService;
+
+    @Autowired
+    private ArchiveService archiveService;
 
     /**
      * 默认打开首页
+     *
      * @param request
      * @return
      */
-    @RequestMapping({ "/console" })
-    public String index(HttpServletRequest request){
-       return linkTo(request, ConsolePageEnum.HOME.getPage());
+    @RequestMapping(value = {"/console"}, method = RequestMethod.GET)
+    public String index(HttpServletRequest request) {
+        return linkTo(request, ConsolePageEnum.INDEX.getPage());
     }
 
     /**
      * 根据操作链接到指定页面
+     *
      * @param request
      * @param operation
      * @return
      */
-    @RequestMapping({ "/console/{operation}" })
+    @RequestMapping(value = {"/console/{operation}"}, method = RequestMethod.GET)
     public String linkTo(HttpServletRequest request, @PathVariable("operation") String operation) {
         // 验证用户是否登录,否则跳转到登录页面
         if (request.getSession().getAttribute(UserEnum.USER.getProperty()) == null) {
@@ -60,91 +62,109 @@ public class ConsoleController extends BaseController{
         }
 
         // 与枚举中配置的页面匹配, 跳转到对应操作的jsp页面
-        if(StringUtils.isNotBlank(operation)){
-            for (ConsolePageEnum consolePageEnum : ConsolePageEnum.values()){
-                if(consolePageEnum.getPage().equals(operation)){
+        if (StringUtils.isNotBlank(operation) && !ConsolePageEnum.INDEX.getPage().equals(operation)) {
+            for (ConsolePageEnum consolePageEnum : ConsolePageEnum.values()) {
+                if (consolePageEnum.getPage().equals(operation)) {
                     return "console/" + operation;
                 }
             }
         }
-        return "console/index";
+
+        return "redirect:/console/index/1";
     }
 
-	/**
-	 * 文档列表
-	 * @param request
-	 * @param model
-	 * @return 后台首页或登录页面
-	 */
-	@RequestMapping({ "/archiveList/{pageStr}" })
-	public String archiveList(HttpServletRequest request, @PathVariable("pageStr") String pageStr, Model model) {
-		// 查看HttpSession中是否存在用户，不存在直接返回登录界面
-		if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
-			final Integer page = Integer.valueOf(pageStr == null ? "1" : pageStr);
-			
-			//查询文档信息(文章和总页数)
-			final Map<String, Object> resMap = queryArchivesByPage(ArchiveStatus.ALL.getValue(), request.getParameter("tag"), page, 10);
-			final List<Archive> archiveList = (List<Archive>) resMap.get("archiveList");
-			
-			model.addAttribute("archiveList", archiveList);
-			model.addAttribute("page", page);
-			model.addAttribute("totalPages", resMap.get("totalPages"));
+    /**
+     * 文档列表
+     *
+     * @param request
+     * @param model
+     * @return 后台首页或登录页面
+     */
+    @RequestMapping(value = {"/console/index/{pageStr}"})
+    public String archiveList(HttpServletRequest request, @PathVariable("pageStr") String pageStr, Model model) {
+        // 查看HttpSession中是否存在用户，不存在直接返回登录界面
+        if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
+            final Integer page = Integer.valueOf(pageStr == null ? "1" : pageStr);
 
-			return "console/articles";
-		}
-		
-		return "redirect:login";
-	}
+            //查询文档信息(文章和总页数)
+            final Map<String, Object> resMap = queryArchivesByPage(ArchiveStatus.ALL.getValue(), request.getParameter("tag"), page, 10);
+            final List<Archive> archiveList = (List<Archive>) resMap.get("archiveList");
 
-	@RequestMapping({ "/login" })
-	public String login(HttpServletRequest request, Model model) {
-		if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
-			return "redirect:console/home";
-		}
-		final String username = request.getParameter("username");
-		final String password = request.getParameter("password");
-		if (StringUtils.isNotBlank(username) && StringUtils.isNotBlank(password)) {
-			final User user = this.userService.userAuthentication(username);
-			if (user != null && password.equals(user.getPassword())) {
-				model.addAttribute("user", user);
-				// 将用户信息存放至session中
-				request.getSession().setAttribute("user", user);
-				return "redirect:console/home";
-			}
-		}
-		return "console/login";
-	}
- 
-	@ResponseBody
-	@RequestMapping({ "/archive/save" })
-	public String saveArchive(@ModelAttribute Archive archive) {
-		if(this.archiveService.saveArchive(archive) > 0){
-			// 保存成功后,刷新redis缓存
-			this.archiveService.setAllPublishedArchivesInfoToRedis();
-		}
-		return ResponseResult.SUCCESS.getStatus();
-	}
+            model.addAttribute("archiveList", archiveList);
+            model.addAttribute("page", page);
+            model.addAttribute("totalPages", resMap.get("totalPages"));
 
-	@RequestMapping({ "/archive/edit/{id}" })
-	public String toEdit(@PathVariable("id") String id, Model model) {
-        Archive archive = this.archiveService.queryArchiveById(id,0);
+            return "console/index";
+        }
+
+        return "redirect:/login";
+    }
+
+    /**
+     * 用户登录
+     *
+     * @param request
+     * @param model
+     * @return
+     */
+    @RequestMapping({"/login"})
+    public String login(HttpServletRequest request, Model model) {
+        if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
+            return "redirect:/console/index/1";
+        }
+        final String username = request.getParameter("username");
+        final String password = request.getParameter("password");
+        if (StringUtils.isNotBlank(username) && StringUtils.isNotBlank(password)) {
+            final User user = this.userService.userAuthentication(username);
+            if (user != null && password.equals(user.getPassword())) {
+                model.addAttribute("user", user);
+                // 将用户信息存放至session中
+                request.getSession().setAttribute("user", user);
+                logger.info("login success! username: " + username);
+                return "redirect:/console/index/1";
+            }else{
+                logger.warn("login failed! username: " + username + ", password: " + password);
+            }
+        }
+        return "console/login";
+    }
+
+    @ResponseBody
+    @RequestMapping({"/archive/save"})
+    public String saveArchive(@ModelAttribute Archive archive) {
+        if (this.archiveService.saveArchive(archive) > 0) {
+            // 保存成功后,刷新redis缓存
+            this.archiveService.setAllPublishedArchivesInfoToRedis();
+        }
+        return ResponseResult.SUCCESS.getStatus();
+    }
+
+    @RequestMapping({"/archive/edit/{id}"})
+    public String toEdit(@PathVariable("id") String id, Model model) {
+        Archive archive = this.archiveService.queryArchiveById(id, 0);
         model.addAttribute("archive", archive);
-		return "console/editor";
-	}
-	
-	@RequestMapping({ "/archive/delete/{id}" })
-	public String delete(@PathVariable("id") String id) {
-		this.archiveService.deleteArchiveById(id);
-		return "redirect:/console/archive_management";
-	}
+        return "console/edit-archive";
+    }
+
+    @RequestMapping({"/console/archive/new"})
+    public String newArchive() {
+        return "console/edit-archive";
+    }
+
+    @RequestMapping({"/archive/delete/{id}"})
+    public String delete(@PathVariable("id") String id) {
+        this.archiveService.deleteArchiveById(id);
+        return "redirect:/console/index/1";
+    }
 
     /**
      * 刷新redis缓存
+     *
      * @return 文档管理页面
      */
-	@RequestMapping({ "/archive/refreshCache" })
-	public String refreshArchivesCache(){
-		this.archiveService.setAllPublishedArchivesInfoToRedis();
-		return "redirect:/console/archive_management";
-	}
+    @RequestMapping({"/archive/refreshCache"})
+    public String refreshArchivesCache() {
+        this.archiveService.setAllPublishedArchivesInfoToRedis();
+        return "redirect:/console/index/1";
+    }
 }

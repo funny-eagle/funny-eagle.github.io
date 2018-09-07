@@ -7,34 +7,43 @@
 %>
 <!DOCTYPE html>
 <html>
+<title>NoCoder - About</title>
 <jsp:include page="commons/head.jsp"/>
 <body>
 <!-- Navigation -->
 <jsp:include page="commons/navigation.jsp"/>
 <!-- Page Content -->
 <div class="container">
-    <div class="row">
-        <!-- Post Content Column -->
+    <div class="row" style="padding-top:2em;">
         <div class="col-lg-8">
-            <div class="card my-4">
-                <h5 class="card-header">About me</h5>
-                <div class="card-body">
-                    <h2>杨金龙（Jason Yang）</h2>
-                    <p>来自新疆, 80后, 喜欢编程, 弹吉他</p>
-                    <p>Mail:<a href="mailto:yangjinlong86@126.com">yangjinlong86@126.com</a></p>
-                    <p>Github:<a target="_blank" href="https://github.com/yangjinlong86">https://github.com/yangjinlong86</a>
-                    </p>
-                    <p>Blog:<a target="_blank" href="http://nocoder.org">http://nocoder.org</a></p>
-                    <p>QQ/微信:88131182</p>
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="col-md-2 column">
+                        <img class="img-rounded" height="150em;" width="150em;" src="https://raw.githubusercontent.com/jasonyang86/nocoder/master/data/images/201805/nocoder_monkey.jpeg">
+                    </div>
+                    <div class="col-md-10 column">
+                        <blockquote>
+                            <ul>
+                                <li>
+                                    NoCoder = Not Only a Coder
+                                </li>
+                                <li>
+                                    E-Mail:<a href="mailto:yangjinlong86@126.com">yangjinlong86@126.com</a>
+                                </li>
+                                <li>
+                                    Github:<a target="_blank" href="https://github.com/yangjinlong86">https://github.com/yangjinlong86</a>
+                                </li>
+                                <li>
+                                    Website:<a target="_blank" href="http://nocoder.org">http://nocoder.org</a>
+                                </li>
+
+                            </ul>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
-            <div id="div_load" style="text-align: center;padding-bottom:1em;">
-                <!--"加载中，查看更多"区域-->
-            </div>
-        </div>
 
-        <!-- Sidebar Widgets Column -->
-        <jsp:include page="commons/side-widget.jsp"/>
+        </div>
     </div>
     <!-- /.row -->
 </div>

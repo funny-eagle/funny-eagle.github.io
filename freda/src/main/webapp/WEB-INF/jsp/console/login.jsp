@@ -14,7 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jason Yang's Blog | 登录 </title>
+    <title>NoCoder | 登录 </title>
     <link href="<%=basePath%>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="<%=basePath%>/images/command.ico">
 </head>
@@ -29,10 +29,10 @@
                 <div class="col-md-6 column">
                     <form class="form-horizontal" role="form" method="post">
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-12" style="text-align: center;">
+                            <div class="col-sm-12" style="text-align: center;">
                                 <div style="text-align: center;">
                                     <h3>
-                                        Console
+                                        Blog Console
                                     </h3>
                                 </div>
                             </div>
@@ -48,10 +48,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-12" style="text-align: center;">
+                            <div class="col-sm-12" style="text-align: center;">
                                 <button id="login_link" class="btn btn-success">Sign in</button>
                                 <div style="text-align: center;margin-top: 2em;color: gray;">
-                                    <p>©2016 NoCoder.Org All Rights Reserved.</p>
+                                    <p>© nocoder.org 2017</p>
                                 </div>
                             </div>
                         </div>

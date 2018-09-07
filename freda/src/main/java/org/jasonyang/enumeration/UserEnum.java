@@ -2,6 +2,7 @@ package org.jasonyang.enumeration;
 
 /**
  * 用户枚举
+ *
  * @author jason
  * @date 18/2/4.
  */
@@ -19,7 +20,7 @@ public enum UserEnum {
         this.property = property;
     }
 
-    UserEnum(String property){
+    UserEnum(String property) {
         this.property = property;
     }
 }

@@ -7,6 +7,8 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 %>
 <html>
+<title>NoCoder - ${archive.title}</title>
+<link href="<%=basePath%>/vendor/github-markdown/github-markdown.css" rel="stylesheet">
 <jsp:include page="commons/head.jsp"/>
 <body>
 <!-- Navigation -->
@@ -23,7 +25,7 @@
           <h1 class="mt-4">${archive.title}</h1>
 
             <style type="text/css">
-                #span_tag{
+                .span_tag{
                     color:#6496e7;
                     border:1px solid;
                     border-radius: 5px;
@@ -35,62 +37,49 @@
           <!-- Author -->
           <p class="lead">
             <div style="color: #969696;">
-                <a href="#"><span id="span_tag">&nbsp;${archive.tag}&nbsp;</span></a>&nbsp;${archive.author}&nbsp;|&nbsp;
+                <a href="#"><span id="span_tag" class="span_tag">&nbsp;${archive.tag}&nbsp;</span></a>&nbsp;${archive.author}&nbsp;|&nbsp;
                 <fmt:formatDate value="${archive.createTime}" pattern="yyyy.MM.dd HH:mm"></fmt:formatDate>
             </div>
           </p>
 
           <hr>
-
-          <!-- Preview Image -->
-          <img class="img-fluid rounded" src="<%=basePath%>/images/car.png" alt="">
-
-          <hr>
-            <div id="archive_content" style="margin-top: 1em;">
+            <div id="archive_content" style="margin-top: 1em;" class="markdown-body">
                 <c:out value="${archive.htmlContent}" escapeXml="false"/>
             </div>
+            <div style="text-align: center"><a href="<%=basePath%>"><span class="symbol fa fa-home"></span> Back to home</a><br/></div>
           <hr>
-            <!-- JiaThis Button BEGIN -->
-            <div class="jiathis_style_32x32" style="margin-top: 1em; margin-bottom:1em;">
-                <a class="jiathis_button_weixin"></a>
-                <a class="jiathis_button_tsina"></a>
-                <a class="jiathis_button_qzone"></a>
-                <a class="jiathis_button_tqq"></a>
-                <a href="http://www.jiathis.com/share?uid=2115022" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-                <a class="jiathis_counter_style"></a>
-            </div>
-            <script type="text/javascript">
-                var jiathis_config = {data_track_clickback:'true'};
-            </script>
-            <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2115022" charset="utf-8"></script>
-            <!-- JiaThis Button END -->
-            <br/>
           <!-- Comments Form -->
           <div id="comment_tips"></div>
-          <div class="card my-4">
-            <h5 class="card-header">评论</h5>
-            <div class="card-body">
-              <form>
-                  <div class="form-group">
-                      <input id="commentUsername" class="form-control" type="text"  value="" placeholder="请输入您的昵称">
-                      <span id="commentUsernameTips" style="color: orangered"></span>
-                  </div>
-                <div class="form-group">
-                  <textarea id="commentContent" class="form-control" rows="3" placeholder="请输入评论内容"></textarea>
-                  <span id="commentContentTips" style="color: orangered"></span>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        评论
+                    </h3>
                 </div>
-                <button id="submitCommentBtn" type="button" class="btn btn-primary" onclick="saveComment();">提交</button>
-              </form>
+                <div class="panel-body" id="recentlyArchiveList">
+                    <form>
+                        <div class="form-group">
+                            <input id="commentUsername" class="form-control" type="text"  value="" placeholder="请输入您的昵称">
+                            <span id="commentUsernameTips" style="color: orangered"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="commentContent" class="form-control" rows="3" placeholder="请输入评论内容"></textarea>
+                            <span id="commentContentTips" style="color: orangered"></span>
+                        </div>
+                        <button id="submitCommentBtn" type="button" class="btn btn-primary" onclick="saveComment();">提交</button>
+                    </form>
+                </div>
             </div>
-          </div>
 
           <!-- 评论区域 -->
           <div id="comments_fields"></div>
 
         </div>
 
-        <!-- Sidebar Widgets Column -->
-        <jsp:include page="commons/side-widget.jsp"/>
+        <div class="col-lg-4" style="padding-top:2em;">
+            <!-- Sidebar Widgets Column -->
+            <jsp:include page="commons/side-widget.jsp"/>
+        </div>
       </div>
       <!-- /.row -->
 
@@ -126,11 +115,11 @@
                     var createTime = new Date(res[i].createTime).format("yyyy-MM-dd hh:mm");
                     $("#comments_fields").append(
                             '<div class="media mb-4">' +
-                            '    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">' +
-                            '        <div class="media-body">' +
-                            '            <h5 class="mt-0" id="commenterName">' + res[i].commentUsername + '</h5>' +
-                            '            <span>' + res[i].commentContent + '</span><br/>' + createTime +
-                            '        </div>' +
+                            '   <div class="media-body">' +
+                            '       <span class="fa fa-user"> ' +  res[i].commentUsername + '</span>'+
+                            '       <span id="commenterName">' + ' | ' + createTime + '</span><br/>' +
+                            '       <span>' + res[i].commentContent + '</span>'+
+                            '   </div>' +
                             '</div>'
                     );
                 }
@@ -141,8 +130,8 @@
          * 保存评论
          */
         function saveComment(){
-            var commentUsername = $("#commentUsername").val();
-            var commentContent = $("#commentContent").val();
+            var commentUsername = htmlEncode($("#commentUsername").val());
+            var commentContent = htmlEncode($("#commentContent").val());
             // 评论昵称及内容校验
             if(!validateComment(commentUsername, commentContent)){
                 return;
@@ -154,7 +143,7 @@
                 data:{
                     "archiveId":archiveId,
                     "commentUsername": commentUsername,
-                    "commentContent":commentContent
+                    "commentContent": commentContent
                 },
                 success:function(res){
                     if("success" == res){
@@ -190,6 +179,17 @@
             }
             $("#commentContentTips").html("");
             return true;
+        }
+
+        function htmlEncode(str) {
+            var div = document.createElement("div");
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+        function htmlDecode(str) {
+            var div = document.createElement("div");
+            div.innerHTML = str;
+            return div.innerHTML;
         }
     </script>
   </body>

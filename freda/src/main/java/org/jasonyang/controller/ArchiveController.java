@@ -1,7 +1,5 @@
 package org.jasonyang.controller;
 
-import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
 import org.jasonyang.enumeration.ArchiveStatus;
 import org.jasonyang.enumeration.PageSizeEnum;
 import org.jasonyang.model.Archive;
@@ -11,9 +9,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
+
 /**
+ * 文章Controller
  * @author jason
  */
 @Controller
@@ -22,12 +25,13 @@ public class ArchiveController extends BaseController {
     private ArchiveService archiveService;
 
     /**
-     * 查询文章列表
+     * 分页查询文章列表
+     *
      * @param request
      * @return
      */
     @ResponseBody
-    @RequestMapping({"/archive_list"})
+    @RequestMapping(value = {"/archive_list"}, method = RequestMethod.GET)
     public Map<String, Object> toArchiveListPage(HttpServletRequest request) {
         // 文档标签
         String tag = request.getParameter("tag");
@@ -38,7 +42,6 @@ public class ArchiveController extends BaseController {
         // 每页个数
         Integer pageSize = PageSizeEnum.PAGE_SIZE.getValue();
 
-
         // 获取文档信息
         Map<String, Object> resMap = queryArchivesByPage(ArchiveStatus.PUBLISHED.getValue(), tag, page, pageSize);
         return resMap;
@@ -47,13 +50,16 @@ public class ArchiveController extends BaseController {
 
     /**
      * 根据ID获取文章
-     * @param request
      * @param model
      * @return
      */
-    @RequestMapping({"/archive/{id}"})
-    public String viewArchive(HttpServletRequest request, @PathVariable("id") String id, Model model) {
-        Archive archive = this.archiveService.queryArchiveById(id,1);
+    @RequestMapping(value = {"/archive/{id}"}, method = RequestMethod.GET)
+    public String viewArchive(@PathVariable("id") String id, Model model) {
+        // 1 表示前台使用不查询markdown内容字段
+        Archive archive = this.archiveService.queryArchiveById(id, 1);
+        if(archive == null){
+            return "redirect:/";
+        }
         model.addAttribute("archive", archive);
         return "blog/archive";
     }

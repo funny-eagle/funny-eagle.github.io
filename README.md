@@ -1,18 +1,23 @@
-## Freda博客系统
+## Freda Blog Application
 
-项目效果示例 http://nocoder.org
+> **Freda Blog Application** based on Java, provides a simple, fast blog application for users.
 
-### 技术及框架：
-- JDK 1.8
-- Spring 4.0.2
-- Mybatis 3.2.6
-- Bootstrap 3
-- Redis 3.x
-- Markdown编辑器：editor.md
+### Frameworks
 
-### 数据库：
-- PostgreSQL-9.x
+`Bootstrap, jQuery, Simplemde(Markdown Editor)`
 
-### 分享
-- 友言 http://www.uyan.cc/
+`
+Spring, Spring MVC, Spring Data Jpa, Mybatis, Hibernate, 
+`
+### Databases
+
+` PostgreSQL 9.x, Redis 3.x`
+
+### Plugins
+
+- `Uyan` [http://www.uyan.cc](http://www.uyan.cc)
+
+### Demo
+
+[http://nocoder.org](http://nocoder.org)
 

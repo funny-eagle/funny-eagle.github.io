@@ -1,206 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.jasonyang.mapper.ArchiveMapper">
-  <resultMap id="BaseResultMap" type="org.jasonyang.model.Archive">
-    <id column="id" jdbcType="VARCHAR" property="id" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="author" jdbcType="VARCHAR" property="author" />
-    <result column="md_content" jdbcType="VARCHAR" property="mdContent" />
-    <result column="html_content" jdbcType="VARCHAR" property="htmlContent" />
-    <result column="tag" jdbcType="VARCHAR" property="tag" />
-    <result column="type" jdbcType="VARCHAR" property="type" />
-    <result column="source_link" jdbcType="VARCHAR" property="sourceLink" />
-    <result column="state" jdbcType="INTEGER" property="state" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-    <result column="preview" jdbcType="VARCHAR" property="preview" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, title, author, md_content, html_content, tag, type, source_link, state, create_time, 
-    update_time, preview
-  </sql>
-  <sql id="Base_Column_List_Front">
-    id, title, author, html_content, tag, type, create_time, update_time, preview
-  </sql>
+    <resultMap id="BaseResultMap" type="org.jasonyang.model.Archive">
+        <id column="id" jdbcType="VARCHAR" property="id"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="author" jdbcType="VARCHAR" property="author"/>
+        <result column="md_content" jdbcType="VARCHAR" property="mdContent"/>
+        <result column="html_content" jdbcType="VARCHAR" property="htmlContent"/>
+        <result column="tag" jdbcType="VARCHAR" property="tag"/>
+        <result column="type" jdbcType="VARCHAR" property="type"/>
+        <result column="source_link" jdbcType="VARCHAR" property="sourceLink"/>
+        <result column="state" jdbcType="INTEGER" property="state"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="preview" jdbcType="VARCHAR" property="preview"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, title, author, md_content, html_content, tag, type, source_link, state, create_time,
+        update_time, preview
+    </sql>
+    <sql id="Base_Column_List_Front">
+        id, title, author, html_content, tag, type, create_time, update_time, preview
+    </sql>
 
-  <sql id="Simple_Column_List">
-    id, title, preview, author, tag, create_time, state
-  </sql>
+    <sql id="Simple_Column_List">
+        id, title, preview, author, tag, create_time, update_time, state
+    </sql>
 
-  <!-- 根据主键查询文档-->
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from public.archive
-    where id = #{id,jdbcType=VARCHAR}
-  </select>
+    <!-- 根据主键查询文档-->
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from public.archive
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
 
-  <select id="selectArchiveById" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List_Front" />
-    from public.archive
-    where id = #{id,jdbcType=VARCHAR}
-  </select>
+    <select id="selectArchiveById" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List_Front"/>
+        from public.archive
+        where id = #{id,jdbcType=VARCHAR}
+    </select>
 
-  <select id="selectCountArchives" parameterType="map" resultType="int">
-  	select count(1) from public.archive
-      <where>
-          <if test="state != 0">
-              state = #{state}
-          </if>
-      </where>
-  </select>
-  
-  <select id="selectArchives" resultMap="BaseResultMap" parameterType="java.util.Map">
-    select
-    <include refid="Simple_Column_List" />
-    from public.archive
-    <where>
-    	<if test="state != 0">
-    		state = #{state, jdbcType=INTEGER}
-    	</if>
-    	
-    	<if test="tag != null">
-    		tag = #{tag, jdbcType=VARCHAR}
-    	</if>
-    </where>
-    order by create_time desc
-    <if test="limit != 0">
-    limit #{limit, jdbcType=VARCHAR} offset #{offset, jdbcType=VARCHAR}
-    </if>
-  </select>
-  
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from public.archive
-    where id = #{id,jdbcType=VARCHAR}
-  </delete>
-  <insert id="insert" parameterType="org.jasonyang.model.Archive">
-    insert into public.archive (id, title, author, 
-      md_content, html_content, tag, 
-      type, source_link, state, 
-      create_time, update_time, preview)
-    values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR}, 
-      #{mdContent,jdbcType=VARCHAR}, #{htmlContent,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, 
-      #{type,jdbcType=VARCHAR}, #{sourceLink,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{preview, jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="org.jasonyang.model.Archive">
-    insert into public.archive
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="title != null">
-        title,
-      </if>
-      <if test="author != null">
-        author,
-      </if>
-      <if test="mdContent != null">
-        md_content,
-      </if>
-      <if test="htmlContent != null">
-        html_content,
-      </if>
-      <if test="tag != null">
-        tag,
-      </if>
-      <if test="type != null">
-        type,
-      </if>
-      <if test="sourceLink != null">
-        source_link,
-      </if>
-      <if test="state != 0">
-        state,
-      </if>
-      <if test="createTime != null">
-        create_time,
-      </if>
-      <if test="updateTime != null">
-        update_time,
-      </if>
-      <if test="preview != null">
-        preview,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=VARCHAR},
-      </if>
-      <if test="title != null">
-        #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="author != null">
-        #{author,jdbcType=VARCHAR},
-      </if>
-      <if test="mdContent != null">
-        #{mdContent,jdbcType=VARCHAR},
-      </if>
-      <if test="htmlContent != null">
-        #{htmlContent,jdbcType=VARCHAR},
-      </if>
-      <if test="tag != null">
-        #{tag,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null">
-        #{type,jdbcType=VARCHAR},
-      </if>
-      <if test="sourceLink != null">
-        #{sourceLink,jdbcType=VARCHAR},
-      </if>
-      <if test="state != 0">
-        #{state,jdbcType=INTEGER},
-      </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="preview != null">
-      	#{preview, jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="org.jasonyang.model.Archive">
-    update public.archive
-    <set>
-      <if test="title != null">
-        title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="author != null">
-        author = #{author,jdbcType=VARCHAR},
-      </if>
-      <if test="mdContent != null">
-        md_content = #{mdContent,jdbcType=VARCHAR},
-      </if>
-      <if test="htmlContent != null">
-        html_content = #{htmlContent,jdbcType=VARCHAR},
-      </if>
-      <if test="tag != null">
-        tag = #{tag,jdbcType=VARCHAR},
-      </if>
-      <if test="type != null">
-        type = #{type,jdbcType=VARCHAR},
-      </if>
-      <if test="sourceLink != null">
-        source_link = #{sourceLink,jdbcType=VARCHAR},
-      </if>
-      <if test="state != 0">
-        state = #{state,jdbcType=INTEGER},
-      </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="preview != null">
-      	preview = #{preview, jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=VARCHAR}
-  </update>
+    <select id="selectCountArchives" parameterType="map" resultType="int">
+        select count(1) from public.archive
+        <where>
+            <if test="state != 0">
+                state = #{state}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectArchives" resultMap="BaseResultMap" parameterType="java.util.Map">
+        select
+        <include refid="Simple_Column_List"/>
+        from public.archive
+        <where>
+            <if test="state != 0">
+                state = #{state, jdbcType=INTEGER}
+            </if>
+
+            <if test="tag != null">
+                tag = #{tag, jdbcType=VARCHAR}
+            </if>
+        </where>
+        order by create_time desc
+        <if test="limit != 0">
+            limit #{limit, jdbcType=VARCHAR} offset #{offset, jdbcType=VARCHAR}
+        </if>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+        delete from public.archive
+        where id = #{id,jdbcType=VARCHAR}
+    </delete>
+    <insert id="insert" parameterType="org.jasonyang.model.Archive">
+        insert into public.archive (id, title, author,
+        md_content, html_content, tag,
+        type, source_link, state,
+        create_time, update_time, preview)
+        values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR},
+        #{mdContent,jdbcType=VARCHAR}, #{htmlContent,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR},
+        #{type,jdbcType=VARCHAR}, #{sourceLink,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER},
+        #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{preview, jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="org.jasonyang.model.Archive">
+        insert into public.archive
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="author != null">
+                author,
+            </if>
+            <if test="mdContent != null">
+                md_content,
+            </if>
+            <if test="htmlContent != null">
+                html_content,
+            </if>
+            <if test="tag != null">
+                tag,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="sourceLink != null">
+                source_link,
+            </if>
+            <if test="state != 0">
+                state,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="preview != null">
+                preview,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=VARCHAR},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null">
+                #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="mdContent != null">
+                #{mdContent,jdbcType=VARCHAR},
+            </if>
+            <if test="htmlContent != null">
+                #{htmlContent,jdbcType=VARCHAR},
+            </if>
+            <if test="tag != null">
+                #{tag,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="sourceLink != null">
+                #{sourceLink,jdbcType=VARCHAR},
+            </if>
+            <if test="state != 0">
+                #{state,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="preview != null">
+                #{preview, jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.jasonyang.model.Archive">
+        update public.archive
+        <set>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null">
+                author = #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="mdContent != null">
+                md_content = #{mdContent,jdbcType=VARCHAR},
+            </if>
+            <if test="htmlContent != null">
+                html_content = #{htmlContent,jdbcType=VARCHAR},
+            </if>
+            <if test="tag != null">
+                tag = #{tag,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="sourceLink != null">
+                source_link = #{sourceLink,jdbcType=VARCHAR},
+            </if>
+            <if test="state != 0">
+                state = #{state,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="preview != null">
+                preview = #{preview, jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
 
 </mapper>

@@ -22,7 +22,9 @@
             <!-- loading -->
             <div id="div_load" style="text-align: center;padding-bottom:1em;"></div>
         </div>
-        <jsp:include page="commons/side-widget.jsp"/>
+        <div class="col-lg-4"  style="padding-top:2em;">
+            <jsp:include page="commons/side-widget.jsp"/>
+        </div>
     </div>
     <!-- /.row -->
 
@@ -45,7 +47,7 @@
         // $("#div_load").html('<div style="text-align: center;"><h3>Loading...</h3></div>');
 
         var path = "<%=basePath%>";
-        $.post(
+        $.get(
                 path + "/archive_list",
                 {page: _page},
                 function (res) {
@@ -59,12 +61,7 @@
                         archives[i].createTime = new Date(archives[i].createTime).format("yyyy-MM-dd hh:mm");
                         $("#article_section").append(
                                 '<div class="row">'
-                                + '<div class="col-lg-2">'
-                                + '<a href="archive/' + archives[i].id + '">'
-                                + '<img class="img-fluid rounded" src="' + path + '/images/pic01.jpg"/>'
-                                + '<a/>'
-                                + '</div>'
-                                + '<div class="col-lg-10">'
+                                + '<div class="col-lg-12">'
                                 + '<a href="archive/' + archives[i].id + '">'
                                 + '<span style="font-size:1.2em;">'
                                 + archives[i].title
@@ -75,7 +72,8 @@
                                 + archives[i].createTime + '  ' + archives[i].author
                                 + '</span>'
                                 + '<br/>'
-                                + '<span style="color:dimgrey;font-style: italic;padding-top: 0.2em;">' + archives[i].preview + '</span>'
+                                + '<span style="padding-top: 0.2em;">' + archives[i].preview + '</span>'
+                                + '<div style="text-align: right;"> <a href="archive/' + archives[i].id + '"> View <span class="symbol fa fa-angle-double-right"></span></a></div>'
                                 + '</div>'
                                 + '</div>'
                                 + '<hr/>'
@@ -86,7 +84,7 @@
                     $("#div_load").html("");
                     // _page == -1 表示已经是最后一页，不再显示查看更多
                     if (_page != -1) {
-                        $("#div_load").append('<a class="btn btn-info" href="javascript:void(0)"  onclick="loadArchives(' + _page + ');">加载更多››<i class="icon-arrow-down"></i></a>');
+                        $("#div_load").append('<a class="btn btn-primary btn" href="javascript:void(0)"  onclick="loadArchives(' + _page + ');">Load more archives <span class="fa fa-angle-double-down"/><i class="icon-arrow-down"></i></a>');
                     }
                 }
         );
