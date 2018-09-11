@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%--<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>--%>
 <%@ taglib  uri ="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <%
     String path = request.getContextPath();
@@ -38,7 +38,8 @@
           <p class="lead">
             <div style="color: #969696;">
                 <a href="#"><span id="span_tag" class="span_tag">&nbsp;${archive.tag}&nbsp;</span></a>&nbsp;${archive.author}&nbsp;|&nbsp;
-                <fmt:formatDate value="${archive.createTime}" pattern="yyyy.MM.dd HH:mm"></fmt:formatDate>
+            ${archive.createTime}
+            <%--<fmt:formatDate value="${archive.createTime}" pattern="yyyy.MM.dd HH:mm"></fmt:formatDate>--%>
             </div>
           </p>
 

@@ -10,11 +10,11 @@
 		<jdbcConnection driverClass="org.postgresql.Driver"
 			connectionURL="jdbc:postgresql://127.0.0.1:5432/freda_db"
 			userId="postgres" password="jasonyang" />
-		<javaModelGenerator targetPackage="org.jasonyang.model"
+		<javaModelGenerator targetPackage="org.nocoder.model"
 			targetProject="/Users/jason/local/git/FredaBlog/freda/src/main/java" />
-		<sqlMapGenerator targetPackage="org.jasonyang.mapper"
+		<sqlMapGenerator targetPackage="org.nocoder.mapper"
 			targetProject="/Users/jason/local/git/FredaBlog/freda/src/main/java" />
-		<javaClientGenerator targetPackage="org.jasonyang.mapper"
+		<javaClientGenerator targetPackage="org.nocoder.mapper"
 			targetProject="/Users/jason/local/git/FredaBlog/freda/src/main/java" type="XMLMAPPER" />
 		
 		
