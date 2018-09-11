@@ -35,10 +35,10 @@ public class RedisConfig {
             if (StringUtils.isNotEmpty(PropUtils.getConfigValue("redis_server_auth"))) {
                 jedis.auth(PropUtils.getConfigValue("redis_server_auth"));
             }
+            logger.info("redis 连接成功！");
         } catch (Exception ex) {
             logger.error("连接 Redis Server 失败！ " + ex);
         }
-        logger.info("redis 连接成功！");
         return jedis;
     }
 }

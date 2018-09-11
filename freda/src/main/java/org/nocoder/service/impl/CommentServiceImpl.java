@@ -29,10 +29,10 @@ public class CommentServiceImpl implements CommentService {
     public int saveOrUpdateComment(Comment comment) {
         if (StringUtils.isBlank(comment.getId())) {
             comment.setId(UUIDUtil.getUUID());
-            comment.setCreateTime(new Date());
+            comment.setCreateTime(new Date().toString());
             return commentMapper.insertSelective(comment);
         }
-        comment.setCreateTime(new Date());
+        comment.setCreateTime(new Date().toString());
         return commentMapper.updateByPrimaryKeySelective(comment);
     }
 }

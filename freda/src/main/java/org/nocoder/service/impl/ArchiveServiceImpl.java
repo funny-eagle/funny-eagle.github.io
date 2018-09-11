@@ -13,10 +13,8 @@ import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 
 import javax.annotation.PostConstruct;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 
 @Service
@@ -65,10 +63,10 @@ public class ArchiveServiceImpl implements ArchiveService {
 
         if (StringUtils.isBlank(archive.getId())) {
             archive.setId(UUIDUtil.getUUID());
-            archive.setCreateTime(new Date());
+            archive.setCreateTime(new Date().toString());
             resCount = this.archiveMapper.insertSelective(archive);
         } else {
-            archive.setUpdateTime(new Date());
+            archive.setUpdateTime(new Date().toString());
             resCount = this.archiveMapper.updateByPrimaryKeySelective(archive);
         }
         return resCount;
@@ -104,7 +102,6 @@ public class ArchiveServiceImpl implements ArchiveService {
         paramsMap.put("limit", 0);
         paramsMap.put("offset", 0);
         jedis.set("allArchivesInfo".getBytes(), SerializeUtil.serializeList(this.archiveMapper.selectArchives(paramsMap)));
-        jedis.close();
     }
 
 
@@ -122,7 +119,6 @@ public class ArchiveServiceImpl implements ArchiveService {
     @Override
     public List<Archive> getAllPublishedArchivesInfo() {
         List<Archive> archiveList = (List<Archive>) SerializeUtil.unserializeList(jedis.get("allArchivesInfo".getBytes()));
-        jedis.close();
         return archiveList;
     }
 

@@ -18,9 +18,9 @@ public class User implements Serializable {
 
     private String password;
 
-    private Date createTime;
+    private String createTime;
 
-    private Date lastLoginTime;
+    private String lastLoginTime;
 
     private String lastLoginIp;
 
@@ -48,19 +48,19 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
-    public Date getLastLoginTime() {
+    public String getLastLoginTime() {
         return lastLoginTime;
     }
 
-    public void setLastLoginTime(Date lastLoginTime) {
+    public void setLastLoginTime(String lastLoginTime) {
         this.lastLoginTime = lastLoginTime;
     }
 

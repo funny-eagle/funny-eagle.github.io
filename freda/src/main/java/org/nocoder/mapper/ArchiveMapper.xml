@@ -11,8 +11,8 @@
         <result column="type" jdbcType="VARCHAR" property="type"/>
         <result column="source_link" jdbcType="VARCHAR" property="sourceLink"/>
         <result column="state" jdbcType="INTEGER" property="state"/>
-        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
-        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="create_time" jdbcType="VARCHAR" property="createTime"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
         <result column="preview" jdbcType="VARCHAR" property="preview"/>
     </resultMap>
     <sql id="Base_Column_List">

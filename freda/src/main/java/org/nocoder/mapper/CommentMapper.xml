@@ -9,7 +9,7 @@
         <result column="comment_user_email" jdbcType="VARCHAR" property="commentUserEmail"/>
         <result column="comment_user_ip_address" jdbcType="VARCHAR" property="commentUserIpAddress"/>
         <result column="comment_content" jdbcType="VARCHAR" property="commentContent"/>
-        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_time" jdbcType="VARCHAR" property="createTime"/>
     </resultMap>
     <sql id="Base_Column_List">
         id, archive_id, comment_username, comment_user_email, comment_user_ip_address, comment_content,

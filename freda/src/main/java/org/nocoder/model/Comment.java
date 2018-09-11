@@ -21,7 +21,7 @@ public class Comment implements Serializable {
 
     private String commentContent;
 
-    private Date createTime;
+    private String createTime;
 
     private String pid;
 
@@ -81,11 +81,11 @@ public class Comment implements Serializable {
         this.commentContent = commentContent;
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 }

@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>--%>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
@@ -72,8 +72,10 @@
                                         <td style="display: none">${archive.id}</td>
                                         <td>${archive.title}</td>
                                         <td>${archive.author}</td>
-                                        <td><fmt:formatDate value="${archive.createTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
-                                        <td><fmt:formatDate value="${archive.updateTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
+                                        <td>${archive.createTime}</td>
+                                        <td>${archive.updateTime}</td>
+                                        <%--<td><fmt:formatDate value="${archive.createTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>--%>
+                                        <%--<td><fmt:formatDate value="${archive.updateTime}" pattern="yyyy-MM-dd hh:mm:ss"/></td>--%>
                                         <td>${archive.state == 2 ? 'published' : 'draft'}</td>
                                         <td><a href="<%=basePath%>/archive/edit/${archive.id}">Edit</a>  <a href="<%=basePath%>/archive/unpublish/${archive.id}">Unpublish</a></td>
                                     </tr>
