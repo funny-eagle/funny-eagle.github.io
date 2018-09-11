@@ -11,7 +11,7 @@ Spring, Spring MVC, Spring Data Jpa, Mybatis, Hibernate,
 `
 ### Databases
 
-` PostgreSQL 9.x, Redis 3.x`
+`SQLite3, PostgreSQL 9.x, Redis 3.x`
 
 ### Plugins
 
