@@ -1,7 +1,5 @@
 server:
   port: 8080
-  servlet:
-    context-path: /freda
 # database
 jdbc.driver: org.sqlite.JDBC
 jdbc.url: jdbc:sqlite:/Users/jason/local/git/nocoder/data/freda_blog.db

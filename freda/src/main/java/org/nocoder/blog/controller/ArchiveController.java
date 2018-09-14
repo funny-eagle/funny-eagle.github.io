@@ -1,12 +1,14 @@
 package org.nocoder.blog.controller;
 
+import com.google.common.collect.Maps;
 import org.nocoder.blog.enumeration.ArchiveStatus;
 import org.nocoder.blog.enumeration.PageSizeEnum;
 import org.nocoder.blog.model.Archive;
 import org.nocoder.blog.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
@@ -27,8 +29,7 @@ public class ArchiveController extends BaseController {
      * @param request
      * @return
      */
-    @ResponseBody
-    @RequestMapping(value = {"/archive_list"}, method = RequestMethod.GET)
+    @GetMapping(value = {"/archives"})
     public Map<String, Object> toArchiveListPage(HttpServletRequest request) {
         // 文档标签
         String tag = request.getParameter("tag");
@@ -48,14 +49,16 @@ public class ArchiveController extends BaseController {
     /**
      * 根据ID获取文章
      *
-     * @param model
+     * @param archiveId 文档ID
      * @return
      */
     @GetMapping(value = {"/archive/{id}"})
-    public String viewArchive(@PathVariable("id") String id, Model model) {
+    public Map<String, Object> viewArchive(@PathVariable("id") String archiveId) {
         // 1 表示前台使用不查询markdown内容字段
-        Archive archive = this.archiveService.queryArchiveById(id, 1);
-        return "";
+        Archive archive = this.archiveService.queryArchiveById(archiveId, 1);
+        Map<String, Object> resMap = Maps.newHashMap();
+        resMap.put("archive", archive);
+        return resMap;
     }
 
 }
