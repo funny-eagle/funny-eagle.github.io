@@ -1,5 +1,6 @@
 package org.nocoder.blog.controller;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.nocoder.blog.enumeration.ArchiveStatus;
@@ -30,48 +31,9 @@ public class ConsoleController extends BaseController {
 
     Logger logger = Logger.getLogger(ConsoleController.class);
 
-    @Resource
-    private UserService userService;
-
     @Autowired
     private ArchiveService archiveService;
 
-    /**
-     * 默认打开首页
-     *
-     * @param request
-     * @return
-     */
-    @RequestMapping(value = {"/console"}, method = RequestMethod.GET)
-    public String index(HttpServletRequest request) {
-        return linkTo(request, ConsolePageEnum.INDEX.getPage());
-    }
-
-    /**
-     * 根据操作链接到指定页面
-     *
-     * @param request
-     * @param operation
-     * @return
-     */
-    @RequestMapping(value = {"/console/{operation}"}, method = RequestMethod.GET)
-    public String linkTo(HttpServletRequest request, @PathVariable("operation") String operation) {
-        // 验证用户是否登录,否则跳转到登录页面
-        if (request.getSession().getAttribute(UserEnum.USER.getProperty()) == null) {
-            return "redirect:/login";
-        }
-
-        // 与枚举中配置的页面匹配, 跳转到对应操作的jsp页面
-        if (StringUtils.isNotBlank(operation) && !ConsolePageEnum.INDEX.getPage().equals(operation)) {
-            for (ConsolePageEnum consolePageEnum : ConsolePageEnum.values()) {
-                if (consolePageEnum.getPage().equals(operation)) {
-                    return "console/" + operation;
-                }
-            }
-        }
-
-        return "redirect:/console/index/1";
-    }
 
     /**
      * 文档列表
@@ -100,37 +62,9 @@ public class ConsoleController extends BaseController {
         return "redirect:/login";
     }
 
-    /**
-     * 用户登录
-     *
-     * @param request
-     * @param model
-     * @return
-     */
-    @RequestMapping({"/login"})
-    public String login(HttpServletRequest request, Model model) {
-        if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
-            return "redirect:/console/index/1";
-        }
-        final String username = request.getParameter("username");
-        final String password = request.getParameter("password");
-        if (StringUtils.isNotBlank(username) && StringUtils.isNotBlank(password)) {
-            final User user = this.userService.userAuthentication(username);
-            if (user != null && password.equals(user.getPassword())) {
-                model.addAttribute("user", user);
-                // 将用户信息存放至session中
-                request.getSession().setAttribute("user", user);
-                logger.info("login success! username: " + username);
-                return "redirect:/console/index/1";
-            } else {
-                logger.warn("login failed! username: " + username + ", password: " + password);
-            }
-        }
-        return "console/login";
-    }
 
-    @ResponseBody
-    @RequestMapping({"/archive/save"})
+
+    @PostMapping({"/archive/save"})
     public String saveArchive(@ModelAttribute Archive archive) {
         if (this.archiveService.saveArchive(archive) > 0) {
             // 保存成功后,刷新redis缓存
@@ -139,19 +73,14 @@ public class ConsoleController extends BaseController {
         return ResponseResult.SUCCESS.getStatus();
     }
 
-    @RequestMapping({"/archive/edit/{id}"})
+    @PostMapping({"/archive/{id}"})
     public String toEdit(@PathVariable("id") String id, Model model) {
         Archive archive = this.archiveService.queryArchiveById(id, 0);
         model.addAttribute("archive", archive);
         return "console/edit-archive";
     }
 
-    @RequestMapping({"/console/archive/new"})
-    public String newArchive() {
-        return "console/edit-archive";
-    }
-
-    @RequestMapping({"/archive/delete/{id}"})
+    @DeleteMapping(value = "/archive/{id}")
     public String delete(@PathVariable("id") String id) {
         this.archiveService.deleteArchiveById(id);
         return "redirect:/console/index/1";
@@ -162,7 +91,7 @@ public class ConsoleController extends BaseController {
      *
      * @return 文档管理页面
      */
-    @RequestMapping({"/archive/refreshCache"})
+    @RequestMapping({"/archive/refresh"})
     public String refreshArchivesCache() {
         this.archiveService.setAllPublishedArchivesInfoToRedis();
         return "redirect:/console/index/1";
