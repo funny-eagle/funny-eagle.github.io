@@ -1,6 +1,22 @@
-## Freda Blog Application
+# Freda Blog Application
 
-> **Freda Blog Application** based on Java, provides a simple, fast blog application for users.
+> **Freda Blog Application** based on Java, provides a simple, fast blog application.
+
+## Freda 3.0.0
+
+### Fremeworks
+
+`SpringBoot, Mybatis`
+
+`Bootstrap, jQuery, Simplemde(Markdown Editor)`
+
+### Databases
+
+`SQLite3, Redis 3.x`
+
+---
+
+## Freda 2.x
 
 ### Frameworks
 
