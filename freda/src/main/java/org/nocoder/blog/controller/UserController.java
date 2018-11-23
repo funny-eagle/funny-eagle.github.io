@@ -2,11 +2,12 @@ package org.nocoder.blog.controller;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.nocoder.blog.common.ResponseInfo;
 import org.nocoder.blog.enumeration.UserEnum;
 import org.nocoder.blog.model.User;
 import org.nocoder.blog.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 public class UserController {
 
-    Logger logger = Logger.getLogger(UserController.class);
+    Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Resource
     private UserService userService;

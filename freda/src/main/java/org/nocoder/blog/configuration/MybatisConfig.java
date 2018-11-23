@@ -23,8 +23,8 @@ public class MybatisConfig {
     @Bean
     public BasicDataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName(environment.getProperty("jdbc.driver"));
-        dataSource.setUrl(environment.getProperty("jdbc.url"));
+        dataSource.setDriverClassName(environment.getProperty("jdbc_driver"));
+        dataSource.setUrl(environment.getProperty("jdbc_url"));
         return dataSource;
     }
 

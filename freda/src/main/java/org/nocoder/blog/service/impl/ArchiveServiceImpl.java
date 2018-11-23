@@ -1,12 +1,14 @@
 package org.nocoder.blog.service.impl;
 
+import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.nocoder.blog.enumeration.ArchiveStatus;
 import org.nocoder.blog.mapper.ArchiveMapper;
 import org.nocoder.blog.model.Archive;
 import org.nocoder.blog.service.ArchiveService;
 import org.nocoder.blog.utils.SerializeUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
@@ -20,7 +22,7 @@ import java.util.Map;
 
 @Service
 public class ArchiveServiceImpl implements ArchiveService {
-    private final Logger logger = Logger.getLogger(ArchiveServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(ArchiveServiceImpl.class);
 
     @Autowired
     private ArchiveMapper archiveMapper;
@@ -96,7 +98,7 @@ public class ArchiveServiceImpl implements ArchiveService {
     @Override
     @PostConstruct
     public void setAllPublishedArchivesInfoToRedis() {
-        Map paramsMap = new HashMap();
+        Map paramsMap = Maps.newHashMap();
         paramsMap.put("state", ArchiveStatus.PUBLISHED.getValue());
         paramsMap.put("tag", null);
         paramsMap.put("limit", 0);

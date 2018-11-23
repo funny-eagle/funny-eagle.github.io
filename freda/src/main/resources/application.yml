@@ -1,10 +1,20 @@
+
 server:
   port: 8080
 # database
-jdbc.driver: org.sqlite.JDBC
-jdbc.url: jdbc:sqlite:/Users/jason/local/git/nocoder/data/freda_blog.db
+jdbc_driver: org.sqlite.JDBC
+jdbc_url: jdbc:sqlite:D:\\usr\\local\\github\\nocoder\\data\\freda_blog.db
 
 # redis
 redis_server_host: 127.0.0.1
 redis_server_port: 6379
 redis_server_auth:
+
+logging:
+  level:
+    org.nocoder: debug
+  file: freda.log
+spring:
+  output:
+    ansi:
+      enabled: detect

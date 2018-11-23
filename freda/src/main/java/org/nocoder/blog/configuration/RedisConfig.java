@@ -1,7 +1,6 @@
 package org.nocoder.blog.configuration;
 
 import org.apache.commons.lang3.StringUtils;
-import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,8 +10,6 @@ import redis.clients.jedis.JedisPoolConfig;
 
 @Configuration
 public class RedisConfig {
-
-    private static Logger logger = Logger.getLogger(RedisConfig.class);
 
     @Value("${redis_server_host}")
     private String host;
@@ -37,9 +34,7 @@ public class RedisConfig {
             if (StringUtils.isNotEmpty(password)) {
                 jedis.auth(password);
             }
-            logger.info("redis 连接成功！");
         } catch (Exception ex) {
-            logger.error("连接 Redis Server 失败！ " + ex);
         }
         return jedis;
     }
