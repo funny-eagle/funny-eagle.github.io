@@ -46,7 +46,7 @@ public interface ArchiveService {
      * @param type
      * @return
      */
-    Archive queryArchiveById(String id, int type);
+    Archive queryArchiveById(String id);
 
     /**
      * 根据主键删除文档
@@ -55,6 +55,8 @@ public interface ArchiveService {
      * @return
      */
     int deleteArchiveById(String id);
+
+    Archive queryWithoutMdContentArchiveById(String id);
 
     /**
      * 查询所有已发布文档的简要信息,存至redis缓存

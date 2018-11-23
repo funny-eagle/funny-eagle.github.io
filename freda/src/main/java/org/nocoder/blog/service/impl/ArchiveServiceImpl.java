@@ -78,18 +78,30 @@ public class ArchiveServiceImpl implements ArchiveService {
      * 根据ID查询文档
      *
      * @param id
-     * @param type 1：表示前台用，不查询markdown内容
      * @return
      */
     @Override
-    public Archive queryArchiveById(String id, int type) {
+    public Archive queryArchiveById(String id) {
         if (StringUtils.isBlank(id)) {
             return null;
         }
-        if (type == 1) {
-            return this.archiveMapper.selectArchiveById(id);
+        return this.archiveMapper.selectById(id);
+    }
+
+    /**
+     * 根据ID查询文档
+     *
+     * 不查询markdown内容
+     *
+     * @param id
+     * @return
+     */
+    @Override
+    public Archive queryWithoutMdContentArchiveById(String id) {
+        if (StringUtils.isBlank(id)) {
+            return null;
         }
-        return this.archiveMapper.selectByPrimaryKey(id);
+        return this.archiveMapper.selectWithoutMdContentArchiveById(id);
     }
 
     /**

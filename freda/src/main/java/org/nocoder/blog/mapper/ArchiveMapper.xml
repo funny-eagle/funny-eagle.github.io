@@ -19,7 +19,7 @@
         id, title, author, md_content, html_content, tag, type, source_link, state, create_time,
         update_time, preview
     </sql>
-    <sql id="Base_Column_List_Front">
+    <sql id="Base_Column_List_WITHOUT_MD_CONTENT">
         id, title, author, html_content, tag, type, create_time, update_time, preview
     </sql>
 
@@ -28,16 +28,16 @@
     </sql>
 
     <!-- 根据主键查询文档-->
-    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <select id="selectById" parameterType="java.lang.String" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
         from archive
         where id = #{id,jdbcType=VARCHAR}
     </select>
 
-    <select id="selectArchiveById" parameterType="java.lang.String" resultMap="BaseResultMap">
+    <select id="selectWithoutMdContentArchiveById" parameterType="java.lang.String" resultMap="BaseResultMap">
         select
-        <include refid="Base_Column_List_Front"/>
+        <include refid="Base_Column_List_WITHOUT_MD_CONTENT"/>
         from archive
         where id = #{id,jdbcType=VARCHAR}
     </select>

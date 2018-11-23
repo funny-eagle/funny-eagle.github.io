@@ -41,7 +41,7 @@ public interface ArchiveMapper {
      * @param id
      * @return
      */
-    Archive selectByPrimaryKey(String id);
+    Archive selectById(String id);
 
     /**
      * 根据ID查询文档（前台用，不查询markdown内容）
@@ -49,7 +49,7 @@ public interface ArchiveMapper {
      * @param id
      * @return
      */
-    Archive selectArchiveById(String id);
+    Archive selectWithoutMdContentArchiveById(String id);
 
     /**
      * 更新文档

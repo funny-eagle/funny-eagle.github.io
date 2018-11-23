@@ -24,6 +24,7 @@ public class ArchiveController extends BaseController {
 
     /**
      * 分页查询文章列表
+     *
      * @return
      */
     @GetMapping(value = {"/archives/{pageNum}"})
@@ -40,8 +41,7 @@ public class ArchiveController extends BaseController {
      */
     @GetMapping(value = {"/archive/{id}"})
     public Map<String, Object> viewArchive(@PathVariable("id") String archiveId) {
-        // 1 表示前台使用不查询markdown内容字段
-        Archive archive = this.archiveService.queryArchiveById(archiveId, 1);
+        Archive archive = this.archiveService.queryArchiveById(archiveId);
         Map<String, Object> resMap = Maps.newHashMap();
         resMap.put("archive", archive);
         return resMap;
