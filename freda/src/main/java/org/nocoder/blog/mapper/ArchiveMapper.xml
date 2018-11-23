@@ -57,7 +57,7 @@
         from archive
         <where>
             <if test="state != 0">
-                state = #{state, jdbcType=INTEGER}
+                state = #{state, jdbcType=VARCHAR}
             </if>
 
             <if test="tag != null">
@@ -81,7 +81,7 @@
         create_time, update_time, preview)
         values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR},
         #{mdContent,jdbcType=VARCHAR}, #{htmlContent,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR},
-        #{type,jdbcType=VARCHAR}, #{sourceLink,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER},
+        #{type,jdbcType=VARCHAR}, #{sourceLink,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR},
         #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{preview, jdbcType=VARCHAR})
     </insert>
     <insert id="insertSelective" parameterType="org.nocoder.blog.model.Archive">
@@ -150,7 +150,7 @@
                 #{sourceLink,jdbcType=VARCHAR},
             </if>
             <if test="state != 0">
-                #{state,jdbcType=INTEGER},
+                #{state,jdbcType=VARCHAR},
             </if>
             <if test="createTime != null">
                 #{createTime,jdbcType=TIMESTAMP},
@@ -188,7 +188,7 @@
                 source_link = #{sourceLink,jdbcType=VARCHAR},
             </if>
             <if test="state != 0">
-                state = #{state,jdbcType=INTEGER},
+                state = #{state,jdbcType=VARCHAR},
             </if>
             <if test="createTime != null">
                 create_time = #{createTime,jdbcType=TIMESTAMP},

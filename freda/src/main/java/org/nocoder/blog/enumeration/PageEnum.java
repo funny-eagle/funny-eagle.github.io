@@ -6,23 +6,19 @@ package org.nocoder.blog.enumeration;
  *
  * @author jason
  */
-public enum PageSizeEnum {
+public enum PageEnum {
     /**
      * 每页显示数据的记录数
      */
-    PAGE_SIZE(10);
+    SIZE_PER_PAGE(10);
 
     private int value;
 
-    public int getValue() {
-        return value;
+    public int val(){
+        return this.value;
     }
 
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    PageSizeEnum(int value) {
+    PageEnum(int value) {
         this.value = value;
     }
 }
