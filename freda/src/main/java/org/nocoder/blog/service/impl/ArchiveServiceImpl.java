@@ -1,19 +1,14 @@
 package org.nocoder.blog.service.impl;
 
-import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
-import org.nocoder.blog.enumeration.ArchiveStatus;
 import org.nocoder.blog.mapper.ArchiveMapper;
 import org.nocoder.blog.model.Archive;
 import org.nocoder.blog.service.ArchiveService;
-import org.nocoder.blog.utils.SerializeUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import redis.clients.jedis.Jedis;
 
-import javax.annotation.PostConstruct;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -27,16 +22,13 @@ public class ArchiveServiceImpl implements ArchiveService {
     @Autowired
     private ArchiveMapper archiveMapper;
 
-    @Autowired
-    private Jedis jedis;
-
     @Override
-    public List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer pageSize) {
+    public List<Archive> queryArchiveList(int state, String tag, Integer pageNum, Integer sizePerPage) {
         Map<String, Object> paramsMap = new HashMap<String, Object>();
         paramsMap.put("state", state);
         paramsMap.put("tag", tag);
-        paramsMap.put("limit", pageSize);
-        paramsMap.put("offset", pageSize * (pageNum - 1));
+        paramsMap.put("offset", (pageNum-1) * sizePerPage);
+        paramsMap.put("size", sizePerPage);
         List<Archive> list = this.archiveMapper.selectArchives(paramsMap);
         return list;
     }
@@ -90,7 +82,7 @@ public class ArchiveServiceImpl implements ArchiveService {
 
     /**
      * 根据ID查询文档
-     *
+     * <p>
      * 不查询markdown内容
      *
      * @param id
@@ -104,36 +96,9 @@ public class ArchiveServiceImpl implements ArchiveService {
         return this.archiveMapper.selectWithoutMdContentArchiveById(id);
     }
 
-    /**
-     *
-     */
-    @Override
-    @PostConstruct
-    public void setAllPublishedArchivesInfoToRedis() {
-        Map paramsMap = Maps.newHashMap();
-        paramsMap.put("state", ArchiveStatus.PUBLISHED.getValue());
-        paramsMap.put("tag", null);
-        paramsMap.put("limit", 0);
-        paramsMap.put("offset", 0);
-        jedis.set("allArchivesInfo".getBytes(), SerializeUtil.serializeList(this.archiveMapper.selectArchives(paramsMap)));
-    }
-
-
     @Override
     public int deleteArchiveById(String id) {
-
         return this.archiveMapper.deleteByPrimaryKey(id);
-    }
-
-    /**
-     * 从缓存中获取所有文档基本信息
-     *
-     * @return archive list
-     */
-    @Override
-    public List<Archive> getAllPublishedArchivesInfo() {
-        List<Archive> archiveList = (List<Archive>) SerializeUtil.unserializeList(jedis.get("allArchivesInfo".getBytes()));
-        return archiveList;
     }
 
 }

@@ -1,13 +1,13 @@
 package org.nocoder.blog.common;
 
-public class ResponseInfo<T> {
+public class BaseResponse {
     private int status = 200;
-    private T data;
+    private Object data;
 
-    public ResponseInfo() {
+    public BaseResponse() {
     }
 
-    public ResponseInfo(T data) {
+    public BaseResponse(Object data) {
         this.data = data;
     }
 
@@ -19,11 +19,11 @@ public class ResponseInfo<T> {
         this.status = status;
     }
 
-    public T getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public void setData(Object data) {
         this.data = data;
     }
 }

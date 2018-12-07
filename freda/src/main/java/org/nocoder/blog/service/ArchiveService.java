@@ -43,7 +43,6 @@ public interface ArchiveService {
      * 根据主键查询文档
      *
      * @param id
-     * @param type
      * @return
      */
     Archive queryArchiveById(String id);
@@ -58,15 +57,4 @@ public interface ArchiveService {
 
     Archive queryWithoutMdContentArchiveById(String id);
 
-    /**
-     * 查询所有已发布文档的简要信息,存至redis缓存
-     */
-    void setAllPublishedArchivesInfoToRedis();
-
-    /**
-     * 从redis获取所有文档简要信息
-     *
-     * @return
-     */
-    List<Archive> getAllPublishedArchivesInfo();
 }

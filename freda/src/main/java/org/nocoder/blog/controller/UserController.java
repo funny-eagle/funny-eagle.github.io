@@ -2,7 +2,7 @@ package org.nocoder.blog.controller;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.nocoder.blog.common.ResponseInfo;
+import org.nocoder.blog.common.BaseResponse;
 import org.nocoder.blog.enumeration.UserEnum;
 import org.nocoder.blog.model.User;
 import org.nocoder.blog.service.UserService;
@@ -31,9 +31,9 @@ public class UserController {
      * @return
      */
     @GetMapping({"/login"})
-    public ResponseInfo login(HttpServletRequest request, Model model) {
+    public BaseResponse login(HttpServletRequest request, Model model) {
         if (request.getSession().getAttribute(UserEnum.USER.getProperty()) != null) {
-            return new ResponseInfo<>();
+            return new BaseResponse();
         }
         final String username = request.getParameter("username");
         final String password = request.getParameter("password");
