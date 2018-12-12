@@ -9,14 +9,14 @@
         <result column="html_content" jdbcType="VARCHAR" property="htmlContent"/>
         <result column="tag" jdbcType="VARCHAR" property="tag"/>
         <result column="type" jdbcType="VARCHAR" property="type"/>
-        <result column="source_link" jdbcType="VARCHAR" property="sourceLink"/>
+        <result column="image_url" jdbcType="VARCHAR" property="imageUrl"/>
         <result column="state" jdbcType="INTEGER" property="state"/>
         <result column="create_time" jdbcType="VARCHAR" property="createTime"/>
         <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
         <result column="preview" jdbcType="VARCHAR" property="preview"/>
     </resultMap>
     <sql id="Base_Column_List">
-        id, title, author, md_content, html_content, tag, type, source_link, state, create_time,
+        id, title, author, md_content, html_content, tag, type, image_url, state, create_time,
         update_time, preview
     </sql>
     <sql id="Base_Column_List_WITHOUT_MD_CONTENT">
@@ -75,11 +75,11 @@
     <insert id="insert" parameterType="org.nocoder.blog.model.Archive">
         insert into archive (id, title, author,
         md_content, html_content, tag,
-        type, source_link, state,
+        type, image_url, state,
         create_time, update_time, preview)
         values (#{id,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR},
         #{mdContent,jdbcType=VARCHAR}, #{htmlContent,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR},
-        #{type,jdbcType=VARCHAR}, #{sourceLink,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR},
+        #{type,jdbcType=VARCHAR}, #{imageUrl,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR},
         #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{preview, jdbcType=VARCHAR})
     </insert>
     <insert id="insertSelective" parameterType="org.nocoder.blog.model.Archive">
@@ -106,8 +106,8 @@
             <if test="type != null">
                 type,
             </if>
-            <if test="sourceLink != null">
-                source_link,
+            <if test="imageUrl != null">
+                image_url,
             </if>
             <if test="state != 0">
                 state,
@@ -144,8 +144,8 @@
             <if test="type != null">
                 #{type,jdbcType=VARCHAR},
             </if>
-            <if test="sourceLink != null">
-                #{sourceLink,jdbcType=VARCHAR},
+            <if test="imageUrl != null">
+                #{imageUrl,jdbcType=VARCHAR},
             </if>
             <if test="state != 0">
                 #{state,jdbcType=VARCHAR},
@@ -182,8 +182,8 @@
             <if test="type != null">
                 type = #{type,jdbcType=VARCHAR},
             </if>
-            <if test="sourceLink != null">
-                source_link = #{sourceLink,jdbcType=VARCHAR},
+            <if test="imageUrl != null">
+                image_url = #{imageUrl,jdbcType=VARCHAR},
             </if>
             <if test="state != 0">
                 state = #{state,jdbcType=VARCHAR},

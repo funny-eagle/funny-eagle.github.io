@@ -25,7 +25,7 @@ public class Archive implements Serializable {
 
     private String type;
 
-    private String sourceLink;
+    private String imageUrl;
 
     private int state;
 
@@ -91,12 +91,12 @@ public class Archive implements Serializable {
         this.type = type;
     }
 
-    public String getSourceLink() {
-        return sourceLink;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setSourceLink(String sourceLink) {
-        this.sourceLink = sourceLink;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 
     public int getState() {
