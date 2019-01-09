@@ -1,0 +1,74 @@
+2019-01-09 13:42:33.738  INFO 3861 --- [main] org.nocoder.blog.FredaApplication        : Starting FredaApplication on mac.local with PID 3861 (/Users/jason/local/git/freda-blog/freda/target/classes started by jason in /Users/jason/local/git/freda-blog/freda)
+2019-01-09 13:42:33.743 DEBUG 3861 --- [main] org.nocoder.blog.FredaApplication        : Running with Spring Boot v2.1.0.RELEASE, Spring v5.1.2.RELEASE
+2019-01-09 13:42:33.746  INFO 3861 --- [main] org.nocoder.blog.FredaApplication        : No active profile set, falling back to default profiles: default
+2019-01-09 13:42:35.490  INFO 3861 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-09 13:42:35.513  INFO 3861 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-09 13:42:35.513  INFO 3861 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-01-09 13:42:35.523  INFO 3861 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/jason/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2019-01-09 13:42:35.652  INFO 3861 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-09 13:42:35.653  INFO 3861 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1801 ms
+2019-01-09 13:42:35.697  INFO 3861 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-09 13:42:35.707  INFO 3861 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-09 13:42:35.708  INFO 3861 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-09 13:42:35.710  INFO 3861 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2019-01-09 13:42:35.710  INFO 3861 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-09 13:42:36.550  INFO 3861 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-09 13:42:36.952  INFO 3861 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-09 13:42:36.959  INFO 3861 --- [main] org.nocoder.blog.FredaApplication        : Started FredaApplication in 4.43 seconds (JVM running for 6.393)
+2019-01-09 13:42:58.674  INFO 3861 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-09 13:42:58.675  INFO 3861 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-09 13:42:58.685  INFO 3861 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-01-09 13:42:58.940 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.A.selectCountArchives            : ==>  Preparing: select count(1) from archive WHERE state = ? 
+2019-01-09 13:42:58.955 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.A.selectCountArchives            : ==> Parameters: 2(Integer)
+2019-01-09 13:42:58.977 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.A.selectCountArchives            : <==      Total: 1
+2019-01-09 13:42:58.987 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.ArchiveMapper.selectArchives     : ==>  Preparing: select id, title, preview, author, tag, create_time, update_time, state from archive WHERE state = ? order by create_time desc limit ? ,? 
+2019-01-09 13:42:58.988 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.ArchiveMapper.selectArchives     : ==> Parameters: 2(Integer), 90(Integer), 10(Integer)
+2019-01-09 13:42:58.989 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.ArchiveMapper.selectArchives     : <==      Total: 0
+2019-01-09 13:43:10.978 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.A.selectCountArchives            : ==>  Preparing: select count(1) from archive WHERE state = ? 
+2019-01-09 13:43:10.981 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.A.selectCountArchives            : ==> Parameters: 2(Integer)
+2019-01-09 13:43:10.982 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.A.selectCountArchives            : <==      Total: 1
+2019-01-09 13:43:10.983 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.ArchiveMapper.selectArchives     : ==>  Preparing: select id, title, preview, author, tag, create_time, update_time, state from archive WHERE state = ? order by create_time desc limit ? ,? 
+2019-01-09 13:43:10.984 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.ArchiveMapper.selectArchives     : ==> Parameters: 2(Integer), 0(Integer), 10(Integer)
+2019-01-09 13:43:10.989 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.ArchiveMapper.selectArchives     : <==      Total: 10
+2019-01-09 13:45:26.888 DEBUG 3861 --- [http-nio-8080-exec-7] o.n.b.m.A.selectCountArchives            : ==>  Preparing: select count(1) from archive WHERE state = ? 
+2019-01-09 13:45:26.890 DEBUG 3861 --- [http-nio-8080-exec-7] o.n.b.m.A.selectCountArchives            : ==> Parameters: 2(Integer)
+2019-01-09 13:45:26.891 DEBUG 3861 --- [http-nio-8080-exec-7] o.n.b.m.A.selectCountArchives            : <==      Total: 1
+2019-01-09 13:45:26.892 DEBUG 3861 --- [http-nio-8080-exec-7] o.n.b.m.ArchiveMapper.selectArchives     : ==>  Preparing: select id, title, preview, author, tag, create_time, update_time, state from archive WHERE state = ? order by create_time desc limit ? ,? 
+2019-01-09 13:45:26.893 DEBUG 3861 --- [http-nio-8080-exec-7] o.n.b.m.ArchiveMapper.selectArchives     : ==> Parameters: 2(Integer), 10(Integer), 10(Integer)
+2019-01-09 13:45:26.900 DEBUG 3861 --- [http-nio-8080-exec-7] o.n.b.m.ArchiveMapper.selectArchives     : <==      Total: 10
+2019-01-09 13:45:31.378 DEBUG 3861 --- [http-nio-8080-exec-8] o.n.b.m.A.selectCountArchives            : ==>  Preparing: select count(1) from archive WHERE state = ? 
+2019-01-09 13:45:31.379 DEBUG 3861 --- [http-nio-8080-exec-8] o.n.b.m.A.selectCountArchives            : ==> Parameters: 2(Integer)
+2019-01-09 13:45:31.380 DEBUG 3861 --- [http-nio-8080-exec-8] o.n.b.m.A.selectCountArchives            : <==      Total: 1
+2019-01-09 13:45:31.381 DEBUG 3861 --- [http-nio-8080-exec-8] o.n.b.m.ArchiveMapper.selectArchives     : ==>  Preparing: select id, title, preview, author, tag, create_time, update_time, state from archive WHERE state = ? order by create_time desc limit ? ,? 
+2019-01-09 13:45:31.383 DEBUG 3861 --- [http-nio-8080-exec-8] o.n.b.m.ArchiveMapper.selectArchives     : ==> Parameters: 2(Integer), 20(Integer), 10(Integer)
+2019-01-09 13:45:31.389 DEBUG 3861 --- [http-nio-8080-exec-8] o.n.b.m.ArchiveMapper.selectArchives     : <==      Total: 10
+2019-01-09 13:45:35.342 DEBUG 3861 --- [http-nio-8080-exec-9] o.n.b.m.A.selectCountArchives            : ==>  Preparing: select count(1) from archive WHERE state = ? 
+2019-01-09 13:45:35.343 DEBUG 3861 --- [http-nio-8080-exec-9] o.n.b.m.A.selectCountArchives            : ==> Parameters: 2(Integer)
+2019-01-09 13:45:35.344 DEBUG 3861 --- [http-nio-8080-exec-9] o.n.b.m.A.selectCountArchives            : <==      Total: 1
+2019-01-09 13:45:35.345 DEBUG 3861 --- [http-nio-8080-exec-9] o.n.b.m.ArchiveMapper.selectArchives     : ==>  Preparing: select id, title, preview, author, tag, create_time, update_time, state from archive WHERE state = ? order by create_time desc limit ? ,? 
+2019-01-09 13:45:35.346 DEBUG 3861 --- [http-nio-8080-exec-9] o.n.b.m.ArchiveMapper.selectArchives     : ==> Parameters: 2(Integer), 30(Integer), 10(Integer)
+2019-01-09 13:45:35.351 DEBUG 3861 --- [http-nio-8080-exec-9] o.n.b.m.ArchiveMapper.selectArchives     : <==      Total: 10
+2019-01-09 13:45:38.738 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.A.selectCountArchives            : ==>  Preparing: select count(1) from archive WHERE state = ? 
+2019-01-09 13:45:38.740 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.A.selectCountArchives            : ==> Parameters: 2(Integer)
+2019-01-09 13:45:38.742 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.A.selectCountArchives            : <==      Total: 1
+2019-01-09 13:45:38.743 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.ArchiveMapper.selectArchives     : ==>  Preparing: select id, title, preview, author, tag, create_time, update_time, state from archive WHERE state = ? order by create_time desc limit ? ,? 
+2019-01-09 13:45:38.743 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.ArchiveMapper.selectArchives     : ==> Parameters: 2(Integer), 40(Integer), 10(Integer)
+2019-01-09 13:45:38.747 DEBUG 3861 --- [http-nio-8080-exec-1] o.n.b.m.ArchiveMapper.selectArchives     : <==      Total: 10
+2019-01-09 13:45:47.013 DEBUG 3861 --- [http-nio-8080-exec-3] o.n.b.m.A.selectCountArchives            : ==>  Preparing: select count(1) from archive WHERE state = ? 
+2019-01-09 13:45:47.014 DEBUG 3861 --- [http-nio-8080-exec-3] o.n.b.m.A.selectCountArchives            : ==> Parameters: 2(Integer)
+2019-01-09 13:45:47.014 DEBUG 3861 --- [http-nio-8080-exec-3] o.n.b.m.A.selectCountArchives            : <==      Total: 1
+2019-01-09 13:45:47.015 DEBUG 3861 --- [http-nio-8080-exec-3] o.n.b.m.ArchiveMapper.selectArchives     : ==>  Preparing: select id, title, preview, author, tag, create_time, update_time, state from archive WHERE state = ? order by create_time desc limit ? ,? 
+2019-01-09 13:45:47.015 DEBUG 3861 --- [http-nio-8080-exec-3] o.n.b.m.ArchiveMapper.selectArchives     : ==> Parameters: 2(Integer), 50(Integer), 10(Integer)
+2019-01-09 13:45:47.017 DEBUG 3861 --- [http-nio-8080-exec-3] o.n.b.m.ArchiveMapper.selectArchives     : <==      Total: 10
+2019-01-09 13:45:49.430 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.A.selectCountArchives            : ==>  Preparing: select count(1) from archive WHERE state = ? 
+2019-01-09 13:45:49.430 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.A.selectCountArchives            : ==> Parameters: 2(Integer)
+2019-01-09 13:45:49.431 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.A.selectCountArchives            : <==      Total: 1
+2019-01-09 13:45:49.432 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.ArchiveMapper.selectArchives     : ==>  Preparing: select id, title, preview, author, tag, create_time, update_time, state from archive WHERE state = ? order by create_time desc limit ? ,? 
+2019-01-09 13:45:49.433 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.ArchiveMapper.selectArchives     : ==> Parameters: 2(Integer), 60(Integer), 10(Integer)
+2019-01-09 13:45:49.436 DEBUG 3861 --- [http-nio-8080-exec-4] o.n.b.m.ArchiveMapper.selectArchives     : <==      Total: 9
+2019-01-09 13:47:04.537  INFO 3879 --- [main] org.nocoder.blog.FredaApplicationTests   : Starting FredaApplicationTests on mac.local with PID 3879 (started by jason in /Users/jason/local/git/freda-blog/freda)
+2019-01-09 13:47:04.539 DEBUG 3879 --- [main] org.nocoder.blog.FredaApplicationTests   : Running with Spring Boot v2.1.0.RELEASE, Spring v5.1.2.RELEASE
+2019-01-09 13:47:04.542  INFO 3879 --- [main] org.nocoder.blog.FredaApplicationTests   : No active profile set, falling back to default profiles: default
+2019-01-09 13:47:07.545  INFO 3879 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-09 13:47:08.125  INFO 3879 --- [main] org.nocoder.blog.FredaApplicationTests   : Started FredaApplicationTests in 4.296 seconds (JVM running for 5.664)
+2019-01-09 13:47:08.479  INFO 3879 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
