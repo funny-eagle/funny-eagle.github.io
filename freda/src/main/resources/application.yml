@@ -3,7 +3,7 @@ server:
   port: 8080
 # database
 jdbc_driver: org.sqlite.JDBC
-jdbc_url: jdbc:sqlite:D:\\usr\\local\\github\\nocoder\\data\\freda_blog.db
+jdbc_url: jdbc:sqlite:D:\\usr\\local\\github\\nocoder\\data\\db\\freda.db
 
 # redis
 #redis_server_host: 127.0.0.1
