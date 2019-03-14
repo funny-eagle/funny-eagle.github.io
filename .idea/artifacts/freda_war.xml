@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="freda:war">
-    <output-path>$PROJECT_DIR$/freda/target</output-path>
-    <root id="archive" name="freda.war">
-      <element id="artifact" artifact-name="freda:war exploded" />
-    </root>
-  </artifact>
-</component>
