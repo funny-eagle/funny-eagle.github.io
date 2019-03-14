@@ -4,6 +4,16 @@
 
 ## Freda 3.0.0
 
+### freda
+
+- 后台服务端
+
+### freda-web
+
+- 前端页面
+
+- react
+
 ### Fremeworks
 
 `SpringBoot, Mybatis`
