@@ -1,18 +1,8 @@
-
 server:
   port: 8080
 # database
 jdbc_driver: org.sqlite.JDBC
-<<<<<<< HEAD
-jdbc_url: jdbc:sqlite:D:\\usr\\local\\github\\nocoder\\data\\db\\freda.db
-
-# redis
-#redis_server_host: 127.0.0.1
-#redis_server_port: 6379
-#redis_server_auth:
-=======
 jdbc_url: jdbc:sqlite:/Users/jason/local/git/nocoder/data/db/freda.db
->>>>>>> 60c5966ec68b2ac8fda0e1f4188c67c17611e22d
 
 logging:
   level:
