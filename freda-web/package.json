@@ -19,7 +19,9 @@
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
     "http-server": "^0.8.5",
+    "superagent": "^4.1.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
-  }
+  },
+  "proxy": "http://localhost:81"
 }

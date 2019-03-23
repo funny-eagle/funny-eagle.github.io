@@ -1,8 +1,8 @@
 server:
-  port: 8080
+  port: 81
 # database
 jdbc_driver: org.sqlite.JDBC
-jdbc_url: jdbc:sqlite:/Users/jason/local/git/nocoder/data/db/freda.db
+jdbc_url: jdbc:sqlite:/Users/jason/local/github/nocoder/data/db/freda.db
 
 logging:
   level:
