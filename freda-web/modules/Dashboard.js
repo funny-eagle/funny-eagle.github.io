@@ -34,7 +34,7 @@ class Dashboard extends React.Component {
     }
 
     getArchives(pageNum){
-        fetch('http://localhost:81/archives/' + pageNum)
+        fetch('http://nocoder.org:8000/archives/' + pageNum)
             .then((response)=>response.json())
             .then(res=>{
                 this.setState({archives: res.data.archives, totalPages:res.data.totalPages});
@@ -59,7 +59,7 @@ class Dashboard extends React.Component {
                         })}
                     </ul>
 
-                    <div>
+                    <div> 
                         <a href="#" onClick={(e) => {this.prevPage(e)}}>上一页</a>
                         &nbsp;&nbsp;
                         <a href="#" onClick={(e) => {this.nextPage(e)}}>下一页</a>
