@@ -2,19 +2,19 @@
 
 > **Freda Blog Application** based on Java, provides a simple, fast personal blog.
 
-## Freda 3.0.0
+## Freda 3.x
 
 ### freda
 
-- 后台服务端
+- The `freda` project provides backend service for the web pages
 
 ### freda-web
 
-- 前端页面
+- The `freda-web` directory contains the web pages
 
-- react
+- build of `react.js`
 
-### Fremeworks
+### Frameworks
 
 `SpringBoot, Mybatis`
 
