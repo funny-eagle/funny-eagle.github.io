@@ -1,12 +1,22 @@
 # Freda Blog Web
 
-## 描述
+## How to run
 
-这个项目是Freda Blog 的前端页面，使用 React 开发
+ - download [node.js](https://nodejs.org/en/) and install
+ - install cnpm
+ 	`$ npm install -g cnpm --registry=https://registry.npm.taobao.org`
+ - to the freda-web directory, excute 
+ 	```shell
+ 	cnpm install 	# install dependencies
+ 	cnpm run build	# build dist
+ 	cnpm run dev	# run in dev modal
+ 	``` 
 
-## 构成
+## How to package
 
-- 首页
-- 文章详情页
-- 侧边栏组件
-- 关于
+- to the freda-web directory, excute `cnpm install && cnpm build`
+
+
+## Config the server address
+
+- (TBD)
