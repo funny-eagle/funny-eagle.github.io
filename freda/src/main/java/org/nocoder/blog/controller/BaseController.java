@@ -1,7 +1,7 @@
 package org.nocoder.blog.controller;
 
 import com.google.common.collect.Maps;
-import org.nocoder.blog.enumeration.PageEnum;
+import org.nocoder.blog.common.enumeration.PageEnum;
 import org.nocoder.blog.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -42,7 +42,7 @@ public class BaseController {
         paramsMap.put("tag", tag);
         final int archivesCount = this.archiveService.countArchives(paramsMap);
         if (archivesCount > 0) {
-            // 总页数(取天花板值 ) = 文档总数 / 每页个数
+            // 总页数(取天花板值) = 文档总数 / 每页个数
             resMap.put("totalPages", (int) Math.ceil((double) archivesCount / (double) sizePerPage));
             resMap.put("pageNum", pageNum);
             // 查询所有文档信息

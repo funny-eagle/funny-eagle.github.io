@@ -3,7 +3,7 @@ package org.nocoder.blog.controller;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.nocoder.blog.common.BaseResponse;
-import org.nocoder.blog.enumeration.UserEnum;
+import org.nocoder.blog.common.enumeration.UserEnum;
 import org.nocoder.blog.model.User;
 import org.nocoder.blog.service.UserService;
 import org.slf4j.Logger;

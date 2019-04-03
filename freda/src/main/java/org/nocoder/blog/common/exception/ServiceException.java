@@ -1,4 +1,4 @@
-package org.nocoder.blog.exception;
+package org.nocoder.blog.common.exception;
 
 /**
  * TODO controller 异常统一处理

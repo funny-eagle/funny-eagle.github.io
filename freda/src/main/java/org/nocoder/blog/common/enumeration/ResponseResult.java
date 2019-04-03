@@ -1,4 +1,4 @@
-package org.nocoder.blog.enumeration;
+package org.nocoder.blog.common.enumeration;
 
 /**
  * Created by jason on 2017/8/20.

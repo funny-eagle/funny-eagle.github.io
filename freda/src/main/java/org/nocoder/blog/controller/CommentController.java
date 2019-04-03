@@ -1,7 +1,7 @@
 package org.nocoder.blog.controller;
 
 import org.apache.commons.lang3.StringUtils;
-import org.nocoder.blog.enumeration.ResponseResult;
+import org.nocoder.blog.common.enumeration.ResponseResult;
 import org.nocoder.blog.model.Comment;
 import org.nocoder.blog.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;

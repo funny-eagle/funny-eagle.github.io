@@ -1,4 +1,4 @@
-package org.nocoder.blog.utils;
+package org.nocoder.blog.common.utils;
 
 import java.io.*;
 import java.util.ArrayList;

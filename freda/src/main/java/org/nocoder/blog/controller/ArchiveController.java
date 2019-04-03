@@ -2,9 +2,9 @@ package org.nocoder.blog.controller;
 
 import com.google.common.collect.Maps;
 import org.nocoder.blog.common.BaseResponse;
-import org.nocoder.blog.enumeration.ArchiveStatus;
-import org.nocoder.blog.enumeration.PageEnum;
-import org.nocoder.blog.enumeration.ResponseResult;
+import org.nocoder.blog.common.enumeration.ArchiveStatus;
+import org.nocoder.blog.common.enumeration.PageEnum;
+import org.nocoder.blog.common.enumeration.ResponseResult;
 import org.nocoder.blog.model.Archive;
 import org.nocoder.blog.service.ArchiveService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +28,8 @@ public class ArchiveController extends BaseController {
      *
      * @return
      */
-    @GetMapping(value = {"/archives/{pageNum}"})
-    public BaseResponse toArchiveListPage(@PathVariable("pageNum") int pageNum) {
+    @GetMapping(value = {"/archives"})
+    public BaseResponse toArchiveListPage(@RequestParam int pageNum) {
         return new BaseResponse(queryArchivesByPage(ArchiveStatus.PUBLISHED.getValue(), null, pageNum, PageEnum.SIZE_PER_PAGE.val()));
     }
 
@@ -48,7 +48,7 @@ public class ArchiveController extends BaseController {
         return resMap;
     }
 
-    @PostMapping({"/archive/save"})
+    @PostMapping({"/archive"})
     public String saveArchive(@ModelAttribute Archive archive) {
         if (this.archiveService.saveArchive(archive) > 0) {
             // 保存成功后,刷新redis缓存

@@ -1,4 +1,4 @@
-package org.nocoder.blog.enumeration;
+package org.nocoder.blog.common.enumeration;
 
 /**
  * 文档类型
