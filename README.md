@@ -2,19 +2,40 @@
 
 > **Freda Blog Application** based on Java, provides a simple, fast personal blog.
 
-## Freda 3.0.0
+## Freda 3.x
 
 ### freda
 
-- 后台服务端
+- The `freda` project provides backend service for the web pages
 
 ### freda-web
 
-- 前端页面
+- The `freda-web` directory contains the web pages
 
-- react
+- build of `react.js`
 
-### Fremeworks
+#### How to run
+
+ - download [node.js](https://nodejs.org/en/) and install
+ - install cnpm
+ 	`$ npm install -g cnpm --registry=https://registry.npm.taobao.org`
+ - to the freda-web directory, excute 
+ 	```shell
+ 	cnpm install 	# install dependencies
+ 	cnpm run build	# build dist
+ 	cnpm run dev	# run in dev modal
+ 	``` 
+
+#### How to package
+
+- to the freda-web directory, excute `cnpm install && cnpm build`
+
+
+#### Config the server address
+
+- (TBD)
+
+### Frameworks
 
 `SpringBoot, Mybatis`
 
