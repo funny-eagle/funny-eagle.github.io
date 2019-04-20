@@ -1,0 +1,227 @@
+---
+title: ARTS07-20180818
+date: "2018-08-25 17:11:56.893+01"
+---
+# ARTS07-20180818
+
+## Algorithm
+
+```java
+package org.nocoder.leetcode.solution;
+
+/**
+ * 7. Reverse Integer
+ * <p>
+ * Given a 32-bit signed integer, reverse digits of an integer.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: 123
+ * Output: 321
+ * Example 2:
+ * <p>
+ * Input: -123
+ * Output: -321
+ * Example 3:
+ * <p>
+ * Input: 120
+ * Output: 21
+ * Note:
+ * Assume we are dealing with an environment which could only store integers within the 32-bit signed integer
+ * range: [−231,  231 − 1]. For the purpose of this problem, assume that your function returns 0 when the
+ * reversed integer overflows.
+ *
+ * @author jason
+ * @date 18/8/18.
+ */
+public class ReverseInteger {
+    private static int INT_MAX = 2147483647;
+    private static int INT_MIN = -INT_MAX - 1;
+
+    public static int reverse(int x) {
+        int y = 0;
+        int n;
+        while (x != 0) {
+            n = x % 10;
+            if (y > INT_MAX / 10 || y < INT_MIN / 10) {
+                return 0;
+            }
+            y = y * 10 + n;
+            x = x / 10;
+        }
+        return y;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverse(123));
+        System.out.println(reverse(-123));
+        System.out.println(reverse(0));
+        System.out.println(reverse(1000000003));
+    }
+}
+
+```
+
+## Review
+
+### A container networking overview
+
+> https://jvns.ca/blog/2016/12/22/container-networking/
+
+**Thing 0: parts of a network packet**
+
+the MAC address this packet should go to (“Layer 2”)
+
+the source IP and destination IP (“Layer 3”)
+
+the port and other TCP/UDP information (“Layer 4”)
+
+the contents of your HTTP packet like GET / (“Layer 7”)
+
+**Thing 1: local networking vs far-away networking**
+
+if you’re in the same AZ as your target, you can just send a packet with any random IP address on it, and as long as the MAC address is right it’ll get there.
+
+if you are in a different AZ, to send a packet to a computer, it has to have the IP address of that instance on it.
+
+**The route table**
+
+```
+sudo ip route add 10.4.4.0/24 via 172.23.1.1 dev eth0
+```
+
+**Encapsulation**
+
+ip-in-ip encapsulation just slaps on an extra IP header on top of your old IP header.
+
+```
+sudo ip tunnel add mytun mode ipip remote 172.9.9.9 local 10.4.4.4 ttl 255
+sudo ifconfig mytun 10.42.1.1
+```
+
+```
+sudo route add -net 10.42.2.0/24 dev mytun
+sudo route list
+```
+
+bridge networking
+
+- every packet on your computer goes out through a real interface (like eth0)
+Docker will create fake (virtual) network interfaces for every single one of your containers. These have IP addresses like 10.4.4.4
+
+- Those virtual network interfaces are bridged to your real network interface. This means that the packets get copied (?) to the network interface corresponding to the real network card, and then sent out to the internet
+
+
+
+## Tip
+
+### Maven Profile
+
+开发环境下仅需要`spring-boot-maven-plugin`和`maven-compiler-plugin`这两个插件，
+
+测试环境和生产环境需要多配置一个`dockerfile-maven-plugin`用于构建docker镜像，
+
+且测试环境和生产环境的docker镜像仓库、docker镜像tag都不同，如果开发环境也配置了这个插件，
+
+那么本地进行`mvn install`的时候，则须依赖本地的docker环境，因为会默认执行executions中的docker命令，
+
+这就比较麻烦了，使用Maven Profile可以完美解决这个问题。
+
+
+公共配置，即开发环境下的配置
+```xml
+<build>
+  <plugins>
+      <plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <configuration>
+              <executable>true</executable>
+          </configuration>
+          <executions>
+              <execution>
+                  <goals>
+                      <goal>repackage</goal>
+                  </goals>
+              </execution>
+          </executions>
+      </plugin>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+              <source>8</source>
+              <target>8</target>
+          </configuration>
+      </plugin>
+  </plugins>
+</build>
+```
+
+为测试环境和生产环境下增加profile配置
+
+```xml
+<project>
+  <profiles>
+    <profile>
+        <id>prod</id>
+        <build>
+            <plugins>
+                v
+            </plugins>
+        </build>
+    </profile>
+    <profile>
+        <id>test</id>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>1.4.3</version>
+                    <executions>
+                        <execution>
+                            <id>default</id>
+                            <phase>install</phase>
+                            <goals>
+                                <goal>build</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <repository>120.79.164.255:9091/yuntu-eureka-server</repository>
+                        <tag>test</tag>
+                        <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+                        <buildArgs>
+                            <JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
+                        </buildArgs>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+  </profiles>
+</project>
+```
+
+指定 profile 打包命令
+
+```
+mvn clean install -P test
+```
+
+## Share
+
+https://github.com/haoel/leetcode/blob/master/algorithms/cpp/reverseInteger/reverseInteger.cpp
+
+>Have you thought about this?
+
+>Here are some good questions to ask before coding. Bonus points for you if you have already thought through this!
+
+> If the integer's last digit is 0, what should the output be? ie, cases such as 10, 100.
+
+> Did you notice that the reversed integer might overflow? Assume the input is a 32-bit integer,
+ then the reverse of 1000000003 overflows. How should you handle such cases?
+
+> Throw an exception? Good, but what if throwing an exception is not an option?
+ You would then have to re-design the function (ie, add an extra parameter).
