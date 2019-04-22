@@ -1,3 +1,6 @@
+> 断断续续维护了3年了，一直也没有什么大的突破，从spring+jsp+postgresql 到 springboot+reactjs+sqlite 版本，做的无非就是增删改查和js插件的集成，越写越没有动力了。
+> 接触 Gatsby 是在 Reactjs 官网看到的，简单学习之后，感觉很适合于博客项目的二次开发，就用 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) 重新构建了 freda blog，以后也会基于这个版本做后续的功能开发
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
