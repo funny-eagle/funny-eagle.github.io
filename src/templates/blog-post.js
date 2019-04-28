@@ -17,7 +17,7 @@ class BlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
         />
-        <h1>{post.frontmatter.title}</h1>
+        <h2>{post.frontmatter.title}</h2>
         <p
           style={{
             ...scale(-1 / 5),
