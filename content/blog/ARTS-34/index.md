@@ -1,0 +1,195 @@
+---
+title: ARTS-34
+date: "2019-03-16 19:41:22.844+01"
+---
+
+- Algorithm: [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)
+- Review: [Gateway Aggregation pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation)
+- Tip: Spring Cloud Gateway 的使用
+- Share: [Cloud Design Patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
+
+## Algorithm
+
+```java
+package org.nocoder.leetcode.solution;
+
+/**
+ * 35. Search Insert Position
+ * <p>
+ * Given a sorted array and a target value, return the index if the target is found.
+ * <p>
+ * If not, return the index where it would be if it were inserted in order.
+ * <p>
+ * You may assume no duplicates in the array.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: [1,3,5,6], 5
+ * Output: 2
+ * Example 2:
+ * <p>
+ * Input: [1,3,5,6], 2
+ * Output: 1
+ * Example 3:
+ * <p>
+ * Input: [1,3,5,6], 7
+ * Output: 4
+ * Example 4:
+ * <p>
+ * Input: [1,3,5,6], 0
+ * Output: 0
+ *
+ * @author jason
+ * @date 2019/3/23.
+ */
+public class SearchInsertPosition {
+
+    public static void main(String[] args) {
+        int[] nums = new int[]{1, 3, 5, 6};
+        int t1 = 4;
+        System.out.println(searchInsert(nums, t1));
+        int t2 = 2;
+        System.out.println(searchInsert(nums, t2));
+        int t3 = 7;
+        System.out.println(searchInsert(nums, t3));
+        int t4 = 0;
+        System.out.println(searchInsert(nums, t4));
+    }
+
+    /**
+     * 使用二分法，查找目标数的位置，
+     * 如果在数组中找到了目标数，则返回目标数的下标；
+     * 如果找不到目标数，则返回最后一次循环结束后的开始位置(即 start 的值)
+     * @param nums
+     * @param target
+     * @return
+     */
+    public static int searchInsert(int[] nums, int target) {
+        int start = 0;
+        int end = nums.length-1;
+        while(start <= end){
+            int middle = (start + end ) / 2;
+            System.out.println("middle: "+middle);
+            if(nums[middle] > target){
+                end = middle - 1;
+            }else if(nums[middle] < target){
+                start = middle + 1;
+            }else{
+                return middle;
+            }
+        }
+        return start;
+    }
+}
+
+```
+
+## Review
+
+### [Gateway Aggregation pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-aggregation)
+
+- 使用网关将多个请求聚合到一个请求中
+- 用于当客户端必须对不同的后端系统进行多次调用的场景
+- 使用网关来减少客户端和服务之间的干扰。网关接收客户端请求，将请求分派给各种后端系统，然后聚合结果并将它们发送回请求客户端
+- Instead of building aggregation into the gateway, consider placing an aggregation service behind the gateway. Request aggregation will likely have different resource requirements than other services in the gateway and may impact the gateway's routing and offloading functionality.
+
+## Tip
+
+### [Spring Cloud Gateway 的使用](https://spring.io/guides/gs/gateway/#scratch)
+
+Spring Cloud Gateway 的功能
+
+- 基于Spring Framework 5，Project Reactor和Spring Boot 2.0构建
+- 能够匹配任何请求属性上的路由。
+- 能够添加`predicate`和`filter`，根据特定的条件路由。
+- `Hystrix` 断路器集成。
+- `Spring Cloud DiscoveryClient`集成
+- 易于编写`predicate`和`cilter`
+- 请求率限制
+- 路径重写
+
+```java
+package gateway;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cloud.gateway.route.RouteLocator;
+import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Mono;
+
+@SpringBootApplication
+@RestController
+@EnableConfigurationProperties(Application.UriConfiguration.class)
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
+    /**
+     * 访问超时后的后备方案fallback
+     * @return
+     */
+    @RequestMapping("/fallback")
+    public Mono<String> fallback(){
+        System.out.println("fallback...");
+        return Mono.just("fallback");
+    }
+
+    /**
+     * RouteLocator 用于创建路由
+     * RouteLocatorBuilder 允许在路由中添加 predicate 和 filter，以便根据特定条件路由
+     * UriConfiguration 从配置中获取URL
+     * @param builder
+     * @return
+     */
+    @Bean
+    public RouteLocator myRoutes(RouteLocatorBuilder builder, UriConfiguration uriConfiguration){
+        String httpUri = uriConfiguration.getHttpbin();
+        return builder.routes()
+                .route(p -> p
+                        .path("/get")
+                        .filters(f -> f.addRequestHeader("Hello", "World"))
+                        .uri("http://httpbin.org:80"))
+                /**
+                 * 使用curl 发起请求，header 中包含 Host: *.hystrix.com，否则请求不会被路由
+                 * $ curl --dump-header - --header 'Host: www.hystrix.com' http://localhost:8080/delay/3
+                 * 注：使用 --dump-header 查看响应的headers
+                 * --dump-heaer 后面的 - 是为了告知 cURL 将headers 打印出来
+                 */
+                .route(p -> p
+                        .host("*.hystrix.com")
+                        .filters(f -> f.hystrix(config -> config
+                                .setName("mycmd")
+                                .setFallbackUri("forward:/fallback")))
+                        .uri(httpUri))
+                .build();
+    }
+
+    @ConfigurationProperties
+    class UriConfiguration {
+        private String httpbin = "http://httpbin.org:80";
+
+        public String getHttpbin() {
+            return httpbin;
+        }
+
+        public void setHttpbin(String httpbin) {
+            this.httpbin = httpbin;
+        }
+    }
+}
+```
+
+
+
+## Share
+
+### [Cloud Design Patterns](https://docs.microsoft.com/en-us/azure/architecture/patterns/)
+
+微软的文章，介绍了34种云服务的设计模式。

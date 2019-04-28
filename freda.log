@@ -1,0 +1,1 @@
+2019-04-22 10:35:44.325  INFO 13010 --- [Thread-10] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
