@@ -1,7 +1,23 @@
 > 断断续续维护了3年了，一直也没有什么大的突破，从spring+jsp+postgresql 到 springboot+reactjs+sqlite 版本，做的无非就是增删改查和js插件的集成，越写越没有动力了。
 > 接触 Gatsby 是在 Reactjs 官网看到的，简单学习之后，感觉很适合于博客项目的二次开发，就用 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) 重新构建了 freda blog，以后也会基于这个版本做后续的功能开发
 
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+
+Get Up and Running in 5 Minutes
+
+Install the Gatsby CLI.
+
+> npm install -g gatsby-cli
+
+Next, move into your new site’s directory and start it up:
+
+> cd freda/
+> gatsby develop
+
+Open the source code and start editing!
+
+Your site is now running at http://localhost:8000. Open the my-blazing-fast-site directory in your code editor of choice and edit src/pages/index.js. Save your changes, and the browser will update in real time!
+
+
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
