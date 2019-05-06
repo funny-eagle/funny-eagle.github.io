@@ -1,4 +1,7 @@
-# ARTS-38 2019-05-04
+---
+title: ARTS-38
+date: "2019-05-05 17:32:12.844+01"
+---
 
 > - Algorithm: 617. Merge Two Binary Trees
 > - Review: The Principles of Good Programming
