@@ -2,8 +2,6 @@
 title: 装饰器模式之真假美猴王
 date: "2018-05-19 18:49:08.605+01"
 ---
-![](https://raw.githubusercontent.com/jasonyang86/nocoder/master/data/images/design-pattern/sunwukong_sixears.jpeg)
-
 > 本文以西游记中的“真假美猴王”为例，一起温习一下装饰器模式的使用场景及具体实现过程。   
 
 真假美猴王的故事就不讲了，就算我标题党了吧。
