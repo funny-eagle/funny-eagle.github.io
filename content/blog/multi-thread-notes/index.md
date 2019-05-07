@@ -1,8 +1,7 @@
 ---
 title: 多线程复习笔记
-date: "2018-04-07 23:11:04+01"
+date: "2018-04-07 23:11:04"
 ---
-## 引言
 Java的重要功能之一就是内部支持多线程-在一个程序中允许同时运行多个任务。
 
 ## 线程的概念
@@ -18,7 +17,7 @@ Java的重要功能之一就是内部支持多线程-在一个程序中允许同
 
 ## 创建任务和线程
 
-一个任务类必须实现Runnable接口。任务必须从线程运行。
+一个任务类必须实现Runnable接口。然后通过线程来执行任务。
 任务就是对象。为了创建任务，必须首先为任务定义一个实现Runnable接口的类。
 
 
@@ -50,9 +49,9 @@ public class Client{
 
 ```
 
+### 实战
 
-#### 编程练习
-> 创建三个任务以及三个运行这些任务的线程:
+> 创建三个任务，然后创建三个线程，运行这些任务:
 > 
 > 第一个任务打印字母a100次
 > 
@@ -195,7 +194,7 @@ try{
 	// do someting...
 }
 ```
-sleep方法可能抛出一个`InterruptedException`，这是一个必检异常。当一个休眠线程的interrupt()方法被调用时，就会发生这样的一个异常。
+`Thread.sleep()`方法可能抛出一个`InterruptedException`，这是一个必检异常。当一个休眠线程的interrupt()方法被调用时，就会发生这样的一个异常。
 
 使用`join()`方法使用一个线程等待另一个线程的结束。
 
@@ -246,4 +245,108 @@ public class YieldTest {
 11 12 13 14 15 16 17 1 2 3 4 5 6 7 8 9 10 
 18 19 20 
 ```
+
+## 线程池
+
+### 使用线程池的好处
+
+几乎所有需要异步或者并发执行任务的程序都可以使用线程池，合理的使用线程池有以下几个好处。
+
+- 降低资源消耗。通过重复利用已创建的线程，降低线程创建和销毁造成的消耗。
+- 提高相应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。
+- 提高线程的可管理性。线程时稀缺资源，如果无限制的创建，不仅会消耗系统资源，而且还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控。
+
+###  线程池的实现原理
+
+先来看看线程池的主要处理流程
+
+![线程池的主要处理流程](./线程池的主要处理流程.png)
+
+从上图可以看出，使用者提交一个任务后，线程池的处理流程如下：
+
+1. 判断核心线程池是否已满，如果没有满，则创建一个新的线程执行任务。如果满了，则进入下个流程。
+2. 判断队列是否已满，如果没有满，将任务加入到队列中。如果满了，进入下个流程。
+3. 判断线程池是否已满，如果没有满，则创建一个新的线程执行任务。如果满了，进入下个流程。
+4. 按照策略处理无法执行的任务。
+
+
+
+ThreadPoolExecutor执行示意图
+
+![thread-pool-executor](./ThreadPoolExecutor执行示意图.png)
+
+1. 如果当前运行的线程数小于corePoolSize，则创建新的线程来执行任务（执行这一步骤需要获取全局锁）
+2. 如果运行的线程数等于或者大于corePoolSize，则将任务加入BlockingQueue
+3. 如果无法将任务加入BlockingQueue，则创建新的线程来处理任务，并调用RejectedExceptionHandler.rejectedExecution()方法
+
+**工作线程**：线程池创建线程时，会将线程封装成工作线程Worker，Worker在执行完任务后，还会循环获取工作队列里的任务来执行。
+
+线程池中的线程执行任务分两种情况：
+
+1. 在execute() 方法中创建一个线程时，会让这个线程执行当前任务。
+2. 这个线程执行完上一任务后，会反复从BlockingQueue中获取任务来执行。
+
+### 线程池的使用
+
+通过ThreadPoolExecutor来创建一个线程池。
+
+创建一个线程池需要的几个参数：
+
+1. corePoolSize 核心线程数量
+2. maxPoolSize 线程池最大数量
+3. runnableTaskQueue 任务队列
+   1. ArrayBlockingQueue 基于数组结构的有界阻塞队列
+   2. LinkedBlockingQueue 基于链表结构的阻塞队列
+   3. SynchronousQueue  不存储元素的阻塞队列
+   4. PriorityBlockingQueue 具有优先级的无线阻塞队列
+4. ThreadFactory 创建线程的工厂，使用guava提供的ThreadFactoryBuilder给线程设置有意义的名字
+5. RejectedExceptionHandler 当队列和线程池都满了，线程池无法执行新任务时的处理策略
+   1. AbortPolicy 直接抛异常
+   2. CallerRunsPolicy 使用调用者所属的线程来运行
+   3. DiscardOldestPolicy 抛弃队列里的最近一个任务，执行当前任务
+   4. DiscardPolicy 直接抛弃，不处理
+6. keepAliveTime 线程活动保持时间
+7. TimeUnit 线程活动保持时间的单位
+
+
+
+创建线程池示例：
+
+```java
+public ExecutorService getExecutorService() {
+    ThreadFactory threadFactory = new ThreadFactoryBuilder().build();
+    ExecutorService executorService = new ThreadPoolExecutor(
+      corePoolSize, maxPoolSize, 20000L,
+      TimeUnit.MILLISECONDS, new LinkedBlockingDeque<>(2500),
+      threadFactory, new ThreadPoolExecutor.CallerRunsPolicy());
+    return executorService;
+}
+```
+
+### 提交任务到线程池
+
+- execute() 用于提交不需要返回值的任务
+
+  ```java
+  executorService.execute(()->{
+    // do something
+  });
+  ```
+
+- submit() 用于提交需要返回值的任务，任务需要实现Callable 接口，返回值为Future，可以通过future.get()获取返回值，get()方法会阻塞当前线程直到任务完成
+
+  ```java
+  Future future = executorService.submit(new CallableTask());
+  try {
+    Object o = future.get();
+  } catch (InterruptedException e) {
+    e.printStackTrace();
+  } catch (ExecutionException e) {
+    e.printStackTrace();
+  }
+  ```
+
+## 参考文献
+
+- 《Java并发编程的艺术》
 
