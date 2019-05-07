@@ -391,9 +391,9 @@ Spring 提供了4中 aop 的支持，基于代理的经典SpringAOP，纯POJO切
 
 Audience类使用`@Aspect`注解进行了标注。该注解表明Audience不仅仅是一个POJO，还是一个切面。Audience类中的方法都使用注解来定义切面的具体行为。Audience有四个方法，定义了一个观众在观看演出时可能会做的事情。在演出之前，观众要就坐（takeSeats()）并将手机调至静音状态（silenceCellPhones()）。如果演出很精彩的话，观众应该会鼓掌喝彩（applause()）。不过，如果演出没有达到观众预期的话，观众会要求退款（demandRefund()）。
 
-![aspect-execution](/Users/jason/Desktop/aspect-oriented-programming/aspect-execution.png)
+![aspect-execution](./aspect-execution.png)
 
-![aspect-annotation](/Users/jason/Desktop/aspect-oriented-programming/aspect-annotation.png)
+![aspect-annotation](./aspect-annotation.png)
 
 #### Advice的5种注解
 
@@ -424,11 +424,11 @@ Audience类使用`@Aspect`注解进行了标注。该注解表明Audience不仅�
 
 - Spring 实战（第4版）
 
-  ![spring-in-action](/Users/jason/Desktop/aspect-oriented-programming/spring-in-action.png)
+  ![spring-in-action](./spring-in-action.png)
 
 - Head First 设计模式
 
-  ![head-first-dp](/Users/jason/Desktop/aspect-oriented-programming/head-first-design-pattern.png)
+  ![head-first-dp](./head-first-design-pattern.png)
 
 - https://zh.wikipedia.org/wiki/%E9%9D%A2%E5%90%91%E4%BE%A7%E9%9D%A2%E7%9A%84%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1
 
