@@ -411,7 +411,7 @@ Audience类使用`@Aspect`注解进行了标注。该注解表明Audience不仅�
 
 @Pointcut 声明使用频繁的切点表达式后，在通知注解中引用即可
 
-![pointcut](/Users/jason/Desktop/aspect-oriented-programming/pointcut.png)
+![pointcut](./pointcut.png)
 
 ## 总结
 
