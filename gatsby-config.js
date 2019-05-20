@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `NoCoder Blog`,
+    title: `Jason Yang's Blog`,
     author: `Jason Yang`,
-    description: `NoCoder Blog based on Gatedby.`,
+    description: `Jason Yang's personal blog based on Gatsby.`,
     siteUrl: `http://nocoder.org`,
     social: {
       github: `yangjinlong86`,

@@ -11,44 +11,31 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
+        <h3>
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={`/`}
-          >
+            to={`/`}>
             {title}
           </Link>
-        </h1>
+        </h3>
       )
     } else {
       header = (
-        <h2
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
+        <h3>
           <Link
             style={{
               boxShadow: `none`,
               textDecoration: `none`,
               color: `inherit`,
             }}
-            to={`/`}
-          >
+            to={`/`}>
             {title}
           </Link>
-        </h2>
+        </h3>
       )
     }
     return (
@@ -61,6 +48,7 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
+        <hr/>
         <main>{children}</main>
         <footer>
           nocoder.org © {new Date().getFullYear()}
