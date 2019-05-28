@@ -40,7 +40,7 @@ function Bio() {
             <p>
               Written by <strong>{author}</strong> who lives and works in Chengdu as a software engineer.
               {` `}
-              <a href={`https://github.com/yangjinlong86`}>
+              <a style={{ color: 'teal' }} href={`https://github.com/yangjinlong86`}>
                 You can follow him on Github
               </a>
             </p>

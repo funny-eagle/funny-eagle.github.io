@@ -9,35 +9,20 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h3>
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `teal`,
-            }}
-            to={`/`}>
-            {title}
-          </Link>
-        </h3>
-      )
-    } else {
-      header = (
-        <h3>
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `teal`,
-            }}
-            to={`/`}>
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+    header = (
+      <h3>
+        <Link
+          style={{
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `teal`,
+          }}
+          to={`/`}>
+          {title}
+        </Link>
+      </h3>
+    )
+    
     return (
       <div
         style={{
