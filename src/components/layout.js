@@ -10,17 +10,13 @@ class Layout extends React.Component {
     let header
 
     header = (
-      <h3>
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `teal`,
-          }}
-          to={`/`}>
-          {title}
+      <div>
+        <h2>
+        <Link style={{ boxShadow: `none`, textDecoration: `none`, color: `teal`}} to={`/`}>
+         {title}
         </Link>
-      </h3>
+        </h2>
+      </div>
     )
     
     return (
