@@ -16,6 +16,7 @@ class Layout extends React.Component {
          {title}
         </Link>
         </h2>
+        <p>Standing on the shoulders of giants.</p>
       </div>
     )
     
@@ -29,7 +30,6 @@ class Layout extends React.Component {
         }}
       >
         <header>{header}</header>
-        <hr/>
         <main>{children}</main>
         <footer>
           nocoder.org © {new Date().getFullYear()}
