@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "🤔️ Jason Yang's Blog",
-    author: `nocoder`,
+    author: `Jason Yang`,
     description: `nocoder blog`,
     siteUrl: `http://nocoder.org`,
     social: {
@@ -63,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Nocoder Blog`,
+        short_name: `Nocoder`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
