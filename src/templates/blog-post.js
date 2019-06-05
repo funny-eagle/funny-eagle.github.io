@@ -47,14 +47,14 @@ class BlogPostTemplate extends React.Component {
         >
           <li>
             {previous && (
-              <Link to={previous.fields.slug} rel="prev" style={{ color: `teal`}}>
+              <Link to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
-              <Link to={next.fields.slug} rel="next" style={{ color: `teal`}}>
+              <Link to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             )}
@@ -77,7 +77,7 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
+      excerpt(pruneLength: 260)
       html
       frontmatter {
         title

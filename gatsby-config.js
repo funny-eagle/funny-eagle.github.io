@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "🤔️ Jason Yang's Blog",
-    author: `Jason Yang`,
-    description: `Jason Yang's personal blog based on Gatsby.`,
+    author: `nocoder`,
+    description: `nocoder blog`,
     siteUrl: `http://nocoder.org`,
     social: {
       github: `yangjinlong86`,
@@ -39,7 +39,13 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              showLineNumbers: false,
+              numberLines: false
+            }
+          },
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
