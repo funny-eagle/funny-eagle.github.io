@@ -1,5 +1,5 @@
 ---
-title: Gastby 入门
+title: Gatsby 入门
 date: "2019-05-27"
 ---
 
