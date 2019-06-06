@@ -14,9 +14,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-        />
+        <SEO title={post.frontmatter.title}/>
         <h1 style={{marginTop: `1 rem`}}>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -29,7 +27,7 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date} by {this.props.data.site.siteMetadata.author}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div style={{paddingLeft: `1rem`, paddingRight: `1rem`}} dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
             marginBottom: rhythm(1),
