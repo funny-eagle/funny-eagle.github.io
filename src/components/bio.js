@@ -21,7 +21,7 @@ function Bio() {
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2.5),
+              marginTop: `1 rem`,
             }}
           >
             <Image
@@ -37,7 +37,7 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
+            <p style={{color: `grey`}}>
               Written by <strong>{author}</strong> who lives and works in Chengdu as a software engineer.
               You can follow him on {' '}
               <a href={`https://github.com/yangjinlong86`}>

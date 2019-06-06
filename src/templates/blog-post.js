@@ -17,16 +17,17 @@ class BlogPostTemplate extends React.Component {
         <SEO
           title={post.frontmatter.title}
         />
-        <h2>{post.frontmatter.title}</h2>
+        <h1 style={{marginTop: `1 rem`}}>{post.frontmatter.title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
+            color: `grey`
           }}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.date} by {this.props.data.site.siteMetadata.author}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
