@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `/Users/jason/local/github/nocoder/data/blog`,
+        path: `../nocoder/data/blog`,
         name: `blog`,
       },
     },
