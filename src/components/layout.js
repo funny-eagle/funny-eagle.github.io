@@ -14,10 +14,10 @@ class Layout extends React.Component {
       </li>
     )
     header = (
-      <div style={{}}>
+      <div style={{marginTop: `1em`}}>
         <div style={{ margin: `0 auto`,padding: `0 1rem`, maxWidth: rhythm(30)}}>
           <Link style={{ boxShadow: `none`, textDecoration: `none`}} to={`/`}>
-            <strong style={{fontFamily: `Monaco`, fontSize: `22px`, color: `grey`}}>{title}</strong>
+            <strong style={{fontFamily: `Monaco`, fontSize: `24px`, color: `grey`}}>{title}</strong>
           </Link>
           <hr/>
         </div>
