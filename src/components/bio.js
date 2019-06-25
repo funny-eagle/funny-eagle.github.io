@@ -37,7 +37,7 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p style={{color: `grey`}}>
+            <p style={{color: `grey`, fontFamily: ``}}>
               Written by <strong>{author}</strong> who lives and works in Chengdu as a software engineer.
               You can follow him on {' '}
               <a href={`https://github.com/yangjinlong86`}>

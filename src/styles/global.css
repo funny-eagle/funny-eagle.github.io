@@ -1,3 +1,7 @@
 html {
-    background-color: rgb(248, 245, 235);
+    background-color: #fbf0d9;
+}
+
+body {
+    font-family: 'Courier', Courier, monospace
 }

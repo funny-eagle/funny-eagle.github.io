@@ -23,8 +23,8 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
-              <Link style={{}} to={node.fields.slug}>
-                <span style={{fontSize: `18px`}}>{title}</span>
+              <Link style={{boxShadow: `none`, textDecoration: `none`}} to={node.fields.slug}>
+                <strong style={{fontSize: `20px`}}>{title}</strong>
               </Link>
               <br/>
               <small>{node.frontmatter.date}</small>

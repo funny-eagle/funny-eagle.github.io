@@ -17,7 +17,7 @@ class Layout extends React.Component {
       <div style={{}}>
         <div style={{ margin: `0 auto`,padding: `0 1rem`, maxWidth: rhythm(30)}}>
           <Link style={{ boxShadow: `none`, textDecoration: `none`}} to={`/`}>
-            <strong style={{fontSize: `22px`}}>{title}</strong>
+            <strong style={{fontFamily: `Monaco`, fontSize: `22px`, color: `grey`}}>{title}</strong>
           </Link>
           <hr/>
         </div>

@@ -15,13 +15,13 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title}/>
-        <h1 style={{marginTop: `1 rem`}}>{post.frontmatter.title}</h1>
+        <strong style={{marginTop: `1 rem`, fontSize: 30}}>{post.frontmatter.title}</strong>
         <p
           style={{
             ...scale(-1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+          
             color: `grey`
           }}
         >
