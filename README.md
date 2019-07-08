@@ -1,23 +1,25 @@
-> 断断续续维护了3年了，一直也没有什么大的突破，从spring+jsp+postgresql 到 springboot+reactjs+sqlite 版本，做的无非就是增删改查和js插件的集成，越写越没有动力了。
-> 接触 Gatsby 是在 Reactjs 官网看到的，简单学习之后，感觉很适合于博客项目的二次开发，就用 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) 重新构建了 freda blog，以后也会基于这个版本做后续的功能开发
+# Freda Blog
 
+Freda Blog 是 基于 GatabyJS 开发的个人博客，支持根据 markdown 文件生成静态页面，配置简单，访问速度快，还有很多丰富的插件可用，是个人静态博客网站的一个很好的选择。
 
-Get Up and Running in 5 Minutes
+> 接触 Gatsby 是在 Reactjs 官网看到的，简单学习之后，发现很适合做个人博客，就用 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) 重新构建了 freda blog，以后也会基于这个版本做后续的功能开发。
 
-Install the Gatsby CLI.
+首先配置好nodejs环境。
+
+然后安装 Gatsby CLI。
 
 > npm install -g gatsby-cli
 
-Next, move into your new site’s directory and start it up:
+接着，到 freda 目录下，以开发模式启动项目：
 
 > cd freda/
 > gatsby develop
 
-Open the source code and start editing!
+默认情况下会使用 8000 端口，启动后通过 http://localhost:8000 来访问 freda blog。
 
-Your site is now running at http://localhost:8000. Open the my-blazing-fast-site directory in your code editor of choice and edit src/pages/index.js. Save your changes, and the browser will update in real time!
+---
 
-
+以下是Gatsby项目的简介，内容摘自 [Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/README.md)
 
 ## 🚀 Quick start
 
