@@ -3,7 +3,7 @@ module.exports = {
     title: "Nocoder Blog",
     author: `Jason Yang`,
     description: `nocoder blog`,
-    siteUrl: `http://nocoder.org`,
+    siteUrl: `https://nocoder.org`,
     social: {
       github: `yangjinlong86`,
     },

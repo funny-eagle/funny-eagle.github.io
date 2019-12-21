@@ -2,10 +2,10 @@
   "name": "nocoder-blog",
   "private": true,
   "description": "nocoder blog",
-  "version": "0.1.0",
+  "version": "1.0",
   "author": "Jason Yang <yangjinlong86@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/yangjinlong86/yangjinlong86.github.io/issues"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -41,7 +41,7 @@
     "gh-pages": "^2.1.1",
     "prettier": "^1.17.0"
   },
-  "homepage": "https://github.com/yangjinlong86/yangjinlong86.github.io",
+  "homepage": "https://nocoder.org",
   "keywords": [
     "gatsby"
   ],
