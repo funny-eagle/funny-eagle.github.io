@@ -1,55 +1,99 @@
-# Freda Blog
+<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<p align="center">
+  <a href="https://www.gatsbyjs.com">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby's blog starter
+</h1>
 
-Freda Blog 是 基于 GatabyJS 的个人博客，支持根据 markdown 文件生成静态页面，配置简单，访问速度快，还有很多丰富的插件可用，是个人静态博客网站的一个很好的选择。接触 Gatsby 是在 Reactjs 官网看到的，简单学习之后，发现很适合做个人博客，就用 [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog) 重新构建了 freda blog，以后也会基于这个版本做后续的功能开发。
+Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-## 安装 gatsby 环境
+_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
-首先配置好nodejs环境。
+## 🚀 Quick start
 
-然后安装 Gatsby CLI。
+1.  **Create a Gatsby site.**
 
-```shell
-npm install -g gatsby-cli
-```
-## 开发模式启动项目
+    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the blog starter.
 
-接着，到 freda 目录下，以开发模式启动项目：
+    ```shell
+    # create a new Gatsby site using the blog starter
+    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
+    ```
 
-```shell
-cd freda/
-npm install
-gatsby develop
-```
+1.  **Start developing.**
 
-默认情况下会使用 8000 端口，启动后通过 http://localhost:8000 来访问 freda blog。
+    Navigate into your new site’s directory and start it up.
 
-## 自动部署到 github pages
+    ```shell
+    cd my-blog-starter/
+    gatsby develop
+    ```
 
-在repository的settings中设置用master分支来构建github pages，并指定自定义域名，到godaddy去设置域名dns，a记录指向yangjinlong86.github.io的IP，再创建一个分支用来存放gatsby博客源码，使用gh-pages自动提交生成的静态文件到master分支。
+1.  **Open the source code and start editing!**
 
-我用另一个repository[nocoder blog](https://github.com/yangjinlong86/nocoder/tree/master/data/blog)来存放文章，使用相对路径的方式，在gatsby源码中指定markdown文件的目录，这样的好处是博客源码项目不会太臃肿。
+    Your site is now running at `http://localhost:8000`!
 
-安装 gh-pages package
+    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
 
-使用 gh-pages package 推送 Gatsby APP 到 github pages。
+    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
-```shell
-npm install gh-pages --save-dev
-```
+## 🚀 Quick start (Netlify)
 
-在package.json中添加部署脚本
+Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
-```json
-{
-  "scripts": {
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
-  }
-}
-```
+[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
 
-自动将生成的静态页面push到master分支，然后通过github pages自动构建，完成博客的部署
+## 🧐 What's inside?
 
-```shell
-npm run deploy 
-```
+A quick look at the top-level files and directories you'll see in a typical Gatsby project.
 
+    .
+    ├── node_modules
+    ├── src
+    ├── .gitignore
+    ├── gatsby-browser.js
+    ├── gatsby-config.js
+    ├── gatsby-node.js
+    ├── gatsby-ssr.js
+    ├── LICENSE
+    ├── package.json
+    └── README.md
+
+1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+
+1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+
+1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+
+1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+
+1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+
+1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+
+1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+
+1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+
+1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+
+1.  **`README.md`**: A text file containing useful reference information about your project.
+
+## 🎓 Learning Gatsby
+
+Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+
+- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+
+- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+## 💫 Deploy
+
+[Build, Deploy, and Host On Netlify](https://netlify.com)
+
+The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
+
+<!-- AUTO-GENERATED-CONTENT:END -->
