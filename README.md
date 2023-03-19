@@ -97,3 +97,34 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+
+## 自动部署到 github pages
+
+在repository的settings中设置用master分支来构建github pages，并指定自定义域名，到godaddy去设置域名dns，a记录指向yangjinlong86.github.io的IP，再创建一个分支用来存放gatsby博客源码，使用gh-pages自动提交生成的静态文件到master分支。
+
+我用另一个repository[nocoder blog](https://github.com/yangjinlong86/nocoder/tree/master/data/blog)来存放文章，使用相对路径的方式，在gatsby源码中指定markdown文件的目录，这样的好处是博客源码项目不会太臃肿。
+
+安装 gh-pages package
+
+使用 gh-pages package 推送 Gatsby APP 到 github pages。
+
+```shell
+npm install gh-pages --save-dev
+```
+
+在package.json中添加部署脚本
+
+```json
+{
+  "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  }
+}
+```
+
+自动将生成的静态页面push到master分支，然后通过github pages自动构建，完成博客的部署
+
+```shell
+npm run deploy 
+```
