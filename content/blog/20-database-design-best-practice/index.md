@@ -2,6 +2,7 @@
 title: 20条数据库设计最佳实践
 date: "2018-06-13 06:29:29.426+01"
 ---
+
 > 翻译自 https://dzone.com/articles/20-database-design-best
 
 1. 对`table`和`column`使用明确定义的单词并且风格一致的命名。
