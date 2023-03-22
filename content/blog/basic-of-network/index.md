@@ -75,5 +75,7 @@ date: "2023-03-20 23:14:00"
 
 ## 五、参考文献
 
-- 《Wireshark数据包分析实战（第3版）》
-- 《计算机网络-自顶向下方法（第7版）》
+- [《Wireshark数据包分析实战（第3版）》](https://book.douban.com/subject/30387220/)
+    ![](0f67c99622355fcf40e52c2512a73100.png)
+- [《计算机网络-自顶向下方法（第7版）》](https://book.douban.com/subject/30280001//)
+    ![](9ebf4bf26c03e9580690553dad31097a.png)
