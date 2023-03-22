@@ -15,7 +15,7 @@ module.exports = {
       summary: `80后码农，喜欢弹吉他`,
     },
     description: `Nocoder.org`,
-    siteUrl: `https://nocodr.org`,
+    siteUrl: `http://nocodr.org`,
     social: {
       github: `nocdr`,
     },
