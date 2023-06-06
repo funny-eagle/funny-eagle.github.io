@@ -12,7 +12,7 @@ module.exports = {
     title: `老鹰杰森的博客`,
     author: {
       name: `Jason Yang`,
-      summary: `再给我一杯酒，让我看到重影。`,
+      summary: `再来一杯，让我看到重影。`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
