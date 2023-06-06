@@ -1,5 +1,5 @@
 ---
-title: ARTS-46
+title: ARTS 第46周：纪念皓哥
 date: 2023-06-02
 ---
 
