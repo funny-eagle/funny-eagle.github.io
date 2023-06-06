@@ -27,7 +27,7 @@
     "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "prettier": "^2.8.8"
   },
   "homepage": "https://nocdr.github.io",
