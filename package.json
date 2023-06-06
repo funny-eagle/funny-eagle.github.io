@@ -40,7 +40,7 @@
     "url": "git+https://github.com/nocdr/nocdr.github.io.git"
   },
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public -b public",
+    "deploy": "gatsby build && gh-pages -d public",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
