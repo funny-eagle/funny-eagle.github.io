@@ -3,8 +3,6 @@ title: ARTS-46
 date: 2023-06-02
 ---
 
-# ARTS-46
-
 ## Algorithm
 
 ```java
