@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Nocoder Blog`,
+    title: `老鹰杰森的博客`,
     author: {
-      name: `老鹰杰森`,
-      summary: `80后码农，喜欢弹吉他`,
+      name: `Jason Yang`,
+      summary: `再给我一杯酒，让我看到重影。`,
     },
-    description: `Nocoder.org`,
-    siteUrl: `http://nocodr.org`,
+    description: `A starter blog demonstrating what Gatsby can do.`,
+    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      github: `nocdr`,
+      twitter: `kylemathews`,
     },
   },
   plugins: [
@@ -102,7 +102,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Jason Yang's Blog RSS Feed",
           },
         ],
       },
@@ -110,8 +110,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
+        name: `Jason Yang's Blog`,
+        short_name: `Jason Yang`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website

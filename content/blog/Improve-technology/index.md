@@ -1,5 +1,5 @@
 ---
-title: 如何提升技术能力
+title: 提升技术能力
 date: "2017-06-29 03:53:17.421+01"
 ---
 今天看了一篇文章 [Excel与微服务](https://mp.weixin.qq.com/s?__biz=MzA3MDMwOTcwMg==&mid=2650004876&idx=1&sn=bc4df15cace45d179b901b50dcf3b8ea&chksm=8739bfa5b04e36b3c95341f740b5e1ebfbcf311495eacdcf051357dd8e9029d90ae3359e2beb&mpshare=1&scene=1&srcid=0628S9yRn3eMX8JwUYKWhpJA&key=dd608d91fd702d6496c006a68fd69e39f774135c054a342d5a4841017e6ae4a3a06ef5a1afd4ea6980a7327880db71213a3a2f08bb0d537e9c92fbd3e09d3c4c8e87cd0d67a641e23456ccd342ae298f&ascene=0&uin=MTIwODAwNzAyMA%3D%3D&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.5+build(16F73) )，有一些感触，Excel很土？微服务很潮？
