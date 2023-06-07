@@ -157,3 +157,10 @@ $ curl -v  https://nocoder.org
 < ETag: "647fe124-1290c"
 < Accept-Ranges: bytes
 ```
+
+最后，建议把letsencrypt生成的文件目录`/etc/letsencrypt`和Nginx的配置文件都整体备份一下，如果发生服务器迁移，就把整个文件打包迁移就可以继续工作。
+```
+/etc/letsencrypt# ls
+accounts  cli.ini  keys  options-ssl-nginx.conf  renewal-hooks
+archive   csr      live  renewal                 ssl-dhparams.pem
+```
