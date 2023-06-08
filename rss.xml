@@ -1,4 +1,146 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 06 Jun 2023 15:09:09 GMT</lastBuildDate><item><title><![CDATA[ARTS 第46周：纪念皓哥]]></title><description><![CDATA[Algorithm Review 以前在完成Review这一项任务的时候，通过皓哥的专栏和引导，发现了很多优秀的国外技术网站，如medium、DZone、javatpoint、IBM Developer…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/arts-46/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/arts-46/</guid><pubDate>Fri, 02 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Algorithm&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 08 Jun 2023 12:11:46 GMT</lastBuildDate><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let's…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/free-ssl-certs/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let&apos;s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
+&lt;p&gt;我们可以通过Certbot申请免费HTTPS证书，步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装Certbot：Certbot是Let&apos;s Encrypt的官方客户端，可自动化证书颁发和安装过程&lt;/li&gt;
+&lt;li&gt;运行Certbot：运行Certbot以启动证书颁发和安装过程。&lt;/li&gt;
+&lt;li&gt;等待证书颁发：Certbot将与Let&apos;s Encrypt服务器通信以颁发证书，需要几秒钟或几分钟。&lt;/li&gt;
+&lt;li&gt;安装证书：Certbot将自动安装证书并配置您的Web服务器以使用HTTPS。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意，需要在每90天内更新证书。Certbot可以自动化此过程，因此无需手动更新证书。&lt;/p&gt;
+&lt;p&gt;以下是具体命令，以&lt;code class=&quot;language-text&quot;&gt;Ubuntu&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;Nginx&lt;/code&gt;为例：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装Certbot&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo apt install certbot&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;安装Certbot Nginx插件，&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo apt install python3-certbot-nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果用Apache，就安装Apache插件 `sudo apt install python3-certbot-apache&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;使用certbot nginx 插件为域名申请证书&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo certbot --nginx -d nocoder.org -d www.nocoder.org&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; certbot &lt;span class=&quot;token parameter variable&quot;&gt;--nginx&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; nocoder.org &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; www.nocoder.org
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator nginx, Installer nginx
+Enter email address &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;used &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; urgent renewal and security notices&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Enter &lt;span class=&quot;token string&quot;&gt;&apos;c&apos;&lt;/span&gt; to cancel&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;: yangjinlong86@gmail.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.3-September-21-2022.pdf. You must
+agree &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; order to register with the ACME server. Do you agree?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;es/&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;N&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;o: Y
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Would you be willing, once your first certificate is successfully issued, to
+share your email address with the Electronic Frontier Foundation, a founding
+partner of the Let&lt;span class=&quot;token string&quot;&gt;&apos;s Encrypt project and the non-profit organization that
+develops Certbot? We&apos;&lt;/span&gt;d like to send you email about our work encrypting the web,
+EFF news, campaigns, and ways to support digital freedom.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;es/&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;N&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;o: Y
+Account registered.
+Requesting a certificate &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; nocoder.org and www.nocoder.org
+Performing the following challenges:
+http-01 challenge &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; nocoder.org
+http-01 challenge &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; www.nocoder.org
+Waiting &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; verification&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+Cleaning up challenges
+Deploying Certificate to VirtualHost /etc/nginx/conf.d/nocoder.org.conf
+Deploying Certificate to VirtualHost /etc/nginx/conf.d/nocoder.org.conf
+Redirecting all traffic on port &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt; to ssl &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; /etc/nginx/conf.d/nocoder.org.conf
+Redirecting all traffic on port &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt; to ssl &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; /etc/nginx/conf.d/nocoder.org.conf
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Congratulations&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; You have successfully enabled https://nocoder.org and
+https://www.nocoder.org
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Subscribe to the EFF mailing list &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;email: yangjinlong86@gmail.com&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;.
+
+IMPORTANT NOTES:
+ - Congratulations&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/nocoder.org/fullchain.pem
+   Your key &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; has been saved at:
+   /etc/letsencrypt/live/nocoder.org/privkey.pem
+   Your certificate will expire on &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-09-05. To obtain a new or
+   tweaked version of this certificate &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; the future, simply run
+   certbot again with the &lt;span class=&quot;token string&quot;&gt;&quot;certonly&quot;&lt;/span&gt; option. To non-interactively
+   renew *all* of your certificates, run &lt;span class=&quot;token string&quot;&gt;&quot;certbot renew&quot;&lt;/span&gt;
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let&apos;s Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+   &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;证书有效期为90天，证书到期后执行&lt;code class=&quot;language-text&quot;&gt;certbot renew&lt;/code&gt;续期即可，Certbot会自动更新证书，不需要手动替换文件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当然，没有到期就执行续期命令，会提示没到期不需要续期，不会生成新的证书。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo certbot renew
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Processing /etc/letsencrypt/renewal/nocoder.org.conf
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cert not yet due for renewal
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The following certificates are not due for renewal yet:
+  /etc/letsencrypt/live/nocoder.org/fullchain.pem expires on 2023-09-05 (skipped)
+No renewals were attempted.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;使用&lt;code class=&quot;language-text&quot;&gt;curl -v&lt;/code&gt;测试一下，网站访问正常。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;  https://nocoder.org
+*   Trying &lt;span class=&quot;token number&quot;&gt;13.215&lt;/span&gt;.120.28:443&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+* Connected to nocoder.org &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;13.215&lt;/span&gt;.120.28&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; port &lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;#0)&lt;/span&gt;
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; certificate verify locations:
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;OUT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Client hello &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Server hello &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Encrypted Extensions &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Certificate &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, CERT verify &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Finished &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;OUT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS change cipher, Change cipher spec &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;OUT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Finished &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: &lt;span class=&quot;token assign-left variable&quot;&gt;CN&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;nocoder.org
+*  start date: Jun  &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt; 01:09:21 &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt; GMT
+*  expire date: Sep  &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt; 01:09:20 &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt; GMT
+*  subjectAltName: &lt;span class=&quot;token function&quot;&gt;host&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;nocoder.org&quot;&lt;/span&gt; matched cert&lt;span class=&quot;token string&quot;&gt;&apos;s &quot;nocoder.org&quot;
+*  issuer: C=US; O=Let&apos;&lt;/span&gt;s Encrypt&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;CN&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;R3
+*  SSL certificate verify ok.
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; GET / HTTP/1.1
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Host: nocoder.org
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; User-Agent: curl/7.74.0
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Accept: */*
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; 
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Newsession Ticket &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Newsession Ticket &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* old SSL session ID is stale, removing
+* Mark bundle as not supporting multiuse
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; HTTP/1.1 &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt; OK
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Server: nginx/1.18.0
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Date: Wed, 07 Jun &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt; 02:48:26 GMT
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Content-Type: text/html
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Content-Length: &lt;span class=&quot;token number&quot;&gt;76044&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Last-Modified: Wed, 07 Jun &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt; 01:45:08 GMT
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Connection: keep-alive
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; ETag: &lt;span class=&quot;token string&quot;&gt;&quot;647fe124-1290c&quot;&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Accept-Ranges: bytes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;最后，建议把letsencrypt生成的文件目录&lt;code class=&quot;language-text&quot;&gt;/etc/letsencrypt&lt;/code&gt;和Nginx的配置文件都整体备份一下，如果发生服务器迁移，就把整个文件打包迁移就可以继续工作。&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/letsencrypt# ls
+accounts  cli.ini  keys  options-ssl-nginx.conf  renewal-hooks
+archive   csr      live  renewal                 ssl-dhparams.pem&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[ARTS 第46周：纪念皓哥]]></title><description><![CDATA[Algorithm Review 以前在完成Review这一项任务的时候，通过皓哥的专栏和引导，发现了很多优秀的国外技术网站，如medium、DZone、javatpoint、IBM Developer…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/arts-46/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/arts-46/</guid><pubDate>Fri, 02 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Algorithm&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nocoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;leetcode&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;/**
@@ -2175,7 +2317,7 @@ logger.debug(&quot;Entry number: {} is {}&quot;, i, entry[i]);&lt;/code&gt;&lt;/
 &lt;p&gt;You should see the line appear in the console consumer output and in the sink file.&lt;/p&gt;
 &lt;h4&gt;&lt;a href=&quot;https://kafka.apache.org/quickstart#quickstart_kafkastreams&quot;&gt;Step 8: Use Kafka Streams to process data&lt;/a&gt;&lt;/h4&gt;
 &lt;p&gt;Kafka Streams is a client library for building mission-critical real-time applications and microservices, where the input and/or output data is stored in Kafka clusters. Kafka Streams combines the simplicity of writing and deploying standard Java and Scala applications on the client side with the benefits of Kafka&apos;s server-side cluster technology to make these applications highly scalable, elastic, fault-tolerant, distributed, and much more. This &lt;a href=&quot;https://kafka.apache.org/20/documentation/streams/quickstart&quot;&gt;quickstart example&lt;/a&gt; will demonstrate how to run a streaming application coded in this library.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[近期接触的技术点总结]]></title><description><![CDATA[要花点时间总结一下来公司这些日子做的东西了，自我感觉良好，跟着春哥学了不少东西，这半年还是很充实的。
-记得有一次春哥笑着跟我说，“你要相信，别人能做出来的东西，你也可以。” 架构设计 领域驱动设计 分布式系统架构设计 框架应用 eureka springboot alibaba…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/some-tips/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/some-tips/</guid><pubDate>Sat, 29 Sep 2018 14:06:05 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+记得有一次春哥笑着跟我说，“你要相信，别人能做出来的东西，你也可以。” 架构设计 领域驱动设计 分布式系统架构设计 框架应用 eureka springboot alibaba…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/some-tips/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/some-tips/</guid><pubDate>Sat, 29 Sep 2018 07:06:05 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;要花点时间总结一下来公司这些日子做的东西了，自我感觉良好，跟着春哥学了不少东西，这半年还是很充实的。
 记得有一次春哥笑着跟我说，“你要相信，别人能做出来的东西，你也可以。”&lt;/p&gt;
 &lt;/blockquote&gt;
