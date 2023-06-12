@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `老鹰杰森的博客`,
+    title: `Nocoder.Org`,
     author: {
       name: `Jason Yang`,
       summary: `再来一杯，让我看到重影。`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Nocoder, Not Only a Coder, Jason Yang's Blog`,
+    siteUrl: `https://nocoder.org`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `yangjinlong86`,
     },
   },
   plugins: [

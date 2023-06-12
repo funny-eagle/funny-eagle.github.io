@@ -1,8 +1,8 @@
 {
   "name": "nocoder-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
-  "version": "0.1.0",
+  "description": "Jason Yang's blog powered by Gatsby",
+  "version": "1.0.0",
   "author": "Jason Yang <yangjinlong86@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
@@ -30,9 +30,9 @@
     "gh-pages": "^2.2.0",
     "prettier": "^2.8.8"
   },
-  "homepage": "https://nocdr.github.io",
+  "homepage": "https://nocoder.org",
   "keywords": [
-    "gatsby"
+    "gatsby","nocoder","nocdr","jason yang"
   ],
   "license": "0BSD",
   "repository": {
