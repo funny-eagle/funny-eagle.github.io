@@ -1,5 +1,5 @@
 ---
-title: ubuntu 安装ElasticSearch过程中的问题记录
+title: ubuntu 安装 ElasticSearch 过程中的问题记录
 date: "2018-06-07 04:38:46.559+01"
 ---
 

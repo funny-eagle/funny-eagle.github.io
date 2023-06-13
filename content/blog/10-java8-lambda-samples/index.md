@@ -1,5 +1,5 @@
 ---
-title: Java8 lambda表达式10个示例
+title: 【转载】Java8 lambda表达式10个示例
 date: "2017-06-10 05:36:20.611+01"
 ---
 

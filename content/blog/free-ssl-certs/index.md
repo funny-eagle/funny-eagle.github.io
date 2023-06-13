@@ -1,6 +1,7 @@
 ---
 title: 申请免费HTTPS证书
 date: 2023-06-07
+description: "通过 Let's Encrypt 提供的 Certbot 免费申请并自动安装SSL证书。"
 ---
 
 Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。

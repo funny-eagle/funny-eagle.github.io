@@ -1,8 +1,9 @@
 ---
-title: 修改ubuntu1604源
-date: "2018-06-05 08:27:38.676+01"
+title: ubuntu 1604 apt source
+date: "2018-06-05 08:27:38"
+description: "aliyun mirrors for ubuntu 1604"
 ---
-修改ubuntu1604源
+修改 ubuntu1604 源
 
 ```shell
 sudo vim /etc/apt/source.list
