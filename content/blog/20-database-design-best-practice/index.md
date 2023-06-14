@@ -1,6 +1,7 @@
 ---
 title: 20条数据库设计最佳实践
-date: "2018-06-13 06:29:29.426+01"
+date: "2018-06-13 06:29:29"
+description: "20条数据库设计最佳实践。"
 ---
 
 > 翻译自 https://dzone.com/articles/20-database-design-best
