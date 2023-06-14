@@ -1,8 +1,10 @@
 ---
-title: 一些Java相关的面试题整理
-date: "2018-04-11 21:19:10+01"
+title: 几道Java面试题
+date: "2018-04-11 21:19:10"
+description: ""
 ---
 ### 1. 数据库编码和服务端代码编码一致情况下，Get请求可能产生乱码的原因及解决办法？
+
 - 检查中间键tomcat、jetty对get请求的解码格式，默认是iso-8859-1的话，可能会产生乱码，解决办法修改中间键配置文件中URIEncoding解码格式。
 
 ### 2. Struts2和SpringMVC的区别？
@@ -13,7 +15,8 @@ date: "2018-04-11 21:19:10+01"
 - Struts2有自己的interceptor机制，Spring MVC用的是独立的AOP方式
 
 ### 3. Spring MVC的Controller是单例的吗，有什么影响吗？
-- Spring MVC的controller是单例的
+
+- Spring MVC 的 Controller 是单例的
 - 如果在controller中定义了非静态成员变量，会导致属性重复使用
 
 ```java
@@ -61,7 +64,7 @@ Mybatis中的`#{}`和`${}`的区别
 	- http://wiki.jikexueyuan.com/project/hibernate/caching.html
 	- https://blog.csdn.net/xlgen157387/article/details/40071651 
 
-### 6. 使用过哪些socket框架？
+### 6. 使用过哪些Socket框架？
 
 - Socket
   - netty

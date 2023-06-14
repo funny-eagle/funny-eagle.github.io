@@ -1,6 +1,7 @@
 ---
 title: StrongLoop compare with pm2 and Forever
-date: "2018-06-12 11:02:30.931+01"
+date: "2018-06-12 11:02:30"
+description: "StrongLoop compare with pm2 and Forever"
 ---
 
 | Feature                          | StrongLoop Process Manager                               | pm2                                                     | Forever                    |

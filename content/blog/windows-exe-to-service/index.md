@@ -1,9 +1,10 @@
 ---
-title: windows下把exe程序注册成服务
-date: "2017-12-08 06:51:49.97+00"
+title: Windows下把exe程序注册成服务
+date: "2017-12-08 06:51:49"
+description: "Windows下把exe程序注册成服务"
 ---
 
-1、下载instsrv.exe和srvany.exe这两个文件，放在`C:\WINDOWS\SysWOW64`目录下
+1、下载`instsrv.exe`和`srvany.exe`这两个文件，放在`C:\WINDOWS\SysWOW64`目录下
 
 2、管理员权限运行命令提示符，进入`C:\WINDOWS\SysWOW64`目录
 

@@ -1,6 +1,7 @@
 ---
-title: Typecho数据库设计
+title: 【转载】Typecho数据库设计
 date: "2018-02-02 16:34:57.667+00"
+description: "学习 Typecho 公开的博客系统数据库设计"
 ---
 ## 主体结构
 ### 单用户博客数据量如何

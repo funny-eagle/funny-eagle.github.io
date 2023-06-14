@@ -1,7 +1,9 @@
 ---
 title: Integrate an H2 Database in Your Spring Boot App
-date: "2018-05-08 18:26:47.395+01"
+date: "2018-05-08 18:26:47"
+description: "Integrate an H2 Database in Your Spring Boot App。"
 ---
+
 > 原文地址 https://dzone.com/articles/integrate-h2-database-in-your-spring-boot-applicat
 
 In this tutorial, we will be integrating the H2 database in your Spring Boot application. Note that the H2 database is in the embedded mode.

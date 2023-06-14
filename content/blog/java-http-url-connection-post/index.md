@@ -1,8 +1,8 @@
 ---
 title: JAVA HttpURLConnection Post方式提交传递参数
-date: "2018-05-08 16:46:13.233+01"
+date: "2018-05-08 16:46:13"
+description: "如题，一段代码示例。"
 ---
-> 原文链接：https://blog.csdn.net/w348399060/article/details/62424502
 
 ```java
 public class HttpURLConnectionPost {  
@@ -21,7 +21,6 @@ public class HttpURLConnectionPost {
 		HttpURLConnection connection = (HttpURLConnection) postUrl.openConnection();       
 		// 设置是否向connection输出，因为这个是post请求，参数要放在http正文内，因此需要设为true  
 		connection.setDoOutput(true);  
-		// Read from the connection. Default is true.  
 		connection.setDoInput(true);  
 		// 默认是 GET方式  
 		connection.setRequestMethod("POST");        
@@ -40,17 +39,15 @@ public class HttpURLConnectionPost {
 		String content = "字段名=" + URLEncoder.encode("字符串值", "编码");  
 		// DataOutputStream.writeBytes将字符串中的16位的unicode字符以8位的字符形式写到流里面  
 		out.writeBytes(content);  
-		//流用完记得关  
 		out.flush();  
 		out.close();  
-		//获取响应  
 		BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));  
 		String line;  
 		while ((line = reader.readLine()) != null){  
-				System.out.println(line);  
+			System.out.println(line);  
 		}  
 		reader.close();  
-		//该干的都干完了,记得把连接断了  
+		//断开连接 
 		connection.disconnect();  
 	}  
   

@@ -1,7 +1,9 @@
 ---
 title: Apache Kafka Quickstart
-date: "2018-10-10 07:36:54.363+01"
+date: "2018-10-10 07:36:54"
+description: "Kafka tutorial"
 ---
+
 > This tutorial assumes you are starting fresh and have no existing Kafka or ZooKeeper data. Since Kafka console scripts are different for Unix-based and Windows platforms, on Windows platforms use `bin\windows\` instead of `bin/`, and change the script extension to `.bat`.
 
 #### [Step 1: Download the code](https://kafka.apache.org/quickstart#quickstart_download)

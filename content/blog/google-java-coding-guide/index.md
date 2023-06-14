@@ -1,6 +1,7 @@
 ---
-title: Google Java编程风格指南
-date: "2018-06-28 10:25:09.516+01"
+title: 【转载】Google Java编程风格指南
+date: "2018-06-28 10:25:09"
+description: "这没撒好说的，好好学习遵守就对了。"
 ---
 
 > 出处：[http://hawstein.com/posts/google-java-style.html](http://www.hawstein.com/posts/google-java-style.html)

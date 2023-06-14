@@ -1,11 +1,12 @@
 ---
 title: JavaScript基础
-date: "2017-04-08 06:26:35.141+01"
+date: "2017-04-08 06:26:35"
+description: "JavaScript 基础知识整理"
 ---
 
-##维基百科的描述
+## 维基百科的描述
 
->JavaScript，一种直译式脚本语言，是一种动态类型、基于原型的语言，内置支持类别。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML网页上使用，用来给HTML网页增加动态功能。然而现在JavaScript也可被用于网络服务器，如Node.js。
+> JavaScript，一种直译式脚本语言，是一种动态类型、基于原型的语言，内置支持类别。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML网页上使用，用来给HTML网页增加动态功能。然而现在JavaScript也可被用于网络服务器，如Node.js。
 
 >在1995年时，由网景公司的布兰登·艾克，在网景导航者浏览器上首次设计实现而成。因为网景公司与昇阳公司的营销合作，加上网景公司管理层希望它外观看起来像Java，因此取名为JavaScript。但实际上它的语义与Self及Scheme较为接近。
 
@@ -30,11 +31,11 @@ date: "2017-04-08 06:26:35.141+01"
 >  检测访客的浏览器信息
 >  控制cookies，包括创建和修改等
 
-##语法（Syntax）
+## 语法（Syntax）
 
 这节介绍一些JavaScript的基本语法规则。
 
-###语句和表达式（Statements versus expressions）
+### 语句和表达式（Statements versus expressions）
 
 了解JavaScript的语法，这有助于了解（简而言之），它有两个主要的语法类型：语句和表达式。
 
@@ -109,7 +110,7 @@ x++; // 单行（single-line）注释
 JavaScript中的变量在使用之前必须先声明：
 
 var foo;  // 声明变量“foo”
-####赋值（Assignment）
+#### 赋值（Assignment）
 
 你可以在生命变量的同时给它赋值：
 
@@ -120,7 +121,7 @@ var foo = 6;
 ```javascript
 foo = 4;  // 更改变量的值
 ```
-####复合赋值操作符（Compount assignment operators）
+#### 复合赋值操作符（Compount assignment operators）
 
 有很多符合赋值操作符，例如+=。下面的两个赋值操作等价：
 
@@ -128,7 +129,7 @@ foo = 4;  // 更改变量的值
 x += 1;
 x = x + 1;
 ```
-####标识符和变量名（Identifiers and variable names）
+#### 标识符和变量名（Identifiers and variable names）
 
 标识符就是事物的名字，在JavaScript中他们扮演不同的语法角色。例如，变量的名称是一个标识符。
 
@@ -411,7 +412,7 @@ undefined, null
 > Boolean(3)
   true
 ```
-####二元逻辑运算符（Binary logical operators）
+#### 二元逻辑运算符（Binary logical operators）
 
 JavaScript中的二元逻辑运算符是短路运算——如果第一个操作数可以确定结果，第二个操作数将不被验证。例如，在下面的代码中，函数foo()不会被调用。
 
@@ -514,7 +515,7 @@ length属性是字符串的字符数量。
 ```
 提醒：字符串是不可变的，如果你想改变现有字符串，你需要创建一个行的字符串。
 
-####字符串运算符（String operators）
+#### 字符串运算符（String operators）
 
 字符串可以通过加号操作符（+）拼接，如果其中一个操作数为字符串，会将另一个操作数也转换为字符串。
 ```javascript
@@ -531,7 +532,7 @@ length属性是字符串的字符数量。
 > str
   'Multiple pieces are concatenated.'
 ```
-####字符串方法（String methods）
+#### 字符串方法（String methods）
 
 字符串有许多有用的方法。例如：
 ```javascript
@@ -552,11 +553,12 @@ length属性是字符串的字符数量。
   -1
 ```
 
-###语句（Statements）
+### 语句（Statements）
 
-####条件（Conditionals）
+#### 条件（Conditionals）
 
 if语句通过布尔条件决定执行那个分支：
+
 ```javascript
 if (myvar === 0) {
     // then
@@ -591,7 +593,7 @@ switch (fruit) {
         // ...
 }
 ```
-####循环（Loops）
+#### 循环（Loops）
 
 for 循环的格式如下：
 
@@ -665,7 +667,7 @@ function foo() {
     };
 }
 ```
-####特殊变量arguments（The special variable arguments）
+#### 特殊变量arguments（The special variable arguments）
 
 在JavaScript中你可以调用任意函数并传递任意数量的参数——语言绝不会抱怨。那可以工作，然而，使所有参数可访问需要通过特殊变量 arguments。arguments 看起来像数组，但它没有数组的方法。
 ```javascript
@@ -676,7 +678,7 @@ function foo() {
 > args[0]  // 获取索引为0的元素
 'a'
 ```
-####太多或太少参数（Too many or too few arguments）
+#### 太多或太少参数（Too many or too few arguments）
 
 让我们通过下面的函数探索JavaScript中传递太多或太少参数时如何处理（函数 toArray在后面提到）
 ```javascript
@@ -700,7 +702,7 @@ a undefined
 undefined undefined
 []
 ```
-####可选参数（Optional parameters）
+#### 可选参数（Optional parameters）
 
 下面是一个常见模式，给参数设置默认值：
 ```javascript
@@ -738,7 +740,7 @@ function toArray(arrayLikeObject) {
     return [].slice.call(arrayLikeObject);
 }
 ```
-###异常处理（Exception handling）
+### 异常处理（Exception handling）
 
 异常处理最常见的方式像下面这样：
 ```javascript
@@ -755,7 +757,7 @@ try {
 ```
 try分支包裹易出错的代码，如果try分支内部抛出异常，catch分支将会执行。
 
-###严格模式（Strict mode）
+### 严格模式（Strict mode）
 
 严格模式开启检测和一些其他措施，是JavaScript变成更整洁的语言。推荐使用严格模式。为了开启严格模式，只需在JavaScript文件或script标签第一行添加如下语句：
 
@@ -768,7 +770,7 @@ function functionInStrictMode() {
 ```
 下面的两小节看下严格模式的三大好处。
 
-###明确错误（Explicit errors）
+### 明确错误（Explicit errors）
 
 让我们看一个例子，严格模式给我们明确的错误，否则JavaScript总是静默失败：下面的函数 f() 执行一些非法操作，它试图更改所有字符串都有的只读属性——length：
 ```javascript
@@ -805,7 +807,7 @@ function f() {
 }
 console.log(f() === window);  // true
 ```
-####不再自动创建全局变量（No auto-created global variables）
+#### 不再自动创建全局变量（No auto-created global variables）
 
 在非严格模式下，如果你给不存在的变量赋值，JavaScript会自动创建一个全局变量：
 ```javascript

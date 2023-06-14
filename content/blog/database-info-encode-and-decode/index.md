@@ -1,12 +1,15 @@
 ---
 title: Spring 数据库密码加密
-date: "2017-07-18 12:03:42.274+01"
+date: "2017-07-18 12:03:42"
+description: "一些项目会要求不能出现明文密码，简单三步，实现配置文件里的用户名和密码加密。"
 ---
->我们一般都会把数据库的连接信息写在properties配置文件里，只要打开了配置文件，就能直接看到数据库的用户名密码等信息，一些项目会要求不能出现明文密码，接下来，简单三步，实现配置文件里的用户名和密码加密。
 
-###一、加密解密工具类
+> 我们一般都会把数据库的连接信息写在properties配置文件里，只要打开了配置文件，就能直接看到数据库的用户名密码等信息，一些项目会要求不能出现明文密码，接下来，简单三步，实现配置文件里的用户名和密码加密。
+
+### 一、加密解密工具类
 
 我以Base64为例，写个简单的加密和解密工具
+
 ```java
 package org.nocoder.utils;
 
@@ -52,7 +55,8 @@ public class EncryptUtil {
 }
 
 ```
-###二、通过继承spring配置类并重写处理方法实现解密
+### 二、通过继承spring配置类并重写处理方法实现解密
+
 ```java
 package org.nocoder.security;
 
@@ -91,7 +95,7 @@ public class EncryptPropertyPlaceholderConfigurer extends PropertyPlaceholderCon
 }
 
 ```
-###三、修改配置文件
+### 三、修改配置文件
 
 1、使用加密工具类对用户名和密码进行加密，修改properties配置文件`config.properties`
 ```java
@@ -114,12 +118,13 @@ maxWait=60000
 2、修改`applicationContext.xml`，引入配置文件
 ```java
 <!-- 引入配置文件，这里的class就是之前写的那个Spring配置类的路径 -->
-	<bean id="encryptPropertyConfigurer" class="org.nocoder.security.EncryptPropertyPlaceholderConfigurer">
-		<property name="locations">
-			<list>
-				<value>classpath:config.properties</value>
-			</list>
-		</property>
-	</bean>
+<bean id="encryptPropertyConfigurer" class="org.nocoder.security.EncryptPropertyPlaceholderConfigurer">
+    <property name="locations">
+        <list>
+            <value>classpath:config.properties</value>
+        </list>
+    </property>
+</bean>
 ```
+
 OK了，就这三步，重启服务试试看！

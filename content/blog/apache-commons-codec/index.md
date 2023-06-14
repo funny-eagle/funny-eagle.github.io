@@ -1,6 +1,7 @@
 ---
 title: Apache Commons Codec 加密解密
-date: "2017-07-18 11:52:08.473+01"
+date: "2017-07-18 11:52:08"
+description: "Apache Commons Codec 加密解密，Java代码示例。"
 ---
 Apache Commons Codec 提供了常见的编码器和解码器，如Base64，Hex等。
 

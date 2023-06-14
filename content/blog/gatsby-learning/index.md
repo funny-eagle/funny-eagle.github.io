@@ -1,9 +1,8 @@
 ---
 title: Gatsby 入门
 date: "2019-05-27"
+description: "Gatsby是个好东西，这玩意用了上瘾。"
 ---
-
-
 
 ### 什么是 Gatsby
 

@@ -1,9 +1,8 @@
 ---
-title: 夜未眠-程序员的心声
-date: "2018-04-23 19:41:22.844+01"
+title: 读《Java夜未眠》部分笔记
+date: "2018-04-23 19:41:22"
+description: "这本书很有意思，虽然有点旧，还是推荐阅读一下"
 ---
-
-> 我从2012年开始走向程序员之路，时至今日，一晃6年过去了，回过头来检视自己，发现自己太多太多的不足和和对自己的“欠账”。2016年初，我违背了自己当初的技术规划，阴差阳错的做了研发经理职位，从事了2年研发管理工作，期间coding的时间越来越少，对自己的职业规划也是越来越模糊，心里想到要改变现状但总是犹豫不决。但说实话，管理团队的经历让我变得更加成熟，领导教会了我很多管理技能和为人处事之道，沟通协调能力增强了很多。2018年初，终于下决心重回技术岗，加上自己的行业倾向，狠下心离开了待了近三年的公司。在梳理自己的技术技能后，发现自己需要补课的知识太多太多…
 
 编程是我的一大兴趣爱好，写程序让我觉得很开心。就像蔡学镛老师说的：“我承认我很幸运，现在的我同时把程序设计当成茶余饭后的休闲活动、学习的题材，以及赚钱的工作。”
 
@@ -141,7 +140,7 @@ class MyClass{
 
 - 根据变量的内存，分为2种变量
      heap variable 占用的内存在heap中，包括了 class variable，instance variable，array compnent，即上一程序的a b g[0]，这类变量会自动被JVM初始化成默认值
-     stack variable 通常称为广义的局部变量 pan-local variable，占用的内存在stack中，这类变量包括了狭义的局部变量，exception-handler parameter，method                   parameter，constructor parameter 即上面程序的cdef，狭义的局部变量不会被JVM初始化默认值，使用者必须自行初始化该变量，但是 parameter类的变量会被JVM初始化成传入的     值。
+     stack variable 通常称为广义的局部变量 pan-local variable，占用的内存在stack中，这类变量包括了狭义的局部变量，exception-handler parameter，method parameter，constructor parameter 即上面程序的cdef，狭义的局部变量不会被JVM初始化默认值，使用者必须自行初始化该变量，但是 parameter类的变量会被JVM初始化成传入的值。
 
 - 根据使用方式为变量分类
      class variable
