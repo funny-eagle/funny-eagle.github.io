@@ -1,7 +1,7 @@
 ---
 title: ubuntu 安装 ElasticSearch 过程中的问题记录
 date: "2018-06-07 04:38:46.559+01"
-description: "max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]"
+description: "ubuntu 安装 ElasticSearch 过程中的问题记录"
 ---
 
 **开放端口**

@@ -1,7 +1,7 @@
 ---
 title: Jenkins持续集成
 date: "2018-04-03 21:16:08"
-
+description: "Jenkins持续集成"
 ---
 
 **使用jenkins进行持续集成**
