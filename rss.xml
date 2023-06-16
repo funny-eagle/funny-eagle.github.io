@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Nocoder, Not Only a Coder, Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 16 Jun 2023 08:08:22 GMT</lastBuildDate><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let's…]]></description><link>https://nocoder.org/free-ssl-certs/</link><guid isPermaLink="false">https://nocoder.org/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let&apos;s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Nocoder, Not Only a Coder, Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 16 Jun 2023 08:11:02 GMT</lastBuildDate><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let's…]]></description><link>https://nocoder.org/free-ssl-certs/</link><guid isPermaLink="false">https://nocoder.org/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let&apos;s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
 &lt;p&gt;我们可以通过Certbot申请免费HTTPS证书，步骤如下：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;安装Certbot：Certbot是Let&apos;s Encrypt的官方客户端，可自动化证书颁发和安装过程&lt;/li&gt;
@@ -6300,4 +6300,24 @@ upper    上限
 seq &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; x &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;xrange&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
 	seq&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt; search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;seq&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;86&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item></channel></rss>
+&lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt; search&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;seq&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;86&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[学会提问]]></title><description><![CDATA[SCQA：在什么情境下，发生了什么冲突，这种冲突引发了什么疑问，最终这个疑问是如何解决的。 我们成都监狱产品研发团队是去年9月份才组建起来的，到目前产品研发人员8名、需求人员…]]></description><link>https://nocoder.org/xue-hui-ti-wen/</link><guid isPermaLink="false">https://nocoder.org/xue-hui-ti-wen/</guid><pubDate>Sat, 09 Jul 2016 15:12:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;SCQA：在什么情境下，发生了什么冲突，这种冲突引发了什么疑问，最终这个疑问是如何解决的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我们成都监狱产品研发团队是去年9月份才组建起来的，到目前产品研发人员8名、需求人员2名，肩负着刑罚执行、狱政管理、狱务公开、教育改造、生活卫生和罪犯中心六个产品的研发工作。我们团队的优势是凝聚力强、积极团结而且相当有干劲。&lt;/p&gt;
+&lt;p&gt;我们研发的产品是从北京、大连移交过来的，存在一些历史遗留问题，产品复杂度较高，我们无法在短时间内将技术知识和业务知识全部了解清楚，组内只有少数经验比较丰富的开发人员，团队存在非常明显的问题就是整体解决问题的能力不高，遇到比较复杂的问题，常常束手无策，只能依赖团队的骨干，再或者升级疑难问题。我们该如何迅速有效的提高团队成员解决问题的能力呢?&lt;/p&gt;
+&lt;p&gt;在一次管理课培训时，老师给我们教了一个方法：学会提问。问自己、问团队成员，通过提问，更能够看清楚事情的真相，也自然能够更妥帖的解决工作事务上的难题。过去的领导者可能是一个知道如何解答问题的人，但未来的领导者必将是一个知道如何提问的人。&lt;/p&gt;
+&lt;p&gt;既然这么牛，那就我们就来尝试使用一下这个科学的方法，看能否解决我们组面临的一些问题，通过一段时间的尝试，一定程度上改善了这个问题，通过提问的方式，发现问题甚至找到答案，还能够促进我们主动思考，当然随着时间推移，大家也在逐渐熟悉业务和代码。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;通过提问能够发现问题。&lt;/strong&gt; 在每天早晨的站会上，每位成员讲完自己昨天做了什么，今天要做什么之后，我都会问一下，进展的怎么样，遇到了什么问题，然后把这些问题都一一记录在纸上，不在会上解决问题，只是收集问题。不问不知道，提问了之后，多少都会有一些问题存在，开完早会后再去协调解决这些问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;通过提问才能发现答案。&lt;/strong&gt; 有的问题，顺着思路问下去，答案可能就自然出来了。而且通过提问还能够教导团队成员，把解决问题的思路告诉他，而不只是答案。&lt;/p&gt;
+&lt;p&gt;举个简单的例子，其实是很简单的问题，只是开发人员不熟悉业务，也没有思路。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;某开发问我一个问题：“怎么知道罪犯减刑假释有没有使用缴纳罚金作为依据?”
+我：“你知道缴纳罚金记录是保存在哪个表的？”
+他：“A表”
+我继续问：”再看一下减刑假释的记录是保存在哪个表的呢？“
+他；“B表”
+我：”你看一下代码，保存减刑假释记录的时候有没有往另一张表插入数据？“”
+他很快告诉我找到了，有个中间表存着两者的关系。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;通过提问改变关系。&lt;/strong&gt; 团队成员会觉得有够重视他的想法和意见，他们会更愿意去思考，提供更多更好的解决问题的思路应对问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;通过提问改变提升自己的能力。&lt;/strong&gt; 一方面学会怎么正确的提问能够帮助到别人，另一方面通过想自己提问来整理思路，提高工作效率。&lt;/p&gt;</content:encoded></item></channel></rss>
