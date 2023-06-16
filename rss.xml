@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Nocoder, Not Only a Coder, Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 16 Jun 2023 08:11:02 GMT</lastBuildDate><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let's…]]></description><link>https://nocoder.org/free-ssl-certs/</link><guid isPermaLink="false">https://nocoder.org/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let&apos;s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Nocoder, Not Only a Coder, Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 16 Jun 2023 08:14:23 GMT</lastBuildDate><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let's…]]></description><link>https://nocoder.org/free-ssl-certs/</link><guid isPermaLink="false">https://nocoder.org/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let&apos;s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
 &lt;p&gt;我们可以通过Certbot申请免费HTTPS证书，步骤如下：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;安装Certbot：Certbot是Let&apos;s Encrypt的官方客户端，可自动化证书颁发和安装过程&lt;/li&gt;
@@ -6310,14 +6310,14 @@ seq &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&
 &lt;p&gt;&lt;strong&gt;通过提问能够发现问题。&lt;/strong&gt; 在每天早晨的站会上，每位成员讲完自己昨天做了什么，今天要做什么之后，我都会问一下，进展的怎么样，遇到了什么问题，然后把这些问题都一一记录在纸上，不在会上解决问题，只是收集问题。不问不知道，提问了之后，多少都会有一些问题存在，开完早会后再去协调解决这些问题。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;通过提问才能发现答案。&lt;/strong&gt; 有的问题，顺着思路问下去，答案可能就自然出来了。而且通过提问还能够教导团队成员，把解决问题的思路告诉他，而不只是答案。&lt;/p&gt;
 &lt;p&gt;举个简单的例子，其实是很简单的问题，只是开发人员不熟悉业务，也没有思路。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;某开发问我一个问题：“怎么知道罪犯减刑假释有没有使用缴纳罚金作为依据?”
-我：“你知道缴纳罚金记录是保存在哪个表的？”
-他：“A表”
-我继续问：”再看一下减刑假释的记录是保存在哪个表的呢？“
-他；“B表”
-我：”你看一下代码，保存减刑假释记录的时候有没有往另一张表插入数据？“”
-他很快告诉我找到了，有个中间表存着两者的关系。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;某开发问我一个问题：“怎么知道罪犯减刑假释有没有使用缴纳罚金作为依据?”&lt;/li&gt;
+&lt;li&gt;我：“你知道缴纳罚金记录是保存在哪个表的？”&lt;/li&gt;
+&lt;li&gt;他：“A表”&lt;/li&gt;
+&lt;li&gt;我继续问：”再看一下减刑假释的记录是保存在哪个表的呢？“&lt;/li&gt;
+&lt;li&gt;他；“B表”&lt;/li&gt;
+&lt;li&gt;我：”你看一下代码，保存减刑假释记录的时候有没有往另一张表插入数据？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;他很快告诉我找到了，有个中间表存着两者的关系。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;通过提问改变关系。&lt;/strong&gt; 团队成员会觉得有够重视他的想法和意见，他们会更愿意去思考，提供更多更好的解决问题的思路应对问题。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;通过提问改变提升自己的能力。&lt;/strong&gt; 一方面学会怎么正确的提问能够帮助到别人，另一方面通过想自己提问来整理思路，提高工作效率。&lt;/p&gt;</content:encoded></item></channel></rss>
