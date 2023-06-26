@@ -9,12 +9,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Nocoder.Org`,
+    title: `Jason Yang's Blog`,
     author: {
       name: `Jason Yang`,
-      summary: `再来一杯，让我看到重影。`,
+      summary: `再给我来一杯，让我看到重影。`,
     },
-    description: `Nocoder, Not Only a Coder, Jason Yang's Blog`,
+    description: `Jason Yang's Blog`,
     siteUrl: `https://nocoder.org`,
     social: {
       twitter: `yangjinlong86`,
