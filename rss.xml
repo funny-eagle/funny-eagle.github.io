@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Nocoder, Not Only a Coder, Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 19 Jun 2023 02:29:37 GMT</lastBuildDate><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let's…]]></description><link>https://nocoder.org/free-ssl-certs/</link><guid isPermaLink="false">https://nocoder.org/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let&apos;s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 Jun 2023 06:51:18 GMT</lastBuildDate><item><title><![CDATA[中文技术类RSS源订阅推荐]]></title><description><![CDATA[RSS订阅源 技术博客 酷 壳 – CoolShell 陈皓的博客，虽然不会再更新了，但是每篇文章都非常优质。 订阅地址：http://coolshell.cn/feed 阮一峰的网络日志 他整理的科技爱好者周刊很有意思，属于每周必读的文章了。 订阅地址：http://www…]]></description><link>https://nocoder.org/rss-feed/</link><guid isPermaLink="false">https://nocoder.org/rss-feed/</guid><pubDate>Sun, 25 Jun 2023 16:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;RSS订阅源&lt;/h2&gt;
+&lt;h3&gt;技术博客&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;酷 壳 – CoolShell
+&lt;ul&gt;
+&lt;li&gt;陈皓的博客，虽然不会再更新了，但是每篇文章都非常优质。&lt;/li&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://coolshell.cn/feed&quot;&gt;http://coolshell.cn/feed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;阮一峰的网络日志
+&lt;ul&gt;
+&lt;li&gt;他整理的科技爱好者周刊很有意思，属于每周必读的文章了。&lt;/li&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://www.ruanyifeng.com/blog/atom.xml&quot;&gt;http://www.ruanyifeng.com/blog/atom.xml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Tinyfool的个人网站
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://feeds.feedburner.com/Tinyfoolblog&quot;&gt;http://feeds.feedburner.com/Tinyfoolblog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;月光博客
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://feed.williamlong.info/&quot;&gt;http://feed.williamlong.info/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;美团技术团队
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://tech.meituan.com/atom.xml&quot;&gt;http://tech.meituan.com/atom.xml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Thoughtworks洞见
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;https://insights.thoughtworks.cn/feed/&quot;&gt;https://insights.thoughtworks.cn/feed/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;ImportNew
+&lt;ul&gt;
+&lt;li&gt;专注Java技术分享，包括Java基础技术、进阶技能、架构设计和Java技术领域动态等。&lt;/li&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://feedmaker.kindle4rss.com/feeds/importnew.weixin.xml&quot;&gt;http://feedmaker.kindle4rss.com/feeds/importnew.weixin.xml&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;互联网&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;36氪
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://www.36kr.com/feed&quot;&gt;http://www.36kr.com/feed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;爱范儿
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://www.ifanr.com/feed&quot;&gt;http://www.ifanr.com/feed&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;小众软件
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://feed.appinn.com/&quot;&gt;http://feed.appinn.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;互联网的一些事
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://feed.yixieshi.com/&quot;&gt;http://feed.yixieshi.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;极客公园
+&lt;ul&gt;
+&lt;li&gt;订阅地址：&lt;a href=&quot;http://feeds.geekpark.net/&quot;&gt;http://feeds.geekpark.net/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;推荐使用&lt;a href=&quot;https://feedly.com/&quot;&gt;Feedly&lt;/a&gt;这个订阅软件，很好用，免费版就可以满足个人需求了，也有桌面客户端，比较简单，但是够用了。&lt;/p&gt;
+&lt;p&gt;最后，我想说，如果有时间，就专注做好一件事情。面对各种公众号标题党推文，我更愿意用feedly来阅读这些值得花时间的优质文章。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let's…]]></description><link>https://nocoder.org/free-ssl-certs/</link><guid isPermaLink="false">https://nocoder.org/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let&apos;s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
 &lt;p&gt;我们可以通过Certbot申请免费HTTPS证书，步骤如下：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;安装Certbot：Certbot是Let&apos;s Encrypt的官方客户端，可自动化证书颁发和安装过程&lt;/li&gt;
