@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 Jun 2023 07:00:47 GMT</lastBuildDate><item><title><![CDATA[中文技术类RSS源订阅推荐]]></title><description><![CDATA[RSS订阅源 技术博客 酷 壳 – CoolShell 陈皓的博客，虽然不会再更新了，但是每篇文章都非常优质。 订阅地址：http://coolshell.cn/feed 阮一峰的网络日志 他整理的科技爱好者周刊很有意思，属于每周必读的文章了。 订阅地址：http://www…]]></description><link>https://nocoder.org/rss-feed/</link><guid isPermaLink="false">https://nocoder.org/rss-feed/</guid><pubDate>Sun, 25 Jun 2023 16:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;RSS订阅源&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 Jun 2023 16:42:49 GMT</lastBuildDate><item><title><![CDATA[中文技术类RSS源订阅推荐]]></title><description><![CDATA[RSS订阅源 技术博客 酷 壳 – CoolShell 陈皓的博客，虽然不会再更新了，但是每篇文章都非常优质。 订阅地址：http://coolshell.cn/feed 阮一峰的网络日志 他整理的科技爱好者周刊很有意思，属于每周必读的文章了。 订阅地址：http://www…]]></description><link>https://nocoder.org/rss-feed/</link><guid isPermaLink="false">https://nocoder.org/rss-feed/</guid><pubDate>Sun, 25 Jun 2023 16:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;RSS订阅源&lt;/h2&gt;
 &lt;h3&gt;技术博客&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;酷 壳 – CoolShell
@@ -154,7 +154,7 @@ Hao Chen [17 hours ago]
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;通过读友会群加了他的微信，通过之后我很兴奋，居然加了偶像的微信，我跟他说，我以为您会不同意加好友，他说不会的。后来是2022年有段时间我在工作上有一些变更和挑战，面临着未知的压力，那段时间特别焦躁，每天看书学习到深夜。有一天我鼓起勇气在微信上给皓哥发消息求指导，皓哥不耐烦的问着我的工作情况，让我非常感动。现在看来，那个时候他的任何一句鼓励都是我最强大的精神支柱。&lt;/p&gt;
+&lt;p&gt;通过读友会群加了他的微信，通过之后我很兴奋，居然加了偶像的微信，我跟他说，我以为您会不同意加好友，他说不会的。后来是2022年有段时间我在工作上有一些变更和挑战，面临着未知的压力，那段时间特别焦躁，每天看书学习到深夜。有一天我鼓起勇气在微信上给皓哥发消息求指导，皓哥耐心询问着我的工作情况，让我非常感动。现在看来，那个时候他的任何一句鼓励都是我最强大的精神支柱。&lt;/p&gt;
 &lt;p&gt;皓哥走了，但他留下的东西，依然指引着我们前进。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let's Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let's…]]></description><link>https://nocoder.org/free-ssl-certs/</link><guid isPermaLink="false">https://nocoder.org/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let&apos;s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
 &lt;p&gt;我们可以通过Certbot申请免费HTTPS证书，步骤如下：&lt;/p&gt;
 &lt;ol&gt;
@@ -5027,7 +5027,7 @@ b的负责人很有耐心的解答着新员工的问题，时而给予表扬，b
 (1)
 (2)
 (3) 折腾完看看版本号
- 装完rvm，就可以更新ruby…]]></description><link>https://nocoder.org/mac-osx-ruby-upgrade/</link><guid isPermaLink="false">https://nocoder.org/mac-osx-ruby-upgrade/</guid><pubDate>Sun, 26 Nov 2017 08:23:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+ 装完rvm…]]></description><link>https://nocoder.org/mac-osx-ruby-upgrade/</link><guid isPermaLink="false">https://nocoder.org/mac-osx-ruby-upgrade/</guid><pubDate>Sun, 26 Nov 2017 08:23:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;当时我要安装android-platform-tools &lt;code class=&quot;language-text&quot;&gt;brew install android-platform-tools&lt;/code&gt;，然后这玩意就开始更新，看来我确实很久没用homebrew装软件了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Updating&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Homebrew&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
@@ -5059,8 +5059,7 @@ adb devices
 ⌥ Option
 ⌃ Control
 ↩︎ Return/Enter
-⌫ Delete
-⌦ 向前删除键（Fn…]]></description><link>https://nocoder.org/idea-for-mac-key-map/</link><guid isPermaLink="false">https://nocoder.org/idea-for-mac-key-map/</guid><pubDate>Wed, 19 Jul 2017 04:59:50 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+⌫ Delete…]]></description><link>https://nocoder.org/idea-for-mac-key-map/</link><guid isPermaLink="false">https://nocoder.org/idea-for-mac-key-map/</guid><pubDate>Wed, 19 Jul 2017 04:59:50 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;原文地址：&lt;a href=&quot;http://www.cnblogs.com/wxd0108/p/5295017.html&quot;&gt;http://www.cnblogs.com/wxd0108/p/5295017.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;Mac键盘符号和修饰键说明&lt;/h2&gt;
