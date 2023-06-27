@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 Jun 2023 16:42:49 GMT</lastBuildDate><item><title><![CDATA[中文技术类RSS源订阅推荐]]></title><description><![CDATA[RSS订阅源 技术博客 酷 壳 – CoolShell 陈皓的博客，虽然不会再更新了，但是每篇文章都非常优质。 订阅地址：http://coolshell.cn/feed 阮一峰的网络日志 他整理的科技爱好者周刊很有意思，属于每周必读的文章了。 订阅地址：http://www…]]></description><link>https://nocoder.org/rss-feed/</link><guid isPermaLink="false">https://nocoder.org/rss-feed/</guid><pubDate>Sun, 25 Jun 2023 16:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;RSS订阅源&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 27 Jun 2023 07:40:13 GMT</lastBuildDate><item><title><![CDATA[软件架构的概述和构件]]></title><description><![CDATA[…]]></description><link>https://nocoder.org/software-architecture-summarize/</link><guid isPermaLink="false">https://nocoder.org/software-architecture-summarize/</guid><pubDate>Tue, 27 Jun 2023 07:17:00 GMT</pubDate><content:encoded>&lt;h2&gt;软件架构的概述&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;软件架构是从需求分析到软件设计之间的&lt;strong&gt;过渡过程&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;架构设计就是&lt;strong&gt;需求分配&lt;/strong&gt;，将满足需求的指责分配到组件上。&lt;/li&gt;
+&lt;li&gt;软件架构为软件系统提供了一个&lt;strong&gt;结构、行为和属性&lt;/strong&gt;的高级抽象，由&lt;strong&gt;构件的描述&lt;/strong&gt;、&lt;strong&gt;构件的相互作用（连接件&lt;/strong&gt;）、&lt;strong&gt;指导构件集成的模式&lt;/strong&gt;以及这些&lt;strong&gt;模式的约束&lt;/strong&gt;组成。&lt;/li&gt;
+&lt;li&gt;软件架构不仅指定了系统的&lt;strong&gt;组织结构和拓扑结构&lt;/strong&gt;，并且显示了系统&lt;strong&gt;需求和构件&lt;/strong&gt;之间的关系，提供了一些&lt;strong&gt;设计决策&lt;/strong&gt;的基本原理。&lt;/li&gt;
+&lt;li&gt;解决好软件的&lt;strong&gt;复用、质量和维护问题&lt;/strong&gt;，是研究软件架构的&lt;strong&gt;根本目的&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;软件架构设计包括提出&lt;strong&gt;架构模型&lt;/strong&gt;，产生架构设计和进行设计评审等活动，是一个&lt;strong&gt;迭代&lt;/strong&gt;的过程。&lt;/li&gt;
+&lt;li&gt;架构设计主要关注软件组件的结构、属性和交互作用，并通过多种视图全面描述特定的系统架构。&lt;/li&gt;
+&lt;li&gt;软件架构能够在设计变更相对容易的阶段，考虑系统结构的可选方案，便于技术人员与非技术人员就软件设计进行交互，能够展现软件的&lt;strong&gt;结构、属性与内部交互关系&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;软件架构是项目干系人进行交流的手段，明确了对系统实现的&lt;strong&gt;约束条件&lt;/strong&gt;，决定了开发和维护组织的&lt;strong&gt;组织结构&lt;/strong&gt;，制约着系统的&lt;strong&gt;质量属性&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;软件架构使&lt;strong&gt;推理和控制的更改&lt;/strong&gt;更加简单，有助于循序渐进的&lt;strong&gt;原型设计&lt;/strong&gt;，可以作为培训的基础。&lt;/li&gt;
+&lt;li&gt;软件架构是&lt;strong&gt;可传递&lt;/strong&gt;和&lt;strong&gt;可复用&lt;/strong&gt;的模型，通过研究软件架构可能预测&lt;strong&gt;软件的质量&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;软件架构4+1视图&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“4+1”视图模型从5个不同的视角来描述软件架构，包括逻辑视图、进程视图、物理视图、开发视图和场景视图。每一个视图只关心系统的一个侧面，5个视图结合在一起才能反映系统的软件架构的全部内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;逻辑视图：主要支持系统的功能需求，即系统提供给最终用户的服务。&lt;/li&gt;
+&lt;li&gt;开发视图：也称为模块视图，主要侧重于软件模块的组织和管理。&lt;/li&gt;
+&lt;li&gt;进程视图：侧重于系统的运行特性，主要关注一些非功能性的需求，例如系统的性能和可用性。&lt;/li&gt;
+&lt;li&gt;物理视图：主要考虑如何把软件映射到硬件上，它通常要考虑到解决系统拓扑结构、系统安装、通信等问题。&lt;/li&gt;
+&lt;li&gt;场景：可以看作是那些重要系统活动的抽象，它使四个视图有机地联系起来，从某种意义上说，场景是最重要的需求抽象。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;构件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;构件由一组通常需要&lt;strong&gt;同时部署&lt;/strong&gt;的&lt;strong&gt;原子构件&lt;/strong&gt;组成。&lt;/li&gt;
+&lt;li&gt;一个原子构件是一个模块和一组资源。&lt;/li&gt;
+&lt;li&gt;构件是一个独立可交付的功能单元，外界通过接口访问其提供的服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;构件的特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;独立部署单元&lt;/li&gt;
+&lt;li&gt;作为第三方的组装单元&lt;/li&gt;
+&lt;li&gt;没有外部的可见状态&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对象的特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;一个实例单元，具有唯一的标志&lt;/li&gt;
+&lt;li&gt;可能具有状态，此状态外部可见&lt;/li&gt;
+&lt;li&gt;封装了自己的状态和行为&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;一个构件可以包含多个类元素，但是一个类元素只能属于一个构件。&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[中文技术类RSS源订阅推荐]]></title><description><![CDATA[RSS订阅源 技术博客 酷 壳 – CoolShell 陈皓的博客，虽然不会再更新了，但是每篇文章都非常优质。 订阅地址：http://coolshell.cn/feed 阮一峰的网络日志 他整理的科技爱好者周刊很有意思，属于每周必读的文章了。 订阅地址：http://www…]]></description><link>https://nocoder.org/rss-feed/</link><guid isPermaLink="false">https://nocoder.org/rss-feed/</guid><pubDate>Sun, 25 Jun 2023 16:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;RSS订阅源&lt;/h2&gt;
 &lt;h3&gt;技术博客&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;酷 壳 – CoolShell
@@ -5027,7 +5070,7 @@ b的负责人很有耐心的解答着新员工的问题，时而给予表扬，b
 (1)
 (2)
 (3) 折腾完看看版本号
- 装完rvm…]]></description><link>https://nocoder.org/mac-osx-ruby-upgrade/</link><guid isPermaLink="false">https://nocoder.org/mac-osx-ruby-upgrade/</guid><pubDate>Sun, 26 Nov 2017 08:23:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+ 装完rvm，就可以更新ruby…]]></description><link>https://nocoder.org/mac-osx-ruby-upgrade/</link><guid isPermaLink="false">https://nocoder.org/mac-osx-ruby-upgrade/</guid><pubDate>Sun, 26 Nov 2017 08:23:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;当时我要安装android-platform-tools &lt;code class=&quot;language-text&quot;&gt;brew install android-platform-tools&lt;/code&gt;，然后这玩意就开始更新，看来我确实很久没用homebrew装软件了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Updating&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Homebrew&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
@@ -5059,7 +5102,8 @@ adb devices
 ⌥ Option
 ⌃ Control
 ↩︎ Return/Enter
-⌫ Delete…]]></description><link>https://nocoder.org/idea-for-mac-key-map/</link><guid isPermaLink="false">https://nocoder.org/idea-for-mac-key-map/</guid><pubDate>Wed, 19 Jul 2017 04:59:50 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+⌫ Delete
+⌦ 向前删除键（Fn…]]></description><link>https://nocoder.org/idea-for-mac-key-map/</link><guid isPermaLink="false">https://nocoder.org/idea-for-mac-key-map/</guid><pubDate>Wed, 19 Jul 2017 04:59:50 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;原文地址：&lt;a href=&quot;http://www.cnblogs.com/wxd0108/p/5295017.html&quot;&gt;http://www.cnblogs.com/wxd0108/p/5295017.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;Mac键盘符号和修饰键说明&lt;/h2&gt;
