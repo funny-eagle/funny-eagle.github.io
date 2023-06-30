@@ -16,7 +16,7 @@ const Layout = ({ location, title, children }) => {
               layout="fixed"
               formats={["auto"]}
               src="../images/title-logo.png"
-              height={35}
+              height={32}
               quality={100}
               alt="Jason Yang's Blog"
           />
