@@ -18,9 +18,6 @@ const Bio = () => {
             name
             summary
           }
-          social {
-            twitter
-          }
         }
       }
     }
@@ -44,7 +41,8 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          <strong>{author.name}</strong> <br/> {author?.summary || null}
+          <strong>{author.name}</strong> <br/> 
+          {author?.summary || null} <br/> 
         </p>
       )}
     </div>

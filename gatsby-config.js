@@ -17,7 +17,7 @@ module.exports = {
     description: `Jason Yang's Blog`,
     siteUrl: `https://nocoder.org`,
     social: {
-      twitter: `yangjinlong86`,
+      github: `https://github.com/nocdr`,
     },
   },
   plugins: [
