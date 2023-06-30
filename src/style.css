@@ -47,15 +47,15 @@
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
   --fontSize-2: 1.2rem;
-  --fontSize-3: 1.44rem;
-  --fontSize-4: 1.728rem;
-  --fontSize-5: 2.074rem;
-  --fontSize-6: 2.488rem;
-  --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --fontSize-3: 1.3rem;
+  --fontSize-4: 1.4rem;
+  --fontSize-5: 1.5rem;
+  --fontSize-6: 1.6rem;
+  --fontSize-7: 1.7rem;
+  --color-primary: #46adf1;
   --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-text-light: #9da0a4;
+  --color-heading: #3d72dd;
   --color-heading-black: black;
   --color-accent: #4f5969;
 }
