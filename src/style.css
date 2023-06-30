@@ -421,7 +421,6 @@ body.dark-mode .content button {
 }
 
 .dark-mode-toggle {
-  float:right;
   display: flex;
   margin: 0 auto;
   & > button {
@@ -446,6 +445,7 @@ body.dark-mode .content button {
   padding: 0 4px;
   display: flex;
   align-items: center;
+  display: none;
 }
 
 
