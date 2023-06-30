@@ -57,7 +57,7 @@
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
   --color-heading-black: black;
-  --color-accent: #d1dce5;
+  --color-accent: #4f5969;
 }
 
 /* HTML elements */
@@ -79,6 +79,28 @@ body {
   /*font-family: var(--font-body);*/
   font-size: var(--fontSize-1);
   color: var(--color-text);
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #10171d;
+  color: #dfdfdf;
+
+  .navbar {
+    background-color: #1b2938;
+  }
+
+  .dark-mode-toggle > button {
+    color: #999;
+    &:last-child {
+      color: lightblue;
+    }
+  }
 }
 
 footer {
@@ -112,13 +134,13 @@ h4,
 h5,
 h6 {
   font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
+  /* color: var(--color-heading); */
 }
 
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  /* color: var(--color-heading-black); */
 }
 
 h2 {
@@ -217,12 +239,21 @@ blockquote > ol {
 table {
   width: 100%;
   margin-bottom: var(--spacing-8);
+  border: 1px solid #4f5969;;
   border-collapse: collapse;
   border-spacing: 0.25rem;
 }
 
-table thead tr th {
+table thead tr th{
   border-bottom: 1px solid var(--color-accent);
+}
+
+table,table tr th, table tr td {
+  border: 1px solid #4f5969;; 
+}
+
+td{
+  text-align: center;
 }
 
 /* Link */
