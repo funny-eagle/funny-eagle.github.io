@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 30 Jun 2023 09:10:34 GMT</lastBuildDate><item><title><![CDATA[Java字节码和指令集]]></title><description><![CDATA[Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了…]]></description><link>https://nocoder.org/java-bytecode-and-instructions/inded/</link><guid isPermaLink="false">https://nocoder.org/java-bytecode-and-instructions/inded/</guid><pubDate>Fri, 30 Jun 2023 02:36:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Blog RSS Feed]]></title><description><![CDATA[Jason Yang's Blog]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 02 Jul 2023 16:11:26 GMT</lastBuildDate><item><title><![CDATA[Java字节码和指令集]]></title><description><![CDATA[Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了…]]></description><link>https://nocoder.org/java-bytecode-and-instructions/inded/</link><guid isPermaLink="false">https://nocoder.org/java-bytecode-and-instructions/inded/</guid><pubDate>Fri, 30 Jun 2023 02:36:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了3个代码永久不使用。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;指令&lt;/h2&gt;
@@ -1937,7 +1937,7 @@ operation basic.ack caused a channel exception precondition_failed: unknown deli
         decoding=&quot;async&quot;
       /&gt;
     &lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[进制间数字转换]]></title><description><![CDATA[10进制计数法 平时我们使用的就是10进制计数法，使用的数字有10种，即 0、1、2、3、4、5、6、7、8、9 数位有一定的意义，从右往左分别表示个位、十位、百位、千位... 引用书中的例子，来分解 这个数 2 表示的是 1000 的个数 5 表示的是 100 的个数…]]></description><link>https://nocoder.org/10-hex-and-binary/</link><guid isPermaLink="false">https://nocoder.org/10-hex-and-binary/</guid><pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;10进制计数法&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[鼓楼-吉他弹唱]]></title><link>https://nocoder.org/gu-lou-guitar/</link><guid isPermaLink="false">https://nocoder.org/gu-lou-guitar/</guid><pubDate>Sun, 07 Aug 2022 14:28:33 GMT</pubDate><content:encoded>&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=344330136&amp;bvid=BV1Fd4y1K7Ko&amp;cid=796583226&amp;page=1&quot; allowfullscreen=&quot;allowfullscreen&quot; width=&quot;100%&quot; height=&quot;500&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; sandbox=&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;&gt; &lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[吉姆餐厅-吉他弹唱]]></title><link>https://nocoder.org/ji-mu-can-ting-guitar/</link><guid isPermaLink="false">https://nocoder.org/ji-mu-can-ting-guitar/</guid><pubDate>Sun, 24 Jul 2022 17:07:16 GMT</pubDate><content:encoded>&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=513774649&amp;bvid=BV1Ng411f7zg&amp;cid=783095304&amp;page=1&quot; allowfullscreen=&quot;allowfullscreen&quot; width=&quot;100%&quot; height=&quot;500&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; sandbox=&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;&gt; &lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[进制间数字转换]]></title><description><![CDATA[10进制计数法 平时我们使用的就是10进制计数法，使用的数字有10种，即 0、1、2、3、4、5、6、7、8、9 数位有一定的意义，从右往左分别表示个位、十位、百位、千位... 引用书中的例子，来分解 这个数 2 表示的是 1000 的个数 5 表示的是 100 的个数…]]></description><link>https://nocoder.org/10-hex-and-binary/</link><guid isPermaLink="false">https://nocoder.org/10-hex-and-binary/</guid><pubDate>Sun, 22 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;10进制计数法&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;平时我们使用的就是10进制计数法，使用的数字有10种，即 &lt;code&gt;0、1、2、3、4、5、6、7、8、9&lt;/code&gt;&lt;/p&gt;
@@ -6342,8 +6342,7 @@ b的负责人很有耐心的解答着新员工的问题，时而给予表扬，b
 &lt;p&gt;优化一下让你愤怒的烂代码，或者找author谈谈重构，或者提交一个BUG。
 难吃的饭可以不吃，也可以请老板换一碗，或者我下次不光顾了。
 赞美一下你的同事、你的家人，他们会更加努力，展现出更好的自己。&lt;/p&gt;
-&lt;p&gt;最后，奉劝一下自己，要少说点脏话。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Mac 下 ruby 升级]]></title><description><![CDATA[当时我要安装android-platform-tools brew install android-platform-tools，然后这玩意就开始更新，看来我确实很久没用homebrew装软件了。 然后蹦出来个这 用rvm来管理ruby版本，所以先把rvm安装一下，简单3步
-(…]]></description><link>https://nocoder.org/mac-osx-ruby-upgrade/</link><guid isPermaLink="false">https://nocoder.org/mac-osx-ruby-upgrade/</guid><pubDate>Sun, 26 Nov 2017 08:23:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;最后，奉劝一下自己，要少说点脏话。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Mac 下 ruby 升级]]></title><description><![CDATA[当时我要安装android-platform-tools brew install android-platform-tools，然后这玩意就开始更新，看来我确实很久没用homebrew装软件了。 然后蹦出来个这 用rvm来管理ruby版本，所以先把rvm安装一下，简单…]]></description><link>https://nocoder.org/mac-osx-ruby-upgrade/</link><guid isPermaLink="false">https://nocoder.org/mac-osx-ruby-upgrade/</guid><pubDate>Sun, 26 Nov 2017 08:23:48 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;当时我要安装android-platform-tools &lt;code&gt;brew install android-platform-tools&lt;/code&gt;，然后这玩意就开始更新，看来我确实很久没用homebrew装软件了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
@@ -6385,8 +6384,7 @@ List of devices attached
 ⌥ Option
 ⌃ Control
 ↩︎ Return/Enter
-⌫ Delete
-⌦ 向前删除键（Fn…]]></description><link>https://nocoder.org/idea-for-mac-key-map/</link><guid isPermaLink="false">https://nocoder.org/idea-for-mac-key-map/</guid><pubDate>Wed, 19 Jul 2017 04:59:50 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+⌫ Delete…]]></description><link>https://nocoder.org/idea-for-mac-key-map/</link><guid isPermaLink="false">https://nocoder.org/idea-for-mac-key-map/</guid><pubDate>Wed, 19 Jul 2017 04:59:50 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;原文地址：&lt;a href=&quot;http://www.cnblogs.com/wxd0108/p/5295017.html&quot;&gt;http://www.cnblogs.com/wxd0108/p/5295017.html&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;Mac键盘符号和修饰键说明&lt;/h2&gt;
