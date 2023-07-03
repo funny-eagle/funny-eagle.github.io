@@ -80,56 +80,58 @@
 <blockquote>
 <p>场景描述：访问本地服务器上的 README.md 文件 <a href="http://localhost/README.md">http://localhost/README.md</a>，本地服务器进行反向代理，从 <a href="https://github.com/moonbingbing/openresty-best-practices/blob/master/README.md">https://github.com/moonbingbing/openresty-best-practices/blob/master/README.md</a> 获取页面内容。</p>
 </blockquote>
-<p><code class="language-text">nginx.conf</code> 配置示例：</p>
-<div class="gatsby-highlight" data-language="nginx"><pre class="language-nginx"><code class="language-nginx"><span class="token directive"><span class="token keyword">worker_processes</span> <span class="token number">1</span></span><span class="token punctuation">;</span>
+<p><code>nginx.conf</code> 配置示例：</p>
+<deckgo-highlight-code language="nginx" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">worker_processes 1;
 
-<span class="token directive"><span class="token keyword">pid</span> logs/nginx.pid</span><span class="token punctuation">;</span>
-<span class="token directive"><span class="token keyword">error_log</span> logs/error.log warn</span><span class="token punctuation">;</span>
+pid logs/nginx.pid;
+error_log logs/error.log warn;
 
-<span class="token directive"><span class="token keyword">events</span></span> <span class="token punctuation">{</span>
-    <span class="token directive"><span class="token keyword">worker_connections</span> <span class="token number">3000</span></span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+events {
+    worker_connections 3000;
+}
 
-<span class="token directive"><span class="token keyword">http</span></span> <span class="token punctuation">{</span>
-    <span class="token directive"><span class="token keyword">include</span> mime.types</span><span class="token punctuation">;</span>
-    <span class="token directive"><span class="token keyword">server_tokens</span> <span class="token boolean">off</span></span><span class="token punctuation">;</span>
+http {
+    include mime.types;
+    server_tokens off;
 
-	<span class="token comment">## 下面配置反向代理的参数</span>
-    <span class="token directive"><span class="token keyword">server</span></span> <span class="token punctuation">{</span>
-        <span class="token directive"><span class="token keyword">listen</span>    <span class="token number">8866</span></span><span class="token punctuation">;</span>
+	## 下面配置反向代理的参数
+    server {
+        listen    8866;
 
-        <span class="token comment">## 1. 用户访问 http://ip:port，则反向代理到 https://github.com</span>
-        <span class="token directive"><span class="token keyword">location</span> /</span> <span class="token punctuation">{</span>
-            <span class="token directive"><span class="token keyword">proxy_pass</span>  https://github.com</span><span class="token punctuation">;</span>
-            <span class="token directive"><span class="token keyword">proxy_redirect</span>     <span class="token boolean">off</span></span><span class="token punctuation">;</span>
-            <span class="token directive"><span class="token keyword">proxy_set_header</span>   Host             <span class="token variable">$host</span></span><span class="token punctuation">;</span>
-            <span class="token directive"><span class="token keyword">proxy_set_header</span>   X-Real-IP        <span class="token variable">$remote_addr</span></span><span class="token punctuation">;</span>
-            <span class="token directive"><span class="token keyword">proxy_set_header</span>   X-Forwarded-For  <span class="token variable">$proxy_add_x_forwarded_for</span></span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        ## 1. 用户访问 http://ip:port，则反向代理到 https://github.com
+        location / {
+            proxy_pass  https://github.com;
+            proxy_redirect     off;
+            proxy_set_header   Host             $host;
+            proxy_set_header   X-Real-IP        $remote_addr;
+            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;
+        }
 
-        <span class="token comment">## 2.用户访问 http://ip:port/README.md，则反向代理到</span>
-        <span class="token comment">##   https://github.com/.../README.md</span>
-        <span class="token directive"><span class="token keyword">location</span> /README.md</span> <span class="token punctuation">{</span>
-            <span class="token directive"><span class="token keyword">proxy_set_header</span>  X-Real-IP  <span class="token variable">$remote_addr</span></span><span class="token punctuation">;</span>
-            <span class="token directive"><span class="token keyword">proxy_set_header</span> X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span></span><span class="token punctuation">;</span>
-            <span class="token directive"><span class="token keyword">proxy_pass</span> https://github.com/moonbingbing/openresty-best-practices/blob/master/README.md</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p>成功启动 Nginx 后，我们打开浏览器，验证下反向代理的效果。在浏览器地址栏中输入 <code class="language-text">localhost/README.md</code>，返回的结果是我们 GitHub 源代码的 README 页面。如下图：</p>
+        ## 2.用户访问 http://ip:port/README.md，则反向代理到
+        ##   https://github.com/.../README.md
+        location /README.md {
+            proxy_set_header  X-Real-IP  $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_pass https://github.com/moonbingbing/openresty-best-practices/blob/master/README.md;
+        }
+    }
+}</code>
+        </deckgo-highlight-code>
+<p>成功启动 Nginx 后，我们打开浏览器，验证下反向代理的效果。在浏览器地址栏中输入 <code>localhost/README.md</code>，返回的结果是我们 GitHub 源代码的 README 页面。如下图：</p>
 <p><img src="https://raw.githubusercontent.com/moonbingbing/openresty-best-practices/master/images/proxy_example.png" alt=""></p>
-<p>我们只需要配置一下 <code class="language-text">nginx.conf</code> 文件，不用写任何 web 页面，就可以偷偷地从别的服务器上读取一个页面返回给用户。</p>
-<p>下面我们来看一下 <code class="language-text">nginx.conf</code> 里用到的配置项：</p>
+<p>我们只需要配置一下 <code>nginx.conf</code> 文件，不用写任何 web 页面，就可以偷偷地从别的服务器上读取一个页面返回给用户。</p>
+<p>下面我们来看一下 <code>nginx.conf</code> 里用到的配置项：</p>
 <p>(1) location</p>
-<p>location 项对请求 URI 进行匹配，location 后面配置了匹配规则。例如上面的例子中，如果请求的 URI 是 <code class="language-text">localhost/</code>，则会匹配 <code class="language-text">location /</code> 这一项；如果请求的 URI 是 <code class="language-text">localhost/README.md</code>，则会匹配 <code class="language-text">location /README.md</code> 这项。</p>
+<p>location 项对请求 URI 进行匹配，location 后面配置了匹配规则。例如上面的例子中，如果请求的 URI 是 <code>localhost/</code>，则会匹配 <code>location /</code> 这一项；如果请求的 URI 是 <code>localhost/README.md</code>，则会匹配 <code>location /README.md</code> 这项。</p>
 <p>上面这个例子只是针对一个确定的 URI 做了反向代理，有的读者会有疑惑：如果对每个页面都进行这样的配置，那将会大量重复，能否做 <strong>批量</strong> 配置呢？此时需要配合使用 location 的正则匹配功能。具体实现方法可参考 Nginx 文档中 <a href="http://nginx.org/en/docs/http/ngx_http_core_module.html#location">关于 location 的描述</a>。</p>
 <p>(2) proxy_pass</p>
-<p>proxy_pass 后面跟着一个 URL，用来将请求反向代理到 URL 参数指定的服务器上。例如我们上面例子中的 <code class="language-text">proxy_pass https://github.com</code>，则将匹配的请求反向代理到 <code class="language-text">https://github.com</code>。</p>
+<p>proxy_pass 后面跟着一个 URL，用来将请求反向代理到 URL 参数指定的服务器上。例如我们上面例子中的 <code>proxy_pass https://github.com</code>，则将匹配的请求反向代理到 <code>https://github.com</code>。</p>
 <p>(3) proxy_set_header</p>
-<p>默认情况下，反向代理不会转发原始请求中的 Host 头部，如果需要转发，就需要加上这句：<code class="language-text">proxy_set_header Host $host;</code></p>
+<p>默认情况下，反向代理不会转发原始请求中的 Host 头部，如果需要转发，就需要加上这句：<code>proxy_set_header Host $host;</code></p>
 <p>除了上面提到的常用配置项，还有 proxy_redirect、proxy_set_body、proxy_limit_rate 等参数，具体用法可以到<a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html">Nginx 官网</a>查看。</p>
 <h4 id="正向代理" style="position:relative;"><a href="#%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86" aria-label="正向代理 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>正向代理</h4>
-<p>既然有反向代理，自然也有正向代理。简单来说，正向代理就像一个跳板，例如一个用户访问不了某网站（例如 <code class="language-text">www.google.com</code>），但是他能访问一个代理服务器，这个代理服务器能访问 <code class="language-text">www.google.com</code>，于是用户可以先连上代理服务器，告诉它需要访问的内容，代理服务器去取回来返回给用户。例如一些常见的翻墙工具、游戏代理就是利用正向代理的原理工作的，我们需要在这些正向代理工具上配置服务器的 IP 地址等信息。</p></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/ubuntu-1604-source/"><button>Prev: <!-- -->ubuntu 1604 apt source</button></a></li><li><a rel="next" href="/ubuntu-elasticsearch-install/"><button>Next: <!-- -->ubuntu 安装 ElasticSearch 过程中的问题记录</button></a></li></ul></article><aside class="css-aside close"><header class="css-header"><div><a style="box-shadow:none;text-decoration:none;font-weight:200" class="usubeni" href="/tag/coding/"><span class="logo-mobile">Jason Yang&#x27;s Website</span><img class="logo" src="/logo.png"/></a></div><div class="menu-button"><i class="iconfont icon-menu1"></i></div></header><div class="css-toc"><ul>
+<p>既然有反向代理，自然也有正向代理。简单来说，正向代理就像一个跳板，例如一个用户访问不了某网站（例如 <code>www.google.com</code>），但是他能访问一个代理服务器，这个代理服务器能访问 <code>www.google.com</code>，于是用户可以先连上代理服务器，告诉它需要访问的内容，代理服务器去取回来返回给用户。例如一些常见的翻墙工具、游戏代理就是利用正向代理的原理工作的，我们需要在这些正向代理工具上配置服务器的 IP 地址等信息。</p></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/ubuntu-1604-source/"><button>Prev: <!-- -->ubuntu 1604 apt source</button></a></li><li><a rel="next" href="/ubuntu-elasticsearch-install/"><button>Next: <!-- -->ubuntu 安装 ElasticSearch 过程中的问题记录</button></a></li></ul></article><aside class="css-aside close"><header class="css-header"><div><a style="box-shadow:none;text-decoration:none;font-weight:200" class="usubeni" href="/tag/coding/"><span class="logo-mobile">Jason Yang&#x27;s Website</span><img class="logo" src="/logo.png"/></a></div><div class="menu-button"><i class="iconfont icon-menu1"></i></div></header><div class="css-toc"><ul>
 <li><a href="#%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%85%B8%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF">反向代理典型应用场景</a></li>
 <li><a href="#%E6%AD%A3%E5%90%91%E4%BB%A3%E7%90%86">正向代理</a></li>
 </ul></div></aside></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/nocdr"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="https://nocoder.org/rss.xml"><i class="iconfont icon-RSS"></i></a></div><div style="margin-bottom:1rem">© <!-- --> NOCODER.ORG • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• powered by<!-- --> <a style="box-shadow:none" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
@@ -146,6 +148,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

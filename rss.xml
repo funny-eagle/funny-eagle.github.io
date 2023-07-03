@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Website]]></title><description><![CDATA[Jason Yang's Website]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Jul 2023 08:06:28 GMT</lastBuildDate><item><title><![CDATA[Java字节码和指令集]]></title><description><![CDATA[Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了…]]></description><link>https://nocoder.org/java-bytecode-and-instructions/inded/</link><guid isPermaLink="false">https://nocoder.org/java-bytecode-and-instructions/inded/</guid><pubDate>Fri, 30 Jun 2023 02:36:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Website]]></title><description><![CDATA[Jason Yang's Website]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Jul 2023 08:54:27 GMT</lastBuildDate><item><title><![CDATA[Java字节码和指令集]]></title><description><![CDATA[Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了…]]></description><link>https://nocoder.org/java-bytecode-and-instructions/inded/</link><guid isPermaLink="false">https://nocoder.org/java-bytecode-and-instructions/inded/</guid><pubDate>Fri, 30 Jun 2023 02:36:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了3个代码永久不使用。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;指令&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%8C%87%E4%BB%A4&quot; aria-label=&quot;指令 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;指令&lt;/h2&gt;
@@ -885,65 +885,75 @@
 &lt;/table&gt;
 &lt;h2 id=&quot;计算模型&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B&quot; aria-label=&quot;计算模型 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;计算模型&lt;/h2&gt;
 &lt;p&gt;Java字节码的计算模型是面向堆栈结构计算机的。例如，一个x86处理器的汇编代码如下&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;mov eax, byte &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;ebp-4&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-mov edx, byte &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;ebp-8&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; eax, edx
-mov ecx, eax&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;mov eax, byte [ebp-4]
+mov edx, byte [ebp-8]
+add eax, edx
+mov ecx, eax&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;这段代码将两个数值相加，并存入另一个地址。相似的反汇编字节码如下&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; iload_1
-&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; iload_2
-&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; iadd
-&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; istore_3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;0 iload_1
+1 iload_2
+2 iadd
+3 istore_3&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;在这里，需要相加的两个操作数被放入堆栈，而相加操作就在栈中进行，其结果也被放入堆栈。存储指令之后把栈顶的数据放入一个变量地址。在每条指令前面的数字仅仅是表示这条指令到方法开始处的偏移值。这种堆栈结构也可以推广到面向对象模型上。例如，有一个”getName”方法如下&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt; &lt;span class=&quot;token class-name&quot;&gt;Method&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lang&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; aload_0       &lt;span class=&quot;token comment&quot;&gt;// &quot;this&quot;对象被存入变量0&lt;/span&gt;
- &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; getfield #&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Field&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lang&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;String&lt;/span&gt; name&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;
-                 &lt;span class=&quot;token comment&quot;&gt;// 这个指令从栈顶取出一个对象，并从中搜索一个指定的域&lt;/span&gt;
-                 &lt;span class=&quot;token comment&quot;&gt;// 并将相应的数据存入栈顶。&lt;/span&gt;
-                 &lt;span class=&quot;token comment&quot;&gt;// 这个例子中，&quot;name&quot;域对应于该类中的第五个常量。&lt;/span&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt; Method java.lang.String getName()
+ 0 aload_0       // &amp;quot;this&amp;quot;对象被存入变量0
+ 1 getfield #5 &amp;lt;Field java.lang.String name&amp;gt;
+                 // 这个指令从栈顶取出一个对象，并从中搜索一个指定的域
+                 // 并将相应的数据存入栈顶。
+                 // 这个例子中，&amp;quot;name&amp;quot;域对应于该类中的第五个常量。
  
- &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt; areturn  	 &lt;span class=&quot;token comment&quot;&gt;// 返回栈顶的对象作为函数的返回值&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+ 4 areturn  	 // 返回栈顶的对象作为函数的返回值&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;h2 id=&quot;例子&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BE%8B%E5%AD%90&quot; aria-label=&quot;例子 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;例子&lt;/h2&gt;
 &lt;p&gt;考虑如下Java代码&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;  outer&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-          &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;%&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-              &lt;span class=&quot;token keyword&quot;&gt;continue&lt;/span&gt; outer&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-      &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;println &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;  outer:
+  for (int i = 2; i &amp;lt; 1000; i++) {
+      for (int j = 2; j &amp;lt; i; j++) {
+          if (i % j == 0)
+              continue outer;
+      }
+      System.out.println (i);
+  }&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;假设上述代码位于一个函数中，Java编译器可能将代码翻译成下述的Java字节码。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;  &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;   iconst_2
-  &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;   istore_1
-  &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;   iload_1
-  &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;   sipush  &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;   if_icmpge       &lt;span class=&quot;token number&quot;&gt;44&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;   iconst_2
-  &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  istore_2
-  &lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  iload_2
-  &lt;span class=&quot;token number&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  iload_1
-  &lt;span class=&quot;token number&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  if_icmpge       &lt;span class=&quot;token number&quot;&gt;31&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  iload_1
-  &lt;span class=&quot;token number&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  iload_2
-  &lt;span class=&quot;token number&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  irem
-  &lt;span class=&quot;token number&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  ifne    &lt;span class=&quot;token number&quot;&gt;25&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token keyword&quot;&gt;goto&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;38&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  iinc    &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token keyword&quot;&gt;goto&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  getstatic       #&lt;span class=&quot;token number&quot;&gt;84&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//Field java/lang/System.out:Ljava/io/PrintStream;&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  iload_1
-  &lt;span class=&quot;token number&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  invokevirtual   #&lt;span class=&quot;token number&quot;&gt;85&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;//Method java/io/PrintStream.println:(I)V&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  iinc    &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;41&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token keyword&quot;&gt;goto&lt;/span&gt;    &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
-  &lt;span class=&quot;token number&quot;&gt;44&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;  0:   iconst_2
+  1:   istore_1
+  2:   iload_1
+  3:   sipush  1000
+  6:   if_icmpge       44
+  9:   iconst_2
+  10:  istore_2
+  11:  iload_2
+  12:  iload_1
+  13:  if_icmpge       31
+  16:  iload_1
+  17:  iload_2
+  18:  irem
+  19:  ifne    25
+  22:  goto    38
+  25:  iinc    2, 1
+  28:  goto    11
+  31:  getstatic       #84; //Field java/lang/System.out:Ljava/io/PrintStream;
+  34:  iload_1
+  35:  invokevirtual   #85; //Method java/io/PrintStream.println:(I)V
+  38:  iinc    1, 1
+  41:  goto    2
+  44:  return&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;h2 id=&quot;基于java字节码的语言&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9F%BA%E4%BA%8Ejava%E5%AD%97%E8%8A%82%E7%A0%81%E7%9A%84%E8%AF%AD%E8%A8%80&quot; aria-label=&quot;基于java字节码的语言 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;基于Java字节码的语言&lt;/h2&gt;
 &lt;p&gt;Groovy, 一种基于Java的脚本语言
 Scala,一种类型安全的通用编程语言，支持面向对象编程和函数式编程
 Clojure, 一种函数式的通用编程语言，提供优秀的并发性。是一种LISP方言&lt;/p&gt;
 &lt;h2 id=&quot;对动态语言的支持&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%AF%B9%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80%E7%9A%84%E6%94%AF%E6%8C%81&quot; aria-label=&quot;对动态语言的支持 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;对动态语言的支持&lt;/h2&gt;
 &lt;p&gt;Java虚拟机对动态类型语言提供了一定的支持。但绝大多数的Java虚拟机指令集是基于静态类型语言的。在静态类型机制下，方法调用中的类型分析都是在编译时执行的，而且缺乏一种机制在运行时确定一个类型已经确定相应的方法。&lt;/p&gt;
-&lt;p&gt;JSR292中，在Java虚拟机层次增加了一种支持动态类型的指令&lt;code class=&quot;language-text&quot;&gt;invokedynamic&lt;/code&gt;，以支持在动态类型检测中的方法调用。 达芬奇机器则是一种支持这种动态类型调用的虚拟机。 而所有支持JSE 7的Java虚拟机都应支持&lt;code class=&quot;language-text&quot;&gt;invokedynamic&lt;/code&gt;操作码。&lt;/p&gt;
+&lt;p&gt;JSR292中，在Java虚拟机层次增加了一种支持动态类型的指令&lt;code&gt;invokedynamic&lt;/code&gt;，以支持在动态类型检测中的方法调用。 达芬奇机器则是一种支持这种动态类型调用的虚拟机。 而所有支持JSE 7的Java虚拟机都应支持&lt;code&gt;invokedynamic&lt;/code&gt;操作码。&lt;/p&gt;
 &lt;h2 id=&quot;参考连接&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%8F%82%E8%80%83%E8%BF%9E%E6%8E%A5&quot; aria-label=&quot;参考连接 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;参考连接&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions&quot;&gt;https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions&lt;/a&gt;&lt;/li&gt;
@@ -1072,7 +1082,7 @@ Clojure, 一种函数式的通用编程语言，提供优秀的并发性。是�
 &lt;li&gt;一定要学会思考，思考为什么要这样，而不是那样。还要举一反三地思考。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;2018年，订阅了左耳听风专栏，和群里的兄弟们一起坚持&lt;code class=&quot;language-text&quot;&gt;ARTS&lt;/code&gt;能力训练活动，我坚持了43周&lt;a href=&quot;https://github.com/nocdr/arts&quot;&gt;ARTS&lt;/a&gt;，虽然产出的质量不高，但是过程中的收获非常大，也让我养成了阅读英文文档的习惯，并且发掘了很多高质量的技术网站，还很费劲的刷了一些leetcode题。在读友会群里，有一次完成皓哥布置的命题作文《关于日志的那些事儿》，还得到了皓哥的表扬鼓励，当时非常激动的截了图。&lt;/p&gt;
+&lt;p&gt;2018年，订阅了左耳听风专栏，和群里的兄弟们一起坚持&lt;code&gt;ARTS&lt;/code&gt;能力训练活动，我坚持了43周&lt;a href=&quot;https://github.com/nocdr/arts&quot;&gt;ARTS&lt;/a&gt;，虽然产出的质量不高，但是过程中的收获非常大，也让我养成了阅读英文文档的习惯，并且发掘了很多高质量的技术网站，还很费劲的刷了一些leetcode题。在读友会群里，有一次完成皓哥布置的命题作文《关于日志的那些事儿》，还得到了皓哥的表扬鼓励，当时非常激动的截了图。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Hao Chen [Yesterday at 2:22 PM]
 @大龙 你的日志写的不错，还有很多引用！
@@ -1157,80 +1167,89 @@ Hao Chen [17 hours ago]
 &lt;li&gt;安装证书：Certbot将自动安装证书并配置您的Web服务器以使用HTTPS。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;注意，需要在每90天内更新证书。Certbot可以自动化此过程，因此无需手动更新证书。&lt;/p&gt;
-&lt;p&gt;以下是具体命令，以&lt;code class=&quot;language-text&quot;&gt;Ubuntu&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;Nginx&lt;/code&gt;为例：&lt;/p&gt;
+&lt;p&gt;以下是具体命令，以&lt;code&gt;Ubuntu&lt;/code&gt;、&lt;code&gt;Nginx&lt;/code&gt;为例：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;安装Certbot&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo apt install certbot&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;sudo apt install certbot&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;ol start=&quot;2&quot;&gt;
 &lt;li&gt;安装Certbot Nginx插件，&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo apt install python3-certbot-nginx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;sudo apt install python3-certbot-nginx&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果用Apache，就安装Apache插件 `sudo apt install python3-certbot-apache&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ol start=&quot;3&quot;&gt;
 &lt;li&gt;使用certbot nginx 插件为域名申请证书&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;sudo certbot --nginx -d nocoder.org -d www.nocoder.org&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; certbot &lt;span class=&quot;token parameter variable&quot;&gt;--nginx&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; nocoder.org &lt;span class=&quot;token parameter variable&quot;&gt;-d&lt;/span&gt; www.nocoder.org
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;sudo certbot --nginx -d nocoder.org -d www.nocoder.org&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ sudo certbot --nginx -d nocoder.org -d www.nocoder.org
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 Plugins selected: Authenticator nginx, Installer nginx
-Enter email address &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;used &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; urgent renewal and security notices&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
- &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Enter &lt;span class=&quot;token string&quot;&gt;&apos;c&apos;&lt;/span&gt; to cancel&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;: yangjinlong86@gmail.com
+Enter email address (used for urgent renewal and security notices)
+ (Enter &amp;#39;c&amp;#39; to cancel): yangjinlong86@gmail.com
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Please &lt;span class=&quot;token builtin class-name&quot;&gt;read&lt;/span&gt; the Terms of Service at
+Please read the Terms of Service at
 https://letsencrypt.org/documents/LE-SA-v1.3-September-21-2022.pdf. You must
-agree &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; order to register with the ACME server. Do you agree?
+agree in order to register with the ACME server. Do you agree?
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;es/&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;N&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;o: Y
+(Y)es/(N)o: Y
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Would you be willing, once your first certificate is successfully issued, to
 share your email address with the Electronic Frontier Foundation, a founding
-partner of the Let&lt;span class=&quot;token string&quot;&gt;&apos;s Encrypt project and the non-profit organization that
-develops Certbot? We&apos;&lt;/span&gt;d like to send you email about our work encrypting the web,
+partner of the Let&amp;#39;s Encrypt project and the non-profit organization that
+develops Certbot? We&amp;#39;d like to send you email about our work encrypting the web,
 EFF news, campaigns, and ways to support digital freedom.
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;Y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;es/&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;N&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;o: Y
+(Y)es/(N)o: Y
 Account registered.
-Requesting a certificate &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; nocoder.org and www.nocoder.org
+Requesting a certificate for nocoder.org and www.nocoder.org
 Performing the following challenges:
-http-01 challenge &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; nocoder.org
-http-01 challenge &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; www.nocoder.org
-Waiting &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; verification&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
+http-01 challenge for nocoder.org
+http-01 challenge for www.nocoder.org
+Waiting for verification...
 Cleaning up challenges
 Deploying Certificate to VirtualHost /etc/nginx/conf.d/nocoder.org.conf
 Deploying Certificate to VirtualHost /etc/nginx/conf.d/nocoder.org.conf
-Redirecting all traffic on port &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt; to ssl &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; /etc/nginx/conf.d/nocoder.org.conf
-Redirecting all traffic on port &lt;span class=&quot;token number&quot;&gt;80&lt;/span&gt; to ssl &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; /etc/nginx/conf.d/nocoder.org.conf
+Redirecting all traffic on port 80 to ssl in /etc/nginx/conf.d/nocoder.org.conf
+Redirecting all traffic on port 80 to ssl in /etc/nginx/conf.d/nocoder.org.conf
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Congratulations&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; You have successfully enabled https://nocoder.org and
+Congratulations! You have successfully enabled https://nocoder.org and
 https://www.nocoder.org
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Subscribe to the EFF mailing list &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;email: yangjinlong86@gmail.com&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;.
+Subscribe to the EFF mailing list (email: yangjinlong86@gmail.com).
 
 IMPORTANT NOTES:
- - Congratulations&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt; Your certificate and chain have been saved at:
+ - Congratulations! Your certificate and chain have been saved at:
    /etc/letsencrypt/live/nocoder.org/fullchain.pem
-   Your key &lt;span class=&quot;token function&quot;&gt;file&lt;/span&gt; has been saved at:
+   Your key file has been saved at:
    /etc/letsencrypt/live/nocoder.org/privkey.pem
-   Your certificate will expire on &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt;-09-05. To obtain a new or
-   tweaked version of this certificate &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; the future, simply run
-   certbot again with the &lt;span class=&quot;token string&quot;&gt;&quot;certonly&quot;&lt;/span&gt; option. To non-interactively
-   renew *all* of your certificates, run &lt;span class=&quot;token string&quot;&gt;&quot;certbot renew&quot;&lt;/span&gt;
+   Your certificate will expire on 2023-09-05. To obtain a new or
+   tweaked version of this certificate in the future, simply run
+   certbot again with the &amp;quot;certonly&amp;quot; option. To non-interactively
+   renew *all* of your certificates, run &amp;quot;certbot renew&amp;quot;
  - If you like Certbot, please consider supporting our work by:
 
-   Donating to ISRG / Let&apos;s Encrypt:   https://letsencrypt.org/donate
+   Donating to ISRG / Let&amp;#39;s Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
-   &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;证书有效期为90天，证书到期后执行&lt;code class=&quot;language-text&quot;&gt;certbot renew&lt;/code&gt;续期即可，Certbot会自动更新证书，不需要手动替换文件。&lt;/p&gt;
+   &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;证书有效期为90天，证书到期后执行&lt;code&gt;certbot renew&lt;/code&gt;续期即可，Certbot会自动更新证书，不需要手动替换文件。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;当然，没有到期就执行续期命令，会提示没到期不需要续期，不会生成新的证书。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ sudo certbot renew
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ sudo certbot renew
 Saving debug log to /var/log/letsencrypt/letsencrypt.log
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1242,77 +1261,83 @@ Cert not yet due for renewal
 The following certificates are not due for renewal yet:
   /etc/letsencrypt/live/nocoder.org/fullchain.pem expires on 2023-09-05 (skipped)
 No renewals were attempted.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;使用&lt;code class=&quot;language-text&quot;&gt;curl -v&lt;/code&gt;测试一下，网站访问正常。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;shell&quot;&gt;&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-v&lt;/span&gt;  https://nocoder.org
-*   Trying &lt;span class=&quot;token number&quot;&gt;13.215&lt;/span&gt;.120.28:443&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.
-* Connected to nocoder.org &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;13.215&lt;/span&gt;.120.28&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; port &lt;span class=&quot;token number&quot;&gt;443&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token comment&quot;&gt;#0)&lt;/span&gt;
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;使用&lt;code&gt;curl -v&lt;/code&gt;测试一下，网站访问正常。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ curl -v  https://nocoder.org
+*   Trying 13.215.120.28:443...
+* Connected to nocoder.org (13.215.120.28) port 443 (#0)
 * ALPN, offering h2
 * ALPN, offering http/1.1
-* successfully &lt;span class=&quot;token builtin class-name&quot;&gt;set&lt;/span&gt; certificate verify locations:
+* successfully set certificate verify locations:
 *  CAfile: /etc/ssl/certs/ca-certificates.crt
 *  CApath: /etc/ssl/certs
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;OUT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Client hello &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Server hello &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Encrypted Extensions &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Certificate &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, CERT verify &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Finished &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;OUT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS change cipher, Change cipher spec &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;OUT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Finished &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
 * SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
 * ALPN, server accepted to use http/1.1
 * Server certificate:
-*  subject: &lt;span class=&quot;token assign-left variable&quot;&gt;CN&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;nocoder.org
-*  start date: Jun  &lt;span class=&quot;token number&quot;&gt;7&lt;/span&gt; 01:09:21 &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt; GMT
-*  expire date: Sep  &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt; 01:09:20 &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt; GMT
-*  subjectAltName: &lt;span class=&quot;token function&quot;&gt;host&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;nocoder.org&quot;&lt;/span&gt; matched cert&lt;span class=&quot;token string&quot;&gt;&apos;s &quot;nocoder.org&quot;
-*  issuer: C=US; O=Let&apos;&lt;/span&gt;s Encrypt&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token assign-left variable&quot;&gt;CN&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;R3
+*  subject: CN=nocoder.org
+*  start date: Jun  7 01:09:21 2023 GMT
+*  expire date: Sep  5 01:09:20 2023 GMT
+*  subjectAltName: host &amp;quot;nocoder.org&amp;quot; matched cert&amp;#39;s &amp;quot;nocoder.org&amp;quot;
+*  issuer: C=US; O=Let&amp;#39;s Encrypt; CN=R3
 *  SSL certificate verify ok.
-&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; GET / HTTP/1.1
-&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Host: nocoder.org
-&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; User-Agent: curl/7.74.0
-&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Accept: */*
-&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; 
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Newsession Ticket &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
-* TLSv1.3 &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;IN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;, TLS handshake, Newsession Ticket &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+&amp;gt; GET / HTTP/1.1
+&amp;gt; Host: nocoder.org
+&amp;gt; User-Agent: curl/7.74.0
+&amp;gt; Accept: */*
+&amp;gt; 
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
 * old SSL session ID is stale, removing
 * Mark bundle as not supporting multiuse
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; HTTP/1.1 &lt;span class=&quot;token number&quot;&gt;200&lt;/span&gt; OK
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Server: nginx/1.18.0
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Date: Wed, 07 Jun &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt; 02:48:26 GMT
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Content-Type: text/html
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Content-Length: &lt;span class=&quot;token number&quot;&gt;76044&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Last-Modified: Wed, 07 Jun &lt;span class=&quot;token number&quot;&gt;2023&lt;/span&gt; 01:45:08 GMT
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Connection: keep-alive
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; ETag: &lt;span class=&quot;token string&quot;&gt;&quot;647fe124-1290c&quot;&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; Accept-Ranges: bytes&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;最后，建议把letsencrypt生成的文件目录&lt;code class=&quot;language-text&quot;&gt;/etc/letsencrypt&lt;/code&gt;和Nginx的配置文件都整体备份一下，如果发生服务器迁移，就把整个文件打包迁移就可以继续工作。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;/etc/letsencrypt# ls
+&amp;lt; HTTP/1.1 200 OK
+&amp;lt; Server: nginx/1.18.0
+&amp;lt; Date: Wed, 07 Jun 2023 02:48:26 GMT
+&amp;lt; Content-Type: text/html
+&amp;lt; Content-Length: 76044
+&amp;lt; Last-Modified: Wed, 07 Jun 2023 01:45:08 GMT
+&amp;lt; Connection: keep-alive
+&amp;lt; ETag: &amp;quot;647fe124-1290c&amp;quot;
+&amp;lt; Accept-Ranges: bytes&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;最后，建议把letsencrypt生成的文件目录&lt;code&gt;/etc/letsencrypt&lt;/code&gt;和Nginx的配置文件都整体备份一下，如果发生服务器迁移，就把整个文件打包迁移就可以继续工作。&lt;/p&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;/etc/letsencrypt# ls
 accounts  cli.ini  keys  options-ssl-nginx.conf  renewal-hooks
-archive   csr      live  renewal                 ssl-dhparams.pem&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[ARTS 第46周]]></title><description><![CDATA[历史ARTS Algorithm Review 以前在完成Review这一项任务的时候，通过皓哥的专栏和引导，发现了很多优秀的国外技术网站，如medium、DZone、javatpoint、IBM Developer…]]></description><link>https://nocoder.org/arts-46/</link><guid isPermaLink="false">https://nocoder.org/arts-46/</guid><pubDate>Fri, 02 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+archive   csr      live  renewal                 ssl-dhparams.pem&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;</content:encoded></item><item><title><![CDATA[ARTS 第46周]]></title><description><![CDATA[历史ARTS Algorithm Review 以前在完成Review这一项任务的时候，通过皓哥的专栏和引导，发现了很多优秀的国外技术网站，如medium、DZone、javatpoint、IBM Developer…]]></description><link>https://nocoder.org/arts-46/</link><guid isPermaLink="false">https://nocoder.org/arts-46/</guid><pubDate>Fri, 02 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/nocdr/arts&quot;&gt;历史ARTS&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;algorithm&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#algorithm&quot; aria-label=&quot;algorithm permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Algorithm&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nocoder&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;leetcode&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;solution&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package org.nocoder.leetcode.solution;
 
-&lt;span class=&quot;token comment&quot;&gt;/**
+/**
  * AddBinary https://leetcode.com/problems/add-binary/
- * &amp;lt;p&gt;
+ * &amp;lt;p&amp;gt;
  * Given two binary strings a and b, return their sum as a binary string.
- * &amp;lt;p&gt;
+ * &amp;lt;p&amp;gt;
  * Example 1:
- * &amp;lt;p&gt;
- * Input: a = &quot;11&quot;, b = &quot;1&quot;
- * Output: &quot;100&quot;
+ * &amp;lt;p&amp;gt;
+ * Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot;
+ * Output: &amp;quot;100&amp;quot;
  * Example 2:
- * &amp;lt;p&gt;
- * Input: a = &quot;1010&quot;, b = &quot;1011&quot;
- * Output: &quot;10101&quot;
+ * &amp;lt;p&amp;gt;
+ * Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot;
+ * Output: &amp;quot;10101&amp;quot;
  * Constraints:
- * &amp;lt;p&gt;
+ * &amp;lt;p&amp;gt;
  * 1 &amp;lt;= a.length, b.length &amp;lt;= 104
- * a and b consist only of &apos;0&apos; or &apos;1&apos; characters.
+ * a and b consist only of &amp;#39;0&amp;#39; or &amp;#39;1&amp;#39; characters.
  * Each string does not contain leading zeros except for the zero itself.
  * Related Topics
  * Math
@@ -1323,79 +1348,80 @@ archive   csr      live  renewal                 ssl-dhparams.pem&lt;/code&gt;&l
  * @author yangjl
  * @description
  * @date 2023-05-19 15:31
- **/&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;AddBinary&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;addBinary&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;a &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10000&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;RuntimeException&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;invalid parameters&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+ **/
+public class AddBinary {
+    public String addBinary(String a, String b) {
+        if (a == null || b == null || a.length() &amp;gt; 10000 || b.length() &amp;gt; 10000)
+            throw new RuntimeException(&amp;quot;invalid parameters&amp;quot;);
 
-        &lt;span class=&quot;token comment&quot;&gt;// 两个字符串长度查，在短字符串前面补领0，方便计算&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; d &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; prefix &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;d&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-            prefix &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        // 两个字符串长度查，在短字符串前面补领0，方便计算
+        int d = a.length() - b.length();
+        String prefix = &amp;quot;&amp;quot;;
+        for (int i = 0; i &amp;lt; Math.abs(d); i++)
+            prefix += &amp;quot;0&amp;quot;;
 
-        &lt;span class=&quot;token comment&quot;&gt;// 参数前面补0&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;d &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-            b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prefix &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;
-            a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prefix &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        // 参数前面补0
+        if (d &amp;gt; 0)
+            b = prefix + b;
+        else
+            a = prefix + a;
 
-        &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; aa &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; a&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; bb &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token comment&quot;&gt;// 用字符串数组来存储结果，长度用aa和bb的都可以&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;aa&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        String[] aa = a.split(&amp;quot;&amp;quot;);
+        String[] bb = b.split(&amp;quot;&amp;quot;);
+        // 用字符串数组来存储结果，长度用aa和bb的都可以
+        String[] res = new String[aa.length];
 
-        &lt;span class=&quot;token comment&quot;&gt;// carry表示进位值&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; carry &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        // carry表示进位值
+        String carry = &amp;quot;0&amp;quot;;
 
-        &lt;span class=&quot;token comment&quot;&gt;// 从末位开始相加&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; aa&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; sum &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; carry &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; aa&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; bb&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        // 从末位开始相加
+        for (int i = aa.length - 1; i &amp;gt;= 0; i--) {
+            String sum = carry + aa[i] + bb[i];
 
-            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;000&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                res&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                carry &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            if (&amp;quot;000&amp;quot;.equals(sum)) {
+                res[i] = &amp;quot;0&amp;quot;;
+                carry = &amp;quot;0&amp;quot;;
+            }
 
-            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;001&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;010&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                res&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                carry &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            if (&amp;quot;001&amp;quot;.equals(sum) || &amp;quot;010&amp;quot;.equals(sum) || &amp;quot;100&amp;quot;.equals(sum)) {
+                res[i] = &amp;quot;1&amp;quot;;
+                carry = &amp;quot;0&amp;quot;;
+            }
 
-            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;101&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;110&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;011&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                res&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                carry &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            if (&amp;quot;101&amp;quot;.equals(sum) || &amp;quot;110&amp;quot;.equals(sum) || &amp;quot;011&amp;quot;.equals(sum)) {
+                res[i] = &amp;quot;0&amp;quot;;
+                carry = &amp;quot;1&amp;quot;;
+            }
 
-            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;111&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;sum&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                res&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                carry &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            if (&amp;quot;111&amp;quot;.equals(sum)) {
+                res[i] = &amp;quot;1&amp;quot;;
+                carry = &amp;quot;1&amp;quot;;
+            }
 
-            &lt;span class=&quot;token comment&quot;&gt;// 计算到数组首位时，依然有进位，需要变长数组，长度+1，首位赋值为1&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;i &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;carry&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;token comment&quot;&gt;// step1. 暂存res到temp&lt;/span&gt;
-                &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; tem &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;token comment&quot;&gt;// step2. 新建一个比原数组长度+1的数组&lt;/span&gt;
-                res &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;aa&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;token comment&quot;&gt;// step3. 首位赋值为1&lt;/span&gt;
-                res&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;token comment&quot;&gt;// step4. 把原数组内容复制过来，下标从1开始复制&lt;/span&gt;
-                &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; i1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i1 &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i1&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-                    res&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i1&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; tem&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i1 &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+            // 计算到数组首位时，依然有进位，需要变长数组，长度+1，首位赋值为1
+            if (i == 0 &amp;amp;&amp;amp; &amp;quot;1&amp;quot;.equals(carry)) {
+                // step1. 暂存res到temp
+                String[] tem = res;
+                // step2. 新建一个比原数组长度+1的数组
+                res = new String[aa.length + 1];
+                // step3. 首位赋值为1
+                res[0] = &amp;quot;1&amp;quot;;
+                // step4. 把原数组内容复制过来，下标从1开始复制
+                for (int i1 = 1; i1 &amp;lt; res.length; i1++)
+                    res[i1] = tem[i1 - 1];
+            }
 
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        }
 
-        &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-            result &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; res&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        String result = new String();
+        for (int i = 0; i &amp;lt; res.length; i++)
+            result += res[i];
 
-        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; result&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+        return result;
+    }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;h2 id=&quot;review&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#review&quot; aria-label=&quot;review permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Review&lt;/h2&gt;
 &lt;p&gt;以前在完成Review这一项任务的时候，通过皓哥的专栏和引导，发现了很多优秀的国外技术网站，如&lt;a href=&quot;https://medium.com/&quot;&gt;medium&lt;/a&gt;、&lt;a href=&quot;https://dzone.com&quot;&gt;DZone&lt;/a&gt;、&lt;a href=&quot;https://www.javatpoint.com/&quot;&gt;javatpoint&lt;/a&gt;、&lt;a href=&quot;https://www.ibm.com/&quot;&gt;IBM Developer&lt;/a&gt;等等，阅读高质量的英文文章，可以提高英文水平，也可以学习大佬对技术理解的视角和思维方式。今天阅读的是dzone上一位大佬总结的java11到java17的新特性&lt;a href=&quot;https://dzone.com/articles/whats-new-between-java-11-and-java-17&quot;&gt;What’s New Between Java 11 and Java 17&lt;/a&gt;，篇幅不长，可以快速了解上一个LTS版本Java11到17的一些新特性。下面对文中提到的新特性作以下简要整理。&lt;/p&gt;
 &lt;ol&gt;
@@ -1403,63 +1429,73 @@ archive   csr      live  renewal                 ssl-dhparams.pem&lt;/code&gt;&l
 &lt;p&gt;Text Blocks&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;文本块，类似python中的文本块支持换行。
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TextBlock&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; json &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;public class TextBlock {
+    public static void main(String[] args) {
+        String json = &amp;quot;&amp;quot;&amp;quot;
                 {
-                    &quot;name&quot;: &quot;Jason&quot;,
-                    &quot;age&quot;: &quot;34&quot;,
-                    &quot;mail&quot;: &quot;yangjinlong86@gmail.com&quot;
+                    &amp;quot;name&amp;quot;: &amp;quot;Jason&amp;quot;,
+                    &amp;quot;age&amp;quot;: &amp;quot;34&amp;quot;,
+                    &amp;quot;mail&amp;quot;: &amp;quot;yangjinlong86@gmail.com&amp;quot;
                 }
-                &quot;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;json&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+                &amp;quot;&amp;quot;&amp;quot;;
+        System.out.println(json);
+    }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 输出结果也是带格式的
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Jason&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;&quot;age&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;34&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token property&quot;&gt;&quot;mail&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;yangjinlong86@gmail.com&quot;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;{
+    &amp;quot;name&amp;quot;: &amp;quot;Jason&amp;quot;,
+    &amp;quot;age&amp;quot;: &amp;quot;34&amp;quot;,
+    &amp;quot;mail&amp;quot;: &amp;quot;yangjinlong86@gmail.com&amp;quot;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Switch Expressions&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;冒号改为箭头方式，不需要单独写&lt;code class=&quot;language-text&quot;&gt;break&lt;/code&gt;，代码更简洁
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;withSwitchExpression&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Fruit&lt;/span&gt; fruit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fruit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;APPLE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;PEAR&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Common fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ORANGE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;AVOCADO&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Exotic fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Undefined fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;li&gt;冒号改为箭头方式，不需要单独写&lt;code&gt;break&lt;/code&gt;，代码更简洁
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;private static void withSwitchExpression(Fruit fruit) {
+    switch (fruit) {
+        case APPLE, PEAR -&amp;gt; System.out.println(&amp;quot;Common fruit&amp;quot;);
+        case ORANGE, AVOCADO -&amp;gt; System.out.println(&amp;quot;Exotic fruit&amp;quot;);
+        default -&amp;gt; System.out.println(&amp;quot;Undefined fruit&amp;quot;);
+    }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
-&lt;li&gt;支持返回值，如果一个case下需要多行代码，使用&lt;code class=&quot;language-text&quot;&gt;yield&lt;/code&gt;关键字指定返回值
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;withYield&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Fruit&lt;/span&gt; fruit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fruit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;APPLE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;PEAR&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;the given fruit was: &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; fruit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Common fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ORANGE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;AVOCADO&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Exotic fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Undefined fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;li&gt;支持返回值，如果一个case下需要多行代码，使用&lt;code&gt;yield&lt;/code&gt;关键字指定返回值
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;private static void withYield(Fruit fruit) {
+    String text = switch (fruit) {
+        case APPLE, PEAR -&amp;gt; {
+            System.out.println(&amp;quot;the given fruit was: &amp;quot; + fruit);
+            yield &amp;quot;Common fruit&amp;quot;;
+        }
+        case ORANGE, AVOCADO -&amp;gt; &amp;quot;Exotic fruit&amp;quot;;
+        default -&amp;gt; &amp;quot;Undefined fruit&amp;quot;;
+    };
+    System.out.println(text);
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;yield&lt;/code&gt;支持旧的 switch 语法，也不需要单独写&lt;code class=&quot;language-text&quot;&gt;break&lt;/code&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;oldStyleWithYield&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Fruit&lt;/span&gt; fruit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;fruit&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;APPLE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;PEAR&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Common fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ORANGE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;AVOCADO&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Exotic fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;token keyword&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Undefined fruit&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;li&gt;&lt;code&gt;yield&lt;/code&gt;支持旧的 switch 语法，也不需要单独写&lt;code&gt;break&lt;/code&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;private static void oldStyleWithYield(Fruit fruit) {
+    System.out.println(switch (fruit) {
+        case APPLE, PEAR:
+            yield &amp;quot;Common fruit&amp;quot;;
+        case ORANGE, AVOCADO:
+            yield &amp;quot;Exotic fruit&amp;quot;;
+        default:
+            yield &amp;quot;Undefined fruit&amp;quot;;
+    });
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1468,56 +1504,64 @@ archive   csr      live  renewal                 ssl-dhparams.pem&lt;/code&gt;&l
 &lt;ul&gt;
 &lt;li&gt;Records 用来创建一个不可变的数据类，与传统的类相比，无需我们再写构造器, getters, hashCode, equals 和 toString方法&lt;/li&gt;
 &lt;li&gt;使用new 创建Record时，如果参数与已经存在的Record相同，那么不会新建的Record副本与原Record是同一个实例。见以下代码最后一行的输出，hashcode是一样的。
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;basicRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;record&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Color&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; nbrOfPits&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt; grape1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;BLUE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt; grape2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;WHITE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Grape 1 is &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; grape1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Grape 2 is &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; grape2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Grape 1 equals grape 2? &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; grape1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;grape2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt; grape1Copy &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;grape1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; grape1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;nbrOfPits&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Grape 1 equals its copy? &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; grape1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;grape1Copy&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;grape1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; grape1Copy&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;hashCode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;log&quot;&gt;&lt;pre class=&quot;language-log&quot;&gt;&lt;code class=&quot;language-log&quot;&gt;Grape &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; is GrapeRecord&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;color&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;awt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Color&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;r&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;g&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;b&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nbrOfPits&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-Grape &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt; is GrapeRecord&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;color&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;awt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Color&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;r&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;g&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;b&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nbrOfPits&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
-Grape &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; equals grape &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
-Grape &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; equals its copy&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;520085790&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;520085790&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;private static void basicRecord() {
+    record GrapeRecord(Color color, int nbrOfPits) {}
+    GrapeRecord grape1 = new GrapeRecord(Color.BLUE, 1);
+    GrapeRecord grape2 = new GrapeRecord(Color.WHITE, 2);
+    System.out.println(&amp;quot;Grape 1 is &amp;quot; + grape1);
+    System.out.println(&amp;quot;Grape 2 is &amp;quot; + grape2);
+    System.out.println(&amp;quot;Grape 1 equals grape 2? &amp;quot; + grape1.equals(grape2));
+    GrapeRecord grape1Copy = new GrapeRecord(grape1.color(), grape1.nbrOfPits());
+    System.out.println(&amp;quot;Grape 1 equals its copy? &amp;quot; + grape1.equals(grape1Copy));
+    System.out.println(grape1.hashCode() + &amp;quot; &amp;quot; + grape1Copy.hashCode());
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;log&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Grape 1 is GrapeRecord[color=java.awt.Color[r=0,g=0,b=255], nbrOfPits=1]
+Grape 2 is GrapeRecord[color=java.awt.Color[r=255,g=255,b=255], nbrOfPits=2]
+Grape 1 equals grape 2? false
+Grape 1 equals its copy? true
+-520085790 -520085790&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
 &lt;li&gt;Record的构造方法中可以增加字段校验逻辑
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;    &lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;basicRecordWithValidation&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token keyword&quot;&gt;record&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Color&lt;/span&gt; color&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; nbrOfPits&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Parameter color=&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; color &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;, Field color=&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Parameter nbrOfPits=&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; nbrOfPits &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;, Field nbrOfPits=&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;nbrOfPits&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;color &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-                    &lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Color may not be null&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-                &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt; grape1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;BLUE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Grape 1 is &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; grape1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt; grapeNull &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeRecord&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;    private static void basicRecordWithValidation() {
+        record GrapeRecord(Color color, int nbrOfPits) {
+            GrapeRecord {
+                System.out.println(&amp;quot;Parameter color=&amp;quot; + color + &amp;quot;, Field color=&amp;quot; + this.color());
+                System.out.println(&amp;quot;Parameter nbrOfPits=&amp;quot; + nbrOfPits + &amp;quot;, Field nbrOfPits=&amp;quot; + this.nbrOfPits());
+                if (color == null) {
+                    throw new IllegalArgumentException(&amp;quot;Color may not be null&amp;quot;);
+                }
+            }
+        }
+        GrapeRecord grape1 = new GrapeRecord(Color.BLUE, 1);
+        System.out.println(&amp;quot;Grape 1 is &amp;quot; + grape1);
+        GrapeRecord grapeNull = new GrapeRecord(null, 2);
+    }&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Sealed Classes&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;使用关键字&lt;code class=&quot;language-text&quot;&gt;sealed&lt;/code&gt;配合&lt;code class=&quot;language-text&quot;&gt;permits&lt;/code&gt;来限定类的继承范围，不被允许的类继承该类会编译错误，提示&lt;code class=&quot;language-text&quot;&gt;&apos;ClassName&apos; is not allowed in the sealed hierarchy&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;继承了该类的子类需要声明自身的继承范围，使用关键字&lt;code class=&quot;language-text&quot;&gt;final&lt;/code&gt;、&lt;code class=&quot;language-text&quot;&gt;sealed&lt;/code&gt;和&lt;code class=&quot;language-text&quot;&gt;non-sealed&lt;/code&gt;来限定继承范围&lt;/li&gt;
+&lt;li&gt;使用关键字&lt;code&gt;sealed&lt;/code&gt;配合&lt;code&gt;permits&lt;/code&gt;来限定类的继承范围，不被允许的类继承该类会编译错误，提示&lt;code&gt;&apos;ClassName&apos; is not allowed in the sealed hierarchy&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;继承了该类的子类需要声明自身的继承范围，使用关键字&lt;code&gt;final&lt;/code&gt;、&lt;code&gt;sealed&lt;/code&gt;和&lt;code&gt;non-sealed&lt;/code&gt;来限定继承范围&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Pattern matching for instanceof&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;instanceof&lt;/code&gt;的类名之后，跟一个变量名，可以省去强转和声明类的步骤
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Object&lt;/span&gt; o &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeClass&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Color&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;BLUE&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;o &lt;span class=&quot;token keyword&quot;&gt;instanceof&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GrapeClass&lt;/span&gt; grape&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;This grape has &quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; grape&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getNbrOfPits&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; pits.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;li&gt;&lt;code&gt;instanceof&lt;/code&gt;的类名之后，跟一个变量名，可以省去强转和声明类的步骤
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Object o = new GrapeClass(Color.BLUE, 2);
+if (o instanceof GrapeClass grape) {
+    System.out.println(&amp;quot;This grape has &amp;quot; + grape.getNbrOfPits() + &amp;quot; pits.&amp;quot;);
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1525,7 +1569,9 @@ Grape &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; equals its copy&
 &lt;p&gt;Helpful NullPointerExceptions&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;当发生空指针异常是，异常信息中直接会告诉你是哪个类的哪个方法导致的
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;Exception&lt;/span&gt; in thread &lt;span class=&quot;token string&quot;&gt;&quot;main&quot;&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;&lt;span class=&quot;token namespace&quot;&gt;java&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lang&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;NullPointerException&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Cannot&lt;/span&gt; invoke &lt;span class=&quot;token string&quot;&gt;&quot;com.mydeveloperplanet.myjava17planet.GrapeClass.getColor()&quot;&lt;/span&gt; because the &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; value of &lt;span class=&quot;token string&quot;&gt;&quot;java.util.HashMap.get(Object)&quot;&lt;/span&gt; is &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Exception in thread &amp;quot;main&amp;quot; java.lang.NullPointerException: Cannot invoke &amp;quot;com.mydeveloperplanet.myjava17planet.GrapeClass.getColor()&amp;quot; because the return value of &amp;quot;java.util.HashMap.get(Object)&amp;quot; is null&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;    at com.mydeveloperplanet.myjava17planet.HelpfulNullPointerExceptions.main(HelpfulNullPointerExceptions.java:13)
@@ -1534,51 +1580,59 @@ Grape &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; equals its copy&
 &lt;li&gt;
 &lt;p&gt;Compact Number Formatting Support&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;NumberFormat&lt;/code&gt;类中增加了&lt;code class=&quot;language-text&quot;&gt;format&lt;/code&gt;工厂方法，便于数字类型转换&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NumberFormat&lt;/code&gt;类中增加了&lt;code&gt;format&lt;/code&gt;工厂方法，便于数字类型转换&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Day Period Support Added&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;DateTimeFormatter&lt;/code&gt; 中新增了一个&lt;code class=&quot;language-text&quot;&gt;B&lt;/code&gt;模式，可以直接返回时间所属的时段信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DateTimeFormatter&lt;/code&gt; 中新增了一个&lt;code&gt;B&lt;/code&gt;模式，可以直接返回时间所属的时段信息&lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;DayPeriod&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; args&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;DateTimeFormatter&lt;/span&gt; dtf &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;DateTimeFormatter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ofPattern&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dtf&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;LocalTime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dtf&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;LocalTime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dtf&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;LocalTime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dtf&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;LocalTime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;dtf&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;LocalTime&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;log&quot;&gt;&lt;pre class=&quot;language-log&quot;&gt;&lt;code class=&quot;language-log&quot;&gt;上午
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;public class DayPeriod {
+    public static void main(String[] args) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&amp;quot;B&amp;quot;);
+        System.out.println(dtf.format(LocalTime.of(8, 0)));
+        System.out.println(dtf.format(LocalTime.of(13, 0)));
+        System.out.println(dtf.format(LocalTime.of(20, 0)));
+        System.out.println(dtf.format(LocalTime.of(23, 0)));
+        System.out.println(dtf.format(LocalTime.of(0, 0)));
+    }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;log&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;上午
 下午
 晚上
 晚上
-午夜&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+午夜&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;默认返回值是当前时区，也可以指定Locale，例如：&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;dtf &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;DateTimeFormatter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;ofPattern&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;B&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;withLocale&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Locale&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;forLanguageTag&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;NL&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;dtf = DateTimeFormatter.ofPattern(&amp;quot;B&amp;quot;).withLocale(Locale.forLanguageTag(&amp;quot;NL&amp;quot;));&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Stream.toList()&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;旧版本中，如果要把Stream转换成List，需要调用&lt;code class=&quot;language-text&quot;&gt;collect(Collectors.toList)&lt;/code&gt;，Java 17 中，&lt;code class=&quot;language-text&quot;&gt;Stream&lt;/code&gt;增加了&lt;code class=&quot;language-text&quot;&gt;toList()&lt;/code&gt;方法，可以直接转换为&lt;code class=&quot;language-text&quot;&gt;List&lt;/code&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;oldStyle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; stringStream &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; stringList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;  stringStream&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Collectors&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; s &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; stringList&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;li&gt;旧版本中，如果要把Stream转换成List，需要调用&lt;code&gt;collect(Collectors.toList)&lt;/code&gt;，Java 17 中，&lt;code&gt;Stream&lt;/code&gt;增加了&lt;code&gt;toList()&lt;/code&gt;方法，可以直接转换为&lt;code&gt;List&lt;/code&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;private static void oldStyle() {
+    Stream&amp;lt;String&amp;gt; stringStream = Stream.of(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;);
+    List&amp;lt;String&amp;gt; stringList =  stringStream.collect(Collectors.toList());
+    for(String s : stringList) {
+        System.out.println(s);
+    }
+}
 
-&lt;span class=&quot;token keyword&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;streamToList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; stringStream &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Stream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;a&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;b&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;c&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token class-name&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;token generics&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt; stringList &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;  stringStream&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;String&lt;/span&gt; s &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; stringList&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;token class-name&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;out&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+private static void streamToList() {
+    Stream&amp;lt;String&amp;gt; stringStream = Stream.of(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;);
+    List&amp;lt;String&amp;gt; stringList =  stringStream.toList();
+    for(String s : stringList) {
+        System.out.println(s);
+    }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1589,29 +1643,33 @@ Grape &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; equals its copy&
 &lt;p&gt;A服务将数据通过MQ发送到B服务，期间出现消息丢失情况。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;排查过程&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1、A服务发送成功后记录了日志，消息是成功发送出去了。
-2、B服务日志打印不规范，输出日志为null，经核实代码，推断&lt;code class=&quot;language-text&quot;&gt;message&lt;/code&gt;为空，导致&lt;code class=&quot;language-text&quot;&gt;RuntimeException&lt;/code&gt;。
+2、B服务日志打印不规范，输出日志为null，经核实代码，推断&lt;code&gt;message&lt;/code&gt;为空，导致&lt;code&gt;RuntimeException&lt;/code&gt;。
 3、查看RabbitMQ日志，发现异常信息如下：&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;log&quot;&gt;&lt;pre class=&quot;language-log&quot;&gt;&lt;code class=&quot;language-log&quot;&gt;&lt;span class=&quot;token date number&quot;&gt;2023-05-29&lt;/span&gt; &lt;span class=&quot;token time number&quot;&gt;23:52:01.502&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;error&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.20990.12&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; Channel error on connection &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0.2510.0&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token ip-address constant&quot;&gt;10.42.0.1&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;42792&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token ip-address constant&quot;&gt;10.42.0.5&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5672&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; vhost&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;/&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; user&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;admin&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; channel &lt;span class=&quot;token number&quot;&gt;1150&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;token property&quot;&gt;operation basic.ack caused a channel exception precondition_failed:&lt;/span&gt; unknown delivery tag &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;log&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;2023-05-29 23:52:01.502 [error] &amp;lt;0.20990.12&amp;gt; Channel error on connection &amp;lt;0.2510.0&amp;gt; (10.42.0.1:42792 -&amp;gt; 10.42.0.5:5672, vhost: &amp;#39;/&amp;#39;, user: &amp;#39;admin&amp;#39;), channel 1150:
+operation basic.ack caused a channel exception precondition_failed: unknown delivery tag 1&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;&lt;strong&gt;问题原因&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此问题基本明晰了，生产环境的配置文件没有将rabbitmq的ack设置为手动，默认值为&lt;code class=&quot;language-text&quot;&gt;none&lt;/code&gt;，是自动确认。代码中使用&lt;code class=&quot;language-text&quot;&gt;channel.basicAck()&lt;/code&gt;又进行了手动确认，这样的重复确认操作会导致&lt;strong&gt;偶发性&lt;/strong&gt;消息丢失情况。&lt;/p&gt;
+&lt;p&gt;到此问题基本明晰了，生产环境的配置文件没有将rabbitmq的ack设置为手动，默认值为&lt;code&gt;none&lt;/code&gt;，是自动确认。代码中使用&lt;code&gt;channel.basicAck()&lt;/code&gt;又进行了手动确认，这样的重复确认操作会导致&lt;strong&gt;偶发性&lt;/strong&gt;消息丢失情况。&lt;/p&gt;
 &lt;p&gt;rabbitmq 为每一个channel维护了一个delivery tag的计数器，采用正向自增，新消息投递时自增，当消息响应时自减；在连续收发的场景中，由于消息发送的间隔较短，部分消息因 consumer的重复确认被rabbitmq 当做已处理而丢弃。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解决办法&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;取消自动确认，配置手动确认。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;yml&quot;&gt;&lt;pre class=&quot;language-yml&quot;&gt;&lt;code class=&quot;language-yml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;token key atrule&quot;&gt;rabbitmq&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;rabbitmqHost&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;port&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;rabbitmqPort&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;rabbitmqUsername&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;rabbitmqPassword&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;token key atrule&quot;&gt;virtual-host&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; /
-    &lt;span class=&quot;token key atrule&quot;&gt;listener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-      &lt;span class=&quot;token key atrule&quot;&gt;simple&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;token key atrule&quot;&gt;retry&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
-          &lt;span class=&quot;token key atrule&quot;&gt;enabled&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean important&quot;&gt;true&lt;/span&gt;
-          &lt;span class=&quot;token key atrule&quot;&gt;max-attempts&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;24&lt;/span&gt;
-          &lt;span class=&quot;token key atrule&quot;&gt;initial-interval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3600000&lt;/span&gt;
-        &lt;span class=&quot;token key atrule&quot;&gt;acknowledge-mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; manual&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;yml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;spring:
+  rabbitmq:
+    host: ${rabbitmqHost}
+    port: ${rabbitmqPort}
+    username: ${rabbitmqUsername}
+    password: ${rabbitmqPassword}
+    virtual-host: /
+    listener:
+      simple:
+        retry:
+          enabled: true
+          max-attempts: 24
+          initial-interval: 3600000
+        acknowledge-mode: manual&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;h2 id=&quot;share&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#share&quot; aria-label=&quot;share permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Share&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;MegaEase纪念陈皓的&lt;a href=&quot;https://memorial.megaease.cn/&quot;&gt;网站&lt;/a&gt;&lt;/li&gt;

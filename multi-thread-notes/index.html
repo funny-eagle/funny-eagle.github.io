@@ -76,32 +76,36 @@
 <p>一个Java程序中可以并发的启动多个线程，这些线程可以在多个处理器上同时运行。</p>
 <p>多线程可以使程序反应更快，交互性更强，执行效率更高，即使再单核处理器的系统上，多线程程序的运行速度也比单线程速度更快。</p>
 <p>在单处理器系统中，多个线程共享CPU时间，称为时间分享，操作系统负责调度及分配资源给它们。CPU分配给线程的时间称为时间片，一般是几十ms，获得时间片的线程会被CPU切换执行。</p>
-<p>在Java中，每个任务都是<code class="language-text">Runnable</code>接口的一个实例，也成为<code class="language-text">可运行对象（runnable object）</code>。</p>
+<p>在Java中，每个任务都是<code>Runnable</code>接口的一个实例，也成为<code>可运行对象（runnable object）</code>。</p>
 <h2 id="创建任务和线程" style="position:relative;"><a href="#%E5%88%9B%E5%BB%BA%E4%BB%BB%E5%8A%A1%E5%92%8C%E7%BA%BF%E7%A8%8B" aria-label="创建任务和线程 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>创建任务和线程</h2>
 <p>一个任务类必须实现Runnable接口。然后通过线程来执行任务。
 任务就是对象。为了创建任务，必须首先为任务定义一个实现Runnable接口的类。</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// 通过实现Runnable接口定义一个任务类</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TaskClass</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span><span class="token punctuation">{</span>
-	<span class="token keyword">public</span> <span class="token class-name">TaskClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">// 通过实现Runnable接口定义一个任务类
+public class TaskClass implements Runnable{
+	public TaskClass(){
 	
-	<span class="token punctuation">}</span>
+	}
 	
-	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-		<span class="token comment">// do something...</span>
-	<span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre></div>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// 创建一个任务、一个线程以及启动线程的步骤</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span><span class="token punctuation">{</span>
-	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">someMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-		<span class="token comment">//  创建一个TaskClass实例</span>
-		<span class="token class-name">TaskClass</span> task <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TaskClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token comment">// 创建一个线程</span>
-		<span class="token class-name">Thread</span> thread <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>task<span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token comment">// 启动线程</span>
-		thread<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div>
+	public void run(){
+		// do something...
+	}
+}</code>
+        </deckgo-highlight-code>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">// 创建一个任务、一个线程以及启动线程的步骤
+public class Client{
+	public void someMethod(){
+		//  创建一个TaskClass实例
+		TaskClass task = new TaskClass();
+		// 创建一个线程
+		Thread thread = new Thread(task);
+		// 启动线程
+		thread.start();
+	}
+}
+</code>
+        </deckgo-highlight-code>
 <h3 id="实战" style="position:relative;"><a href="#%E5%AE%9E%E6%88%98" aria-label="实战 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>实战</h3>
 <blockquote>
 <p>创建三个任务，然后创建三个线程，运行这些任务:</p>
@@ -109,9 +113,10 @@
 <p>第二个任务打印字母b100次</p>
 <p>第三个任务打印1到100的整数</p>
 </blockquote>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>thread</span><span class="token punctuation">;</span>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">package org.nocoder.thread;
 
-<span class="token comment">/**
+/**
  * 创建三个任务以及三个运行这些任务的线程:
  * 第一个任务打印字母a100次
  * 第二个任务打印字母b100次
@@ -119,156 +124,169 @@
  *
  * @author jason
  * @date 18/4/3.
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TaskThreadDemo</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token comment">// 创建任务类</span>
-        <span class="token class-name">Runnable</span> printA <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintChar</span><span class="token punctuation">(</span><span class="token char">'a'</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Runnable</span> printB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintChar</span><span class="token punctuation">(</span><span class="token char">'b'</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Runnable</span> print100 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PrintNumber</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">// 创建线程</span>
-        <span class="token class-name">Thread</span> threadPrintA <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>printA<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Thread</span> threadPrintB <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>printB<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Thread</span> threadPrint100 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span>print100<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">// 启动线程</span>
-        threadPrintA<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        threadPrintB<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        threadPrint100<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+ */
+public class TaskThreadDemo {
+    public static void main(String[] args){
+        // 创建任务类
+        Runnable printA = new PrintChar(&#39;a&#39;, 100);
+        Runnable printB = new PrintChar(&#39;b&#39;, 100);
+        Runnable print100 = new PrintNumber(100);
+        // 创建线程
+        Thread threadPrintA = new Thread(printA);
+        Thread threadPrintB = new Thread(printB);
+        Thread threadPrint100 = new Thread(print100);
+        // 启动线程
+        threadPrintA.start();
+        threadPrintB.start();
+        threadPrint100.start();
+    }
 
-<span class="token punctuation">}</span>
+}
 
-<span class="token comment">/**
+/**
  * 打印字符任务类
- */</span>
-<span class="token keyword">class</span> <span class="token class-name">PrintChar</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
-    <span class="token comment">/**
+ */
+class PrintChar implements Runnable {
+    /**
      * 需要打印的字符
-     */</span>
-    <span class="token keyword">private</span> <span class="token keyword">char</span> charToPrint<span class="token punctuation">;</span>
+     */
+    private char charToPrint;
 
-    <span class="token comment">/**
+    /**
      * 需要打印的次数
-     */</span>
-    <span class="token keyword">private</span> <span class="token keyword">int</span> times<span class="token punctuation">;</span>
+     */
+    private int times;
 
-    <span class="token keyword">public</span> <span class="token class-name">PrintChar</span><span class="token punctuation">(</span><span class="token keyword">char</span> c<span class="token punctuation">,</span> <span class="token keyword">int</span> t<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        charToPrint <span class="token operator">=</span> c<span class="token punctuation">;</span>
-        times <span class="token operator">=</span> t<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    public PrintChar(char c, int t) {
+        charToPrint = c;
+        times = t;
+    }
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> times<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>charToPrint<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+    public void run() {
+        for (int i = 0; i &lt; times; i++) {
+            System.out.print(charToPrint);
+        }
+    }
+}
 
-<span class="token comment">/**
+/**
  * 打印数字任务类
- */</span>
-<span class="token keyword">class</span> <span class="token class-name">PrintNumber</span> <span class="token keyword">implements</span> <span class="token class-name">Runnable</span> <span class="token punctuation">{</span>
-    <span class="token comment">/**
+ */
+class PrintNumber implements Runnable {
+    /**
      * 需要打印的最大值
-     */</span>
-    <span class="token keyword">private</span> <span class="token keyword">int</span> lastNum<span class="token punctuation">;</span>
+     */
+    private int lastNum;
 
-    <span class="token keyword">public</span> <span class="token class-name">PrintNumber</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        lastNum <span class="token operator">=</span> n<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    public PrintNumber(int n) {
+        lastNum = n;
+    }
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> lastNum<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">" "</span> <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
+    public void run() {
+        for (int i = 1; i &lt;= lastNum; i++) {
+            System.out.print(&quot; &quot; + i);
+        }
+    }
 
 
-<span class="token punctuation">}</span></code></pre></div>
+}</code>
+        </deckgo-highlight-code>
 <blockquote>
 <p>任务中的run()方法指名如何完成这个任务，Java虚拟机通过调用任务的run()方法执行任务，无需程序员特意调用，直接调用run()方法只是在同一个线程中执行该方法，而没有新线程被启动。</p>
 </blockquote>
 <h2 id="thread类" style="position:relative;"><a href="#thread%E7%B1%BB" aria-label="thread类 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Thread类</h2>
 <p>Thread类包含为任务而创建的线程的构造方法，以及控制线程的方法。</p>
 <p>Thread类实现了Runnable接口，所以可以定一个Thread的扩展类，实现Runnable的run()方法，然后客户端类创建这个类的一个对象，调用start()启动线程。</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>thread</span><span class="token punctuation">;</span>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">package org.nocoder.thread;
 
-<span class="token comment">/**
+/**
  * @author jason
  * @date 18/4/3.
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CustomeThread</span> <span class="token keyword">extends</span> <span class="token class-name">Thread</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token class-name">CustomeThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ */
+public class CustomeThread extends Thread {
+    public CustomeThread(){
 
-    <span class="token punctuation">}</span>
+    }
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">currentThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">": do something..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+    public void run(){
+        System.out.println(Thread.currentThread().getName() + &quot;: do something...&quot;);
+    }
+}
 
-<span class="token keyword">class</span> <span class="token class-name">Client</span><span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
-        <span class="token class-name">Thread</span> thread1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CustomeThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        thread1<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"线程1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        thread1<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+class Client{
+    public static void main(String[] args){
+        Thread thread1 = new CustomeThread();
+        thread1.setName(&quot;线程1&quot;);
+        thread1.start();
 
-        <span class="token class-name">Thread</span> thread2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CustomeThread</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        thread2<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"线程2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        thread2<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+        Thread thread2 = new CustomeThread();
+        thread2.setName(&quot;线程2&quot;);
+        thread2.start();
+    }
 
-<span class="token punctuation">}</span>
-</code></pre></div>
-<p>使用<code class="language-text">yield()</code>方法为其他线程临时让出CPU时间。</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token keyword">yield</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>使用<code class="language-text">sleep(long mills)</code>可以将该线程设置为休眠以确保其他线程的执行，休眠时间为指定的毫秒数。</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// 休眠 1ms</span>
-<span class="token keyword">try</span><span class="token punctuation">{</span>
-	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-	<span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> ex<span class="token punctuation">)</span><span class="token punctuation">{</span>
-	<span class="token comment">// do someting...</span>
-<span class="token punctuation">}</span></code></pre></div>
-<p><code class="language-text">Thread.sleep()</code>方法可能抛出一个<code class="language-text">InterruptedException</code>，这是一个必检异常。当一个休眠线程的interrupt()方法被调用时，就会发生这样的一个异常。</p>
-<p>使用<code class="language-text">join()</code>方法使用一个线程等待另一个线程的结束。</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>thread</span><span class="token punctuation">;</span>
+}
+</code>
+        </deckgo-highlight-code>
+<p>使用<code>yield()</code>方法为其他线程临时让出CPU时间。</p>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">Thread.yield();</code>
+        </deckgo-highlight-code>
+<p>使用<code>sleep(long mills)</code>可以将该线程设置为休眠以确保其他线程的执行，休眠时间为指定的毫秒数。</p>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">// 休眠 1ms
+try{
+	...
+	Thread.sleep(1);
+}catch(InterruptedException ex){
+	// do someting...
+}</code>
+        </deckgo-highlight-code>
+<p><code>Thread.sleep()</code>方法可能抛出一个<code>InterruptedException</code>，这是一个必检异常。当一个休眠线程的interrupt()方法被调用时，就会发生这样的一个异常。</p>
+<p>使用<code>join()</code>方法使用一个线程等待另一个线程的结束。</p>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">package org.nocoder.thread;
 
-<span class="token comment">/**
+/**
  * @author jason
  * @date 18/4/6.
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">YieldTest</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token class-name">Thread</span> t <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-                <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        t<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">try</span> <span class="token punctuation">{</span>
-        	  <span class="token comment">// 调用线程t的join()方法，其他线程要等待这个线程执行结束后才会执行</span>
-            t<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> <span class="token number">20</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>j <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div>
+ */
+public class YieldTest {
+    public static void main(String[] args) {
+        Thread t = new Thread(new Runnable() {
+            public void run() {
+                for (int i = 1; i &lt;= 10; i++) {
+                    System.out.print(i + &quot; &quot;);
+                }
+                System.out.println();
+            }
+        });
+        t.start();
+        try {
+        	  // 调用线程t的join()方法，其他线程要等待这个线程执行结束后才会执行
+            t.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        for (int j = 11; j &lt;= 20; j++) {
+            System.out.print(j + &quot; &quot;);
+        }
+        System.out.println();
+    }
+}
+</code>
+        </deckgo-highlight-code>
 <p>输出结果：</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">1 2 3 4 5 6 7 8 9 10 
+<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">1 2 3 4 5 6 7 8 9 10 
 11 12 13 14 15 16 17 18 19 20 
-</code></pre></div>
+</code>
+        </deckgo-highlight-code>
 <p>如果不加join()方法的输出结果顺序不固定</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">11 12 13 14 15 16 17 1 2 3 4 5 6 7 8 9 10 
-18 19 20 </code></pre></div>
+<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">11 12 13 14 15 16 17 1 2 3 4 5 6 7 8 9 10 
+18 19 20 </code>
+        </deckgo-highlight-code>
 <h2 id="线程池" style="position:relative;"><a href="#%E7%BA%BF%E7%A8%8B%E6%B1%A0" aria-label="线程池 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>线程池</h2>
 <h3 id="使用线程池的好处" style="position:relative;"><a href="#%E4%BD%BF%E7%94%A8%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E5%A5%BD%E5%A4%84" aria-label="使用线程池的好处 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用线程池的好处</h3>
 <p>几乎所有需要异步或者并发执行任务的程序都可以使用线程池，合理的使用线程池有以下几个好处。</p>
@@ -391,32 +409,38 @@
 <li>TimeUnit 线程活动保持时间的单位</li>
 </ol>
 <p>创建线程池示例：</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">ExecutorService</span> <span class="token function">getExecutorService</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token class-name">ThreadFactory</span> threadFactory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreadFactoryBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token class-name">ExecutorService</span> executorService <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ThreadPoolExecutor</span><span class="token punctuation">(</span>
-      corePoolSize<span class="token punctuation">,</span> maxPoolSize<span class="token punctuation">,</span> <span class="token number">20000L</span><span class="token punctuation">,</span>
-      <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span><span class="token constant">MILLISECONDS</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">LinkedBlockingDeque</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token number">2500</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-      threadFactory<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ThreadPoolExecutor<span class="token punctuation">.</span>CallerRunsPolicy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> executorService<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">public ExecutorService getExecutorService() {
+    ThreadFactory threadFactory = new ThreadFactoryBuilder().build();
+    ExecutorService executorService = new ThreadPoolExecutor(
+      corePoolSize, maxPoolSize, 20000L,
+      TimeUnit.MILLISECONDS, new LinkedBlockingDeque&lt;&gt;(2500),
+      threadFactory, new ThreadPoolExecutor.CallerRunsPolicy());
+    return executorService;
+}</code>
+        </deckgo-highlight-code>
 <h3 id="提交任务到线程池" style="position:relative;"><a href="#%E6%8F%90%E4%BA%A4%E4%BB%BB%E5%8A%A1%E5%88%B0%E7%BA%BF%E7%A8%8B%E6%B1%A0" aria-label="提交任务到线程池 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>提交任务到线程池</h3>
 <ul>
 <li>
 <p>execute() 用于提交不需要返回值的任务</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">executorService<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-></span><span class="token punctuation">{</span>
-  <span class="token comment">// do something</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">executorService.execute(()-&gt;{
+  // do something
+});</code>
+        </deckgo-highlight-code>
 </li>
 <li>
 <p>submit() 用于提交需要返回值的任务，任务需要实现Callable 接口，返回值为Future，可以通过future.get()获取返回值，get()方法会阻塞当前线程直到任务完成</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token class-name">Future</span> future <span class="token operator">=</span> executorService<span class="token punctuation">.</span><span class="token function">submit</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">CallableTask</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">try</span> <span class="token punctuation">{</span>
-  <span class="token class-name">Object</span> o <span class="token operator">=</span> future<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">InterruptedException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">ExecutionException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">Future future = executorService.submit(new CallableTask());
+try {
+  Object o = future.get();
+} catch (InterruptedException e) {
+  e.printStackTrace();
+} catch (ExecutionException e) {
+  e.printStackTrace();
+}</code>
+        </deckgo-highlight-code>
 </li>
 </ul>
 <h2 id="参考文献" style="position:relative;"><a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE" aria-label="参考文献 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考文献</h2>
@@ -461,6 +485,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

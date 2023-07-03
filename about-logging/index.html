@@ -132,19 +132,23 @@
 <p>每条日志都要记录发生的时间、级别、日志内容、错误码、以及对应代码的位置，存储在文本文件或者数据库中。</p>
 <ul>
 <li>JSON
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">{
-	"@timestamp": "2017-07025 17:02:12",
-	"level": "error",
-	"message": "connection refused",
-	"service": "listener",
-	"thread": "125",
-	"customerid": "776622",
-	"ip": "34.124.233.12",
-	"queryid": "45"
-}</code></pre></div>
+<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">{
+	&quot;@timestamp&quot;: &quot;2017-07025 17:02:12&quot;,
+	&quot;level&quot;: &quot;error&quot;,
+	&quot;message&quot;: &quot;connection refused&quot;,
+	&quot;service&quot;: &quot;listener&quot;,
+	&quot;thread&quot;: &quot;125&quot;,
+	&quot;customerid&quot;: &quot;776622&quot;,
+	&quot;ip&quot;: &quot;34.124.233.12&quot;,
+	&quot;queryid&quot;: &quot;45&quot;
+}</code>
+        </deckgo-highlight-code>
 </li>
 <li>键值对
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">	2017-07025 17:02:12 level=error message="connection refused"</code></pre></div>
+<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">	2017-07025 17:02:12 level=error message=&quot;connection refused&quot;</code>
+        </deckgo-highlight-code>
 </li>
 </ul>
 <p>service=“listener” thread=125 customerid=776622 ip=34.124.233.12
@@ -191,8 +195,10 @@ queryid=45
 <ul>
 <li>使用占位符而不是字符串连接</li>
 </ul>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">logger.debug("Entry number: " + i + " is " +  String.valueOf(entry[i])); 
-logger.debug("Entry number: {} is {}", i, entry[i]);</code></pre></div>
+<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">logger.debug(&quot;Entry number: &quot; + i + &quot; is &quot; +  String.valueOf(entry[i])); 
+logger.debug(&quot;Entry number: {} is {}&quot;, i, entry[i]);</code>
+        </deckgo-highlight-code>
 <p>上面两个语句输出的效果是一样的，但是性能却相差两个数量级，在关闭DEBUG日志时，它们的开销就不一样了，主要的影响在于字符串转换和字符串拼接上，无论是否生效，前者都会将变量转换为字符串并进行拼接，而后者则只会在需要时执行这些操作。</p>
 <ul>
 <li>避免无用的日志
@@ -268,7 +274,7 @@ logger.debug("Entry number: {} is {}", i, entry[i]);</code></pre></div>
 </li>
 <li>使用日志标识，异常码
 <ul>
-<li>使用异常码，例如<code class="language-text">30001</code>代表用户模块，<code class="language-text">30002</code>代表XX模块，这样在看到日志的时候就可以清楚快速的定位到对应的功能。</li>
+<li>使用异常码，例如<code>30001</code>代表用户模块，<code>30002</code>代表XX模块，这样在看到日志的时候就可以清楚快速的定位到对应的功能。</li>
 </ul>
 </li>
 </ul>
@@ -310,6 +316,6 @@ logger.debug("Entry number: {} is {}", i, entry[i]);</code></pre></div>
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

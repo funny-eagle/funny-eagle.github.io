@@ -955,65 +955,75 @@
 </table>
 <h2 id="计算模型" style="position:relative;"><a href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B" aria-label="计算模型 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>计算模型</h2>
 <p>Java字节码的计算模型是面向堆栈结构计算机的。例如，一个x86处理器的汇编代码如下</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">mov eax, byte <span class="token punctuation">[</span>ebp-4<span class="token punctuation">]</span>
-mov edx, byte <span class="token punctuation">[</span>ebp-8<span class="token punctuation">]</span>
-<span class="token function">add</span> eax, edx
-mov ecx, eax</code></pre></div>
+<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">mov eax, byte [ebp-4]
+mov edx, byte [ebp-8]
+add eax, edx
+mov ecx, eax</code>
+        </deckgo-highlight-code>
 <p>这段代码将两个数值相加，并存入另一个地址。相似的反汇编字节码如下</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token number">0</span> iload_1
-<span class="token number">1</span> iload_2
-<span class="token number">2</span> iadd
-<span class="token number">3</span> istore_3</code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">0 iload_1
+1 iload_2
+2 iadd
+3 istore_3</code>
+        </deckgo-highlight-code>
 <p>在这里，需要相加的两个操作数被放入堆栈，而相加操作就在栈中进行，其结果也被放入堆栈。存储指令之后把栈顶的数据放入一个变量地址。在每条指令前面的数字仅仅是表示这条指令到方法开始处的偏移值。这种堆栈结构也可以推广到面向对象模型上。例如，有一个”getName”方法如下</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"> <span class="token class-name">Method</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span></span>String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
- <span class="token number">0</span> aload_0       <span class="token comment">// "this"对象被存入变量0</span>
- <span class="token number">1</span> getfield #<span class="token number">5</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Field</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span></span>String</span> name<span class="token punctuation">></span></span>
-                 <span class="token comment">// 这个指令从栈顶取出一个对象，并从中搜索一个指定的域</span>
-                 <span class="token comment">// 并将相应的数据存入栈顶。</span>
-                 <span class="token comment">// 这个例子中，"name"域对应于该类中的第五个常量。</span>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code"> Method java.lang.String getName()
+ 0 aload_0       // &quot;this&quot;对象被存入变量0
+ 1 getfield #5 &lt;Field java.lang.String name&gt;
+                 // 这个指令从栈顶取出一个对象，并从中搜索一个指定的域
+                 // 并将相应的数据存入栈顶。
+                 // 这个例子中，&quot;name&quot;域对应于该类中的第五个常量。
  
- <span class="token number">4</span> areturn  	 <span class="token comment">// 返回栈顶的对象作为函数的返回值</span></code></pre></div>
+ 4 areturn  	 // 返回栈顶的对象作为函数的返回值</code>
+        </deckgo-highlight-code>
 <h2 id="例子" style="position:relative;"><a href="#%E4%BE%8B%E5%AD%90" aria-label="例子 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例子</h2>
 <p>考虑如下Java代码</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">  outer<span class="token operator">:</span>
-  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">1000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> j <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
-              <span class="token keyword">continue</span> outer<span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span>println <span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span></code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">  outer:
+  for (int i = 2; i &lt; 1000; i++) {
+      for (int j = 2; j &lt; i; j++) {
+          if (i % j == 0)
+              continue outer;
+      }
+      System.out.println (i);
+  }</code>
+        </deckgo-highlight-code>
 <p>假设上述代码位于一个函数中，Java编译器可能将代码翻译成下述的Java字节码。</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">  <span class="token number">0</span><span class="token operator">:</span>   iconst_2
-  <span class="token number">1</span><span class="token operator">:</span>   istore_1
-  <span class="token number">2</span><span class="token operator">:</span>   iload_1
-  <span class="token number">3</span><span class="token operator">:</span>   sipush  <span class="token number">1000</span>
-  <span class="token number">6</span><span class="token operator">:</span>   if_icmpge       <span class="token number">44</span>
-  <span class="token number">9</span><span class="token operator">:</span>   iconst_2
-  <span class="token number">10</span><span class="token operator">:</span>  istore_2
-  <span class="token number">11</span><span class="token operator">:</span>  iload_2
-  <span class="token number">12</span><span class="token operator">:</span>  iload_1
-  <span class="token number">13</span><span class="token operator">:</span>  if_icmpge       <span class="token number">31</span>
-  <span class="token number">16</span><span class="token operator">:</span>  iload_1
-  <span class="token number">17</span><span class="token operator">:</span>  iload_2
-  <span class="token number">18</span><span class="token operator">:</span>  irem
-  <span class="token number">19</span><span class="token operator">:</span>  ifne    <span class="token number">25</span>
-  <span class="token number">22</span><span class="token operator">:</span>  <span class="token keyword">goto</span>    <span class="token number">38</span>
-  <span class="token number">25</span><span class="token operator">:</span>  iinc    <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span>
-  <span class="token number">28</span><span class="token operator">:</span>  <span class="token keyword">goto</span>    <span class="token number">11</span>
-  <span class="token number">31</span><span class="token operator">:</span>  getstatic       #<span class="token number">84</span><span class="token punctuation">;</span> <span class="token comment">//Field java/lang/System.out:Ljava/io/PrintStream;</span>
-  <span class="token number">34</span><span class="token operator">:</span>  iload_1
-  <span class="token number">35</span><span class="token operator">:</span>  invokevirtual   #<span class="token number">85</span><span class="token punctuation">;</span> <span class="token comment">//Method java/io/PrintStream.println:(I)V</span>
-  <span class="token number">38</span><span class="token operator">:</span>  iinc    <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span>
-  <span class="token number">41</span><span class="token operator">:</span>  <span class="token keyword">goto</span>    <span class="token number">2</span>
-  <span class="token number">44</span><span class="token operator">:</span>  <span class="token keyword">return</span></code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">  0:   iconst_2
+  1:   istore_1
+  2:   iload_1
+  3:   sipush  1000
+  6:   if_icmpge       44
+  9:   iconst_2
+  10:  istore_2
+  11:  iload_2
+  12:  iload_1
+  13:  if_icmpge       31
+  16:  iload_1
+  17:  iload_2
+  18:  irem
+  19:  ifne    25
+  22:  goto    38
+  25:  iinc    2, 1
+  28:  goto    11
+  31:  getstatic       #84; //Field java/lang/System.out:Ljava/io/PrintStream;
+  34:  iload_1
+  35:  invokevirtual   #85; //Method java/io/PrintStream.println:(I)V
+  38:  iinc    1, 1
+  41:  goto    2
+  44:  return</code>
+        </deckgo-highlight-code>
 <h2 id="基于java字节码的语言" style="position:relative;"><a href="#%E5%9F%BA%E4%BA%8Ejava%E5%AD%97%E8%8A%82%E7%A0%81%E7%9A%84%E8%AF%AD%E8%A8%80" aria-label="基于java字节码的语言 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>基于Java字节码的语言</h2>
 <p>Groovy, 一种基于Java的脚本语言
 Scala,一种类型安全的通用编程语言，支持面向对象编程和函数式编程
 Clojure, 一种函数式的通用编程语言，提供优秀的并发性。是一种LISP方言</p>
 <h2 id="对动态语言的支持" style="position:relative;"><a href="#%E5%AF%B9%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80%E7%9A%84%E6%94%AF%E6%8C%81" aria-label="对动态语言的支持 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>对动态语言的支持</h2>
 <p>Java虚拟机对动态类型语言提供了一定的支持。但绝大多数的Java虚拟机指令集是基于静态类型语言的。在静态类型机制下，方法调用中的类型分析都是在编译时执行的，而且缺乏一种机制在运行时确定一个类型已经确定相应的方法。</p>
-<p>JSR292中，在Java虚拟机层次增加了一种支持动态类型的指令<code class="language-text">invokedynamic</code>，以支持在动态类型检测中的方法调用。 达芬奇机器则是一种支持这种动态类型调用的虚拟机。 而所有支持JSE 7的Java虚拟机都应支持<code class="language-text">invokedynamic</code>操作码。</p>
+<p>JSR292中，在Java虚拟机层次增加了一种支持动态类型的指令<code>invokedynamic</code>，以支持在动态类型检测中的方法调用。 达芬奇机器则是一种支持这种动态类型调用的虚拟机。 而所有支持JSE 7的Java虚拟机都应支持<code>invokedynamic</code>操作码。</p>
 <h2 id="参考连接" style="position:relative;"><a href="#%E5%8F%82%E8%80%83%E8%BF%9E%E6%8E%A5" aria-label="参考连接 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考连接</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions">https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions</a></li>
@@ -1040,6 +1050,6 @@ Clojure, 一种函数式的通用编程语言，提供优秀的并发性。是�
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

@@ -69,7 +69,9 @@
           }
           document.documentElement.className = theme + '-theme'
     </script><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><meta name="format-detection" content="email=no,telephone=no,address=no"/><meta name="baidu-site-verification" content="rVEuQMP8C6"/><link rel="apple-touch-icon" sizes="180x180" href="/icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/icon.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"/><meta name="msapplication-TileColor" content="#da532c"/><meta name="theme-color" content="#ffffff"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="css-main"><article class="css-post"><h1>Mac 下 MySQL 开启 binlog</h1><div class="css-info"><span style="padding-right:12px">2018-07-23</span><span style="padding-right:8px"><a href="/tag/coding/">coding</a></span></div><div class="css-post-main"><p>MySQL for Mac 默认 binlog 是关闭的，使用以下命令查看 binlog 是否开启：</p>
-<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SHOW</span> VARIABLES <span class="token operator">LIKE</span> <span class="token string">'log_bin'</span><span class="token punctuation">;</span></code></pre></div>
+<deckgo-highlight-code language="sql" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">SHOW VARIABLES LIKE &#39;log_bin&#39;;</code>
+        </deckgo-highlight-code>
 <table>
 <thead>
 <tr>
@@ -84,13 +86,17 @@
 </tr>
 </tbody>
 </table>
-<p>修改/etc/my.conf，没有<code class="language-text">my.conf</code>文件就新建一个，添加以下配置：</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token punctuation">[</span>mysqld<span class="token punctuation">]</span>
-log-bin<span class="token operator">=</span>mysql-bin <span class="token comment">#添加这一行就ok</span>
-binlog-format<span class="token operator">=</span>ROW <span class="token comment">#选择row模式</span>
-<span class="token assign-left variable">server_id</span><span class="token operator">=</span><span class="token number">1</span> <span class="token comment">#配置mysql replaction需要定义，不能和canal的slaveId重复</span></code></pre></div>
-<p>重启MySQL<code class="language-text">系统偏好设置->MySQL->Stop MySQL Server -> Start MySQL Server</code>，再次查看 bin log 状态：</p>
-<div class="gatsby-highlight" data-language="sql"><pre class="language-sql"><code class="language-sql"><span class="token keyword">SHOW</span> VARIABLES <span class="token operator">LIKE</span> <span class="token string">'log_bin'</span><span class="token punctuation">;</span></code></pre></div>
+<p>修改/etc/my.conf，没有<code>my.conf</code>文件就新建一个，添加以下配置：</p>
+<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">[mysqld]
+log-bin=mysql-bin #添加这一行就ok
+binlog-format=ROW #选择row模式
+server_id=1 #配置mysql replaction需要定义，不能和canal的slaveId重复</code>
+        </deckgo-highlight-code>
+<p>重启MySQL<code>系统偏好设置->MySQL->Stop MySQL Server -> Start MySQL Server</code>，再次查看 bin log 状态：</p>
+<deckgo-highlight-code language="sql" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">SHOW VARIABLES LIKE &#39;log_bin&#39;;</code>
+        </deckgo-highlight-code>
 <table>
 <thead>
 <tr>
@@ -118,6 +124,6 @@ binlog-format<span class="token operator">=</span>ROW <span class="token comment
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

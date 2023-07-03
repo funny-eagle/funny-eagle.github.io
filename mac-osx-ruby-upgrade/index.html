@@ -69,29 +69,39 @@
           }
           document.documentElement.className = theme + '-theme'
     </script><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><meta name="format-detection" content="email=no,telephone=no,address=no"/><meta name="baidu-site-verification" content="rVEuQMP8C6"/><link rel="apple-touch-icon" sizes="180x180" href="/icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/icon.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"/><meta name="msapplication-TileColor" content="#da532c"/><meta name="theme-color" content="#ffffff"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="css-main"><article class="css-post"><h1>Mac 下 ruby 升级</h1><div class="css-info"><span style="padding-right:12px">2017-11-26</span><span style="padding-right:8px"><a href="/tag/coding/">coding</a></span></div><div class="css-post-main"><blockquote>
-<p>当时我要安装android-platform-tools <code class="language-text">brew install android-platform-tools</code>，然后这玩意就开始更新，看来我确实很久没用homebrew装软件了。</p>
+<p>当时我要安装android-platform-tools <code>brew install android-platform-tools</code>，然后这玩意就开始更新，看来我确实很久没用homebrew装软件了。</p>
 </blockquote>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token class-name">Updating</span> <span class="token class-name">Homebrew</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token operator">==</span><span class="token operator">></span> <span class="token class-name">Downloading</span> https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>homebrew<span class="token punctuation">.</span>bintray<span class="token punctuation">.</span>com<span class="token operator">/</span>bottles<span class="token operator">-</span>portable<span class="token operator">/</span>portable<span class="token operator">-</span>ruby<span class="token operator">-</span><span class="token number">2.3</span><span class="token number">.3</span><span class="token punctuation">.</span>leopard_64<span class="token punctuation">.</span>bottle<span class="token punctuation">.</span><span class="token number">1.</span>tar<span class="token punctuation">.</span>gz</code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">Updating Homebrew...
+==&gt; Downloading https://homebrew.bintray.com/bottles-portable/portable-ruby-2.3.3.leopard_64.bottle.1.tar.gz</code>
+        </deckgo-highlight-code>
 <p>然后蹦出来个这</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span><span class="token class-name">Homebrew</span><span class="token operator">/</span><span class="token class-name">Library</span><span class="token operator">/</span><span class="token class-name">Homebrew</span><span class="token operator">/</span>brew<span class="token punctuation">.</span>rb<span class="token operator">:</span><span class="token number">12</span><span class="token operator">:</span>in `<span class="token generics"><span class="token punctuation">&lt;</span>main<span class="token punctuation">></span></span>'<span class="token operator">:</span> <span class="token class-name">Homebrew</span> must be run under <span class="token class-name">Ruby</span> <span class="token number">2.3</span><span class="token operator">!</span> <span class="token class-name">You</span>'re running <span class="token number">2.0</span><span class="token number">.0</span><span class="token punctuation">.</span> <span class="token punctuation">(</span><span class="token class-name">RuntimeError</span><span class="token punctuation">)</span></code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">/usr/local/Homebrew/Library/Homebrew/brew.rb:12:in `&lt;main&gt;&#39;: Homebrew must be run under Ruby 2.3! You&#39;re running 2.0.0. (RuntimeError)</code>
+        </deckgo-highlight-code>
 <p>用rvm来管理ruby版本，所以先把rvm安装一下，简单3步
-(1)<code class="language-text">curl -L get.rvm.io | bash -s stable</code>
-(2)<code class="language-text">source ~/.profile</code>
-(3)<code class="language-text">source ~/.bash</code></p>
+(1)<code>curl -L get.rvm.io | bash -s stable</code>
+(2)<code>source ~/.profile</code>
+(3)<code>source ~/.bash</code></p>
 <p>折腾完看看版本号
-<code class="language-text">rvm -v</code></p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]</code></pre></div>
+<code>rvm -v</code></p>
+<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]</code>
+        </deckgo-highlight-code>
 <p>装完rvm，就可以更新ruby了</p>
-<p>可以用<code class="language-text">rvm list known</code>查看一下已发布的版本，我这里安装2.3.4版本</p>
-<p><code class="language-text">rvm install 2.3.4</code></p>
-<p><code class="language-text">ruby -v</code></p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-darwin15]</code></pre></div>
+<p>可以用<code>rvm list known</code>查看一下已发布的版本，我这里安装2.3.4版本</p>
+<p><code>rvm install 2.3.4</code></p>
+<p><code>ruby -v</code></p>
+<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">ruby 2.3.4p301 (2017-03-30 revision 58214) [x86_64-darwin15]</code>
+        </deckgo-highlight-code>
 <p>更新完ruby，再来试试homebrew～</p>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">brew cask install android<span class="token operator">-</span>platform<span class="token operator">-</span>tools
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">brew cask install android-platform-tools
 adb devices
-<span class="token class-name">List</span> of devices attached
-<span class="token number">1164111025</span>	unauthorized</code></pre></div>
+List of devices attached
+1164111025	unauthorized</code>
+        </deckgo-highlight-code>
 <blockquote>
 <p>其实我一开始就为了装个黑域，从安装adb到更新homebrew、再到更新ruby，我在瞎折腾的路上无法自拔。。。</p>
 </blockquote>
@@ -109,6 +119,6 @@ adb devices
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

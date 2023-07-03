@@ -83,8 +83,10 @@
 <p>安装 <a href="https://nodejs.org/">nodejs</a></p>
 </li>
 <li>
-<p>安装 <code class="language-text">gatsby-cli</code></p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">--global</span> gatsby-cli</code></pre></div>
+<p>安装 <code>gatsby-cli</code></p>
+<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">npm install --global gatsby-cli</code>
+        </deckgo-highlight-code>
 </li>
 <li>
 <p>安装 git</p>
@@ -94,83 +96,105 @@
 </li>
 </ol>
 <h3 id="使用-gatsby-starters" style="position:relative;"><a href="#%E4%BD%BF%E7%94%A8-gatsby-starters" aria-label="使用 gatsby starters permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用 Gatsby starters</h3>
-<p>Gatsby 提供了一些 starter 以便快速构建网站，这些 starter 在他们的 <a href="https://github.com/gatsbyjs">github</a> 上，通过<code class="language-text">gatsby new</code>命令，可以基于 starter 创建一个本地 Gatsby 网站。</p>
-<p>使用以下命令可以基于 <code class="language-text">gatsby-starter-hello-world</code> starter 创建一个 Gatsby 网站。</p>
-<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world</code></pre></div>
-<p>项目创建完后，进入<code class="language-text">hello-word</code> 目录，执行 <code class="language-text">gatsby develop</code> 来启动项目，默认端口号为<code class="language-text">8000</code>。</p>
+<p>Gatsby 提供了一些 starter 以便快速构建网站，这些 starter 在他们的 <a href="https://github.com/gatsbyjs">github</a> 上，通过<code>gatsby new</code>命令，可以基于 starter 创建一个本地 Gatsby 网站。</p>
+<p>使用以下命令可以基于 <code>gatsby-starter-hello-world</code> starter 创建一个 Gatsby 网站。</p>
+<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world</code>
+        </deckgo-highlight-code>
+<p>项目创建完后，进入<code>hello-word</code> 目录，执行 <code>gatsby develop</code> 来启动项目，默认端口号为<code>8000</code>。</p>
 <h3 id="认识-gatsby-的页面" style="position:relative;"><a href="#%E8%AE%A4%E8%AF%86-gatsby-%E7%9A%84%E9%A1%B5%E9%9D%A2" aria-label="认识 gatsby 的页面 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>认识 Gatsby 的页面</h3>
-<p>在编辑器中打开<code class="language-text">src/pages/index.js</code>，该文件中的代码表示创建了一个组件，该组件包含一个div和字符串”hello world”。</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
+<p>在编辑器中打开<code>src/pages/index.js</code>，该文件中的代码表示创建了一个组件，该组件包含一个div和字符串”hello world”。</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">import React from &quot;react&quot;
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">&lt;</span>div<span class="token operator">></span>Hello world<span class="token operator">!</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span></code></pre></div>
+export default () =&gt; &lt;div&gt;Hello world!&lt;/div&gt;</code>
+        </deckgo-highlight-code>
 <p>in pure javascript:</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">import React from &quot;react&quot;
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> React<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token string">"Hello world!"</span><span class="token punctuation">)</span></code></pre></div>
+export default () =&gt; React.createElement(&quot;div&quot;, null, &quot;Hello world!&quot;)</code>
+        </deckgo-highlight-code>
 <h3 id="components" style="position:relative;"><a href="#components" aria-label="components permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components</h3>
 <p>一个组件是网站的构建块，是一段自包含的代码，描述了UI的一部分。Gatsby 是基于React 编写的。当我们谈使用和定义组件时，实际上是在说React组件——自包含的代码片段(通常使用JSX编写)，它可以接受输入并返回描述UI部分的React元素。</p>
 <p>原生的HTML定义一个button</p>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>primary-button<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Click me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span></code></pre></div>
+<deckgo-highlight-code language="html" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">&lt;button class=&quot;primary-button&quot;&gt;Click me&lt;/button&gt;</code>
+        </deckgo-highlight-code>
 <p>在React中，可以定义一个button组件，来替代原生的button</p>
-<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PrimaryButton</span><span class="token punctuation">></span></span>Click me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>PrimaryButton</span><span class="token punctuation">></span></span></code></pre></div>
+<deckgo-highlight-code language="html" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">&lt;PrimaryButton&gt;Click me&lt;/PrimaryButton&gt;</code>
+        </deckgo-highlight-code>
 <h4 id="sub-component" style="position:relative;"><a href="#sub-component" aria-label="sub component permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>sub-component</h4>
-<p>在<code class="language-text">src/components</code>目录下新建一个<code class="language-text">header.js</code></p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
+<p>在<code>src/components</code>目录下新建一个<code>header.js</code></p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">import React from &quot;react&quot;
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">&lt;</span>h1<span class="token operator">></span>This is a header<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></code></pre></div>
-<p>在<code class="language-text">src/pages</code>目录下新建一个<code class="language-text">about.js</code>，引入Header组件</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
-<span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">"../components/header"</span>
+export default () =&gt; &lt;h1&gt;This is a header.&lt;/h1&gt;</code>
+        </deckgo-highlight-code>
+<p>在<code>src/pages</code>目录下新建一个<code>about.js</code>，引入Header组件</p>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">import React from &quot;react&quot;
+import Header from &quot;../components/header&quot;
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
-  <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">teal</span><span class="token template-punctuation string">`</span></span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>Header <span class="token operator">/</span><span class="token operator">></span> 
-    <span class="token operator">&lt;</span>p<span class="token operator">></span>Such wow<span class="token punctuation">.</span> Very React<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token punctuation">)</span></code></pre></div>
+export default () =&gt; (
+  &lt;div style={{ color: `teal` }}&gt;
+    &lt;Header /&gt; 
+    &lt;p&gt;Such wow. Very React.&lt;/p&gt;
+  &lt;/div&gt;
+)</code>
+        </deckgo-highlight-code>
 <p>如果想让header的文本支持自定义，需要修改header.js成如下：</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">import React from &quot;react&quot;
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token parameter">props</span> <span class="token operator">=></span> <span class="token operator">&lt;</span>h1<span class="token operator">></span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>headerText<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span></code></pre></div>
+export default props =&gt; &lt;h1&gt;{props.headerText}&lt;/h1&gt;</code>
+        </deckgo-highlight-code>
 <p>然后在about.js中，指定headerText属性的值即可</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
-<span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">"../components/header"</span>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">import React from &quot;react&quot;
+import Header from &quot;../components/header&quot;
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
-  <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">teal</span><span class="token template-punctuation string">`</span></span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
-    <span class="token operator">&lt;</span>Header headerText<span class="token operator">=</span><span class="token string">"About Gatsby"</span> <span class="token operator">/</span><span class="token operator">></span> 
-    <span class="token operator">&lt;</span>p<span class="token operator">></span>Such wow<span class="token punctuation">.</span> Very React<span class="token punctuation">.</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token punctuation">)</span></code></pre></div>
+export default () =&gt; (
+  &lt;div style={{ color: `teal` }}&gt;
+    &lt;Header headerText=&quot;About Gatsby&quot; /&gt; 
+    &lt;p&gt;Such wow. Very React.&lt;/p&gt;
+  &lt;/div&gt;
+)</code>
+        </deckgo-highlight-code>
 <h3 id="props" style="position:relative;"><a href="#props" aria-label="props permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h3>
 <p>想要让这些可重用的组件具有动态性，能够为它们赋值，就可以使用 props 来完成此操作。props 是 React components 提供的属性。</p>
-<p>在上面的例子中，我们通过 <code class="language-text">headerText="About Gatsby"</code> 来引入<code class="language-text"> Header</code> sub-component</p>
+<p>在上面的例子中，我们通过 <code>headerText="About Gatsby"</code> 来引入<code> Header</code> sub-component</p>
 <h3 id="link" style="position:relative;"><a href="#link" aria-label="link permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Link</h3>
 <h4 id="使用-link-组件" style="position:relative;"><a href="#%E4%BD%BF%E7%94%A8-link-%E7%BB%84%E4%BB%B6" aria-label="使用 link 组件 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用 &#x3C;Link/> 组件</h4>
 <p>修改index.js</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"gatsby"</span>
-<span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">"../components/header"</span>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">import React from &quot;react&quot;
+import { Link } from &quot;gatsby&quot;
+import Header from &quot;../components/header&quot;
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
-    <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'teal'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">"/contact/"</span><span class="token operator">></span>Contact<span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
-        <span class="token operator">&lt;</span>Header headerText<span class="token operator">=</span><span class="token string">"Hello Gatsby!"</span><span class="token operator">/</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>p<span class="token operator">></span>what is <span class="token keyword">this</span><span class="token operator">...</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token punctuation">)</span></code></pre></div>
+export default () =&gt; (
+    &lt;div style={{ color: &#39;teal&#39;}}&gt;
+        &lt;Link to=&quot;/contact/&quot;&gt;Contact&lt;/Link&gt;
+        &lt;Header headerText=&quot;Hello Gatsby!&quot;/&gt;
+        &lt;p&gt;what is this...&lt;/p&gt;
+    &lt;/div&gt;
+)</code>
+        </deckgo-highlight-code>
 <p>新建一个contact.js</p>
-<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> Link <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"gatsby"</span>
-<span class="token keyword">import</span> Header <span class="token keyword">from</span> <span class="token string">"../components/header"</span>
+<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">import React from &quot;react&quot;
+import { Link } from &quot;gatsby&quot;
+import Header from &quot;../components/header&quot;
 
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
-    <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'teal'</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>Link to<span class="token operator">=</span><span class="token string">"/contact/"</span><span class="token operator">></span>Contact<span class="token operator">&lt;</span><span class="token operator">/</span>Link<span class="token operator">></span>
-        <span class="token operator">&lt;</span>Header headerText<span class="token operator">=</span><span class="token string">"Contact"</span><span class="token operator">/</span><span class="token operator">></span>
-        <span class="token operator">&lt;</span>p<span class="token operator">></span>you can follow me on github<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">></span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
-<span class="token punctuation">)</span></code></pre></div>
+export default () =&gt; (
+    &lt;div style={{ color: &#39;teal&#39;}}&gt;
+        &lt;Link to=&quot;/contact/&quot;&gt;Contact&lt;/Link&gt;
+        &lt;Header headerText=&quot;Contact&quot;/&gt;
+        &lt;p&gt;you can follow me on github&lt;/p&gt;
+    &lt;/div&gt;
+)</code>
+        </deckgo-highlight-code>
 <h3 id="小结" style="position:relative;"><a href="#%E5%B0%8F%E7%BB%93" aria-label="小结 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>小结</h3>
 <ul>
 <li>了解 Gatsby</li>
@@ -228,6 +252,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

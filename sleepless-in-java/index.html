@@ -219,31 +219,33 @@ DSL（领域特定语言）、软件工程、操作系统、虚拟机器等。
 </ul>
 </li>
 </ul>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">MyClass</span><span class="token punctuation">{</span>
-	  <span class="token comment">//class variable 声明在class内，method之外，且用static修饰的变量             </span>
-     <span class="token keyword">static</span> <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">class MyClass{
+	  //class variable 声明在class内，method之外，且用static修饰的变量             
+     static int a;
      
-     <span class="token comment">//instance variable 声明在class内，method之外，未用static修饰的变量</span>
-     <span class="token keyword">int</span> b<span class="token punctuation">;</span>
+     //instance variable 声明在class内，method之外，未用static修饰的变量
+     int b;
      
-     <span class="token comment">//method parameter声明在method小括号内的变量</span>
-     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token class-name">MyMethod</span><span class="token punctuation">(</span><span class="token keyword">int</span> c<span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token keyword">try</span><span class="token punctuation">{</span>
-             <span class="token comment">// local variable 狭义的局部变量 声明在method内的变量</span>
-             <span class="token keyword">int</span> d<span class="token punctuation">;</span>
+     //method parameter声明在method小括号内的变量
+     public static void MyMethod(int c){
+          try{
+             // local variable 狭义的局部变量 声明在method内的变量
+             int d;
              
-          <span class="token punctuation">}</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span><span class="token punctuation">{</span>
-             <span class="token comment">// exception-handler parameter 声明在catch小括号内的变量  </span>
-          <span class="token punctuation">}</span>
-     <span class="token punctuation">}</span>
+          }catch(Exception e){
+             // exception-handler parameter 声明在catch小括号内的变量  
+          }
+     }
      
-     <span class="token comment">// constructor parameter 声明在constructor小括号内的变量</span>
-     <span class="token class-name">MyClass</span><span class="token punctuation">(</span><span class="token keyword">int</span> f<span class="token punctuation">)</span><span class="token punctuation">{</span>
-          <span class="token comment">// local variable 狭义的局部变量 声明在method内的变量</span>
-          <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> g <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div>
+     // constructor parameter 声明在constructor小括号内的变量
+     MyClass(int f){
+          // local variable 狭义的局部变量 声明在method内的变量
+          int[] g = new int[100];
+     }
+}
+</code>
+        </deckgo-highlight-code>
 <ul>
 <li>
 <p>根据变量的内存，分为2种变量
@@ -285,6 +287,6 @@ instance variable
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

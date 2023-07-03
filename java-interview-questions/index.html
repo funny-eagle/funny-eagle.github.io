@@ -74,7 +74,7 @@
 </ul>
 <h3 id="2-struts2和springmvc的区别" style="position:relative;"><a href="#2-struts2%E5%92%8Cspringmvc%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="2 struts2和springmvc的区别 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2. Struts2和SpringMVC的区别？</h3>
 <ul>
-<li>Struts2入口是<code class="language-text">Filter</code>，SpringMVC是<code class="language-text">Servlet</code></li>
+<li>Struts2入口是<code>Filter</code>，SpringMVC是<code>Servlet</code></li>
 <li>Spring MVC是基于方法的设计，而Struts2是基于类</li>
 <li>Spring MVC的方法之间基本上是独立的，独享request和response，而Struts2所有Action变量是共享的</li>
 <li>Struts2有自己的interceptor机制，Spring MVC用的是独立的AOP方式</li>
@@ -84,28 +84,30 @@
 <li>Spring MVC 的 Controller 是单例的</li>
 <li>如果在controller中定义了非静态成员变量，会导致属性重复使用</li>
 </ul>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token comment">// 非静态成员变量j的属性值会重复利用，不会累加</span>
-<span class="token comment">// 解决办法：不要定义非静态成员变量，或者使用多例 @Scope("prototype")</span>
-<span class="token annotation punctuation">@Controller</span>
-<span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/test"</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">IndexController</span><span class="token punctuation">{</span>
-	<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-	<span class="token keyword">private</span> <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-	<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-		<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"|"</span> <span class="token operator">+</span> <span class="token punctuation">(</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token keyword">return</span> <span class="token string">"test"</span><span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre></div>
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">// 非静态成员变量j的属性值会重复利用，不会累加
+// 解决办法：不要定义非静态成员变量，或者使用多例 @Scope(&quot;prototype&quot;)
+@Controller
+@RequestMapping(&quot;/test&quot;)
+public class IndexController{
+	private static int i = 0;
+	private int j = 0;
+	public String test(){
+		System.out.println((i++) + &quot;|&quot; + (j++));
+		return &quot;test&quot;;
+	}
+}
+</code>
+        </deckgo-highlight-code>
 <h3 id="4-mybatis如何防止sql注入" style="position:relative;"><a href="#4-mybatis%E5%A6%82%E4%BD%95%E9%98%B2%E6%AD%A2sql%E6%B3%A8%E5%85%A5" aria-label="4 mybatis如何防止sql注入 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4. MyBatis如何防止sql注入？</h3>
-<p>Mybatis中的<code class="language-text">#{}</code>和<code class="language-text">${}</code>的区别</p>
+<p>Mybatis中的<code>#{}</code>和<code>${}</code>的区别</p>
 <ul>
-<li><code class="language-text">#{}</code>使用的是PreparedStatement，会有类型转换, 将传入的数据都当成一个字符串，会对自动传入的数据加一个双引号。如：order by #user_id#，如果传入的值是111,那么解析成sql时的值为order by “111”, 如果传入的值是id，则解析成的sql为order by “id”</li>
-<li><code class="language-text">${}</code>将传入的数据直接显示生成在sql中。如：order by <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mi>s</mi><mi>e</mi><msub><mi>r</mi><mi>i</mi></msub><mi>d</mi></mrow><annotation encoding="application/x-tex">user_id</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">u</span><span class="mord mathnormal">se</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span></span></span></span></span>，如果传入的值是111,那么解析成sql时的值为order by user_id,  如果传入的值是id，则解析成的sql为order by id</li>
-<li><code class="language-text">#{}</code>方式能够很大程度防止sql注入</li>
-<li><code class="language-text">${}</code>方式无法防止Sql注入</li>
-<li><code class="language-text">${}</code>方式一般用于传入数据库对象，例如传入表名</li>
-<li>尽量使用<code class="language-text">#{}</code>代替<code class="language-text">${}</code></li>
+<li><code>#{}</code>使用的是PreparedStatement，会有类型转换, 将传入的数据都当成一个字符串，会对自动传入的数据加一个双引号。如：order by #user_id#，如果传入的值是111,那么解析成sql时的值为order by “111”, 如果传入的值是id，则解析成的sql为order by “id”</li>
+<li><code>${}</code>将传入的数据直接显示生成在sql中。如：order by <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mi>s</mi><mi>e</mi><msub><mi>r</mi><mi>i</mi></msub><mi>d</mi></mrow><annotation encoding="application/x-tex">user_id</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord mathnormal">u</span><span class="mord mathnormal">se</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">d</span></span></span></span></span>，如果传入的值是111,那么解析成sql时的值为order by user_id,  如果传入的值是id，则解析成的sql为order by id</li>
+<li><code>#{}</code>方式能够很大程度防止sql注入</li>
+<li><code>${}</code>方式无法防止Sql注入</li>
+<li><code>${}</code>方式一般用于传入数据库对象，例如传入表名</li>
+<li>尽量使用<code>#{}</code>代替<code>${}</code></li>
 <li>参考文献
 <ul>
 <li><a href="https://segmentfault.com/a/1190000010107964">https://segmentfault.com/a/1190000010107964</a></li>
@@ -235,22 +237,24 @@ B：还不错，挺好吃的。</p>
 <li>最大努力通知型事务</li>
 </ul>
 <h3 id="12-object-对象的方法有哪些分别有什么作用该什么场景用" style="position:relative;"><a href="#12-object-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%E5%88%86%E5%88%AB%E6%9C%89%E4%BB%80%E4%B9%88%E4%BD%9C%E7%94%A8%E8%AF%A5%E4%BB%80%E4%B9%88%E5%9C%BA%E6%99%AF%E7%94%A8" aria-label="12 object 对象的方法有哪些分别有什么作用该什么场景用 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>12. Object 对象的方法有哪些？分别有什么作用？该什么场景用？</h3>
-<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token class-name">Object</span> o <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Object</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">Object o = new Object(); 
 
-o<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+o.equals(); 
 
-o<span class="token punctuation">.</span><span class="token function">hashCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+o.hashCode(); 
 
-o<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+o.toString(); 
 
-o<span class="token punctuation">.</span><span class="token function">getClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+o.getClass(); 
 
-o<span class="token punctuation">.</span><span class="token function">wait</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+o.wait(); 
 
-o<span class="token punctuation">.</span><span class="token function">notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+o.notify(); 
 
-o<span class="token punctuation">.</span><span class="token function">notifyAll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-</code></pre></div></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/multi-thread-notes/"><button>Prev: <!-- -->Java 多线程</button></a></li><li><a rel="next" href="/java-binary-search/"><button>Next: <!-- -->Java 二分查找法</button></a></li></ul></article><aside class="css-aside close"><header class="css-header"><div><a style="box-shadow:none;text-decoration:none;font-weight:200" class="usubeni" href="/tag/coding/"><span class="logo-mobile">Jason Yang&#x27;s Website</span><img class="logo" src="/logo.png"/></a></div><div class="menu-button"><i class="iconfont icon-menu1"></i></div></header><div class="css-toc"><ul>
+o.notifyAll(); 
+</code>
+        </deckgo-highlight-code></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/multi-thread-notes/"><button>Prev: <!-- -->Java 多线程</button></a></li><li><a rel="next" href="/java-binary-search/"><button>Next: <!-- -->Java 二分查找法</button></a></li></ul></article><aside class="css-aside close"><header class="css-header"><div><a style="box-shadow:none;text-decoration:none;font-weight:200" class="usubeni" href="/tag/coding/"><span class="logo-mobile">Jason Yang&#x27;s Website</span><img class="logo" src="/logo.png"/></a></div><div class="menu-button"><i class="iconfont icon-menu1"></i></div></header><div class="css-toc"><ul>
 <li><a href="#1-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%96%E7%A0%81%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81%E7%BC%96%E7%A0%81%E4%B8%80%E8%87%B4%E6%83%85%E5%86%B5%E4%B8%8Bget%E8%AF%B7%E6%B1%82%E5%8F%AF%E8%83%BD%E4%BA%A7%E7%94%9F%E4%B9%B1%E7%A0%81%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%8F%8A%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95">1. 数据库编码和服务端代码编码一致情况下，Get请求可能产生乱码的原因及解决办法？</a></li>
 <li><a href="#2-struts2%E5%92%8Cspringmvc%E7%9A%84%E5%8C%BA%E5%88%AB">2. Struts2和SpringMVC的区别？</a></li>
 <li><a href="#3-spring-mvc%E7%9A%84controller%E6%98%AF%E5%8D%95%E4%BE%8B%E7%9A%84%E5%90%97%E6%9C%89%E4%BB%80%E4%B9%88%E5%BD%B1%E5%93%8D%E5%90%97">3. Spring MVC的Controller是单例的吗，有什么影响吗？</a></li>
@@ -277,6 +281,6 @@ o<span class="token punctuation">.</span><span class="token function">notifyAll<
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

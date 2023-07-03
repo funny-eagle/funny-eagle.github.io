@@ -71,14 +71,16 @@
     </script><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><meta name="format-detection" content="email=no,telephone=no,address=no"/><meta name="baidu-site-verification" content="rVEuQMP8C6"/><link rel="apple-touch-icon" sizes="180x180" href="/icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/icon.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"/><meta name="msapplication-TileColor" content="#da532c"/><meta name="theme-color" content="#ffffff"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="css-main"><article class="css-post"><h1>进制间数字转换</h1><div class="css-info"><span style="padding-right:12px">2019-12-22</span><span style="padding-right:8px"><a href="/tag/coding/">coding</a></span></div><div class="css-post-main"><h2 id="10进制计数法" style="position:relative;"><a href="#10%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E6%B3%95" aria-label="10进制计数法 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10进制计数法</h2>
 <ul>
 <li>
-<p>平时我们使用的就是10进制计数法，使用的数字有10种，即 <code class="language-text">0、1、2、3、4、5、6、7、8、9</code></p>
+<p>平时我们使用的就是10进制计数法，使用的数字有10种，即 <code>0、1、2、3、4、5、6、7、8、9</code></p>
 </li>
 <li>
 <p>数位有一定的意义，从右往左分别表示个位、十位、百位、千位…</p>
 </li>
 <li>
 <p>引用书中的例子，来分解</p>
-<div class="gatsby-highlight" data-language="text"><pre class="language-text"><code class="language-text">2503</code></pre></div>
+<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
+          <code slot="code">2503</code>
+        </deckgo-highlight-code>
 <p>这个数</p>
 <ul>
 <li>2 表示的是 1000 的个数</li>
@@ -86,14 +88,14 @@
 <li>0 表示的是 10 的个数</li>
 <li>3 表示的是 1 的个数</li>
 <li>2503 这个数字就是2个1000、5个100、0个10、3个1 累加的结果</li>
-<li>1000 是 <code class="language-text">10*10*10</code> 即10的3次方，100 是 <code class="language-text">10*10</code> 即10 的2次方</li>
-<li>2503 又可以表示为 <code class="language-text">2*10的3次方 + 5*10的2次方 + 0*10的1次方 + 3*10的0次方</code></li>
+<li>1000 是 <code>10*10*10</code> 即10的3次方，100 是 <code>10*10</code> 即10 的2次方</li>
+<li>2503 又可以表示为 <code>2*10的3次方 + 5*10的2次方 + 0*10的1次方 + 3*10的0次方</code></li>
 </ul>
 </li>
 </ul>
 <h2 id="2进制计数法" style="position:relative;"><a href="#2%E8%BF%9B%E5%88%B6%E8%AE%A1%E6%95%B0%E6%B3%95" aria-label="2进制计数法 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2进制计数法</h2>
 <ul>
-<li>计算机在处理数据时使用的是2进制计数法，使用的数字有2中，即 <code class="language-text">0、1</code></li>
+<li>计算机在处理数据时使用的是2进制计数法，使用的数字有2中，即 <code>0、1</code></li>
 <li>数位的意义是，从右往左分别表示1位、2位、4位、8位、16位…</li>
 </ul>
 <h2 id="10进制和2进制数的转换" style="position:relative;"><a href="#10%E8%BF%9B%E5%88%B6%E5%92%8C2%E8%BF%9B%E5%88%B6%E6%95%B0%E7%9A%84%E8%BD%AC%E6%8D%A2" aria-label="10进制和2进制数的转换 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10进制和2进制数的转换</h2>
@@ -132,7 +134,7 @@
     </span></p>
 <h3 id="2-进制转换成-10-进制" style="position:relative;"><a href="#2-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E6%88%90-10-%E8%BF%9B%E5%88%B6" aria-label="2 进制转换成 10 进制 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2 进制转换成 10 进制</h3>
 <blockquote>
-<p>直接举例子，把2进制 <code class="language-text">1010110</code> 转换成10进制</p>
+<p>直接举例子，把2进制 <code>1010110</code> 转换成10进制</p>
 </blockquote>
 <p>由于2进制从右往左分别表示1位，2位，4位，8位，16位…</p>
 <table>
@@ -159,7 +161,7 @@
 </tr>
 </tbody>
 </table>
-<p>然后把所有的<code class="language-text">1</code>下面的对应的值加起来，即<code class="language-text">64+16+4+2=86</code></p>
+<p>然后把所有的<code>1</code>下面的对应的值加起来，即<code>64+16+4+2=86</code></p>
 <h3 id="10-进制转换成-2-进制" style="position:relative;"><a href="#10-%E8%BF%9B%E5%88%B6%E8%BD%AC%E6%8D%A2%E6%88%90-2-%E8%BF%9B%E5%88%B6" aria-label="10 进制转换成 2 进制 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>10 进制转换成 2 进制</h3>
 <p><strong>余数短除法</strong></p>
 <blockquote>
@@ -199,6 +201,6 @@
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-b3c40e5f20d58a9d1644.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-27c03bb3b76b79180f26.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-f8dbb44da1c9f50d1bdf.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-61395d4f5585a54176ae.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-ad09522772116e92ab98.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-97c0f7f4ea57c2452fc2.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-6191e236c214e8548bbe.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-8798072744b1aa8af184.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-df567423d53d902f75c1.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-09a147b1d3127834422f.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="ac07751b916bf970608f";</script><script src="/webpack-runtime-3ef04919052f29ebfe3d.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-b3c40e5f20d58a9d1644.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="9e54ee06e639ef8b0367";</script><script src="/webpack-runtime-312b90f5cf1e83b37c33.js" async></script><script src="/framework-8ee58b4b0cdcb27b3bba.js" async></script><script src="/app-f8dbb44da1c9f50d1bdf.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
