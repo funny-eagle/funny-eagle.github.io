@@ -1,99 +1,96 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+# Usubeni
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+[Usubeni](https://github.com/ssshooter/gatsby-theme-usubeni) 基于 [Gatsby.js v5](https://www.gatsbyjs.com/)，示例页面：https://ssshooter.com/tag/coding/
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+Gatsby 相对于 hexo 上手有一点门槛，不过这个代价换来的是比较大的自由度。使用相关问题在[博客里](https://ssshooter.com/tag/gatsby/)解释了一部分。
 
-## 🚀 Quick start
+P.S. Gatsby.js v4 版 在[这里](https://github.com/ssshooter/gatsby-theme-usubeni/tree/V4)
 
-1.  **Create a Gatsby site.**
+## 使用
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the blog starter.
+fork 或 clone 本项目，安装依赖，推荐使用 **yarn**。然后：
 
-    ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+- 修改 `gatsby-config.js`
+- 修改 `src\settings.js`
+- iconfont 文件夹为 `src\css\icon`，必要时请自行替换，但注意同步修改配置文件中的 icon 名称避免显示异常
+- 更换主题图 `src\assets\yozakura.jpg`
+- 更换 logo `static\logo.png`
+- 建议使用 master 分支写博客，保留 theme 分支更新主题后（同时可以提 PR），再合并到 master 分支
+- 在 `pages` 文件夹添加新文章，也可以通过 `node createPost post-title` 或 `node createPost post-title 2017-07-26` 创建
 
-1.  **Start developing.**
+本主题特性包括：
 
-    Navigate into your new site’s directory and start it up.
+- 快（Lighthouse performance 评分 90）
+- Gatsby 相关依赖基本更新到最新
+- 已集成 代码高亮（prismjs）
+- 已集成 LaTeX（katex）
+- 已配置 `.npmrc` 减轻安装依赖的痛苦
+- 已添加 TOC
+- 自带图库、标签库
+- 自带（没什么用的）表情库
+- SEO 优化
 
-    ```shell
-    cd my-blog-starter/
-    gatsby develop
-    ```
+Gatsby 的优点：
 
-1.  **Open the source code and start editing!**
+- 高自由度页面自定义
+- 为数不多的体验 graphQL 的机会
 
-    Your site is now running at `http://localhost:8000`!
+Gatsby 的缺点：
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+- 有一定学习成本
+- 依赖多，但是也不是非常多，也就 500m（滑稽）
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## 开发
 
-## 🚀 Quick start (Netlify)
+```
+npm start
+```
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+## 发布
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
+```
+npm run build
+```
 
-## 🧐 What's inside?
+可选如 Gatsby 自家的 cloud、 Vercel 或 Netlify 等服务。
 
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fssshooter%2Fgatsby-theme-usubeni.git&demo-title=Usubeni%20Fantasy&demo-description=Gatsby%20Theme%20For%20Blog&demo-url=gatsby-theme-usubeni.vercel.app)
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
+## 拒绝雷同
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+修改 `src\css\global.scss` 文件夹的配色变量，用上自己喜欢的颜色！这是个性化主题最简单的方法！（也欢迎大家 PR 好看的配色）
 
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+其他排版优化可以参考 [Typography.js](https://github.com/kyleamathews/typography.js/)
 
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+## 评论系统
 
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+自带了评论渲染和发布组件（`src\components\Comment.js`），但是后端未开源，能干的大佬们可以小改一下接入自己的评论系统。
 
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
+也可以接其他系统例如：
 
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+- 静态方案，Staticman
+- 自己掌控数据，[valine](https://valine.js.org/)、waline、[twikoo](https://github.com/imaegoo/twikoo)
+- 第三方，disqus
 
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+## PWA
 
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+本模板没有启用 PWA，尽管你可以通过 `gatsby-plugin-manifest` 和 `gatsby-plugin-offline` 简单地启用 PWA 功能，但是对个人博客来说 PWA 确实没有太大的必要，而且启用 PWA 之后，预渲染的页面就废了，似乎因为 PWA 的缓存机制跟多页面冲突。
 
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+## 注意事项
 
-1.  **`README.md`**: A text file containing useful reference information about your project.
+1. `/archive/` 为全文章列表，`/tag/xxx/` 单标签列表
 
-## 🎓 Learning Gatsby
+```
+released: true
+hidden: false
+```
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+2. 文章信息的 `released` 代表完全不加入页面生成，`hidden` 代表生成页面但不出现在任何列表中。
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+3. 要保证至少有一篇文章有完整的 `frontmatter`，否则会构建异常。
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+## 感谢
 
-## 💫 Deploy
-
-[Build, Deploy, and Host On Netlify](https://netlify.com)
-
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+- [了不起的 Gatsby](https://www.gatsbyjs.com/)
+- [封面图 P 站#18073647](https://www.pixiv.net/member_illust.php?mode=medium&illust_id=18073647)
+- [可以在这里抄一下样式](https://saruwakakun.com/html-css/reference/css-sample#section1)

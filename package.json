@@ -1,60 +1,58 @@
 {
-  "name": "nocoder-blog",
-  "private": true,
-  "description": "Jason Yang's Website",
+  "name": "nocoder",
+  "description": "Jason Yangj's Website",
   "version": "1.0.0",
   "author": "Jason Yang <yangjinlong86@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
   "dependencies": {
-    "@deckdeckgo/highlight-code": "^3.6.0",
-    "@fontsource-variable/montserrat": "^5.0.3",
-    "@fontsource/merriweather": "^5.0.2",
-    "@lmdb/lmdb-win32-x64": "^2.8.2",
-    "gatsby": "^5.10.0",
-    "gatsby-cli": "^5.10.0",
-    "gatsby-plugin-feed": "^5.10.0",
-    "gatsby-plugin-image": "^3.10.0",
-    "gatsby-plugin-manifest": "^5.10.0",
-    "gatsby-plugin-sharp": "^5.10.0",
-    "gatsby-plugin-use-dark-mode": "^2.0.1",
-    "gatsby-remark-highlight-code": "^3.3.0",
-    "gatsby-remark-images": "^7.10.0",
-    "gatsby-remark-prismjs": "^7.10.0",
-    "gatsby-remark-responsive-iframe": "^6.10.0",
-    "gatsby-source-filesystem": "^5.10.0",
-    "gatsby-transformer-remark": "^6.11.0",
-    "gatsby-transformer-sharp": "^5.10.0",
-    "prismjs": "^1.29.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "use-dark-mode": "^2.3.1"
+    "axios": "1.2.2",
+    "fast-exif": "^1.0.1",
+    "gatsby": "^5.4.1",
+    "gatsby-plugin-feed": "^5.4.0",
+    "gatsby-plugin-google-gtag": "^5.4.0",
+    "gatsby-plugin-sass": "^6.4.0",
+    "gatsby-plugin-sitemap": "^6.4.0",
+    "gatsby-remark-autolink-headers": "^6.4.0",
+    "gatsby-remark-copy-linked-files": "^6.4.0",
+    "gatsby-remark-images": "^7.4.0",
+    "gatsby-remark-katex": "^7.4.0",
+    "gatsby-remark-prismjs": "^7.4.0",
+    "gatsby-remark-responsive-iframe": "^6.4.0",
+    "gatsby-remark-smartypants": "^6.4.0",
+    "gatsby-source-filesystem": "^5.4.0",
+    "gatsby-transformer-remark": "^6.4.0",
+    "gatsby-transformer-yaml": "^5.4.0",
+    "katex": "^0.15.2",
+    "node-sass": "^8.0.0",
+    "postcss": "^8.2.1",
+    "prismjs": "^1.15.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-plugin-react": "^7.11.1",
+    "gatsby-plugin-image": "^3.4.0",
+    "gatsby-plugin-sharp": "^5.4.0",
+    "gatsby-remark-prismjs-title": "^1.0.0",
+    "gatsby-transformer-sharp": "^5.4.0",
     "gh-pages": "^2.2.0",
-    "prettier": "^2.8.8"
+    "prettier": "^2.5.1"
   },
   "homepage": "https://nocoder.org",
   "keywords": [
     "gatsby",
-    "nocoder",
-    "nocdr",
-    "jason yang"
+    "gatsby-theme",
+    "blog"
   ],
-  "license": "0BSD",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nocdr/nocdr.github.io.git"
-  },
+  "license": "MIT",
   "scripts": {
-    "deploy": "gatsby build && gh-pages -d public",
+    "ser": "gatsby serve",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "dev": "gatsby develop",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "publish": "gatsby build && gh-pages -d public",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }

@@ -1,43 +1,49 @@
-/**
- * SEO component that queries for data with
- * Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useSiteMetadata } from "../hooks/use-site-metadata"
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-const Seo = ({ description, title, children }) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            social {
-              github
-            }
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+function SEO({
+  description,
+  keywords,
+  image,
+  title,
+  pathname,
+}) {
+  const meta = useSiteMetadata()
+  const seo = {
+    title: `${title} | ${meta.title}`,
+    url: `${meta.siteUrl}${pathname || ''}`,
+    description: description || meta.description,
+    keywords: keywords || meta.keywords,
+    author: meta.author,
+    image,
+  }
 
   return (
     <>
-      <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
-      <meta name="description" content={metaDescription} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={metaDescription} />
-      <meta property="og:type" content="website" />
-      {children}
+      <title>{seo.title}</title>
+      <link rel="canonical" href={seo.url} />
+      <meta name="keywords" content={seo.keywords.join(',')} />
+      <meta name="description" content={seo.description} />
+
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:url" content={seo.url} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:creator" content={seo.author} />
+
+      {seo.img ? <>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={seo.image.src} />
+        <meta name="image" content={seo.image.src} />
+        <meta property="og:image:width" content={seo.image.width} />
+        <meta property="og:image:height" content={seo.image.height} />
+      </> : null}
     </>
   )
 }
 
-export default Seo
+export default SEO
