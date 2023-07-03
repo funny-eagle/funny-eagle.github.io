@@ -14,7 +14,7 @@ class Layout extends React.Component {
     animation: [],
     year: '',
     days: '',
-    theme: null,
+    theme: '',
   }
   componentDidMount() {
     this.setState({
@@ -93,8 +93,7 @@ class Layout extends React.Component {
         </Link>
         {pageName ? (
           <div className="page-name">
-            <i className="iconfont icon-hash"></i>
-            {' ' + pageName}
+            {'# ' + pageName}
           </div>
         ) : null}
       </div>
@@ -110,7 +109,7 @@ class Layout extends React.Component {
               <div className="menu-button" onClick={this.toggleMenuState}>
                 <i
                   className={
-                    'iconfont icon-' + (menuState ? 'close1' : 'menu1')
+                    'iconfont icon-' + (menuState ? 'close' : 'menu')
                   }
                 />
               </div>

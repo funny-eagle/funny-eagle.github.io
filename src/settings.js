@@ -33,12 +33,6 @@ export const menu = [
     name: '关于',
     href: '/about',
   },
-  // {
-  //   icon: 'loading',
-  //   name: '虫洞',
-  //   href: 'https://www.foreverblog.cn/go.html',
-  //   target: '_blank',
-  // },
 ]
 
 export const socialMedia = [
@@ -55,7 +49,7 @@ export const socialMedia = [
     href: 'https://twitter.com/yangjinlong86',
   },
   {
-    icon: 'RSS',
+    icon: 'rss',
     href: 'https://nocoder.org/rss.xml',
   },
 ]

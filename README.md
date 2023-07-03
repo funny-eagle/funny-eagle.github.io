@@ -1,6 +1,6 @@
 # Jason Yang's Website
 
-基于`Gatsby5`构件的静态网站, 主题基于 `gatsby-theme-usubeni`修改。
+基于`Gatsby.js V5`搭建的静态网站, 主题基于 `gatsby-theme-usubeni`修改。
 
 - 代码高亮更换为`gatsby-remark-highlight-code`
     - "@deckdeckgo/highlight-code": "^3.6.0"
