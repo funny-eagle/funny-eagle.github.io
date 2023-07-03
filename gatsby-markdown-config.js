@@ -2,11 +2,19 @@ module.exports ={
   resolve: `gatsby-transformer-remark`,
   options: {
     plugins: [
+      // {
+      //   resolve: 'gatsby-remark-prismjs-title',
+      //   options: {
+      //     className: 'code-title',
+      //   },
+      // },
       {
-        resolve: 'gatsby-remark-prismjs-title',
+        resolve: `gatsby-remark-highlight-code`,
         options: {
-          className: 'code-title',
-        },
+          terminal: `carbon`,
+          theme: `one-dark`,
+          lineNumbers: true,
+        }
       },
       {
         resolve: `gatsby-remark-images`,
@@ -21,7 +29,6 @@ module.exports ={
         },
       },
       `gatsby-remark-autolink-headers`,
-      'gatsby-remark-prismjs',
       'gatsby-remark-copy-linked-files',
       'gatsby-remark-smartypants',
       {

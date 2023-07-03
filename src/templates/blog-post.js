@@ -3,6 +3,8 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Info from '../components/PostInfo'
 import SEO from '../components/Seo'
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
+deckDeckGoHighlightElement()
 
 class BlogPostTemplate extends React.Component {
   componentDidMount = () => {

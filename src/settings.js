@@ -4,32 +4,32 @@ export const apiUrl = 'https://wwwiki.top'
 
 export const menu = [
   {
-    icon: 'electronics',
+    icon: 'coding',
     name: '编程',
     href: '/tag/coding/',
   },
   {
-    icon: 'explain',
+    icon: 'music',
     name: '音乐',
     href: '/tag/music/',
   },
   {
-    icon: 'explain',
+    icon: 'life',
     name: '生活',
     href: '/tag/life/',
   },
   {
-    icon: 'discount',
+    icon: 'tag',
     name: '标签',
     href: '/tags',
   },
   {
-    icon: 'save',
+    icon: 'archive',
     name: '归档',
     href: '/archive',
   },
   {
-    icon: 'user1',
+    icon: 'person',
     name: '关于',
     href: '/about',
   },

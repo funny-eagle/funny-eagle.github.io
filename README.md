@@ -1,4 +1,17 @@
-# Usubeni
+# Jason Yang's Website
+
+基于`Gatsby5`构件的静态网站, 主题基于 `gatsby-theme-usubeni`修改。
+
+- 代码高亮更换为`gatsby-remark-highlight-code`
+    - "@deckdeckgo/highlight-code": "^3.6.0"
+    - "gatsby-remark-highlight-code": "^3.3.0"
+- 删除评论组件
+
+
+
+以下是 `gatsby-theme-usubeni` 说明
+***
+## Usubeni
 
 [Usubeni](https://github.com/ssshooter/gatsby-theme-usubeni) 基于 [Gatsby.js v5](https://www.gatsbyjs.com/)，示例页面：https://ssshooter.com/tag/coding/
 
