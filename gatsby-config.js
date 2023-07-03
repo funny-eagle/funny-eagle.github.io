@@ -9,12 +9,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Jason Yang's Blog`,
+    title: `Jason Yang's Website`,
     author: {
       name: `Jason Yang`,
       summary: `再给我来一杯，让我看到重影。`,
     },
-    description: `Jason Yang's Blog`,
+    description: `Jason Yang's Website`,
     siteUrl: `https://nocoder.org`,
     social: {
       github: `https://github.com/nocdr`,
@@ -118,7 +118,7 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Jason Yang's Blog RSS Feed",
+            title: "Jason Yang's Website RSS Feed",
           },
         ],
       },
@@ -126,7 +126,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Jason Yang's Blog`,
+        name: `Jason Yang's Website`,
         short_name: `Jason Yang`,
         start_url: `/`,
         background_color: `#ffffff`,

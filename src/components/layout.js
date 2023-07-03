@@ -15,10 +15,10 @@ const Layout = ({ location, title, children }) => {
           <StaticImage
               layout="fixed"
               formats={["auto"]}
-              src="../images/title-logo.png"
+              src="../images/title.png"
               height={32}
               quality={100}
-              alt="Jason Yang's Blog"
+              alt="Jason Yang's Website"
           />
         </Link>
         <DarkModeToggle />
