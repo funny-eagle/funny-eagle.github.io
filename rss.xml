@@ -1,4 +1,139 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Website]]></title><description><![CDATA[Jason Yang's Website]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 03 Jul 2023 14:28:09 GMT</lastBuildDate><item><title><![CDATA[三十岁的女人-吉他弹唱]]></title><link>https://nocoder.org/30-sui-de-nv-ren-guitar/</link><guid isPermaLink="false">https://nocoder.org/30-sui-de-nv-ren-guitar/</guid><pubDate>Sun, 02 Jul 2023 16:13:46 GMT</pubDate><content:encoded>&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=742906598&amp;bvid=BV1Ak4y1M73i&amp;cid=1182994472&amp;page=1&quot; allowfullscreen=&quot;allowfullscreen&quot; width=&quot;100%&quot; height=&quot;500&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; sandbox=&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;&gt; &lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Java字节码和指令集]]></title><description><![CDATA[Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了…]]></description><link>https://nocoder.org/java-bytecode-and-instructions/inded/</link><guid isPermaLink="false">https://nocoder.org/java-bytecode-and-instructions/inded/</guid><pubDate>Fri, 30 Jun 2023 02:36:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Website]]></title><description><![CDATA[Jason Yang's Website]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Jul 2023 07:50:31 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[问题描述 WindTerm2.5.0，使用SSH用户名和密码方式登录Linux服务器。新建会话，输入IP和端口后，到输入用户名界面，输入用户名后，提示”身份验证被拒绝，请重试“，然后软件假死卡住，30秒到…]]></description><link>https://nocoder.org/wind-term-hanging-problem/</link><guid isPermaLink="false">https://nocoder.org/wind-term-hanging-problem/</guid><content:encoded>&lt;h2 id=&quot;问题描述&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0&quot; aria-label=&quot;问题描述 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;问题描述&lt;/h2&gt;
+&lt;p&gt;WindTerm2.5.0，使用&lt;code&gt;SSH&lt;/code&gt;用户名和密码方式登录Linux服务器。新建会话，输入IP和端口后，到输入用户名界面，输入用户名后，提示”身份验证被拒绝，请重试“，然后软件假死卡住，30秒到1分钟后又弹出身份验证失败请重试，输入密码后又跳转到登录界面，继续输入用户名，又会假死。。。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d97c212c6276b1cdf543c29122de3611/ef245/1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.05405405405405%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAABx0AH/8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQABBQJf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAFxABAAMAAAAAAAAAAAAAAAAAEQAgIf/aAAgBAQABPyHKrP/aAAwDAQACAAMAAAAQs8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAdEAADAAEFAQAAAAAAAAAAAAAAARExIUFRcYGx/9oACAEBAAE/EHh1yON5PSuTYswNtT+H/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;1.jpg&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d97c212c6276b1cdf543c29122de3611/1c72d/1.jpg&quot;
+        srcset=&quot;/static/d97c212c6276b1cdf543c29122de3611/a80bd/1.jpg 148w,
+/static/d97c212c6276b1cdf543c29122de3611/1c91a/1.jpg 295w,
+/static/d97c212c6276b1cdf543c29122de3611/1c72d/1.jpg 590w,
+/static/d97c212c6276b1cdf543c29122de3611/a8a14/1.jpg 885w,
+/static/d97c212c6276b1cdf543c29122de3611/ef245/1.jpg 1112w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2c8ebc659e2b26418f4aefd8104c8cd7/08cdb/2.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50.67567567567568%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAQACBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAeMiFuP/xAAWEAEBAQAAAAAAAAAAAAAAAAAAASD/2gAIAQEAAQUCxFf/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAXEAEAAwAAAAAAAAAAAAAAAAAAESAx/9oACAEBAAE/IU0bf//aAAwDAQACAAMAAAAQsw//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAdEAACAgEFAAAAAAAAAAAAAAAAARFxECExQWGR/9oACAEBAAE/EHUHdLwmeFjc6F00j//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;2.jpg&quot;
+        title=&quot;&quot;
+        src=&quot;/static/2c8ebc659e2b26418f4aefd8104c8cd7/1c72d/2.jpg&quot;
+        srcset=&quot;/static/2c8ebc659e2b26418f4aefd8104c8cd7/a80bd/2.jpg 148w,
+/static/2c8ebc659e2b26418f4aefd8104c8cd7/1c91a/2.jpg 295w,
+/static/2c8ebc659e2b26418f4aefd8104c8cd7/1c72d/2.jpg 590w,
+/static/2c8ebc659e2b26418f4aefd8104c8cd7/a8a14/2.jpg 885w,
+/static/2c8ebc659e2b26418f4aefd8104c8cd7/08cdb/2.jpg 1084w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/9529c55627248f221153e491ba3f1834/7bc57/3.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.02702702702703%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAeOlI0P/xAAWEAADAAAAAAAAAAAAAAAAAAAAASD/2gAIAQEAAQUCln//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAYEAEAAwEAAAAAAAAAAAAAAAAAARARMf/aAAgBAQABPyFtw7f/2gAMAwEAAgADAAAAEEMP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBAAAgICAwAAAAAAAAAAAAAAAAERUSGBEDGR/9oACAEBAAE/EJynGh3S8G5rjtoac6P/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;3.jpg&quot;
+        title=&quot;&quot;
+        src=&quot;/static/9529c55627248f221153e491ba3f1834/1c72d/3.jpg&quot;
+        srcset=&quot;/static/9529c55627248f221153e491ba3f1834/a80bd/3.jpg 148w,
+/static/9529c55627248f221153e491ba3f1834/1c91a/3.jpg 295w,
+/static/9529c55627248f221153e491ba3f1834/1c72d/3.jpg 590w,
+/static/9529c55627248f221153e491ba3f1834/a8a14/3.jpg 885w,
+/static/9529c55627248f221153e491ba3f1834/7bc57/3.jpg 1104w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;解决办法&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95&quot; aria-label=&quot;解决办法 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;解决办法&lt;/h2&gt;
+&lt;p&gt;在会话的IP上右键-&gt;属性-&gt;验证，取消&lt;code&gt;勾选尝试公钥认&lt;/code&gt;、&lt;code&gt;尝试键盘交互认&lt;/code&gt;、&lt;code&gt;尝试gssapi-with-mic身份验证&lt;/code&gt;，保存。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1320c1b1da98cb17d1b3f8109265c2c9/29114/0892dc87d0174c26b5c71b6a0b193bf4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.70270270270271%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABC0lEQVR42m2SUY7DIAxEOUaAEAMGjElImm602/Zj73+sVROp6oa+L2R5xvYIwcy1VmYmIuecUspai4gAEELIOccYXw0HzFxKISIRQui6Tu1orfsdqVTK+Wvbyq7x3kspVYMYx7FvMFpfEO/bdllXa60x5uX7jmDmU0n3Peh+sW6bapmmgGitBYAP4pRSW+2V+ubye7//3G4pJSJCxHb4U3xc+46Ucizl8Xgsy7Jbqc9r11qhYTAm5zzPs/f+GYEx51D2irher845+x8ASCkxs/d+aDA7wzCIdV0R8bS5UoqI5nmOMba+iBhCAABBRO0xWmvvfYwRAFpxjJGInuKcs3OuzeOYfzxOvH7UHwvQUuGzFq+ZAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;034b80c250eae9f2bf9b4f14c74df9cf.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/1320c1b1da98cb17d1b3f8109265c2c9/fcda8/0892dc87d0174c26b5c71b6a0b193bf4.png&quot;
+        srcset=&quot;/static/1320c1b1da98cb17d1b3f8109265c2c9/12f09/0892dc87d0174c26b5c71b6a0b193bf4.png 148w,
+/static/1320c1b1da98cb17d1b3f8109265c2c9/e4a3f/0892dc87d0174c26b5c71b6a0b193bf4.png 295w,
+/static/1320c1b1da98cb17d1b3f8109265c2c9/fcda8/0892dc87d0174c26b5c71b6a0b193bf4.png 590w,
+/static/1320c1b1da98cb17d1b3f8109265c2c9/efc66/0892dc87d0174c26b5c71b6a0b193bf4.png 885w,
+/static/1320c1b1da98cb17d1b3f8109265c2c9/c83ae/0892dc87d0174c26b5c71b6a0b193bf4.png 1180w,
+/static/1320c1b1da98cb17d1b3f8109265c2c9/29114/0892dc87d0174c26b5c71b6a0b193bf4.png 1920w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;然后重新登录就可以了。。。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;WindTerm&lt;/code&gt;开源免费又好用，有点儿小BUG能接受，希望后续版本能解决。&lt;/p&gt;
+&lt;p&gt;Game Over&lt;/p&gt;</content:encoded></item><item><title><![CDATA[三十岁的女人-吉他弹唱]]></title><link>https://nocoder.org/30-sui-de-nv-ren-guitar/</link><guid isPermaLink="false">https://nocoder.org/30-sui-de-nv-ren-guitar/</guid><pubDate>Sun, 02 Jul 2023 16:13:46 GMT</pubDate><content:encoded>&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=742906598&amp;bvid=BV1Ak4y1M73i&amp;cid=1182994472&amp;page=1&quot; allowfullscreen=&quot;allowfullscreen&quot; width=&quot;100%&quot; height=&quot;500&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; sandbox=&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;&gt; &lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Java字节码和指令集]]></title><description><![CDATA[Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了…]]></description><link>https://nocoder.org/java-bytecode-and-instructions/inded/</link><guid isPermaLink="false">https://nocoder.org/java-bytecode-and-instructions/inded/</guid><pubDate>Fri, 30 Jun 2023 02:36:19 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了3个代码永久不使用。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&quot;指令&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%8C%87%E4%BB%A4&quot; aria-label=&quot;指令 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;指令&lt;/h2&gt;
@@ -1675,266 +1810,4 @@ operation basic.ack caused a channel exception precondition_failed: unknown deli
 &lt;li&gt;MegaEase纪念陈皓的&lt;a href=&quot;https://memorial.megaease.cn/&quot;&gt;网站&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;IBM Developer 中文网站已经在2021年3月15日关停，附上一个github上的&lt;a href=&quot;https://github.com/nocdr/ibm_bak&quot;&gt;文章备份仓库&lt;/a&gt;。&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/nocdr/arts&quot;&gt;历史ARTS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[必须要掌握的网络通信原理]]></title><description><![CDATA[一、协议 协议（protocol…]]></description><link>https://nocoder.org/basic-of-network/</link><guid isPermaLink="false">https://nocoder.org/basic-of-network/</guid><pubDate>Mon, 20 Mar 2023 15:14:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;一协议&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%B8%80%E5%8D%8F%E8%AE%AE&quot; aria-label=&quot;一协议 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;一、协议&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;协议&lt;/strong&gt;（protocol）定义了在两个或多个通信实体之间交换的报文的格式和顺序，以及报文发送和/或接收一条报文或其他事件所采取的动作。&lt;/p&gt;
-&lt;p&gt;协议是一套共同的网络语言，帮助多种运行在不同平台上的异构系统之间相互通信。不同的协议用于完成不同的通信任务。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;常见的网络协议包括：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;传输控制协议（TCP）&lt;/li&gt;
-&lt;li&gt;互联网协议（IP）&lt;/li&gt;
-&lt;li&gt;地址解析协议（ARP）&lt;/li&gt;
-&lt;li&gt;动态主机配置协议（DHCP）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;协议通常用来解决以下问题：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;发起连接&lt;/li&gt;
-&lt;li&gt;协商连接参数&lt;/li&gt;
-&lt;li&gt;数据格式&lt;/li&gt;
-&lt;li&gt;错误检测与校正&lt;/li&gt;
-&lt;li&gt;连接终止&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;二osi七层参考模型&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BA%8Cosi%E4%B8%83%E5%B1%82%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B&quot; aria-label=&quot;二osi七层参考模型 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;二、OSI七层参考模型&lt;/h2&gt;
-&lt;h3 id=&quot;osi参考模型协议分层&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#osi%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B%E5%8D%8F%E8%AE%AE%E5%88%86%E5%B1%82&quot; aria-label=&quot;osi参考模型协议分层 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;OSI参考模型协议分层&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;记忆口诀：&lt;strong&gt;物 数 网 传 会 表 应&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 317px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/cea23cbc3d4011dc628b7d6064a384ab/a5d70/eb5bf8e282d6073617739b4e88904969.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 232.43243243243245%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;eb5bf8e282d6073617739b4e88904969.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/cea23cbc3d4011dc628b7d6064a384ab/a5d70/eb5bf8e282d6073617739b4e88904969.png&quot;
-        srcset=&quot;/static/cea23cbc3d4011dc628b7d6064a384ab/12f09/eb5bf8e282d6073617739b4e88904969.png 148w,
-/static/cea23cbc3d4011dc628b7d6064a384ab/e4a3f/eb5bf8e282d6073617739b4e88904969.png 295w,
-/static/cea23cbc3d4011dc628b7d6064a384ab/a5d70/eb5bf8e282d6073617739b4e88904969.png 317w&quot;
-        sizes=&quot;(max-width: 317px) 100vw, 317px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;第七层：&lt;strong&gt;应用层&lt;/strong&gt;，application layer，访问网络资源的实际程序。协议：HTTP、SMTP、FTP、Telnet&lt;/p&gt;
-&lt;p&gt;第六层：&lt;strong&gt;表示层&lt;/strong&gt;，presentation layer，将接收到的数据转换成应用层可以读取的格式，同时进行数据的加解密等操作。协议：ASCII、MPEG、JPEG、MIDI&lt;/p&gt;
-&lt;p&gt;第五层：&lt;strong&gt;会话层&lt;/strong&gt;，session layer，负责所有通信设备间建立、管理、和终止会话连接。协议：NetBIOS、SAP、SDP、NWlink&lt;/p&gt;
-&lt;p&gt;第四层：&lt;strong&gt;传输层&lt;/strong&gt;，transport layer，提供可靠的数据传输服务，确保网络数据端到端的无差错传输。协议：TCP、UDP、SPX&lt;/p&gt;
-&lt;p&gt;第三层：&lt;strong&gt;网络层&lt;/strong&gt;，network layer，负责数据在物理网络中的路由转发，负责网络主机的逻辑寻址，还处理数据包分片和一些情况下的错误检测。路由器工作在这一层。协议：IP、IPX&lt;/p&gt;
-&lt;p&gt;第二层：&lt;strong&gt;数据链路层&lt;/strong&gt;，data link layer，提供了通过物理网络传输数据的方法，主要目的是提供一个寻址方案，可用于确定物理设备。网桥和交换机是工作在数据链路层的物理设备。协议：Ethernet、Token Ring、FDDI、AppleTalk&lt;/p&gt;
-&lt;p&gt;第一层：&lt;strong&gt;物理层&lt;/strong&gt;，physical layer，传输网络数据的物理媒介，定义了所有使用的网络硬件设备的物理和电气特性，包括电压、集线器、网络适配器、中继器、线缆规范等。&lt;/p&gt;
-&lt;h3 id=&quot;因特网-tcpip-协议分层&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9B%A0%E7%89%B9%E7%BD%91-tcpip-%E5%8D%8F%E8%AE%AE%E5%88%86%E5%B1%82&quot; aria-label=&quot;因特网 tcpip 协议分层 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;因特网 TCP/IP 协议分层&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;记忆口诀：&lt;strong&gt;物 数 网 传 应&lt;/strong&gt;
-实际的 TCP/IP 协议栈中没有单独设计会话层和表示层&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;各协议分层的所有协议称为协议栈，因特网协议栈由5个层次组成：物理层、数据链路层、网络层、传输层和应用层。&lt;/p&gt;
-&lt;h2 id=&quot;三osi参考模型中的数据流向&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%B8%89osi%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81%E5%90%91&quot; aria-label=&quot;三osi参考模型中的数据流向 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;三、OSI参考模型中的数据流向&lt;/h2&gt;
-&lt;p&gt;通信数据从一个通信端的顶部应用层开始，沿着OSI参考模型的七层逐步向下，直到物理层，接收端从物理层获取到传输数据，向上逐层处理，直到最高的应用层。OSI模型中的每层都只能直接与它的上层或下层协议通信。&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 380px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/fe4339b1cf4436097940bdfc76fc4f94/3f520/d4dc55f05faaa81aa1a25da6d4a4c525.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 190.54054054054055%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;d4dc55f05faaa81aa1a25da6d4a4c525.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/fe4339b1cf4436097940bdfc76fc4f94/3f520/d4dc55f05faaa81aa1a25da6d4a4c525.png&quot;
-        srcset=&quot;/static/fe4339b1cf4436097940bdfc76fc4f94/12f09/d4dc55f05faaa81aa1a25da6d4a4c525.png 148w,
-/static/fe4339b1cf4436097940bdfc76fc4f94/e4a3f/d4dc55f05faaa81aa1a25da6d4a4c525.png 295w,
-/static/fe4339b1cf4436097940bdfc76fc4f94/3f520/d4dc55f05faaa81aa1a25da6d4a4c525.png 380w&quot;
-        sizes=&quot;(max-width: 380px) 100vw, 380px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;四数据封装&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9B%9B%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85&quot; aria-label=&quot;四数据封装 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;四、数据封装&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;协议栈中每一层的数据都使用了特定的术语，物理层叫比特(bit)，数据链路层叫帧（frame），网络层叫数据包或数据报（datagram），传输层叫数据段或报文段(segment)，应用层叫数据或报文(message)。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;数据封装过程将创建一个PDU（协议数据单元），在传输数据时，协议栈的每一层都会在传输数据上附上附加信息（头部或尾部协议信息），沿着协议栈每一层向下流动，PDU逐渐增长，直到物理层，并发送给目标计算机，接收端接到PDU后，从物理层逐层向上剥去协议头部和尾部，到达最顶层应用层时，只剩下原始传输数据。整个过程让我联想到俄罗斯套娃，假设最小的套娃是原始数据，发送数据时，一层一层的套上开始传输，到达目的地再一层一层的去掉，直到最小的套娃出现。&lt;/p&gt;
-&lt;p&gt;客户端和服务器间数据封装过程图示&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/479e122ff013abf667a585d6a4c76aa8/e9beb/ffd406a04d5749a58c533afc94982d56.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 129.7297297297297%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAIAAAA44esqAAAACXBIWXMAAAsTAAALEwEAmpwYAAADaElEQVR42qVU208UVxzev84XTV/aJx98wMTECkUFxUZjGyu1qamVpYVsSBBKtcFUaSkuyi6XtBg0gQUKy3UX2F1mdmd2Lmdu537ONLvbgmsXStLJL5OZL79vvm/O+X4nEv6PK/LeOyLc9jBm/AARQroBDRA7jsyFDMPwp8nND27F+8ZWB1+ma7hmB2e/TNwefBsbXd7ImZXPSfk+WVTJv85mW6LTD4bnL9yfqOG6DVu6Z6LPFs/eGZtZKhzI1JFrQHrPnF5U3q6X5tJqracMYHIhP5cuzSzt6zasdDZQrkKbBaOjdyL+JtuXyFz85rcLXz3/dnR9KaNd7028mNt613O9chW0fTy7quyV3C3Ffb2S+31xd0txdIAmU/m9kvMfqx2GIWWiZgwR7kIWysofkXfW/0iyDEPKuY/5Z48Xz3WOnOt8dvOHlIcY5UIIeSJlxmWm6M5vlt6sKduqw4Ws2glPRBZCeoiVAN43oIcqPMq4PN62EFIISSn3EbsxuPDR7acf3nzS1j/vQkoZ5/9y3liZC6lYcD1vre4Zihn8bfv4eOY0p6B7Kzt6GQSWR3Y1f1t1TRdbLs4oVk5zc5pDmagj1zbGCeiVnqlLXYnz9188mVy79Xj5zPWh0+0DN4aWfv4j2/R1/OOuRGv3hGL4B5S6kCAqEOUeYoQKDeBtBaznLQ0gwoThYEg4/icCdbalDAPCERWEyTJAiHI3YEUbFwzkBIww4SOGmcRUQMIPp6r6JCFhnw++bo4mLn+XuPhgvD++3DGQOnW5/9TVgWuPUj8m1i5Fk63dr1qiiU9jSdNFta2JHEyFagZ53SuUvWzRNRykAbSRt1Z29JKNLJes7pk5zc2XfcXwD0fS8vC+ERRtqAOkA2S4OKsCy8OqBTcKIJ2zVTMAPila0HBJ2UE6gKoZFHQP+DgyEE813RtpjY5fi82090619ySbu14NJdKfPBw70/7o9NW+K98nY6MLTfdGWrpetvVMtfVOdsSmmx+O/zK7GQEBVS1Ysiuapkcsj5Rs6EKqA5hR7I28pdsQ+DSjOkULmtWeyt3FAWYNEkaq2fYRLzukaCMfc3lUtqWUolpShrXiXGo2uju8fL7zadPd4S+G/7Q8ginj4rCnVpGGB7IQUjXhbhHsqNa+EYgGuT5iME5+6P8FDeSSYq1VnKsAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;ffd406a04d5749a58c533afc94982d56.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/479e122ff013abf667a585d6a4c76aa8/fcda8/ffd406a04d5749a58c533afc94982d56.png&quot;
-        srcset=&quot;/static/479e122ff013abf667a585d6a4c76aa8/12f09/ffd406a04d5749a58c533afc94982d56.png 148w,
-/static/479e122ff013abf667a585d6a4c76aa8/e4a3f/ffd406a04d5749a58c533afc94982d56.png 295w,
-/static/479e122ff013abf667a585d6a4c76aa8/fcda8/ffd406a04d5749a58c533afc94982d56.png 590w,
-/static/479e122ff013abf667a585d6a4c76aa8/e9beb/ffd406a04d5749a58c533afc94982d56.png 730w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;五网络硬件&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BA%94%E7%BD%91%E7%BB%9C%E7%A1%AC%E4%BB%B6&quot; aria-label=&quot;五网络硬件 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;五、网络硬件&lt;/h2&gt;
-&lt;p&gt;网络数据包从客户端计算机发出后，要经过集线器、交换机和路由器最终进入互联网。实际上家用的路由器已经集成了集线器和交换机的功能。
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 587px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1b23cd83134384630eb45d834e5a8cc9/d72eb/fb72a80187ca8a9ebbd9ea9d6d540611.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 111.48648648648648%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC8klEQVR42o2T2U9TQRTG+7f5aEx4cHnRGGIQ4wuKYowpkmjEIhBi1NSQsIggm8aEraWUWgrYFtqChQhFBFpaSkv3u3WWOzNm7mUrCPrlPsxyfvfMfHOOgf1NKheRleJOSphfje/lJMbo6TDD6SVCSCYvfnatvR8JPmrzPOwMvBsLBbeySCXnwVT7uyBKg6616o7ANWN32QPzjQZrVUcwFCscBpwHy7LU7wzdbw887lp4Mbj0aWojuJkpQvRfx2aUSkrRt7oTSYqCDCg7U4aztxhEKiGcPYs3UEpJqbRg/kGEtal+mtNhzAAAgBCiY8oJcjIj7GWFWDKfSPNBMi2kcyJCCGpCCOmUASFED0zUB419vnLTeGWz/W6Lo7LZXvXWVdPqrm33KEA9vAKldB8mhBJCVUKx9pKtQ8Fyk/WWyVLRYK1stN1pmrjd5Hj2wSvIECJVT3AE09LnkwGOJnL+xSWX27+08mty2ruyEYWYYJUgfGQBhzFGCsADjlDH2HLPxMqIewMiNZGVJ/3h2aXYdDAaSRSie8KkP+IIRGzz4c2dvF6FHKYEZwXlct3YheovZcbhJ23enAjG58JlxuGKRvtNk73f+XvAsXalbrSiceJ6/cTg1LpW/EQ/NiSUdQ55XrbZzF/nusf8jLFQOGU0j7/u9z5vd80sbgbX47VmW0uf51X3d8/yNof1zBBCxlhRKmRSSVlWEFAIoQjC9F5ckUVFKsiSIEtibHtLFAqKmJclSbszOXSb23DcD/1JKC3pBMq1v7JvGAA8s+tHtL7HZ+r12/0R93LcF0pwV/bDOUCIPtOL7wAuAsAY63WsXTRaLtVaO60rV54O33vj1C52ZlOUZLb7wrXt7rpOr8WzdbVupMbs0i9yogROwtwwSj0/dz9aFrpGA98CkVHP1nQwdlit/4AR4o2eSSWTiThEUN8FEBTy+Ww2CwAghKilwhgjhHhLYox51apEVYnWOtz/TCY9MzM75XQmdncpYwghXCpK6R+dp7FyRH4jxAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;fb72a80187ca8a9ebbd9ea9d6d540611.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/1b23cd83134384630eb45d834e5a8cc9/d72eb/fb72a80187ca8a9ebbd9ea9d6d540611.png&quot;
-        srcset=&quot;/static/1b23cd83134384630eb45d834e5a8cc9/12f09/fb72a80187ca8a9ebbd9ea9d6d540611.png 148w,
-/static/1b23cd83134384630eb45d834e5a8cc9/e4a3f/fb72a80187ca8a9ebbd9ea9d6d540611.png 295w,
-/static/1b23cd83134384630eb45d834e5a8cc9/d72eb/fb72a80187ca8a9ebbd9ea9d6d540611.png 587w&quot;
-        sizes=&quot;(max-width: 587px) 100vw, 587px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&quot;1集线器&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1%E9%9B%86%E7%BA%BF%E5%99%A8&quot; aria-label=&quot;1集线器 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1、集线器&lt;/h3&gt;
-&lt;p&gt;集线器会将输入的信号广播到所有的端口，如果同时输入多个信号就会发生碰撞，无法同时传输多路信号。&lt;/p&gt;
-&lt;h3 id=&quot;2交换机&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2%E4%BA%A4%E6%8D%A2%E6%9C%BA&quot; aria-label=&quot;2交换机 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2、交换机&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;交换机并不是简单地让信号流过，而是先接收信号并将其还原为数字信号，然后再重新转换成信号并发送出去的过程。&lt;/li&gt;
-&lt;li&gt;交换机可同时转发多个包&lt;/li&gt;
-&lt;li&gt;交换机的转发能力高于集线器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;3路由器&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3%E8%B7%AF%E7%94%B1%E5%99%A8&quot; aria-label=&quot;3路由器 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3、路由器&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;路由器的工作原理：&lt;/strong&gt;
-路由器包括转发模块和端口模块，路由器在转发包时，首先通过端口将发过来的包接收进来，这一步工作取决于端口对应的通信技术。接下来转发模块会根据接收到的包的IP头部中记录的接收方IP地址，在路由表中进行查询，以此判断转发目标。然后转发模块将包转移到转发目标对应的端口，端口再按照硬件的规则将包发送出去，也就是转发模块委托端口模块将包发送出去。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;交换机和路由器之间的差异：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;交换机和路由器的工作方式不同，交换机是基于以太网规格工作的设备，而路由器是基于IP的。&lt;/li&gt;
-&lt;li&gt;交换机只转发包，它自身不是发送方或接收方。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;六参考文献&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%85%AD%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE&quot; aria-label=&quot;六参考文献 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;六、参考文献&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/30387220/&quot;&gt;《Wireshark数据包分析实战（第3版）》&lt;/a&gt;
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 39.189189189189186%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABWklEQVR42oWQS0vDQBSF86/c6B9zIbhSQRShq4IgFNcKotjaYsS3G6tWMWlTTRqTZtrUNmlmbuZxR2yhICh+nNU9HLh8hm1Zntt2353nxuPhhIf6/eXF+ZlpVipl0zw9qVYZA601IuqfGG6HHNUax7XnxosHQMPeIBpSMqJxSlEpRJRSzmaImGVUiFxjrpUw/KC+vbO8sbX41CgzxoKw2x2kThB340QKwTkHyAGAMaa15jx3PT9LP1ncUlloXF0fbmwuzS/MFQpbnAvHaVstx242Lct+ebVbTvvtrW3bdr/f11pLqbJkIIfNYRww4MbNbbW0WyoW11dW14Tgrh/aneiDxL3ROBykFDgqJaWcvs2FGvVc2b3jQxcgN4LQ87xOuWLu7R8AMM9z+z0CAPo3pJRJkmQsnzowEPXM4jgd+74fETK9oP4LnJbGRCGqiVhKKSFR9B2SJIn+jy8deLcd+6mB7AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;6ec6033b3adaf648ce6525fb37c18cdb.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/2b6dbf0addcfbdc8c960a13877521b77/fcda8/6ec6033b3adaf648ce6525fb37c18cdb.png&quot;
-        srcset=&quot;/static/2b6dbf0addcfbdc8c960a13877521b77/12f09/6ec6033b3adaf648ce6525fb37c18cdb.png 148w,
-/static/2b6dbf0addcfbdc8c960a13877521b77/e4a3f/6ec6033b3adaf648ce6525fb37c18cdb.png 295w,
-/static/2b6dbf0addcfbdc8c960a13877521b77/fcda8/6ec6033b3adaf648ce6525fb37c18cdb.png 590w,
-/static/2b6dbf0addcfbdc8c960a13877521b77/efc66/6ec6033b3adaf648ce6525fb37c18cdb.png 885w,
-/static/2b6dbf0addcfbdc8c960a13877521b77/7a3d6/6ec6033b3adaf648ce6525fb37c18cdb.png 990w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/30280001//&quot;&gt;《计算机网络-自顶向下方法（第7版）》&lt;/a&gt;
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 41.891891891891895%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsTAAALEwEAmpwYAAABdElEQVR42oWRvUtCURjGz2SRULgUQUNzc0RUFBHR0j9Q4RRBhH1suUgNBbY52FCNfSxNNcX9E0rUVCjRvGKY9+scTzfrnq97jKtQQ0W/6R3eh/d9ngfUEUokEplsNplMqap6n06nUsnE3W0ul+VCNH8gpfyawfnFRXBxIbyxGQwuKYriEGrapP7OrTfy+k7rDfrBuKdpbbtC2LYt6FuTYykIWF5Z6fKBuZHBTh+IRg+gZWUeCrmCWq4ajAvGPVzXFa0vKCGabtpYx0aROxiEQmt9vYGJ8eGebn8sFiOUvmgatEwILYQQxhghBCFECEopuZCObQhcIA1IuQv2d0LTs2N7p8r66tTN1ZGJ7OeaThynba+N67ptq4QypFcasCKYI6UEJ/HwzOTQ2ZUS2Z6/vozrBiqrJcZY8zeEEB8Ooa0UvMB2I1sD/YHp0eFuf8fJ8SGlrFrTuXeq+S9A08z8Y/7Jo2RZlqbrhUqtWKkZEP8h+a7qE8p4lpQwY4UpAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;f588dda7a0d8bbf01ab87a3b98467fc5.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/44f01a124deb7372e55bbaa6383b3493/fcda8/f588dda7a0d8bbf01ab87a3b98467fc5.png&quot;
-        srcset=&quot;/static/44f01a124deb7372e55bbaa6383b3493/12f09/f588dda7a0d8bbf01ab87a3b98467fc5.png 148w,
-/static/44f01a124deb7372e55bbaa6383b3493/e4a3f/f588dda7a0d8bbf01ab87a3b98467fc5.png 295w,
-/static/44f01a124deb7372e55bbaa6383b3493/fcda8/f588dda7a0d8bbf01ab87a3b98467fc5.png 590w,
-/static/44f01a124deb7372e55bbaa6383b3493/efc66/f588dda7a0d8bbf01ab87a3b98467fc5.png 885w,
-/static/44f01a124deb7372e55bbaa6383b3493/350de/f588dda7a0d8bbf01ab87a3b98467fc5.png 998w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://book.douban.com/subject/26941639/&quot;&gt;《网络是怎样连接的》&lt;/a&gt;
-&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 42.567567567567565%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAIAAAC9o5sfAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLUlEQVR42oVRy27CMBD0//9MEeKERFUOlRC9Vj1BCyS2E+LYcbwbx/EjFURtJVTaOexqNDva1SxZzOfL5XK1elyvn2azh+12O45jSmn8B2kcE9lJecozqVRrQAihTCdae2v+ojFGRIwxTpQsDofnzaYsysEHzjmtzWsmuep8+GU5Ipyr2kE1iDcPnFRSTYJzjrE8K8SOCiHVD+QF00zveq2bzohGFoBIjjVrUDoPaIEy/k4rA+BcDwAI13JpZjJbF7Dax/OLM2fnPVE8a5VswXSIlDFelIB4LzBrrayFAZhkklJC3YJqbNdRmtM807r5juQGMUbvQwjhmvZIWkQp61brYRgY4x+01Og6FzQ66AewwxDivXeRmNJ0pPe+KMsDO+9PdH+kVQPGevOn+ROuhQOOE3jfNgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;de475af89e4481c1ab15cb964305effa.png&quot;
-        title=&quot;&quot;
-        src=&quot;/static/2bbbaeaa3c3f54be43b221dd2c2f357b/fcda8/de475af89e4481c1ab15cb964305effa.png&quot;
-        srcset=&quot;/static/2bbbaeaa3c3f54be43b221dd2c2f357b/12f09/de475af89e4481c1ab15cb964305effa.png 148w,
-/static/2bbbaeaa3c3f54be43b221dd2c2f357b/e4a3f/de475af89e4481c1ab15cb964305effa.png 295w,
-/static/2bbbaeaa3c3f54be43b221dd2c2f357b/fcda8/de475af89e4481c1ab15cb964305effa.png 590w,
-/static/2bbbaeaa3c3f54be43b221dd2c2f357b/efc66/de475af89e4481c1ab15cb964305effa.png 885w,
-/static/2bbbaeaa3c3f54be43b221dd2c2f357b/91f10/de475af89e4481c1ab15cb964305effa.png 992w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item></channel></rss>
