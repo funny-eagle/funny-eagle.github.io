@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Website]]></title><description><![CDATA[Jason Yang's Website]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Jul 2023 07:53:00 GMT</lastBuildDate><item><title><![CDATA[WindTerm 2.5.0 输入用户名后假死卡住的解决办法]]></title><description><![CDATA[问题描述 WindTerm2.5.0，使用SSH用户名和密码方式登录Linux服务器。新建会话，输入IP和端口后，到输入用户名界面，输入用户名后，提示”身份验证被拒绝，请重试“，然后软件假死卡住，30秒到…]]></description><link>https://nocoder.org/wind-term-hanging-problem/</link><guid isPermaLink="false">https://nocoder.org/wind-term-hanging-problem/</guid><pubDate>Fri, 07 Jul 2023 07:51:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;问题描述&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0&quot; aria-label=&quot;问题描述 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;问题描述&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Website]]></title><description><![CDATA[Jason Yang's Website]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 07 Jul 2023 09:21:33 GMT</lastBuildDate><item><title><![CDATA[基于Quartz的定时任务UI组件]]></title><description><![CDATA[需求 我需要实现一个基于springboot 的quartz-ui组件，可以通过web界面来管理定时任务。然后打包成jar文件，提供给使用quartz的项目。 基本思路 去github…]]></description><link>https://nocoder.org/quartz-ui/</link><guid isPermaLink="false">https://nocoder.org/quartz-ui/</guid><pubDate>Fri, 07 Jul 2023 09:14:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;需求&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%9C%80%E6%B1%82&quot; aria-label=&quot;需求 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;需求&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我需要实现一个基于&lt;code&gt;springboot&lt;/code&gt; 的&lt;code&gt;quartz-ui&lt;/code&gt;组件，可以通过web界面来管理定时任务。然后打包成&lt;code&gt;jar&lt;/code&gt;文件，提供给使用&lt;code&gt;quartz&lt;/code&gt;的项目。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;基本思路&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF&quot; aria-label=&quot;基本思路 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;基本思路&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;去github上逛一圈，有现成的就拿来试试，改改直接用，不然还能怎么样，难道自己生写&lt;/li&gt;
+&lt;li&gt;好吧，如果没有我就去啃 &lt;code&gt;quartz&lt;/code&gt; 的 API，然后自己生写&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;于是很快我就找到了 &lt;a href=&quot;https://github.com/zjcscut/quartz-web-ui-kit&quot;&gt;quartz-web-ui-kit&lt;/a&gt;，&lt;code&gt;Readme&lt;/code&gt;在这个哥们儿的个人博客上，但链接已经访问不到了，不过找到一个cnblogs的&lt;a href=&quot;https://www.cnblogs.com/throwable/p/12670693.html&quot;&gt;基于Quartz编写一个可复用的分布式调度任务管理WebUI组件&lt;/a&gt;。代码拉下来研究了一下，结构清晰，命名舒服，maven的依赖也没什么多余的，直击要害，就只解决任务管理问题。模版用&lt;code&gt;freemarker&lt;/code&gt;，&lt;code&gt;css&lt;/code&gt;和&lt;code&gt;js&lt;/code&gt;用&lt;code&gt;uikit&lt;/code&gt;和&lt;code&gt;jquery&lt;/code&gt;。简单明了，感谢分享，就用您这个了。&lt;/p&gt;
+&lt;p&gt;跑完SQL脚本，很顺利就运行起来了，测试了一下功能，除了禁用的任务还能点触发，后台会报错，倒也没啥影响。&lt;/p&gt;
+&lt;p&gt;接下来开始动手改：
+1、这个组件需要打成&lt;code&gt;jar&lt;/code&gt;，需要的项目就增加一个依赖。
+2、上传到nexus私服。&lt;/p&gt;
+&lt;h2 id=&quot;问题和解决办法&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95&quot; aria-label=&quot;问题和解决办法 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;问题和解决办法&lt;/h2&gt;
+&lt;p&gt;1、项目无法直接加载&lt;code&gt;jar&lt;/code&gt;中静态文件，打包时需要将静态文件放在&lt;code&gt;META-INF/resources&lt;/code&gt;目录下。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;pom.xml&lt;/code&gt; 的 &lt;code&gt;build&lt;/code&gt; 下增加&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;xml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;&amp;lt;resources&amp;gt;
+	&amp;lt;resource&amp;gt;
+		&amp;lt;directory&amp;gt;${basedir}/src/main/resources/templates&amp;lt;/directory&amp;gt;
+		&amp;lt;targetPath&amp;gt;META-INF/resources/&amp;lt;/targetPath&amp;gt;
+		&amp;lt;includes&amp;gt;
+			&amp;lt;include&amp;gt;**/**&amp;lt;/include&amp;gt;
+		&amp;lt;/includes&amp;gt;
+	&amp;lt;/resource&amp;gt;
+&amp;lt;/resources&amp;gt;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;&lt;code&gt;application.yml&lt;/code&gt;中也要对应修改&lt;code&gt;template-loader-path&lt;/code&gt;的路径&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;yml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;spring:
+  freemarker:
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    expose-request-attributes: true
+    expose-session-attributes: true
+    request-context-attribute: request
+    suffix: .ftl
+    template-loader-path: classpath:/META-INF/resources/
+    prefer-file-system-access: false&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;2、配置文件也需要打包进去，继续在&lt;code&gt;pom.xml&lt;/code&gt; 的 &lt;code&gt;resources&lt;/code&gt; 下增加&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;xml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;	&amp;lt;resource&amp;gt;
+		&amp;lt;directory&amp;gt;${basedir}/src/main/resources/&amp;lt;/directory&amp;gt;
+		&amp;lt;includes&amp;gt;
+			&amp;lt;include&amp;gt;**/*.yml&amp;lt;/include&amp;gt;
+			&amp;lt;include&amp;gt;**/*.factories&amp;lt;/include&amp;gt;
+		&amp;lt;/includes&amp;gt;
+	&amp;lt;/resource&amp;gt;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;3、发现&lt;code&gt;jar&lt;/code&gt;中的配置文件不生效，被项目的&lt;code&gt;application.yml&lt;/code&gt;覆盖了&lt;/p&gt;
+&lt;p&gt;将配置文件放在&lt;code&gt;src/main/resources/config&lt;/code&gt;目录下即可，参考&lt;code&gt;Spring&lt;/code&gt;&lt;a href=&quot;https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&quot;243-application-property-files&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#243-application-property-files&quot; aria-label=&quot;243 application property files permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;24.3 Application Property Files&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;SpringApplication&lt;/code&gt; loads properties from &lt;code&gt;application.properties&lt;/code&gt; files in the following locations and adds them to the Spring &lt;code&gt;Environment&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;A &lt;code&gt;/config&lt;/code&gt; subdirectory of the current directory
+The current directory
+A classpath &lt;code&gt;/config&lt;/code&gt; package
+The classpath root&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;参考链接&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5&quot; aria-label=&quot;参考链接 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;参考链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/throwable/p/12670693.html&quot;&gt;https://www.cnblogs.com/throwable/p/12670693.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/zjcscut/quartz-web-ui-kit&quot;&gt;https://github.com/zjcscut/quartz-web-ui-kit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html&quot;&gt;https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;差不多了，有啥后面再补充。今天周五，下午划水写博客，下班回家玩羊娃子喜欢的周五夜放克。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WindTerm 2.5.0 输入用户名后假死卡住的解决办法]]></title><description><![CDATA[问题描述 WindTerm2.5.0，使用SSH用户名和密码方式登录Linux服务器。新建会话，输入IP和端口后，到输入用户名界面，输入用户名后，提示”身份验证被拒绝，请重试“，然后软件假死卡住，30秒到…]]></description><link>https://nocoder.org/wind-term-hanging-problem/</link><guid isPermaLink="false">https://nocoder.org/wind-term-hanging-problem/</guid><pubDate>Fri, 07 Jul 2023 07:51:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;问题描述&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0&quot; aria-label=&quot;问题描述 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;问题描述&lt;/h2&gt;
 &lt;p&gt;WindTerm2.5.0，使用&lt;code&gt;SSH&lt;/code&gt;用户名和密码方式登录Linux服务器。新建会话，输入IP和端口后，到输入用户名界面，输入用户名后，提示”身份验证被拒绝，请重试“，然后软件假死卡住，30秒到1分钟后又弹出身份验证失败请重试，输入密码后又跳转到登录界面，继续输入用户名，又会假死。。。&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -1449,365 +1518,4 @@ No renewals were attempted.
           &lt;code slot=&quot;code&quot;&gt;/etc/letsencrypt# ls
 accounts  cli.ini  keys  options-ssl-nginx.conf  renewal-hooks
 archive   csr      live  renewal                 ssl-dhparams.pem&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;</content:encoded></item><item><title><![CDATA[ARTS 第46周]]></title><description><![CDATA[历史ARTS Algorithm Review 以前在完成Review这一项任务的时候，通过皓哥的专栏和引导，发现了很多优秀的国外技术网站，如medium、DZone、javatpoint、IBM Developer…]]></description><link>https://nocoder.org/arts-46/</link><guid isPermaLink="false">https://nocoder.org/arts-46/</guid><pubDate>Fri, 02 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/nocdr/arts&quot;&gt;历史ARTS&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;algorithm&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#algorithm&quot; aria-label=&quot;algorithm permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Algorithm&lt;/h2&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package org.nocoder.leetcode.solution;
-
-/**
- * AddBinary https://leetcode.com/problems/add-binary/
- * &amp;lt;p&amp;gt;
- * Given two binary strings a and b, return their sum as a binary string.
- * &amp;lt;p&amp;gt;
- * Example 1:
- * &amp;lt;p&amp;gt;
- * Input: a = &amp;quot;11&amp;quot;, b = &amp;quot;1&amp;quot;
- * Output: &amp;quot;100&amp;quot;
- * Example 2:
- * &amp;lt;p&amp;gt;
- * Input: a = &amp;quot;1010&amp;quot;, b = &amp;quot;1011&amp;quot;
- * Output: &amp;quot;10101&amp;quot;
- * Constraints:
- * &amp;lt;p&amp;gt;
- * 1 &amp;lt;= a.length, b.length &amp;lt;= 104
- * a and b consist only of &amp;#39;0&amp;#39; or &amp;#39;1&amp;#39; characters.
- * Each string does not contain leading zeros except for the zero itself.
- * Related Topics
- * Math
- * String
- * Bit Manipulation
- * Simulation
- *
- * @author yangjl
- * @description
- * @date 2023-05-19 15:31
- **/
-public class AddBinary {
-    public String addBinary(String a, String b) {
-        if (a == null || b == null || a.length() &amp;gt; 10000 || b.length() &amp;gt; 10000)
-            throw new RuntimeException(&amp;quot;invalid parameters&amp;quot;);
-
-        // 两个字符串长度查，在短字符串前面补领0，方便计算
-        int d = a.length() - b.length();
-        String prefix = &amp;quot;&amp;quot;;
-        for (int i = 0; i &amp;lt; Math.abs(d); i++)
-            prefix += &amp;quot;0&amp;quot;;
-
-        // 参数前面补0
-        if (d &amp;gt; 0)
-            b = prefix + b;
-        else
-            a = prefix + a;
-
-        String[] aa = a.split(&amp;quot;&amp;quot;);
-        String[] bb = b.split(&amp;quot;&amp;quot;);
-        // 用字符串数组来存储结果，长度用aa和bb的都可以
-        String[] res = new String[aa.length];
-
-        // carry表示进位值
-        String carry = &amp;quot;0&amp;quot;;
-
-        // 从末位开始相加
-        for (int i = aa.length - 1; i &amp;gt;= 0; i--) {
-            String sum = carry + aa[i] + bb[i];
-
-            if (&amp;quot;000&amp;quot;.equals(sum)) {
-                res[i] = &amp;quot;0&amp;quot;;
-                carry = &amp;quot;0&amp;quot;;
-            }
-
-            if (&amp;quot;001&amp;quot;.equals(sum) || &amp;quot;010&amp;quot;.equals(sum) || &amp;quot;100&amp;quot;.equals(sum)) {
-                res[i] = &amp;quot;1&amp;quot;;
-                carry = &amp;quot;0&amp;quot;;
-            }
-
-            if (&amp;quot;101&amp;quot;.equals(sum) || &amp;quot;110&amp;quot;.equals(sum) || &amp;quot;011&amp;quot;.equals(sum)) {
-                res[i] = &amp;quot;0&amp;quot;;
-                carry = &amp;quot;1&amp;quot;;
-            }
-
-            if (&amp;quot;111&amp;quot;.equals(sum)) {
-                res[i] = &amp;quot;1&amp;quot;;
-                carry = &amp;quot;1&amp;quot;;
-            }
-
-            // 计算到数组首位时，依然有进位，需要变长数组，长度+1，首位赋值为1
-            if (i == 0 &amp;amp;&amp;amp; &amp;quot;1&amp;quot;.equals(carry)) {
-                // step1. 暂存res到temp
-                String[] tem = res;
-                // step2. 新建一个比原数组长度+1的数组
-                res = new String[aa.length + 1];
-                // step3. 首位赋值为1
-                res[0] = &amp;quot;1&amp;quot;;
-                // step4. 把原数组内容复制过来，下标从1开始复制
-                for (int i1 = 1; i1 &amp;lt; res.length; i1++)
-                    res[i1] = tem[i1 - 1];
-            }
-
-        }
-
-        String result = new String();
-        for (int i = 0; i &amp;lt; res.length; i++)
-            result += res[i];
-
-        return result;
-    }
-}
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;h2 id=&quot;review&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#review&quot; aria-label=&quot;review permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Review&lt;/h2&gt;
-&lt;p&gt;以前在完成Review这一项任务的时候，通过皓哥的专栏和引导，发现了很多优秀的国外技术网站，如&lt;a href=&quot;https://medium.com/&quot;&gt;medium&lt;/a&gt;、&lt;a href=&quot;https://dzone.com&quot;&gt;DZone&lt;/a&gt;、&lt;a href=&quot;https://www.javatpoint.com/&quot;&gt;javatpoint&lt;/a&gt;、&lt;a href=&quot;https://www.ibm.com/&quot;&gt;IBM Developer&lt;/a&gt;等等，阅读高质量的英文文章，可以提高英文水平，也可以学习大佬对技术理解的视角和思维方式。今天阅读的是dzone上一位大佬总结的java11到java17的新特性&lt;a href=&quot;https://dzone.com/articles/whats-new-between-java-11-and-java-17&quot;&gt;What’s New Between Java 11 and Java 17&lt;/a&gt;，篇幅不长，可以快速了解上一个LTS版本Java11到17的一些新特性。下面对文中提到的新特性作以下简要整理。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Text Blocks&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;文本块，类似python中的文本块支持换行。
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;public class TextBlock {
-    public static void main(String[] args) {
-        String json = &amp;quot;&amp;quot;&amp;quot;
-                {
-                    &amp;quot;name&amp;quot;: &amp;quot;Jason&amp;quot;,
-                    &amp;quot;age&amp;quot;: &amp;quot;34&amp;quot;,
-                    &amp;quot;mail&amp;quot;: &amp;quot;yangjinlong86@gmail.com&amp;quot;
-                }
-                &amp;quot;&amp;quot;&amp;quot;;
-        System.out.println(json);
-    }
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-输出结果也是带格式的
-&lt;deckgo-highlight-code language=&quot;json&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;{
-    &amp;quot;name&amp;quot;: &amp;quot;Jason&amp;quot;,
-    &amp;quot;age&amp;quot;: &amp;quot;34&amp;quot;,
-    &amp;quot;mail&amp;quot;: &amp;quot;yangjinlong86@gmail.com&amp;quot;
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Switch Expressions&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;冒号改为箭头方式，不需要单独写&lt;code&gt;break&lt;/code&gt;，代码更简洁
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;private static void withSwitchExpression(Fruit fruit) {
-    switch (fruit) {
-        case APPLE, PEAR -&amp;gt; System.out.println(&amp;quot;Common fruit&amp;quot;);
-        case ORANGE, AVOCADO -&amp;gt; System.out.println(&amp;quot;Exotic fruit&amp;quot;);
-        default -&amp;gt; System.out.println(&amp;quot;Undefined fruit&amp;quot;);
-    }
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;li&gt;支持返回值，如果一个case下需要多行代码，使用&lt;code&gt;yield&lt;/code&gt;关键字指定返回值
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;private static void withYield(Fruit fruit) {
-    String text = switch (fruit) {
-        case APPLE, PEAR -&amp;gt; {
-            System.out.println(&amp;quot;the given fruit was: &amp;quot; + fruit);
-            yield &amp;quot;Common fruit&amp;quot;;
-        }
-        case ORANGE, AVOCADO -&amp;gt; &amp;quot;Exotic fruit&amp;quot;;
-        default -&amp;gt; &amp;quot;Undefined fruit&amp;quot;;
-    };
-    System.out.println(text);
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;yield&lt;/code&gt;支持旧的 switch 语法，也不需要单独写&lt;code&gt;break&lt;/code&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;private static void oldStyleWithYield(Fruit fruit) {
-    System.out.println(switch (fruit) {
-        case APPLE, PEAR:
-            yield &amp;quot;Common fruit&amp;quot;;
-        case ORANGE, AVOCADO:
-            yield &amp;quot;Exotic fruit&amp;quot;;
-        default:
-            yield &amp;quot;Undefined fruit&amp;quot;;
-    });
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Records&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Records 用来创建一个不可变的数据类，与传统的类相比，无需我们再写构造器, getters, hashCode, equals 和 toString方法&lt;/li&gt;
-&lt;li&gt;使用new 创建Record时，如果参数与已经存在的Record相同，那么不会新建的Record副本与原Record是同一个实例。见以下代码最后一行的输出，hashcode是一样的。
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;private static void basicRecord() {
-    record GrapeRecord(Color color, int nbrOfPits) {}
-    GrapeRecord grape1 = new GrapeRecord(Color.BLUE, 1);
-    GrapeRecord grape2 = new GrapeRecord(Color.WHITE, 2);
-    System.out.println(&amp;quot;Grape 1 is &amp;quot; + grape1);
-    System.out.println(&amp;quot;Grape 2 is &amp;quot; + grape2);
-    System.out.println(&amp;quot;Grape 1 equals grape 2? &amp;quot; + grape1.equals(grape2));
-    GrapeRecord grape1Copy = new GrapeRecord(grape1.color(), grape1.nbrOfPits());
-    System.out.println(&amp;quot;Grape 1 equals its copy? &amp;quot; + grape1.equals(grape1Copy));
-    System.out.println(grape1.hashCode() + &amp;quot; &amp;quot; + grape1Copy.hashCode());
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;deckgo-highlight-code language=&quot;log&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;Grape 1 is GrapeRecord[color=java.awt.Color[r=0,g=0,b=255], nbrOfPits=1]
-Grape 2 is GrapeRecord[color=java.awt.Color[r=255,g=255,b=255], nbrOfPits=2]
-Grape 1 equals grape 2? false
-Grape 1 equals its copy? true
--520085790 -520085790&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;li&gt;Record的构造方法中可以增加字段校验逻辑
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;    private static void basicRecordWithValidation() {
-        record GrapeRecord(Color color, int nbrOfPits) {
-            GrapeRecord {
-                System.out.println(&amp;quot;Parameter color=&amp;quot; + color + &amp;quot;, Field color=&amp;quot; + this.color());
-                System.out.println(&amp;quot;Parameter nbrOfPits=&amp;quot; + nbrOfPits + &amp;quot;, Field nbrOfPits=&amp;quot; + this.nbrOfPits());
-                if (color == null) {
-                    throw new IllegalArgumentException(&amp;quot;Color may not be null&amp;quot;);
-                }
-            }
-        }
-        GrapeRecord grape1 = new GrapeRecord(Color.BLUE, 1);
-        System.out.println(&amp;quot;Grape 1 is &amp;quot; + grape1);
-        GrapeRecord grapeNull = new GrapeRecord(null, 2);
-    }&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Sealed Classes&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用关键字&lt;code&gt;sealed&lt;/code&gt;配合&lt;code&gt;permits&lt;/code&gt;来限定类的继承范围，不被允许的类继承该类会编译错误，提示&lt;code&gt;&apos;ClassName&apos; is not allowed in the sealed hierarchy&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;继承了该类的子类需要声明自身的继承范围，使用关键字&lt;code&gt;final&lt;/code&gt;、&lt;code&gt;sealed&lt;/code&gt;和&lt;code&gt;non-sealed&lt;/code&gt;来限定继承范围&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Pattern matching for instanceof&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;instanceof&lt;/code&gt;的类名之后，跟一个变量名，可以省去强转和声明类的步骤
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;Object o = new GrapeClass(Color.BLUE, 2);
-if (o instanceof GrapeClass grape) {
-    System.out.println(&amp;quot;This grape has &amp;quot; + grape.getNbrOfPits() + &amp;quot; pits.&amp;quot;);
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Helpful NullPointerExceptions&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;当发生空指针异常是，异常信息中直接会告诉你是哪个类的哪个方法导致的
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;Exception in thread &amp;quot;main&amp;quot; java.lang.NullPointerException: Cannot invoke &amp;quot;com.mydeveloperplanet.myjava17planet.GrapeClass.getColor()&amp;quot; because the return value of &amp;quot;java.util.HashMap.get(Object)&amp;quot; is null&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;    at com.mydeveloperplanet.myjava17planet.HelpfulNullPointerExceptions.main(HelpfulNullPointerExceptions.java:13)
-```&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Compact Number Formatting Support&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;NumberFormat&lt;/code&gt;类中增加了&lt;code&gt;format&lt;/code&gt;工厂方法，便于数字类型转换&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Day Period Support Added&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;DateTimeFormatter&lt;/code&gt; 中新增了一个&lt;code&gt;B&lt;/code&gt;模式，可以直接返回时间所属的时段信息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;public class DayPeriod {
-    public static void main(String[] args) {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&amp;quot;B&amp;quot;);
-        System.out.println(dtf.format(LocalTime.of(8, 0)));
-        System.out.println(dtf.format(LocalTime.of(13, 0)));
-        System.out.println(dtf.format(LocalTime.of(20, 0)));
-        System.out.println(dtf.format(LocalTime.of(23, 0)));
-        System.out.println(dtf.format(LocalTime.of(0, 0)));
-    }
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;deckgo-highlight-code language=&quot;log&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;上午
-下午
-晚上
-晚上
-午夜&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;默认返回值是当前时区，也可以指定Locale，例如：&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;dtf = DateTimeFormatter.ofPattern(&amp;quot;B&amp;quot;).withLocale(Locale.forLanguageTag(&amp;quot;NL&amp;quot;));&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Stream.toList()&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;旧版本中，如果要把Stream转换成List，需要调用&lt;code&gt;collect(Collectors.toList)&lt;/code&gt;，Java 17 中，&lt;code&gt;Stream&lt;/code&gt;增加了&lt;code&gt;toList()&lt;/code&gt;方法，可以直接转换为&lt;code&gt;List&lt;/code&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;private static void oldStyle() {
-    Stream&amp;lt;String&amp;gt; stringStream = Stream.of(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;);
-    List&amp;lt;String&amp;gt; stringList =  stringStream.collect(Collectors.toList());
-    for(String s : stringList) {
-        System.out.println(s);
-    }
-}
-
-private static void streamToList() {
-    Stream&amp;lt;String&amp;gt; stringStream = Stream.of(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;);
-    List&amp;lt;String&amp;gt; stringList =  stringStream.toList();
-    for(String s : stringList) {
-        System.out.println(s);
-    }
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;tip&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tip&quot; aria-label=&quot;tip permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tip&lt;/h2&gt;
-&lt;p&gt;使用RabbitMQ时，如果设置了自动ack，再自行手动ack的话，会偶发性的导致消息丢失。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;问题现象&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A服务将数据通过MQ发送到B服务，期间出现消息丢失情况。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;排查过程&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1、A服务发送成功后记录了日志，消息是成功发送出去了。
-2、B服务日志打印不规范，输出日志为null，经核实代码，推断&lt;code&gt;message&lt;/code&gt;为空，导致&lt;code&gt;RuntimeException&lt;/code&gt;。
-3、查看RabbitMQ日志，发现异常信息如下：&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;log&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;2023-05-29 23:52:01.502 [error] &amp;lt;0.20990.12&amp;gt; Channel error on connection &amp;lt;0.2510.0&amp;gt; (10.42.0.1:42792 -&amp;gt; 10.42.0.5:5672, vhost: &amp;#39;/&amp;#39;, user: &amp;#39;admin&amp;#39;), channel 1150:
-operation basic.ack caused a channel exception precondition_failed: unknown delivery tag 1&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;&lt;strong&gt;问题原因&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;到此问题基本明晰了，生产环境的配置文件没有将rabbitmq的ack设置为手动，默认值为&lt;code&gt;none&lt;/code&gt;，是自动确认。代码中使用&lt;code&gt;channel.basicAck()&lt;/code&gt;又进行了手动确认，这样的重复确认操作会导致&lt;strong&gt;偶发性&lt;/strong&gt;消息丢失情况。&lt;/p&gt;
-&lt;p&gt;rabbitmq 为每一个channel维护了一个delivery tag的计数器，采用正向自增，新消息投递时自增，当消息响应时自减；在连续收发的场景中，由于消息发送的间隔较短，部分消息因 consumer的重复确认被rabbitmq 当做已处理而丢弃。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决办法&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;取消自动确认，配置手动确认。&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;yml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;spring:
-  rabbitmq:
-    host: ${rabbitmqHost}
-    port: ${rabbitmqPort}
-    username: ${rabbitmqUsername}
-    password: ${rabbitmqPassword}
-    virtual-host: /
-    listener:
-      simple:
-        retry:
-          enabled: true
-          max-attempts: 24
-          initial-interval: 3600000
-        acknowledge-mode: manual&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;h2 id=&quot;share&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#share&quot; aria-label=&quot;share permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Share&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;MegaEase纪念陈皓的&lt;a href=&quot;https://memorial.megaease.cn/&quot;&gt;网站&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;IBM Developer 中文网站已经在2021年3月15日关停，附上一个github上的&lt;a href=&quot;https://github.com/nocdr/ibm_bak&quot;&gt;文章备份仓库&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/nocdr/arts&quot;&gt;历史ARTS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item></channel></rss>
+        &lt;/deckgo-highlight-code&gt;</content:encoded></item></channel></rss>
