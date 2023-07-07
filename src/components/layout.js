@@ -146,7 +146,7 @@ class Layout extends React.Component {
             ))}
           </div>
           <div style={footerStyle}>
-            © {year} NOCODER.ORG • Theme{' '}
+            © {year} Nocoder.org • Theme{' '}
             <a
               className="usubeni"
               target="_blank"
@@ -154,9 +154,9 @@ class Layout extends React.Component {
             >
               usubeni
             </a>{' '}
-            • powered by{' '}
+            • Powered by{' '}
             <a
-              style={{ boxShadow: 'none' }}
+              className="usubeni"
               target="_blank"
               href="https://www.gatsbyjs.org/"
             >
