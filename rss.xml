@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Website]]></title><description><![CDATA[Jason Yang's Website]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 27 Jul 2023 02:41:54 GMT</lastBuildDate><item><title><![CDATA[将博客搬至CSDN]]></title><description><![CDATA[还是决定将博客搬至CSDN，后续在CSDN上分享、记录技术成长。]]></description><link>https://nocoder.org/move-to-csdn/</link><guid isPermaLink="false">https://nocoder.org/move-to-csdn/</guid><pubDate>Thu, 27 Jul 2023 02:15:00 GMT</pubDate><content:encoded>&lt;p&gt;还是决定将博客搬至&lt;a href=&quot;https://blog.csdn.net/yangjinlong86&quot;&gt;CSDN&lt;/a&gt;，后续在CSDN上分享、记录技术成长。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[基于Quartz的定时任务UI组件]]></title><description><![CDATA[需求 我需要实现一个基于springboot 的quartz-ui组件，可以通过web界面来管理定时任务。然后打包成jar文件，提供给使用quartz的项目。 基本思路 去github…]]></description><link>https://nocoder.org/quartz-ui/</link><guid isPermaLink="false">https://nocoder.org/quartz-ui/</guid><pubDate>Fri, 07 Jul 2023 09:14:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;需求&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%9C%80%E6%B1%82&quot; aria-label=&quot;需求 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;需求&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jason Yang's Website]]></title><description><![CDATA[Jason Yang's Website]]></description><link>https://nocoder.org</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 07 Nov 2023 09:14:02 GMT</lastBuildDate><item><title><![CDATA[基于Quartz的定时任务UI组件]]></title><description><![CDATA[需求 我需要实现一个基于springboot 的quartz-ui组件，可以通过web界面来管理定时任务。然后打包成jar文件，提供给使用quartz的项目。 基本思路 去github…]]></description><link>https://nocoder.org/quartz-ui/</link><guid isPermaLink="false">https://nocoder.org/quartz-ui/</guid><pubDate>Fri, 07 Jul 2023 09:14:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;需求&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%9C%80%E6%B1%82&quot; aria-label=&quot;需求 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;需求&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我需要实现一个基于&lt;code&gt;springboot&lt;/code&gt; 的&lt;code&gt;quartz-ui&lt;/code&gt;组件，可以通过web界面来管理定时任务。然后打包成&lt;code&gt;jar&lt;/code&gt;文件，提供给使用&lt;code&gt;quartz&lt;/code&gt;的项目。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1362,4 +1362,160 @@ Hao Chen [17 hours ago]
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;通过读友会群加了他的微信，通过之后我很兴奋，居然加了偶像的微信，我跟他说，我以为您会不同意加好友，他说不会的。后来是2022年有段时间我在工作上有一些变更和挑战，面临着未知的压力，那段时间特别焦躁，每天看书学习到深夜。有一天我鼓起勇气在微信上给皓哥发消息求指导，皓哥耐心询问着我的工作情况，让我非常感动。现在看来，那个时候他的任何一句鼓励都是我最强大的精神支柱。&lt;/p&gt;
-&lt;p&gt;皓哥走了，但他留下的东西，依然指引着我们前进。&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;皓哥走了，但他留下的东西，依然指引着我们前进。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[申请免费HTTPS证书]]></title><description><![CDATA[Let’s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。 我们可以通过Certbot申请免费HTTPS证书，步骤如下： 安装Certbot：Certbot是Let’s…]]></description><link>https://nocoder.org/free-ssl-certs/</link><guid isPermaLink="false">https://nocoder.org/free-ssl-certs/</guid><pubDate>Wed, 07 Jun 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Let’s Encrypt是一个非营利性组织，旨在使HTTPS成为互联网的标准，他们提供免费HTTPS证书，以便更多的网站可以使用HTTPS加密保护用户的隐私和安全。&lt;/p&gt;
+&lt;p&gt;我们可以通过Certbot申请免费HTTPS证书，步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装Certbot：Certbot是Let’s Encrypt的官方客户端，可自动化证书颁发和安装过程&lt;/li&gt;
+&lt;li&gt;运行Certbot：运行Certbot以启动证书颁发和安装过程。&lt;/li&gt;
+&lt;li&gt;等待证书颁发：Certbot将与Let’s Encrypt服务器通信以颁发证书，需要几秒钟或几分钟。&lt;/li&gt;
+&lt;li&gt;安装证书：Certbot将自动安装证书并配置您的Web服务器以使用HTTPS。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意，需要在每90天内更新证书。Certbot可以自动化此过程，因此无需手动更新证书。&lt;/p&gt;
+&lt;p&gt;以下是具体命令，以&lt;code&gt;Ubuntu&lt;/code&gt;、&lt;code&gt;Nginx&lt;/code&gt;为例：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;安装Certbot&lt;/li&gt;
+&lt;/ol&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;sudo apt install certbot&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;安装Certbot Nginx插件，&lt;/li&gt;
+&lt;/ol&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;sudo apt install python3-certbot-nginx&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果用Apache，就安装Apache插件 `sudo apt install python3-certbot-apache&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;使用certbot nginx 插件为域名申请证书&lt;/li&gt;
+&lt;/ol&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;sudo certbot --nginx -d nocoder.org -d www.nocoder.org&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ sudo certbot --nginx -d nocoder.org -d www.nocoder.org
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator nginx, Installer nginx
+Enter email address (used for urgent renewal and security notices)
+ (Enter &amp;#39;c&amp;#39; to cancel): yangjinlong86@gmail.com
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Please read the Terms of Service at
+https://letsencrypt.org/documents/LE-SA-v1.3-September-21-2022.pdf. You must
+agree in order to register with the ACME server. Do you agree?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: Y
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Would you be willing, once your first certificate is successfully issued, to
+share your email address with the Electronic Frontier Foundation, a founding
+partner of the Let&amp;#39;s Encrypt project and the non-profit organization that
+develops Certbot? We&amp;#39;d like to send you email about our work encrypting the web,
+EFF news, campaigns, and ways to support digital freedom.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: Y
+Account registered.
+Requesting a certificate for nocoder.org and www.nocoder.org
+Performing the following challenges:
+http-01 challenge for nocoder.org
+http-01 challenge for www.nocoder.org
+Waiting for verification...
+Cleaning up challenges
+Deploying Certificate to VirtualHost /etc/nginx/conf.d/nocoder.org.conf
+Deploying Certificate to VirtualHost /etc/nginx/conf.d/nocoder.org.conf
+Redirecting all traffic on port 80 to ssl in /etc/nginx/conf.d/nocoder.org.conf
+Redirecting all traffic on port 80 to ssl in /etc/nginx/conf.d/nocoder.org.conf
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Congratulations! You have successfully enabled https://nocoder.org and
+https://www.nocoder.org
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Subscribe to the EFF mailing list (email: yangjinlong86@gmail.com).
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/nocoder.org/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/nocoder.org/privkey.pem
+   Your certificate will expire on 2023-09-05. To obtain a new or
+   tweaked version of this certificate in the future, simply run
+   certbot again with the &amp;quot;certonly&amp;quot; option. To non-interactively
+   renew *all* of your certificates, run &amp;quot;certbot renew&amp;quot;
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let&amp;#39;s Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+   &lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;证书有效期为90天，证书到期后执行&lt;code&gt;certbot renew&lt;/code&gt;续期即可，Certbot会自动更新证书，不需要手动替换文件。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当然，没有到期就执行续期命令，会提示没到期不需要续期，不会生成新的证书。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ sudo certbot renew
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Processing /etc/letsencrypt/renewal/nocoder.org.conf
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Cert not yet due for renewal
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The following certificates are not due for renewal yet:
+  /etc/letsencrypt/live/nocoder.org/fullchain.pem expires on 2023-09-05 (skipped)
+No renewals were attempted.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;使用&lt;code&gt;curl -v&lt;/code&gt;测试一下，网站访问正常。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ curl -v  https://nocoder.org
+*   Trying 13.215.120.28:443...
+* Connected to nocoder.org (13.215.120.28) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+* successfully set certificate verify locations:
+*  CAfile: /etc/ssl/certs/ca-certificates.crt
+*  CApath: /etc/ssl/certs
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384
+* ALPN, server accepted to use http/1.1
+* Server certificate:
+*  subject: CN=nocoder.org
+*  start date: Jun  7 01:09:21 2023 GMT
+*  expire date: Sep  5 01:09:20 2023 GMT
+*  subjectAltName: host &amp;quot;nocoder.org&amp;quot; matched cert&amp;#39;s &amp;quot;nocoder.org&amp;quot;
+*  issuer: C=US; O=Let&amp;#39;s Encrypt; CN=R3
+*  SSL certificate verify ok.
+&amp;gt; GET / HTTP/1.1
+&amp;gt; Host: nocoder.org
+&amp;gt; User-Agent: curl/7.74.0
+&amp;gt; Accept: */*
+&amp;gt; 
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* TLSv1.3 (IN), TLS handshake, Newsession Ticket (4):
+* old SSL session ID is stale, removing
+* Mark bundle as not supporting multiuse
+&amp;lt; HTTP/1.1 200 OK
+&amp;lt; Server: nginx/1.18.0
+&amp;lt; Date: Wed, 07 Jun 2023 02:48:26 GMT
+&amp;lt; Content-Type: text/html
+&amp;lt; Content-Length: 76044
+&amp;lt; Last-Modified: Wed, 07 Jun 2023 01:45:08 GMT
+&amp;lt; Connection: keep-alive
+&amp;lt; ETag: &amp;quot;647fe124-1290c&amp;quot;
+&amp;lt; Accept-Ranges: bytes&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;最后，建议把letsencrypt生成的文件目录&lt;code&gt;/etc/letsencrypt&lt;/code&gt;和Nginx的配置文件都整体备份一下，如果发生服务器迁移，就把整个文件打包迁移就可以继续工作。&lt;/p&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;/etc/letsencrypt# ls
+accounts  cli.ini  keys  options-ssl-nginx.conf  renewal-hooks
+archive   csr      live  renewal                 ssl-dhparams.pem&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;</content:encoded></item></channel></rss>
