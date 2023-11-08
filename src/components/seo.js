@@ -22,6 +22,9 @@ function SEO({
   return (
     <>
       <title>{seo.title}</title>
+      <meta name="google-adsense-account" content="ca-pub-1730830298664620"></meta>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1730830298664620"
+     crossorigin="anonymous"></script>
       <link rel="canonical" href={seo.url} />
       <meta name="keywords" content={seo.keywords.join(',')} />
       <meta name="description" content={seo.description} />
