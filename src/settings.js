@@ -1,4 +1,4 @@
-export const siteName = "Jason Yang's Website"
+export const siteName = "Funny Eagle"
 export const author = 'Jason Yang'
 export const apiUrl = 'https://wwwiki.top'
 

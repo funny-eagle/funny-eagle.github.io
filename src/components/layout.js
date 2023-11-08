@@ -86,10 +86,10 @@ class Layout extends React.Component {
             fontWeight: 200,
           }}
           className="usubeni"
-          to={'/'}
+          to={'/tag/coding/'}
         >
           <span className="logo-mobile">{siteName}</span>
-          <img className="logo" src="/logo.png"/>
+          <img className="logo" src="/funny-eagle.jpg"/>
         </Link>
         {pageName ? (
           <div className="page-name">

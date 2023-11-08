@@ -2,9 +2,9 @@ const gatsbyFeedConfig = require('./gatsby-feed-config.js')
 const gatsbyMarkdownConfig = require('./gatsby-markdown-config.js')
 module.exports = {
   siteMetadata: {
-    title: "Jason Yang's Website",
+    title: "Funny Eagle",
     author: 'Jason Yang',
-    description: "Jason Yang's Website",
+    description: "Funny Eagle",
     siteUrl: 'https://funnyeagle.cn',
     keywords: ['编程', '音乐', '生活'],
   },
