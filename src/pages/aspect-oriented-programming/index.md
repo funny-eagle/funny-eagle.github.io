@@ -390,7 +390,7 @@ JDK的动态代理依靠接口实现，如果有些类并没有实现接口，�
 
 ## Spring AOP
 
-Spring 提供了4中 aop 的支持，基于代理的经典SpringAOP，纯POJO切面，@Aspect注解驱动的切面，注入式AspectJ切面。前三种都是SpringAOP实现的变体，SpringAOP构建在动态代理基础之上，因此，Spring对AOP的支持局限于方法拦截。第四种实际是使用AspectJ的解决方案。提供了SpringAOP所不能支持的许多类型的切点。我们可以借助Spring的依赖注入把bean装配进AspectJ切面中。Spring借鉴了AspectJ的切面，以提供注解驱动的AOP。本质上，它依然是Spring基于代理的AOP。
+Spring 提供了4种 `AOP` 的支持，基于代理的经典SpringAOP，纯POJO切面，`@Aspect`注解驱动的切面，注入式AspectJ切面。前三种都是SpringAOP实现的变体，SpringAOP构建在动态代理基础之上，因此，Spring对AOP的支持局限于方法拦截。第四种实际是使用AspectJ的解决方案。提供了SpringAOP所不能支持的许多类型的切点。我们可以借助Spring的依赖注入把bean装配进AspectJ切面中。Spring借鉴了AspectJ的切面，以提供注解驱动的AOP。本质上，它依然是Spring基于代理的AOP。
 
 #### 使用`@Aspect`创建切面类
 

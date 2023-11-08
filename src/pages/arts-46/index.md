@@ -1,7 +1,7 @@
 ---
 title: ARTS 第46周
 date: 2023-06-02
-description: "时隔两年后的第46篇ARTS，纪念陈皓老师。皓哥虽然不在了，但是他留下来的东西，依然指引着我们前进。"
+description: "时隔两年后的第46篇ARTS，纪念陈皓老师。"
 tags: ['coding']
 slug: ''
 ---

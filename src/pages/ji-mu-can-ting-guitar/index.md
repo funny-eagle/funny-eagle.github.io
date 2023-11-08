@@ -1,7 +1,7 @@
 ---
-title: 吉姆餐厅-吉他弹唱
+title: "吉姆餐厅"
 date: "2022-07-25 01:07:16"
-description: "吉姆餐厅-吉他弹唱视频"
+description: "吉姆餐厅-吉他弹唱"
 tags: ['music']
 ---
 

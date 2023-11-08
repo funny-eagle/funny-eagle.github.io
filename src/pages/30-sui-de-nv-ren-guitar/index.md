@@ -1,5 +1,5 @@
 ---
-title: 三十岁的女人-吉他弹唱
+title: 三十岁的女人
 date: "2023-07-03 00:13:46"
 description: "三十岁的女人-吉他弹唱"
 tags: ['music']

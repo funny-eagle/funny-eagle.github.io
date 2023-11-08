@@ -50,7 +50,7 @@ export const socialMedia = [
   },
   {
     icon: 'rss',
-    href: 'https://nocoder.org/rss.xml',
+    href: 'http://funnyeagle.cn/rss.xml',
   },
 ]
 
@@ -67,7 +67,7 @@ export const friends = [
   {
     title: '老鹰杰森',
     description: '老鹰杰森的个人网站',
-    href: 'https://nocoder.org/',
-    img: 'https://nocoder.org/static/df1082d3ffc5b1288b5e7e78fe346036/ee81f/profile-pic.avif',
+    href: 'http://funnyeagle.cn',
+    img: 'http://funnyeagle.cn/static/df1082d3ffc5b1288b5e7e78fe346036/ee81f/profile-pic.avif',
   },
 ]

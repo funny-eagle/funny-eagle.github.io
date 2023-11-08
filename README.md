@@ -56,7 +56,7 @@ Gatsby 的缺点：
 ## 开发
 
 ```
-npm start
+npm run dev
 ```
 
 ## 发布

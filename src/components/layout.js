@@ -86,7 +86,7 @@ class Layout extends React.Component {
             fontWeight: 200,
           }}
           className="usubeni"
-          to={'/tag/coding/'}
+          to={'/'}
         >
           <span className="logo-mobile">{siteName}</span>
           <img className="logo" src="/logo.png"/>
@@ -146,7 +146,7 @@ class Layout extends React.Component {
             ))}
           </div>
           <div style={footerStyle}>
-            © {year} Nocoder.org • Theme{' '}
+            © {year} FunnyEagle.CN • Theme{' '}
             <a
               className="usubeni"
               target="_blank"

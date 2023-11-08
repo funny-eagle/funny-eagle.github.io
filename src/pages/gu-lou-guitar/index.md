@@ -1,7 +1,7 @@
 ---
-title: 鼓楼-吉他弹唱
+title: 鼓楼
 date: "2022-08-07 22:28:33"
-description: "鼓楼-吉他弹唱视频"
+description: "鼓楼-吉他弹唱"
 tags: ['music']
 ---
 

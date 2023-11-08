@@ -5,7 +5,7 @@ module.exports = {
     title: "Jason Yang's Website",
     author: 'Jason Yang',
     description: "Jason Yang's Website",
-    siteUrl: 'https://nocoder.org',
+    siteUrl: 'https://funnyeagle.cn',
     keywords: ['编程', '音乐', '生活'],
   },
   jsxRuntime: 'automatic',

@@ -10,13 +10,13 @@ export default class HTML extends React.Component {
           <script
             dangerouslySetInnerHTML={{
               __html: `       
-          var theme = 'light'
+          var theme = 'dark'
           let localTheme = localStorage.getItem('theme')
           if (localTheme) {
-            if (localTheme === 'dark') {
-              theme = 'dark'
-            } else {
+            if (localTheme === 'light') {
               theme = 'light'
+            } else {
+              theme = 'dark'
             }
           } else if (window.matchMedia) {
             if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -25,8 +25,8 @@ export default class HTML extends React.Component {
               theme = 'light'
             }
           } else {
-            // default light
-            theme = 'light'
+            // default dark
+            theme = 'dark'
           }
           document.documentElement.className = theme + '-theme'
     `,
