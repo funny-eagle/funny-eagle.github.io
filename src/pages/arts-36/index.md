@@ -1,0 +1,230 @@
+---
+title: ARTS 第 36 周
+date: 2019-04-06
+description: "Algorithm, Reiview, Tip and Share"
+tags: ['coding','arts']
+slug: ''
+---
+
+- Algorithm: 654.Maximum Binary Tree
+- Review:[10 best practices for better restfull api](https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
+- Tip:递归和调用栈
+- Share:耗叔的[分布式系统的技术栈](https://time.geekbang.org/column/article/1512)
+
+
+
+## Algorithm
+
+```java
+package org.nocoder.leetcode.solution;
+
+import org.nocoder.leetcode.solution.common.TreeNode;
+
+/**
+ * 654.Maximum Binary Tree
+ * Given an integer array with no duplicates.
+ * A maximum tree building on this array is defined as follow:
+ *
+ * The root is the maximum number in the array.
+ * The left subtree is the maximum tree constructed from left part subarray divided by the maximum number.
+ * The right subtree is the maximum tree constructed from right part subarray divided by the maximum number.
+ * Construct the maximum tree by the given array and output the root node of this tree.
+ *
+ * Example 1:
+ * Input: [3,2,1,6,0,5]
+ * Output: return the tree root node representing the following tree:
+ *
+ *       6
+ *     /   \
+ *    3     5
+ *     \    /
+ *      2  0
+ *        \
+ *         1
+ * Note:
+ * The size of the given array will be in the range [1,1000].
+ * @author jason
+ * @date 2019/4/7.
+ */
+public class MaximumBinaryTree {
+    public static void main(String[] args) {
+        int[] arr = new int[]{3, 2, 1, 6, 0, 5};
+        TreeNode treeNode = constructMaximumBinaryTree(arr);
+        treeNode.print();
+    }
+
+    public static TreeNode constructMaximumBinaryTree(int[] nums) {
+        return construct(nums, 0, nums.length);
+    }
+    public static TreeNode construct(int[] nums, int l, int r) {
+        if (l == r) {
+            return null;
+        }
+        int max_i = max(nums, l, r);
+        TreeNode root = new TreeNode(nums[max_i]);
+        root.left = construct(nums, l, max_i);
+        root.right = construct(nums, max_i + 1, r);
+        return root;
+    }
+    public static int max(int[] nums, int l, int r) {
+        int max_i = l;
+        for (int i = l; i < r; i++) {
+            if (nums[max_i] < nums[i]) {
+                max_i = i;
+            }
+        }
+        return max_i;
+    }
+}
+```
+
+
+
+## Review
+
+### [10 best practices for better restfull api](https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/)
+
+- 1、使用名词而非动词
+
+  - | Resource  | GET read               | POST create              | PUT update             | DELETE                 |
+    | --------- | ---------------------- | ------------------------ | ---------------------- | ---------------------- |
+    | /cars     | Returns a list of cars | Create a new car         | Bulk update of cars    | Delete all cars        |
+    | /cars/711 | Returns a specific car | Method not allowed (405) | Updates a specific car | Deletes a specific car |
+
+  - 不要使用动词
+
+    `/getAllCars`
+    `/createNewCar`
+    `/deleteAllRedCars`
+
+- GET方法和查询参数不应修改状态
+
+  - 使用PUT，POST 和DELETE方法代替GET方法来修改状态
+  - 不要用GET方法来修改状态
+
+- 使用复数名词
+
+  - 不要混淆单数和复数名词，保持简单，只使用复数名词来表示所有资源。
+
+  - ```
+    /cars instead of /car
+    /users instead of /user
+    /products instead of /product
+    /settings instead of /setting
+    ```
+
+- 将子资源用于关系
+
+  - 如果资源与另一个资源相关，则使用子资源
+
+  - ```
+    GET /cars/711/drivers/ Returns a list of drivers for car 711
+    GET /cars/711/drivers/4 Returns driver #4 for car 711
+    ```
+
+- 在http header 中指定格式
+
+  - 客户端和服务器都需要知道用于通信的格式。必须在http header 中指定格式
+  - content-type 定义请求格式
+  - accept 定义可接受的响应格式列表
+
+- 6、使用HATEOAS
+
+  - **H**ypermedia **a**s **t**he **E**ngine **o**f **A**pplication **S**tate
+
+- 7、为集合提供过滤，排序，字段选择和分页
+
+  - ```
+    GET /cars?color=red Returns a list of red cars
+    GET /cars?seats<=2 Returns a list of cars with a maximum of 2 seats
+    ```
+
+- 8、API版本控制
+
+  - ```
+    /blog/api/v1
+    ```
+
+- 9、使用HTTP状态码处理错误
+
+- 10、允许覆盖HTTP方法
+
+  - 某些代理仅支持POST和GET方法，为了支持具有这些限制的RESTful API，API 需要使用自定义HTTP header X-HTTP-Method_Override 来覆盖POST方法
+
+
+## Tip
+
+### 递归和调用栈
+
+> 最近在读《算法图解》，真的非常易读非常有意思，第三章讲递归，图文并茂描述的浅显易懂，把章节中的内容写了笔记，整理一下，作为本周的Tip吧。
+
+- 递归指的是调用自己的函数
+- 每个递归函数都有两个条件：基线条件和递归条件
+- 栈有两种操作，压入和弹出
+- 所有函数调用都进入**调用栈**(call stack)
+
+#### 递归
+
+> 假设我们需要找一把钥匙，钥匙在一个大盒子里，这个盒子里有盒子，盒子里的盒子有有盒子，钥匙就在某个盒子里。
+
+以下是使用递归方法寻找钥匙的伪代码：
+
+```python
+def look_for_key(box):
+    for item in box:
+        if item.is_a_box():
+            look_for_box()
+        elif item.is_key(item):
+            print "found the key"
+```
+
+递归只是让解决方案更清晰，并没有性能上的优势。Leigh Caldwell在Stack Overflow 上说过一句话：“如果使用循环，程序的性能可能更高；如果使用递归，程序可能更容易理解。如何选择要看什么对你来说更重要。”
+
+编写递归方法时，必须告诉它何时停止递归，所以，每个递归函数都有两部分，基线条件和递归条件。递归条件是指函数调用自己，而基线条件是指函数不在调用自己，从而避免形成无线循环。在上面的找钥匙的例子中，`item.is_a_box()`就是递归条件，`item.is_key(item)`就是基线条件。
+
+#### 调用栈
+
+```python
+def greet(name):
+    print "hello " + name
+    greet2(name)
+    bye()
+    
+def greet2(name):
+    print "how are you " + name
+    
+def bye():
+    print "bye"
+```
+
+假设我们调用greet("jason")，看看调用这个方法的具体情况
+
+- 调用 greet("jason") ，计算机为其分配一块内存
+- 将 name 设置为jason ，存储到内存中
+- 接下来打印hello jason，在调用greet2("jason"),计算机也为其分配一块内存
+- 计算机使用栈来表示这些内存块，其中第二个内存块位于第一个内存块上面。打印howare you jason，然后从方法调用返回，此时，栈顶的内存块被弹出。
+- 当调用greet2()时，greet 只执行了一部分
+- 调用另一个函数时，当前函数暂停并处于未完成状态,该函数的所有变量的值都还在内存中
+- 执行完greet2后，在回到greet，从离开的地方接着往下执行
+- 调用bye方法，打印bye，并从这个函数返回
+- 又回到greet，没有事情要做了，从greet函数返回
+
+这个栈用于存储多个函数的变量，称为**调用栈**
+
+
+
+参考文献：《算法图解》
+
+## Share
+
+### [分布式系统的技术栈](https://time.geekbang.org/column/article/1512)
+
+- 分布式系统的关键技术
+  - 服务治理
+  - 架构软件管理
+  - DevOps
+  - 自动化运维
+  - 资源调度管理
+  - 整体架构监控
+  - 流量控制
+

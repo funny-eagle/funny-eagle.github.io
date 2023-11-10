@@ -1,0 +1,285 @@
+---
+title: ARTS 第 24 周
+date: 2018-12-15
+description: "Algorithm, Reiview, Tip and Share"
+tags: ['coding','arts']
+slug: ''
+---
+
+## Algorithm
+
+```java
+package org.nocoder.leetcode.solution;
+
+/**
+ * 28. Implement strStr()
+ * <p>
+ * Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: haystack = "hello", needle = "ll"
+ * Output: 2
+ * Example 2:
+ * <p>
+ * Input: haystack = "aaaaa", needle = "bba"
+ * Output: -1
+ * Clarification:
+ * <p>
+ * What should we return when needle is an empty string?
+ * This is a great question to ask during an interview.
+ * <p>
+ * For the purpose of this problem, we will return 0 when needle is an empty string.
+ * This is consistent to C's strstr() and Java's indexOf().
+ *
+ * @author yangjinlong
+ * @date 2018-12-17
+ */
+public class ImplementStrStr {
+    public int strStr(String haystack, String needle) {
+        char[] haystackArr = haystack.toCharArray();
+        char[] needleArr = needle.toCharArray();
+
+        if (needleArr.length == 0) {
+            return 0;
+        }
+
+        for (int i = 0; i < haystackArr.length - needleArr.length + 1; i++) {
+            if (checkMatchingAtIndex(haystackArr, needleArr, i)) {
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    private boolean checkMatchingAtIndex(char[] haystackArr, char[] needleArr, int idx) {
+
+        for (int i = 0; i < needleArr.length; i++) {
+            if (haystackArr[i + idx] != needleArr[i]) {
+                return false;
+            }
+        }
+
+        return true;
+
+    }
+
+    public static void main(String[] args) {
+        ImplementStrStr implementStrStr = new ImplementStrStr();
+        System.out.println(implementStrStr.strStr("hello", "llo"));
+        System.out.println(implementStrStr.strStr("aaaaaa", "bba"));
+        System.out.println(implementStrStr.strStr("bbbbbb", ""));
+        System.out.println(implementStrStr.strStr("mississipp", "issip"));
+    }
+}
+
+```
+
+
+
+## Review
+
+### [Netty User guide](https://netty.io/wiki/user-guide-for-4.x.html#wiki-h2-0)
+
+- discard server
+- echo server
+- time server
+
+## Tip
+
+### 使用 datax 将 mysql 数据导入 elasticsearch
+
+- 访问 [es-head](http://47.106.164.212:9100/) 查看当前使用的 index
+
+- 删除没用的 `index` ，发送 HTTP `DELETE` 请求
+
+  - http://47.106.164.212:9200/yuntu_librarys_v2
+
+- 创建`index`，发送 HTTP `PUT` 请求
+
+  - http://47.106.164.212:9200/yuntu_librarys_v2
+
+  - ```json
+    {
+        "index": {
+           "number_of_shards": "1",
+          "number_of_replicas": "0",
+          "refresh_interval": "10s"
+        }
+    }
+    ```
+
+  - http://47.106.164.212:9200/yuntu_library_books_v2
+
+    ```json
+    {
+        "index": {
+           "number_of_shards": "1",
+          "number_of_replicas": "0",
+          "refresh_interval": "10s"
+        }
+    }
+    ```
+
+  - 
+
+- 发送 HTTP `POST` 请求，添加 mapping
+
+  - http://47.106.164.212:9200/yuntu_librarys_v2/doc/_mapping?pretty
+
+  - ```json
+    {
+        "doc": {
+                "properties" : {
+                        "id" : {
+                            "type" : "integer"             
+                        },
+                        "isbn" : {
+                             "type" : "keyword"                                       
+                        },
+                        "price" : {
+                             "type" : "double"                                                                
+                        },
+                       "bookId" : {
+                             "type" : "integer"                     
+                        },
+                        "operUser" : {
+                             "type" : "integer"                     
+                        },
+                        "customerId" : {
+                             "type" : "integer"                     
+                        },
+                        "barNumber" : {
+                             "type" : "text",
+                             "analyzer": "keyword"               
+                        },
+                        "isChecked" : {
+                             "type" : "text",
+                             "analyzer": "keyword"               
+                        },
+                       "checkedDate" : {
+                             "type" : "text",
+                             "analyzer": "keyword"               
+                        },
+                        "frameCode" : {
+                             "type" : "text",
+                             "analyzer": "keyword"                                                 
+                        },
+             
+                        "isEffective" : {
+                             "type" : "text",
+                             "analyzer": "keyword"                                                 
+                        },
+                        "bookName" : {
+                            "type" : "text",
+                             "analyzer": "keyword"          
+                        },
+                        "author" : {
+                            "type" : "text",
+                             "analyzer": "keyword"                                              
+                        },
+                        "publisher" : {
+                           "type" : "text",
+                             "analyzer": "keyword"      
+                        },
+                        "publishDate" : {
+                           "type" : "text",
+                             "analyzer": "keyword"                                    
+                        },
+                       "storageTime" : {
+                           "type" : "text",
+                             "analyzer": "keyword"                                    
+                        },
+                        "categoryCode" : {
+                          "type" : "text",
+                             "analyzer": "keyword"      
+                        },
+                        "catalogueDate" : {
+                           "type" : "text",
+                             "analyzer": "keyword"                                           
+                        },
+                        "bookState" : {
+                            "type" : "text",
+                             "analyzer": "keyword"                                       
+                        },
+                       "storeRoom" : {
+                            "type" : "text",
+                             "analyzer": "keyword"                                         
+                        },
+                 
+                        "borrowNum":{
+                           "type" : "integer"  
+                       },
+                     "canAppoint":{
+                           "type" : "integer"  
+                       },
+                      
+                         "praiseNum":{
+                            "type" : "integer"  
+                       },
+                        "libCode":{
+                            "type" : "text",
+                             "analyzer": "keyword" 
+                       },
+                       
+                        "belongLibraryHallCode":{
+                            "type" : "text",
+                             "analyzer": "keyword" 
+                       },
+                        "callNumber":{
+                            "type" : "text",
+                             "analyzer": "keyword" 
+                       },
+                        "solrUpdate" : {
+                            "type" : "date"                                      
+                           
+                        }
+                           
+                } 
+        } 
+    }
+    ```
+
+  - 数据初始化
+
+    - `datax` 用于初始化数据量较大的表，如 `library_books`
+
+      - ```shell
+        python datax.py libraryBooks.json
+        ```
+
+    - `logstash` 用于持续同步数据
+
+      - ```shell
+        Logstash:usr/local/elk/logstash/mysql.conf 下yuntu-library-books.cfg, yuntu-librarys.cfg 的index 值
+        ```
+
+  - es 索引别名替换, HTTP `POST`请求
+
+    - http://47.106.164.212:9200/_aliases
+
+    - ```json
+      {
+         "actions" : [
+              { "remove" : 
+               	{ 
+                      "index" : "yuntu_library_books_v1", 
+                      "alias" : "yuntu_library_books" 
+                  } 
+              },
+              { "add" : 
+               	{ 
+                      "index" : "yuntu_library_books_v2", 
+                      "alias" : "yuntu_library_books" 
+                  } 
+              }
+          ]
+      }
+      ```
+
+## Share
+
+### [Chinese translation of Netty 4.x User Guide. 中文翻译《Netty 4.x 用户指南》](https://github.com/waylau/netty-4-user-guide)
+
+中文版 netty user guide 作为参考

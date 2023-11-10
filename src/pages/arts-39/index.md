@@ -1,0 +1,73 @@
+---
+title: ARTS 第 39 周
+date: 2019-05-11
+description: "Algorithm, Reiview, Tip and Share"
+tags: ['coding','arts']
+slug: ''
+---
+
+> - Algorithm: 563. Binary Tree Tilt
+> - Review: Microservices Logging Best Practices
+
+## Algorithm
+
+```java
+package org.nocoder.leetcode.solution;
+
+import org.nocoder.leetcode.solution.common.TreeNode;
+
+/**
+ * 563. Binary Tree Tilt
+ * https://leetcode.com/problems/binary-tree-tilt/
+ * @author jason
+ * @date 2019/5/16.
+ */
+public class BinaryTreeTilt {
+    static int tilt = 0;
+    public static int findTilt(TreeNode root){
+        calNodeTilt(root);
+        return tilt;
+    }
+
+    private static int calNodeTilt(TreeNode cur) {
+        if(cur == null){
+            return 0;
+        }
+        int lt = calNodeTilt(cur.left);
+        int rt = calNodeTilt(cur.right);
+        tilt += Math.abs(lt-rt);
+        return lt + rt + cur.val;
+    }
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode(1);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(3);
+        root.left.left = new TreeNode(4);
+        root.right.right = new TreeNode(5);
+        System.out.println(findTilt(root));
+    }
+}
+```
+
+
+## Review
+
+### [Microservices Logging Best Practices](https://dzone.com/articles/microservices-logging-best-practices)
+
+>  如何为微服务应用纪录正确的有意义的日志数据
+
+- 给 request 关联一个唯一标识
+  - 使用唯一标识标记request记录每次调用
+  - 例如，假设你正在记录每个服务的访问权限和错误日志。如果在服务B中发现错误，则可能有必要了解错误是由来自服务A的请求还是发送到服务C的请求引起的
+- 将request 唯一标识与 response 像关联
+- 将日志发送到集中位置
+  - 避免登录到各个不同的服务器来读取日志
+- 结构化日志数据
+  - json，简化解析日志过程
+- 为request添加上下文
+- 将日志写入本地存储
+- 纪录有用且有意义的数据
+  - 排查问题时，可以通过日志记录的信息更快的定位到错误
+  - 自动化报警
+

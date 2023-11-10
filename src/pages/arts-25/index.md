@@ -1,0 +1,171 @@
+---
+title: ARTS 第 25 周
+date: 2018-12-22
+description: "Algorithm, Reiview, Tip and Share"
+tags: ['coding','arts']
+slug: ''
+---
+
+## Algorithm
+
+```java
+package org.nocoder.leetcode.solution;
+
+import java.util.HashMap;
+
+/**
+ * 12. Integer to Roman
+ * <p>
+ * Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+ * <p>
+ * Symbol       Value
+ * I             1
+ * V             5
+ * X             10
+ * L             50
+ * C             100
+ * D             500
+ * M             1000
+ * For example, two is written as II in Roman numeral, just two one's added together.
+ * Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
+ * <p>
+ * Roman numerals are usually written largest to smallest from left to right. However,
+ * the numeral for four is not IIII. Instead, the number four is written as IV.
+ * Because the one is before the five we subtract it making four. The same principle applies to the number nine,
+ * which is written as IX. There are six instances where subtraction is used:
+ * <p>
+ * I can be placed before V (5) and X (10) to make 4 and 9.
+ * X can be placed before L (50) and C (100) to make 40 and 90.
+ * C can be placed before D (500) and M (1000) to make 400 and 900.
+ * Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: 3
+ * Output: "III"
+ * Example 2:
+ * <p>
+ * Input: 4
+ * Output: "IV"
+ * Example 3:
+ * <p>
+ * Input: 9
+ * Output: "IX"
+ * Example 4:
+ * <p>
+ * Input: 58
+ * Output: "LVIII"
+ * Explanation: L = 50, V = 5, III = 3.
+ * Example 5:
+ * <p>
+ * Input: 1994
+ * Output: "MCMXCIV"
+ * Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
+ *
+ * @author yangjinlong
+ * @date 2018-12-21 16:34:50
+ */
+public class IntegerToRoman {
+
+    public static void main(String[] args) {
+        IntegerToRoman integerToRoman = new IntegerToRoman();
+        System.out.println(integerToRoman.intToRoman(3));
+    }
+
+    private String intToRoman(int num) {
+        int[] numbers = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(1, "I");
+        map.put(4, "IV");
+        map.put(5, "V");
+        map.put(9, "IX");
+        map.put(10, "X");
+        map.put(40, "XL");
+        map.put(50, "L");
+        map.put(90, "XC");
+        map.put(100, "C");
+        map.put(400, "CD");
+        map.put(500, "D");
+        map.put(900, "CM");
+        map.put(1000, "M");
+        String result = new String();
+        for (int i : numbers) {
+            while (num >= i) {
+                result += map.get(i);
+                num -= i;
+            }
+        }
+        return result;
+    }
+}
+
+```
+
+
+
+## Review
+
+### [10 Common Software Architectural Patterns in a nutshell](https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013)
+
+> An **architectural pattern** is a general, reusable solution to a commonly occurring problem in software architecture within a given context. Architectural patterns are similar to software design pattern but have a broader scope.
+
+1. **Layered pattern**
+2. **Client-server pattern**
+3. **Master-slave pattern**
+4. **Pipe-filter pattern**
+5. **Broker pattern**
+6. **Peer-to-peer pattern**
+7. **Event-bus pattern**
+8. **Model-view-controller pattern**
+9. **Blackboard pattern**
+10. **Interpreter pattern**
+
+
+
+## Tip
+
+### spring.resources.static-locations
+
+```
+spring.resources.statis-locations: file:/usr/local/springbootproj/web-front/
+```
+
+这个配置指定静态页面的地址，一般用于测试环境，这个目录下就是`html`,`css`,`js`等静态文件，如果没有最后的`/`，spring boot将会抛出 page not found exception。
+
+## Share
+
+### github app [ImgBot](https://github.com/marketplace/imgbot)
+
+以前没关注过github app，前两天在 marketplace 看到一个imgBot应用，比较好用，推荐一下。
+
+自己优化图片非常耗时，让ImgBot为您完成所有繁重的工作。你只是坐下来审查PRs :)
+
+安装完成后，ImgBot将遍历GitHub中的所有图片文件并无损压缩它们。减少文件大小，但保持尺寸和质量不变。ImgBot 在完成后会提交一个PR供您查看和合并。
+
+每次添加或更新图像时，ImgBot都会跳转并使用新的PR为您优化它们。
+
+以下是imgBot为我优化图片的日志
+
+```
+[ImgBot] Optimize images
+
+*Total -- 1,007.54kb -> 807.73kb (19.83%)
+
+/data/images/design-pattern/strategy_pattern.png -- 2.99kb -> 1.52kb (49.17%)
+/data/images/201808/负载均衡.png -- 29.59kb -> 16.69kb (43.59%)
+/data/images/201804/springmvc请求跟踪.png -- 184.49kb -> 106.44kb (42.3%)
+/data/images/201812/RestTemplate-SimpleClientHttpRequestFactory.png -- 56.83kb -> 34.28kb (39.68%)
+/data/images/201805/wechat.jpg -- 27.07kb -> 20.05kb (25.94%)
+/data/images/design-pattern/decorator_pattern_uml_diagram.jpg -- 50.75kb -> 40.75kb (19.72%)
+/data/images/201807/jenkins-pipline.jpeg -- 161.77kb -> 133.35kb (17.57%)
+/data/images/201806/proxy.png -- 32.12kb -> 27.50kb (14.4%)
+/data/images/design-pattern/command.jpeg -- 58.42kb -> 51.15kb (12.44%)
+/data/images/banner/book.png -- 214.12kb -> 194.69kb (9.07%)
+/data/images/201805/jasonyang.jpg -- 63.71kb -> 59.27kb (6.98%)
+/data/images/201805/nocoder_monkey.jpeg -- 24.09kb -> 22.92kb (4.86%)
+/data/images/design-pattern/observer_pattern_uml_diagram.jpg -- 31.54kb -> 30.30kb (3.91%)
+/data/images/design-pattern/singleton_pattern_uml_diagram.jpg -- 13.11kb -> 12.73kb (2.87%)
+/data/images/design-pattern/sunwukong_sixears.jpeg -- 22.74kb -> 22.40kb (1.49%)
+/data/images/design-pattern/abstractfactory_pattern_uml_diagram.jpg -- 34.19kb -> 33.68kb (1.49%)
+```
+

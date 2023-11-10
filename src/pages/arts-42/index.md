@@ -1,0 +1,60 @@
+---
+title: ARTS 第 43 周
+date: 2019-08-11
+description: "Algorithm, Reiview, Tip and Share"
+tags: ['coding','arts']
+slug: ''
+---
+
+> - Algorithm: 1108. IP 地址无效化
+> - Review: Redis Sentinel
+
+## Algorithm
+
+### 1108. IP 地址无效化
+
+给你一个有效的 IPv4 地址 address，返回这个 IP 地址的无效化版本。
+
+所谓无效化 IP 地址，其实就是用 "[.]" 代替了每个 "."。
+
+ 
+
+示例 1：
+
+输入：address = "1.1.1.1"
+输出："1[.]1[.]1[.]1"
+示例 2：
+
+输入：address = "255.100.50.0"
+输出："255[.]100[.]50[.]0"
+
+提示：给出的 address 是一个有效的 IPv4 地址
+
+
+
+```java
+package org.nocoder.leetcode.solution;
+
+import java.util.regex.Pattern;
+
+/**
+ * 1108. IP 地址无效化
+ * https://leetcode-cn.com/problems/defanging-an-ip-address/
+ */
+public class DefangingAnIpAddress {
+    public static String defangIPaddr(String address) {
+        return address.replaceAll("\\.", "[.]");
+    }
+}
+```
+
+## Review
+
+### [Redis Sentinel](https://redis.io/topics/sentinel)
+
+Redis Sentinel 可以提供高可用的Redis服务、监控、通知，也可以为配置客户端。
+
+**监控**，Sentinel会不断检查主实例和从属实例是否按照预期工作；
+**通知**，Sentinel可以通过API通知系统管理员另一台主机上Redis实例的问题；
+**自动故障转移**，如果master未按预期工作，Sentinel可以启动故障转移过程，将某一个slave升级为master，其他slave被重新配置为使用新的master，使用Redis服务器的应用程序在连接时将指向新的地址；
+**配置提供者**，Sentinel 可以配置客户端服务发现的权限，客户端连接到Sentinels，以便询问负责给定服务的当前Redis master的地址。如果发生故障转移，Sentinels将报告新地址。

@@ -1,0 +1,156 @@
+---
+title: ARTS 第 23 周
+date: 2018-12-08
+description: "Algorithm, Reiview, Tip and Share"
+tags: ['coding','arts']
+slug: ''
+---
+
+## Algorithm
+
+```java
+package org.nocoder.leetcode.solution;
+
+/**
+ * 876. Middle of the Linked List
+ * <p>
+ * Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+ * <p>
+ * If there are two middle nodes, return the second middle node.
+ * <p>
+ * Example 1:
+ * <p>
+ * Input: [1,2,3,4,5]
+ * Output: Node 3 from this list (Serialization: [3,4,5])
+ * The returned node has value 3.  (The judge's serialization of this node is [3,4,5]).
+ * Note that we returned a ListNode object ans, such that:
+ * ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.
+ * Example 2:
+ * <p>
+ * Input: [1,2,3,4,5,6]
+ * Output: Node 4 from this list (Serialization: [4,5,6])
+ * Since the list has two middle nodes with values 3 and 4, we return the second one.
+ * <p>
+ * <p>
+ * Note:
+ * <p>
+ * The number of nodes in the given list will be between 1 and 100.
+ *
+ * @author jason
+ * @date 2018/12/9.
+ */
+public class MiddleOfTheLinkedList {
+    public static ListNode middleNode(ListNode head) {
+        int count = 0;
+        for (ListNode cur = head; cur != null; cur = cur.next) {
+            count++;
+        }
+        for (int i = count / 2; i > 0; i--) {
+            head = head.next;
+        }
+        return head;
+    }
+
+}
+
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int x) {
+        val = x;
+    }
+}
+
+```
+
+## Review
+
+### [ The Composite Pattern](https://medium.com/@priya104/the-composite-pattern-2edec432dd58)
+
+模式通常被一起使用，并被组合在同一个设计解决方案中，复合模式在一个解决方案中结合多个设计模式，以解决一般或者重复发生的问题。
+
+
+
+## Tip
+
+Python3 configparser 读取cfg文件时， 如果value包含百分号(%)，则需要另加一个百分号(%)来转义。
+
+假设有如下配置文件:
+
+```python
+[prod-server]
+
+ip=192.168.28.123
+
+username=root
+
+password=7ice$%%18
+```
+
+其中 `password` 真实值为 `7ice$%18`，包含百分号，就必须写成 `7ice$%%18`，否则会抛如下异常信息：
+
+```python
+Traceback (most recent call last):
+
+  File "D:/usr/local/yuntu/clean-unused-docker-images/run.py", line 38, in <module>
+
+    main("conf/server.cfg")
+
+  File "D:/usr/local/yuntu/clean-unused-docker-images/run.py", line 32, in main
+
+    password = conf.get(section, "password")
+
+  File "C:\Python37-32\lib\configparser.py", line 799, in get
+
+    d)
+
+  File "C:\Python37-32\lib\configparser.py", line 394, in before_get
+
+    self._interpolate_some(parser, option, L, value, section, defaults, 1)
+
+  File "C:\Python37-32\lib\configparser.py", line 444, in _interpolate_some
+
+    "found: %r" % (rest,))
+
+configparser.InterpolationSyntaxError: '%' must be followed by '%' or '(', found: '%hua'
+```
+
+## Share
+
+### Spring Boot 设置跨域访问
+
+> 现代浏览器出于安全的考虑，使用 XMLHttpRequest对象发起 HTTP请求时必须遵守同源策略，否则就是跨域的HTTP请求，默认情况下是被禁止的。跨域HTTP请求是指A域上资源请求了B域上的资源，举例而言，部署在A机器上Nginx上的js代码通过ajax请求了部署在B机器Tomcat上的RESTful接口。
+>
+> IP（域名）不同、或者端口不同，都会造成跨域问题。为了解决跨域的问题，曾经出现过jsonp、代理文件等方案，应用场景受限，维护成本高，直到HTML5带来了CORS协议。
+>
+> CORS是一个W3C标准，全称是”跨域资源共享”（Cross-origin resource sharing），允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。它通过服务器增加一个特殊的Header[Access-Control-Allow-Origin]来告诉客户端跨域的限制，如果浏览器支持CORS、并且判断Origin通过的话，就会允许XMLHttpRequest发起跨域请求
+>
+> 作者：郭寻抚
+>
+> 链接：https://www.jianshu.com/p/55643abe7a18
+>
+> 來源：简书
+>
+> 简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
+作者在文中给出的demo在`spring-boot2`里已经过时了，在`spring-boot2`中的解决方案如下：
+
+```java
+package org.nocoder.blog.configuration;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class WebMvcConfig implements WebMvcConfigurer {
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedHeaders("*")
+                .allowedMethods("*")
+                .allowedOrigins("*");
+    }
+}
+```

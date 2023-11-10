@@ -2,11 +2,11 @@
 title: ARTS 第46周
 date: 2023-06-02
 description: "时隔两年后的第46篇ARTS，纪念陈皓老师。"
-tags: ['coding']
+tags: ['coding', 'arts']
 slug: ''
 ---
 
-> [历史ARTS](https://github.com/nocdr/arts)
+> [历史ARTS](https://github.com/funny-eagle/arts)
 
 ## Algorithm
 
@@ -335,4 +335,4 @@ spring:
 
 - MegaEase纪念陈皓的[网站](https://memorial.megaease.cn/)
 - IBM Developer 中文网站已经在2021年3月15日关停，附上一个github上的[文章备份仓库](https://github.com/nocdr/ibm_bak)。
-- [历史ARTS](https://github.com/nocdr/arts)
+- [历史ARTS](https://github.com/funny-eagle/arts)

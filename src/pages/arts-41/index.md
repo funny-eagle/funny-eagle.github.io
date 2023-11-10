@@ -1,0 +1,117 @@
+---
+title: ARTS 第 41 周
+date: 2019-06-22
+description: "Algorithm, Reiview, Tip and Share"
+tags: ['coding','arts']
+slug: ''
+---
+
+> - Algorithm: 144. Binary Tree Preorder Traversal
+> - Review: Why you should use GatsbyJS to build static sites
+> - Tip: TBD
+> - Share: 漂在旧金山
+
+## Algorithm
+
+### 144.Binary Tree Preorder Traversal
+
+Given a binary tree, return the *preorder* traversal of its nodes' values.
+
+**Example:**
+
+```
+Input: [1,null,2,3]
+   1
+    \
+     2
+    /
+   3
+
+Output: [1,2,3]
+```
+
+**Follow up:** Recursive solution is trivial, could you do it iteratively?
+
+
+
+**Solution**
+
+```java
+package org.nocoder.leetcode.solution;
+
+import org.nocoder.leetcode.solution.common.TreeNode;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
+/**
+ * 144. Binary Tree Preorder Traversal
+ * <p>
+ * https://leetcode.com/problems/binary-tree-preorder-traversal/
+ *
+ * @author jason
+ * @date 2019/6/18.
+ */
+public class BinaryTreePreorderTraversal {
+    public static List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) {
+            return list;
+        }
+
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            list.add(node.val);
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+
+        return list;
+    }
+
+    public static TreeNode buildTreeNode() {
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(2);
+        root.right = new TreeNode(4);
+        root.right.left = new TreeNode(1);
+        return root;
+    }
+
+    public static void main(String[] args) {
+        List<Integer> list = preorderTraversal(buildTreeNode());
+        System.out.println(list);
+    }
+}
+```
+
+## Review
+
+### [Why you should use GatsbyJS to build static sites](https://medium.com/free-code-camp/why-you-should-use-gatsbyjs-to-build-static-sites-4f90eb6d1a7b)
+
+Gatsby 是一个很棒的静态网站生成框架，基于 react.js，并且使用GraphQL，可以快速根据markdown文件生成静态网站，速度很快，开发体验非常棒，当然学习 gatsby 最直接的地方还是官网，[官网教程](https://www.gatsbyjs.org/tutorial/)写的很详细，跟着一步一步做就行，我自己的博客[Nocoder](http://nocoder.org)已经从springboot版本改成了gatsby静态网站了，确实，从开发、部署到访问体验都非常好。
+
+medium 上的这篇 why you should use gatsbyJS to build static sites 讲到了 gatsby 的简介、特征、插件、样式以及gatsby内部的工作流程，是快速了解 gatsby 的一篇不错的文章。
+
+## Tip
+
+TBD
+
+## Share
+
+漂在旧金山 ：http://www.ruanyifeng.com/blog/2018/08/san-francisco.html
+
+> 旧金山是美国房价最高的城市，因为它就在硅谷旁边，有大量的科技公司。
+>
+> 每年，无数年轻人涌向那里，寻找自己的梦想，结果形成了一个类似"北漂"的特殊群体。
+
+这并非一篇很励志的文章，只是可以了解一下他们的环境，文中的哥们儿最终放弃了编程。而我认为，可以做自己喜欢的事情，是一种莫大的幸福。
+

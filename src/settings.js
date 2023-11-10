@@ -42,7 +42,7 @@ export const socialMedia = [
   },
   {
     icon: 'github-fill',
-    href: 'https://github.com/nocdr',
+    href: 'https://github.com/funny-eagle',
   },
   {
     icon: 'twitter',
