@@ -76,7 +76,7 @@
 <li>信息交换：JWT是在应用间安全传输信息的好方法。JWT可以使用密钥对进行签名，所以可以确定发送者。由于签名是使用<code>Header</code>和<code>Payload</code>计算的，因此可以验证内容是否未被篡改。</li>
 </ul>
 <h2 id="3-jwt-的结构" style="position:relative;"><a href="#3-jwt-%E7%9A%84%E7%BB%93%E6%9E%84" aria-label="3 jwt 的结构 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3. JWT 的结构</h2>
-<p>一个<code>JWT</code>是由<code>Header</code>、<code>Payload</code>、<code>Signature</code>三个元素构成的字符串，使用<code>.</code>分隔(Header.Payload.Signature)。前两个元素是特定结构的JSON对象，通常经过<code>base64url</code>编码。第三个是将Header和Payload的内容组合并加密。下面是一个<code>JWT</code>示例：</p>
+<p>一个<code>JWT</code>是由<code>Header</code>、<code>Payload</code>、<code>Signature</code>三个元素构成的字符串，使用<code>.</code>分隔(Header.Payload.Signature)。前两个元素是特定结构的JSON对象，通常经过<code>base64url</code>编码。第三个是将Header和Payload的内容组合并加密。下面是一个<code>JWT</code>示例（为了方便阅读，加了换行符）：</p>
 <deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
           <code slot="code">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
 eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
