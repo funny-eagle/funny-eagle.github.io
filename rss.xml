@@ -1,4 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 10 Nov 2023 07:20:31 GMT</lastBuildDate><item><title><![CDATA[We Were Children - Tribes 和弦谱]]></title><description><![CDATA[https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html]]></description><link>http://funnyeagle.cn/tribes-we-were-children-chords/</link><guid isPermaLink="false">http://funnyeagle.cn/tribes-we-were-children-chords/</guid><pubDate>Fri, 10 Nov 2023 04:30:30 GMT</pubDate><content:encoded>&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Nov 2023 09:55:26 GMT</lastBuildDate><item><title><![CDATA[JWT 简介]]></title><description><![CDATA[1. 什么是JWT JSON Web Token，简称JWT，读作/dʒɒt/， 是一种开放标准（RFC 7519），用于以JSON对象的方式安全地传输信息，由于传输的信息是经过数字签名的，所以信息可被验证和信任。 2. JWT的使用场景 授权：这是使用JWT…]]></description><link>http://funnyeagle.cn/Introduction-to-jwt/</link><guid isPermaLink="false">http://funnyeagle.cn/Introduction-to-jwt/</guid><pubDate>Tue, 14 Nov 2023 09:52:10 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-什么是jwt&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%E4%BB%80%E4%B9%88%E6%98%AFjwt&quot; aria-label=&quot;1 什么是jwt permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 什么是JWT&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;JSON Web Token&lt;/code&gt;，简称&lt;code&gt;JWT&lt;/code&gt;，读作&lt;code&gt;/dʒɒt/&lt;/code&gt;， 是一种开放标准（&lt;a href=&quot;https://tools.ietf.org/html/rfc7519&quot;&gt;RFC 7519&lt;/a&gt;），用于以JSON对象的方式安全地传输信息，由于传输的信息是经过数字签名的，所以信息可被验证和信任。&lt;/p&gt;
+&lt;h2 id=&quot;2-jwt的使用场景&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-jwt%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF&quot; aria-label=&quot;2 jwt的使用场景 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. JWT的使用场景&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;授权：这是使用JWT最常见的场景。用户登录后，每个后续请求都将包含JWT，从而允许用户访问该令牌允许的路由、服务和资源。单点登录是目前广泛使用JWT的功能，它的开销小并且能够轻松跨域使用。例如，服务器可以生成一个声明为“以管理员身份登录”的令牌，并将其提供给客户端，客户端可以使用该令牌来证明它以管理员身份登录。&lt;/li&gt;
+&lt;li&gt;信息交换：JWT是在应用间安全传输信息的好方法。JWT可以使用密钥对进行签名，所以可以确定发送者。由于签名是使用&lt;code&gt;Header&lt;/code&gt;和&lt;code&gt;Payload&lt;/code&gt;计算的，因此可以验证内容是否未被篡改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;3-jwt-的结构&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-jwt-%E7%9A%84%E7%BB%93%E6%9E%84&quot; aria-label=&quot;3 jwt 的结构 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. JWT 的结构&lt;/h2&gt;
+&lt;p&gt;一个&lt;code&gt;JWT&lt;/code&gt;是由&lt;code&gt;Header&lt;/code&gt;、&lt;code&gt;Payload&lt;/code&gt;、&lt;code&gt;Signature&lt;/code&gt;三个元素构成的字符串，使用&lt;code&gt;.&lt;/code&gt;分隔(Header.Payload.Signature)。前两个元素是特定结构的JSON对象，通常经过&lt;code&gt;base64url&lt;/code&gt;编码。第三个是将Header和Payload的内容组合并加密。下面是一个&lt;code&gt;JWT&lt;/code&gt;示例：&lt;/p&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;在&lt;a href=&quot;https://jwt.io/#debugger-io%E8%BF%9B%E8%A1%8C%E8%A7%A3%E7%A0%81%E5%90%8E%E5%A6%82%E4%B8%8B%E5%9B%BE%E6%89%80%E7%A4%BA%EF%BC%8C**Header&quot;&gt;https://jwt.io/#debugger-io进行解码后如下图所示，**Header&lt;/a&gt;** 中指定了使用&lt;code&gt;HS256&lt;/code&gt;算法进行签名，令牌类型为JWT；&lt;strong&gt;Payload&lt;/strong&gt;中包含了sub、name、admin信息；&lt;strong&gt;Signature&lt;/strong&gt;中， 使用header和payload以及特定的&lt;code&gt;secret&lt;/code&gt;来生成签名。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/47843a562d5fea9be3334c55c116a2c4/5496c/image-20231114171718443.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACWElEQVR42p2Sy2oUURCGG7IRom7EnRvfQteKrsSnyJUQ0BBFXLgQn0AExcuTiPtoLisXxgQzEwOT6Z4k06f73M/5pLtnzCSZYLDho+pUnUv9VZ1cunyD69ducuXqJEmS/BcTExNMTg7OP116xpPnL1h6/IiFhQWmp6eZmZmpmZubY3Z2lqmpqdoOGeYrqvXi4iLLy8vMz8+TcIEvy3p0OvsX2Uqiyz366VdEb4O8t36GKt7P1uh1Vgbr41wVrxAHG4jeGla1SaIv8TbF2wxnUvyAxs+wah+j9pu1zeqYG+TdyD5vukQvSEKIOBsIYbwEYzxSGpS2OBeJ/5Kci5z23i5CFngCgebQkOM+ZrRaOxSFwFqDc5YY4xmS6D2kAjJBTAWx21g6OXQEQYZ6o1IKKSVa65oQwlgSbwL5piPfcogfDvHTITYd6a7l954lF4NafYBcQV+eK7eu0IVIV0U6OtIzkQMT6epIx0YENC2IEaMNRioqRSEGYjgrt66wcjiv1YPU8EJtKqmR4Ks2nJR64sIGxja5+uqKPIQjcCn4YuTB05JHDw7t6IahddZhpSY4XwXGPn6iwuHB86o8FAXb+1ltZTVxperJj2KMGZFcX9hwuo1VsC8V3w8kW0clW4cF3bygL445EoJSqdGhHDO2SqNQUuKMxmoFugRzCqub36Z0AekbKj+M9mXw4OfU8PpXybsdydsdyce25FNb8r4l+dCSvPkl+ZIaEukjLRnY0w1tFf7KjvWEG//ltubWSsH91ZK7qyUPN0oerJfc+VZyb7Xk9krBq23NH/00GfUPg7g3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20231114171718443.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/47843a562d5fea9be3334c55c116a2c4/fcda8/image-20231114171718443.png&quot;
+        srcset=&quot;/static/47843a562d5fea9be3334c55c116a2c4/12f09/image-20231114171718443.png 148w,
+/static/47843a562d5fea9be3334c55c116a2c4/e4a3f/image-20231114171718443.png 295w,
+/static/47843a562d5fea9be3334c55c116a2c4/fcda8/image-20231114171718443.png 590w,
+/static/47843a562d5fea9be3334c55c116a2c4/efc66/image-20231114171718443.png 885w,
+/static/47843a562d5fea9be3334c55c116a2c4/c83ae/image-20231114171718443.png 1180w,
+/static/47843a562d5fea9be3334c55c116a2c4/5496c/image-20231114171718443.png 2452w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Header&lt;/strong&gt;：通常由令牌的类型和签名算法两部分组成，经过对该&lt;code&gt;JSON&lt;/code&gt;进行Base64Url编码后形成第一个元素。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Payload&lt;/strong&gt;：包含传输的数据。官方称作声明( claims)，用来描述实体（通常是用户）和附加数据，声明分为三类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;注册声明(registered claims)：预定义的声明，非强制性，都只有三个字符，旨在紧凑。包含：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;iss&lt;/code&gt; ：Issuer&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exp&lt;/code&gt;：Expiration Time&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sub&lt;/code&gt; ：Subject&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aud&lt;/code&gt;：Audience&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nbf&lt;/code&gt;：Not Before&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;iat&lt;/code&gt;：Issued At&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jti&lt;/code&gt;：JWT ID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;公共声明(public claims)：遵循 &lt;a href=&quot;https://www.iana.org/assignments/jwt/jwt.xhtml&quot;&gt;IANA JSON Web Token Registry&lt;/a&gt; 中定义的声明命名，或者防冲突的命名&lt;/li&gt;
+&lt;li&gt;私有声明(private claims)：用户自定义声明。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Signature&lt;/strong&gt; 用于验证JWT的真实性和完整性，签名的生成方式通常是将Header和Payload组合起来，使用一个secret key 进行计算，然后再与令牌中的签名部分比对&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;参考文献&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE&quot; aria-label=&quot;参考文献 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;参考文献&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://jwt.io/introduction/&quot;&gt;JWT.IO&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://auth0.com/resources/ebooks/jwt-handbook?_ga=2.186766504.1633974048.1699948492-2054291612.1699940448&amp;#x26;_gl=1*1c5u08o*rollup_ga*MjA1NDI5MTYxMi4xNjk5OTQwNDQ4*rollup_ga_F1G3E656YZ*MTY5OTk1MzQ2OS4yLjEuMTY5OTk1NDg3Mi42MC4wLjA.*_ga*MjA1NDI5MTYxMi4xNjk5OTQwNDQ4*_ga_QKMSDV5369*MTY5OTk1MzQ2OS4yLjEuMTY5OTk1NDg3My42MC4wLjA.&quot;&gt;JWT Handbook&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/JSON_Web_Token&quot;&gt;wikipedia JSON Web Token&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.iana.org/assignments/jwt/jwt.xhtml&quot;&gt;JSON Web Token Claims&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[We Were Children - Tribes 和弦谱]]></title><description><![CDATA[https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html]]></description><link>http://funnyeagle.cn/tribes-we-were-children-chords/</link><guid isPermaLink="false">http://funnyeagle.cn/tribes-we-were-children-chords/</guid><pubDate>Fri, 10 Nov 2023 04:30:30 GMT</pubDate><content:encoded>&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;Intro : B F# E Eb x2
 e|-------------------------|--------------------------|
 B|-------------------------|--------------------------|
@@ -1490,75 +1568,4 @@ Clojure, 一种函数式的通用编程语言，提供优秀的并发性。是�
 &lt;li&gt;可能具有状态，此状态外部可见&lt;/li&gt;
 &lt;li&gt;封装了自己的状态和行为&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;一个构件可以包含多个类元素，但是一个类元素只能属于一个构件。&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[中文技术类RSS源订阅推荐]]></title><description><![CDATA[RSS订阅源 技术博客 酷 壳 – CoolShell 陈皓的博客，虽然不会再更新了，但是每篇文章都非常优质。 订阅地址：http://coolshell.cn/feed 阮一峰的网络日志 他整理的科技爱好者周刊很有意思，属于每周必读的文章了。 订阅地址：http://www…]]></description><link>http://funnyeagle.cn/rss-feed/</link><guid isPermaLink="false">http://funnyeagle.cn/rss-feed/</guid><pubDate>Sun, 25 Jun 2023 16:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;rss订阅源&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rss%E8%AE%A2%E9%98%85%E6%BA%90&quot; aria-label=&quot;rss订阅源 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RSS订阅源&lt;/h2&gt;
-&lt;h3 id=&quot;技术博客&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2&quot; aria-label=&quot;技术博客 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;技术博客&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;酷 壳 – CoolShell
-&lt;ul&gt;
-&lt;li&gt;陈皓的博客，虽然不会再更新了，但是每篇文章都非常优质。&lt;/li&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://coolshell.cn/feed&quot;&gt;http://coolshell.cn/feed&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;阮一峰的网络日志
-&lt;ul&gt;
-&lt;li&gt;他整理的科技爱好者周刊很有意思，属于每周必读的文章了。&lt;/li&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://www.ruanyifeng.com/blog/atom.xml&quot;&gt;http://www.ruanyifeng.com/blog/atom.xml&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Tinyfool的个人网站
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://feeds.feedburner.com/Tinyfoolblog&quot;&gt;http://feeds.feedburner.com/Tinyfoolblog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;月光博客
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://feed.williamlong.info/&quot;&gt;http://feed.williamlong.info/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;美团技术团队
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://tech.meituan.com/atom.xml&quot;&gt;http://tech.meituan.com/atom.xml&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Thoughtworks洞见
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;https://insights.thoughtworks.cn/feed/&quot;&gt;https://insights.thoughtworks.cn/feed/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;ImportNew
-&lt;ul&gt;
-&lt;li&gt;专注Java技术分享，包括Java基础技术、进阶技能、架构设计和Java技术领域动态等。&lt;/li&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://feedmaker.kindle4rss.com/feeds/importnew.weixin.xml&quot;&gt;http://feedmaker.kindle4rss.com/feeds/importnew.weixin.xml&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;互联网&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BA%92%E8%81%94%E7%BD%91&quot; aria-label=&quot;互联网 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;互联网&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;36氪
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://www.36kr.com/feed&quot;&gt;http://www.36kr.com/feed&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;爱范儿
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://www.ifanr.com/feed&quot;&gt;http://www.ifanr.com/feed&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;小众软件
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://feed.appinn.com/&quot;&gt;http://feed.appinn.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;互联网的一些事
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://feed.yixieshi.com/&quot;&gt;http://feed.yixieshi.com/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;极客公园
-&lt;ul&gt;
-&lt;li&gt;订阅地址：&lt;a href=&quot;http://feeds.geekpark.net/&quot;&gt;http://feeds.geekpark.net/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;推荐使用&lt;a href=&quot;https://feedly.com/&quot;&gt;Feedly&lt;/a&gt;这个订阅软件，很好用，免费版就可以满足个人需求了，也有桌面客户端，比较简单，但是够用了。&lt;/p&gt;
-&lt;p&gt;最后，我想说，如果有时间，就专注做好一件事情。面对各种公众号标题党推文，我更愿意用feedly来阅读这些值得花时间的优质文章。&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;&lt;strong&gt;一个构件可以包含多个类元素，但是一个类元素只能属于一个构件。&lt;/strong&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
