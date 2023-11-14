@@ -65,6 +65,7 @@ export default class HTML extends React.Component {
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossOrigin="anonymous" />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
+          <meta name="baidu-site-verification" content="codeva-KiUgz2gAMo" />
           <meta name="google-adsense-account" content="ca-pub-1730830298664620"></meta>
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1730830298664620"
      crossorigin="anonymous"></script>
