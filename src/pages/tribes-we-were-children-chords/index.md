@@ -5,7 +5,7 @@ description: "We Were Children - Tribes 和弦谱"
 tags: ['music', 'chords']
 slug: ''
 ---
-![tribes](./2013Tribes.jpg)
+![tribes](./tribes-band.jpg)
 
 ```
 Intro : B F# E Eb x2
