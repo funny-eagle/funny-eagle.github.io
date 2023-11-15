@@ -15,14 +15,13 @@ class Layout extends React.Component {
     year: '',
     days: '',
     theme: '',
-    logo: ''
+    logo: '/funny-eagle-light.jpg'
   }
   componentDidMount() {
     this.setState({
       theme: window.theme,
       year: new Date().getFullYear(),
-      days: this.formatTime(new Date() - new Date('2018-12-05T14:13:38')),
-      logo: "/funny-eagle-light.jpg"
+      logo: "/funny-eagle-light.jpg",
     })
 
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
