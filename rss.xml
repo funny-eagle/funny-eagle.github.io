@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 15 Nov 2023 07:23:37 GMT</lastBuildDate><item><title><![CDATA[JWT 简介]]></title><description><![CDATA[1. 什么是 JWT JSON Web Token，简称JWT，读作/dʒɒt/， 是一种开放标准（RFC 7519），用于以JSON对象的方式安全地传输信息，由于传输的信息是经过数字签名的，所以信息可被验证和信任。 2. JWT 的使用场景 授权：这是使用JWT…]]></description><link>http://funnyeagle.cn/Introduction-to-jwt/</link><guid isPermaLink="false">http://funnyeagle.cn/Introduction-to-jwt/</guid><pubDate>Tue, 14 Nov 2023 09:52:10 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-什么是-jwt&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%E4%BB%80%E4%B9%88%E6%98%AF-jwt&quot; aria-label=&quot;1 什么是 jwt permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 什么是 JWT&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 15 Nov 2023 07:53:00 GMT</lastBuildDate><item><title><![CDATA[JWT 简介]]></title><description><![CDATA[1. 什么是 JWT JSON Web Token，简称JWT，读作/dʒɒt/， 是一种开放标准（RFC 7519），用于以JSON对象的方式安全地传输信息，由于传输的信息是经过数字签名的，所以信息可被验证和信任。 2. JWT 的使用场景 授权：这是使用JWT…]]></description><link>http://funnyeagle.cn/Introduction-to-jwt/</link><guid isPermaLink="false">http://funnyeagle.cn/Introduction-to-jwt/</guid><pubDate>Tue, 14 Nov 2023 09:52:10 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-什么是-jwt&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%E4%BB%80%E4%B9%88%E6%98%AF-jwt&quot; aria-label=&quot;1 什么是 jwt permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 什么是 JWT&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;JSON Web Token&lt;/code&gt;，简称&lt;code&gt;JWT&lt;/code&gt;，读作&lt;code&gt;/dʒɒt/&lt;/code&gt;， 是一种开放标准（&lt;a href=&quot;https://tools.ietf.org/html/rfc7519&quot;&gt;RFC 7519&lt;/a&gt;），用于以JSON对象的方式安全地传输信息，由于传输的信息是经过数字签名的，所以信息可被验证和信任。&lt;/p&gt;
 &lt;h2 id=&quot;2-jwt-的使用场景&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-jwt-%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF&quot; aria-label=&quot;2 jwt 的使用场景 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. JWT 的使用场景&lt;/h2&gt;
 &lt;ul&gt;
@@ -112,7 +112,38 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;
 &lt;li&gt;&lt;a href=&quot;https://auth0.com/resources/ebooks/jwt-handbook?_ga=2.186766504.1633974048.1699948492-2054291612.1699940448&amp;#x26;_gl=1*1c5u08o*rollup_ga*MjA1NDI5MTYxMi4xNjk5OTQwNDQ4*rollup_ga_F1G3E656YZ*MTY5OTk1MzQ2OS4yLjEuMTY5OTk1NDg3Mi42MC4wLjA.*_ga*MjA1NDI5MTYxMi4xNjk5OTQwNDQ4*_ga_QKMSDV5369*MTY5OTk1MzQ2OS4yLjEuMTY5OTk1NDg3My42MC4wLjA.&quot;&gt;JWT Handbook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/JSON_Web_Token&quot;&gt;wikipedia JSON Web Token&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.iana.org/assignments/jwt/jwt.xhtml&quot;&gt;JSON Web Token Claims&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[We Were Children - Tribes 和弦谱]]></title><description><![CDATA[https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html]]></description><link>http://funnyeagle.cn/tribes-we-were-children-chords/</link><guid isPermaLink="false">http://funnyeagle.cn/tribes-we-were-children-chords/</guid><pubDate>Fri, 10 Nov 2023 04:30:30 GMT</pubDate><content:encoded>&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[We Were Children - Tribes 和弦谱]]></title><description><![CDATA[https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html]]></description><link>http://funnyeagle.cn/tribes-we-were-children-chords/</link><guid isPermaLink="false">http://funnyeagle.cn/tribes-we-were-children-chords/</guid><pubDate>Fri, 10 Nov 2023 04:30:30 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/66ba225cd380c904471570de835c60a2/b4294/tribes-band.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwQG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHRLnrcrMShf//EABoQAAMAAwEAAAAAAAAAAAAAAAABAgMEERP/2gAIAQEAAQUCWyLZpyszs6etJdP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFH/8QAGxAAAgMAAwAAAAAAAAAAAAAAAAECERIQMUH/2gAIAQEABj8Ckk7fhF5Zo6KXH//EAB0QAAICAgMBAAAAAAAAAAAAAAABESFBYTFRcZH/2gAIAQEAAT8hrgefjs5oE4EG2xKrUH6LAkWaUf/aAAwDAQACAAMAAAAQeO//xAAWEQEBAQAAAAAAAAAAAAAAAAAAESH/2gAIAQMBAT8QxX//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAEBAAIDAQAAAAAAAAAAAAABEQAhMUFhUf/aAAgBAQABPxDUYo4ClC9PkzrnDyrGX5xcVKg9XKTWNEWvMqpEtm1SOWaHr1z/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;tribes&quot;
+        title=&quot;&quot;
+        src=&quot;/static/66ba225cd380c904471570de835c60a2/1c72d/tribes-band.jpg&quot;
+        srcset=&quot;/static/66ba225cd380c904471570de835c60a2/a80bd/tribes-band.jpg 148w,
+/static/66ba225cd380c904471570de835c60a2/1c91a/tribes-band.jpg 295w,
+/static/66ba225cd380c904471570de835c60a2/1c72d/tribes-band.jpg 590w,
+/static/66ba225cd380c904471570de835c60a2/b4294/tribes-band.jpg 600w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;Intro : B F# E Eb x2
 e|-------------------------|--------------------------|
 B|-------------------------|--------------------------|
@@ -240,151 +271,6 @@ we get older they get younger it was you or me
 
 End on - B &lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 238px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/0e59cee7163975f859e2f308e9120353/5ea4d/1aab69a2f5ff4e199c0d958cb5f9d5ba.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAIAAADUsmlHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACOElEQVR42o2TuU7jUBSGecuI56CkSEcXEAUFbxAJUeQBAsQxi4hQIAV2MAihFLbvvni9Xs4I35kwYWBmvs6SP/3nHPvfgm/I89wYU3V8984WADRNAwBt2zYdAFCW5d7e3ng8Pjw8HI/HAFDXdfuLDflPtNbD4TAIgt3dXd/31wFfJN/e3mKMAcB13X6/L4SI45gQwjmnlHLOEUK4AyEkhNiQrTmbzQaDQa/XU0rxDsaYEIIQIqWklDLGpJTL5XI9xbu8WCyqqrq7uzs4ONje3s6yLE1T1aG1llKmaSqlVEplWRYEwYY8n8/rur66ujo5ORmNRoSQMAwRQnEcI4SiKCKERFFkd/E8b0O+v78vy9JxHNd1AcDzvF6vNxqNjDG0429jL5fLtm0nk8l0Oq2qarVaHR8fz+dzpZS9kJSSMcY5V0p9lh8eHowxjuOcnZ1prcMwtHvu7Oz0+31KKUIoDMMoijDGj4+PdV1/yC8vLwBwcXFxfX0NAJxzrXVRFMPh8PT0NM9zez+tdZ7nQRBsyJeXl0mSTKfTyWRSFEUcx4wxQkjagTHmnGOM7Zf3ff/19bUsy5/y8/MzAJyfnzuOY4zBGAshrP/pYEop3/cZYzb8XbbOzc2N67pJkkRRRCm1vxQhBGPMGLOPjLGnp6e3t7ePZGNM0zR1XadpWhRFlmVKKfkVQog8z5Mk+Ui2lQKA1Wo1m808zyuKAv6DrXUZ7dr7+/tHR0e2Sb/X8BNfVJIQwhhbT/XP5B8gtOI8RbrfbgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;F#&quot;
-        title=&quot;&quot;
-        src=&quot;/static/0e59cee7163975f859e2f308e9120353/5ea4d/1aab69a2f5ff4e199c0d958cb5f9d5ba.png&quot;
-        srcset=&quot;/static/0e59cee7163975f859e2f308e9120353/12f09/1aab69a2f5ff4e199c0d958cb5f9d5ba.png 148w,
-/static/0e59cee7163975f859e2f308e9120353/5ea4d/1aab69a2f5ff4e199c0d958cb5f9d5ba.png 238w&quot;
-        sizes=&quot;(max-width: 238px) 100vw, 238px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 234px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1c623eb8d0722c1e07c0dd9f81d937d4/7235c/143ca08ce3f14aeba0b3a589b8a7aa68.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 92.56756756756756%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAAsTAAALEwEAmpwYAAACZ0lEQVR42pWUPU/rMBSG+w8REgMIISTEX4CJoUyVusACTCywsAU6oEqoC3SgBRWJ8NG0Cb2xU1NUGhWnSezYyUGNRcLlonu5z2Rbef1Ix+ekAP9PkiQypaA26jSO4yQFAFzXLZfL9/f36vzbWwqf78uuAACM8eLioqZpX8LZZ9MwpbTf76tNrVa7uroSQnie9/r6enFxYdt2EASUUi+FUsoYy8Oj0UjX9TiOG43GwsJCsVhkjNm2TQgJgmA8HiOECCEYY8dx+v3+w8NDJi+EYUgp5Zyfnp6urq5ub28DgJQySZKDg4Pz8/PPFQIA0zTVYho2DKNerydJcnJyMjc3t7Gx4bquaZrtdntmZqZUKhFCuh9YltVsNnMzpXQwGERRdHZ2trKysrW1BQBCCAA4Ojq6vLxU5jgFAJ6ennIzIeTu7k4IcXx8nJkty9J1fWlpaXNz03Ec0zQzc6PRyM1vb2+O43xr1jSt1Wr9zYwQUuZKpTI/P18sFj3PQwgZhjE7O7u2tjYcDn99gDG+vr7Oza7rdrtdIUS1Wl1eXi6XywDgeR7nXNf1Xq/HGAvDcDKZ+L7POTcMI+uZwvPz8+3tbRRFmqatr6/v7e1RSnHKy8vLYDDI3hljTAhptVq5eTQaDYdDANjf3w+CQEoZhqEQgjEWBAFLEUKEYcgYk1J2Oh1VkWnYsixVlUql0ul0eikYY4SQbdsoBWOs1hjjx8fHdrs9Ho+nYVVJ1VWcc1VVpf0T3/ejKFL999tUSSmbzWa1Wr25uYmi6CeDnYc55zs7O7u7u4eHh77vf5m+f4SllK7rqiL98JfyDroLBKraJQA6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;B&quot;
-        title=&quot;&quot;
-        src=&quot;/static/1c623eb8d0722c1e07c0dd9f81d937d4/7235c/143ca08ce3f14aeba0b3a589b8a7aa68.png&quot;
-        srcset=&quot;/static/1c623eb8d0722c1e07c0dd9f81d937d4/12f09/143ca08ce3f14aeba0b3a589b8a7aa68.png 148w,
-/static/1c623eb8d0722c1e07c0dd9f81d937d4/7235c/143ca08ce3f14aeba0b3a589b8a7aa68.png 234w&quot;
-        sizes=&quot;(max-width: 234px) 100vw, 234px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 236px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/2692fc4d35f7d610c2917f61952988af/a7bcd/8dc3ef767c654d70b238975f24c87a25.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAIAAADUsmlHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACWklEQVR42o2TS0srMRTH/ZRCHejKT1DBbb+ApXVRQadI3blpOy3oRqqIbop0UxcifeFM22kek8k06Tw6k8nlGnyM9Mr9LUIg+Z+T8885O3IbQogkSaIoStNU/psdKWX6jtrEcSylfHh40HXdMIzb29vHx8erq6vJZKKCfg+38yOYOru8vCyVStVqtVwu12q14+Pjm5sbJf6ZGWPc7/ellGEYlkql6+tr3/cJIaZpLpdLx3HwO847GOMwDL/EYRhijIUQnU4nl8udnZ0lSQIAULcBAEoJIXRd1zRNy7LUG/+KCSGTySSOY8Mw8vl8vV6XUnLOGWPr9Vqtvu+vVqswDCGEGTEAYDAYpGnaaDR2d3dPTk58318sFvP53LZttS6Xy/l8DiEcj8dvb2+ZzC8vL0mSGIahaVqtVpNSUkoJIYwx13U9z1utVq7rcs5t285kppSORiMhRLPZVDULIRBC5APHcQghCCFKqWVZpml+iTHGr6+vm83GMIxPwxhjz8/P+/v7d3d3ynyEkOd5s9ksI/Y8z7KsJElarVYul9N1XQjhed5wODw8POz3+5xzQgjGeIsYQvj09LTZbNrttqZp5+fnUsogCEajUaFQ6PV6cRwzxiilvu8DADI1M8Ysy4rjuNlsapp2enoaBIHjOIPB4ODg4P7+nlIKALBtG2M8nU4zbpumqTqs3W7v7e3pui6lVCar7/3N7SiKOOdpmgZBUKlUut1uFEUAAPgB+gaEMNOe34EQTqdTzrn8DzIjSQgpFotHR0cXFxdqNtNtbB9JIYRqQ4TQ53j+kvkPnivH/0pByHAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Abm&quot;
-        title=&quot;&quot;
-        src=&quot;/static/2692fc4d35f7d610c2917f61952988af/a7bcd/8dc3ef767c654d70b238975f24c87a25.png&quot;
-        srcset=&quot;/static/2692fc4d35f7d610c2917f61952988af/12f09/8dc3ef767c654d70b238975f24c87a25.png 148w,
-/static/2692fc4d35f7d610c2917f61952988af/a7bcd/8dc3ef767c654d70b238975f24c87a25.png 236w&quot;
-        sizes=&quot;(max-width: 236px) 100vw, 236px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 240px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/c80ca52c9e0eb109a7c6996fee837f16/8ff5a/0279c1dc90cf46c28178389388917a0e.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 87.83783783783784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAIAAADUsmlHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACN0lEQVR42o2TTWvqQBiF/XH9Jw0ipe3OH1CkKKUEpN24E7uo4LL4gTsRty1FaIqt1MbJxJjM5GNMpiNJ3kszXLW3CvdZDAzMmXPmHU4ODpAkCcY4DEM4TA4A0jSVa/IXANB1vVgs6rouL0p32COWh6QSABaLxc3NjWVZuwf+dWaMDYdDAGCMlcvlWq22Wq0MwzBN08gwd8AYu667Fcdx7HlekiSdTufk5OTq6kpeFIYhQohSGmUwxqIo4py/v79vguR83x+NRgDw8PBwfHx8cXERBAHGWNO0o6Ojer1u2zZCSNd1GeTl5WXrHIah3He73dPT0+vrawDgGdVq9fHxMU1TIUQURUKI9Xo9nU43c/kWPz09SWdFUUqlEufctu3pdKooyt3dne/7lmWZprnMeH193cbmnGualqZpp9MpFAqVSgUAPM9zXff29nY0GnHOfd93XTcIAsbY29vbnje32+2NmDGGMT47O2u1WkKIg2I5QBk7n89fXl5yzi3Lms/nqqr2+33XdQ/GZowNBgMA6PV65+fnqqoCgPye9Xq9GVUYhl9fX0KIHwMTQiCEAKDRaDw/P89mM4SQaZrz+dwwDJQhtzjjx1cRQvr9PgDc399/fn4SQhaLBaXUtm0nw7ZtSulyuSSEUEo1Tfv4+Ijj+FucJMlqtQKAICOKoiAIKKVkH47jsAz57NxuByeTyXg8dhznUBMOVjKO42azWavV6vW67/u/m/i7lVvnOI4JIZ7nWZb1n85/AClP0bPJmsWWAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;E&quot;
-        title=&quot;&quot;
-        src=&quot;/static/c80ca52c9e0eb109a7c6996fee837f16/8ff5a/0279c1dc90cf46c28178389388917a0e.png&quot;
-        srcset=&quot;/static/c80ca52c9e0eb109a7c6996fee837f16/12f09/0279c1dc90cf46c28178389388917a0e.png 148w,
-/static/c80ca52c9e0eb109a7c6996fee837f16/8ff5a/0279c1dc90cf46c28178389388917a0e.png 240w&quot;
-        sizes=&quot;(max-width: 240px) 100vw, 240px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 242px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/74d86d4a5064e2011c79d90859f0b5f0/a1a85/114164c3b6e04c9286da4fffdcec0c90.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 87.83783783783784%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAIAAADUsmlHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACbklEQVR42pWTzUrrQBSA+3rWleQJfIBudS8u3NqNVOhGVFRUBFcFQaxCBRWltdSE1sRkMjOZJB3NtJk2iTkXO9zWXrhy77ebn2/OOXNmCvD/fH5+ZlkGAIV8AgDkeZ5NAIDb29tqtXp2dvby8qKWvjM9pfDHqUo+Pz8vl8uVSmVzc/OHFAoIIYwxAHDOt7a2TNOMosiyrMfHx3a7bRgG5zz8Ded8LjKlNAgCxtjx8fHi4uLd3Z0QIgzDwWAwGo0458EExtj7+7tpmv1+XxXyJRNChBC2be/s7Gia1mw20zQFgFqttrq6SghJkmQ4HAohsixDCPm+P5Ofnp5M06SUVqvVYrF4c3PDGOOcn5yclEqlbrdLKUUIOY7DGOt0OnMyIYRz7jjOwcGBpmmdTkfV02g01tfXOecAkKbpeDwGAMbYnOw4DqUUY7y9vb2wsHB1dYUx9jzv9PR0ZWXl+fnZdV3LskzTxBi3Wq05udfrqcQODw81TdN1XUW+v7/f2NiIoki9CnUR/oSZ/Pb25vs+xrhSqRSLxcvLS5XL3t7e8vLyw8MDQuj19bXX6zmO02w252Rd1y3Lcl13f39/aWmp3W4DwGg0klIOh0MpZZIk4/E4juM8zwkhc7Lv+1EU2ba9u7tbr9cNwyCEuK6r4tu2jTFWQ3XbQRDM5FarpTYdHR0BwMfHRxzHUsrBYCClFEJIKeM4FkKkaUoI6Xa7QgjlFzzP6/f7SZIYhoExJoSorips23a+gRDyPE/170uePtQ0TaMoCsNQ/Y1/oTD9SdfX12tra+Vy+eLiQrUn/zszWQ0opY1GQ9d1Sul08ufIvwDG7sz90PxOzwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Eb&quot;
-        title=&quot;&quot;
-        src=&quot;/static/74d86d4a5064e2011c79d90859f0b5f0/a1a85/114164c3b6e04c9286da4fffdcec0c90.png&quot;
-        srcset=&quot;/static/74d86d4a5064e2011c79d90859f0b5f0/12f09/114164c3b6e04c9286da4fffdcec0c90.png 148w,
-/static/74d86d4a5064e2011c79d90859f0b5f0/a1a85/114164c3b6e04c9286da4fffdcec0c90.png 242w&quot;
-        sizes=&quot;(max-width: 242px) 100vw, 242px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&quot;&gt;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[论软件系统架构风格]]></title><description><![CDATA[摘要 2021年…]]></description><link>http://funnyeagle.cn/architecture-style/</link><guid isPermaLink="false">http://funnyeagle.cn/architecture-style/</guid><pubDate>Thu, 19 Oct 2023 08:25:54 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;摘要&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;2021年6月，我参与了某机场航班节点运行保障系统的开发工作，该系统的主要目标是优化航班保障作业流程，提高航班地面运行保障效率。我在该项目中担任系统架构师，主要负责系统整体架构设计和架构实现等工作。本文以机场航班节点运行保障系统为例，主要论述了软件系统架构风格在该项目中的具体应用。该项目包含三个子系统，其中航班数据中心使用仓库风格，航班节点运行保障子系统主要使用MVC架构和独立构件风格，对账子系统主要使用数据流和虚拟机风格。系统遵循可靠性、可维护性和经济性原则，满足易扩充、高可靠、易维护和可管理要求，在性能和安全性方面均满足系统技术规范的要求。该项目历时15个月，最终系统顺利上线，获得用户好评。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;正文&lt;/strong&gt;&lt;/p&gt;
