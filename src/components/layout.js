@@ -15,12 +15,14 @@ class Layout extends React.Component {
     year: '',
     days: '',
     theme: '',
+    logo: ''
   }
   componentDidMount() {
     this.setState({
       theme: window.theme,
       year: new Date().getFullYear(),
       days: this.formatTime(new Date() - new Date('2018-12-05T14:13:38')),
+      logo: "/funny-eagle-light.jpg"
     })
 
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -28,16 +30,28 @@ class Layout extends React.Component {
       const darkModeOn = e.matches
       if (darkModeOn) {
         this.setTheme('dark')
+        this.setState({
+          logo : "/funny-eagle.jpg"
+        })
       } else {
         this.setTheme('light')
+        this.setState({
+          logo : "/funny-eagle-light.jpg"
+        })
       }
     })
   }
   toggleTheme = () => {
     if (this.state.theme === 'light') {
       this.setTheme('dark')
+      this.setState({
+        logo : "/funny-eagle.jpg"
+      })
     } else {
       this.setTheme('light')
+      this.setState({
+        logo : "/funny-eagle-light.jpg"
+      })
     }
   }
   setTheme = (themeName) => {
@@ -59,7 +73,7 @@ class Layout extends React.Component {
   }
   search = () => {
     window.open(
-      'https://cn.bing.com/search?q=site%3Anocoder.org%20' +
+      'https://cn.bing.com/search?q=site%3Afunnyeagle.cn%20' +
         this.state.keyword
     )
   }
@@ -74,7 +88,7 @@ class Layout extends React.Component {
     }
   }
   render() {
-    const { menuState, days, year, theme } = this.state
+    const { menuState, days, year, theme , logo} = this.state
     const { pageName, pageDescript, children, aside, className } = this.props
 
     const websiteName = (
@@ -89,7 +103,7 @@ class Layout extends React.Component {
           to={'/'}
         >
           <span className="logo-mobile">{siteName}</span>
-          <img className="logo" src="/funny-eagle.jpg"/>
+          <img className="logo" src={logo}/>
         </Link>
         {pageName ? (
           <div className="page-name">
@@ -114,8 +128,7 @@ class Layout extends React.Component {
                 />
               </div>
               <meta name="google-adsense-account" content="ca-pub-1730830298664620"></meta>
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1730830298664620"
-     crossorigin="anonymous"></script>
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1730830298664620" crossorigin="anonymous"></script>
             </header>
             {aside ? (
               <div

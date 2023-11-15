@@ -2,12 +2,6 @@ module.exports ={
   resolve: `gatsby-transformer-remark`,
   options: {
     plugins: [
-      // {
-      //   resolve: 'gatsby-remark-prismjs-title',
-      //   options: {
-      //     className: 'code-title',
-      //   },
-      // },
       {
         resolve: `gatsby-remark-highlight-code`,
         options: {
