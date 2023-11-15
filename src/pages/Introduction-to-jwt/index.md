@@ -49,15 +49,10 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 
 ## 4. JWT 工作流程
 
-TBD
+![1269fc4dd4a144b5a001f35b4a7804d9.png](./1269fc4dd4a144b5a001f35b4a7804d9.png)
 
-## 5. JWT 代码示例
+首先客户端发送带有用户名和密码的Post请求。服务端验证身份成功后，生成JWT返回给客户端。后续所有的请求中，客户端都会在Header中带上这个toekn（JWT），服务端通过token验证用户身份，返回对应的响应数据。
 
-TBD
-
-## 总结
-
-TBD
 
 ## 参考文献
 - [JWT.IO](https://jwt.io/introduction/)
