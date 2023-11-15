@@ -5,6 +5,7 @@ description: "We Were Children - Tribes 和弦谱"
 tags: ['music', 'chords']
 slug: ''
 ---
+![tribes](./2013Tribes.jpg)
 
 ```
 Intro : B F# E Eb x2
@@ -134,14 +135,5 @@ we get older they get younger it was you or me
 
 End on - B 
 ```
-![F#](./1aab69a2f5ff4e199c0d958cb5f9d5ba.png)
-
-![B](./143ca08ce3f14aeba0b3a589b8a7aa68.png)
-
-![Abm](./8dc3ef767c654d70b238975f24c87a25.png)
-
-![E](./0279c1dc90cf46c28178389388917a0e.png)
-
-![Eb](./114164c3b6e04c9286da4fffdcec0c90.png)
             
 https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html
