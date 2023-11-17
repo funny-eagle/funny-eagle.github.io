@@ -260,12 +260,16 @@ button {
   a {
     .logo {
       display: block;
-      height: 120%;
-      width: 120%;
+      height: 100%;
+      width: 100%;
       transition: background-color 0.5s ease-in-out;
     }
     .logo-mobile {
-      display: none;
+      display: block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #5a75c1;
+      margin-left: 2rem;
     }
   }
 }
@@ -293,7 +297,7 @@ button {
 
 .css-post {
   flex-grow: 1;
-  max-width: 700px;
+  max-width: 900px;
   margin: 20px;
   line-height: 1.8;
   // 防止加粗文字粘太近

@@ -29,28 +29,16 @@ class Layout extends React.Component {
       const darkModeOn = e.matches
       if (darkModeOn) {
         this.setTheme('dark')
-        this.setState({
-          logo : "/funny-eagle.jpg"
-        })
       } else {
         this.setTheme('light')
-        this.setState({
-          logo : "/funny-eagle-light.jpg"
-        })
       }
     })
   }
   toggleTheme = () => {
     if (this.state.theme === 'light') {
       this.setTheme('dark')
-      this.setState({
-        logo : "/funny-eagle.jpg"
-      })
     } else {
       this.setTheme('light')
-      this.setState({
-        logo : "/funny-eagle-light.jpg"
-      })
     }
   }
   setTheme = (themeName) => {
@@ -102,8 +90,8 @@ class Layout extends React.Component {
           to={'/'}
         >
           <span className="logo-mobile">{siteName}</span>
-          <img className="logo" src={logo}/>
         </Link>
+        
         {pageName ? (
           <div className="page-name">
             {'# ' + pageName}
