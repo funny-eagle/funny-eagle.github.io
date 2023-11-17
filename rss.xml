@@ -1,4 +1,673 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 15 Nov 2023 09:49:14 GMT</lastBuildDate><item><title><![CDATA[JWT 简介]]></title><description><![CDATA[1. 什么是 JWT JSON Web Token，简称JWT，读作/dʒɒt/， 是一种开放标准（RFC 7519），用于以JSON对象的方式安全地传输信息，由于传输的信息是经过数字签名的，所以信息可被验证和信任。 2. JWT 的使用场景 授权：这是使用JWT…]]></description><link>http://funnyeagle.cn/Introduction-to-jwt/</link><guid isPermaLink="false">http://funnyeagle.cn/Introduction-to-jwt/</guid><pubDate>Tue, 14 Nov 2023 09:52:10 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-什么是-jwt&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%E4%BB%80%E4%B9%88%E6%98%AF-jwt&quot; aria-label=&quot;1 什么是 jwt permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 什么是 JWT&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 17 Nov 2023 03:58:57 GMT</lastBuildDate><item><title><![CDATA[【JWT】基于springboot的项目示例]]></title><description><![CDATA[上一篇【JWT】JSON Web Token 入门简介中，我们了解了什么是 JWT 以及使用场景等。本示例项目中，我们会搭建一个spring-boot 应用，利用 JWT 身份验证来保护公开的 REST API…]]></description><link>http://funnyeagle.cn/jwt-example/</link><guid isPermaLink="false">http://funnyeagle.cn/jwt-example/</guid><pubDate>Thu, 16 Nov 2023 01:37:10 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;上一篇&lt;a href=&quot;http://www.funnyeagle.cn/Introduction-to-jwt/&quot;&gt;【JWT】JSON Web Token 入门简介&lt;/a&gt;中，我们了解了什么是 JWT 以及使用场景等。本示例项目中，我们会搭建一个&lt;code&gt;spring-boot&lt;/code&gt; 应用，利用 &lt;code&gt;JWT&lt;/code&gt; 身份验证来保护公开的 &lt;code&gt;REST API&lt;/code&gt;。该项目没有使用数据库，用硬编码的用户名和密码进行用户身份验证。只有客户端发起携带有效的 &lt;code&gt;JSON Web Token&lt;/code&gt; （JWT） 请求时，它才能使用此 API。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;项目类图如下：
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/0da4b5e702886e846afb206a62b680ae/37f8f/jwt-uml.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.48648648648649%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvElEQVR42m1RWXKrMBD0cdAAQexYQhJCK4sNXl7l3f8kCWCn8pGpril9TGumu08IAAUBCgIAhBAQUitjuVSUMdLyqsq1dVKZsq7KqirLMoqi8F2noqoo54yLummCABkplsc/5QZpnDSek2a5PfRwcVbPy83PC8YpALzIlNJtThnScgTQcXG9f87r0wxzpy1tyLTe9XDx1s3r3U3XLMsB0IsMsB0eRREABEEgGb89/0/rU2rLpCJ17eer9jNnglBWVHUcx4De5L1HKcZJipME53mepllZlaRllPEzoYS2xSb1xYn3epHjKPRW2/HSW2/coIxTZvBazsvNjhepjJ/XXhlrjB4m7by2vjdOSEVbdorCUHDeKUNbTpk4IIXw46zdyITk+xxjnAm53UJZfaakZWVVb2cjhI6o3iFAknw05zNhvGWCcVEUJdqsgRBgTzTYgXbNUfQ7PQSQp8njfrs8PrX10/Loev1jUhhGb2xuw2748e/xgAyny3Kf1qd2o5uurJM/2f6uU4JxludZlsUfSZbnGGMAiOO4rpuqbrK8KPce/knuezXM106Zc9PYYWS8O5YcwjaBCP259pv8BbkQmidCVfPvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;jwt-uml&quot;
+        title=&quot;&quot;
+        src=&quot;/static/0da4b5e702886e846afb206a62b680ae/fcda8/jwt-uml.png&quot;
+        srcset=&quot;/static/0da4b5e702886e846afb206a62b680ae/12f09/jwt-uml.png 148w,
+/static/0da4b5e702886e846afb206a62b680ae/e4a3f/jwt-uml.png 295w,
+/static/0da4b5e702886e846afb206a62b680ae/fcda8/jwt-uml.png 590w,
+/static/0da4b5e702886e846afb206a62b680ae/efc66/jwt-uml.png 885w,
+/static/0da4b5e702886e846afb206a62b680ae/c83ae/jwt-uml.png 1180w,
+/static/0da4b5e702886e846afb206a62b680ae/37f8f/jwt-uml.png 3056w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;就这么几个类，下面直接开始吧！&lt;/p&gt;
+&lt;h4 id=&quot;1创建一个spring-boot项目配置maven坐标需要使用到-spring-boot-starter-webspring-boot-starter-security-以及-jwt为了简化代码使用了lombok&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAspring-boot%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AEmaven%E5%9D%90%E6%A0%87%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%88%B0-spring-boot-starter-webspring-boot-starter-security-%E4%BB%A5%E5%8F%8A-jwt%E4%B8%BA%E4%BA%86%E7%AE%80%E5%8C%96%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E4%BA%86lombok&quot; aria-label=&quot;1创建一个spring boot项目配置maven坐标需要使用到 spring boot starter webspring boot starter security 以及 jwt为了简化代码使用了lombok permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1、创建一个spring-boot项目，配置maven坐标，需要使用到 spring-boot-starter-web、spring-boot-starter-security 以及 jwt，为了简化代码，使用了lombok。&lt;/h4&gt;
+&lt;p&gt;完整的pom.xml 如下：&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;xml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
+&amp;lt;project xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;
+         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
+    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
+    &amp;lt;parent&amp;gt;
+        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+        &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;
+        &amp;lt;version&amp;gt;2.5.0&amp;lt;/version&amp;gt;
+        &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt;
+    &amp;lt;/parent&amp;gt;
+    &amp;lt;groupId&amp;gt;cn.funnyealge&amp;lt;/groupId&amp;gt;
+    &amp;lt;artifactId&amp;gt;jwt-example&amp;lt;/artifactId&amp;gt;
+    &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt;
+    &amp;lt;name&amp;gt;jwt-example&amp;lt;/name&amp;gt;
+    &amp;lt;description&amp;gt;Demo project for Spring Boot&amp;lt;/description&amp;gt;
+    &amp;lt;properties&amp;gt;
+        &amp;lt;java.version&amp;gt;8&amp;lt;/java.version&amp;gt;
+    &amp;lt;/properties&amp;gt;
+    &amp;lt;dependencies&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-security&amp;lt;/artifactId&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;io.jsonwebtoken&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;jjwt&amp;lt;/artifactId&amp;gt;
+            &amp;lt;version&amp;gt;0.9.1&amp;lt;/version&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt;
+            &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+        &amp;lt;dependency&amp;gt;
+            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
+            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
+        &amp;lt;/dependency&amp;gt;
+    &amp;lt;/dependencies&amp;gt;
+
+    &amp;lt;build&amp;gt;
+        &amp;lt;plugins&amp;gt;
+            &amp;lt;plugin&amp;gt;
+                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
+                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
+                &amp;lt;configuration&amp;gt;
+                    &amp;lt;image&amp;gt;
+                        &amp;lt;builder&amp;gt;paketobuildpacks/builder-jammy-base:latest&amp;lt;/builder&amp;gt;
+                    &amp;lt;/image&amp;gt;
+                    &amp;lt;excludes&amp;gt;
+                        &amp;lt;exclude&amp;gt;
+                            &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt;
+                            &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt;
+                        &amp;lt;/exclude&amp;gt;
+                    &amp;lt;/excludes&amp;gt;
+                &amp;lt;/configuration&amp;gt;
+            &amp;lt;/plugin&amp;gt;
+        &amp;lt;/plugins&amp;gt;
+    &amp;lt;/build&amp;gt;
+    &amp;lt;repositories&amp;gt;
+        &amp;lt;repository&amp;gt;
+            &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;https://repo.spring.io/milestone&amp;lt;/url&amp;gt;
+            &amp;lt;snapshots&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/snapshots&amp;gt;
+        &amp;lt;/repository&amp;gt;
+        &amp;lt;repository&amp;gt;
+            &amp;lt;id&amp;gt;spring-snapshots&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Spring Snapshots&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;https://repo.spring.io/snapshot&amp;lt;/url&amp;gt;
+            &amp;lt;releases&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/releases&amp;gt;
+        &amp;lt;/repository&amp;gt;
+    &amp;lt;/repositories&amp;gt;
+    &amp;lt;pluginRepositories&amp;gt;
+        &amp;lt;pluginRepository&amp;gt;
+            &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;https://repo.spring.io/milestone&amp;lt;/url&amp;gt;
+            &amp;lt;snapshots&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/snapshots&amp;gt;
+        &amp;lt;/pluginRepository&amp;gt;
+        &amp;lt;pluginRepository&amp;gt;
+            &amp;lt;id&amp;gt;spring-snapshots&amp;lt;/id&amp;gt;
+            &amp;lt;name&amp;gt;Spring Snapshots&amp;lt;/name&amp;gt;
+            &amp;lt;url&amp;gt;https://repo.spring.io/snapshot&amp;lt;/url&amp;gt;
+            &amp;lt;releases&amp;gt;
+                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
+            &amp;lt;/releases&amp;gt;
+        &amp;lt;/pluginRepository&amp;gt;
+    &amp;lt;/pluginRepositories&amp;gt;
+
+&amp;lt;/project&amp;gt;
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h4 id=&quot;2spring-boot工程搭建好之后创建一个hellocontroller写一个get请求的-rest-api-hello&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2spring-boot%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA%E5%A5%BD%E4%B9%8B%E5%90%8E%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAhellocontroller%E5%86%99%E4%B8%80%E4%B8%AAget%E8%AF%B7%E6%B1%82%E7%9A%84-rest-api-hello&quot; aria-label=&quot;2spring boot工程搭建好之后创建一个hellocontroller写一个get请求的 rest api hello permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2、spring-boot工程搭建好之后，创建一个HelloController，写一个GET请求的 REST API &lt;code&gt;/hello&lt;/code&gt;&lt;/h4&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/**
+ * @author yangjl
+ * @description Hello Controller
+ * @date 2023-11-15 10:43
+ **/
+@RestController
+public class HelloController {
+
+    @GetMapping(&amp;quot;/hello&amp;quot;)
+    public String hello() {
+        return &amp;quot;Hello, World!&amp;quot;;
+    }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;此时启动项目的话，通过 &lt;code&gt;http://localhost:8080/hello&lt;/code&gt; 可以直接访问到这个API的。&lt;/p&gt;
+&lt;h4 id=&quot;3接下来开始配置spring-security-和-jwt&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%BC%80%E5%A7%8B%E9%85%8D%E7%BD%AEspring-security-%E5%92%8C-jwt&quot; aria-label=&quot;3接下来开始配置spring security 和 jwt permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3、接下来开始配置spring security 和 JWT。&lt;/h4&gt;
+&lt;p&gt;3.1 创建&lt;code&gt;JwtUtil&lt;/code&gt;类，用于创建、验证&lt;code&gt;JWT&lt;/code&gt;以及获取&lt;code&gt;JWT&lt;/code&gt;中的信息。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.config;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
+
+/**
+ * @author yangjl
+ * @description jwt util
+ * @date 2023-11-15 11:21
+ **/
+@Component
+public class JwtUtil implements Serializable {
+    public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
+    private static final long serialVersionUID = 1L;
+    @Value(&amp;quot;${jwt.secret}&amp;quot;)
+    private String secret;
+
+    /**
+     * 从token中获取username
+     */
+    public String getUserNameFromToken(String token) {
+        return getClaimFromToken(token, Claims::getSubject);
+    }
+
+    /**
+     * 从token中获取过期时间
+     *
+     * @param token
+     * @return
+     */
+    public Date getExpirationDateFromToken(String token) {
+        return getClaimFromToken(token, Claims::getExpiration);
+    }
+
+    public &amp;lt;T&amp;gt; T getClaimFromToken(String token, Function&amp;lt;Claims, T&amp;gt; claimsResolver) {
+        Claims claims = getAllClaimsFromToken(token);
+        return claimsResolver.apply(claims);
+    }
+
+    /**
+     * 从token中获取信息
+     *
+     * @param token
+     * @return
+     */
+    private Claims getAllClaimsFromToken(String token) {
+        return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
+    }
+
+    /**
+     * 检查token是否过期
+     *
+     * @param token
+     * @return
+     */
+    private boolean isTokenExpired(String token) {
+        Date expiration = getExpirationDateFromToken(token);
+        return expiration.before(new Date());
+    }
+
+
+    public String generateToken(UserDetails userDetails) {
+        Map&amp;lt;String, Object&amp;gt; claims = new HashMap&amp;lt;&amp;gt;(16);
+        return doGenerateToken(claims, userDetails.getUsername());
+    }
+
+    /**
+     * 使用Jwts生成Token
+     *
+     * @param claims
+     * @param subject
+     * @return
+     */
+    private String doGenerateToken(Map&amp;lt;String, Object&amp;gt; claims, String subject) {
+        return Jwts.builder()
+                .setClaims(claims)
+                .setSubject(subject)
+                .setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
+                .signWith(SignatureAlgorithm.HS512, secret)
+                .compact();
+    }
+
+    /**
+     * 验证token
+     *
+     * @param token
+     * @param userDetails
+     * @return
+     */
+    public Boolean validateToken(String token, UserDetails userDetails) {
+        String username = getUserNameFromToken(token);
+        return username.equals(userDetails.getUsername()) &amp;amp;&amp;amp; !isTokenExpired(token);
+    }
+
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;3.2 创建&lt;code&gt;JWTUserDetailsService&lt;/code&gt;类,实现了 spring security 的UserDetailsService 接口，重写loadUserByUsername方法，通过用户名获取用户详细信息，此处没有使用数据库，使用硬编码的方式定义了一个用户，实际应用中应该从数据库中查询用户信息。其中密码是经过&lt;code&gt;bcrypt&lt;/code&gt;加密的，如果需要修改，搜一个在线Bcrypt密码生成工具生成替换一下就可以。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.service;
+
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+
+/**
+ * @author yangjl
+ * @description
+ * @date 2023-11-15 13:34
+ **/
+@Service
+public class JtwUserDetailService implements UserDetailsService {
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        if (&amp;quot;funnyeagle&amp;quot;.equals(username)) {
+            return new User(&amp;quot;funnyeagle&amp;quot;, &amp;quot;$2a$10$JQEWsaUWgp6zYk1cvLvHMuM6kcLbmAdWPrp9QCSNYswu.kFum9PIq&amp;quot;, new ArrayList&amp;lt;&amp;gt;());
+        }
+
+        throw new UsernameNotFoundException(&amp;quot;User not found with username:&amp;quot; + username);
+    }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;3.3 创建&lt;code&gt;JwtRequest&lt;/code&gt;类，包含用户名和密码，客户端向服务端发送请求时使用。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.model;
+
+import lombok.Data;
+
+import java.io.Serializable;
+
+/**
+ * @author yangjl
+ * @description
+ * @date 2023-11-15 13:50
+ **/
+@Data
+public class JwtRequest implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private String username;
+    private String password;
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;3.4 创建&lt;code&gt;JwtResponse&lt;/code&gt;类，包含token属性，用于向客户端返回数据&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.model;
+
+import lombok.Data;
+
+import java.io.Serializable;
+
+/**
+ * @author yangjl
+ * @description
+ * @date 2023-11-15 13:52
+ **/
+@Data
+public class JwtResponse implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private final String token;
+
+    public JwtResponse(String token) {
+        this.token = token;
+    }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;3.5 创建&lt;code&gt;JwtAuthenticationController&lt;/code&gt;类，包含一个POST &lt;code&gt;/authenticate&lt;/code&gt; API，调用&lt;code&gt;AuthenticationManager&lt;/code&gt;的&lt;code&gt;authenticate()&lt;/code&gt;方法对用户名和密码进行验证，验证通过则使用JwtUtil创建JWT token返回给客户端。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.controller;
+
+import cn.funnyealge.jwt.config.JwtUtil;
+import cn.funnyealge.jwt.model.JwtRequest;
+import cn.funnyealge.jwt.model.JwtResponse;
+import cn.funnyealge.jwt.service.JtwUserDetailService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+
+/**
+ * @author yangjl
+ * @description
+ * @date 2023-11-15 13:43
+ **/
+@RestController
+@CrossOrigin
+public class JwtAuthenticationController {
+
+    @Resource
+    private AuthenticationManager authenticationManager;
+
+    @Resource
+    private JwtUtil jwtUtil;
+
+    @Resource
+    private JtwUserDetailService userDetailService;
+
+    @PostMapping(value = &amp;quot;/authenticate&amp;quot;)
+    public ResponseEntity&amp;lt;?&amp;gt; createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
+        authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
+        UserDetails userDetails = userDetailService.loadUserByUsername(authenticationRequest.getUsername());
+        String token = jwtUtil.generateToken(userDetails);
+        return ResponseEntity.ok(new JwtResponse(token));
+    }
+
+    private void authenticate(String username, String password) throws Exception {
+        try {
+            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+        } catch (DisabledException e) {
+            throw new Exception(&amp;quot;user disabled&amp;quot;, e);
+        } catch (BadCredentialsException e) {
+            throw new Exception(&amp;quot;invalid credentials&amp;quot;, e);
+        }
+    }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;3.6 创建&lt;code&gt;JwtRequestFilter&lt;/code&gt;类，继承自spring的OncePerRequestFilter类，任何请求过来都会执行这个Filter，用来检查token的有效性，验证通过后，将用户信息设置到security的上下文中。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.config;
+
+import cn.funnyealge.jwt.service.JtwUserDetailService;
+import io.jsonwebtoken.ExpiredJwtException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
+import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
+
+import javax.annotation.Resource;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
+/**
+ * JwtRequestFilter 继承了 Spring Web Filter OncePerRequestFilter 类。
+ * 对于任何传入请求，都会执行此 Filter 类。它检查请求是否具有有效的 JWT 令牌。
+ * 如果它具有有效的 JWT 令牌，则它会在上下文中设置身份验证，以指定当前用户已通过身份验证。
+ *
+ * @author yangjl
+ * @description
+ * @date 2023-11-15 13:54
+ **/
+@Component
+public class JwtRequestFilter extends OncePerRequestFilter {
+
+    @Resource
+    private JtwUserDetailService userDetailService;
+
+    @Resource
+    private JwtUtil jwtUtil;
+
+
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
+        final String requestTokenHeader = request.getHeader(&amp;quot;Authorization&amp;quot;);
+
+        String username = null;
+        String jwtToken = null;
+        if (requestTokenHeader != null &amp;amp;&amp;amp; requestTokenHeader.startsWith(&amp;quot;Bearer &amp;quot;)) {
+            jwtToken = requestTokenHeader.substring(7);
+            try {
+                username = jwtUtil.getUserNameFromToken(jwtToken);
+            } catch (IllegalArgumentException e) {
+                System.out.println(&amp;quot;Unable to get JWT Token&amp;quot;);
+            } catch (ExpiredJwtException e) {
+                System.out.println(&amp;quot;JWT Token has expired&amp;quot;);
+            }
+        } else {
+            logger.warn(&amp;quot;JWT Token does not begin with Bearer String&amp;quot;);
+        }
+
+        if (username != null &amp;amp;&amp;amp; SecurityContextHolder.getContext().getAuthentication() == null) {
+
+            UserDetails userDetails = this.userDetailService.loadUserByUsername(username);
+
+            if (jwtUtil.validateToken(jwtToken, userDetails)) {
+
+                UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(
+                        userDetails, null, userDetails.getAuthorities());
+                usernamePasswordAuthenticationToken
+                        .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
+                SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+            }
+        }
+        chain.doFilter(request, response);
+    }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;3.7 创建&lt;code&gt;JwtAuthenticationEntryPoint&lt;/code&gt;类，继承spring的&lt;code&gt;AuthenticationEntryPoint&lt;/code&gt;类，重写&lt;code&gt;commence&lt;/code&gt;方法，用于拒绝未经身份验证的请求并返回错误码401。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.config;
+
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.Serializable;
+
+/**
+ * 此类继承 Spring 的 AuthenticationEntryPoint 类，拒绝未经身份验证的请求并返回错误代码 401
+ *
+ * @author yangjl
+ * @description
+ * @date 2023-11-15 14:02
+ **/
+@Component
+public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Serializable {
+
+    private static final long serialVersionUID = -1L;
+
+    @Override
+    public void commence(HttpServletRequest request, HttpServletResponse response,
+                         AuthenticationException authException) throws IOException {
+
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, &amp;quot;Unauthorized&amp;quot;);
+    }
+}&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;3.8 创建&lt;code&gt;WebSecurityConfig&lt;/code&gt;类， 配置 AuthenticationManager，BCryptPasswordEncoder 和验证配置。&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
+/**
+ * @author yangjl
+ * @description
+ * @date 2023-11-15 14:21
+ **/
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private JwtAuthenticationEntryPoint jwtAuthenticationEntryPoint;
+
+    @Autowired
+    private UserDetailsService jwtUserDetailsService;
+
+    @Autowired
+    private JwtRequestFilter jwtRequestFilter;
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(jwtUserDetailsService).passwordEncoder(passwordEncoder());
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+
+    @Override
+    protected void configure(HttpSecurity httpSecurity) throws Exception {
+        httpSecurity.csrf().disable()
+                // 放行 /authenticate
+                .authorizeRequests().antMatchers(&amp;quot;/authenticate&amp;quot;).permitAll().
+                // 其它任何请求都需要认证
+                anyRequest().authenticated().and().
+                // 使用无状态session
+                exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        // 所有请求都要通过filter来验证token
+        httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
+    }
+}
+&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;启动项目，使用postman请求&lt;code&gt;/authenticate&lt;/code&gt;接口&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/bed327c9770c74dfc39f66e44c004863/86433/auth-api.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.5945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAAHk5YpCf//EABYQAQEBAAAAAAAAAAAAAAAAABABEf/aAAgBAQABBQI2lP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/AUf/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFX/8QAFBABAAAAAAAAAAAAAAAAAAAAIP/aAAgBAQAGPwJf/8QAGRAAAgMBAAAAAAAAAAAAAAAAATEAECFR/9oACAEBAAE/Id5QAiYFEr//2gAMAwEAAgADAAAAEDv/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAwEBPxBGP//EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAgEBPxBWv//EABoQAQEAAgMAAAAAAAAAAAAAAAEAEBExYYH/2gAIAQEAAT8QXSeQmgHTcWAv/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;auth-api&quot;
+        title=&quot;&quot;
+        src=&quot;/static/bed327c9770c74dfc39f66e44c004863/1c72d/auth-api.jpg&quot;
+        srcset=&quot;/static/bed327c9770c74dfc39f66e44c004863/a80bd/auth-api.jpg 148w,
+/static/bed327c9770c74dfc39f66e44c004863/1c91a/auth-api.jpg 295w,
+/static/bed327c9770c74dfc39f66e44c004863/1c72d/auth-api.jpg 590w,
+/static/bed327c9770c74dfc39f66e44c004863/a8a14/auth-api.jpg 885w,
+/static/bed327c9770c74dfc39f66e44c004863/fbd2c/auth-api.jpg 1180w,
+/static/bed327c9770c74dfc39f66e44c004863/86433/auth-api.jpg 2306w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;TIP: 如果&lt;code&gt;/authenticate&lt;/code&gt;接口抛出异常 &lt;code&gt;ClassNotFoundException: javax.xml.bind.DatatypeConverter&lt;/code&gt;，将JDK版本修改为8即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;获取到token之后，在/hello请求的Header中添加 Authorization，Value的格式为 &lt;code&gt;Bearer TOKEN&lt;/code&gt; Bearer后面有个空格。如图。
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d676904b4e92b5f23b99124716bcf266/6c27d/hello-api.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 44.5945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAJABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIBBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHkGFJJ/8QAFhAAAwAAAAAAAAAAAAAAAAAAEBEg/9oACAEBAAEFAg4//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BR//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AVf/xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAZEAACAwEAAAAAAAAAAAAAAAAAARAhYbH/2gAIAQEAAT8h4VomQ5//2gAMAwEAAgADAAAAEOP/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAwEBPxBGP//EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAgEBPxBWv//EABsQAQACAgMAAAAAAAAAAAAAAAEAIRAxEYGh/9oACAEBAAE/EF0IkNKV1BuD0GbYJ//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;hello-api&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d676904b4e92b5f23b99124716bcf266/1c72d/hello-api.jpg&quot;
+        srcset=&quot;/static/d676904b4e92b5f23b99124716bcf266/a80bd/hello-api.jpg 148w,
+/static/d676904b4e92b5f23b99124716bcf266/1c91a/hello-api.jpg 295w,
+/static/d676904b4e92b5f23b99124716bcf266/1c72d/hello-api.jpg 590w,
+/static/d676904b4e92b5f23b99124716bcf266/a8a14/hello-api.jpg 885w,
+/static/d676904b4e92b5f23b99124716bcf266/fbd2c/hello-api.jpg 1180w,
+/static/d676904b4e92b5f23b99124716bcf266/6c27d/hello-api.jpg 2298w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;完整项目源码：&lt;a href=&quot;https://github.com/funny-eagle/jwt-example&quot;&gt;https://github.com/funny-eagle/jwt-example&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;（完）&lt;/p&gt;</content:encoded></item><item><title><![CDATA[【JWT】JSON Web Token 入门简介]]></title><description><![CDATA[1. 什么是 JWT JSON Web Token，简称JWT，读作/dʒɒt/， 是一种开放标准（RFC 7519），用于以JSON对象的方式安全地传输信息，由于传输的信息是经过数字签名的，所以信息可被验证和信任。 2. JWT 的使用场景 授权：这是使用JWT…]]></description><link>http://funnyeagle.cn/Introduction-to-jwt/</link><guid isPermaLink="false">http://funnyeagle.cn/Introduction-to-jwt/</guid><pubDate>Tue, 14 Nov 2023 09:52:10 GMT</pubDate><content:encoded>&lt;h2 id=&quot;1-什么是-jwt&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%E4%BB%80%E4%B9%88%E6%98%AF-jwt&quot; aria-label=&quot;1 什么是 jwt permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 什么是 JWT&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;JSON Web Token&lt;/code&gt;，简称&lt;code&gt;JWT&lt;/code&gt;，读作&lt;code&gt;/dʒɒt/&lt;/code&gt;， 是一种开放标准（&lt;a href=&quot;https://tools.ietf.org/html/rfc7519&quot;&gt;RFC 7519&lt;/a&gt;），用于以JSON对象的方式安全地传输信息，由于传输的信息是经过数字签名的，所以信息可被验证和信任。&lt;/p&gt;
 &lt;h2 id=&quot;2-jwt-的使用场景&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-jwt-%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF&quot; aria-label=&quot;2 jwt 的使用场景 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. JWT 的使用场景&lt;/h2&gt;
 &lt;ul&gt;
@@ -1447,47 +2116,4 @@ Clojure, 一种函数式的通用编程语言，提供优秀的并发性。是�
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions&quot;&gt;https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/Java%E5%AD%97%E8%8A%82%E7%A0%81#cite_note-5&quot;&gt;https://zh.wikipedia.org/wiki/Java%E5%AD%97%E8%8A%82%E7%A0%81#cite_note-5&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[软件架构的概述和构件]]></title><description><![CDATA[…]]></description><link>http://funnyeagle.cn/software-architecture-summarize/</link><guid isPermaLink="false">http://funnyeagle.cn/software-architecture-summarize/</guid><pubDate>Tue, 27 Jun 2023 07:17:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;软件架构的概述&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E7%9A%84%E6%A6%82%E8%BF%B0&quot; aria-label=&quot;软件架构的概述 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;软件架构的概述&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;软件架构是从&lt;strong&gt;需求分析&lt;/strong&gt;到&lt;strong&gt;软件设计&lt;/strong&gt;之间的&lt;strong&gt;过渡过程&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;架构设计就是&lt;strong&gt;需求分配&lt;/strong&gt;，将满足需求的职责分配到组件上。&lt;/li&gt;
-&lt;li&gt;软件架构为软件系统提供了一个&lt;strong&gt;结构&lt;/strong&gt;、&lt;strong&gt;行为&lt;/strong&gt;和&lt;strong&gt;属性&lt;/strong&gt;的高级抽象，由&lt;strong&gt;构件的描述&lt;/strong&gt;、&lt;strong&gt;构件的相互作用（连接件）&lt;/strong&gt;、&lt;strong&gt;指导构件集成的模式&lt;/strong&gt;以及这些&lt;strong&gt;模式的约束&lt;/strong&gt;组成。&lt;/li&gt;
-&lt;li&gt;软件架构不仅指定了系统的&lt;strong&gt;组织结构&lt;/strong&gt;和&lt;strong&gt;拓扑结构&lt;/strong&gt;，并且显示了系统&lt;strong&gt;需求&lt;/strong&gt;和&lt;strong&gt;构件&lt;/strong&gt;之间的关系，提供了一些&lt;strong&gt;设计决策&lt;/strong&gt;的基本原理。&lt;/li&gt;
-&lt;li&gt;解决好软件的&lt;strong&gt;复用&lt;/strong&gt;、&lt;strong&gt;质量&lt;/strong&gt;和&lt;strong&gt;维护问题&lt;/strong&gt;，是研究软件架构的&lt;strong&gt;根本目的&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;软件架构设计包括提出&lt;strong&gt;架构模型&lt;/strong&gt;，产生架构设计和进行设计评审等活动，是一个&lt;strong&gt;迭代&lt;/strong&gt;的过程。&lt;/li&gt;
-&lt;li&gt;架构设计主要关注软件组件的&lt;strong&gt;结构&lt;/strong&gt;、&lt;strong&gt;属性&lt;/strong&gt;和&lt;strong&gt;交互作用&lt;/strong&gt;，并通过多种视图全面描述特定的系统架构。&lt;/li&gt;
-&lt;li&gt;软件架构能够在设计变更相对容易的阶段，考虑系统结构的可选方案，便于技术人员与非技术人员就软件设计进行交互，能够展现软件的&lt;strong&gt;结构&lt;/strong&gt;、&lt;strong&gt;属性&lt;/strong&gt;与&lt;strong&gt;内部交互关系&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;软件架构是项目干系人进行交流的手段，明确了对系统实现的&lt;strong&gt;约束条件&lt;/strong&gt;，决定了开发和维护组织的&lt;strong&gt;组织结构&lt;/strong&gt;，制约着系统的&lt;strong&gt;质量属性&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;软件架构使&lt;strong&gt;推理&lt;/strong&gt;和&lt;strong&gt;控制的更改&lt;/strong&gt;更加简单，有助于循序渐进的&lt;strong&gt;原型设计&lt;/strong&gt;，可以作为&lt;strong&gt;培训&lt;/strong&gt;的基础。&lt;/li&gt;
-&lt;li&gt;软件架构是&lt;strong&gt;可传递&lt;/strong&gt;和&lt;strong&gt;可复用&lt;/strong&gt;的模型，通过研究软件架构可能预测&lt;strong&gt;软件的质量&lt;/strong&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&quot;软件架构41视图&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%8441%E8%A7%86%E5%9B%BE&quot; aria-label=&quot;软件架构41视图 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;软件架构4+1视图&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“4+1”视图模型从5个不同的视角来描述软件架构，包括逻辑视图、进程视图、物理视图、开发视图和场景视图。每一个视图只关心系统的一个侧面，5个视图结合在一起才能反映系统的软件架构的全部内容。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;逻辑视图：主要支持系统的功能需求，即系统提供给最终用户的服务。&lt;/li&gt;
-&lt;li&gt;开发视图：也称为模块视图，主要侧重于软件模块的组织和管理。&lt;/li&gt;
-&lt;li&gt;进程视图：侧重于系统的运行特性，主要关注一些非功能性的需求，例如系统的性能和可用性。&lt;/li&gt;
-&lt;li&gt;物理视图：主要考虑如何把软件映射到硬件上，它通常要考虑到解决系统拓扑结构、系统安装、通信等问题。&lt;/li&gt;
-&lt;li&gt;场景：可以看作是那些重要系统活动的抽象，它使四个视图有机地联系起来，从某种意义上说，场景是最重要的需求抽象。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;构件&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%9E%84%E4%BB%B6&quot; aria-label=&quot;构件 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;构件&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;构件由一组通常需要&lt;strong&gt;同时部署&lt;/strong&gt;的&lt;strong&gt;原子构件&lt;/strong&gt;组成。&lt;/li&gt;
-&lt;li&gt;一个原子构件是一个模块和一组资源。&lt;/li&gt;
-&lt;li&gt;构件是一个独立可交付的功能单元，外界通过接口访问其提供的服务。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;构件的特性：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;独立部署单元&lt;/li&gt;
-&lt;li&gt;作为第三方的组装单元&lt;/li&gt;
-&lt;li&gt;没有外部的可见状态&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;对象的特性：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;一个实例单元，具有唯一的标志&lt;/li&gt;
-&lt;li&gt;可能具有状态，此状态外部可见&lt;/li&gt;
-&lt;li&gt;封装了自己的状态和行为&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;一个构件可以包含多个类元素，但是一个类元素只能属于一个构件。&lt;/strong&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;/ul&gt;</content:encoded></item></channel></rss>
