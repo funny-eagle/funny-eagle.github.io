@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 43 周
+title: ARTS 第43周
 date: 2019-10-03
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

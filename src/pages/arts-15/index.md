@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 15 周
+title: ARTS 第15周
 date: 2018-10-13
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

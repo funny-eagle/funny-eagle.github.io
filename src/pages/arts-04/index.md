@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 4 周
+title: ARTS 第4周
 date: 2018-07-28
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

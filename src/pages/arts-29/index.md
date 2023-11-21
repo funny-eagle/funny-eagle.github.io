@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 29 周
+title: ARTS 第29周
 date: 2019-01-19
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

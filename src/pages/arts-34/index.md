@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 34 周
+title: ARTS 第34周
 date: 2019-03-16
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 39 周
+title: ARTS 第39周
 date: 2019-05-11
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

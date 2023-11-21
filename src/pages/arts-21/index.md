@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 21 周
+title: ARTS 第21周
 date: 2018-11-24
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

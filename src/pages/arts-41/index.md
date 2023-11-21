@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 41 周
+title: ARTS 第41周
 date: 2019-06-22
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

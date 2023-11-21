@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 27 周
+title: ARTS 第27周
 date: 2019-01-05
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']

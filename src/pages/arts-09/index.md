@@ -1,5 +1,5 @@
 ---
-title: ARTS 第 9 周
+title: ARTS 第9周
 date: 2018-09-01
 description: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
