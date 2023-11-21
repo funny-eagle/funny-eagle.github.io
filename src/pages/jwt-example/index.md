@@ -1,7 +1,7 @@
 ---
-title: 【JWT】基于springboot的项目示例
+title: 【JWT】Spring Boot 项目示例
 date: "2023-11-16 09:37:10"
-description: "使用spring-boot, spring security, jjtw 搭建的JWT示例项目"
+description: "使用spring-boot, spring security, jjtw 搭建的 JWT 示例项目"
 tags: ['coding']
 slug: ''
 ---
