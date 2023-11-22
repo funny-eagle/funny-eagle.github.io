@@ -1,5 +1,5 @@
 ---
-title: 【JWT】基于SpringBoot的JSON Web Token使用示例
+title: '[JWT] 基于SpringBoot的JSON Web Token使用示例'
 date: "2023-11-16 09:37:10"
 description: "使用spring-boot, spring security, jjtw 搭建的JWT示例项目"
 tags: ['coding']
