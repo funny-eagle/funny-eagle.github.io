@@ -8,17 +8,17 @@
 .light-theme {
   --backgroundColor: #f6f7fa;
   --backgroundColor2: #ffffff;
-  --mainColor: #6b83c9;
-  --mainDerive1: #4467d1;
-  --mainDerive2: #4a69c5;
-  --mainDerive3: #4a69c5;
-  --linkColor: #5193f5;
+  --mainColor: #0a0a04;
+  --mainDerive1: #046f3b;
+  --mainDerive2: #0a0a04;
+  --mainDerive3: #c6cb07;
+  --linkColor: #046f3b;
   --fontColor: hsl(284, 20%, 30%);
   --codeBlock: #3c495b;
   --code: #c3c7cb;
   --divider: rgb(214, 214, 214);
   --buttonColor: #ffffff;
-  --buttonBackgroundColor: #5e76d4;
+  --buttonBackgroundColor: #09aa6f;
   --hrColor: #dfdfdf;
   --tableHeadColor: #f8f9fa;
   --shadow: 0 4px 10px rgba(0, 2, 4, 0.06), 0 0 1px rgba(0, 2, 4, 0.11);
@@ -27,17 +27,17 @@
 .dark-theme {
   --backgroundColor: #10171d;
   --backgroundColor2: #212327;
-  --mainColor: #5a85be;
-  --mainDerive1: #ffffff;
-  --mainDerive2: #6190f3;
-  --mainDerive3: #4da3f3;
-  --linkColor: #86c6fb;
+  --mainColor: #e8fa7f;
+  --mainDerive1: #09aa6f;
+  --mainDerive2: #e8fa7f;
+  --mainDerive3: #e8fa7f;
+  --linkColor: #09aa6f;
   --fontColor: #e5e5e5;
   --codeBlock: #181818;
   --code: #c3c7cb;
   --divider: #3e4b5e;
   --buttonColor: #ffffff;
-  --buttonBackgroundColor: #3f7ccc;
+  --buttonBackgroundColor: #09aa6f;
   --hrColor: #5c5c5c;
   --tableHeadColor: #3a3a3a;
   --shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
@@ -226,6 +226,7 @@ button {
 .page-name {
   font-size: 1em;
   text-align: center;
+  color: #046f3b;
 }
 .css-aside {
   margin-top: 30px;
@@ -266,7 +267,7 @@ button {
       display: block;
       font-size: 1.5rem;
       font-weight: bold;
-      color: #5a75c1;
+      color: #919404;
       margin-left: 2rem;
     }
   }
@@ -373,7 +374,7 @@ button {
 }
 
 .css-info {
-  font-size: 0.8em;
+  font-size: 1em;
   color: var(--mainDerive1);
   .iconfont {
     &:first-of-type {

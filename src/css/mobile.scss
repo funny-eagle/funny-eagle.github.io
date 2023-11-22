@@ -23,11 +23,12 @@
       height: 100%;
       width: 20%;
       word-break: normal !important;
+      padding-left: 1rem;
       .logo-mobile {
         display: inline;
         font-size: 1rem;
         font-weight: bold;
-        color: #5a75c1;
+        color: #919404;
       }
       .logo {
         display: none;
@@ -39,12 +40,12 @@
     .page-name {
       display: inline;
       margin-left: 1em;
+      color: #046f3b;
     }
     .menu-button {
       display: block;
-      position: absolute;
+      position: inherit;
       top: 0;
-      right: 15px;
       cursor: pointer;
       user-select: none;
       .iconfont {
@@ -59,14 +60,14 @@
     bottom: 0;
     right: -100%;
     padding: 50px 0px 0;
-    width: 100%;
+    width: 15rem;
     background-color: var(--backgroundColor2);
     transition: all 0.6s ease-in-out;
     overflow-y: auto;
   }
 
   .open {
-    right: 0;
+    left: 0;
   }
   .link-card-wrapper {
     width: 100%;

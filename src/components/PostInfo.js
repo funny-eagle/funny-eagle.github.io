@@ -20,7 +20,7 @@ export default function (props) {
                 paddingRight: '8px',
               }}
             >
-              <Link to={`/tag/${tag}`}>{tag}</Link>
+              <Link to={`/tag/${tag}`}>#{tag}</Link>
             </span>
           ))}
         </React.Fragment>

@@ -94,7 +94,7 @@ class Layout extends React.Component {
         
         {pageName ? (
           <div className="page-name">
-            {'# ' + pageName}
+            {'#' + pageName}
           </div>
         ) : null}
       </div>
@@ -103,7 +103,6 @@ class Layout extends React.Component {
     return (
       <div className={className}>
         <div className="css-main">
-          <article className="css-post">{children}</article>
           <aside className={'css-aside ' + (menuState ? 'open' : 'close')}>
             <header className="css-header">
               {websiteName}
@@ -138,7 +137,7 @@ class Layout extends React.Component {
               </React.Fragment>
             )}
           </aside>
-          
+          <article className="css-post">{children}</article>
         </div>
         <footer>
           <div className="social-media" style={footerStyle}>
