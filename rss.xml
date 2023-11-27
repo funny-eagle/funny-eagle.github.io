@@ -1,4 +1,191 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 25 Nov 2023 13:22:54 GMT</lastBuildDate><item><title><![CDATA[如果今年过不了]]></title><description><![CDATA[计算机软考系统架构设计师的教材于2022年12月发布第2版（第1版是2009年6月发布），2023年下半年考试形式由笔试改成机试。今年出题套路变化比较大，下午的案例题不再考简单的架构风格和质量属性了，第一题直接上了大数据架构图，随后是web…]]></description><link>http://funnyeagle.cn/if-can-not-pass-in-2023/</link><guid isPermaLink="false">http://funnyeagle.cn/if-can-not-pass-in-2023/</guid><pubDate>Mon, 20 Nov 2023 13:17:00 GMT</pubDate><content:encoded>&lt;p&gt;计算机软考系统架构设计师的教材于2022年12月发布第2版（第1版是2009年6月发布），2023年下半年考试形式由笔试改成机试。今年出题套路变化比较大，下午的案例题不再考简单的架构风格和质量属性了，第一题直接上了大数据架构图，随后是web服务架构、数据库和缓存等偏实战的题。也有很多题是教材原图原话，整体难度并不算大。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 27 Nov 2023 11:18:08 GMT</lastBuildDate><item><title><![CDATA[MAC OSX 开机自动连接蓝牙音箱]]></title><description><![CDATA[我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了blueutil，分分钟轻松搞定。 安装blueutil 使用homebrew安装blueutil blueutil -h 查看使用说明 查看配对设备 blueutil…]]></description><link>http://funnyeagle.cn/blueutil/</link><guid isPermaLink="false">http://funnyeagle.cn/blueutil/</guid><pubDate>Mon, 27 Nov 2023 10:51:25 GMT</pubDate><content:encoded>&lt;p&gt;我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了&lt;a href=&quot;https://github.com/toy/blueutil&quot;&gt;blueutil&lt;/a&gt;，分分钟轻松搞定。&lt;/p&gt;
+&lt;h3 id=&quot;安装blueutil&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%AE%89%E8%A3%85blueutil&quot; aria-label=&quot;安装blueutil permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;安装&lt;code&gt;blueutil&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;homebrew&lt;/code&gt;安装&lt;code&gt;blueutil&lt;/code&gt;&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;brew install bluetuil&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;blueutil--h-查看使用说明&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#blueutil--h-%E6%9F%A5%E7%9C%8B%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E&quot; aria-label=&quot;blueutil  h 查看使用说明 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;code&gt;blueutil -h&lt;/code&gt; 查看使用说明&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;yangjl@Mac ~ % blueutil -h
+blueutil v2.9.1
+
+Usage:
+  blueutil [options]
+
+Without options outputs current state
+
+    -p, --power               output power state as 1 or 0
+    -p, --power STATE         set power state
+    -d, --discoverable        output discoverable state as 1 or 0
+    -d, --discoverable STATE  set discoverable state
+
+        --favourites, --favorites
+                              list favourite devices
+        --inquiry [T]         inquiry devices in range, 10 seconds duration by default excluding time for name updates
+        --paired              list paired devices
+        --recent [N]          list recently used devices, 10 by default, 0 to list all
+        --connected           list connected devices
+
+        --info ID             show information about device
+        --is-connected ID     connected state of device as 1 or 0
+        --connect ID          create a connection to device
+        --disconnect ID       close the connection to device
+        --pair ID [PIN]       pair with device, optional PIN of up to 16 characters will be used instead of interactive input if requested in specific pair mode
+        --unpair ID           EXPERIMENTAL unpair the device
+        --add-favourite ID, --add-favorite ID
+                              add to favourites
+        --remove-favourite ID, --remove-favorite ID
+                              remove from favourites
+
+        --format FORMAT       change output format of info and all listing commands
+
+        --wait-connect ID [TIMEOUT]
+                              EXPERIMENTAL wait for device to connect
+        --wait-disconnect ID [TIMEOUT]
+                              EXPERIMENTAL wait for device to disconnect
+        --wait-rssi ID OP VALUE [PERIOD [TIMEOUT]]
+                              EXPERIMENTAL wait for device RSSI value which is 0 for golden range, -129 if it cannot be read (e.g. device is disconnected)
+
+    -h, --help                this help
+    -v, --version             show version
+
+STATE can be one of: 1, on, 0, off, toggle
+ID can be either address in form xxxxxxxxxxxx, xx-xx-xx-xx-xx-xx or xx:xx:xx:xx:xx:xx, or name of device to search in used devices
+OP can be one of: &amp;gt;, &amp;gt;=, &amp;lt;, &amp;lt;=, =, !=; or equivalents: gt, ge, lt, le, eq, ne
+PERIOD is in seconds, defaults to 1
+TIMEOUT is in seconds, default value 0 doesn&amp;#39;t add timeout
+FORMAT can be one of:
+  default - human readable text output not intended for consumption by scripts
+  new-default - human readable comma separated key-value pairs (EXPERIMENTAL, THE BEHAVIOUR MAY CHANGE)
+  json - compact JSON
+  json-pretty - pretty printed JSON
+
+Due to possible problems, blueutil will refuse to run as root user (see https://github.com/toy/blueutil/issues/41).
+Use environment variable BLUEUTIL_ALLOW_ROOT=1 to override (sudo BLUEUTIL_ALLOW_ROOT=1 blueutil …).
+
+Exit codes:
+   0 Success
+   1 General failure
+  64 Wrong usage like missing or unexpected arguments, wrong parameters
+  69 Bluetooth or interface not available
+  70 Internal error
+  71 System error like shortage of memory
+  75 Timeout error&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;查看配对设备-blueutil---paired&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%9F%A5%E7%9C%8B%E9%85%8D%E5%AF%B9%E8%AE%BE%E5%A4%87-blueutil---paired&quot; aria-label=&quot;查看配对设备 blueutil   paired permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;查看配对设备 &lt;code&gt;blueutil --paired&lt;/code&gt;&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;yangjl@Mac ~ % blueutil --paired 
+address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: &amp;quot;小米音箱-蓝牙&amp;quot;, recent access date: 2023-11-27 10:57:15 +0000
+address: 74-45-ce-dd-37-e6, not connected, not favourite, paired, name: &amp;quot;ATH-M20xBT &amp;quot;, recent access date: 2023-11-27 10:57:15 +0000&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;通过id连接设备-blueutil---connect-id&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%80%9A%E8%BF%87id%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87-blueutil---connect-id&quot; aria-label=&quot;通过id连接设备 blueutil   connect id permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;通过ID连接设备 &lt;code&gt;blueutil --connect ID&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;上一步&lt;code&gt;address&lt;/code&gt;的值就是ID，在终端输入 &lt;code&gt;blueutil --connect 设备ID&lt;/code&gt;即可&lt;/p&gt;
+&lt;h3 id=&quot;查看已连接蓝牙设备-blueutil---connected-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%9F%A5%E7%9C%8B%E5%B7%B2%E8%BF%9E%E6%8E%A5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87-blueutil---connected-&quot; aria-label=&quot;查看已连接蓝牙设备 blueutil   connected  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;查看已连接蓝牙设备 &lt;code&gt;blueutil --connected &lt;/code&gt;&lt;/h3&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;yangjl@Mac ~ % blueutil --connected                
+address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: &amp;quot;小米音箱-蓝牙&amp;quot;, recent access date: 2023-11-27 10:59:40 +0000&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;h3 id=&quot;设置自动连接&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5&quot; aria-label=&quot;设置自动连接 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;设置自动连接&lt;/h3&gt;
+&lt;p&gt;创建一个文件&lt;code&gt;auto_connect_bluetooth.sh&lt;/code&gt;，文件内容如下，其中ID自行修改&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;blueutil --connect 64-64-4a-7f-ad-85
+echo &amp;#39;自动连接蓝牙至小米音箱&amp;#39;
+exit&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;p&gt;系统偏好设置-&gt;用户与群组-&gt;登陆项-&gt; “+” -&gt; 选择 `auto_connect_bluetooth.sh“&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3ea6014aa4000247c27d86817d5f492b/74866/image.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsElEQVR42o1UyVLbQBDVR3BJYmzJ2nfJ2hfLWjAVQgATwEk5kFy55JRPSMUcUpVffukZA5UEDhxedUvTetOvFwknTYPTZYOyXKAqG+R5ja5dYrW6xPXnL7i8WCOJc5TFHHlWI0srpEnJ/abpUdctCvKLfE7fLyAEdgjf9mFbIWwzgGX4cKwAgZ8gmuUI/RSm4cEyfXhOBN+LEYU5xVA8xTGwMxYTuDEEWbKgKx6mogH5HopkQhprHFMCe1YJeVxhaA+x+XQD34kh7quP30wnOlTZhuCFMU4+nuNmc0MSWvT9QHJK+EGBo+MrpMUB5ot36A5O0S/PEMYLSLIPzYyhEwwz4r5mRDA0DwKTyOqRRCUs3eMwNRduPKBp38OyInheBsOYQRRNVNWAql5y3zBnmPcrSOTLBiMnybriwDZCStvEZKRi/EbhUuLmDMcXt6iHNbLmHIbfY6IW5H/A+vobrKCHaHXQ+1tMjRqy2/FsBYVqKO5rf0GnuqnwFhsUm99wVnewz7ZktzBOCSd3KDe/MDr8ib3uB8ZHW+z1W7xqvlNjgucIVShTG5qdQp0o0CSNQ7+3DKqo/vNOFylOD3aSnxJqnFB3C2iK+zJQd9WHGjJCaaxzcMLRQ4Y5FBoFmYFGR37wJ9p/VodCJVJ16rKV7AhZI0avprwpjJQ1yA5rzNIOCY1NVh0iyno+MuyZ+czG+YC4GBBRHEuATYJg6j7qokXXLGlTdt1W6ZIsbXC1/spHpCgHJOkCUTRHlnWIkwZZ3iHNWuRFz62mejBUlxGGNIctqrxFHBaIghyeHdEsegi9lOTT1jB5bCMk2ghRf9yM3ZbsLIvTZAdC5PjI/ICCHT7pBt3EDpj8/dfKk4Y9BxbLlFmkVqhnHt5WCf0ESr4tLEuWmUqNeSkYmUsb5bsx/gBFxtHjiNCmSwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/3ea6014aa4000247c27d86817d5f492b/fcda8/image.png&quot;
+        srcset=&quot;/static/3ea6014aa4000247c27d86817d5f492b/12f09/image.png 148w,
+/static/3ea6014aa4000247c27d86817d5f492b/e4a3f/image.png 295w,
+/static/3ea6014aa4000247c27d86817d5f492b/fcda8/image.png 590w,
+/static/3ea6014aa4000247c27d86817d5f492b/74866/image.png 668w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;另外建议把shell窗口设置的退出策略修改一下，这样执行完终端窗口就自动关闭了&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/a2df838704bb6c49327cbfb46224ce43/295bd/image-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 90.54054054054053%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+ElEQVR42p1UyW4TURCcAyd+AUIcz77vu9exPd4wWaREYVGkIKIgLjmyCAHiEIkbJ76AA//AL3Dih4p+z3FkAijAofw8T901PV3VLUzLLsqyhzQpkcTrKJBnbWRZB9PZLsajGbK0hbLoIqPYdA0sNo5yFHkHQhLniIIUSZT9BJY8rSco6vtIJ0cYViN0uwMinvPkkHLYybAiZC8TND2AaafQjAiKFl5CliwooglNC+C6GVw7JETw3QShn/HTMUNCAIViZYo1dQ+C4XfQmR0iyYeQlAB3GiY25RCaHsLSfUhNHb4Tw3MSTpKEJbrtIX1BG4GX0l0KacuAuKVDlW0ITtTGvYMh2q02HCLQJIMqDGA5GfrdESVlPFBXPWiKw/+zitjJwO501V2eBMGK2xg9GKEoidCgymQTih5BVnyoknlBQISyBdvweeIKK8LVSzih6uRo+hVsO0HEqqFebDQsuH6J3e19PHp4jEk9R1rOIMseJZo8+SpYDzlhVlb49PEZFtMacdiCR81nFVok1GK2g53tA/r0GmHch6K41xNGWYX3b89QV0MSgRRrGmiKLnSnRF1vc0UldrepQm6al8lXIa0Iw7SPl69eY9QfQW1qEDdESNQz1czJd1MMB2P0eiNU1Ritss8VzsnszCIW9XQFQ1sKI1jpHPnxZ6T9QwRBC7qRQnVaEEUbGRl2Mp4vjR/nF0bOqDUZN/YKET27TrSsUOw+RXz/HMrJV9w4/Abh8DtuLr6QwjoZ24LYoKo318CeG/qvIB/qKqsw38H+3gk6e8+hTN/gdu8FbhWnJICzFED8O3BRGGEYFDi9O0YVh8g9F77cJF/pkNWA+/CfCd2oj6MnZyiKASwzplHKsSWT2qr/H4QuhLSocf7uA8bVFHGQIbAvFgRVKNMcS9QbmWxzHVhvuShO2MPe/mP0BwukxRBB1IFmF2QdB77HNkvOffg7763Dp0Vh0LwLGv1YNH6MyPVKmFYKnTYN2yCm5nOzy3+YjnXYfA/Y+AH/1DjAYGtdCQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/a2df838704bb6c49327cbfb46224ce43/fcda8/image-1.png&quot;
+        srcset=&quot;/static/a2df838704bb6c49327cbfb46224ce43/12f09/image-1.png 148w,
+/static/a2df838704bb6c49327cbfb46224ce43/e4a3f/image-1.png 295w,
+/static/a2df838704bb6c49327cbfb46224ce43/fcda8/image-1.png 590w,
+/static/a2df838704bb6c49327cbfb46224ce43/295bd/image-1.png 667w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 336px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/66bd97a5197406e18b9fbe2712aae8a8/d99f2/image-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACeklEQVR42m2SO3PTQBSF3UAHNGHipxTZkvahlfx+TrBjJ+RFmIkdO34xCYEMNKmpaehoIA0TMkBCRUNHQUHBv+FfHK7WNpOC4pvdvZLOnnuPItvmNTaNKwyLP3Hc/I1J5TvenP1C4dY52ssXaEcv0FVXKN5+jz32CYP8NXbtS4yrX/Ew+QG1O+8wrV1R/TM9/4iIjO7Di3dRFc9Qco5QYVPstp6DL/WgYn0U0yM01JTOB8gZh5psaoBSZqj3fuwAeWuEIKzHx4jcj97D0vJdeIrh9MVTrDYbiCcScHkatmMhbVuwMhYcOjssQ3UbXLhgkkEIC3augeDlD5x/+YZioYpILJZANBqHFFl0OjvIBmUwRxH+DNcHnyNYoJEiB0/m4YkA3KvB33qF0fEZfFlGxIwnwIwVMK5Qr9RJsAjX9cCZIkIRRfgayWklJAl5MjtDUM3OYMXMgNkBIqlkEkYyRS97WNsZIl9sIG05yKQ5rS6tDDbtOVtcorToAl3j5JSHHWVJ0DCxkorDEHX0Lv+gPHqNjdYaxpNjnJycotftYzo50m4YOZc3BecXhLiOJFM5RAzDgJlKwabZFI/ewlvtIaeyKJfqqJYbKBVqeq+dEWHb/1q/IchcCeGSQ9M0YRCcCpN+H+utNrY2H2Gjs4XHe/vk8BAb69tg8w8XgvI/grrlUDAktFyrteD7hZkbGrav8vQrVBBQbRZEAEWtKy9LidIqwsRnIUkKlS8EU9Ry4OfJzQDj0RMcDsYYDaf6nNGBqHm6vp6lFtMJB7OU9QhCwdy8ZZpj+HKz2UGr1UHzQRtrrXWN6whN2BJnNHihtIgvZ4gw/bBdV+jf5i/ckYJR4eBLWwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/66bd97a5197406e18b9fbe2712aae8a8/d99f2/image-2.png&quot;
+        srcset=&quot;/static/66bd97a5197406e18b9fbe2712aae8a8/12f09/image-2.png 148w,
+/static/66bd97a5197406e18b9fbe2712aae8a8/e4a3f/image-2.png 295w,
+/static/66bd97a5197406e18b9fbe2712aae8a8/d99f2/image-2.png 336w&quot;
+        sizes=&quot;(max-width: 336px) 100vw, 336px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[如果今年过不了]]></title><description><![CDATA[计算机软考系统架构设计师的教材于2022年12月发布第2版（第1版是2009年6月发布），2023年下半年考试形式由笔试改成机试。今年出题套路变化比较大，下午的案例题不再考简单的架构风格和质量属性了，第一题直接上了大数据架构图，随后是web…]]></description><link>http://funnyeagle.cn/if-can-not-pass-in-2023/</link><guid isPermaLink="false">http://funnyeagle.cn/if-can-not-pass-in-2023/</guid><pubDate>Mon, 20 Nov 2023 13:17:00 GMT</pubDate><content:encoded>&lt;p&gt;计算机软考系统架构设计师的教材于2022年12月发布第2版（第1版是2009年6月发布），2023年下半年考试形式由笔试改成机试。今年出题套路变化比较大，下午的案例题不再考简单的架构风格和质量属性了，第一题直接上了大数据架构图，随后是web服务架构、数据库和缓存等偏实战的题。也有很多题是教材原图原话，整体难度并不算大。&lt;/p&gt;
 &lt;h3 id=&quot;我为什么要考架构师&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%80%83%E6%9E%B6%E6%9E%84%E5%B8%88&quot; aria-label=&quot;我为什么要考架构师 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;我为什么要考架构师&lt;/h3&gt;
 &lt;p&gt;为什么要考架构师，我并没有指望这个认证给我升职加薪，公司也没有要求。我主要是出于情怀，满足自己的虚荣心吧（这没什么不好意思的，我本来就是一个特别感性的人），另外就是希望能扩充一下知识域。我的理念是没有程序员不想成为架构师。从事软件开发十多年，认为自己在软件开发能力方面还是说的过去的，近两年也在做架构设计相关的工作，希望能在专业上对自己有一个能力认证。对口一下专业，中级是软件设计师，高级是系统架构设计师。2022年依然很忙，没什么时间准备，于是选择了报考2022年下半年的中级-软件设计师。花在考试准备的时间很少，加起来都不到一个星期，选择题在APP上刷题，案例题是临考前看了三天文老师的视频，考前的晚上把数据流图、ER图、算法效率和代码填空的历年真题过了一遍，第二天靠红牛和咖啡撑了一天，考完感觉基本能通过，成绩出来后上午49分、下午54分，说非常兴奋也谈不上，因为毕竟工作了十多年了，在公司也是高级开发，但通过了中级还是给自己增强了一些信心，因为接下来的目标就是系统架构设计师。&lt;/p&gt;
 &lt;h3 id=&quot;备考架构师&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%A4%87%E8%80%83%E6%9E%B6%E6%9E%84%E5%B8%88&quot; aria-label=&quot;备考架构师 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;备考架构师&lt;/h3&gt;
@@ -1166,4 +1353,4 @@ The classpath root&lt;/p&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;然后重新登录就可以了。。。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;WindTerm&lt;/code&gt;开源免费又好用，有点儿小BUG能接受，希望后续版本能解决。&lt;/p&gt;
-&lt;p&gt;Game Over&lt;/p&gt;</content:encoded></item><item><title><![CDATA[三十岁的女人]]></title><link>http://funnyeagle.cn/30-sui-de-nv-ren-guitar/</link><guid isPermaLink="false">http://funnyeagle.cn/30-sui-de-nv-ren-guitar/</guid><pubDate>Sun, 02 Jul 2023 16:13:46 GMT</pubDate><content:encoded>&lt;iframe src=&quot;//player.bilibili.com/player.html?aid=742906598&amp;bvid=BV1Ak4y1M73i&amp;cid=1182994472&amp;page=1&quot; allowfullscreen=&quot;allowfullscreen&quot; width=&quot;100%&quot; height=&quot;500&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; sandbox=&quot;allow-top-navigation allow-same-origin allow-forms allow-scripts&quot;&gt; &lt;/iframe&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;Game Over&lt;/p&gt;</content:encoded></item></channel></rss>
