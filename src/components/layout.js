@@ -148,7 +148,8 @@ class Layout extends React.Component {
             ))}
           </div>
           <div style={footerStyle}>
-            © {year} FunnyEagle.CN • Theme{' '}
+            
+            © {year} funnyeagle.cn • Theme{' '}
             <a
               className="usubeni"
               target="_blank"
@@ -164,6 +165,9 @@ class Layout extends React.Component {
             >
               Gatsbyjs
             </a>
+            <br/>
+            <a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a>
+            
           </div>
         </footer>
       

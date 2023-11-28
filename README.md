@@ -1,11 +1,11 @@
-# Jason Yang's Website
+# Funny Eagle
 
 基于`Gatsby.js V5`搭建的静态网站, 主题基于 `gatsby-theme-usubeni`修改。
 
 - 代码高亮更换为`gatsby-remark-highlight-code`
     - "@deckdeckgo/highlight-code": "^3.6.0"
     - "gatsby-remark-highlight-code": "^3.3.0"
-- 删除评论组件
+- 删除了原作者自己的评论组件
 
 
 
