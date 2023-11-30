@@ -26,7 +26,7 @@ export const Head = ({ location }) => (
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "rabbithead-tribes.jpg" }) {
+    file(relativePath: { eq: "rabbithead-tribes.png" }) {
       name
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH)

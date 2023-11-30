@@ -29,6 +29,14 @@ export default class HTML extends React.Component {
             theme = 'light'
           }
           document.documentElement.className = theme + '-theme'
+
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?065ec4ac737fe35f7a9a97a6aabec697";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
     `,
             }}
           />
@@ -67,8 +75,6 @@ export default class HTML extends React.Component {
           <meta name="theme-color" content="#ffffff" />
           <meta name="baidu-site-verification" content="codeva-KiUgz2gAMo" />
           <meta name="google-adsense-account" content="ca-pub-1730830298664620"></meta>
-          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1730830298664620"
-     crossorigin="anonymous"></script>
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
