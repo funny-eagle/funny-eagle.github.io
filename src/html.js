@@ -74,7 +74,6 @@ export default class HTML extends React.Component {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#ffffff" />
           <meta name="baidu-site-verification" content="codeva-KiUgz2gAMo" />
-          <meta name="google-adsense-account" content="ca-pub-1730830298664620"></meta>
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}

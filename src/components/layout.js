@@ -113,8 +113,6 @@ class Layout extends React.Component {
                   }
                 />
               </div>
-              <meta name="google-adsense-account" content="ca-pub-1730830298664620"></meta>
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1730830298664620" crossorigin="anonymous"></script>
             </header>
             {aside ? (
               <div

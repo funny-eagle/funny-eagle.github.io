@@ -1,17 +1,16 @@
 ---
-title: 装饰器模式之真假美猴王
-date: "2018-05-19 18:49:08"
+title: "装饰器模式之真假美猴王"
+date: "2018-05-19 18:37:12"
 description: "本文以西游记中的“真假美猴王”为例，一起温习一下装饰器模式的使用场景及具体实现过程。"
 tags: ['coding']
 slug: ''
 ---
 
-> 本文以西游记中的“真假美猴王”为例，一起温习一下装饰器模式的使用场景及具体实现过程。
+> 本文以西游记中的“真假美猴王”为例，一起温习一下装饰器模式的使用场景及具体实现过程。   
 
-真假美猴王的故事就不讲了，我们的目的是要把一个猴子类包装成孙悟空和六耳猕猴，但是不能改变猴子类本身的结构。
-
+真假美猴王的故事就不讲了，就算我标题党了吧。
+我们的目的是要把一个猴子类包装成孙悟空和六耳猕猴，但是不能改变猴子类本身的结构。
 简单描述一下装饰过程：
-
 - 首先定义一个猴子接口类，猴子具有`introduce()`方法，用于让猴子嗞哩哇啦的说话介绍自己；
 - 定义一个普通的猴子类，实现猴子接口类，重载`introduce()`方法，介绍一下自己，例如：“我是个会说话的猴子！”；
 - 定义一个抽象类，实现猴子接口，作为抽象装饰器类，因为要装饰猴子，所以需要有一个接收猴子类的构造方法；
@@ -20,7 +19,6 @@ slug: ''
 过程大概就上面这么几步，接着咱们就开始coding！
 
 1、首先是定义一个猴子接口，泛代表各种猴类。`IMonkey.java`
-
 ```java
 public interface IMonkey{
     /**
@@ -31,7 +29,6 @@ public interface IMonkey{
 ```
 
 2、定义猴子实现类，表示一个普通的猴子。`Monkey.java`
-
 ```java
 public class Monkey implements IMonkey{
     @Override
@@ -42,7 +39,6 @@ public class Monkey implements IMonkey{
 ```
 
 3、定义抽象装饰器类。`AbstractMonkeyDecorator.java`
-
 ```java
 public abstract class AbstractMonkeyDecorator implements IMonkey{
     protected IMonkey monkey;
@@ -58,15 +54,13 @@ public abstract class AbstractMonkeyDecorator implements IMonkey{
 ```
 
 4、定义具体的装饰类，用于将普通的猴子包装成孙悟空或六耳猕猴。
-
 - 先来一个孙悟空的装饰类`SunWuKongDecorator.java`
-
 ```java
 public class SunWuKongDecorator extends AbstractMonkeyDecorator{
     public SunWuKongDecorator(IMonkey monkey){
         super(monkey);
     }
-
+    
     @Override
     public void introduce(){
         // 调用monkey自身的方法
@@ -83,13 +77,12 @@ public class SunWuKongDecorator extends AbstractMonkeyDecorator{
 ```
 
 - 再来一个六耳猕猴的装饰类`SixEarsMonkeyDecorator.java`
-
 ```java
 public class SixEarsMonkeyDecorator extends AbstractMonkeyDecorator{
     public SixEarsMonkeyDecorator(IMonkey monkey){
         super(monkey);
     }
-
+    
     @Override
     public void introduce(){
         // 调用monkey自身的方法
@@ -107,7 +100,6 @@ public class SixEarsMonkeyDecorator extends AbstractMonkeyDecorator{
 ```
 
 5、测试程序
-
 ```java
 public static void main(String[] args){
     // 首先看看一个普通的猴子的自我介绍
@@ -133,7 +125,6 @@ public static void main(String[] args){
 ```
 
 6、输出结果
-
 ```java
 使用装饰器前的猴子：我是一个会说话的猴子！
 使用孙悟空装饰器装饰后的猴子：我是一个会说话的猴子！我是美猴王，我会七十二变！我师傅是大唐高僧！
