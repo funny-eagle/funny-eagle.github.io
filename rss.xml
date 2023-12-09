@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Dec 2023 08:09:15 GMT</lastBuildDate><item><title><![CDATA[出成绩了]]></title><description><![CDATA[软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。 看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT…]]></description><link>http://funnyeagle.cn/chu-cheng-ji-le-2023/</link><guid isPermaLink="false">http://funnyeagle.cn/chu-cheng-ji-le-2023/</guid><pubDate>Fri, 08 Dec 2023 06:39:00 GMT</pubDate><content:encoded>&lt;p&gt;软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Dec 2023 08:42:13 GMT</lastBuildDate><item><title><![CDATA[出成绩了]]></title><description><![CDATA[软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。 看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT…]]></description><link>http://funnyeagle.cn/chu-cheng-ji-le-2023/</link><guid isPermaLink="false">http://funnyeagle.cn/chu-cheng-ji-le-2023/</guid><pubDate>Fri, 08 Dec 2023 06:39:00 GMT</pubDate><content:encoded>&lt;p&gt;软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。&lt;/p&gt;
 &lt;p&gt;看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT丢分严重，也确实是不该丢分的地方。&lt;/p&gt;
 &lt;p&gt;肯定会有一些遗憾，因为一年只有一次机会，又要继续折磨自己。&lt;/p&gt;
 &lt;p&gt;还是简单总结一下不足之处，为明年备考积累一些经验。&lt;/p&gt;
@@ -14,7 +14,7 @@
 &lt;p&gt;（完）&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Tribes] Englishman on Sunset Boulevard]]></title><description><![CDATA[原调C调，我唱稍微有点儿高，降成B调刚好]]></description><link>http://funnyeagle.cn/englishman-on-sunset-boulevard/</link><guid isPermaLink="false">http://funnyeagle.cn/englishman-on-sunset-boulevard/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;原调C调，我唱稍微有点儿高，降成B调刚好&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;deckgo-highlight-code language=&quot;text&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;B                       E                #F            #Dm   
 Never thought I&amp;#39;ll come down so hard  An Englishman on Sunset 
      #G                    E            #F
@@ -40,7 +40,7 @@ All you need is imagination So come on kid,tell them how it is
 It goes on and on and on and on til you recognize where it went wrong
 Every now and then who are misunderstood&lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;</content:encoded></item><item><title><![CDATA[[Tribes] Dancehall]]></title><description><![CDATA[A E #Fm D]]></description><link>http://funnyeagle.cn/dancehall/</link><guid isPermaLink="false">http://funnyeagle.cn/dancehall/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;p&gt;A E #Fm D&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;text&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
           &lt;code slot=&quot;code&quot;&gt;Tribes Dancehall Chords A E #Fm D
 
 Verse 1:
