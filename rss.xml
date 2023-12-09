@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 08 Dec 2023 07:03:29 GMT</lastBuildDate><item><title><![CDATA[出成绩了]]></title><description><![CDATA[软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。 看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT…]]></description><link>http://funnyeagle.cn/chu-cheng-ji-le-2023/</link><guid isPermaLink="false">http://funnyeagle.cn/chu-cheng-ji-le-2023/</guid><pubDate>Fri, 08 Dec 2023 06:39:00 GMT</pubDate><content:encoded>&lt;p&gt;软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Dec 2023 08:09:15 GMT</lastBuildDate><item><title><![CDATA[出成绩了]]></title><description><![CDATA[软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。 看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT…]]></description><link>http://funnyeagle.cn/chu-cheng-ji-le-2023/</link><guid isPermaLink="false">http://funnyeagle.cn/chu-cheng-ji-le-2023/</guid><pubDate>Fri, 08 Dec 2023 06:39:00 GMT</pubDate><content:encoded>&lt;p&gt;软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。&lt;/p&gt;
 &lt;p&gt;看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT丢分严重，也确实是不该丢分的地方。&lt;/p&gt;
 &lt;p&gt;肯定会有一些遗憾，因为一年只有一次机会，又要继续折磨自己。&lt;/p&gt;
 &lt;p&gt;还是简单总结一下不足之处，为明年备考积累一些经验。&lt;/p&gt;
@@ -11,7 +11,97 @@
 &lt;/ol&gt;
 &lt;p&gt;孜孜不倦，重新来过，
 死磕架构，明年加油。&lt;/p&gt;
-&lt;p&gt;（完）&lt;/p&gt;</content:encoded></item><item><title><![CDATA[MAC OSX 开机自动连接蓝牙音箱]]></title><description><![CDATA[我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了blueutil，分分钟轻松搞定。 安装blueutil 使用homebrew安装blueutil blueutil -h 查看使用说明 查看配对设备 blueutil…]]></description><link>http://funnyeagle.cn/blueutil/</link><guid isPermaLink="false">http://funnyeagle.cn/blueutil/</guid><pubDate>Mon, 27 Nov 2023 10:51:25 GMT</pubDate><content:encoded>&lt;p&gt;我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了&lt;a href=&quot;https://github.com/toy/blueutil&quot;&gt;blueutil&lt;/a&gt;，分分钟轻松搞定。&lt;/p&gt;
+&lt;p&gt;（完）&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Tribes] Englishman on Sunset Boulevard]]></title><description><![CDATA[原调C调，我唱稍微有点儿高，降成B调刚好]]></description><link>http://funnyeagle.cn/englishman-on-sunset-boulevard/</link><guid isPermaLink="false">http://funnyeagle.cn/englishman-on-sunset-boulevard/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;原调C调，我唱稍微有点儿高，降成B调刚好&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;deckgo-highlight-code language=&quot;text&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;B                       E                #F            #Dm   
+Never thought I&amp;#39;ll come down so hard  An Englishman on Sunset 
+     #G                    E            #F
+Boulevard Now the raelians living by to say
+B                E            #F                   #Dm                
+When your world chews you up Spits you out and you blame it all on bad
+#Gm                    E            #F 
+luck You know no one&amp;#39;s listening to you
+#Dm       #F                
+I&amp;#39;ve been travelling like a stranger to my ghost
+Just let me know  Yeah...I&amp;#39;m never coming home again
+All you need is imagination So come on kid,tell them how it is
+All you need is imagination So come on kid,tell them how it is
+
+Don&amp;#39;t let it get you down A cup of salvation the strange face in the crowd
+You know it doesn&amp;#39;t mean anything to me
+So wake up in a brand new place Lift your head let the sun beats down your face
+You know someone&amp;#39;s listening to you
+I&amp;#39;ve been travelling like a stranger to my ghost
+Just let me know Yeah...I&amp;#39;m never coming home again
+All you need is imagination So come on kid,tell them how it is
+All you need is imagination So come on kid,tell them how it is
+It goes on and on and on and on til you recognize where it went wrong
+Every now and then who are misunderstood&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;</content:encoded></item><item><title><![CDATA[[Tribes] Dancehall]]></title><description><![CDATA[A E #Fm D]]></description><link>http://funnyeagle.cn/dancehall/</link><guid isPermaLink="false">http://funnyeagle.cn/dancehall/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;p&gt;A E #Fm D&lt;/p&gt;
+&lt;deckgo-highlight-code language=&quot;text&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;Tribes Dancehall Chords A E #Fm D
+
+Verse 1:
+She&amp;#39;s a gypsy queen, real tall and mean
+She&amp;#39;s an airplane, no one&amp;#39;s ever seen
+She&amp;#39;s a firecracker, real dancehall master
+She&amp;#39;s a hurricane when you walk past her
+She&amp;#39;s the morning sun in the midnight wind
+She&amp;#39;d sell her soul for all her sins
+She&amp;#39;ll come right at you, real Cleopatra
+You take all you got, and you give it to her
+
+Chorus:
+Did you see that lightning in the sky
+A window to my mind
+It leaves me hypnotized
+Somewhere better
+Did you feel that thunder hit last night
+A poison in my mind
+It leaves me hypnotized
+Somewhere better
+
+Verse 2:
+She&amp;#39;s a striptease, real hard to please
+She&amp;#39;ll cheer you up, bring you to your knees
+She&amp;#39;s a movie star, fast sports car
+She&amp;#39;s a razor blade, she&amp;#39;ll take you far
+She&amp;#39;s the ocean&amp;#39;s cool, and your midnight ride
+She&amp;#39;s a devil&amp;#39;s church, and a preacher&amp;#39;s wife
+She&amp;#39;ll come right at you, real Cleopatra
+You take all you got, and you give it to her
+
+Chorus:
+Did you see that lightning in the sky
+A window to my mind
+It leaves me hypnotized
+Somewhere better
+Did you feel that thunder hit last night
+A poison in my mind
+It leaves me hypnotized
+Somewhere better
+
+(Solo)
+
+E                    D
+I don&amp;#39;t care for dancing
+E                    D
+but thanks for asking
+
+Chorus:
+Did you see that lightning in the sky
+A window to my mind
+It leaves me hypnotized
+Somewhere better
+Did you feel that thunder hit last night
+A poison in my mind
+It leaves me hypnotized
+Somewhere better
+
+Tab by Charlie Tilley&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;</content:encoded></item><item><title><![CDATA[MAC OSX 开机自动连接蓝牙音箱]]></title><description><![CDATA[我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了blueutil，分分钟轻松搞定。 安装blueutil 使用homebrew安装blueutil blueutil -h 查看使用说明 查看配对设备 blueutil…]]></description><link>http://funnyeagle.cn/blueutil/</link><guid isPermaLink="false">http://funnyeagle.cn/blueutil/</guid><pubDate>Mon, 27 Nov 2023 10:51:25 GMT</pubDate><content:encoded>&lt;p&gt;我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了&lt;a href=&quot;https://github.com/toy/blueutil&quot;&gt;blueutil&lt;/a&gt;，分分钟轻松搞定。&lt;/p&gt;
 &lt;h3 id=&quot;安装blueutil&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%AE%89%E8%A3%85blueutil&quot; aria-label=&quot;安装blueutil permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;安装&lt;code&gt;blueutil&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;使用&lt;code&gt;homebrew&lt;/code&gt;安装&lt;code&gt;blueutil&lt;/code&gt;&lt;/p&gt;
 &lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
@@ -61,7 +151,7 @@ exit&lt;/code&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACuUlEQVR42n2T23LjRBCG9RB7wW5sydZxJFnnkyXbsiI7W4QliYsEshjCA+zF3uwjUJgLqnjlj5pxwlIF7MVX0z3T09X994x2s9lwe7Wh7bZ0bc+yWTNs9xzuHvjp+Av33/1AWSxpl2uaeqWoq1bF9ZuR9WpQtkTe19IgJQ4iApEofC8m9FPSuKLIGtKkQnjn8yjMiaOCPGsIg1TFSV7uJVGJZs0CPDvCNDxMQyismc9cd5lPHbVaM4E9FzRlx254y/H9E8miYDaxsWS8uuvhmAFanJV8+3jg5+MTfb9lHHc0dUeSLLl+90Dd7lhvr7nc3TDub8nKnrkV44oC1y/wRH62vRzhxmi+SGiaNVXREohY4bsRi3JkM7zD93OiqMYTGYYu6LqRbrXD0D21txkPzGWVXoHwSzTXWhCKVLWpXzhM39gYE5uyv+Obhw+sd480/T0i2aM7K+r+nsenj/jS93c44wdm3gZzMSL8QmroY0wcxWzqMpt6mLpNvP2R5fFPwsPvBHcnFocT4vaEd3OiO/7B5O1vvLr8len1iVfjidf9J4SXoNlz/znRGZnYNkOcoMLWTRzD/he2bqnVndm4cjVMXDc+t2w9J3ypUCWcB7iLFinHC84zyrc/+44dqek6ojwn/O8KA5ywwdJdTIWjbMv4bJv/wJraOHLKqsKZz/SNxcVXphqKMTm/uyBdk1UD5XJH3V2R1yNpuaVq9+T1pdp/QfpO0CC8DM13Y9btwNBfEfqZmrZsuak2PHz/RLfas2xHyqonL9bU9Zai3FA3g7KbZqCqtzhOjHAiNOGmLOuB1XJLmbUU6ZI4LNQjzeIaKYn8BbLqLyHjpL5aHsbUcYL5/AU9JXKoZJi8Nv9+Ul9Cv7DVl/XdBG2VRXy9KkmTjio/V5hGlWpbJpYTlPb/IWOkTAs/J16U/AW0Hc/ZHljhgwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsElEQVR42o1UyVLbQBDVR3BJYmzJ2nfJ2hfLWjAVQgATwEk5kFy55JRPSMUcUpVffukZA5UEDhxedUvTetOvFwknTYPTZYOyXKAqG+R5ja5dYrW6xPXnL7i8WCOJc5TFHHlWI0srpEnJ/abpUdctCvKLfE7fLyAEdgjf9mFbIWwzgGX4cKwAgZ8gmuUI/RSm4cEyfXhOBN+LEYU5xVA8xTGwMxYTuDEEWbKgKx6mogH5HopkQhprHFMCe1YJeVxhaA+x+XQD34kh7quP30wnOlTZhuCFMU4+nuNmc0MSWvT9QHJK+EGBo+MrpMUB5ot36A5O0S/PEMYLSLIPzYyhEwwz4r5mRDA0DwKTyOqRRCUs3eMwNRduPKBp38OyInheBsOYQRRNVNWAql5y3zBnmPcrSOTLBiMnybriwDZCStvEZKRi/EbhUuLmDMcXt6iHNbLmHIbfY6IW5H/A+vobrKCHaHXQ+1tMjRqy2/FsBYVqKO5rf0GnuqnwFhsUm99wVnewz7ZktzBOCSd3KDe/MDr8ib3uB8ZHW+z1W7xqvlNjgucIVShTG5qdQp0o0CSNQ7+3DKqo/vNOFylOD3aSnxJqnFB3C2iK+zJQd9WHGjJCaaxzcMLRQ4Y5FBoFmYFGR37wJ9p/VodCJVJ16rKV7AhZI0avprwpjJQ1yA5rzNIOCY1NVh0iyno+MuyZ+czG+YC4GBBRHEuATYJg6j7qokXXLGlTdt1W6ZIsbXC1/spHpCgHJOkCUTRHlnWIkwZZ3iHNWuRFz62mejBUlxGGNIctqrxFHBaIghyeHdEsegi9lOTT1jB5bCMk2ghRf9yM3ZbsLIvTZAdC5PjI/ICCHT7pBt3EDpj8/dfKk4Y9BxbLlFmkVqhnHt5WCf0ESr4tLEuWmUqNeSkYmUsb5bsx/gBFxtHjiNCmSwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -93,7 +183,7 @@ exit&lt;/code&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 90.54054054054053%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVR42p2Uy24cRRSGhy2vAIk9fb9UX6vvc+mZyfS47dgxRiR2BIoUsKKwyY6IRQQSQkis2PAKiHfgGVjxQh/q6rEBR6CIxafqVtf5u+qc85/JcbOkaVqKvHmLupxTlQv64wt222PKYkZTL9V6d2+e1TT1gkme12RpQZFVt+SyoiznHO966t0VZf+M7aajXT5gtztRwTItyWSlGAUrZk3LxHESPFFguymW8xem7mFqLo6dEIUloZCKJMyRSUUc5gR+qjB1H1Pz8JyIiRsvWfRPyastuplw78DnviFxHInvxBhTlzjIR8KCXDa0iy1VsSCJCoU+ddEOXSxdMAmyOWdPtixmcwI3wdFdTDtFBCXrZUcSldhGgGtHOGaonodAyxDYZqAYvqnVCpmIbM72akvdzAk9iWP4WI7EsGLsfdAQ7JgC4SW3Iv/ACDB1gTMIWkHNNNkgRIGMSyzdV9eO4oaL88d89ulz+t1DqtkJhhGNuR1ydhfNHwXL2Zqff/qS074jT2fEIlUnFEHB2ck5Hz16zLrtkNkay4zUD4cT32UQVYKyXPPdN6/o1lu8obqax9SIcIOGrntEGhUq4dP7lvp2cxpD8zDUeoM3CqbFmtdfv2G76rA0F+2ejj4k3q9p257t5ohV27FZHzFvViwXG9XsQ4v4XozvxggvxrVDVbSJKE6oPv+FcnVJmjS4bo4TzND0gCpvOO5PyWRJOTgiq28bfzDDDbksiUM5CmrtS7Kr7zGvf+O9y9+ZXP7B+2e/YuuOupp24KAd2HucW/TDv7F/H9umOufJx9csL77C6t/wYfuaD6prrKFd9hW03sK7w+iUMYdJw4uHO9aZpIpDYlPDNofmTtRmVYh3RAmGcsWzL17R1BuEN9irYmqmmFb8/wSLuuOHb3/kaNOTJxWJ2A8HO1HDQT9030lsyKESDNKWi0+es9qcUtQPSOQCO6jR9UAZP40rZf6x7/6dYe/g6YljxYiwIpVLoniGJ0o1aYYp4zsJwk32hRH/SeBJ5es/AWOrNmm/vDKDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 90.54054054054053%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+ElEQVR42p1UyW4TURCcAyd+AUIcz77vu9exPd4wWaREYVGkIKIgLjmyCAHiEIkbJ76AA//AL3Dih4p+z3FkAijAofw8T901PV3VLUzLLsqyhzQpkcTrKJBnbWRZB9PZLsajGbK0hbLoIqPYdA0sNo5yFHkHQhLniIIUSZT9BJY8rSco6vtIJ0cYViN0uwMinvPkkHLYybAiZC8TND2AaafQjAiKFl5CliwooglNC+C6GVw7JETw3QShn/HTMUNCAIViZYo1dQ+C4XfQmR0iyYeQlAB3GiY25RCaHsLSfUhNHb4Tw3MSTpKEJbrtIX1BG4GX0l0KacuAuKVDlW0ITtTGvYMh2q02HCLQJIMqDGA5GfrdESVlPFBXPWiKw/+zitjJwO501V2eBMGK2xg9GKEoidCgymQTih5BVnyoknlBQISyBdvweeIKK8LVSzih6uRo+hVsO0HEqqFebDQsuH6J3e19PHp4jEk9R1rOIMseJZo8+SpYDzlhVlb49PEZFtMacdiCR81nFVok1GK2g53tA/r0GmHch6K41xNGWYX3b89QV0MSgRRrGmiKLnSnRF1vc0UldrepQm6al8lXIa0Iw7SPl69eY9QfQW1qEDdESNQz1czJd1MMB2P0eiNU1Ritss8VzsnszCIW9XQFQ1sKI1jpHPnxZ6T9QwRBC7qRQnVaEEUbGRl2Mp4vjR/nF0bOqDUZN/YKET27TrSsUOw+RXz/HMrJV9w4/Abh8DtuLr6QwjoZ24LYoKo318CeG/qvIB/qKqsw38H+3gk6e8+hTN/gdu8FbhWnJICzFED8O3BRGGEYFDi9O0YVh8g9F77cJF/pkNWA+/CfCd2oj6MnZyiKASwzplHKsSWT2qr/H4QuhLSocf7uA8bVFHGQIbAvFgRVKNMcS9QbmWxzHVhvuShO2MPe/mP0BwukxRBB1IFmF2QdB77HNkvOffg7763Dp0Vh0LwLGv1YNH6MyPVKmFYKnTYN2yCm5nOzy3+YjnXYfA/Y+AH/1DjAYGtdCQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -124,7 +214,7 @@ exit&lt;/code&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACe0lEQVR42lWSO28TQRRGV1AiaHjIdrzrrO2d2Znd2c06TpwAsfNSeAURGzt2TMJDgCiQaGlpaOiABvEQClQ0VDQUFPwcfsVBOzZRKI7uTPPNPfeOc9X7wlb5kGHjJ/favxkvfOfl019kJ96yev69ZUcf0jj5hm3xiX52yPXaB0aLX9ksv6N16jXjpS8Mss9siw84unCLqNilFT5gPjhgUYy53nmIPNsjKtym4Q+5GI0Jz/VIvQFz3oCk3Ge+OiT1djHFHpk/xHh9ktIezvnCGc5dOI2OBY8e3+dye5nSTIlAVqkFs1TrPn511t7rokog60gVIJVEKZ/a3EXMkx+8PfzGfGMRp1icoVAooVXKxvo1UtNEBvGEel4NUhhblUwsOkyJVEakEsJoCXPlOXv3nmH0Ao5XnEG4swgZsdRskZoGItCEMp4gIltVTmgsWiU2TOsUHcaomk/F9RF1g+OWy7hlFx1GrF4bkTWWqc7WqVUlvi+o5VQlUkRHHD0mY6SIkTIhDHOjBMf1KlTKJTy1TPfjH5qjF2x2OozHd3lw/xG9nT53xge2ozzseKfqWGhupcM5HNd18dwydWHI9l+hLnVJI0NzfomF5jKNrGXP//TzED0N+y9QaEKR4lQqFbxKhVAoxv0+6+01rmzdYGN9i5vbO/R6u2xuXJ2oHgVOZ3psDCJQE2XP88hDg0DRaq0QR9nRnOIoJcsWMHE2XYYh0gmxTonzqsx/+jJIJh3m2onJ6HUHjEb7DPp7DId36O707UImnRmrms/SBtpNm6m+magH/5RdDxXGtFfWLCuXV+l01um016yK1ckR2v6GSMXEU0KhkYFGCIWoJfwFKeuA0UXbfrYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 59.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACeklEQVR42m2SO3PTQBSF3UAHNGHipxTZkvahlfx+TrBjJ+RFmIkdO34xCYEMNKmpaehoIA0TMkBCRUNHQUHBv+FfHK7WNpOC4pvdvZLOnnuPItvmNTaNKwyLP3Hc/I1J5TvenP1C4dY52ssXaEcv0FVXKN5+jz32CYP8NXbtS4yrX/Ew+QG1O+8wrV1R/TM9/4iIjO7Di3dRFc9Qco5QYVPstp6DL/WgYn0U0yM01JTOB8gZh5psaoBSZqj3fuwAeWuEIKzHx4jcj97D0vJdeIrh9MVTrDYbiCcScHkatmMhbVuwMhYcOjssQ3UbXLhgkkEIC3augeDlD5x/+YZioYpILJZANBqHFFl0OjvIBmUwRxH+DNcHnyNYoJEiB0/m4YkA3KvB33qF0fEZfFlGxIwnwIwVMK5Qr9RJsAjX9cCZIkIRRfgayWklJAl5MjtDUM3OYMXMgNkBIqlkEkYyRS97WNsZIl9sIG05yKQ5rS6tDDbtOVtcorToAl3j5JSHHWVJ0DCxkorDEHX0Lv+gPHqNjdYaxpNjnJycotftYzo50m4YOZc3BecXhLiOJFM5RAzDgJlKwabZFI/ewlvtIaeyKJfqqJYbKBVqeq+dEWHb/1q/IchcCeGSQ9M0YRCcCpN+H+utNrY2H2Gjs4XHe/vk8BAb69tg8w8XgvI/grrlUDAktFyrteD7hZkbGrav8vQrVBBQbRZEAEWtKy9LidIqwsRnIUkKlS8EU9Ry4OfJzQDj0RMcDsYYDaf6nNGBqHm6vp6lFtMJB7OU9QhCwdy8ZZpj+HKz2UGr1UHzQRtrrXWN6whN2BJnNHihtIgvZ4gw/bBdV+jf5i/ckYJR4eBLWwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -167,7 +257,7 @@ exit&lt;/code&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.48648648648649%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvElEQVR42m1RWXKrMBD0cdAAQexYQhJCK4sNXl7l3f8kCWCn8pGpril9TGumu08IAAUBCgIAhBAQUitjuVSUMdLyqsq1dVKZsq7KqirLMoqi8F2noqoo54yLummCABkplsc/5QZpnDSek2a5PfRwcVbPy83PC8YpALzIlNJtThnScgTQcXG9f87r0wxzpy1tyLTe9XDx1s3r3U3XLMsB0IsMsB0eRREABEEgGb89/0/rU2rLpCJ17eer9jNnglBWVHUcx4De5L1HKcZJipME53mepllZlaRllPEzoYS2xSb1xYn3epHjKPRW2/HSW2/coIxTZvBazsvNjhepjJ/XXhlrjB4m7by2vjdOSEVbdorCUHDeKUNbTpk4IIXw46zdyITk+xxjnAm53UJZfaakZWVVb2cjhI6o3iFAknw05zNhvGWCcVEUJdqsgRBgTzTYgXbNUfQ7PQSQp8njfrs8PrX10/Loev1jUhhGb2xuw2748e/xgAyny3Kf1qd2o5uurJM/2f6uU4JxludZlsUfSZbnGGMAiOO4rpuqbrK8KPce/knuezXM106Zc9PYYWS8O5YcwjaBCP259pv8BbkQmidCVfPvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 61.48648648648649%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR42m1R6XKDIBDO43hWvMCAoCiX0cRE02nf/0m6atLpjzIr7Dj7wXec/CDwPQ8KTt8PKCW9NkL2jHNaC4xzZazsdUlwiXFZllEUhe91KjBmQnDRkKqCS7Rs5vWzt4PUVmonaDU/VjVcrVHT/HDTjFAaBMELzBjb5noN7wCLVjS35Wu6P/Uwtcqwio73BcDO2Om+2PGWZTlwfIGhgwIycJ/neZKLx/N7vD+lMlz2lBA33ZSbBG8o4wUmcRyDvhd436MUoSRFSYLyPE/TrMQlrTnj4kwZZXWxSX1h4n29wHEUOqPM5doZp+3Qa9vrwSkJCuEnyHHTvQMPtVbDqKxTxnXaNuBozU/gXSNE22tWC8abo2TTuMuk7AVasc9xDsTlxoVxcmbAq8Rkow0RHVG9QwiS5KM6nykXNW8giKIo/c2aIIRvS9Tby981R9Hf9GAqT5N1eVzXLyA5zmvbqV+TYPpdm9vBbvhx79EEGUrneQHPgTnEw1v5m+3fdUoQyvI8y7L4I4EGIQRz4CchFSZVlhflvof/gruuH6YbGHauKjNcuGiPRw5hm0Df//fZMAx/ALkQmid8Wl7SAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -847,7 +937,7 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACWElEQVR42p2Sy2oUURCGG7IRom7EnRvfQteKrsSnyJUQ0BBFXLgQn0AExcuTiPtoLisXxgQzEwOT6Z4k06f73M/5pLtnzCSZYLDho+pUnUv9VZ1cunyD69ducuXqJEmS/BcTExNMTg7OP116xpPnL1h6/IiFhQWmp6eZmZmpmZubY3Z2lqmpqdoOGeYrqvXi4iLLy8vMz8+TcIEvy3p0OvsX2Uqiyz366VdEb4O8t36GKt7P1uh1Vgbr41wVrxAHG4jeGla1SaIv8TbF2wxnUvyAxs+wah+j9pu1zeqYG+TdyD5vukQvSEKIOBsIYbwEYzxSGpS2OBeJ/5Kci5z23i5CFngCgebQkOM+ZrRaOxSFwFqDc5YY4xmS6D2kAjJBTAWx21g6OXQEQYZ6o1IKKSVa65oQwlgSbwL5piPfcogfDvHTITYd6a7l954lF4NafYBcQV+eK7eu0IVIV0U6OtIzkQMT6epIx0YENC2IEaMNRioqRSEGYjgrt66wcjiv1YPU8EJtKqmR4Ks2nJR64sIGxja5+uqKPIQjcCn4YuTB05JHDw7t6IahddZhpSY4XwXGPn6iwuHB86o8FAXb+1ltZTVxperJj2KMGZFcX9hwuo1VsC8V3w8kW0clW4cF3bygL445EoJSqdGhHDO2SqNQUuKMxmoFugRzCqub36Z0AekbKj+M9mXw4OfU8PpXybsdydsdyce25FNb8r4l+dCSvPkl+ZIaEukjLRnY0w1tFf7KjvWEG//ltubWSsH91ZK7qyUPN0oerJfc+VZyb7Xk9krBq23NH/00GfUPg7g3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACT0lEQVR42qWUy27TQBSGvYuUVYTKAoklEu/AHhAreIpcVUWCKiCBxAbxBCCEuLwJ7EElLRsWiKY0KVYSOwm1x3P1zM9x3DRJFZogxvpyPOccj8/N8UqXr+HqlevY2rqEQqEAz/P+mWKxiFKplO8f7TzGwydPsfPgPra3t1GpVFCtVqfU6/WpLJfLZ7parXZ2P9s3m020Wi00Gg14WLOklBgMhvB9H5zzde7wFPcRhbtg46+Ix3sk90nuL8kobGPc/4x4lNtz2x6iUQ6bZLo2jOjBc5Yj1QERIlUkVTiHdFoMiQEM2awOz/kFU/1M52wMz1oHrS0yuWoppSlVCSE1tLFwzl2cchzH6B0fI04YUjd/wJ0y+x2FIbrdIzDGYLSGMXrBa47nUjokiJdAyIB+BDdgsILsdAkhpk1R1CSlFGVkV+KlyiH6bhAdGMQk2Q+CZNDT+OWTLs6jdCYFIgGciL+mm2XnGardkHz6wmEkHSYKCCTttQOjLOypo6aoFNXSpel0v4pphOuKPHtzlqYkXEoPpmsOdCvLu3ygMw7pBDAhRZ1ckPKmERptoDk1g0YH/5tytiYsQWcQ4nfMwGU2lzlyAU3jtNmB5BNRQ76NOTrU5c4kQRAxRGzOCY0Dp9HaOOVUCSQ0h1Ll0VhJfxRqkQROS5pDGhtGBecZ1L3EnKuLy1v0IdB4cZjg9U+OV8S7rsB74s2RwFvi5SHHx0DBE3Rgl74Gn2bQlxY9aZc6PPvEnx1I3PjEcOdLglu7Ce7tJbjb5rhJ97dJl9medxT+ADvjG4RFO6c1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -907,7 +997,7 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 85.13513513513513%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAAsTAAALEwEAmpwYAAACBElEQVR42nVS227aQBDl/z+gUpM2/ZG+tFKqqKQ0BpoLIcRADNjGZr2XmZ292JXtxgEaRqvR6pydnTOXXlVVxjlBBhqvra3+M2OdJAPeCzJkXYf3qqoapdnZYHj24/r8V3C1jquqKl9pX9bX30l6Phh++HZ1Pgj6m6R7UAePt9mnm9GXfnBxM/65x3XBQZpdBOOPl/3Pg9FxsHFOWcuJGKBQiFojkibTek2GSygAhbGCjHGHslvTxq6TfDJ7Ce5m90/LxzAK7maTMLqdLv5M5rPFhit91Itep4GDzjgUSjOFTOFO/jtMYqF0WshFyrZcAdUddd4fZCbr2gpPGZLlqO+fo6/fry/7Y6lwX/ZbMONy+hzN5qs0Y7W0Bk8L+bJlTMJTGK3irfdlr+MSJqMtzwVmHOJchKt0GeebnGccMg7bAnIBR9J6+6rIOuu8L9+elGX9tXXeOg9kWqKj36kZUUsJAK1HIaH9TRv7TuYWEEhMokD9OF8PH8Lbp+VoMr+dLoOHcCdgJyEt5MlRKU0SCbQxtlbeHutrzUhWIsU7kRaSSQDUgPrkqKx1ClABtvNsUYmUFmoZ59E6idNdWe5lLpTmoMk6JBPF2fA+vLmb5VyaBjHWbXKxyjiSPZTdJMy4SpisN6xZKYEkNBWq3jDWrFqh8HUEZRvyJnt/Qu+a800New37C4US0huC5ZgtAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 85.13513513513513%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9ElEQVR42nVS6W7aQBDm/R+gUkObvEj/tFKqqKQUAyWEADEQA8YH9t7rtaGfvY05AqPxaDzHzjdHY7/fZ3lOdSYqqYzZf6DM5AwBRYEAbfLa3sDXC6Kbdvfm52Pzt/Ow8mHZvbuLXan+2QTNdvfT94dm22mtN3VAmdwPoy+d3l3Lue30fx356mQniG6d/uf71td27zwZsLkxROtESMqlVEpKrXRmJZgwkcKVGcBG8AlsSyozq008mr45T9PhZPHielBGrjcYz/+OZtP5mnB1NotGjYEIFRGRcpVwCd6y/5wwCWOQsnmQhIQLXU40L4qTyhij7fAaSW2IVMNX79uPx/tWn3F5DPuQnBA2fvWms2UQJSW0yo7ib2GSMDFxvaUfFsWuUfs2CfNCElMJ8H5M3WWw8ON1TPALDlMRU3EGrXGMCsiBvdgdQqDhD0aw0Jl11O4LPWNXjAkhrJSUCfsa1nGhsjVQqTFYKtXLbNV9dgeTRW80G4wXzrO7pWLLBHq+uiquNJNaqAwFUMEyagEQOoLL31LkY2BCKvDVVRmTcyHBdp/Wivwg5Ziit9r4wRaxh8q4BNwJnpA68/yoO3Q7T9OYsKyyQK5juoyI1OYUdlUwIhzbKi+sOimMgCqd8vLCkurUoL+vYGdTDrCPN3SR0EJxOrB/hRLSG+CDBsYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -1092,85 +1182,4 @@ we get older they get younger it was you or me
 
 End on - B &lt;/code&gt;
         &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&quot;&gt;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[论软件系统架构风格]]></title><description><![CDATA[摘要 2021年…]]></description><link>http://funnyeagle.cn/architecture-style/</link><guid isPermaLink="false">http://funnyeagle.cn/architecture-style/</guid><pubDate>Thu, 19 Oct 2023 08:25:54 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;摘要&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;2021年6月，我参与了某机场航班节点运行保障系统的开发工作，该系统的主要目标是优化航班保障作业流程，提高航班地面运行保障效率。我在该项目中担任系统架构师，主要负责系统整体架构设计和架构实现等工作。本文以机场航班节点运行保障系统为例，主要论述了软件系统架构风格在该项目中的具体应用。该项目包含三个子系统，其中航班数据中心使用仓库风格，航班节点运行保障子系统主要使用MVC架构和独立构件风格，对账子系统主要使用数据流和虚拟机风格。系统遵循可靠性、可维护性和经济性原则，满足易扩充、高可靠、易维护和可管理要求，在性能和安全性方面均满足系统技术规范的要求。该项目历时15个月，最终系统顺利上线，获得用户好评。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;正文&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;航班节点运行保障对机场的运行保障及协同调度至关重要，现有航班节点运行主要依靠人工记录实现，航空器到达与离开、客舱门打开与关闭、乘务人员和旅客人员到达与离开，客梯车到达与离开、食品车到达与离开、保洁员到达与离开等节点均需要记录保障。由于现有航班节点运作主要依赖人工记录，造成诸多问题。一方面，节点保障记录依靠地面保障人员通过纸质表单进行记录，人力成本较高，工作量大，易出现漏填、误填，对于机场站坪监控员来说，高峰状态下保障效率难以满足需求。另一方面，现有的航班节点运作实时性差，数据不及时，不利于及时发现问题和分配资源。&lt;/p&gt;
-&lt;p&gt;为进一步优化现有航班保障作业流程，提高航班地面运行保障效率，客户机场集团委托我公司承建该机场航班节点运行保障系统，我在项目中担任系统架构师，主要负责系统整体架构设计和架构实现等工作。机场航班节点运行保障系统由三个子系统组成，分别是航班数据中心、航班节点运行保障子系统和对账子系统。航班数据中心主要负责汇聚航班计划、航班动态和客货邮行等数据并向其它系统提供数据服务；航班节点运行保障子系统处理核心业务，包括生成、记录保障节点和电子签单等功能；对账子系统主要包括机场与各航空公司进行费用结算和对账等功能。&lt;/p&gt;
-&lt;p&gt;在软件系统开发中，架构风格反应了众多系统所共有的结构和语义特性，并指导如何将各个构件和子模块有效地组织成一个完整的系统。常用的架构风格有数据流风格、调用/返回风格、独立构件风格、虚拟机风格和仓库风格等。数据流风格是按顺序从前往后逐步执行程序，代表的风格有批处理和管道过滤器；调用/返回风格中，构件之间存在互相调用的关系，一般是显示调用，代表的风格有主程序/子程序、面向对象和层次结构；独立构件风格，其构件之间是相互独立的，不存在显示的调用关系，而是通过某个事件触发、异步的方式来执行，代表的风格有进程通信、事件驱动系统；虚拟机风格自定义一套规则供使用者使用，使用者基于这套规则来开发构件，能够跨平台适配，代表的风格有解释器、基于规则的系统；仓库风格是以数据为中心，所有的操作都是围绕建立的数据中心进行的，代表的风格有数据库系统、超文本系统和黑板系统。 &lt;/p&gt;
-&lt;p&gt;通过需求分析和团队评审决定，航班数据中心使用仓库风格，航班节点运行保障子系统使用MVC架构和独立构件风格，对账子系统使用数据流和虚拟机风格。&lt;/p&gt;
-&lt;p&gt;航班数据中心是一个共享数据源，汇聚了航班计划、航班动态和客货邮行等数据，并为其它系统提供数据服务，适合采用仓库风格进行构建。将获取到的航班等相关数据，经过数据清洗后统一汇聚至数据中心，通过API和数据订阅的方式向应用层的服务提供数据接口，供航班节点运行保障子系统和对账子系统使用，子系统围绕航班数据进行业务处理。&lt;/p&gt;
-&lt;p&gt;航班节点运行保障系统包括PC端和移动端，面向地面保障工作人员处理核心节点保障业务。该子系统使用了MVC架构和独立构件风格。MVC架构中，Module是模型，用于处理应用系统中数据逻辑，并在数据库存取数据；View是视图，用于处理数据显示的部分，依据模型数据创建；Controller是控制器，处理用户交互的部分，负责从视图读取数据，控制用户输入，并向模型发送数据。节点保障记录完成后，通过事件驱动的隐式调用方式，触发后续电子签单和结算对账等事件，这样的设计使每个构件都是相对独立的个体，它们之间不存在显示调用，从而降低服务之间的耦合度，提高系统的灵活性。&lt;/p&gt;
-&lt;p&gt;对账系统主要功能是依据航班节点保障记录，基于特定的规则，每月生成对应的账单和对账数据，用于机场和航空公司进行费用结算。该子系统使用数据流风格和虚拟机风格。账单是基于可配置的规则来生成的，系统向用户提供规则配置界面，配置自定义流程后，由解释引擎来按流程解释执行；每一类账单都是一个批处理任务，任务中的每一步必须在其前一步结束后才能开始，数据必须是完整的，以整体的方式传递。&lt;/p&gt;
-&lt;p&gt;经过近15个月的项目开发，该机场航班节点运行保障系统顺利投入使用，我们协助客户对航班节点保障、地空协同运行进行全面的功能和性能的测试和试运行，运行至今客户反馈良好。所选用的架构风格经过实践证实，有效的将各子系统组织成完整的航班节点运行保障系统，满足对可靠性、可维护性和安全性方面的相关要求。经过项目团队成员的共同努力，最终保证了该系统的顺利交付。&lt;/p&gt;
-&lt;p&gt;在本项目中，还存在一些不足之处，比如我们对于用户的移动终端操作易用性方面考虑不周，实际节点保障工作场景下，对用户交互和易用性要求较高，后期经过和用户共同打磨，对移动终端界面进行了优化和部分重构，有效解决了该问题；另一个不足是对系统的监控和运维自动化方面，在自动预警和告警方面还有待改进，目前系统的部分功能仍依赖人工监控，计划通过使用自动化运维工具覆盖，以提高系统监控和运维效率，减少运维人员成本。&lt;/p&gt;
-&lt;p&gt;后续我们将持续改进，小步重构，不断优化系统，并持续提升团队和个人技术水平，更好的完成软件系统开发工作，为行业提供优质的软件系统。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[基于Quartz的定时任务UI组件]]></title><description><![CDATA[需求 我需要实现一个基于springboot 的quartz-ui组件，可以通过web界面来管理定时任务。然后打包成jar文件，提供给使用quartz的项目。 基本思路 去github…]]></description><link>http://funnyeagle.cn/quartz-ui/</link><guid isPermaLink="false">http://funnyeagle.cn/quartz-ui/</guid><pubDate>Fri, 07 Jul 2023 09:14:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;需求&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%9C%80%E6%B1%82&quot; aria-label=&quot;需求 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;需求&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;我需要实现一个基于&lt;code&gt;springboot&lt;/code&gt; 的&lt;code&gt;quartz-ui&lt;/code&gt;组件，可以通过web界面来管理定时任务。然后打包成&lt;code&gt;jar&lt;/code&gt;文件，提供给使用&lt;code&gt;quartz&lt;/code&gt;的项目。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;基本思路&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF&quot; aria-label=&quot;基本思路 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;基本思路&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;去github上逛一圈，有现成的就拿来试试，改改直接用，不然还能怎么样，难道自己生写&lt;/li&gt;
-&lt;li&gt;好吧，如果没有我就去啃 &lt;code&gt;quartz&lt;/code&gt; 的 API，然后自己生写&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;于是很快我就找到了 &lt;a href=&quot;https://github.com/zjcscut/quartz-web-ui-kit&quot;&gt;quartz-web-ui-kit&lt;/a&gt;，&lt;code&gt;Readme&lt;/code&gt;在这个哥们儿的个人博客上，但链接已经访问不到了，不过找到一个cnblogs的&lt;a href=&quot;https://www.cnblogs.com/throwable/p/12670693.html&quot;&gt;基于Quartz编写一个可复用的分布式调度任务管理WebUI组件&lt;/a&gt;。代码拉下来研究了一下，结构清晰，命名舒服，maven的依赖也没什么多余的，直击要害，就只解决任务管理问题。模版用&lt;code&gt;freemarker&lt;/code&gt;，&lt;code&gt;css&lt;/code&gt;和&lt;code&gt;js&lt;/code&gt;用&lt;code&gt;uikit&lt;/code&gt;和&lt;code&gt;jquery&lt;/code&gt;。简单明了，感谢分享，就用您这个了。&lt;/p&gt;
-&lt;p&gt;跑完SQL脚本，很顺利就运行起来了，测试了一下功能，除了禁用的任务还能点触发，后台会报错，倒也没啥影响。&lt;/p&gt;
-&lt;p&gt;接下来开始动手改：
-1、这个组件需要打成&lt;code&gt;jar&lt;/code&gt;，需要的项目就增加一个依赖。
-2、上传到nexus私服。&lt;/p&gt;
-&lt;h2 id=&quot;问题和解决办法&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95&quot; aria-label=&quot;问题和解决办法 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;问题和解决办法&lt;/h2&gt;
-&lt;p&gt;1、项目无法直接加载&lt;code&gt;jar&lt;/code&gt;中静态文件，打包时需要将静态文件放在&lt;code&gt;META-INF/resources&lt;/code&gt;目录下。&lt;/p&gt;
-&lt;p&gt;在&lt;code&gt;pom.xml&lt;/code&gt; 的 &lt;code&gt;build&lt;/code&gt; 下增加&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;xml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;&amp;lt;resources&amp;gt;
-	&amp;lt;resource&amp;gt;
-		&amp;lt;directory&amp;gt;${basedir}/src/main/resources/templates&amp;lt;/directory&amp;gt;
-		&amp;lt;targetPath&amp;gt;META-INF/resources/&amp;lt;/targetPath&amp;gt;
-		&amp;lt;includes&amp;gt;
-			&amp;lt;include&amp;gt;**/**&amp;lt;/include&amp;gt;
-		&amp;lt;/includes&amp;gt;
-	&amp;lt;/resource&amp;gt;
-&amp;lt;/resources&amp;gt;&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;&lt;code&gt;application.yml&lt;/code&gt;中也要对应修改&lt;code&gt;template-loader-path&lt;/code&gt;的路径&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;yml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;spring:
-  freemarker:
-    cache: false
-    charset: UTF-8
-    check-template-location: true
-    content-type: text/html
-    expose-request-attributes: true
-    expose-session-attributes: true
-    request-context-attribute: request
-    suffix: .ftl
-    template-loader-path: classpath:/META-INF/resources/
-    prefer-file-system-access: false&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;2、配置文件也需要打包进去，继续在&lt;code&gt;pom.xml&lt;/code&gt; 的 &lt;code&gt;resources&lt;/code&gt; 下增加&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;xml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;	&amp;lt;resource&amp;gt;
-		&amp;lt;directory&amp;gt;${basedir}/src/main/resources/&amp;lt;/directory&amp;gt;
-		&amp;lt;includes&amp;gt;
-			&amp;lt;include&amp;gt;**/*.yml&amp;lt;/include&amp;gt;
-			&amp;lt;include&amp;gt;**/*.factories&amp;lt;/include&amp;gt;
-		&amp;lt;/includes&amp;gt;
-	&amp;lt;/resource&amp;gt;&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
-&lt;p&gt;3、发现&lt;code&gt;jar&lt;/code&gt;中的配置文件不生效，被项目的&lt;code&gt;application.yml&lt;/code&gt;覆盖了&lt;/p&gt;
-&lt;p&gt;将配置文件放在&lt;code&gt;src/main/resources/config&lt;/code&gt;目录下即可，参考&lt;code&gt;Spring&lt;/code&gt;&lt;a href=&quot;https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;h3 id=&quot;243-application-property-files&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#243-application-property-files&quot; aria-label=&quot;243 application property files permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;24.3 Application Property Files&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;SpringApplication&lt;/code&gt; loads properties from &lt;code&gt;application.properties&lt;/code&gt; files in the following locations and adds them to the Spring &lt;code&gt;Environment&lt;/code&gt;:&lt;/p&gt;
-&lt;p&gt;A &lt;code&gt;/config&lt;/code&gt; subdirectory of the current directory
-The current directory
-A classpath &lt;code&gt;/config&lt;/code&gt; package
-The classpath root&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;参考链接&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5&quot; aria-label=&quot;参考链接 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;参考链接&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/throwable/p/12670693.html&quot;&gt;https://www.cnblogs.com/throwable/p/12670693.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/zjcscut/quartz-web-ui-kit&quot;&gt;https://github.com/zjcscut/quartz-web-ui-kit&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html&quot;&gt;https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;差不多了，有啥后面再补充。今天周五，下午划水写博客，下班回家玩羊娃子喜欢的周五夜放克。&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;&lt;a href=&quot;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&quot;&gt;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
