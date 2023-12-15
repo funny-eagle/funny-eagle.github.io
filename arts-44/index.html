@@ -105,22 +105,21 @@
 </ul></div></aside><article class="css-post"><h1>ARTS 第44周</h1><div class="css-info"><span style="padding-right:12px">2021-09-08</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h1 id="arts-44" style="position:relative;"><a href="#arts-44" aria-label="arts 44 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ARTS-44</h1>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <p><a href="https://leetcode.com/problems/length-of-last-word/">https://leetcode.com/problems/length-of-last-word/</a></p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">class Solution {
+<pre><code class="language-java">class Solution {
     public int lengthOfLastWord(String s) {
         int index = s.length() - 1;
-        while (s.charAt(index) == &#39; &#39;) {
+        while (s.charAt(index) == ' ') {
             index--;
         }
         int wordLength = 0;
-        while (index &gt;= 0 &amp;&amp; s.charAt(index) != &#39; &#39;) {
+        while (index >= 0 &#x26;&#x26; s.charAt(index) != ' ') {
             wordLength++;
             index--;
         }
         return wordLength;
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <p><a href="https://dzone.com/articles/introduction-to-java-bytecode">Introduction to Java Bytecode</a></p>
 <h4 id="jvm-data-types" style="position:relative;"><a href="#jvm-data-types" aria-label="jvm data types permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JVM Data Types</h4>

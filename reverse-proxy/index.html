@@ -92,8 +92,7 @@
 <p>场景描述：访问本地服务器上的 README.md 文件 <a href="http://localhost/README.md">http://localhost/README.md</a>，本地服务器进行反向代理，从 <a href="https://github.com/moonbingbing/openresty-best-practices/blob/master/README.md">https://github.com/moonbingbing/openresty-best-practices/blob/master/README.md</a> 获取页面内容。</p>
 </blockquote>
 <p><code>nginx.conf</code> 配置示例：</p>
-<deckgo-highlight-code language="nginx" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">worker_processes 1;
+<pre><code class="language-nginx">worker_processes 1;
 
 pid logs/nginx.pid;
 error_log logs/error.log warn;
@@ -127,8 +126,8 @@ http {
             proxy_pass https://github.com/moonbingbing/openresty-best-practices/blob/master/README.md;
         }
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>成功启动 Nginx 后，我们打开浏览器，验证下反向代理的效果。在浏览器地址栏中输入 <code>localhost/README.md</code>，返回的结果是我们 GitHub 源代码的 README 页面。如下图：</p>
 <p><img src="https://raw.githubusercontent.com/moonbingbing/openresty-best-practices/master/images/proxy_example.png" alt=""></p>
 <p>我们只需要配置一下 <code>nginx.conf</code> 文件，不用写任何 web 页面，就可以偷偷地从别的服务器上读取一个页面返回给用户。</p>

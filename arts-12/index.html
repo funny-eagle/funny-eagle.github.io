@@ -100,25 +100,24 @@
 </blockquote>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <h3 id="longest-common-prefix" style="position:relative;"><a href="#longest-common-prefix" aria-label="longest common prefix permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Longest Common Prefix</h3>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * Write a function to find the longest common prefix string amongst an array of strings.
- * &lt;p&gt;
- * If there is no common prefix, return an empty string &quot;&quot;.
- * &lt;p&gt;
+ * &#x3C;p>
+ * If there is no common prefix, return an empty string "".
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
- * Input: [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]
- * Output: &quot;fl&quot;
+ * &#x3C;p>
+ * Input: ["flower","flow","flight"]
+ * Output: "fl"
  * Example 2:
- * &lt;p&gt;
- * Input: [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]
- * Output: &quot;&quot;
+ * &#x3C;p>
+ * Input: ["dog","racecar","car"]
+ * Output: ""
  * Explanation: There is no common prefix among the input strings.
  * Note:
- * &lt;p&gt;
+ * &#x3C;p>
  * All given inputs are in lowercase letters a-z.
  *
  * @author jason
@@ -127,7 +126,7 @@
 public class LongestCommonPrefix {
 
     public static String longestCommonPrefix(String[] strs) {
-        String commonPrefix = &quot;&quot;;
+        String commonPrefix = "";
         if (strs == null || strs.length == 0) {
             return commonPrefix;
         }
@@ -141,8 +140,8 @@ public class LongestCommonPrefix {
         int i = 0;
         // x: 数组元素中的字符串的下标
         int x = 0;
-        while (i &lt; strs.length) {
-            if ((x + 1) &gt; strs[i].length() || (x + 1) &gt; strs[i + 1].length()) {
+        while (i &#x3C; strs.length) {
+            if ((x + 1) > strs[i].length() || (x + 1) > strs[i + 1].length()) {
                 return commonPrefix;
             }
             // 获取数组中下标为i字符串,并截取(x, x+1)位置的字符
@@ -166,14 +165,14 @@ public class LongestCommonPrefix {
     }
 
     public static void main(String[] args) {
-        String[] arr1 = new String[]{&quot;flower&quot;, &quot;flow&quot;, &quot;flight&quot;};
-        String[] arr2 = new String[]{&quot;a&quot;, &quot;a&quot;};
+        String[] arr1 = new String[]{"flower", "flow", "flight"};
+        String[] arr2 = new String[]{"a", "a"};
         System.out.println(longestCommonPrefix(arr1));
         System.out.println(longestCommonPrefix(arr2));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="understanding-the-proxy-design-pattern" style="position:relative;"><a href="#understanding-the-proxy-design-pattern" aria-label="understanding the proxy design pattern permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understanding the Proxy Design Pattern</h3>
 <blockquote>
@@ -212,22 +211,21 @@ public class LongestCommonPrefix {
 <p>Failed to load Main-Class manifest attribute from xxx.jar</p>
 </blockquote>
 <p>问题在于<code>pom.xml</code>中，我虽然引入了<code>spring-boot-maven-plugin</code> 却没有配置<code>repackage</code>,正确的配置如下</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;plugin&gt;
-    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-    &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-    &lt;configuration&gt;
-        &lt;executable&gt;true&lt;/executable&gt;
-    &lt;/configuration&gt;
-    &lt;executions&gt;
-        &lt;execution&gt;
-            &lt;goals&gt;
-                &lt;goal&gt;repackage&lt;/goal&gt;
-            &lt;/goals&gt;
-        &lt;/execution&gt;
-    &lt;/executions&gt;
-&lt;/plugin&gt;</code>
-        </deckgo-highlight-code>
+<pre><code class="language-xml">&#x3C;plugin>
+    &#x3C;groupId>org.springframework.boot&#x3C;/groupId>
+    &#x3C;artifactId>spring-boot-maven-plugin&#x3C;/artifactId>
+    &#x3C;configuration>
+        &#x3C;executable>true&#x3C;/executable>
+    &#x3C;/configuration>
+    &#x3C;executions>
+        &#x3C;execution>
+            &#x3C;goals>
+                &#x3C;goal>repackage&#x3C;/goal>
+            &#x3C;/goals>
+        &#x3C;/execution>
+    &#x3C;/executions>
+&#x3C;/plugin>
+</code></pre>
 <p>附上官方文档：
 <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html">68. Spring Boot Maven Plugin</a></p>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>

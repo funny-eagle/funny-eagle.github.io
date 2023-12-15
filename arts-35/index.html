@@ -105,37 +105,36 @@
 <li>Share: <a href="http://www.uml.org.cn/oobject/201211231.asp">深入浅出UML类图</a></li>
 </ul>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 700. Search in a Binary Search Tree
- * &lt;p&gt;
+ * &#x3C;p>
  * Given the root node of a binary search tree (BST) and a value.
- * You need to find the node in the BST that the node&#39;s value equals the given value.
+ * You need to find the node in the BST that the node's value equals the given value.
  * Return the subtree rooted with that node.
- * If such node doesn&#39;t exist, you should return NULL.
- * &lt;p&gt;
+ * If such node doesn't exist, you should return NULL.
+ * &#x3C;p>
  * For example,
- * &lt;p&gt;
+ * &#x3C;p>
  * Given the tree:
  * 4
  * / \
  * 2   7
  * / \
  * 1   3
- * &lt;p&gt;
+ * &#x3C;p>
  * And the value to search: 2
  * You should return this subtree:
  * 2
  * / \
  * 1   3
  * In the example above, if we want to search the value 5,
- * &lt;p&gt;
+ * &#x3C;p>
  * since there is no node with value 5, we should return NULL.
- * &lt;p&gt;
+ * &#x3C;p>
  * Note that an empty tree is represented by NULL,
- * &lt;p&gt;
+ * &#x3C;p>
  * therefore you would see the expected output (serialized tree format) as [], not null.
  *
  * @author jason
@@ -155,9 +154,9 @@ public class SearchInBinarySearchTree {
     public static TreeNode searchBST(TreeNode root, int val) {
         TreeNode current = root;
         while(current != null){
-            if(val &lt; current.val){
+            if(val &#x3C; current.val){
                 current = current.left;
-            }else if (val &gt; current.val){
+            }else if (val > current.val){
                 current = current.right;
             }else{
                 current.print();
@@ -179,12 +178,12 @@ class TreeNode {
     }
 
     public void print() {
-        System.out.println(&quot;val: &quot; + this.val);
-        System.out.println(&quot;left: &quot; + this.left.val);
-        System.out.println(&quot;right: &quot; + this.right.val);
+        System.out.println("val: " + this.val);
+        System.out.println("left: " + this.left.val);
+        System.out.println("right: " + this.right.val);
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="5-best-libraries-for-making-ajax-calls-in-react" style="position:relative;"><a href="#5-best-libraries-for-making-ajax-calls-in-react" aria-label="5 best libraries for making ajax calls in react permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://hashnode.com/post/5-best-libraries-for-making-ajax-calls-in-react-cis8x5f7k0jl7th53z68s41k1">5 best libraries for making AJAX calls in React</a></h3>
 <ul>

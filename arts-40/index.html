@@ -95,12 +95,11 @@
 <h3 id="561-array-partition-i" style="position:relative;"><a href="#561-array-partition-i" aria-label="561 array partition i permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>561. Array Partition I</h3>
 <p>Given an array of <strong>2n</strong> integers, your task is to group these integers into <strong>n</strong> pairs of integer, say (a1, b1), (a2, b2), …, (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.</p>
 <p><strong>Example 1:</strong></p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">Input: [1,4,3,2]
+<pre><code>Input: [1,4,3,2]
 
 Output: 4
-Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).</code>
-        </deckgo-highlight-code>
+Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).
+</code></pre>
 <p><strong>Note:</strong></p>
 <ol>
 <li>
@@ -111,8 +110,7 @@ Explanation: n is 2, and the maximum sum of pairs is 4 = min(1, 2) + min(3, 4).<
 </li>
 </ol>
 <p><strong>Solution</strong></p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.Arrays;
 
@@ -128,7 +126,7 @@ public class ArrayPairSum {
     public static int arrayPairSum(int[] nums){
         Arrays.sort(nums);
         int max = 0;
-        for (int i = 0; i &lt; nums.length; i+=2) {
+        for (int i = 0; i &#x3C; nums.length; i+=2) {
             max += Math.min(nums[i], nums[i+1]);
         }
         return max;
@@ -138,8 +136,8 @@ public class ArrayPairSum {
         int[] arr = new int[]{3, 2, 4, 1};
         System.out.println(arrayPairSum(arr));
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h3 id="627-swap-salary" style="position:relative;"><a href="#627-swap-salary" aria-label="627 swap salary permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>627. Swap Salary</h3>
 <p>Given a table salary, such as the one below, that has m=male and f=female values. Swap all f and m values (i.e., change all f values to m and vice versa) with a single update statement and no intermediate temp table.</p>
 <p>Note that you must write a single update statement, DO NOT write any select statement for this problem.</p>
@@ -223,9 +221,8 @@ public class ArrayPairSum {
 </tbody>
 </table>
 <p><strong>Solution</strong></p>
-<deckgo-highlight-code language="sql" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">update salary set sex = (case sex when &#39;m&#39; then &#39;f&#39; when &#39;f&#39; then &#39;m&#39; end)</code>
-        </deckgo-highlight-code>
+<pre><code class="language-sql">update salary set sex = (case sex when 'm' then 'f' when 'f' then 'm' end)
+</code></pre>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <p><strong>filebeat+kafka+elk 实现nginx access log 实时监控分析</strong></p>
 <blockquote>
@@ -249,26 +246,23 @@ public class ArrayPairSum {
 </li>
 </ul>
 <p>为了方便分析历史的access日志，我没有对access log 的格式进行修改，默认情况下，nginx的log格式如下：</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">log_format  main  remote_addr - remote_user [time_local] &quot;request&quot; status body_bytes_sent &quot;http_referer&quot; &quot;http_user_agent&quot; &quot;$http_x_forwarded_for&quot;;</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">log_format  main  remote_addr - remote_user [time_local] "request" status body_bytes_sent "http_referer" "http_user_agent" "$http_x_forwarded_for";
+</code></pre>
 <p>例如：</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">222.211.162.225 - - [14/Jun/2019:17:15:22 +0800] &quot;GET / HTTP/1.1&quot; 304 0 &quot;-&quot; &quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36&quot;
+<pre><code class="language-shell">222.211.162.225 - - [14/Jun/2019:17:15:22 +0800] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.90 Safari/537.36"
 
-117.136.62.63 - - [14/Jun/2019:17:15:36 +0800] &quot;GET / HTTP/1.1&quot; 304 0 &quot;-&quot; &quot;Mozilla/5.0 (Linux; Android 9; ONEPLUS A6000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.67 Mobile Safari/537.36&quot;
+117.136.62.63 - - [14/Jun/2019:17:15:36 +0800] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Linux; Android 9; ONEPLUS A6000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.67 Mobile Safari/537.36"
 
-117.136.62.63 - - [14/Jun/2019:17:15:56 +0800] &quot;GET /1111 HTTP/1.1&quot; 404 571 &quot;-&quot; &quot;Mozilla/5.0 (Linux; Android 9; ONEPLUS A6000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.67 Mobile Safari/537.36&quot;
+117.136.62.63 - - [14/Jun/2019:17:15:56 +0800] "GET /1111 HTTP/1.1" 404 571 "-" "Mozilla/5.0 (Linux; Android 9; ONEPLUS A6000) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.67 Mobile Safari/537.36"
 
-180.163.220.4 - - [14/Jun/2019:17:21:13 +0800] &quot;GET / HTTP/1.1&quot; 200 612 &quot;-&quot; &quot;Mozilla/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.9.4.974 UWS/2.13.1.48 Mobile Safari/537.36 AliApp(DingTalk/4.5.11) com.alibaba.android.rimet/10487439 Channel/227200 language/zh-CN&quot;
-</code>
-        </deckgo-highlight-code>
+180.163.220.4 - - [14/Jun/2019:17:21:13 +0800] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Linux; U; Android 8.1.0; zh-CN; EML-AL00 Build/HUAWEIEML-AL00) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/57.0.2987.108 UCBrowser/11.9.4.974 UWS/2.13.1.48 Mobile Safari/537.36 AliApp(DingTalk/4.5.11) com.alibaba.android.rimet/10487439 Channel/227200 language/zh-CN"
+
+</code></pre>
 <p>配置步骤</p>
 <ol>
 <li>
 <p>首先配置filebeat的输入输出，添加自定义字段<code>fields.log_topic</code>，为不同的access log 创建不同的topic</p>
-<deckgo-highlight-code language="yaml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code"> filebeat.prospectors:
+<pre><code class="language-yaml"> filebeat.prospectors:
 
 - type: log
 
@@ -284,9 +278,9 @@ paths:
 
 output.kafka:
 
-    hosts: [&quot;127.0.0.1:9092&quot;]
+    hosts: ["127.0.0.1:9092"]
 
-    topic: &#39;%{[fields.log_topic]}&#39;
+    topic: '%{[fields.log_topic]}'
 
     partition.round_robin:
 
@@ -296,8 +290,8 @@ output.kafka:
 
     compression: gzip
 
-    max_message_bytes: 100000000</code>
-        </deckgo-highlight-code>
+    max_message_bytes: 100000000
+</code></pre>
 </li>
 <li>
 <p>配置 logstash</p>
@@ -306,16 +300,15 @@ output.kafka:
 <p>​    <code>input</code>: logstash作为消费端从kafka读取记录，指定topic，可以指定多个topic。</p>
 <p>​    <code>filter</code>: 数据经过<code>filter</code>，先将message 解析成json格式，根据自定义的fields.log_topic字段判断是否是对应topic中的消息，然后用grok表达式将message中的各个字段匹配出来，使用access log 中的时间替换@timestamp，然后将message字段移除。</p>
 <p>​    <code>output</code>: 根据自定义的fields.log_topic字段判断是否是对应topic中的消息，如果是，则将数据写入elasticsearch对应的index中。</p>
-<deckgo-highlight-code language="json" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">input {
+<pre><code class="language-json">input {
 
   kafka{
 
-    bootstrap_servers =&gt; &quot;47.106.130.196:9092&quot;
+    bootstrap_servers => "47.106.130.196:9092"
 
-    consumer_threads =&gt; 2
+    consumer_threads => 2
 
-    topics =&gt; [&quot;nginx-access-log&quot;]
+    topics => ["nginx-access-log"]
 
   }
 
@@ -325,17 +318,17 @@ filter {
 
     json {
 
-    	source =&gt; &quot;message&quot;
+    	source => "message"
 
   	}
 
-		if fields == &quot;nginx-access-log&quot; {
+		if fields == "nginx-access-log" {
 
       	grok {
 
-      		match =&gt; {
+      		match => {
 
-                    &quot;message&quot; =&gt; &quot;%{IP:remote_addr} -%SER:remote_user} [%{HTTPDATE:time_local}]&quot;%{WORD:method} DATA:request_url} HTTP/{NUMBER:http_version}&quot; %UMBER:status} {NUMBER:body    _bytes_sent}&quot;%ATA:http_referer}&quot; &quot;{DATA:http_user_agent}&quot;&quot;
+                    "message" => "%{IP:remote_addr} -%SER:remote_user} [%{HTTPDATE:time_local}]"%{WORD:method} DATA:request_url} HTTP/{NUMBER:http_version}" %UMBER:status} {NUMBER:body    _bytes_sent}"%ATA:http_referer}" "{DATA:http_user_agent}""
 
                 }
 
@@ -343,15 +336,15 @@ filter {
 
 				date {
 
-                match =&gt; [ &quot;time_local&quot;,&quot;dd/MMM/YYYY:HH:mm:ss Z&quot;]
+                match => [ "time_local","dd/MMM/YYYY:HH:mm:ss Z"]
 
-                target =&gt; &quot;@timestamp&quot;
+                target => "@timestamp"
 
 				}
 
 				mutate {
 
-                remove_field =&gt; [&quot;message&quot;]
+                remove_field => ["message"]
 
             }
 
@@ -361,20 +354,20 @@ filter {
 
 output {
 
-        if fields == &quot;nginx-access-log&quot;{
+        if fields == "nginx-access-log"{
 
             elasticsearch {
 
-                hosts =&gt; [&quot;http://127.0.0.1:9200&quot;]
+                hosts => ["http://127.0.0.1:9200"]
 
-                index =&gt; &quot;nginx-access-log-%{+YYYY.MM.dd}&quot;
+                index => "nginx-access-log-%{+YYYY.MM.dd}"
 
             }
 
         }
 
-}  </code>
-        </deckgo-highlight-code></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/graph-algorithms/"><button>Prev: <!-- -->常用的图算法</button></a></li><li><a rel="next" href="/arts-41/"><button>Next: <!-- -->ARTS 第41周</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
+}  
+</code></pre></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/graph-algorithms/"><button>Prev: <!-- -->常用的图算法</button></a></li><li><a rel="next" href="/arts-41/"><button>Next: <!-- -->ARTS 第41周</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
       
       
       if(true) {

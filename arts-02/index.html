@@ -94,8 +94,7 @@
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第2周</h1><div class="css-info"><span style="padding-right:12px">2018-07-15</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <h3 id="add-two-numbers" style="position:relative;"><a href="#add-two-numbers" aria-label="add two numbers permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add Two Numbers</h3>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 1.Add Two Numbers
@@ -109,8 +108,8 @@
  * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
  * 
  * Example
- * Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
- * Output: 7 -&gt; 0 -&gt; 8
+ * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+ * Output: 7 -> 0 -> 8
  * Explanation: 342 + 465 = 807.
  *
  * @author jason
@@ -171,14 +170,14 @@ class ListNode {
         while (listNode != null) {
             System.out.print(listNode.val);
             if (listNode.next != null) {
-                System.out.print(&quot; -&gt; &quot;);
+                System.out.print(" -> ");
             }
             listNode = listNode.next;
         }
         System.out.println();
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <blockquote>
 <p>Code Review Best Practices
@@ -217,54 +216,47 @@ code review的目的、执行、可读性和风格、可维护性、安全、评
 </ul>
 <p>Inconsistent naming
 命名风格不一致</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">class MyClass {
+<pre><code class="language-java">class MyClass {
   private int countTotalPageVisits; //R: name variables consistently
   private int uniqueUsersCount;
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>Inconsistent method signatures
 方法签名不一致</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">interface MyInterface {
+<pre><code class="language-java">interface MyInterface {
   /** Returns {@link Optional#empty} if s cannot be extracted. */
-  public Optional&lt;String&gt; extractString(String s);
+  public Optional&#x3C;String> extractString(String s);
   /** Returns null if {@code s} cannot be rewritten. */
-  //R: should harmonize return values: use Optional&lt;&gt; here, too
+  //R: should harmonize return values: use Optional&#x3C;> here, too
   public String rewriteString(String s);
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>Library use
 使用工具类</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">//R: remove and replace by Guava&#39;s MapJoiner
-String joinAndConcatenate(Map&lt;String, String&gt; map, String keyValueSeparator, String keySeparator);</code>
-        </deckgo-highlight-code>
+<pre><code class="language-java">//R: remove and replace by Guava's MapJoiner
+String joinAndConcatenate(Map&#x3C;String, String> map, String keyValueSeparator, String keySeparator);
+</code></pre>
 <p>Personal taste</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">int dayCount; //R: nit: I usually prefer numFoo over fooCount; up to you, but we should keep it consistent in this project</code>
-        </deckgo-highlight-code>
+<pre><code class="language-java">int dayCount; //R: nit: I usually prefer numFoo over fooCount; up to you, but we should keep it consistent in this project
+</code></pre>
 <p>Bugs</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">//R: This performs numIterations+1 iterations, is that intentional?
+<pre><code class="language-java">//R: This performs numIterations+1 iterations, is that intentional?
 //   If it is, consider changing the numIterations semantics?
-for (int i = 0; i &lt;= numIterations; ++i) {
+for (int i = 0; i &#x3C;= numIterations; ++i) {
   ...
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>Architectural concerns
 架构问题</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">otherService.call(); //R: I think we should avoid the dependency on OtherService. Can we discuss this in person?</code>
-        </deckgo-highlight-code>
+<pre><code class="language-java">otherService.call(); //R: I think we should avoid the dependency on OtherService. Can we discuss this in person?
+</code></pre>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <p>上周在写一个定时删除无用资源的定时任务，用到了列举所有oss对象的方法，阿里的FAQ回复有勘误（已向他们反馈，现已修复）</p>
 <p>获取阿里云OSS上指定bucket下所有的对象信息列表</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">String endpoint = &quot;http://oss-cn-hangzhou.aliyuncs.com&quot;;
-String accessKeyId = &quot;&lt;yourAccessKeyId&gt;&quot;;
-String accessKeySecret = &quot;&lt;yourAccessKeySecret&gt;&quot;;
-String bucketName = &quot;&lt;yourBucketName&gt;&quot;;
+<pre><code class="language-java">String endpoint = "http://oss-cn-hangzhou.aliyuncs.com";
+String accessKeyId = "&#x3C;yourAccessKeyId>";
+String accessKeySecret = "&#x3C;yourAccessKeySecret>";
+String bucketName = "&#x3C;yourBucketName>";
 // 创建OSSClient实例。
 OSSClient ossClient = new OSSClient(endpoint, accessKeyId, accessKeySecret);
 final int maxKeys = 200;
@@ -272,15 +264,15 @@ String nextMarker = null;
 ObjectListing objectListing;
 do {
     objectListing = ossClient.listObjects(new ListObjectsRequest(bucketName).withMarker(nextMarker).withMaxKeys(maxKeys));
-    List&lt;OSSObjectSummary&gt; sums = objectListing.getObjectSummaries();
+    List&#x3C;OSSObjectSummary> sums = objectListing.getObjectSummaries();
     for (OSSObjectSummary s : sums) {
-        System.out.println(&quot;\t&quot; + s.getKey());
+        System.out.println("\t" + s.getKey());
     }
     nextMarker = objectListing.getNextMarker();
 } while (objectListing.isTruncated());
 // 关闭OSSClient。
-ossClient.shutdown();</code>
-        </deckgo-highlight-code>
+ossClient.shutdown();
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <p>20条数据库设计最佳实践</p>
 <blockquote>

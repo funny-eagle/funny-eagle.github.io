@@ -99,16 +99,15 @@
 </ul>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第25周</h1><div class="css-info"><span style="padding-right:12px">2018-12-22</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.HashMap;
 
 /**
  * 12. Integer to Roman
- * &lt;p&gt;
+ * &#x3C;p>
  * Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
- * &lt;p&gt;
+ * &#x3C;p>
  * Symbol       Value
  * I             1
  * V             5
@@ -117,40 +116,40 @@ import java.util.HashMap;
  * C             100
  * D             500
  * M             1000
- * For example, two is written as II in Roman numeral, just two one&#39;s added together.
+ * For example, two is written as II in Roman numeral, just two one's added together.
  * Twelve is written as, XII, which is simply X + II. The number twenty seven is written as XXVII, which is XX + V + II.
- * &lt;p&gt;
+ * &#x3C;p>
  * Roman numerals are usually written largest to smallest from left to right. However,
  * the numeral for four is not IIII. Instead, the number four is written as IV.
  * Because the one is before the five we subtract it making four. The same principle applies to the number nine,
  * which is written as IX. There are six instances where subtraction is used:
- * &lt;p&gt;
+ * &#x3C;p>
  * I can be placed before V (5) and X (10) to make 4 and 9.
  * X can be placed before L (50) and C (100) to make 40 and 90.
  * C can be placed before D (500) and M (1000) to make 400 and 900.
  * Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 3
- * Output: &quot;III&quot;
+ * Output: "III"
  * Example 2:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 4
- * Output: &quot;IV&quot;
+ * Output: "IV"
  * Example 3:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 9
- * Output: &quot;IX&quot;
+ * Output: "IX"
  * Example 4:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 58
- * Output: &quot;LVIII&quot;
+ * Output: "LVIII"
  * Explanation: L = 50, V = 5, III = 3.
  * Example 5:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 1994
- * Output: &quot;MCMXCIV&quot;
+ * Output: "MCMXCIV"
  * Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
  *
  * @author yangjinlong
@@ -165,23 +164,23 @@ public class IntegerToRoman {
 
     private String intToRoman(int num) {
         int[] numbers = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        HashMap&lt;Integer, String&gt; map = new HashMap&lt;&gt;();
-        map.put(1, &quot;I&quot;);
-        map.put(4, &quot;IV&quot;);
-        map.put(5, &quot;V&quot;);
-        map.put(9, &quot;IX&quot;);
-        map.put(10, &quot;X&quot;);
-        map.put(40, &quot;XL&quot;);
-        map.put(50, &quot;L&quot;);
-        map.put(90, &quot;XC&quot;);
-        map.put(100, &quot;C&quot;);
-        map.put(400, &quot;CD&quot;);
-        map.put(500, &quot;D&quot;);
-        map.put(900, &quot;CM&quot;);
-        map.put(1000, &quot;M&quot;);
+        HashMap&#x3C;Integer, String> map = new HashMap&#x3C;>();
+        map.put(1, "I");
+        map.put(4, "IV");
+        map.put(5, "V");
+        map.put(9, "IX");
+        map.put(10, "X");
+        map.put(40, "XL");
+        map.put(50, "L");
+        map.put(90, "XC");
+        map.put(100, "C");
+        map.put(400, "CD");
+        map.put(500, "D");
+        map.put(900, "CM");
+        map.put(1000, "M");
         String result = new String();
         for (int i : numbers) {
-            while (num &gt;= i) {
+            while (num >= i) {
                 result += map.get(i);
                 num -= i;
             }
@@ -189,8 +188,8 @@ public class IntegerToRoman {
         return result;
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="10-common-software-architectural-patterns-in-a-nutshell" style="position:relative;"><a href="#10-common-software-architectural-patterns-in-a-nutshell" aria-label="10 common software architectural patterns in a nutshell permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013">10 Common Software Architectural Patterns in a nutshell</a></h3>
 <blockquote>
@@ -210,9 +209,8 @@ public class IntegerToRoman {
 </ol>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <h3 id="springresourcesstatic-locations" style="position:relative;"><a href="#springresourcesstatic-locations" aria-label="springresourcesstatic locations permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>spring.resources.static-locations</h3>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">spring.resources.statis-locations: file:/usr/local/springbootproj/web-front/</code>
-        </deckgo-highlight-code>
+<pre><code>spring.resources.statis-locations: file:/usr/local/springbootproj/web-front/
+</code></pre>
 <p>这个配置指定静态页面的地址，一般用于测试环境，这个目录下就是<code>html</code>,<code>css</code>,<code>js</code>等静态文件，如果没有最后的<code>/</code>，spring boot将会抛出 page not found exception。</p>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <h3 id="github-app-imgbot" style="position:relative;"><a href="#github-app-imgbot" aria-label="github app imgbot permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>github app <a href="https://github.com/marketplace/imgbot">ImgBot</a></h3>
@@ -221,28 +219,27 @@ public class IntegerToRoman {
 <p>安装完成后，ImgBot将遍历GitHub中的所有图片文件并无损压缩它们。减少文件大小，但保持尺寸和质量不变。ImgBot 在完成后会提交一个PR供您查看和合并。</p>
 <p>每次添加或更新图像时，ImgBot都会跳转并使用新的PR为您优化它们。</p>
 <p>以下是imgBot为我优化图片的日志</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">[ImgBot] Optimize images
+<pre><code>[ImgBot] Optimize images
 
-*Total -- 1,007.54kb -&gt; 807.73kb (19.83%)
+*Total -- 1,007.54kb -> 807.73kb (19.83%)
 
-/data/images/design-pattern/strategy_pattern.png -- 2.99kb -&gt; 1.52kb (49.17%)
-/data/images/201808/负载均衡.png -- 29.59kb -&gt; 16.69kb (43.59%)
-/data/images/201804/springmvc请求跟踪.png -- 184.49kb -&gt; 106.44kb (42.3%)
-/data/images/201812/RestTemplate-SimpleClientHttpRequestFactory.png -- 56.83kb -&gt; 34.28kb (39.68%)
-/data/images/201805/wechat.jpg -- 27.07kb -&gt; 20.05kb (25.94%)
-/data/images/design-pattern/decorator_pattern_uml_diagram.jpg -- 50.75kb -&gt; 40.75kb (19.72%)
-/data/images/201807/jenkins-pipline.jpeg -- 161.77kb -&gt; 133.35kb (17.57%)
-/data/images/201806/proxy.png -- 32.12kb -&gt; 27.50kb (14.4%)
-/data/images/design-pattern/command.jpeg -- 58.42kb -&gt; 51.15kb (12.44%)
-/data/images/banner/book.png -- 214.12kb -&gt; 194.69kb (9.07%)
-/data/images/201805/jasonyang.jpg -- 63.71kb -&gt; 59.27kb (6.98%)
-/data/images/201805/nocoder_monkey.jpeg -- 24.09kb -&gt; 22.92kb (4.86%)
-/data/images/design-pattern/observer_pattern_uml_diagram.jpg -- 31.54kb -&gt; 30.30kb (3.91%)
-/data/images/design-pattern/singleton_pattern_uml_diagram.jpg -- 13.11kb -&gt; 12.73kb (2.87%)
-/data/images/design-pattern/sunwukong_sixears.jpeg -- 22.74kb -&gt; 22.40kb (1.49%)
-/data/images/design-pattern/abstractfactory_pattern_uml_diagram.jpg -- 34.19kb -&gt; 33.68kb (1.49%)</code>
-        </deckgo-highlight-code></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/arts-24/"><button>Prev: <!-- -->ARTS 第24周</button></a></li><li><a rel="next" href="/arts-26/"><button>Next: <!-- -->ARTS 第26周</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
+/data/images/design-pattern/strategy_pattern.png -- 2.99kb -> 1.52kb (49.17%)
+/data/images/201808/负载均衡.png -- 29.59kb -> 16.69kb (43.59%)
+/data/images/201804/springmvc请求跟踪.png -- 184.49kb -> 106.44kb (42.3%)
+/data/images/201812/RestTemplate-SimpleClientHttpRequestFactory.png -- 56.83kb -> 34.28kb (39.68%)
+/data/images/201805/wechat.jpg -- 27.07kb -> 20.05kb (25.94%)
+/data/images/design-pattern/decorator_pattern_uml_diagram.jpg -- 50.75kb -> 40.75kb (19.72%)
+/data/images/201807/jenkins-pipline.jpeg -- 161.77kb -> 133.35kb (17.57%)
+/data/images/201806/proxy.png -- 32.12kb -> 27.50kb (14.4%)
+/data/images/design-pattern/command.jpeg -- 58.42kb -> 51.15kb (12.44%)
+/data/images/banner/book.png -- 214.12kb -> 194.69kb (9.07%)
+/data/images/201805/jasonyang.jpg -- 63.71kb -> 59.27kb (6.98%)
+/data/images/201805/nocoder_monkey.jpeg -- 24.09kb -> 22.92kb (4.86%)
+/data/images/design-pattern/observer_pattern_uml_diagram.jpg -- 31.54kb -> 30.30kb (3.91%)
+/data/images/design-pattern/singleton_pattern_uml_diagram.jpg -- 13.11kb -> 12.73kb (2.87%)
+/data/images/design-pattern/sunwukong_sixears.jpeg -- 22.74kb -> 22.40kb (1.49%)
+/data/images/design-pattern/abstractfactory_pattern_uml_diagram.jpg -- 34.19kb -> 33.68kb (1.49%)
+</code></pre></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/arts-24/"><button>Prev: <!-- -->ARTS 第24周</button></a></li><li><a rel="next" href="/arts-26/"><button>Next: <!-- -->ARTS 第26周</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
       
       
       if(true) {

@@ -93,60 +93,59 @@
 </ul>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第8周</h1><div class="css-info"><span style="padding-right:12px">2018-08-26</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * https://leetcode.com/problems/string-to-integer-atoi/description/
- * &lt;p&gt;
+ * &#x3C;p>
  * 8. String to Integer (atoi)
- * &lt;p&gt;
+ * &#x3C;p>
  * Implement atoi which converts a string to an integer.
- * &lt;p&gt;
+ * &#x3C;p>
  * The function first discards as many whitespace characters as necessary until the first non-whitespace character is found.
  * Then, starting from this character, takes an optional initial plus or minus sign followed by as many numerical digits as
  * possible, and interprets them as a numerical value.
- * &lt;p&gt;
+ * &#x3C;p>
  * The string can contain additional characters after those that form the integral number, which are ignored and have no
  * effect on the behavior of this function.
- * &lt;p&gt;
+ * &#x3C;p>
  * If the first sequence of non-whitespace characters in str is not a valid integral number, or if no such sequence exists
  * because either str is empty or it contains only whitespace characters, no conversion is performed.
- * &lt;p&gt;
+ * &#x3C;p>
  * If no valid conversion could be performed, a zero value is returned.
- * &lt;p&gt;
+ * &#x3C;p>
  * Note:
- * &lt;p&gt;
- * Only the space character &#39; &#39; is considered as whitespace character.
+ * &#x3C;p>
+ * Only the space character ' ' is considered as whitespace character.
  * Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range:
  * [−2 31,  2 31 − 1]. If the numerical value is out of the range of representable values, INT_MAX (2 31 − 1) or
  * INT_MIN (−2 31) is returned.
  * Example 1:
- * &lt;p&gt;
- * Input: &quot;42&quot;
+ * &#x3C;p>
+ * Input: "42"
  * Output: 42
  * Example 2:
- * &lt;p&gt;
- * Input: &quot;   -42&quot;
+ * &#x3C;p>
+ * Input: "   -42"
  * Output: -42
- * Explanation: The first non-whitespace character is &#39;-&#39;, which is the minus sign.
+ * Explanation: The first non-whitespace character is '-', which is the minus sign.
  * Then take as many numerical digits as possible, which gets 42.
  * Example 3:
- * &lt;p&gt;
- * Input: &quot;4193 with words&quot;
+ * &#x3C;p>
+ * Input: "4193 with words"
  * Output: 4193
- * Explanation: Conversion stops at digit &#39;3&#39; as the next character is not a numerical digit.
+ * Explanation: Conversion stops at digit '3' as the next character is not a numerical digit.
  * Example 4:
- * &lt;p&gt;
- * Input: &quot;words and 987&quot;
+ * &#x3C;p>
+ * Input: "words and 987"
  * Output: 0
- * Explanation: The first non-whitespace character is &#39;w&#39;, which is not a numerical
+ * Explanation: The first non-whitespace character is 'w', which is not a numerical
  * digit or a +/- sign. Therefore no valid conversion could be performed.
  * Example 5:
- * &lt;p&gt;
- * Input: &quot;-91283472332&quot;
+ * &#x3C;p>
+ * Input: "-91283472332"
  * Output: -2147483648
- * Explanation: The number &quot;-91283472332&quot; is out of the range of a 32-bit signed integer.
+ * Explanation: The number "-91283472332" is out of the range of a 32-bit signed integer.
  * Thefore INT_MIN (−231) is returned.
  *
  * @author jason
@@ -155,41 +154,41 @@
 public class StringToInteger {
 
     public static int myAtoi(String str) {
-        if (str == null || &quot;&quot;.equals(str = str.trim())) {
+        if (str == null || "".equals(str = str.trim())) {
             return 0;
         }
 
         // 字母开头
-        if (str.matches(&quot;^[a-zA-Z]\\w{0,31}$&quot;)) {
+        if (str.matches("^[a-zA-Z]\\w{0,31}$")) {
             return 0;
         }
 
         int i = 0;
-        char flag = &#39;+&#39;;
+        char flag = '+';
         // 判断正负
-        if (str.charAt(i) == &#39;-&#39;){
-            flag = &#39;-&#39;;
+        if (str.charAt(i) == '-'){
+            flag = '-';
             i++;
-        } else if (str.charAt(i) == &#39;+&#39;) {
-            flag = &#39;+&#39;;
+        } else if (str.charAt(i) == '+') {
+            flag = '+';
             i++;
         }
 
         double result = 0;
         //计算对应的整数
-        while (i &lt; str.length() &amp;&amp; str.charAt(i) &gt;= &#39;0&#39; &amp;&amp; str.charAt(i) &lt;= &#39;9&#39;) {
-            result = result * 10 + (str.charAt(i) - &#39;0&#39;);
+        while (i &#x3C; str.length() &#x26;&#x26; str.charAt(i) >= '0' &#x26;&#x26; str.charAt(i) &#x3C;= '9') {
+            result = result * 10 + (str.charAt(i) - '0');
             i++;
         }
 
-        if (flag == &#39;-&#39;) {
+        if (flag == '-') {
             result = -result;
         }
 
         // 越界处理
-        if (result &gt; Integer.MAX_VALUE) {
+        if (result > Integer.MAX_VALUE) {
             return Integer.MAX_VALUE;
-        } else if (result &lt; Integer.MIN_VALUE) {
+        } else if (result &#x3C; Integer.MIN_VALUE) {
             return Integer.MIN_VALUE;
         }
 
@@ -197,20 +196,20 @@ public class StringToInteger {
     }
 
     public static void main(String[] args) {
-        System.out.println(myAtoi(&quot;123abc&quot;));
-        System.out.println(myAtoi(&quot;  &quot;));
+        System.out.println(myAtoi("123abc"));
+        System.out.println(myAtoi("  "));
         System.out.println(myAtoi(null));
-        System.out.println(myAtoi(&quot;hello123&quot;));
-        System.out.println(myAtoi(&quot;9999999999999999999999999&quot;));
-        System.out.println(myAtoi(&quot;-9999999999999999999999999&quot;));
-        System.out.println(myAtoi(&quot;1000&quot;));
-        System.out.println(myAtoi(&quot;0001&quot;));
-        System.out.println(myAtoi(&quot;-888&quot;));
-        System.out.println(myAtoi(&quot;   9999    2222&quot;));
+        System.out.println(myAtoi("hello123"));
+        System.out.println(myAtoi("9999999999999999999999999"));
+        System.out.println(myAtoi("-9999999999999999999999999"));
+        System.out.println(myAtoi("1000"));
+        System.out.println(myAtoi("0001"));
+        System.out.println(myAtoi("-888"));
+        System.out.println(myAtoi("   9999    2222"));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <blockquote>
 <p><a href="https://docs.docker.com/network/host/">https://docs.docker.com/network/host/</a>
@@ -229,8 +228,7 @@ public class StringToInteger {
 <p>观察者模式也称为发布订阅模式，当一个对象的状态发生变化时，通知其他对象，其他对象根据变化做相应的操作。例如，<code>book</code>表的数量内容发生变化后，相应的数据统计表要根据book数量进行增量统计，这时候<code>book</code>表对应的对象就是被观察者，而相关的统计表对应的实体对象就是观察者。</p>
 </blockquote>
 <p>被观察者(发布者)</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.observer;
+<pre><code class="language-java">package org.nocoder.observer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -243,7 +241,7 @@ public class Subject {
     /**
      * 观察者
      */
-    private List&lt;Observer&gt; observers = new ArrayList&lt;Observer&gt;();
+    private List&#x3C;Observer> observers = new ArrayList&#x3C;Observer>();
 
     private int state;
 
@@ -274,11 +272,10 @@ public class Subject {
         }
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>观察者抽象类</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.observer;
+<pre><code class="language-java">package org.nocoder.observer;
 
 /**
  * 观察者抽象类
@@ -289,11 +286,10 @@ public abstract class Observer {
 
     public abstract void update();
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>BinaryObserver</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.observer;
+<pre><code class="language-java">package org.nocoder.observer;
 
 public class BinaryObserver extends Observer {
 
@@ -304,13 +300,12 @@ public class BinaryObserver extends Observer {
 
     @Override
     public void update() {
-        System.out.println(this.getClass().getName() + &quot;: &quot; + Integer.toBinaryString(subject.getState()));
+        System.out.println(this.getClass().getName() + ": " + Integer.toBinaryString(subject.getState()));
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>HexaObserver</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.observer;
+<pre><code class="language-java">package org.nocoder.observer;
 
 public class HexaObserver extends Observer {
 
@@ -321,13 +316,12 @@ public class HexaObserver extends Observer {
 
     @Override
     public void update() {
-        System.out.println(this.getClass().getName() + &quot;: &quot; + Integer.toHexString(subject.getState()));
+        System.out.println(this.getClass().getName() + ": " + Integer.toHexString(subject.getState()));
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>OctalObserver</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.observer;
+<pre><code class="language-java">package org.nocoder.observer;
 
 public class OctalObserver extends Observer {
 
@@ -338,12 +332,11 @@ public class OctalObserver extends Observer {
 
     @Override
     public void update() {
-        System.out.println(this.getClass().getName() + &quot;: &quot; + Integer.toOctalString(subject.getState()));
+        System.out.println(this.getClass().getName() + ": " + Integer.toOctalString(subject.getState()));
     }
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.observer;
+}
+</code></pre>
+<pre><code class="language-java">package org.nocoder.observer;
 
 public class Demo {
     public static void main(String[] args) {
@@ -363,8 +356,8 @@ public class Demo {
 
         // 观察者消费订阅，执行 update() 方法
     }
-}</code>
-        </deckgo-highlight-code></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/arts-07/"><button>Prev: <!-- -->ARTS 第7周</button></a></li><li><a rel="next" href="/arts-09/"><button>Next: <!-- -->ARTS 第9周</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
+}
+</code></pre></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/arts-07/"><button>Prev: <!-- -->ARTS 第7周</button></a></li><li><a rel="next" href="/arts-09/"><button>Next: <!-- -->ARTS 第9周</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
       
       
       if(true) {

@@ -97,8 +97,7 @@
 <p>第十五周 ARTS。这周约了几个好久不见的“狱友”聚餐（因为我们同在的上家公司是做司法行业业务系统的，所以调侃称为“狱友”），聊了很多，让我感触最深刻的就是关于读书和学习的思维力和金字塔原理，怎么样高效的读书学习也是有套路可寻的，掌握一些模式可以更快的掌握书中的有效信息，本周的Share分享几本相关的书，与大家共勉。</p>
 </blockquote>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * Given a sorted array nums, remove the duplicates in-place such that each element
@@ -115,7 +114,7 @@
  *
  * Your function should return length = 2, with the first two elements of nums being 1 and 2 respectively.
  *
- * It doesn&#39;t matter what you leave beyond the returned length.
+ * It doesn't matter what you leave beyond the returned length.
  * Example 2:
  *
  * Given nums = [0,0,1,1,1,2,2,3,3,4],
@@ -124,7 +123,7 @@
  *
  * nums being modified to 0, 1, 2, 3, and 4 respectively.
  *
- * It doesn&#39;t matter what values are set beyond the returned length.
+ * It doesn't matter what values are set beyond the returned length.
  * Clarification:
  *
  * Confused why the returned value is an integer but your answer is an array?
@@ -140,7 +139,7 @@
  *
  * // any modification to nums in your function would be known by the caller.
  * // using the length returned by your function, it prints the first len elements.
- * for (int i = 0; i &lt; len; i++) {
+ * for (int i = 0; i &#x3C; len; i++) {
  *     print(nums[i]);
  * }
  * @author jason
@@ -153,7 +152,7 @@ public class RemoveDuplicatesFromSortedArray {
         }
         int count = 1;
 
-        for (int i = 1; i &lt; nums.length; i++) {
+        for (int i = 1; i &#x3C; nums.length; i++) {
             if (nums[i - 1] != nums[i]) {
                 nums[count++] = nums[i];
             }
@@ -161,8 +160,8 @@ public class RemoveDuplicatesFromSortedArray {
 
         return count;
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="apache-kafka-quickstart" style="position:relative;"><a href="#apache-kafka-quickstart" aria-label="apache kafka quickstart permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://kafka.apache.org/quickstart">Apache Kafka Quickstart</a></h3>
 <p>最近计划对系统内部、系统与系统间的接口调用进行解耦，春哥推荐使用kafka，之前我们都没有用过kafka，于是花了一个下午的时间来入门kafka，把官网的introduction啃了一遍，照着quickstart操作，体验了一把。</p>
@@ -232,8 +231,7 @@ public class RemoveDuplicatesFromSortedArray {
 </li>
 <li>
 <p>传递基本类型值</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public static void test(int i){
+<pre><code class="language-java">public static void test(int i){
     i = 1;
 }
 
@@ -241,22 +239,21 @@ public static void main(String[]  args){
     int i = 0;
     test(i);
     System.out.println(i); // 输出结果：0
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>传递对象的引用</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public static void test(User user){
-    user.setName(&quot;jason&quot;);
+<pre><code class="language-java">public static void test(User user){
+    user.setName("jason");
 }
 
 public static void main(String[]  args){
-    User user = new User(&quot;freda&quot;);
+    User user = new User("freda");
     test(user);
     System.out.println(user.getName()); // 输出结果：jason
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>上面两个例子应该比较直观了，java 的参数传递始终都是值传递，int 类型i始终不会被改变；User 类型的 user 是引用值，其指向的堆内存里的User实例是可以修改的。</p>

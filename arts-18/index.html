@@ -108,50 +108,49 @@
 <li>Share: mycat 从入门到放弃</li>
 </ul>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.Stack;
 
 /**
  * 344. Reverse String
  * Write a function that takes a string as input and returns the string reversed.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
- * Input: &quot;hello&quot;
- * Output: &quot;olleh&quot;
+ * &#x3C;p>
+ * Input: "hello"
+ * Output: "olleh"
  * Example 2:
- * &lt;p&gt;
- * Input: &quot;A man, a plan, a canal: Panama&quot;
- * Output: &quot;amanaP :lanac a ,nalp a ,nam A&quot;
+ * &#x3C;p>
+ * Input: "A man, a plan, a canal: Panama"
+ * Output: "amanaP :lanac a ,nalp a ,nam A"
  *
  * @author jason
  * @date 2018/11/4.
  */
 public class ReverseString {
     public static String reverseString(String s) {
-        if (s == null || s == &quot;&quot;) {
+        if (s == null || s == "") {
             return null;
         }
-        Stack&lt;Character&gt; stack = new Stack&lt;&gt;();
-        for (int i = 0; i &lt; s.length(); i++) {
+        Stack&#x3C;Character> stack = new Stack&#x3C;>();
+        for (int i = 0; i &#x3C; s.length(); i++) {
             stack.push(s.charAt(i));
         }
         int len = stack.size();
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i &lt; len; i++) {
+        for (int i = 0; i &#x3C; len; i++) {
             sb.append(stack.pop());
         }
         return sb.toString();
     }
 
     public static void main(String[] args) {
-        System.out.println(reverseString(&quot;A man, a plan, a canal: Panama&quot;));
+        System.out.println(reverseString("A man, a plan, a canal: Panama"));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <p><a href="https://en.wikipedia.org/wiki/Shard_(database_architecture)">Shard (database architecture)</a></p>
 <p><a href="https://dzone.com/articles/challenges-of-sharding-mysql">Challenges of Sharding MySQL</a></p>

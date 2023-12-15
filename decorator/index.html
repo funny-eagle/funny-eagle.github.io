@@ -90,26 +90,23 @@
 </ul>
 <p>过程大概就上面这么几步，接着咱们就开始coding！</p>
 <p>1、首先是定义一个猴子接口，泛代表各种猴类。<code>IMonkey.java</code></p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public interface IMonkey{
+<pre><code class="language-java">public interface IMonkey{
     /**
      * 猴子自我介绍
     /*
     void introduce();
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>2、定义猴子实现类，表示一个普通的猴子。<code>Monkey.java</code></p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class Monkey implements IMonkey{
+<pre><code class="language-java">public class Monkey implements IMonkey{
     @Override
     public void introduce(){
-        System.out.print(&quot;我是一个会说话的猴子！&quot;);
+        System.out.print("我是一个会说话的猴子！");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>3、定义抽象装饰器类。<code>AbstractMonkeyDecorator.java</code></p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public abstract class AbstractMonkeyDecorator implements IMonkey{
+<pre><code class="language-java">public abstract class AbstractMonkeyDecorator implements IMonkey{
     protected IMonkey monkey;
     public AbstractMonkeyDecorator(IMonkey monkey){
         this.monkey = monkey;
@@ -119,14 +116,13 @@
     public void introduce(){
         monkey.introduce();
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>4、定义具体的装饰类，用于将普通的猴子包装成孙悟空或六耳猕猴。</p>
 <ul>
 <li>先来一个孙悟空的装饰类<code>SunWuKongDecorator.java</code></li>
 </ul>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class SunWuKongDecorator extends AbstractMonkeyDecorator{
+<pre><code class="language-java">public class SunWuKongDecorator extends AbstractMonkeyDecorator{
     public SunWuKongDecorator(IMonkey monkey){
         super(monkey);
     }
@@ -140,16 +136,15 @@
     }
 
     private void decorate(IMonkey monkey){
-        System.out.print(&quot;我是美猴王，我会七十二变！&quot;);
-        System.out.print(&quot;我师傅是大唐高僧！&quot;);
+        System.out.print("我是美猴王，我会七十二变！");
+        System.out.print("我师傅是大唐高僧！");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <ul>
 <li>再来一个六耳猕猴的装饰类<code>SixEarsMonkeyDecorator.java</code></li>
 </ul>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class SixEarsMonkeyDecorator extends AbstractMonkeyDecorator{
+<pre><code class="language-java">public class SixEarsMonkeyDecorator extends AbstractMonkeyDecorator{
     public SixEarsMonkeyDecorator(IMonkey monkey){
         super(monkey);
     }
@@ -164,41 +159,39 @@
 
     // 具体的装饰方法实现逻辑
     private void decorate(IMonkey monkey){
-        System.out.print(&quot;我才是美猴王，我会七十二变！&quot;);
-        System.out.print(&quot;大唐高僧是我师傅！&quot;);
+        System.out.print("我才是美猴王，我会七十二变！");
+        System.out.print("大唐高僧是我师傅！");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>5、测试程序</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public static void main(String[] args){
+<pre><code class="language-java">public static void main(String[] args){
     // 首先看看一个普通的猴子的自我介绍
-    System.out.print(&quot;使用装饰器前的猴子：&quot;);
+    System.out.print("使用装饰器前的猴子：");
     Monkey monkey = new Monkey();
     monkey.introduce();
 
     System.out.println();
 
     // 使用孙悟空装饰器装饰猴子
-    System.out.print(&quot;使用孙悟空装饰器装饰后的猴子：&quot;);
+    System.out.print("使用孙悟空装饰器装饰后的猴子：");
     SunWuKongDecorator swkDecorator = new SunWuKongDecorator(new Monkey());
     swkDecorator.introduce();
 
     System.out.println();
 
     // 使用六耳猕猴装饰器装饰猴子
-    System.out.print(&quot;使用六耳猕猴装饰器装饰后的猴子：&quot;);
+    System.out.print("使用六耳猕猴装饰器装饰后的猴子：");
     SixEarsMonkeyDecorator semDecorator = new SixEarsMonkeyDecorator(new Monkey());
     semDecorator.introduce();
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>6、输出结果</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">使用装饰器前的猴子：我是一个会说话的猴子！
+<pre><code class="language-java">使用装饰器前的猴子：我是一个会说话的猴子！
 使用孙悟空装饰器装饰后的猴子：我是一个会说话的猴子！我是美猴王，我会七十二变！我师傅是大唐高僧！
-使用六耳猕猴装饰器装饰后的猴子：我是一个会说话的猴子！我才是美猴王，我会七十二变！大唐高僧是我师傅！</code>
-        </deckgo-highlight-code>
+使用六耳猕猴装饰器装饰后的猴子：我是一个会说话的猴子！我才是美猴王，我会七十二变！大唐高僧是我师傅！
+</code></pre>
 <p>总结：上面的例子中，我们并没有对Monkey类本身进行改造，而是采用装饰器包装的方式为Monkey增加了新的功能，这种方式可以动态的为实体类增加功能，比继承更灵活，且装饰类和被装饰类互不影响，可以各自扩展。</p></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/Integrate-an-h2-database-in-your-springboot-app/"><button>Prev: <!-- -->Integrate an H2 Database in Your Spring Boot App</button></a></li><li><a rel="next" href="/ubuntu-1604-source/"><button>Next: <!-- -->ubuntu 1604 apt source</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
       
       

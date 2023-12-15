@@ -120,117 +120,115 @@
 <p>就这么几个类，下面直接开始吧！</p>
 <h4 id="1创建一个spring-boot项目配置maven坐标需要使用到-spring-boot-starter-webspring-boot-starter-security-以及-jwt为了简化代码使用了lombok" style="position:relative;"><a href="#1%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAspring-boot%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AEmaven%E5%9D%90%E6%A0%87%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%88%B0-spring-boot-starter-webspring-boot-starter-security-%E4%BB%A5%E5%8F%8A-jwt%E4%B8%BA%E4%BA%86%E7%AE%80%E5%8C%96%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E4%BA%86lombok" aria-label="1创建一个spring boot项目配置maven坐标需要使用到 spring boot starter webspring boot starter security 以及 jwt为了简化代码使用了lombok permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>1、创建一个spring-boot项目，配置maven坐标，需要使用到 spring-boot-starter-web、spring-boot-starter-security 以及 jwt，为了简化代码，使用了lombok。</h4>
 <p>完整的pom.xml 如下：</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;project xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
-         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
-    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-    &lt;parent&gt;
-        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
-        &lt;version&gt;2.5.0&lt;/version&gt;
-        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
-    &lt;/parent&gt;
-    &lt;groupId&gt;cn.funnyealge&lt;/groupId&gt;
-    &lt;artifactId&gt;jwt-example&lt;/artifactId&gt;
-    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
-    &lt;name&gt;jwt-example&lt;/name&gt;
-    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
-    &lt;properties&gt;
-        &lt;java.version&gt;8&lt;/java.version&gt;
-    &lt;/properties&gt;
-    &lt;dependencies&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;io.jsonwebtoken&lt;/groupId&gt;
-            &lt;artifactId&gt;jjwt&lt;/artifactId&gt;
-            &lt;version&gt;0.9.1&lt;/version&gt;
-        &lt;/dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-            &lt;optional&gt;true&lt;/optional&gt;
-        &lt;/dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
-            &lt;scope&gt;test&lt;/scope&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
+<pre><code class="language-xml">&#x3C;?xml version="1.0" encoding="UTF-8"?>
+&#x3C;project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    &#x3C;modelVersion>4.0.0&#x3C;/modelVersion>
+    &#x3C;parent>
+        &#x3C;groupId>org.springframework.boot&#x3C;/groupId>
+        &#x3C;artifactId>spring-boot-starter-parent&#x3C;/artifactId>
+        &#x3C;version>2.5.0&#x3C;/version>
+        &#x3C;relativePath/> &#x3C;!-- lookup parent from repository -->
+    &#x3C;/parent>
+    &#x3C;groupId>cn.funnyealge&#x3C;/groupId>
+    &#x3C;artifactId>jwt-example&#x3C;/artifactId>
+    &#x3C;version>0.0.1-SNAPSHOT&#x3C;/version>
+    &#x3C;name>jwt-example&#x3C;/name>
+    &#x3C;description>Demo project for Spring Boot&#x3C;/description>
+    &#x3C;properties>
+        &#x3C;java.version>8&#x3C;/java.version>
+    &#x3C;/properties>
+    &#x3C;dependencies>
+        &#x3C;dependency>
+            &#x3C;groupId>org.springframework.boot&#x3C;/groupId>
+            &#x3C;artifactId>spring-boot-starter&#x3C;/artifactId>
+        &#x3C;/dependency>
+        &#x3C;dependency>
+            &#x3C;groupId>org.springframework.boot&#x3C;/groupId>
+            &#x3C;artifactId>spring-boot-starter-web&#x3C;/artifactId>
+        &#x3C;/dependency>
+        &#x3C;dependency>
+            &#x3C;groupId>org.springframework.boot&#x3C;/groupId>
+            &#x3C;artifactId>spring-boot-starter-security&#x3C;/artifactId>
+        &#x3C;/dependency>
+        &#x3C;dependency>
+            &#x3C;groupId>io.jsonwebtoken&#x3C;/groupId>
+            &#x3C;artifactId>jjwt&#x3C;/artifactId>
+            &#x3C;version>0.9.1&#x3C;/version>
+        &#x3C;/dependency>
+        &#x3C;dependency>
+            &#x3C;groupId>org.projectlombok&#x3C;/groupId>
+            &#x3C;artifactId>lombok&#x3C;/artifactId>
+            &#x3C;optional>true&#x3C;/optional>
+        &#x3C;/dependency>
+        &#x3C;dependency>
+            &#x3C;groupId>org.springframework.boot&#x3C;/groupId>
+            &#x3C;artifactId>spring-boot-starter-test&#x3C;/artifactId>
+            &#x3C;scope>test&#x3C;/scope>
+        &#x3C;/dependency>
+    &#x3C;/dependencies>
 
-    &lt;build&gt;
-        &lt;plugins&gt;
-            &lt;plugin&gt;
-                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-                &lt;configuration&gt;
-                    &lt;image&gt;
-                        &lt;builder&gt;paketobuildpacks/builder-jammy-base:latest&lt;/builder&gt;
-                    &lt;/image&gt;
-                    &lt;excludes&gt;
-                        &lt;exclude&gt;
-                            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-                            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-                        &lt;/exclude&gt;
-                    &lt;/excludes&gt;
-                &lt;/configuration&gt;
-            &lt;/plugin&gt;
-        &lt;/plugins&gt;
-    &lt;/build&gt;
-    &lt;repositories&gt;
-        &lt;repository&gt;
-            &lt;id&gt;spring-milestones&lt;/id&gt;
-            &lt;name&gt;Spring Milestones&lt;/name&gt;
-            &lt;url&gt;https://repo.spring.io/milestone&lt;/url&gt;
-            &lt;snapshots&gt;
-                &lt;enabled&gt;false&lt;/enabled&gt;
-            &lt;/snapshots&gt;
-        &lt;/repository&gt;
-        &lt;repository&gt;
-            &lt;id&gt;spring-snapshots&lt;/id&gt;
-            &lt;name&gt;Spring Snapshots&lt;/name&gt;
-            &lt;url&gt;https://repo.spring.io/snapshot&lt;/url&gt;
-            &lt;releases&gt;
-                &lt;enabled&gt;false&lt;/enabled&gt;
-            &lt;/releases&gt;
-        &lt;/repository&gt;
-    &lt;/repositories&gt;
-    &lt;pluginRepositories&gt;
-        &lt;pluginRepository&gt;
-            &lt;id&gt;spring-milestones&lt;/id&gt;
-            &lt;name&gt;Spring Milestones&lt;/name&gt;
-            &lt;url&gt;https://repo.spring.io/milestone&lt;/url&gt;
-            &lt;snapshots&gt;
-                &lt;enabled&gt;false&lt;/enabled&gt;
-            &lt;/snapshots&gt;
-        &lt;/pluginRepository&gt;
-        &lt;pluginRepository&gt;
-            &lt;id&gt;spring-snapshots&lt;/id&gt;
-            &lt;name&gt;Spring Snapshots&lt;/name&gt;
-            &lt;url&gt;https://repo.spring.io/snapshot&lt;/url&gt;
-            &lt;releases&gt;
-                &lt;enabled&gt;false&lt;/enabled&gt;
-            &lt;/releases&gt;
-        &lt;/pluginRepository&gt;
-    &lt;/pluginRepositories&gt;
+    &#x3C;build>
+        &#x3C;plugins>
+            &#x3C;plugin>
+                &#x3C;groupId>org.springframework.boot&#x3C;/groupId>
+                &#x3C;artifactId>spring-boot-maven-plugin&#x3C;/artifactId>
+                &#x3C;configuration>
+                    &#x3C;image>
+                        &#x3C;builder>paketobuildpacks/builder-jammy-base:latest&#x3C;/builder>
+                    &#x3C;/image>
+                    &#x3C;excludes>
+                        &#x3C;exclude>
+                            &#x3C;groupId>org.projectlombok&#x3C;/groupId>
+                            &#x3C;artifactId>lombok&#x3C;/artifactId>
+                        &#x3C;/exclude>
+                    &#x3C;/excludes>
+                &#x3C;/configuration>
+            &#x3C;/plugin>
+        &#x3C;/plugins>
+    &#x3C;/build>
+    &#x3C;repositories>
+        &#x3C;repository>
+            &#x3C;id>spring-milestones&#x3C;/id>
+            &#x3C;name>Spring Milestones&#x3C;/name>
+            &#x3C;url>https://repo.spring.io/milestone&#x3C;/url>
+            &#x3C;snapshots>
+                &#x3C;enabled>false&#x3C;/enabled>
+            &#x3C;/snapshots>
+        &#x3C;/repository>
+        &#x3C;repository>
+            &#x3C;id>spring-snapshots&#x3C;/id>
+            &#x3C;name>Spring Snapshots&#x3C;/name>
+            &#x3C;url>https://repo.spring.io/snapshot&#x3C;/url>
+            &#x3C;releases>
+                &#x3C;enabled>false&#x3C;/enabled>
+            &#x3C;/releases>
+        &#x3C;/repository>
+    &#x3C;/repositories>
+    &#x3C;pluginRepositories>
+        &#x3C;pluginRepository>
+            &#x3C;id>spring-milestones&#x3C;/id>
+            &#x3C;name>Spring Milestones&#x3C;/name>
+            &#x3C;url>https://repo.spring.io/milestone&#x3C;/url>
+            &#x3C;snapshots>
+                &#x3C;enabled>false&#x3C;/enabled>
+            &#x3C;/snapshots>
+        &#x3C;/pluginRepository>
+        &#x3C;pluginRepository>
+            &#x3C;id>spring-snapshots&#x3C;/id>
+            &#x3C;name>Spring Snapshots&#x3C;/name>
+            &#x3C;url>https://repo.spring.io/snapshot&#x3C;/url>
+            &#x3C;releases>
+                &#x3C;enabled>false&#x3C;/enabled>
+            &#x3C;/releases>
+        &#x3C;/pluginRepository>
+    &#x3C;/pluginRepositories>
 
-&lt;/project&gt;
-</code>
-        </deckgo-highlight-code>
+&#x3C;/project>
+
+</code></pre>
 <h4 id="2spring-boot工程搭建好之后创建一个hellocontroller写一个get请求的-rest-api-hello" style="position:relative;"><a href="#2spring-boot%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA%E5%A5%BD%E4%B9%8B%E5%90%8E%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAhellocontroller%E5%86%99%E4%B8%80%E4%B8%AAget%E8%AF%B7%E6%B1%82%E7%9A%84-rest-api-hello" aria-label="2spring boot工程搭建好之后创建一个hellocontroller写一个get请求的 rest api hello permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2、spring-boot工程搭建好之后，创建一个HelloController，写一个GET请求的 REST API <code>/hello</code></h4>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.controller;
+<pre><code class="language-java">package cn.funnyealge.jwt.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -243,18 +241,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @GetMapping(&quot;/hello&quot;)
+    @GetMapping("/hello")
     public String hello() {
-        return &quot;Hello, World!&quot;;
+        return "Hello, World!";
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>此时启动项目的话，通过 <code>http://localhost:8080/hello</code> 可以直接访问到这个API的。</p>
 <h4 id="3接下来开始配置spring-security-和-jwt" style="position:relative;"><a href="#3%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%BC%80%E5%A7%8B%E9%85%8D%E7%BD%AEspring-security-%E5%92%8C-jwt" aria-label="3接下来开始配置spring security 和 jwt permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3、接下来开始配置spring security 和 JWT。</h4>
 <p>3.1 创建<code>JwtUtil</code>类，用于创建、验证<code>JWT</code>以及获取<code>JWT</code>中的信息。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.config;
+<pre><code class="language-java">package cn.funnyealge.jwt.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -278,7 +275,7 @@ import java.util.function.Function;
 public class JwtUtil implements Serializable {
     public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
     private static final long serialVersionUID = 1L;
-    @Value(&quot;${jwt.secret}&quot;)
+    @Value("${jwt.secret}")
     private String secret;
 
     /**
@@ -298,7 +295,7 @@ public class JwtUtil implements Serializable {
         return getClaimFromToken(token, Claims::getExpiration);
     }
 
-    public &lt;T&gt; T getClaimFromToken(String token, Function&lt;Claims, T&gt; claimsResolver) {
+    public &#x3C;T> T getClaimFromToken(String token, Function&#x3C;Claims, T> claimsResolver) {
         Claims claims = getAllClaimsFromToken(token);
         return claimsResolver.apply(claims);
     }
@@ -326,7 +323,7 @@ public class JwtUtil implements Serializable {
 
 
     public String generateToken(UserDetails userDetails) {
-        Map&lt;String, Object&gt; claims = new HashMap&lt;&gt;(16);
+        Map&#x3C;String, Object> claims = new HashMap&#x3C;>(16);
         return doGenerateToken(claims, userDetails.getUsername());
     }
 
@@ -337,7 +334,7 @@ public class JwtUtil implements Serializable {
      * @param subject
      * @return
      */
-    private String doGenerateToken(Map&lt;String, Object&gt; claims, String subject) {
+    private String doGenerateToken(Map&#x3C;String, Object> claims, String subject) {
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(subject)
@@ -356,15 +353,14 @@ public class JwtUtil implements Serializable {
      */
     public Boolean validateToken(String token, UserDetails userDetails) {
         String username = getUserNameFromToken(token);
-        return username.equals(userDetails.getUsername()) &amp;&amp; !isTokenExpired(token);
+        return username.equals(userDetails.getUsername()) &#x26;&#x26; !isTokenExpired(token);
     }
 
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>3.2 创建<code>JWTUserDetailsService</code>类,实现了 spring security 的UserDetailsService 接口，重写loadUserByUsername方法，通过用户名获取用户详细信息，此处没有使用数据库，使用硬编码的方式定义了一个用户，实际应用中应该从数据库中查询用户信息。其中密码是经过<code>bcrypt</code>加密的，如果需要修改，搜一个在线Bcrypt密码生成工具生成替换一下就可以。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.service;
+<pre><code class="language-java">package cn.funnyealge.jwt.service;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -383,18 +379,17 @@ import java.util.ArrayList;
 public class JtwUserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        if (&quot;funnyeagle&quot;.equals(username)) {
-            return new User(&quot;funnyeagle&quot;, &quot;$2a$10$JQEWsaUWgp6zYk1cvLvHMuM6kcLbmAdWPrp9QCSNYswu.kFum9PIq&quot;, new ArrayList&lt;&gt;());
+        if ("funnyeagle".equals(username)) {
+            return new User("funnyeagle", "$2a$10$JQEWsaUWgp6zYk1cvLvHMuM6kcLbmAdWPrp9QCSNYswu.kFum9PIq", new ArrayList&#x3C;>());
         }
 
-        throw new UsernameNotFoundException(&quot;User not found with username:&quot; + username);
+        throw new UsernameNotFoundException("User not found with username:" + username);
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>3.3 创建<code>JwtRequest</code>类，包含用户名和密码，客户端向服务端发送请求时使用。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.model;
+<pre><code class="language-java">package cn.funnyealge.jwt.model;
 
 import lombok.Data;
 
@@ -411,11 +406,10 @@ public class JwtRequest implements Serializable {
 
     private String username;
     private String password;
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>3.4 创建<code>JwtResponse</code>类，包含token属性，用于向客户端返回数据</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.model;
+<pre><code class="language-java">package cn.funnyealge.jwt.model;
 
 import lombok.Data;
 
@@ -436,11 +430,10 @@ public class JwtResponse implements Serializable {
         this.token = token;
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>3.5 创建<code>JwtAuthenticationController</code>类，包含一个POST <code>/authenticate</code> API，调用<code>AuthenticationManager</code>的<code>authenticate()</code>方法对用户名和密码进行验证，验证通过则使用JwtUtil创建JWT token返回给客户端。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.controller;
+<pre><code class="language-java">package cn.funnyealge.jwt.controller;
 
 import cn.funnyealge.jwt.config.JwtUtil;
 import cn.funnyealge.jwt.model.JwtRequest;
@@ -477,8 +470,8 @@ public class JwtAuthenticationController {
     @Resource
     private JtwUserDetailService userDetailService;
 
-    @PostMapping(value = &quot;/authenticate&quot;)
-    public ResponseEntity&lt;?&gt; createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
+    @PostMapping(value = "/authenticate")
+    public ResponseEntity&#x3C;?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
         UserDetails userDetails = userDetailService.loadUserByUsername(authenticationRequest.getUsername());
         String token = jwtUtil.generateToken(userDetails);
@@ -489,17 +482,16 @@ public class JwtAuthenticationController {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         } catch (DisabledException e) {
-            throw new Exception(&quot;user disabled&quot;, e);
+            throw new Exception("user disabled", e);
         } catch (BadCredentialsException e) {
-            throw new Exception(&quot;invalid credentials&quot;, e);
+            throw new Exception("invalid credentials", e);
         }
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>3.6 创建<code>JwtRequestFilter</code>类，继承自spring的OncePerRequestFilter类，任何请求过来都会执行这个Filter，用来检查token的有效性，验证通过后，将用户信息设置到security的上下文中。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.config;
+<pre><code class="language-java">package cn.funnyealge.jwt.config;
 
 import cn.funnyealge.jwt.service.JtwUserDetailService;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -538,24 +530,24 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
-        final String requestTokenHeader = request.getHeader(&quot;Authorization&quot;);
+        final String requestTokenHeader = request.getHeader("Authorization");
 
         String username = null;
         String jwtToken = null;
-        if (requestTokenHeader != null &amp;&amp; requestTokenHeader.startsWith(&quot;Bearer &quot;)) {
+        if (requestTokenHeader != null &#x26;&#x26; requestTokenHeader.startsWith("Bearer ")) {
             jwtToken = requestTokenHeader.substring(7);
             try {
                 username = jwtUtil.getUserNameFromToken(jwtToken);
             } catch (IllegalArgumentException e) {
-                System.out.println(&quot;Unable to get JWT Token&quot;);
+                System.out.println("Unable to get JWT Token");
             } catch (ExpiredJwtException e) {
-                System.out.println(&quot;JWT Token has expired&quot;);
+                System.out.println("JWT Token has expired");
             }
         } else {
-            logger.warn(&quot;JWT Token does not begin with Bearer String&quot;);
+            logger.warn("JWT Token does not begin with Bearer String");
         }
 
-        if (username != null &amp;&amp; SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (username != null &#x26;&#x26; SecurityContextHolder.getContext().getAuthentication() == null) {
 
             UserDetails userDetails = this.userDetailService.loadUserByUsername(username);
 
@@ -571,11 +563,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         chain.doFilter(request, response);
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>3.7 创建<code>JwtAuthenticationEntryPoint</code>类，继承spring的<code>AuthenticationEntryPoint</code>类，重写<code>commence</code>方法，用于拒绝未经身份验证的请求并返回错误码401。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.config;
+<pre><code class="language-java">package cn.funnyealge.jwt.config;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -602,13 +593,12 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Se
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
 
-        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, &quot;Unauthorized&quot;);
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <p>3.8 创建<code>WebSecurityConfig</code>类， 配置 AuthenticationManager，BCryptPasswordEncoder 和验证配置。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package cn.funnyealge.jwt.config;
+<pre><code class="language-java">package cn.funnyealge.jwt.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -664,7 +654,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
                 // 放行 /authenticate
-                .authorizeRequests().antMatchers(&quot;/authenticate&quot;).permitAll().
+                .authorizeRequests().antMatchers("/authenticate").permitAll().
                 // 其它任何请求都需要认证
                 anyRequest().authenticated().and().
                 // 使用无状态session
@@ -675,8 +665,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>启动项目，使用postman请求<code>/authenticate</code>接口</p>
 <p><span
       class="gatsby-resp-image-wrapper"

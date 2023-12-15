@@ -111,8 +111,7 @@
 <li>Share: 数据库设计的范式化和反范式化</li>
 </ul>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 832. Flipping an Image
@@ -139,29 +138,29 @@
  * Then invert the image: [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]
  * Notes:
  *
- * 1 &lt;= A.length = A[0].length &lt;= 20
- * 0 &lt;= A[i][j] &lt;= 1
+ * 1 &#x3C;= A.length = A[0].length &#x3C;= 20
+ * 0 &#x3C;= A[i][j] &#x3C;= 1
  * @author yangjinlong
  */
 public class FlippingAnImage {
     public static void main(String[] args) {
         int[][] arr = new int[][]{{1,1,0},{1,0,1},{0,0,0}};
         int[][] result = flipAndInvertImage(arr);
-        for (int i = 0; i &lt; result.length; i++) {
-            for (int j = 0; j &lt; result[i].length ; j++) {
+        for (int i = 0; i &#x3C; result.length; i++) {
+            for (int j = 0; j &#x3C; result[i].length ; j++) {
                 System.out.print(result[i][j]);
             }
-            System.out.print(&quot;, &quot;);
+            System.out.print(", ");
         };
     }
     public static int[][] flipAndInvertImage(int[][] arr) {
-        if(arr == null || arr.length &lt; 1 || arr[0].length &gt; 20){
+        if(arr == null || arr.length &#x3C; 1 || arr[0].length > 20){
             throw new IllegalArgumentException();
         }
 
-        for (int i = 0; i &lt; arr.length; i++) {
+        for (int i = 0; i &#x3C; arr.length; i++) {
             int[] reverseArray = reverseArray(arr[i]);
-            for (int j = 0; j &lt; reverseArray.length; j++) {
+            for (int j = 0; j &#x3C; reverseArray.length; j++) {
                 if(reverseArray[j] == 0){
                     reverseArray[j] = 1;
                 }else{
@@ -173,25 +172,24 @@ public class FlippingAnImage {
         return arr;
     }
     public static int[] reverseArray(int[] arr){
-        if(arr == null || arr.length &lt; 1){
+        if(arr == null || arr.length &#x3C; 1){
             return arr;
         }
         int[] result = new int[arr.length];
         int j = 0;
-        for (int i = arr.length-1; i &gt;= 0; i--) {
+        for (int i = arr.length-1; i >= 0; i--) {
             result[j++] = arr[i];
         }
         return result;
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="inverted-index" style="position:relative;"><a href="#inverted-index" aria-label="inverted index permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://www.geeksforgeeks.org/inverted-index/">Inverted Index</a></h3>
 <p>倒排索引是索引数据结构，其存储从诸如单词或数字的内容到其在文档或一组文档中的位置的映射。简单来说，它是一个类似于数据结构的散列图，可以将您从单词引导到文档或网页。</p>
 <p>假设我们要搜索文本“hello everyone, ” “this article is based on inverted index, ” “which is hashmap like data structure”. 按照（文本，文本中的单词的位置）来构建索引，带有文本位置的索引如下：</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code"> hello                (1, 1)
+<pre><code> hello                (1, 1)
  everyone             (1, 2)
  this                 (2, 1)
  article              (2, 2)
@@ -204,8 +202,8 @@ public class FlippingAnImage {
  hashmap              (3, 3)
  like                 (3, 4)
  data                 (3, 5)
- structure            (3, 6)</code>
-        </deckgo-highlight-code>
+ structure            (3, 6)
+</code></pre>
 <p><strong>构建倒排索引的步骤：</strong></p>
 <ul>
 <li><strong>获取文档</strong>

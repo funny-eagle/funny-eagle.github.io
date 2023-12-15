@@ -118,22 +118,21 @@
 <li>否则找到两者的中间点，也就是上下限的平均值，查找数字在中间点的左侧还是右侧，然后继续查找数字所在的那半部分</li>
 </ul>
 <p>下面实现一个二分法查找，返回查找目标数字所在序列的位置，下标。</p>
-<deckgo-highlight-code language="python" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">#!/usr/bin/python
-&#39;&#39;&#39;
+<pre><code class="language-python">#!/usr/bin/python
+'''
 二分法查找
 sequence 查找的序列，范围
 number   查找目标
 lower    下限
 upper    上限    
-&#39;&#39;&#39;
+'''
 def search(sequence, number, lower, upper):
 	if lower == upper:
 		assert number == sequence[upper]
 		return upper
 	else:
 		middle = (lower + upper) // 2 #找到两者的中间点
-		if number &gt; sequence[middle]: 
+		if number > sequence[middle]: 
 			#如果在中间点的右侧，就在middle+1 ～ upper的范围内继续找
 			return search(sequence, number, middle+1, upper)
 		else:
@@ -143,8 +142,8 @@ def search(sequence, number, lower, upper):
 seq = []
 for x in xrange(1,101):
 	seq.append(x)
-print search(seq, 86, 0, 100)</code>
-        </deckgo-highlight-code></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/xue-hui-ti-wen/"><button>Prev: <!-- -->学会提问</button></a></li><li><a rel="next" href="/javascript-base-knowleges/"><button>Next: <!-- -->JavaScript基础</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
+print search(seq, 86, 0, 100)
+</code></pre></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/xue-hui-ti-wen/"><button>Prev: <!-- -->学会提问</button></a></li><li><a rel="next" href="/javascript-base-knowleges/"><button>Next: <!-- -->JavaScript基础</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
       
       
       if(true) {

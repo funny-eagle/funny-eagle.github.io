@@ -971,45 +971,40 @@
 </table>
 <h2 id="计算模型" style="position:relative;"><a href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B" aria-label="计算模型 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>计算模型</h2>
 <p>Java字节码的计算模型是面向堆栈结构计算机的。例如，一个x86处理器的汇编代码如下</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">mov eax, byte [ebp-4]
+<pre><code class="language-shell">mov eax, byte [ebp-4]
 mov edx, byte [ebp-8]
 add eax, edx
-mov ecx, eax</code>
-        </deckgo-highlight-code>
+mov ecx, eax
+</code></pre>
 <p>这段代码将两个数值相加，并存入另一个地址。相似的反汇编字节码如下</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">0 iload_1
+<pre><code class="language-java">0 iload_1
 1 iload_2
 2 iadd
-3 istore_3</code>
-        </deckgo-highlight-code>
+3 istore_3
+</code></pre>
 <p>在这里，需要相加的两个操作数被放入堆栈，而相加操作就在栈中进行，其结果也被放入堆栈。存储指令之后把栈顶的数据放入一个变量地址。在每条指令前面的数字仅仅是表示这条指令到方法开始处的偏移值。这种堆栈结构也可以推广到面向对象模型上。例如，有一个”getName”方法如下</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code"> Method java.lang.String getName()
- 0 aload_0       // &quot;this&quot;对象被存入变量0
- 1 getfield #5 &lt;Field java.lang.String name&gt;
+<pre><code class="language-java"> Method java.lang.String getName()
+ 0 aload_0       // "this"对象被存入变量0
+ 1 getfield #5 &#x3C;Field java.lang.String name>
                  // 这个指令从栈顶取出一个对象，并从中搜索一个指定的域
                  // 并将相应的数据存入栈顶。
-                 // 这个例子中，&quot;name&quot;域对应于该类中的第五个常量。
+                 // 这个例子中，"name"域对应于该类中的第五个常量。
  
- 4 areturn  	 // 返回栈顶的对象作为函数的返回值</code>
-        </deckgo-highlight-code>
+ 4 areturn  	 // 返回栈顶的对象作为函数的返回值
+</code></pre>
 <h2 id="例子" style="position:relative;"><a href="#%E4%BE%8B%E5%AD%90" aria-label="例子 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例子</h2>
 <p>考虑如下Java代码</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">  outer:
-  for (int i = 2; i &lt; 1000; i++) {
-      for (int j = 2; j &lt; i; j++) {
+<pre><code class="language-java">  outer:
+  for (int i = 2; i &#x3C; 1000; i++) {
+      for (int j = 2; j &#x3C; i; j++) {
           if (i % j == 0)
               continue outer;
       }
       System.out.println (i);
-  }</code>
-        </deckgo-highlight-code>
+  }
+</code></pre>
 <p>假设上述代码位于一个函数中，Java编译器可能将代码翻译成下述的Java字节码。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">  0:   iconst_2
+<pre><code class="language-java">  0:   iconst_2
   1:   istore_1
   2:   iload_1
   3:   sipush  1000
@@ -1031,8 +1026,8 @@ mov ecx, eax</code>
   35:  invokevirtual   #85; //Method java/io/PrintStream.println:(I)V
   38:  iinc    1, 1
   41:  goto    2
-  44:  return</code>
-        </deckgo-highlight-code>
+  44:  return
+</code></pre>
 <h2 id="基于java字节码的语言" style="position:relative;"><a href="#%E5%9F%BA%E4%BA%8Ejava%E5%AD%97%E8%8A%82%E7%A0%81%E7%9A%84%E8%AF%AD%E8%A8%80" aria-label="基于java字节码的语言 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>基于Java字节码的语言</h2>
 <p>Groovy, 一种基于Java的脚本语言
 Scala,一种类型安全的通用编程语言，支持面向对象编程和函数式编程

@@ -107,38 +107,37 @@
 </ul>
 </blockquote>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 942. DI String Match
- * &lt;p&gt;
- * Given a string S that only contains &quot;I&quot; (increase) or &quot;D&quot; (decrease), let N = S.length.
- * &lt;p&gt;
+ * &#x3C;p>
+ * Given a string S that only contains "I" (increase) or "D" (decrease), let N = S.length.
+ * &#x3C;p>
  * Return any permutation A of [0, 1, ..., N] such that for all i = 0, ..., N-1:
- * &lt;p&gt;
- * If S[i] == &quot;I&quot;, then A[i] &lt; A[i+1]
- * If S[i] == &quot;D&quot;, then A[i] &gt; A[i+1]
- * &lt;p&gt;
- * &lt;p&gt;
+ * &#x3C;p>
+ * If S[i] == "I", then A[i] &#x3C; A[i+1]
+ * If S[i] == "D", then A[i] > A[i+1]
+ * &#x3C;p>
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
- * Input: &quot;IDID&quot;
+ * &#x3C;p>
+ * Input: "IDID"
  * Output: [0,4,1,3,2]
  * Example 2:
- * &lt;p&gt;
- * Input: &quot;III&quot;
+ * &#x3C;p>
+ * Input: "III"
  * Output: [0,1,2,3]
  * Example 3:
- * &lt;p&gt;
- * Input: &quot;DDI&quot;
+ * &#x3C;p>
+ * Input: "DDI"
  * Output: [3,2,0,1]
- * &lt;p&gt;
- * &lt;p&gt;
+ * &#x3C;p>
+ * &#x3C;p>
  * Note:
- * &lt;p&gt;
- * 1 &lt;= S.length &lt;= 10000
- * S only contains characters &quot;I&quot; or &quot;D&quot;.
+ * &#x3C;p>
+ * 1 &#x3C;= S.length &#x3C;= 10000
+ * S only contains characters "I" or "D".
  *
  * @author jason
  * @date 2019/4/28.
@@ -148,8 +147,8 @@ public class DIStringMatch {
         int n = s.length();
         int lo = 0, hi = n;
         int[] ans = new int[n + 1];
-        for (int i = 0; i &lt; n; ++i) {
-            if (s.charAt(i) == &#39;I&#39;) {
+        for (int i = 0; i &#x3C; n; ++i) {
+            if (s.charAt(i) == 'I') {
                 ans[i] = lo++;
             } else {
                 ans[i] = hi--;
@@ -161,14 +160,14 @@ public class DIStringMatch {
     }
 
     public static void main(String[] args) {
-        int[] arr = diStringMatch(&quot;IDID&quot;);
-        for (int i = 0; i &lt; arr.length; i++) {
-            System.out.print(arr[i] + &quot; &quot;);
+        int[] arr = diStringMatch("IDID");
+        for (int i = 0; i &#x3C; arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="what-is-test-driven-development-tdd" style="position:relative;"><a href="#what-is-test-driven-development-tdd" aria-label="what is test driven development tdd permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://www.guru99.com/test-driven-development.html">What is Test Driven Development (TDD)?</a></h3>
 <blockquote>
@@ -197,91 +196,87 @@ public class DIStringMatch {
 </blockquote>
 <p>在<code>Resource</code>目录下创建xml配置文件，这样命名<code>logback-spring.xml</code></p>
 <p>官方的控制台打印日志配置了颜色，比较好看，可以引入springboot logging 包下的defaults.xml直接使用</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
-&lt;configuration&gt;
-    &lt;include resource=&quot;org/springframework/boot/logging/logback/defaults.xml&quot;/&gt;
-    &lt;appender name=&quot;CONSOLE&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt;
-        &lt;encoder&gt;
-            &lt;pattern&gt;${CONSOLE_LOG_PATTERN}&lt;/pattern&gt;
-        &lt;/encoder&gt;
-    &lt;/appender&gt;
+<pre><code class="language-xml">&#x3C;?xml version="1.0" encoding="UTF-8" ?>
+&#x3C;configuration>
+    &#x3C;include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    &#x3C;appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        &#x3C;encoder>
+            &#x3C;pattern>${CONSOLE_LOG_PATTERN}&#x3C;/pattern>
+        &#x3C;/encoder>
+    &#x3C;/appender>
 
-    &lt;appender name=&quot;FILE&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
-        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy&quot;&gt;
-            &lt;FileNamePattern&gt;./log/service-keeper.%d{yyyy-MM-dd}.%i.log&lt;/FileNamePattern&gt;
-            &lt;maxFileSize&gt;10MB&lt;/maxFileSize&gt;
-            &lt;maxHistory&gt;60&lt;/maxHistory&gt;
-        &lt;/rollingPolicy&gt;
-        &lt;encoder&gt;
-            &lt;pattern&gt;%date [%thread] %-5level %logger{5} - %msg%n&lt;/pattern&gt;
-            &lt;charset class=&quot;java.nio.charset.Charset&quot;&gt;UTF-8&lt;/charset&gt;
-        &lt;/encoder&gt;
-    &lt;/appender&gt;
+    &#x3C;appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        &#x3C;rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            &#x3C;FileNamePattern>./log/service-keeper.%d{yyyy-MM-dd}.%i.log&#x3C;/FileNamePattern>
+            &#x3C;maxFileSize>10MB&#x3C;/maxFileSize>
+            &#x3C;maxHistory>60&#x3C;/maxHistory>
+        &#x3C;/rollingPolicy>
+        &#x3C;encoder>
+            &#x3C;pattern>%date [%thread] %-5level %logger{5} - %msg%n&#x3C;/pattern>
+            &#x3C;charset class="java.nio.charset.Charset">UTF-8&#x3C;/charset>
+        &#x3C;/encoder>
+    &#x3C;/appender>
 
-    &lt;springProfile name=&quot;dev&quot;&gt;
-        &lt;logger name=&quot;org.nocoder.servicekeeper.infrastructure.repository&quot; level=&quot;DEBUG&quot;/&gt;
-        &lt;root level=&quot;info&quot;&gt;
-            &lt;appender-ref ref=&quot;CONSOLE&quot;/&gt;
-            &lt;!--&lt;appender-ref ref=&quot;FILE&quot;/&gt;--&gt;
-        &lt;/root&gt;
-    &lt;/springProfile&gt;
+    &#x3C;springProfile name="dev">
+        &#x3C;logger name="org.nocoder.servicekeeper.infrastructure.repository" level="DEBUG"/>
+        &#x3C;root level="info">
+            &#x3C;appender-ref ref="CONSOLE"/>
+            &#x3C;!--&#x3C;appender-ref ref="FILE"/>-->
+        &#x3C;/root>
+    &#x3C;/springProfile>
 
-    &lt;springProfile name=&quot;test&quot;&gt;
-        &lt;logger name=&quot;org.nocoder.servicekeeper.infrastructure.repository&quot; level=&quot;DEBUG&quot;/&gt;
-        &lt;root level=&quot;info&quot;&gt;
-            &lt;appender-ref ref=&quot;CONSOLE&quot;/&gt;
-            &lt;appender-ref ref=&quot;FILE&quot;/&gt;
-        &lt;/root&gt;
-    &lt;/springProfile&gt;
+    &#x3C;springProfile name="test">
+        &#x3C;logger name="org.nocoder.servicekeeper.infrastructure.repository" level="DEBUG"/>
+        &#x3C;root level="info">
+            &#x3C;appender-ref ref="CONSOLE"/>
+            &#x3C;appender-ref ref="FILE"/>
+        &#x3C;/root>
+    &#x3C;/springProfile>
 
-    &lt;springProfile name=&quot;prod&quot;&gt;
-        &lt;root level=&quot;info&quot;&gt;
-            &lt;appender-ref ref=&quot;FILE&quot;/&gt;
-        &lt;/root&gt;
-    &lt;/springProfile&gt;
-&lt;/configuration&gt;</code>
-        </deckgo-highlight-code>
+    &#x3C;springProfile name="prod">
+        &#x3C;root level="info">
+            &#x3C;appender-ref ref="FILE"/>
+        &#x3C;/root>
+    &#x3C;/springProfile>
+&#x3C;/configuration>
+</code></pre>
 <p>org/springframework/boot/logging/logback/defaults.xml</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+<pre><code class="language-xml">&#x3C;?xml version="1.0" encoding="UTF-8"?>
 
-&lt;!--
+&#x3C;!--
 Default logback configuration provided for import, equivalent to the programmatic
 initialization performed by Boot
---&gt;
+-->
 
-&lt;included&gt;
-    &lt;conversionRule conversionWord=&quot;clr&quot; converterClass=&quot;org.springframework.boot.logging.logback.ColorConverter&quot; /&gt;
-    &lt;conversionRule conversionWord=&quot;wex&quot; converterClass=&quot;org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter&quot; /&gt;
-    &lt;conversionRule conversionWord=&quot;wEx&quot; converterClass=&quot;org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter&quot; /&gt;
-    &lt;property name=&quot;CONSOLE_LOG_PATTERN&quot; value=&quot;${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}&quot;/&gt;
-    &lt;property name=&quot;FILE_LOG_PATTERN&quot; value=&quot;${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}&quot;/&gt;
+&#x3C;included>
+    &#x3C;conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+    &#x3C;conversionRule conversionWord="wex" converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter" />
+    &#x3C;conversionRule conversionWord="wEx" converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter" />
+    &#x3C;property name="CONSOLE_LOG_PATTERN" value="${CONSOLE_LOG_PATTERN:-%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
+    &#x3C;property name="FILE_LOG_PATTERN" value="${FILE_LOG_PATTERN:-%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:-%wEx}}"/>
 
-    &lt;logger name=&quot;org.apache.catalina.startup.DigesterFactory&quot; level=&quot;ERROR&quot;/&gt;
-    &lt;logger name=&quot;org.apache.catalina.util.LifecycleBase&quot; level=&quot;ERROR&quot;/&gt;
-    &lt;logger name=&quot;org.apache.coyote.http11.Http11NioProtocol&quot; level=&quot;WARN&quot;/&gt;
-    &lt;logger name=&quot;org.apache.sshd.common.util.SecurityUtils&quot; level=&quot;WARN&quot;/&gt;
-    &lt;logger name=&quot;org.apache.tomcat.util.net.NioSelectorPool&quot; level=&quot;WARN&quot;/&gt;
-    &lt;logger name=&quot;org.eclipse.jetty.util.component.AbstractLifeCycle&quot; level=&quot;ERROR&quot;/&gt;
-    &lt;logger name=&quot;org.hibernate.validator.internal.util.Version&quot; level=&quot;WARN&quot;/&gt;
-&lt;/included&gt;</code>
-        </deckgo-highlight-code>
+    &#x3C;logger name="org.apache.catalina.startup.DigesterFactory" level="ERROR"/>
+    &#x3C;logger name="org.apache.catalina.util.LifecycleBase" level="ERROR"/>
+    &#x3C;logger name="org.apache.coyote.http11.Http11NioProtocol" level="WARN"/>
+    &#x3C;logger name="org.apache.sshd.common.util.SecurityUtils" level="WARN"/>
+    &#x3C;logger name="org.apache.tomcat.util.net.NioSelectorPool" level="WARN"/>
+    &#x3C;logger name="org.eclipse.jetty.util.component.AbstractLifeCycle" level="ERROR"/>
+    &#x3C;logger name="org.hibernate.validator.internal.util.Version" level="WARN"/>
+&#x3C;/included>
+</code></pre>
 <p>application.yml</p>
-<deckgo-highlight-code language="yml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">spring:
+<pre><code class="language-yml">spring:
   profiles:
-    active: dev</code>
-        </deckgo-highlight-code>
+    active: dev
+</code></pre>
 <p>配置好以后Resource 目录下的结构类似这样</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">└── resources
+<pre><code>└── resources
     ├── application-dev.yml
     ├── application-prod.yml
     ├── application-test.yml
     ├── application.yml
-    ├── logback-spring.xml</code>
-        </deckgo-highlight-code>
+    ├── logback-spring.xml
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <h3 id="阮一峰的每周分享第52期" style="position:relative;"><a href="#%E9%98%AE%E4%B8%80%E5%B3%B0%E7%9A%84%E6%AF%8F%E5%91%A8%E5%88%86%E4%BA%AB%E7%AC%AC52%E6%9C%9F" aria-label="阮一峰的每周分享第52期 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="http://www.ruanyifeng.com/blog/2019/04/weekly-issue-52.html">阮一峰的每周分享第52期</a></h3></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/arts-36/"><button>Prev: <!-- -->ARTS 第36周</button></a></li><li><a rel="next" href="/principles-of-good-programming/"><button>Next: <!-- -->编程原则</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
       

@@ -111,8 +111,7 @@
 <li>Share:耗叔的<a href="https://time.geekbang.org/column/article/1512">分布式系统的技术栈</a></li>
 </ul>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import org.nocoder.leetcode.solution.common.TreeNode;
 
@@ -164,15 +163,15 @@ public class MaximumBinaryTree {
     }
     public static int max(int[] nums, int l, int r) {
         int max_i = l;
-        for (int i = l; i &lt; r; i++) {
-            if (nums[max_i] &lt; nums[i]) {
+        for (int i = l; i &#x3C; r; i++) {
+            if (nums[max_i] &#x3C; nums[i]) {
                 max_i = i;
             }
         }
         return max_i;
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="10-best-practices-for-better-restfull-api" style="position:relative;"><a href="#10-best-practices-for-better-restfull-api" aria-label="10 best practices for better restfull api permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/">10 best practices for better restfull api</a></h3>
 <ul>
@@ -230,12 +229,11 @@ public class MaximumBinaryTree {
 <p>不要混淆单数和复数名词，保持简单，只使用复数名词来表示所有资源。</p>
 </li>
 <li>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">/cars instead of /car
+<pre><code>/cars instead of /car
 /users instead of /user
 /products instead of /product
-/settings instead of /setting</code>
-        </deckgo-highlight-code>
+/settings instead of /setting
+</code></pre>
 </li>
 </ul>
 </li>
@@ -246,10 +244,9 @@ public class MaximumBinaryTree {
 <p>如果资源与另一个资源相关，则使用子资源</p>
 </li>
 <li>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">GET /cars/711/drivers/ Returns a list of drivers for car 711
-GET /cars/711/drivers/4 Returns driver #4 for car 711</code>
-        </deckgo-highlight-code>
+<pre><code>GET /cars/711/drivers/ Returns a list of drivers for car 711
+GET /cars/711/drivers/4 Returns driver #4 for car 711
+</code></pre>
 </li>
 </ul>
 </li>
@@ -271,10 +268,9 @@ GET /cars/711/drivers/4 Returns driver #4 for car 711</code>
 <p>7、为集合提供过滤，排序，字段选择和分页</p>
 <ul>
 <li>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">GET /cars?color=red Returns a list of red cars
-GET /cars?seats&lt;=2 Returns a list of cars with a maximum of 2 seats</code>
-        </deckgo-highlight-code>
+<pre><code>GET /cars?color=red Returns a list of red cars
+GET /cars?seats&#x3C;=2 Returns a list of cars with a maximum of 2 seats
+</code></pre>
 </li>
 </ul>
 </li>
@@ -282,9 +278,8 @@ GET /cars?seats&lt;=2 Returns a list of cars with a maximum of 2 seats</code>
 <p>8、API版本控制</p>
 <ul>
 <li>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">/blog/api/v1</code>
-        </deckgo-highlight-code>
+<pre><code>/blog/api/v1
+</code></pre>
 </li>
 </ul>
 </li>
@@ -314,29 +309,27 @@ GET /cars?seats&lt;=2 Returns a list of cars with a maximum of 2 seats</code>
 <p>假设我们需要找一把钥匙，钥匙在一个大盒子里，这个盒子里有盒子，盒子里的盒子有有盒子，钥匙就在某个盒子里。</p>
 </blockquote>
 <p>以下是使用递归方法寻找钥匙的伪代码：</p>
-<deckgo-highlight-code language="python" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">def look_for_key(box):
+<pre><code class="language-python">def look_for_key(box):
     for item in box:
         if item.is_a_box():
             look_for_box()
         elif item.is_key(item):
-            print &quot;found the key&quot;</code>
-        </deckgo-highlight-code>
+            print "found the key"
+</code></pre>
 <p>递归只是让解决方案更清晰，并没有性能上的优势。Leigh Caldwell在Stack Overflow 上说过一句话：“如果使用循环，程序的性能可能更高；如果使用递归，程序可能更容易理解。如何选择要看什么对你来说更重要。”</p>
 <p>编写递归方法时，必须告诉它何时停止递归，所以，每个递归函数都有两部分，基线条件和递归条件。递归条件是指函数调用自己，而基线条件是指函数不在调用自己，从而避免形成无线循环。在上面的找钥匙的例子中，<code>item.is_a_box()</code>就是递归条件，<code>item.is_key(item)</code>就是基线条件。</p>
 <h4 id="调用栈" style="position:relative;"><a href="#%E8%B0%83%E7%94%A8%E6%A0%88" aria-label="调用栈 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>调用栈</h4>
-<deckgo-highlight-code language="python" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">def greet(name):
-    print &quot;hello &quot; + name
+<pre><code class="language-python">def greet(name):
+    print "hello " + name
     greet2(name)
     bye()
     
 def greet2(name):
-    print &quot;how are you &quot; + name
+    print "how are you " + name
     
 def bye():
-    print &quot;bye&quot;</code>
-        </deckgo-highlight-code>
+    print "bye"
+</code></pre>
 <p>假设我们调用greet(“jason”)，看看调用这个方法的具体情况</p>
 <ul>
 <li>调用 greet(“jason”) ，计算机为其分配一块内存</li>

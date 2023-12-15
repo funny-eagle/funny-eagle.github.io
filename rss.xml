@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 09 Dec 2023 10:07:06 GMT</lastBuildDate><item><title><![CDATA[出成绩了]]></title><description><![CDATA[软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。 看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT…]]></description><link>http://funnyeagle.cn/chu-cheng-ji-le-2023/</link><guid isPermaLink="false">http://funnyeagle.cn/chu-cheng-ji-le-2023/</guid><pubDate>Fri, 08 Dec 2023 06:39:00 GMT</pubDate><content:encoded>&lt;p&gt;软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle]]></description><link>http://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 15 Dec 2023 11:02:43 GMT</lastBuildDate><item><title><![CDATA[出成绩了]]></title><description><![CDATA[软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。 看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT…]]></description><link>http://funnyeagle.cn/chu-cheng-ji-le-2023/</link><guid isPermaLink="false">http://funnyeagle.cn/chu-cheng-ji-le-2023/</guid><pubDate>Fri, 08 Dec 2023 06:39:00 GMT</pubDate><content:encoded>&lt;p&gt;软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。&lt;/p&gt;
 &lt;p&gt;看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT丢分严重，也确实是不该丢分的地方。&lt;/p&gt;
 &lt;p&gt;肯定会有一些遗憾，因为一年只有一次机会，又要继续折磨自己。&lt;/p&gt;
 &lt;p&gt;还是简单总结一下不足之处，为明年备考积累一些经验。&lt;/p&gt;
@@ -45,35 +45,34 @@
 &lt;blockquote&gt;
 &lt;p&gt;原调C调，我唱稍微有点儿高，降成B调刚好&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;B                       E                #F            #Dm   
-Never thought I&amp;#39;ll come down so hard  An Englishman on Sunset 
+&lt;pre&gt;&lt;code&gt;B                       E                #F            #Dm   
+Never thought I&apos;ll come down so hard  An Englishman on Sunset 
      #Gm                    E            #F
 Boulevard Now the raelians living by to say
 B                E            #F                   #Dm                
 When your world chews you up Spits you out and you blame it all on bad
 #Gm                    E            #F 
-luck You know no one&amp;#39;s listening to you
+luck You know no one&apos;s listening to you
 #Cm       #F                B              #Gm                
-I&amp;#39;ve been travelling like a stranger to my ghost
+I&apos;ve been travelling like a stranger to my ghost
                   E     #F     
-Just let me know  Yeah......I&amp;#39;m never coming home again
+Just let me know  Yeah......I&apos;m never coming home again
 B       #F      #Gm      #F     E          #F
 All you need is imagination So come on kid,tell them how it is
 B       #F      #Gm      #F     E          #F
 All you need is imagination So come on kid,tell them how it is
 B                       E             #F          #Dm                 #Gm
-Don&amp;#39;t let it get you down A cup of salvation the strange face in the crowd
+Don&apos;t let it get you down A cup of salvation the strange face in the crowd
                          E           #F
-You know it doesn&amp;#39;t mean anything to me
+You know it doesn&apos;t mean anything to me
 B               E               #F                     #Dm                 #Gm
 So wake up in a brand new place Lift your head let the sun beats down your face
                    E            #F
-You know someone&amp;#39;s listening to you
+You know someone&apos;s listening to you
 #Cm       #F                B              #Gm   
-I&amp;#39;ve been travelling like a stranger to my ghost
+I&apos;ve been travelling like a stranger to my ghost
                   E     #F     
-Just let me know Yeah...I&amp;#39;m never coming home again
+Just let me know Yeah...I&apos;m never coming home again
 B       #F      #Gm      #F     E          #F
 All you need is imagination So come on kid,tell them how it is
 B       #F      #Gm      #F     E          #F
@@ -81,8 +80,8 @@ All you need is imagination So come on kid,tell them how it is
         B             #F                 #Gm             #F
 It goes on and on and on and on til you recognize where it went wrong
 E                          #F
-Every now and then who are misunderstood&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;</content:encoded></item><item><title><![CDATA[Dancehall]]></title><description><![CDATA[A E #Fm D]]></description><link>http://funnyeagle.cn/dancehall/</link><guid isPermaLink="false">http://funnyeagle.cn/dancehall/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+Every now and then who are misunderstood
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title><![CDATA[Dancehall]]></title><description><![CDATA[A E #Fm D]]></description><link>http://funnyeagle.cn/dancehall/</link><guid isPermaLink="false">http://funnyeagle.cn/dancehall/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
@@ -114,17 +113,16 @@ Every now and then who are misunderstood&lt;/code&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;A E #Fm D&lt;/p&gt;
-&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;Tribes Dancehall Chords A E #Fm D
+&lt;pre&gt;&lt;code&gt;Tribes Dancehall Chords A E #Fm D
 
 Verse 1:
-She&amp;#39;s a gypsy queen, real tall and mean
-She&amp;#39;s an airplane, no one&amp;#39;s ever seen
-She&amp;#39;s a firecracker, real dancehall master
-She&amp;#39;s a hurricane when you walk past her
-She&amp;#39;s the morning sun in the midnight wind
-She&amp;#39;d sell her soul for all her sins
-She&amp;#39;ll come right at you, real Cleopatra
+She&apos;s a gypsy queen, real tall and mean
+She&apos;s an airplane, no one&apos;s ever seen
+She&apos;s a firecracker, real dancehall master
+She&apos;s a hurricane when you walk past her
+She&apos;s the morning sun in the midnight wind
+She&apos;d sell her soul for all her sins
+She&apos;ll come right at you, real Cleopatra
 You take all you got, and you give it to her
 
 Chorus:
@@ -138,13 +136,13 @@ It leaves me hypnotized
 Somewhere better
 
 Verse 2:
-She&amp;#39;s a striptease, real hard to please
-She&amp;#39;ll cheer you up, bring you to your knees
-She&amp;#39;s a movie star, fast sports car
-She&amp;#39;s a razor blade, she&amp;#39;ll take you far
-She&amp;#39;s the ocean&amp;#39;s cool, and your midnight ride
-She&amp;#39;s a devil&amp;#39;s church, and a preacher&amp;#39;s wife
-She&amp;#39;ll come right at you, real Cleopatra
+She&apos;s a striptease, real hard to please
+She&apos;ll cheer you up, bring you to your knees
+She&apos;s a movie star, fast sports car
+She&apos;s a razor blade, she&apos;ll take you far
+She&apos;s the ocean&apos;s cool, and your midnight ride
+She&apos;s a devil&apos;s church, and a preacher&apos;s wife
+She&apos;ll come right at you, real Cleopatra
 You take all you got, and you give it to her
 
 Chorus:
@@ -160,7 +158,7 @@ Somewhere better
 (Solo)
 
 E                    D
-I don&amp;#39;t care for dancing
+I don&apos;t care for dancing
 E                    D
 but thanks for asking
 
@@ -174,42 +172,37 @@ A poison in my mind
 It leaves me hypnotized
 Somewhere better
 
-Tab by Charlie Tilley&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;</content:encoded></item><item><title><![CDATA[MAC OSX 开机自动连接蓝牙音箱]]></title><description><![CDATA[我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了blueutil，分分钟轻松搞定。 安装blueutil 使用homebrew安装blueutil blueutil -h 查看使用说明 查看配对设备 blueutil…]]></description><link>http://funnyeagle.cn/blueutil/</link><guid isPermaLink="false">http://funnyeagle.cn/blueutil/</guid><pubDate>Mon, 27 Nov 2023 10:51:25 GMT</pubDate><content:encoded>&lt;p&gt;我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了&lt;a href=&quot;https://github.com/toy/blueutil&quot;&gt;blueutil&lt;/a&gt;，分分钟轻松搞定。&lt;/p&gt;
+Tab by Charlie Tilley
+&lt;/code&gt;&lt;/pre&gt;</content:encoded></item><item><title><![CDATA[MAC OSX 开机自动连接蓝牙音箱]]></title><description><![CDATA[我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了blueutil，分分钟轻松搞定。 安装blueutil 使用homebrew安装blueutil blueutil -h 查看使用说明 查看配对设备 blueutil…]]></description><link>http://funnyeagle.cn/blueutil/</link><guid isPermaLink="false">http://funnyeagle.cn/blueutil/</guid><pubDate>Mon, 27 Nov 2023 10:51:25 GMT</pubDate><content:encoded>&lt;p&gt;我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了&lt;a href=&quot;https://github.com/toy/blueutil&quot;&gt;blueutil&lt;/a&gt;，分分钟轻松搞定。&lt;/p&gt;
 &lt;h3 id=&quot;安装blueutil&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%AE%89%E8%A3%85blueutil&quot; aria-label=&quot;安装blueutil permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;安装&lt;code&gt;blueutil&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;使用&lt;code&gt;homebrew&lt;/code&gt;安装&lt;code&gt;blueutil&lt;/code&gt;&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;brew install blueutil&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;brew install blueutil
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;blueutil--h-查看使用说明&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#blueutil--h-%E6%9F%A5%E7%9C%8B%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E&quot; aria-label=&quot;blueutil  h 查看使用说明 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;code&gt;blueutil -h&lt;/code&gt; 查看使用说明&lt;/h3&gt;
-&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;yangjl@Mac ~ % blueutil -h
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;yangjl@Mac ~ % blueutil -h
 blueutil v2.9.1
 
 Usage:
   blueutil [options]
-...&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+...
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;查看配对设备-blueutil---paired&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%9F%A5%E7%9C%8B%E9%85%8D%E5%AF%B9%E8%AE%BE%E5%A4%87-blueutil---paired&quot; aria-label=&quot;查看配对设备 blueutil   paired permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;查看配对设备 &lt;code&gt;blueutil --paired&lt;/code&gt;&lt;/h3&gt;
-&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;yangjl@Mac ~ % blueutil --paired 
-address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: &amp;quot;小米音箱-蓝牙&amp;quot;, recent access date: 2023-11-27 10:57:15 +0000
-address: 74-45-ce-dd-37-e6, not connected, not favourite, paired, name: &amp;quot;ATH-M20xBT &amp;quot;, recent access date: 2023-11-27 10:57:15 +0000&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;yangjl@Mac ~ % blueutil --paired 
+address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: &quot;小米音箱-蓝牙&quot;, recent access date: 2023-11-27 10:57:15 +0000
+address: 74-45-ce-dd-37-e6, not connected, not favourite, paired, name: &quot;ATH-M20xBT &quot;, recent access date: 2023-11-27 10:57:15 +0000
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;通过id连接设备-blueutil---connect-id&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E9%80%9A%E8%BF%87id%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87-blueutil---connect-id&quot; aria-label=&quot;通过id连接设备 blueutil   connect id permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;通过ID连接设备 &lt;code&gt;blueutil --connect ID&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;上一步&lt;code&gt;address&lt;/code&gt;的值就是ID，在终端输入 &lt;code&gt;blueutil --connect 设备ID&lt;/code&gt;即可&lt;/p&gt;
 &lt;h3 id=&quot;查看已连接蓝牙设备-blueutil---connected-&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%9F%A5%E7%9C%8B%E5%B7%B2%E8%BF%9E%E6%8E%A5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87-blueutil---connected-&quot; aria-label=&quot;查看已连接蓝牙设备 blueutil   connected  permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;查看已连接蓝牙设备 &lt;code&gt;blueutil --connected &lt;/code&gt;&lt;/h3&gt;
-&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;yangjl@Mac ~ % blueutil --connected                
-address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: &amp;quot;小米音箱-蓝牙&amp;quot;, recent access date: 2023-11-27 10:59:40 +0000&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;yangjl@Mac ~ % blueutil --connected                
+address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: &quot;小米音箱-蓝牙&quot;, recent access date: 2023-11-27 10:59:40 +0000
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;设置自动连接&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5&quot; aria-label=&quot;设置自动连接 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;设置自动连接&lt;/h3&gt;
 &lt;p&gt;创建一个文件&lt;code&gt;auto_connect_bluetooth.sh&lt;/code&gt;，文件内容如下，其中ID自行修改，&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;shell&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;blueutil --connect 64-64-4a-7f-ad-85
-echo &amp;#39;自动连接蓝牙至小米音箱&amp;#39;
-exit&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;blueutil --connect 64-64-4a-7f-ad-85
+echo &apos;自动连接蓝牙至小米音箱&apos;
+exit
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在终端执行&lt;code&gt;chmod +x auto_connect_bluetooth.sh&lt;/code&gt;为文件增加执行权限。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;系统偏好设置&lt;/code&gt; -&gt; &lt;code&gt;用户与群组&lt;/code&gt; -&gt; &lt;code&gt;登陆项&lt;/code&gt; -&gt; &lt;code&gt;+&lt;/code&gt; -&gt; 选择 `auto_connect_bluetooth.sh“&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -354,117 +347,115 @@ exit&lt;/code&gt;
 &lt;p&gt;就这么几个类，下面直接开始吧！&lt;/p&gt;
 &lt;h4 id=&quot;1创建一个spring-boot项目配置maven坐标需要使用到-spring-boot-starter-webspring-boot-starter-security-以及-jwt为了简化代码使用了lombok&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAspring-boot%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AEmaven%E5%9D%90%E6%A0%87%E9%9C%80%E8%A6%81%E4%BD%BF%E7%94%A8%E5%88%B0-spring-boot-starter-webspring-boot-starter-security-%E4%BB%A5%E5%8F%8A-jwt%E4%B8%BA%E4%BA%86%E7%AE%80%E5%8C%96%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E4%BA%86lombok&quot; aria-label=&quot;1创建一个spring boot项目配置maven坐标需要使用到 spring boot starter webspring boot starter security 以及 jwt为了简化代码使用了lombok permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1、创建一个spring-boot项目，配置maven坐标，需要使用到 spring-boot-starter-web、spring-boot-starter-security 以及 jwt，为了简化代码，使用了lombok。&lt;/h4&gt;
 &lt;p&gt;完整的pom.xml 如下：&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;xml&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;
-&amp;lt;project xmlns:xsi=&amp;quot;http://www.w3.org/2001/XMLSchema-instance&amp;quot; xmlns=&amp;quot;http://maven.apache.org/POM/4.0.0&amp;quot;
-         xsi:schemaLocation=&amp;quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&amp;quot;&amp;gt;
-    &amp;lt;modelVersion&amp;gt;4.0.0&amp;lt;/modelVersion&amp;gt;
-    &amp;lt;parent&amp;gt;
-        &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
-        &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt;
-        &amp;lt;version&amp;gt;2.5.0&amp;lt;/version&amp;gt;
-        &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt;
-    &amp;lt;/parent&amp;gt;
-    &amp;lt;groupId&amp;gt;cn.funnyealge&amp;lt;/groupId&amp;gt;
-    &amp;lt;artifactId&amp;gt;jwt-example&amp;lt;/artifactId&amp;gt;
-    &amp;lt;version&amp;gt;0.0.1-SNAPSHOT&amp;lt;/version&amp;gt;
-    &amp;lt;name&amp;gt;jwt-example&amp;lt;/name&amp;gt;
-    &amp;lt;description&amp;gt;Demo project for Spring Boot&amp;lt;/description&amp;gt;
-    &amp;lt;properties&amp;gt;
-        &amp;lt;java.version&amp;gt;8&amp;lt;/java.version&amp;gt;
-    &amp;lt;/properties&amp;gt;
-    &amp;lt;dependencies&amp;gt;
-        &amp;lt;dependency&amp;gt;
-            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;spring-boot-starter&amp;lt;/artifactId&amp;gt;
-        &amp;lt;/dependency&amp;gt;
-        &amp;lt;dependency&amp;gt;
-            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;spring-boot-starter-web&amp;lt;/artifactId&amp;gt;
-        &amp;lt;/dependency&amp;gt;
-        &amp;lt;dependency&amp;gt;
-            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;spring-boot-starter-security&amp;lt;/artifactId&amp;gt;
-        &amp;lt;/dependency&amp;gt;
-        &amp;lt;dependency&amp;gt;
-            &amp;lt;groupId&amp;gt;io.jsonwebtoken&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;jjwt&amp;lt;/artifactId&amp;gt;
-            &amp;lt;version&amp;gt;0.9.1&amp;lt;/version&amp;gt;
-        &amp;lt;/dependency&amp;gt;
-        &amp;lt;dependency&amp;gt;
-            &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt;
-            &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt;
-        &amp;lt;/dependency&amp;gt;
-        &amp;lt;dependency&amp;gt;
-            &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
-            &amp;lt;artifactId&amp;gt;spring-boot-starter-test&amp;lt;/artifactId&amp;gt;
-            &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;
-        &amp;lt;/dependency&amp;gt;
-    &amp;lt;/dependencies&amp;gt;
+&lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;#x3C;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&amp;#x3C;project xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &amp;#x3C;modelVersion&gt;4.0.0&amp;#x3C;/modelVersion&gt;
+    &amp;#x3C;parent&gt;
+        &amp;#x3C;groupId&gt;org.springframework.boot&amp;#x3C;/groupId&gt;
+        &amp;#x3C;artifactId&gt;spring-boot-starter-parent&amp;#x3C;/artifactId&gt;
+        &amp;#x3C;version&gt;2.5.0&amp;#x3C;/version&gt;
+        &amp;#x3C;relativePath/&gt; &amp;#x3C;!-- lookup parent from repository --&gt;
+    &amp;#x3C;/parent&gt;
+    &amp;#x3C;groupId&gt;cn.funnyealge&amp;#x3C;/groupId&gt;
+    &amp;#x3C;artifactId&gt;jwt-example&amp;#x3C;/artifactId&gt;
+    &amp;#x3C;version&gt;0.0.1-SNAPSHOT&amp;#x3C;/version&gt;
+    &amp;#x3C;name&gt;jwt-example&amp;#x3C;/name&gt;
+    &amp;#x3C;description&gt;Demo project for Spring Boot&amp;#x3C;/description&gt;
+    &amp;#x3C;properties&gt;
+        &amp;#x3C;java.version&gt;8&amp;#x3C;/java.version&gt;
+    &amp;#x3C;/properties&gt;
+    &amp;#x3C;dependencies&gt;
+        &amp;#x3C;dependency&gt;
+            &amp;#x3C;groupId&gt;org.springframework.boot&amp;#x3C;/groupId&gt;
+            &amp;#x3C;artifactId&gt;spring-boot-starter&amp;#x3C;/artifactId&gt;
+        &amp;#x3C;/dependency&gt;
+        &amp;#x3C;dependency&gt;
+            &amp;#x3C;groupId&gt;org.springframework.boot&amp;#x3C;/groupId&gt;
+            &amp;#x3C;artifactId&gt;spring-boot-starter-web&amp;#x3C;/artifactId&gt;
+        &amp;#x3C;/dependency&gt;
+        &amp;#x3C;dependency&gt;
+            &amp;#x3C;groupId&gt;org.springframework.boot&amp;#x3C;/groupId&gt;
+            &amp;#x3C;artifactId&gt;spring-boot-starter-security&amp;#x3C;/artifactId&gt;
+        &amp;#x3C;/dependency&gt;
+        &amp;#x3C;dependency&gt;
+            &amp;#x3C;groupId&gt;io.jsonwebtoken&amp;#x3C;/groupId&gt;
+            &amp;#x3C;artifactId&gt;jjwt&amp;#x3C;/artifactId&gt;
+            &amp;#x3C;version&gt;0.9.1&amp;#x3C;/version&gt;
+        &amp;#x3C;/dependency&gt;
+        &amp;#x3C;dependency&gt;
+            &amp;#x3C;groupId&gt;org.projectlombok&amp;#x3C;/groupId&gt;
+            &amp;#x3C;artifactId&gt;lombok&amp;#x3C;/artifactId&gt;
+            &amp;#x3C;optional&gt;true&amp;#x3C;/optional&gt;
+        &amp;#x3C;/dependency&gt;
+        &amp;#x3C;dependency&gt;
+            &amp;#x3C;groupId&gt;org.springframework.boot&amp;#x3C;/groupId&gt;
+            &amp;#x3C;artifactId&gt;spring-boot-starter-test&amp;#x3C;/artifactId&gt;
+            &amp;#x3C;scope&gt;test&amp;#x3C;/scope&gt;
+        &amp;#x3C;/dependency&gt;
+    &amp;#x3C;/dependencies&gt;
 
-    &amp;lt;build&amp;gt;
-        &amp;lt;plugins&amp;gt;
-            &amp;lt;plugin&amp;gt;
-                &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;
-                &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt;
-                &amp;lt;configuration&amp;gt;
-                    &amp;lt;image&amp;gt;
-                        &amp;lt;builder&amp;gt;paketobuildpacks/builder-jammy-base:latest&amp;lt;/builder&amp;gt;
-                    &amp;lt;/image&amp;gt;
-                    &amp;lt;excludes&amp;gt;
-                        &amp;lt;exclude&amp;gt;
-                            &amp;lt;groupId&amp;gt;org.projectlombok&amp;lt;/groupId&amp;gt;
-                            &amp;lt;artifactId&amp;gt;lombok&amp;lt;/artifactId&amp;gt;
-                        &amp;lt;/exclude&amp;gt;
-                    &amp;lt;/excludes&amp;gt;
-                &amp;lt;/configuration&amp;gt;
-            &amp;lt;/plugin&amp;gt;
-        &amp;lt;/plugins&amp;gt;
-    &amp;lt;/build&amp;gt;
-    &amp;lt;repositories&amp;gt;
-        &amp;lt;repository&amp;gt;
-            &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;
-            &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;
-            &amp;lt;url&amp;gt;https://repo.spring.io/milestone&amp;lt;/url&amp;gt;
-            &amp;lt;snapshots&amp;gt;
-                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
-            &amp;lt;/snapshots&amp;gt;
-        &amp;lt;/repository&amp;gt;
-        &amp;lt;repository&amp;gt;
-            &amp;lt;id&amp;gt;spring-snapshots&amp;lt;/id&amp;gt;
-            &amp;lt;name&amp;gt;Spring Snapshots&amp;lt;/name&amp;gt;
-            &amp;lt;url&amp;gt;https://repo.spring.io/snapshot&amp;lt;/url&amp;gt;
-            &amp;lt;releases&amp;gt;
-                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
-            &amp;lt;/releases&amp;gt;
-        &amp;lt;/repository&amp;gt;
-    &amp;lt;/repositories&amp;gt;
-    &amp;lt;pluginRepositories&amp;gt;
-        &amp;lt;pluginRepository&amp;gt;
-            &amp;lt;id&amp;gt;spring-milestones&amp;lt;/id&amp;gt;
-            &amp;lt;name&amp;gt;Spring Milestones&amp;lt;/name&amp;gt;
-            &amp;lt;url&amp;gt;https://repo.spring.io/milestone&amp;lt;/url&amp;gt;
-            &amp;lt;snapshots&amp;gt;
-                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
-            &amp;lt;/snapshots&amp;gt;
-        &amp;lt;/pluginRepository&amp;gt;
-        &amp;lt;pluginRepository&amp;gt;
-            &amp;lt;id&amp;gt;spring-snapshots&amp;lt;/id&amp;gt;
-            &amp;lt;name&amp;gt;Spring Snapshots&amp;lt;/name&amp;gt;
-            &amp;lt;url&amp;gt;https://repo.spring.io/snapshot&amp;lt;/url&amp;gt;
-            &amp;lt;releases&amp;gt;
-                &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;
-            &amp;lt;/releases&amp;gt;
-        &amp;lt;/pluginRepository&amp;gt;
-    &amp;lt;/pluginRepositories&amp;gt;
+    &amp;#x3C;build&gt;
+        &amp;#x3C;plugins&gt;
+            &amp;#x3C;plugin&gt;
+                &amp;#x3C;groupId&gt;org.springframework.boot&amp;#x3C;/groupId&gt;
+                &amp;#x3C;artifactId&gt;spring-boot-maven-plugin&amp;#x3C;/artifactId&gt;
+                &amp;#x3C;configuration&gt;
+                    &amp;#x3C;image&gt;
+                        &amp;#x3C;builder&gt;paketobuildpacks/builder-jammy-base:latest&amp;#x3C;/builder&gt;
+                    &amp;#x3C;/image&gt;
+                    &amp;#x3C;excludes&gt;
+                        &amp;#x3C;exclude&gt;
+                            &amp;#x3C;groupId&gt;org.projectlombok&amp;#x3C;/groupId&gt;
+                            &amp;#x3C;artifactId&gt;lombok&amp;#x3C;/artifactId&gt;
+                        &amp;#x3C;/exclude&gt;
+                    &amp;#x3C;/excludes&gt;
+                &amp;#x3C;/configuration&gt;
+            &amp;#x3C;/plugin&gt;
+        &amp;#x3C;/plugins&gt;
+    &amp;#x3C;/build&gt;
+    &amp;#x3C;repositories&gt;
+        &amp;#x3C;repository&gt;
+            &amp;#x3C;id&gt;spring-milestones&amp;#x3C;/id&gt;
+            &amp;#x3C;name&gt;Spring Milestones&amp;#x3C;/name&gt;
+            &amp;#x3C;url&gt;https://repo.spring.io/milestone&amp;#x3C;/url&gt;
+            &amp;#x3C;snapshots&gt;
+                &amp;#x3C;enabled&gt;false&amp;#x3C;/enabled&gt;
+            &amp;#x3C;/snapshots&gt;
+        &amp;#x3C;/repository&gt;
+        &amp;#x3C;repository&gt;
+            &amp;#x3C;id&gt;spring-snapshots&amp;#x3C;/id&gt;
+            &amp;#x3C;name&gt;Spring Snapshots&amp;#x3C;/name&gt;
+            &amp;#x3C;url&gt;https://repo.spring.io/snapshot&amp;#x3C;/url&gt;
+            &amp;#x3C;releases&gt;
+                &amp;#x3C;enabled&gt;false&amp;#x3C;/enabled&gt;
+            &amp;#x3C;/releases&gt;
+        &amp;#x3C;/repository&gt;
+    &amp;#x3C;/repositories&gt;
+    &amp;#x3C;pluginRepositories&gt;
+        &amp;#x3C;pluginRepository&gt;
+            &amp;#x3C;id&gt;spring-milestones&amp;#x3C;/id&gt;
+            &amp;#x3C;name&gt;Spring Milestones&amp;#x3C;/name&gt;
+            &amp;#x3C;url&gt;https://repo.spring.io/milestone&amp;#x3C;/url&gt;
+            &amp;#x3C;snapshots&gt;
+                &amp;#x3C;enabled&gt;false&amp;#x3C;/enabled&gt;
+            &amp;#x3C;/snapshots&gt;
+        &amp;#x3C;/pluginRepository&gt;
+        &amp;#x3C;pluginRepository&gt;
+            &amp;#x3C;id&gt;spring-snapshots&amp;#x3C;/id&gt;
+            &amp;#x3C;name&gt;Spring Snapshots&amp;#x3C;/name&gt;
+            &amp;#x3C;url&gt;https://repo.spring.io/snapshot&amp;#x3C;/url&gt;
+            &amp;#x3C;releases&gt;
+                &amp;#x3C;enabled&gt;false&amp;#x3C;/enabled&gt;
+            &amp;#x3C;/releases&gt;
+        &amp;#x3C;/pluginRepository&gt;
+    &amp;#x3C;/pluginRepositories&gt;
 
-&amp;lt;/project&amp;gt;
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+&amp;#x3C;/project&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&quot;2spring-boot工程搭建好之后创建一个hellocontroller写一个get请求的-rest-api-hello&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2spring-boot%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA%E5%A5%BD%E4%B9%8B%E5%90%8E%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAhellocontroller%E5%86%99%E4%B8%80%E4%B8%AAget%E8%AF%B7%E6%B1%82%E7%9A%84-rest-api-hello&quot; aria-label=&quot;2spring boot工程搭建好之后创建一个hellocontroller写一个get请求的 rest api hello permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2、spring-boot工程搭建好之后，创建一个HelloController，写一个GET请求的 REST API &lt;code&gt;/hello&lt;/code&gt;&lt;/h4&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.controller;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -477,18 +468,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @GetMapping(&amp;quot;/hello&amp;quot;)
+    @GetMapping(&quot;/hello&quot;)
     public String hello() {
-        return &amp;quot;Hello, World!&amp;quot;;
+        return &quot;Hello, World!&quot;;
     }
 }
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;此时启动项目的话，通过 &lt;code&gt;http://localhost:8080/hello&lt;/code&gt; 可以直接访问到这个API的。&lt;/p&gt;
 &lt;h4 id=&quot;3接下来开始配置spring-security-和-jwt&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%BC%80%E5%A7%8B%E9%85%8D%E7%BD%AEspring-security-%E5%92%8C-jwt&quot; aria-label=&quot;3接下来开始配置spring security 和 jwt permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3、接下来开始配置spring security 和 JWT。&lt;/h4&gt;
 &lt;p&gt;3.1 创建&lt;code&gt;JwtUtil&lt;/code&gt;类，用于创建、验证&lt;code&gt;JWT&lt;/code&gt;以及获取&lt;code&gt;JWT&lt;/code&gt;中的信息。&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.config;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -512,7 +502,7 @@ import java.util.function.Function;
 public class JwtUtil implements Serializable {
     public static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
     private static final long serialVersionUID = 1L;
-    @Value(&amp;quot;${jwt.secret}&amp;quot;)
+    @Value(&quot;${jwt.secret}&quot;)
     private String secret;
 
     /**
@@ -532,7 +522,7 @@ public class JwtUtil implements Serializable {
         return getClaimFromToken(token, Claims::getExpiration);
     }
 
-    public &amp;lt;T&amp;gt; T getClaimFromToken(String token, Function&amp;lt;Claims, T&amp;gt; claimsResolver) {
+    public &amp;#x3C;T&gt; T getClaimFromToken(String token, Function&amp;#x3C;Claims, T&gt; claimsResolver) {
         Claims claims = getAllClaimsFromToken(token);
         return claimsResolver.apply(claims);
     }
@@ -560,7 +550,7 @@ public class JwtUtil implements Serializable {
 
 
     public String generateToken(UserDetails userDetails) {
-        Map&amp;lt;String, Object&amp;gt; claims = new HashMap&amp;lt;&amp;gt;(16);
+        Map&amp;#x3C;String, Object&gt; claims = new HashMap&amp;#x3C;&gt;(16);
         return doGenerateToken(claims, userDetails.getUsername());
     }
 
@@ -571,7 +561,7 @@ public class JwtUtil implements Serializable {
      * @param subject
      * @return
      */
-    private String doGenerateToken(Map&amp;lt;String, Object&amp;gt; claims, String subject) {
+    private String doGenerateToken(Map&amp;#x3C;String, Object&gt; claims, String subject) {
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject(subject)
@@ -590,15 +580,14 @@ public class JwtUtil implements Serializable {
      */
     public Boolean validateToken(String token, UserDetails userDetails) {
         String username = getUserNameFromToken(token);
-        return username.equals(userDetails.getUsername()) &amp;amp;&amp;amp; !isTokenExpired(token);
+        return username.equals(userDetails.getUsername()) &amp;#x26;&amp;#x26; !isTokenExpired(token);
     }
 
 }
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;3.2 创建&lt;code&gt;JWTUserDetailsService&lt;/code&gt;类,实现了 spring security 的UserDetailsService 接口，重写loadUserByUsername方法，通过用户名获取用户详细信息，此处没有使用数据库，使用硬编码的方式定义了一个用户，实际应用中应该从数据库中查询用户信息。其中密码是经过&lt;code&gt;bcrypt&lt;/code&gt;加密的，如果需要修改，搜一个在线Bcrypt密码生成工具生成替换一下就可以。&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.service;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.service;
 
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -617,18 +606,17 @@ import java.util.ArrayList;
 public class JtwUserDetailService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        if (&amp;quot;funnyeagle&amp;quot;.equals(username)) {
-            return new User(&amp;quot;funnyeagle&amp;quot;, &amp;quot;$2a$10$JQEWsaUWgp6zYk1cvLvHMuM6kcLbmAdWPrp9QCSNYswu.kFum9PIq&amp;quot;, new ArrayList&amp;lt;&amp;gt;());
+        if (&quot;funnyeagle&quot;.equals(username)) {
+            return new User(&quot;funnyeagle&quot;, &quot;$2a$10$JQEWsaUWgp6zYk1cvLvHMuM6kcLbmAdWPrp9QCSNYswu.kFum9PIq&quot;, new ArrayList&amp;#x3C;&gt;());
         }
 
-        throw new UsernameNotFoundException(&amp;quot;User not found with username:&amp;quot; + username);
+        throw new UsernameNotFoundException(&quot;User not found with username:&quot; + username);
     }
 }
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;3.3 创建&lt;code&gt;JwtRequest&lt;/code&gt;类，包含用户名和密码，客户端向服务端发送请求时使用。&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.model;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.model;
 
 import lombok.Data;
 
@@ -645,11 +633,10 @@ public class JwtRequest implements Serializable {
 
     private String username;
     private String password;
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;3.4 创建&lt;code&gt;JwtResponse&lt;/code&gt;类，包含token属性，用于向客户端返回数据&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.model;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.model;
 
 import lombok.Data;
 
@@ -670,11 +657,10 @@ public class JwtResponse implements Serializable {
         this.token = token;
     }
 }
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;3.5 创建&lt;code&gt;JwtAuthenticationController&lt;/code&gt;类，包含一个POST &lt;code&gt;/authenticate&lt;/code&gt; API，调用&lt;code&gt;AuthenticationManager&lt;/code&gt;的&lt;code&gt;authenticate()&lt;/code&gt;方法对用户名和密码进行验证，验证通过则使用JwtUtil创建JWT token返回给客户端。&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.controller;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.controller;
 
 import cn.funnyealge.jwt.config.JwtUtil;
 import cn.funnyealge.jwt.model.JwtRequest;
@@ -711,8 +697,8 @@ public class JwtAuthenticationController {
     @Resource
     private JtwUserDetailService userDetailService;
 
-    @PostMapping(value = &amp;quot;/authenticate&amp;quot;)
-    public ResponseEntity&amp;lt;?&amp;gt; createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
+    @PostMapping(value = &quot;/authenticate&quot;)
+    public ResponseEntity&amp;#x3C;?&gt; createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
         authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
         UserDetails userDetails = userDetailService.loadUserByUsername(authenticationRequest.getUsername());
         String token = jwtUtil.generateToken(userDetails);
@@ -723,17 +709,16 @@ public class JwtAuthenticationController {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
         } catch (DisabledException e) {
-            throw new Exception(&amp;quot;user disabled&amp;quot;, e);
+            throw new Exception(&quot;user disabled&quot;, e);
         } catch (BadCredentialsException e) {
-            throw new Exception(&amp;quot;invalid credentials&amp;quot;, e);
+            throw new Exception(&quot;invalid credentials&quot;, e);
         }
     }
 }
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;3.6 创建&lt;code&gt;JwtRequestFilter&lt;/code&gt;类，继承自spring的OncePerRequestFilter类，任何请求过来都会执行这个Filter，用来检查token的有效性，验证通过后，将用户信息设置到security的上下文中。&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.config;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.config;
 
 import cn.funnyealge.jwt.service.JtwUserDetailService;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -772,24 +757,24 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {
-        final String requestTokenHeader = request.getHeader(&amp;quot;Authorization&amp;quot;);
+        final String requestTokenHeader = request.getHeader(&quot;Authorization&quot;);
 
         String username = null;
         String jwtToken = null;
-        if (requestTokenHeader != null &amp;amp;&amp;amp; requestTokenHeader.startsWith(&amp;quot;Bearer &amp;quot;)) {
+        if (requestTokenHeader != null &amp;#x26;&amp;#x26; requestTokenHeader.startsWith(&quot;Bearer &quot;)) {
             jwtToken = requestTokenHeader.substring(7);
             try {
                 username = jwtUtil.getUserNameFromToken(jwtToken);
             } catch (IllegalArgumentException e) {
-                System.out.println(&amp;quot;Unable to get JWT Token&amp;quot;);
+                System.out.println(&quot;Unable to get JWT Token&quot;);
             } catch (ExpiredJwtException e) {
-                System.out.println(&amp;quot;JWT Token has expired&amp;quot;);
+                System.out.println(&quot;JWT Token has expired&quot;);
             }
         } else {
-            logger.warn(&amp;quot;JWT Token does not begin with Bearer String&amp;quot;);
+            logger.warn(&quot;JWT Token does not begin with Bearer String&quot;);
         }
 
-        if (username != null &amp;amp;&amp;amp; SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (username != null &amp;#x26;&amp;#x26; SecurityContextHolder.getContext().getAuthentication() == null) {
 
             UserDetails userDetails = this.userDetailService.loadUserByUsername(username);
 
@@ -805,11 +790,10 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         chain.doFilter(request, response);
     }
 }
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;3.7 创建&lt;code&gt;JwtAuthenticationEntryPoint&lt;/code&gt;类，继承spring的&lt;code&gt;AuthenticationEntryPoint&lt;/code&gt;类，重写&lt;code&gt;commence&lt;/code&gt;方法，用于拒绝未经身份验证的请求并返回错误码401。&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.config;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.config;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -836,13 +820,12 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Se
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException {
 
-        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, &amp;quot;Unauthorized&amp;quot;);
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, &quot;Unauthorized&quot;);
     }
-}&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;3.8 创建&lt;code&gt;WebSecurityConfig&lt;/code&gt;类， 配置 AuthenticationManager，BCryptPasswordEncoder 和验证配置。&lt;/p&gt;
-&lt;deckgo-highlight-code language=&quot;java&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;package cn.funnyealge.jwt.config;
+&lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;package cn.funnyealge.jwt.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -898,7 +881,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.csrf().disable()
                 // 放行 /authenticate
-                .authorizeRequests().antMatchers(&amp;quot;/authenticate&amp;quot;).permitAll().
+                .authorizeRequests().antMatchers(&quot;/authenticate&quot;).permitAll().
                 // 其它任何请求都需要认证
                 anyRequest().authenticated().and().
                 // 使用无状态session
@@ -909,8 +892,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
     }
 }
-&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;启动项目，使用postman请求&lt;code&gt;/authenticate&lt;/code&gt;接口&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -992,11 +975,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 &lt;/ul&gt;
 &lt;h2 id=&quot;3-jwt-的结构&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-jwt-%E7%9A%84%E7%BB%93%E6%9E%84&quot; aria-label=&quot;3 jwt 的结构 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. JWT 的结构&lt;/h2&gt;
 &lt;p&gt;一个&lt;code&gt;JWT&lt;/code&gt;是由&lt;code&gt;Header&lt;/code&gt;、&lt;code&gt;Payload&lt;/code&gt;、&lt;code&gt;Signature&lt;/code&gt;三个元素构成的字符串，使用&lt;code&gt;.&lt;/code&gt;分隔(Header.Payload.Signature)。前两个元素是特定结构的JSON对象，通常经过&lt;code&gt;base64url&lt;/code&gt;编码。第三个是将Header和Payload的内容组合并加密。下面是一个&lt;code&gt;JWT&lt;/code&gt;示例（为了方便阅读，加了换行符）：&lt;/p&gt;
-&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+&lt;pre&gt;&lt;code&gt;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
 eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
-TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在 &lt;a href=&quot;https://jwt.io/#debugger-io&quot;&gt;https://jwt.io/#debugger-io&lt;/a&gt; 进行解码后如下图所示，&lt;strong&gt;Header&lt;/strong&gt; 中指定了使用&lt;code&gt;HS256&lt;/code&gt;算法进行签名，令牌类型为JWT；&lt;strong&gt;Payload&lt;/strong&gt;中包含了sub、name、admin信息；&lt;strong&gt;Signature&lt;/strong&gt;中， 使用header和payload以及特定的&lt;code&gt;secret&lt;/code&gt;来生成签名。&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -1128,8 +1110,7 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot; line-numbers=&quot;true&quot;  &gt;
-          &lt;code slot=&quot;code&quot;&gt;Intro : B F# E Eb x2
+&lt;pre&gt;&lt;code&gt;Intro : B F# E Eb x2
 e|-------------------------|--------------------------|
 B|-------------------------|--------------------------|
 G|-------4-----------3-----|-----0-----0-----1-----1--|
@@ -1160,7 +1141,7 @@ Chorus
 B       F#         Abm         E 
 Oh no stranger your just like me,
              B           F#          Abm            E 
-these things happen we were children in the mid 90&amp;#39;s
+these things happen we were children in the mid 90&apos;s
 B       F#         Abm         E 
 Oh no stranger your just like me,
        B           F#          Abm            E 
@@ -1195,7 +1176,7 @@ and when i woke up blind
 B            F#           Eb (6th)
 if you forgave i would sleep at night 
 E (7th)
-knowing i&amp;#39;d led a good life.
+knowing i&apos;d led a good life.
 
 
 Chorus
@@ -1203,7 +1184,7 @@ Chorus
 B       F#         Abm         E 
 Oh no stranger your just like me,
              B           F#          Abm            E 
-these things happen we were children in the mid 90&amp;#39;s
+these things happen we were children in the mid 90&apos;s
 B       F#         Abm         E 
 Oh no stranger your just like me,
        B           F#          Abm            E 
@@ -1239,7 +1220,7 @@ Chorus - play power chords softly over the chorus
 B       F#         Abm         E 
 Oh no stranger your just like me,
              B           F#          Abm            E 
-these things happen we were children in the mid 90&amp;#39;s
+these things happen we were children in the mid 90&apos;s
 B       F#         Abm         E 
 Oh no stranger your just like me,
        B           F#          Abm            E 
@@ -1248,12 +1229,12 @@ we get older they get younger it was you or me
 B       F#         Abm         E 
 Oh no stranger your just like me,
              B           F#          Abm            E 
-these things happen we were children in the mid 90&amp;#39;s
+these things happen we were children in the mid 90&apos;s
 B       F#         Abm         E 
 Oh no stranger your just like me,
        B           F#          Abm            E 
 we get older they get younger it was you or me
 
-End on - B &lt;/code&gt;
-        &lt;/deckgo-highlight-code&gt;
+End on - B 
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&quot;&gt;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>

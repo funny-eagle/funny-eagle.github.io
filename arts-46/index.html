@@ -85,26 +85,25 @@
 <p><a href="https://github.com/funny-eagle/arts">历史ARTS</a></p>
 </blockquote>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * AddBinary https://leetcode.com/problems/add-binary/
- * &lt;p&gt;
+ * &#x3C;p>
  * Given two binary strings a and b, return their sum as a binary string.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
- * Input: a = &quot;11&quot;, b = &quot;1&quot;
- * Output: &quot;100&quot;
+ * &#x3C;p>
+ * Input: a = "11", b = "1"
+ * Output: "100"
  * Example 2:
- * &lt;p&gt;
- * Input: a = &quot;1010&quot;, b = &quot;1011&quot;
- * Output: &quot;10101&quot;
+ * &#x3C;p>
+ * Input: a = "1010", b = "1011"
+ * Output: "10101"
  * Constraints:
- * &lt;p&gt;
- * 1 &lt;= a.length, b.length &lt;= 104
- * a and b consist only of &#39;0&#39; or &#39;1&#39; characters.
+ * &#x3C;p>
+ * 1 &#x3C;= a.length, b.length &#x3C;= 104
+ * a and b consist only of '0' or '1' characters.
  * Each string does not contain leading zeros except for the zero itself.
  * Related Topics
  * Math
@@ -118,77 +117,77 @@
  **/
 public class AddBinary {
     public String addBinary(String a, String b) {
-        if (a == null || b == null || a.length() &gt; 10000 || b.length() &gt; 10000)
-            throw new RuntimeException(&quot;invalid parameters&quot;);
+        if (a == null || b == null || a.length() > 10000 || b.length() > 10000)
+            throw new RuntimeException("invalid parameters");
 
         // 两个字符串长度查，在短字符串前面补领0，方便计算
         int d = a.length() - b.length();
-        String prefix = &quot;&quot;;
-        for (int i = 0; i &lt; Math.abs(d); i++)
-            prefix += &quot;0&quot;;
+        String prefix = "";
+        for (int i = 0; i &#x3C; Math.abs(d); i++)
+            prefix += "0";
 
         // 参数前面补0
-        if (d &gt; 0)
+        if (d > 0)
             b = prefix + b;
         else
             a = prefix + a;
 
-        String[] aa = a.split(&quot;&quot;);
-        String[] bb = b.split(&quot;&quot;);
+        String[] aa = a.split("");
+        String[] bb = b.split("");
         // 用字符串数组来存储结果，长度用aa和bb的都可以
         String[] res = new String[aa.length];
 
         // carry表示进位值
-        String carry = &quot;0&quot;;
+        String carry = "0";
 
         // 从末位开始相加
-        for (int i = aa.length - 1; i &gt;= 0; i--) {
+        for (int i = aa.length - 1; i >= 0; i--) {
             String sum = carry + aa[i] + bb[i];
 
-            if (&quot;000&quot;.equals(sum)) {
-                res[i] = &quot;0&quot;;
-                carry = &quot;0&quot;;
+            if ("000".equals(sum)) {
+                res[i] = "0";
+                carry = "0";
             }
 
-            if (&quot;001&quot;.equals(sum) || &quot;010&quot;.equals(sum) || &quot;100&quot;.equals(sum)) {
-                res[i] = &quot;1&quot;;
-                carry = &quot;0&quot;;
+            if ("001".equals(sum) || "010".equals(sum) || "100".equals(sum)) {
+                res[i] = "1";
+                carry = "0";
             }
 
-            if (&quot;101&quot;.equals(sum) || &quot;110&quot;.equals(sum) || &quot;011&quot;.equals(sum)) {
-                res[i] = &quot;0&quot;;
-                carry = &quot;1&quot;;
+            if ("101".equals(sum) || "110".equals(sum) || "011".equals(sum)) {
+                res[i] = "0";
+                carry = "1";
             }
 
-            if (&quot;111&quot;.equals(sum)) {
-                res[i] = &quot;1&quot;;
-                carry = &quot;1&quot;;
+            if ("111".equals(sum)) {
+                res[i] = "1";
+                carry = "1";
             }
 
             // 计算到数组首位时，依然有进位，需要变长数组，长度+1，首位赋值为1
-            if (i == 0 &amp;&amp; &quot;1&quot;.equals(carry)) {
+            if (i == 0 &#x26;&#x26; "1".equals(carry)) {
                 // step1. 暂存res到temp
                 String[] tem = res;
                 // step2. 新建一个比原数组长度+1的数组
                 res = new String[aa.length + 1];
                 // step3. 首位赋值为1
-                res[0] = &quot;1&quot;;
+                res[0] = "1";
                 // step4. 把原数组内容复制过来，下标从1开始复制
-                for (int i1 = 1; i1 &lt; res.length; i1++)
+                for (int i1 = 1; i1 &#x3C; res.length; i1++)
                     res[i1] = tem[i1 - 1];
             }
 
         }
 
         String result = new String();
-        for (int i = 0; i &lt; res.length; i++)
+        for (int i = 0; i &#x3C; res.length; i++)
             result += res[i];
 
         return result;
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <p>以前在完成Review这一项任务的时候，通过皓哥的专栏和引导，发现了很多优秀的国外技术网站，如<a href="https://medium.com/">medium</a>、<a href="https://dzone.com">DZone</a>、<a href="https://www.javatpoint.com/">javatpoint</a>、<a href="https://www.ibm.com/">IBM Developer</a>等等，阅读高质量的英文文章，可以提高英文水平，也可以学习大佬对技术理解的视角和思维方式。今天阅读的是dzone上一位大佬总结的java11到java17的新特性<a href="https://dzone.com/articles/whats-new-between-java-11-and-java-17">What’s New Between Java 11 and Java 17</a>，篇幅不长，可以快速了解上一个LTS版本Java11到17的一些新特性。下面对文中提到的新特性作以下简要整理。</p>
 <ol>
@@ -196,28 +195,26 @@ public class AddBinary {
 <p>Text Blocks</p>
 <ul>
 <li>文本块，类似python中的文本块支持换行。
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class TextBlock {
+<pre><code class="language-java">public class TextBlock {
     public static void main(String[] args) {
-        String json = &quot;&quot;&quot;
+        String json = """
                 {
-                    &quot;name&quot;: &quot;Jason&quot;,
-                    &quot;age&quot;: &quot;34&quot;,
-                    &quot;mail&quot;: &quot;yangjinlong86@gmail.com&quot;
+                    "name": "Jason",
+                    "age": "34",
+                    "mail": "yangjinlong86@gmail.com"
                 }
-                &quot;&quot;&quot;;
+                """;
         System.out.println(json);
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 输出结果也是带格式的
-<deckgo-highlight-code language="json" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">{
-    &quot;name&quot;: &quot;Jason&quot;,
-    &quot;age&quot;: &quot;34&quot;,
-    &quot;mail&quot;: &quot;yangjinlong86@gmail.com&quot;
-}</code>
-        </deckgo-highlight-code>
+<pre><code class="language-json">{
+    "name": "Jason",
+    "age": "34",
+    "mail": "yangjinlong86@gmail.com"
+}
+</code></pre>
 </li>
 </ul>
 </li>
@@ -225,44 +222,41 @@ public class AddBinary {
 <p>Switch Expressions</p>
 <ul>
 <li>冒号改为箭头方式，不需要单独写<code>break</code>，代码更简洁
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">private static void withSwitchExpression(Fruit fruit) {
+<pre><code class="language-java">private static void withSwitchExpression(Fruit fruit) {
     switch (fruit) {
-        case APPLE, PEAR -&gt; System.out.println(&quot;Common fruit&quot;);
-        case ORANGE, AVOCADO -&gt; System.out.println(&quot;Exotic fruit&quot;);
-        default -&gt; System.out.println(&quot;Undefined fruit&quot;);
+        case APPLE, PEAR -> System.out.println("Common fruit");
+        case ORANGE, AVOCADO -> System.out.println("Exotic fruit");
+        default -> System.out.println("Undefined fruit");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>支持返回值，如果一个case下需要多行代码，使用<code>yield</code>关键字指定返回值
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">private static void withYield(Fruit fruit) {
+<pre><code class="language-java">private static void withYield(Fruit fruit) {
     String text = switch (fruit) {
-        case APPLE, PEAR -&gt; {
-            System.out.println(&quot;the given fruit was: &quot; + fruit);
-            yield &quot;Common fruit&quot;;
+        case APPLE, PEAR -> {
+            System.out.println("the given fruit was: " + fruit);
+            yield "Common fruit";
         }
-        case ORANGE, AVOCADO -&gt; &quot;Exotic fruit&quot;;
-        default -&gt; &quot;Undefined fruit&quot;;
+        case ORANGE, AVOCADO -> "Exotic fruit";
+        default -> "Undefined fruit";
     };
     System.out.println(text);
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li><code>yield</code>支持旧的 switch 语法，也不需要单独写<code>break</code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">private static void oldStyleWithYield(Fruit fruit) {
+<pre><code class="language-java">private static void oldStyleWithYield(Fruit fruit) {
     System.out.println(switch (fruit) {
         case APPLE, PEAR:
-            yield &quot;Common fruit&quot;;
+            yield "Common fruit";
         case ORANGE, AVOCADO:
-            yield &quot;Exotic fruit&quot;;
+            yield "Exotic fruit";
         default:
-            yield &quot;Undefined fruit&quot;;
+            yield "Undefined fruit";
     });
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 </ul>
 </li>
@@ -271,44 +265,41 @@ public class AddBinary {
 <ul>
 <li>Records 用来创建一个不可变的数据类，与传统的类相比，无需我们再写构造器, getters, hashCode, equals 和 toString方法</li>
 <li>使用new 创建Record时，如果参数与已经存在的Record相同，那么不会新建的Record副本与原Record是同一个实例。见以下代码最后一行的输出，hashcode是一样的。
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">private static void basicRecord() {
+<pre><code class="language-java">private static void basicRecord() {
     record GrapeRecord(Color color, int nbrOfPits) {}
     GrapeRecord grape1 = new GrapeRecord(Color.BLUE, 1);
     GrapeRecord grape2 = new GrapeRecord(Color.WHITE, 2);
-    System.out.println(&quot;Grape 1 is &quot; + grape1);
-    System.out.println(&quot;Grape 2 is &quot; + grape2);
-    System.out.println(&quot;Grape 1 equals grape 2? &quot; + grape1.equals(grape2));
+    System.out.println("Grape 1 is " + grape1);
+    System.out.println("Grape 2 is " + grape2);
+    System.out.println("Grape 1 equals grape 2? " + grape1.equals(grape2));
     GrapeRecord grape1Copy = new GrapeRecord(grape1.color(), grape1.nbrOfPits());
-    System.out.println(&quot;Grape 1 equals its copy? &quot; + grape1.equals(grape1Copy));
-    System.out.println(grape1.hashCode() + &quot; &quot; + grape1Copy.hashCode());
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="log" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">Grape 1 is GrapeRecord[color=java.awt.Color[r=0,g=0,b=255], nbrOfPits=1]
+    System.out.println("Grape 1 equals its copy? " + grape1.equals(grape1Copy));
+    System.out.println(grape1.hashCode() + " " + grape1Copy.hashCode());
+}
+</code></pre>
+<pre><code class="language-log">Grape 1 is GrapeRecord[color=java.awt.Color[r=0,g=0,b=255], nbrOfPits=1]
 Grape 2 is GrapeRecord[color=java.awt.Color[r=255,g=255,b=255], nbrOfPits=2]
 Grape 1 equals grape 2? false
 Grape 1 equals its copy? true
--520085790 -520085790</code>
-        </deckgo-highlight-code>
+-520085790 -520085790
+</code></pre>
 </li>
 <li>Record的构造方法中可以增加字段校验逻辑
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">    private static void basicRecordWithValidation() {
+<pre><code class="language-java">    private static void basicRecordWithValidation() {
         record GrapeRecord(Color color, int nbrOfPits) {
             GrapeRecord {
-                System.out.println(&quot;Parameter color=&quot; + color + &quot;, Field color=&quot; + this.color());
-                System.out.println(&quot;Parameter nbrOfPits=&quot; + nbrOfPits + &quot;, Field nbrOfPits=&quot; + this.nbrOfPits());
+                System.out.println("Parameter color=" + color + ", Field color=" + this.color());
+                System.out.println("Parameter nbrOfPits=" + nbrOfPits + ", Field nbrOfPits=" + this.nbrOfPits());
                 if (color == null) {
-                    throw new IllegalArgumentException(&quot;Color may not be null&quot;);
+                    throw new IllegalArgumentException("Color may not be null");
                 }
             }
         }
         GrapeRecord grape1 = new GrapeRecord(Color.BLUE, 1);
-        System.out.println(&quot;Grape 1 is &quot; + grape1);
+        System.out.println("Grape 1 is " + grape1);
         GrapeRecord grapeNull = new GrapeRecord(null, 2);
-    }</code>
-        </deckgo-highlight-code>
+    }
+</code></pre>
 </li>
 </ul>
 </li>
@@ -323,12 +314,11 @@ Grape 1 equals its copy? true
 <p>Pattern matching for instanceof</p>
 <ul>
 <li><code>instanceof</code>的类名之后，跟一个变量名，可以省去强转和声明类的步骤
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">Object o = new GrapeClass(Color.BLUE, 2);
+<pre><code class="language-java">Object o = new GrapeClass(Color.BLUE, 2);
 if (o instanceof GrapeClass grape) {
-    System.out.println(&quot;This grape has &quot; + grape.getNbrOfPits() + &quot; pits.&quot;);
-}</code>
-        </deckgo-highlight-code>
+    System.out.println("This grape has " + grape.getNbrOfPits() + " pits.");
+}
+</code></pre>
 </li>
 </ul>
 </li>
@@ -336,9 +326,8 @@ if (o instanceof GrapeClass grape) {
 <p>Helpful NullPointerExceptions</p>
 <ul>
 <li>当发生空指针异常是，异常信息中直接会告诉你是哪个类的哪个方法导致的
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">Exception in thread &quot;main&quot; java.lang.NullPointerException: Cannot invoke &quot;com.mydeveloperplanet.myjava17planet.GrapeClass.getColor()&quot; because the return value of &quot;java.util.HashMap.get(Object)&quot; is null</code>
-        </deckgo-highlight-code>
+<pre><code class="language-java">Exception in thread "main" java.lang.NullPointerException: Cannot invoke "com.mydeveloperplanet.myjava17planet.GrapeClass.getColor()" because the return value of "java.util.HashMap.get(Object)" is null
+</code></pre>
 </li>
 </ul>
 <p>    at com.mydeveloperplanet.myjava17planet.HelpfulNullPointerExceptions.main(HelpfulNullPointerExceptions.java:13)
@@ -355,51 +344,47 @@ if (o instanceof GrapeClass grape) {
 <ul>
 <li><code>DateTimeFormatter</code> 中新增了一个<code>B</code>模式，可以直接返回时间所属的时段信息</li>
 </ul>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class DayPeriod {
+<pre><code class="language-java">public class DayPeriod {
     public static void main(String[] args) {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern(&quot;B&quot;);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("B");
         System.out.println(dtf.format(LocalTime.of(8, 0)));
         System.out.println(dtf.format(LocalTime.of(13, 0)));
         System.out.println(dtf.format(LocalTime.of(20, 0)));
         System.out.println(dtf.format(LocalTime.of(23, 0)));
         System.out.println(dtf.format(LocalTime.of(0, 0)));
     }
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="log" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">上午
+}
+</code></pre>
+<pre><code class="language-log">上午
 下午
 晚上
 晚上
-午夜</code>
-        </deckgo-highlight-code>
+午夜
+</code></pre>
 <p>默认返回值是当前时区，也可以指定Locale，例如：</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">dtf = DateTimeFormatter.ofPattern(&quot;B&quot;).withLocale(Locale.forLanguageTag(&quot;NL&quot;));</code>
-        </deckgo-highlight-code>
+<pre><code class="language-java">dtf = DateTimeFormatter.ofPattern("B").withLocale(Locale.forLanguageTag("NL"));
+</code></pre>
 </li>
 <li>
 <p>Stream.toList()</p>
 <ul>
 <li>旧版本中，如果要把Stream转换成List，需要调用<code>collect(Collectors.toList)</code>，Java 17 中，<code>Stream</code>增加了<code>toList()</code>方法，可以直接转换为<code>List</code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">private static void oldStyle() {
-    Stream&lt;String&gt; stringStream = Stream.of(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);
-    List&lt;String&gt; stringList =  stringStream.collect(Collectors.toList());
+<pre><code class="language-java">private static void oldStyle() {
+    Stream&#x3C;String> stringStream = Stream.of("a", "b", "c");
+    List&#x3C;String> stringList =  stringStream.collect(Collectors.toList());
     for(String s : stringList) {
         System.out.println(s);
     }
 }
 
 private static void streamToList() {
-    Stream&lt;String&gt; stringStream = Stream.of(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;);
-    List&lt;String&gt; stringList =  stringStream.toList();
+    Stream&#x3C;String> stringStream = Stream.of("a", "b", "c");
+    List&#x3C;String> stringList =  stringStream.toList();
     for(String s : stringList) {
         System.out.println(s);
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 </ul>
 </li>
@@ -412,17 +397,15 @@ private static void streamToList() {
 <p>1、A服务发送成功后记录了日志，消息是成功发送出去了。
 2、B服务日志打印不规范，输出日志为null，经核实代码，推断<code>message</code>为空，导致<code>RuntimeException</code>。
 3、查看RabbitMQ日志，发现异常信息如下：</p>
-<deckgo-highlight-code language="log" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">2023-05-29 23:52:01.502 [error] &lt;0.20990.12&gt; Channel error on connection &lt;0.2510.0&gt; (10.42.0.1:42792 -&gt; 10.42.0.5:5672, vhost: &#39;/&#39;, user: &#39;admin&#39;), channel 1150:
-operation basic.ack caused a channel exception precondition_failed: unknown delivery tag 1</code>
-        </deckgo-highlight-code>
+<pre><code class="language-log">2023-05-29 23:52:01.502 [error] &#x3C;0.20990.12> Channel error on connection &#x3C;0.2510.0> (10.42.0.1:42792 -> 10.42.0.5:5672, vhost: '/', user: 'admin'), channel 1150:
+operation basic.ack caused a channel exception precondition_failed: unknown delivery tag 1
+</code></pre>
 <p><strong>问题原因</strong></p>
 <p>到此问题基本明晰了，生产环境的配置文件没有将rabbitmq的ack设置为手动，默认值为<code>none</code>，是自动确认。代码中使用<code>channel.basicAck()</code>又进行了手动确认，这样的重复确认操作会导致<strong>偶发性</strong>消息丢失情况。</p>
 <p>rabbitmq 为每一个channel维护了一个delivery tag的计数器，采用正向自增，新消息投递时自增，当消息响应时自减；在连续收发的场景中，由于消息发送的间隔较短，部分消息因 consumer的重复确认被rabbitmq 当做已处理而丢弃。</p>
 <p><strong>解决办法</strong></p>
 <p>取消自动确认，配置手动确认。</p>
-<deckgo-highlight-code language="yml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">spring:
+<pre><code class="language-yml">spring:
   rabbitmq:
     host: ${rabbitmqHost}
     port: ${rabbitmqPort}
@@ -435,8 +418,8 @@ operation basic.ack caused a channel exception precondition_failed: unknown deli
           enabled: true
           max-attempts: 24
           initial-interval: 3600000
-        acknowledge-mode: manual</code>
-        </deckgo-highlight-code>
+        acknowledge-mode: manual
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <ul>
 <li>MegaEase纪念陈皓的<a href="https://memorial.megaease.cn/">网站</a></li>

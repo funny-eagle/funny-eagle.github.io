@@ -107,20 +107,18 @@
 <h3 id="144binary-tree-preorder-traversal" style="position:relative;"><a href="#144binary-tree-preorder-traversal" aria-label="144binary tree preorder traversal permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>144.Binary Tree Preorder Traversal</h3>
 <p>Given a binary tree, return the <em>preorder</em> traversal of its nodes’ values.</p>
 <p><strong>Example:</strong></p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">Input: [1,null,2,3]
+<pre><code>Input: [1,null,2,3]
    1
     \
      2
     /
    3
 
-Output: [1,2,3]</code>
-        </deckgo-highlight-code>
+Output: [1,2,3]
+</code></pre>
 <p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>
 <p><strong>Solution</strong></p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import org.nocoder.leetcode.solution.common.TreeNode;
 
@@ -130,20 +128,20 @@ import java.util.Stack;
 
 /**
  * 144. Binary Tree Preorder Traversal
- * &lt;p&gt;
+ * &#x3C;p>
  * https://leetcode.com/problems/binary-tree-preorder-traversal/
  *
  * @author jason
  * @date 2019/6/18.
  */
 public class BinaryTreePreorderTraversal {
-    public static List&lt;Integer&gt; preorderTraversal(TreeNode root) {
-        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+    public static List&#x3C;Integer> preorderTraversal(TreeNode root) {
+        List&#x3C;Integer> list = new ArrayList&#x3C;>();
         if (root == null) {
             return list;
         }
 
-        Stack&lt;TreeNode&gt; stack = new Stack&lt;&gt;();
+        Stack&#x3C;TreeNode> stack = new Stack&#x3C;>();
         stack.push(root);
 
         while (!stack.isEmpty()) {
@@ -170,11 +168,11 @@ public class BinaryTreePreorderTraversal {
     }
 
     public static void main(String[] args) {
-        List&lt;Integer&gt; list = preorderTraversal(buildTreeNode());
+        List&#x3C;Integer> list = preorderTraversal(buildTreeNode());
         System.out.println(list);
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="why-you-should-use-gatsbyjs-to-build-static-sites" style="position:relative;"><a href="#why-you-should-use-gatsbyjs-to-build-static-sites" aria-label="why you should use gatsbyjs to build static sites permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://medium.com/free-code-camp/why-you-should-use-gatsbyjs-to-build-static-sites-4f90eb6d1a7b">Why you should use GatsbyJS to build static sites</a></h3>
 <p>Gatsby 是一个很棒的静态网站生成框架，基于 react.js，并且使用GraphQL，可以快速根据markdown文件生成静态网站，速度很快，开发体验非常棒，当然学习 gatsby 最直接的地方还是官网，<a href="https://www.gatsbyjs.org/tutorial/">官网教程</a>写的很详细，跟着一步一步做就行，我自己的博客<a href="http://nocoder.org">Nocoder</a>已经从springboot版本改成了gatsby静态网站了，确实，从开发、部署到访问体验都非常好。</p>

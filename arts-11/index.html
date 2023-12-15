@@ -103,24 +103,23 @@
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第11周</h1><div class="css-info"><span style="padding-right:12px">2018-09-15</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <h3 id="jewels-and-stones" style="position:relative;"><a href="#jewels-and-stones" aria-label="jewels and stones permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Jewels and Stones</h3>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
- * You&#39;re given strings J representing the types of stones that are jewels, and S
+ * You're given strings J representing the types of stones that are jewels, and S
  * representing the stones you have.  Each character in S is a type of
  * stone you have.  You want to know how many of the stones you have are also jewels.
  *
  * The letters in J are guaranteed distinct, and all characters in J and S are letters.
- * Letters are case sensitive, so &quot;a&quot; is considered a different type of stone from &quot;A&quot;.
+ * Letters are case sensitive, so "a" is considered a different type of stone from "A".
  *
  * Example 1:
  *
- * Input: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;
+ * Input: J = "aA", S = "aAAbbbb"
  * Output: 3
  * Example 2:
  *
- * Input: J = &quot;z&quot;, S = &quot;ZZ&quot;
+ * Input: J = "z", S = "ZZ"
  * Output: 0
  * Note:
  *
@@ -132,15 +131,15 @@
 public class JewelsAndStones {
     public static int numJewelsInStones(String J, String S) {
         int res = 0;
-        if(J == null || &quot;&quot;.equals(J) || S == null || &quot;&quot;.equals(S)){
+        if(J == null || "".equals(J) || S == null || "".equals(S)){
             return res;
         }
 
-        String [] jArr = J.split(&quot;&quot;);
-        String [] sArr = S.split(&quot;&quot;);
+        String [] jArr = J.split("");
+        String [] sArr = S.split("");
 
-        for (int i = 0; i &lt; jArr.length; i++) {
-            for (int j = 0; j &lt; sArr.length; j++) {
+        for (int i = 0; i &#x3C; jArr.length; i++) {
+            for (int j = 0; j &#x3C; sArr.length; j++) {
                 if(jArr[i].equals(sArr[j])){
                     ++res;
                 }
@@ -150,16 +149,16 @@ public class JewelsAndStones {
     }
 
     public static void main(String[] args) {
-        System.out.println(numJewelsInStones(&quot;ABC&quot;, &quot;ABCCDE&quot;));
-        System.out.println(numJewelsInStones(&quot;&quot;, &quot;&quot;));
+        System.out.println(numJewelsInStones("ABC", "ABCCDE"));
+        System.out.println(numJewelsInStones("", ""));
         System.out.println(numJewelsInStones(null, null));
-        System.out.println(numJewelsInStones(&quot;ABC&quot;, &quot;&quot;));
-        System.out.println(numJewelsInStones(&quot;&quot;, &quot;ABCCDE&quot;));
-        System.out.println(numJewelsInStones(&quot;abc&quot;, &quot;rewqabc&quot;));
+        System.out.println(numJewelsInStones("ABC", ""));
+        System.out.println(numJewelsInStones("", "ABCCDE"));
+        System.out.println(numJewelsInStones("abc", "rewqabc"));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="strategy-pattern-tutorial-with-java-examples" style="position:relative;"><a href="#strategy-pattern-tutorial-with-java-examples" aria-label="strategy pattern tutorial with java examples permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Strategy Pattern Tutorial with Java Examples</h3>
 <blockquote>
@@ -170,28 +169,24 @@ public class JewelsAndStones {
 <p><img src="https://raw.githubusercontent.com/yangjinlong86/nocoder/master/data/images/design-pattern/strategy_pattern.png" alt=""></p>
 <p>简单实用的策略模式，Context 由一个 Strategy接口和若干行为方法组成。在运行时向Context传入不同的策略实现类来执行对应的行为方法。</p>
 <p>作者使用压缩文件格式rar或者zip为示例，阐述了策略模式的使用场景和具体实现，代码如下：</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">//Strategy Interface
+<pre><code class="language-java">//Strategy Interface
 public interface CompressionStrategy {
-  public void compressFiles(ArrayList&lt;File&gt; files);
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class ZipCompressionStrategy implements CompressionStrategy {
-  public void compressFiles(ArrayList&lt;File&gt; files) {
+  public void compressFiles(ArrayList&#x3C;File> files);
+}
+</code></pre>
+<pre><code class="language-java">public class ZipCompressionStrategy implements CompressionStrategy {
+  public void compressFiles(ArrayList&#x3C;File> files) {
     //using ZIP approach
   }
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class RarCompressionStrategy implements CompressionStrategy {
-  public void compressFiles(ArrayList&lt;File&gt; files) {
+}
+</code></pre>
+<pre><code class="language-java">public class RarCompressionStrategy implements CompressionStrategy {
+  public void compressFiles(ArrayList&#x3C;File> files) {
     //using RAR approach
   }
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class CompressionContext {
+}
+</code></pre>
+<pre><code class="language-java">public class CompressionContext {
   private CompressionStrategy strategy;
   //this can be set at runtime by the application preferences
   public void setCompressionStrategy(CompressionStrategy strategy) {
@@ -199,13 +194,12 @@ public interface CompressionStrategy {
   }
   
   //use the strategy
-  public void createArchive(ArrayList&lt;File&gt; files) {
+  public void createArchive(ArrayList&#x3C;File> files) {
     strategy.compressFiles(files);
   }
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class Client {
+}
+</code></pre>
+<pre><code class="language-java">public class Client {
   public static void main(String[] args) {
     CompressionContext ctx = new CompressionContext();
     //we could assume context is already set by preferences
@@ -213,23 +207,22 @@ public interface CompressionStrategy {
     //get a list of files...
     ctx.createArchive(fileList);
   }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <h3 id="canal-server-docker" style="position:relative;"><a href="#canal-server-docker" aria-label="canal server docker permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>canal-server docker</h3>
 <p>升级canal到1.1.1版本，本体验证通过，后续准备替换测试和生产环境的canal-server为docker版本。</p>
 <p>docker pull canal/canal-server:v1.1.0</p>
 <p>docker run 需要挂载logs，其它的参数都可以通过<code>-e</code>的方式来配置</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">-e canal.auto.scan=false \
+<pre><code>-e canal.auto.scan=false \
 -e canal.destinations=test \
 -e canal.instance.master.address=127.0.0.1:3306  \
 -e canal.instance.dbUsername=canal  \
 -e canal.instance.dbPassword=canal  \
 -e canal.instance.connectionCharset=UTF-8 \
 -e canal.instance.tsdb.enable=true \
--e canal.instance.gtidon=false</code>
-        </deckgo-highlight-code>
+-e canal.instance.gtidon=false
+</code></pre>
 <blockquote>
 <p><a href="https://github.com/alibaba/canal/wiki/Docker-QuickStart">https://github.com/alibaba/canal/wiki/Docker-QuickStart</a></p>
 </blockquote>

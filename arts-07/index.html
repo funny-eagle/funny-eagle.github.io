@@ -96,24 +96,23 @@
 <p><a href="#share">Share</a></p>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第7周</h1><div class="css-info"><span style="padding-right:12px">2018-08-18</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 7. Reverse Integer
- * &lt;p&gt;
+ * &#x3C;p>
  * Given a 32-bit signed integer, reverse digits of an integer.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 123
  * Output: 321
  * Example 2:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: -123
  * Output: -321
  * Example 3:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 120
  * Output: 21
  * Note:
@@ -133,7 +132,7 @@ public class ReverseInteger {
         int n;
         while (x != 0) {
             n = x % 10;
-            if (y &gt; INT_MAX / 10 || y &lt; INT_MIN / 10) {
+            if (y > INT_MAX / 10 || y &#x3C; INT_MIN / 10) {
                 return 0;
             }
             y = y * 10 + n;
@@ -149,8 +148,8 @@ public class ReverseInteger {
         System.out.println(reverse(1000000003));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="a-container-networking-overview" style="position:relative;"><a href="#a-container-networking-overview" aria-label="a container networking overview permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>A container networking overview</h3>
 <blockquote>
@@ -165,19 +164,16 @@ public class ReverseInteger {
 <p>if you’re in the same AZ as your target, you can just send a packet with any random IP address on it, and as long as the MAC address is right it’ll get there.</p>
 <p>if you are in a different AZ, to send a packet to a computer, it has to have the IP address of that instance on it.</p>
 <p><strong>The route table</strong></p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">sudo ip route add 10.4.4.0/24 via 172.23.1.1 dev eth0</code>
-        </deckgo-highlight-code>
+<pre><code>sudo ip route add 10.4.4.0/24 via 172.23.1.1 dev eth0
+</code></pre>
 <p><strong>Encapsulation</strong></p>
 <p>ip-in-ip encapsulation just slaps on an extra IP header on top of your old IP header.</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">sudo ip tunnel add mytun mode ipip remote 172.9.9.9 local 10.4.4.4 ttl 255
-sudo ifconfig mytun 10.42.1.1</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">sudo route add -net 10.42.2.0/24 dev mytun
-sudo route list</code>
-        </deckgo-highlight-code>
+<pre><code>sudo ip tunnel add mytun mode ipip remote 172.9.9.9 local 10.4.4.4 ttl 255
+sudo ifconfig mytun 10.42.1.1
+</code></pre>
+<pre><code>sudo route add -net 10.42.2.0/24 dev mytun
+sudo route list
+</code></pre>
 <p>bridge networking</p>
 <ul>
 <li>
@@ -196,82 +192,79 @@ Docker will create fake (virtual) network interfaces for every single one of you
 <p>那么本地进行<code>mvn install</code>的时候，则须依赖本地的docker环境，因为会默认执行executions中的docker命令，</p>
 <p>这就比较麻烦了，使用Maven Profile可以完美解决这个问题。</p>
 <p>公共配置，即开发环境下的配置</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;build&gt;
-  &lt;plugins&gt;
-      &lt;plugin&gt;
-          &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-          &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-          &lt;configuration&gt;
-              &lt;executable&gt;true&lt;/executable&gt;
-          &lt;/configuration&gt;
-          &lt;executions&gt;
-              &lt;execution&gt;
-                  &lt;goals&gt;
-                      &lt;goal&gt;repackage&lt;/goal&gt;
-                  &lt;/goals&gt;
-              &lt;/execution&gt;
-          &lt;/executions&gt;
-      &lt;/plugin&gt;
-      &lt;plugin&gt;
-          &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
-          &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
-          &lt;configuration&gt;
-              &lt;source&gt;8&lt;/source&gt;
-              &lt;target&gt;8&lt;/target&gt;
-          &lt;/configuration&gt;
-      &lt;/plugin&gt;
-  &lt;/plugins&gt;
-&lt;/build&gt;</code>
-        </deckgo-highlight-code>
+<pre><code class="language-xml">&#x3C;build>
+  &#x3C;plugins>
+      &#x3C;plugin>
+          &#x3C;groupId>org.springframework.boot&#x3C;/groupId>
+          &#x3C;artifactId>spring-boot-maven-plugin&#x3C;/artifactId>
+          &#x3C;configuration>
+              &#x3C;executable>true&#x3C;/executable>
+          &#x3C;/configuration>
+          &#x3C;executions>
+              &#x3C;execution>
+                  &#x3C;goals>
+                      &#x3C;goal>repackage&#x3C;/goal>
+                  &#x3C;/goals>
+              &#x3C;/execution>
+          &#x3C;/executions>
+      &#x3C;/plugin>
+      &#x3C;plugin>
+          &#x3C;groupId>org.apache.maven.plugins&#x3C;/groupId>
+          &#x3C;artifactId>maven-compiler-plugin&#x3C;/artifactId>
+          &#x3C;configuration>
+              &#x3C;source>8&#x3C;/source>
+              &#x3C;target>8&#x3C;/target>
+          &#x3C;/configuration>
+      &#x3C;/plugin>
+  &#x3C;/plugins>
+&#x3C;/build>
+</code></pre>
 <p>为测试环境和生产环境下增加profile配置</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;project&gt;
-  &lt;profiles&gt;
-    &lt;profile&gt;
-        &lt;id&gt;prod&lt;/id&gt;
-        &lt;build&gt;
-            &lt;plugins&gt;
+<pre><code class="language-xml">&#x3C;project>
+  &#x3C;profiles>
+    &#x3C;profile>
+        &#x3C;id>prod&#x3C;/id>
+        &#x3C;build>
+            &#x3C;plugins>
                 v
-            &lt;/plugins&gt;
-        &lt;/build&gt;
-    &lt;/profile&gt;
-    &lt;profile&gt;
-        &lt;id&gt;test&lt;/id&gt;
-        &lt;build&gt;
-            &lt;plugins&gt;
-                &lt;plugin&gt;
-                    &lt;groupId&gt;com.spotify&lt;/groupId&gt;
-                    &lt;artifactId&gt;dockerfile-maven-plugin&lt;/artifactId&gt;
-                    &lt;version&gt;1.4.3&lt;/version&gt;
-                    &lt;executions&gt;
-                        &lt;execution&gt;
-                            &lt;id&gt;default&lt;/id&gt;
-                            &lt;phase&gt;install&lt;/phase&gt;
-                            &lt;goals&gt;
-                                &lt;goal&gt;build&lt;/goal&gt;
-                            &lt;/goals&gt;
-                        &lt;/execution&gt;
-                    &lt;/executions&gt;
-                    &lt;configuration&gt;
-                        &lt;repository&gt;120.79.164.255:9091/yuntu-eureka-server&lt;/repository&gt;
-                        &lt;tag&gt;test&lt;/tag&gt;
-                        &lt;useMavenSettingsForAuth&gt;true&lt;/useMavenSettingsForAuth&gt;
-                        &lt;buildArgs&gt;
-                            &lt;JAR_FILE&gt;target/${project.build.finalName}.jar&lt;/JAR_FILE&gt;
-                        &lt;/buildArgs&gt;
-                    &lt;/configuration&gt;
-                &lt;/plugin&gt;
-            &lt;/plugins&gt;
-        &lt;/build&gt;
-    &lt;/profile&gt;
-  &lt;/profiles&gt;
-&lt;/project&gt;</code>
-        </deckgo-highlight-code>
+            &#x3C;/plugins>
+        &#x3C;/build>
+    &#x3C;/profile>
+    &#x3C;profile>
+        &#x3C;id>test&#x3C;/id>
+        &#x3C;build>
+            &#x3C;plugins>
+                &#x3C;plugin>
+                    &#x3C;groupId>com.spotify&#x3C;/groupId>
+                    &#x3C;artifactId>dockerfile-maven-plugin&#x3C;/artifactId>
+                    &#x3C;version>1.4.3&#x3C;/version>
+                    &#x3C;executions>
+                        &#x3C;execution>
+                            &#x3C;id>default&#x3C;/id>
+                            &#x3C;phase>install&#x3C;/phase>
+                            &#x3C;goals>
+                                &#x3C;goal>build&#x3C;/goal>
+                            &#x3C;/goals>
+                        &#x3C;/execution>
+                    &#x3C;/executions>
+                    &#x3C;configuration>
+                        &#x3C;repository>120.79.164.255:9091/yuntu-eureka-server&#x3C;/repository>
+                        &#x3C;tag>test&#x3C;/tag>
+                        &#x3C;useMavenSettingsForAuth>true&#x3C;/useMavenSettingsForAuth>
+                        &#x3C;buildArgs>
+                            &#x3C;JAR_FILE>target/${project.build.finalName}.jar&#x3C;/JAR_FILE>
+                        &#x3C;/buildArgs>
+                    &#x3C;/configuration>
+                &#x3C;/plugin>
+            &#x3C;/plugins>
+        &#x3C;/build>
+    &#x3C;/profile>
+  &#x3C;/profiles>
+&#x3C;/project>
+</code></pre>
 <p>指定 profile 打包命令</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">mvn clean install -P test</code>
-        </deckgo-highlight-code>
+<pre><code>mvn clean install -P test
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <p><a href="https://github.com/haoel/leetcode/blob/master/algorithms/cpp/reverseInteger/reverseInteger.cpp">https://github.com/haoel/leetcode/blob/master/algorithms/cpp/reverseInteger/reverseInteger.cpp</a></p>
 <blockquote>

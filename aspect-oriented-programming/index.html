@@ -296,8 +296,7 @@
 <ol>
 <li>
 <p>定义一个艺人接口</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.staticproxy;
+<pre><code class="language-java">package org.nocoder.proxy.staticproxy;
 
 /**
  * 艺人接口
@@ -309,13 +308,12 @@ public interface Artist {
      * 表演
      */
     void perform();
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>定义艺人实现类刘德华</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.staticproxy;
+<pre><code class="language-java">package org.nocoder.proxy.staticproxy;
 
 /**
  * 艺人刘德华
@@ -333,15 +331,14 @@ public class LiuDehua implements Artist {
     }
 
     public void perform() {
-        System.out.println(&quot;刘德华出场演唱笨小孩...&quot;);
+        System.out.println("刘德华出场演唱笨小孩...");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>编写代理类</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.staticproxy;
+<pre><code class="language-java">package org.nocoder.proxy.staticproxy;
 
 /**
  * 艺人助理（代理类）
@@ -362,17 +359,16 @@ public class ArtistProxy implements Artist {
 
 
     public void perform() {
-        System.out.println(&quot;助理出面谈价格，签合同...&quot;);
+        System.out.println("助理出面谈价格，签合同...");
         liuDehua.perform();
-        System.out.println(&quot;助理出面收钱...&quot;);
+        System.out.println("助理出面收钱...");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>运行<code>main</code>方法，将艺人实例传入代理类的构造方法，然后调用代理类的<code>perform()</code></p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.staticproxy;
+<pre><code class="language-java">package org.nocoder.proxy.staticproxy;
 
 /**
  * @author jason
@@ -385,18 +381,17 @@ public class StaticProxyDemo {
         ArtistProxy proxy = new ArtistProxy(liuDehua);
         proxy.perform();
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>运行结果</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">助理出面谈价格，签合同...
+<pre><code class="language-java">助理出面谈价格，签合同...
 刘德华出场演唱笨小孩...
 助理出面收钱...
 
-Process finished with exit code 0</code>
-        </deckgo-highlight-code>
+Process finished with exit code 0
+</code></pre>
 </li>
 </ol>
 <p><strong>静态代理的缺点</strong></p>
@@ -411,8 +406,7 @@ Process finished with exit code 0</code>
 <ol>
 <li>
 <p>定义图书服务接口</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.jdkproxy;
+<pre><code class="language-java">package org.nocoder.proxy.jdkproxy;
 
 /**
  * 图书服务接口
@@ -424,13 +418,12 @@ public interface BookService {
      * 新增图书接口
      */
     void addBook();
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>编写图书服务实现类</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.jdkproxy;
+<pre><code class="language-java">package org.nocoder.proxy.jdkproxy;
 
 /**
  * 图书服务实现类
@@ -440,15 +433,14 @@ public interface BookService {
 public class BookServiceImpl implements BookService {
     @Override
     public void addBook() {
-        System.out.println(&quot;新增图书&quot;);
+        System.out.println("新增图书");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>编写InvocationHandler实现类</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.jdkproxy;
+<pre><code class="language-java">package org.nocoder.proxy.jdkproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -469,18 +461,17 @@ public class BookServiceInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println(&quot;事务开始&quot;);
+        System.out.println("事务开始");
         Object result = method.invoke(target, args);
-        System.out.println(&quot;事务结束&quot;);
+        System.out.println("事务结束");
         return result;
     }
-}	</code>
-        </deckgo-highlight-code>
+}	
+</code></pre>
 </li>
 <li>
 <p>运行测试程序</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.jdkproxy;
+<pre><code class="language-java">package org.nocoder.proxy.jdkproxy;
 
 import java.lang.reflect.Proxy;
 
@@ -502,34 +493,31 @@ public class JdkProxyDemo {
 
         bookServiceProxy.addBook();
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>运行结果</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">事务开始
+<pre><code class="language-java">事务开始
 新增图书
 事务结束
 
-Process finished with exit code 0</code>
-        </deckgo-highlight-code>
+Process finished with exit code 0
+</code></pre>
 </li>
 </ol>
 <h4 id="cglib动态代理" style="position:relative;"><a href="#cglib%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86" aria-label="cglib动态代理 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CGLIB动态代理</h4>
 <p>JDK的动态代理依靠接口实现，如果有些类并没有实现接口，则不能使用JDK代理，这时就要使用cglib动态代理了。使用cglib需要依赖<code>cglib</code>的jar，使用maven为例</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;dependency&gt;
-  &lt;groupId&gt;cglib&lt;/groupId&gt;
-  &lt;artifactId&gt;cglib-nodep&lt;/artifactId&gt;
-  &lt;version&gt;3.2.4&lt;/version&gt;
-&lt;/dependency&gt;</code>
-        </deckgo-highlight-code>
+<pre><code class="language-xml">&#x3C;dependency>
+  &#x3C;groupId>cglib&#x3C;/groupId>
+  &#x3C;artifactId>cglib-nodep&#x3C;/artifactId>
+  &#x3C;version>3.2.4&#x3C;/version>
+&#x3C;/dependency>
+</code></pre>
 <ol>
 <li>
 <p>定义图书服务类</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.cglibproxy;
+<pre><code class="language-java">package org.nocoder.proxy.cglibproxy;
 
 /**
  * @author jason
@@ -537,15 +525,14 @@ Process finished with exit code 0</code>
  */
 public class BookService {
     public void addBook() {
-        System.out.println(&quot;新增图书&quot;);
+        System.out.println("新增图书");
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>编写MethodInterceptor实现类</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.cglibproxy;
+<pre><code class="language-java">package org.nocoder.proxy.cglibproxy;
 
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
@@ -559,18 +546,17 @@ public class BookServiceMethodInterceptor implements MethodInterceptor {
 
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-        System.out.println(&quot;事务开始&quot;);
+        System.out.println("事务开始");
         methodProxy.invokeSuper(o, objects);
-        System.out.println(&quot;事务结束&quot;);
+        System.out.println("事务结束");
         return null;
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>运行测试程序</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.proxy.cglibproxy;
+<pre><code class="language-java">package org.nocoder.proxy.cglibproxy;
 
 import net.sf.cglib.proxy.Enhancer;
 
@@ -589,18 +575,17 @@ public class CglibProxyDemo {
         BookService bookServiceProxy = (BookService)enhancer.create();
         bookServiceProxy.addBook();
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>运行结果</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">事务开始
+<pre><code class="language-shell">事务开始
 新增图书
 事务结束
 
-Process finished with exit code 0</code>
-        </deckgo-highlight-code>
+Process finished with exit code 0
+</code></pre>
 </li>
 </ol>
 <h2 id="spring-aop" style="position:relative;"><a href="#spring-aop" aria-label="spring aop permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Spring AOP</h2>

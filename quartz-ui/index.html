@@ -98,20 +98,18 @@
 <h2 id="问题和解决办法" style="position:relative;"><a href="#%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95" aria-label="问题和解决办法 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>问题和解决办法</h2>
 <p>1、项目无法直接加载<code>jar</code>中静态文件，打包时需要将静态文件放在<code>META-INF/resources</code>目录下。</p>
 <p>在<code>pom.xml</code> 的 <code>build</code> 下增加</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;resources&gt;
-	&lt;resource&gt;
-		&lt;directory&gt;${basedir}/src/main/resources/templates&lt;/directory&gt;
-		&lt;targetPath&gt;META-INF/resources/&lt;/targetPath&gt;
-		&lt;includes&gt;
-			&lt;include&gt;**/**&lt;/include&gt;
-		&lt;/includes&gt;
-	&lt;/resource&gt;
-&lt;/resources&gt;</code>
-        </deckgo-highlight-code>
+<pre><code class="language-xml">&#x3C;resources>
+	&#x3C;resource>
+		&#x3C;directory>${basedir}/src/main/resources/templates&#x3C;/directory>
+		&#x3C;targetPath>META-INF/resources/&#x3C;/targetPath>
+		&#x3C;includes>
+			&#x3C;include>**/**&#x3C;/include>
+		&#x3C;/includes>
+	&#x3C;/resource>
+&#x3C;/resources>
+</code></pre>
 <p><code>application.yml</code>中也要对应修改<code>template-loader-path</code>的路径</p>
-<deckgo-highlight-code language="yml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">spring:
+<pre><code class="language-yml">spring:
   freemarker:
     cache: false
     charset: UTF-8
@@ -122,18 +120,17 @@
     request-context-attribute: request
     suffix: .ftl
     template-loader-path: classpath:/META-INF/resources/
-    prefer-file-system-access: false</code>
-        </deckgo-highlight-code>
+    prefer-file-system-access: false
+</code></pre>
 <p>2、配置文件也需要打包进去，继续在<code>pom.xml</code> 的 <code>resources</code> 下增加</p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">	&lt;resource&gt;
-		&lt;directory&gt;${basedir}/src/main/resources/&lt;/directory&gt;
-		&lt;includes&gt;
-			&lt;include&gt;**/*.yml&lt;/include&gt;
-			&lt;include&gt;**/*.factories&lt;/include&gt;
-		&lt;/includes&gt;
-	&lt;/resource&gt;</code>
-        </deckgo-highlight-code>
+<pre><code class="language-xml">	&#x3C;resource>
+		&#x3C;directory>${basedir}/src/main/resources/&#x3C;/directory>
+		&#x3C;includes>
+			&#x3C;include>**/*.yml&#x3C;/include>
+			&#x3C;include>**/*.factories&#x3C;/include>
+		&#x3C;/includes>
+	&#x3C;/resource>
+</code></pre>
 <p>3、发现<code>jar</code>中的配置文件不生效，被项目的<code>application.yml</code>覆盖了</p>
 <p>将配置文件放在<code>src/main/resources/config</code>目录下即可，参考<code>Spring</code><a href="https://docs.spring.io/spring-boot/docs/2.1.13.RELEASE/reference/html/boot-features-external-config.html">官方文档</a></p>
 <blockquote>

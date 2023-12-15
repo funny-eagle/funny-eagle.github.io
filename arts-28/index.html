@@ -93,40 +93,39 @@
 </ul>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第28周</h1><div class="css-info"><span style="padding-right:12px">2019-01-12</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.Arrays;
 
 /**
  * 976. Largest Perimeter Triangle
- * &lt;p&gt;
+ * &#x3C;p>
  * Given an array A of positive lengths, return the largest perimeter of a triangle with non-zero area, formed from 3 of these lengths.
- * &lt;p&gt;
+ * &#x3C;p>
  * If it is impossible to form any triangle of non-zero area, return 0.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: [2,1,2]
  * Output: 5
  * Example 2:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: [1,2,1]
  * Output: 0
  * Example 3:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: [3,2,3,4]
  * Output: 10
  * Example 4:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: [3,6,2,3]
  * Output: 8
- * &lt;p&gt;
- * &lt;p&gt;
+ * &#x3C;p>
+ * &#x3C;p>
  * Note:
- * &lt;p&gt;
- * 3 &lt;= A.length &lt;= 10000
- * 1 &lt;= A[i] &lt;= 10^6
+ * &#x3C;p>
+ * 3 &#x3C;= A.length &#x3C;= 10000
+ * 1 &#x3C;= A[i] &#x3C;= 10^6
  *
  * @author jason
  * @date 2019/1/19.
@@ -135,8 +134,8 @@ public class LargestPerimeterTriangle {
 
     public int largestPerimeter(int[] arr) {
         Arrays.sort(arr);
-        for (int i = arr.length - 3; i &gt;= 0; --i) {
-            if (arr[i] + arr[i + 1] &gt; arr[i + 2]) {
+        for (int i = arr.length - 3; i >= 0; --i) {
+            if (arr[i] + arr[i + 1] > arr[i + 2]) {
                 return arr[i] + arr[i + 1] + arr[i + 2];
             }
         }
@@ -147,15 +146,14 @@ public class LargestPerimeterTriangle {
         LargestPerimeterTriangle lpt = new LargestPerimeterTriangle();
         System.out.println(lpt.largestPerimeter(new int[]{3, 6, 2, 3}));
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <p><a href="http://mailinator.blogspot.com/2009/06/beautiful-race-condition.html">A Beautiful Race Condition</a></p>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <p><a href="https://dev.mysql.com/doc/refman/8.0/en/mysqlslap.html"><strong>mysqlslap</strong></a> is a diagnostic program designed to emulate client load for a MySQL server and to report the timing of each stage. It works as if multiple clients are accessing the server.</p>
 <p>mysqlslap是mysql自带的性能测试工具，可以模拟多个mysql客户端连接进行并发测试，输出测试结果。</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">测试100个并发线程，测试次数1次，自动生成SQL测试脚本，读、写、更新混合测试，自增长字段，测试引擎为innodb，共运行5000次查询
+<pre><code class="language-shell">测试100个并发线程，测试次数1次，自动生成SQL测试脚本，读、写、更新混合测试，自增长字段，测试引擎为innodb，共运行5000次查询
 #mysqlslap -h127.0.0.1 -uroot -p --concurrency=100 --iterations=1 --auto-generate-sql --auto-generate-sql-load-type=mixed --auto-generate-sql-add-autoincrement --engine=innodb --number-of-queries=5000
 Benchmark
 Running for engine innodb
@@ -163,21 +161,20 @@ Average number of seconds to run all queries: 0.351 seconds
 Minimum number of seconds to run all queries: 0.351 seconds
 Maximum number of seconds to run all queries: 0.351 seconds
 Number of clients running queries: 100
-Average number of queries per client:50</code>
-        </deckgo-highlight-code>
+Average number of queries per client:50
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <h3 id="理解map" style="position:relative;"><a href="#%E7%90%86%E8%A7%A3map" aria-label="理解map permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>理解Map</h3>
 <p>Map的基本思想是它维护的是键值对，可以使用键来查找值。Java标准库中包含了Map和几种实现，包括<code>HashMap</code>,<code>TreeMap</code>, <code>LinkedHashMap</code>, <code>WeakHashMap</code>, <code>ConcurrentHashMap</code>, <code>IdentityHashMap</code>。它们都实现了Map接口，但是行为特性各不相同，表现在效率，键值对的保存及呈现次序、对象的保存周期、如何在多线程程序中工作和判定<code>key</code>等价的策略等方面。</p>
 <p>以下是一个极简的map实现:</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.map;
+<pre><code class="language-java">package org.nocoder.map;
 
 /**
  * Simple map, associates keys with values
  * low efficiency, fixed size
  * @author yangjinlong
  */
-public class AssociativeArray&lt;K, V&gt; {
+public class AssociativeArray&#x3C;K, V> {
     private Object[][] pairs;
     private int index;
 
@@ -186,14 +183,14 @@ public class AssociativeArray&lt;K, V&gt; {
     }
 
     public void put(K key, V value) {
-        if (index &gt;= pairs.length) {
-            throw new ArrayIndexOutOfBoundsException(&quot;Too many values&quot;);
+        if (index >= pairs.length) {
+            throw new ArrayIndexOutOfBoundsException("Too many values");
         }
         pairs[index++] = new Object[]{key, value};
     }
 
     public V get(K key) {
-        for (int i = 0; i &lt; index; i++) {
+        for (int i = 0; i &#x3C; index; i++) {
             if (key.equals(pairs[i][0])) {
                 return (V) pairs[i][1];
             }
@@ -204,36 +201,36 @@ public class AssociativeArray&lt;K, V&gt; {
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
-        for (int i = 0; i &lt; index; i++) {
+        for (int i = 0; i &#x3C; index; i++) {
             if (i == 0) {
-                result.append(&quot;{&quot;);
+                result.append("{");
             }
             result.append(pairs[i][0].toString());
-            result.append(&quot;=&quot;);
+            result.append("=");
             result.append(pairs[i][1].toString());
-            if (i &lt; index - 1) {
-                result.append(&quot;, &quot;);
+            if (i &#x3C; index - 1) {
+                result.append(", ");
             } else {
-                result.append(&quot;}&quot;);
+                result.append("}");
             }
         }
         return result.toString();
     }
 
     public static void main(String[] args) {
-        AssociativeArray&lt;String, Integer&gt; map = new AssociativeArray&lt;&gt;(2);
+        AssociativeArray&#x3C;String, Integer> map = new AssociativeArray&#x3C;>(2);
         try {
-            map.put(&quot;Jason&quot;, 29);
-            map.put(&quot;Freda&quot;, 26);
+            map.put("Jason", 29);
+            map.put("Freda", 26);
         } catch (ArrayIndexOutOfBoundsException e) {
             e.printStackTrace();
         }
         System.out.println(map);
-        System.out.println(map.get(&quot;Jason&quot;));
+        System.out.println(map.get("Jason"));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>最常用的Map的实现应该就是 HashMap 了，HashMap的数据结构是由数组和链表构成，Java8以后还加入了红黑树。HashMap中的几个术语需要了解：</p>
 <ul>
 <li>容量：表中的桶位数</li>

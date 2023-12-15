@@ -99,29 +99,28 @@
 </ul>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第24周</h1><div class="css-info"><span style="padding-right:12px">2018-12-15</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 28. Implement strStr()
- * &lt;p&gt;
+ * &#x3C;p>
  * Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
- * Input: haystack = &quot;hello&quot;, needle = &quot;ll&quot;
+ * &#x3C;p>
+ * Input: haystack = "hello", needle = "ll"
  * Output: 2
  * Example 2:
- * &lt;p&gt;
- * Input: haystack = &quot;aaaaa&quot;, needle = &quot;bba&quot;
+ * &#x3C;p>
+ * Input: haystack = "aaaaa", needle = "bba"
  * Output: -1
  * Clarification:
- * &lt;p&gt;
+ * &#x3C;p>
  * What should we return when needle is an empty string?
  * This is a great question to ask during an interview.
- * &lt;p&gt;
+ * &#x3C;p>
  * For the purpose of this problem, we will return 0 when needle is an empty string.
- * This is consistent to C&#39;s strstr() and Java&#39;s indexOf().
+ * This is consistent to C's strstr() and Java's indexOf().
  *
  * @author yangjinlong
  * @date 2018-12-17
@@ -135,7 +134,7 @@ public class ImplementStrStr {
             return 0;
         }
 
-        for (int i = 0; i &lt; haystackArr.length - needleArr.length + 1; i++) {
+        for (int i = 0; i &#x3C; haystackArr.length - needleArr.length + 1; i++) {
             if (checkMatchingAtIndex(haystackArr, needleArr, i)) {
                 return i;
             }
@@ -146,7 +145,7 @@ public class ImplementStrStr {
 
     private boolean checkMatchingAtIndex(char[] haystackArr, char[] needleArr, int idx) {
 
-        for (int i = 0; i &lt; needleArr.length; i++) {
+        for (int i = 0; i &#x3C; needleArr.length; i++) {
             if (haystackArr[i + idx] != needleArr[i]) {
                 return false;
             }
@@ -158,14 +157,14 @@ public class ImplementStrStr {
 
     public static void main(String[] args) {
         ImplementStrStr implementStrStr = new ImplementStrStr();
-        System.out.println(implementStrStr.strStr(&quot;hello&quot;, &quot;llo&quot;));
-        System.out.println(implementStrStr.strStr(&quot;aaaaaa&quot;, &quot;bba&quot;));
-        System.out.println(implementStrStr.strStr(&quot;bbbbbb&quot;, &quot;&quot;));
-        System.out.println(implementStrStr.strStr(&quot;mississipp&quot;, &quot;issip&quot;));
+        System.out.println(implementStrStr.strStr("hello", "llo"));
+        System.out.println(implementStrStr.strStr("aaaaaa", "bba"));
+        System.out.println(implementStrStr.strStr("bbbbbb", ""));
+        System.out.println(implementStrStr.strStr("mississipp", "issip"));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="netty-user-guide" style="position:relative;"><a href="#netty-user-guide" aria-label="netty user guide permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://netty.io/wiki/user-guide-for-4.x.html#wiki-h2-0">Netty User guide</a></h3>
 <ul>
@@ -192,27 +191,25 @@ public class ImplementStrStr {
 <p><a href="http://47.106.164.212:9200/yuntu_librarys_v2">http://47.106.164.212:9200/yuntu_librarys_v2</a></p>
 </li>
 <li>
-<deckgo-highlight-code language="json" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">{
-    &quot;index&quot;: {
-       &quot;number_of_shards&quot;: &quot;1&quot;,
-      &quot;number_of_replicas&quot;: &quot;0&quot;,
-      &quot;refresh_interval&quot;: &quot;10s&quot;
+<pre><code class="language-json">{
+    "index": {
+       "number_of_shards": "1",
+      "number_of_replicas": "0",
+      "refresh_interval": "10s"
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p><a href="http://47.106.164.212:9200/yuntu_library_books_v2">http://47.106.164.212:9200/yuntu_library_books_v2</a></p>
-<deckgo-highlight-code language="json" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">{
-    &quot;index&quot;: {
-       &quot;number_of_shards&quot;: &quot;1&quot;,
-      &quot;number_of_replicas&quot;: &quot;0&quot;,
-      &quot;refresh_interval&quot;: &quot;10s&quot;
+<pre><code class="language-json">{
+    "index": {
+       "number_of_shards": "1",
+      "number_of_replicas": "0",
+      "refresh_interval": "10s"
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li></li>
 </ul>
@@ -224,118 +221,117 @@ public class ImplementStrStr {
 <p><a href="http://47.106.164.212:9200/yuntu_librarys_v2/doc/_mapping?pretty">http://47.106.164.212:9200/yuntu_librarys_v2/doc/_mapping?pretty</a></p>
 </li>
 <li>
-<deckgo-highlight-code language="json" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">{
-    &quot;doc&quot;: {
-            &quot;properties&quot; : {
-                    &quot;id&quot; : {
-                        &quot;type&quot; : &quot;integer&quot;             
+<pre><code class="language-json">{
+    "doc": {
+            "properties" : {
+                    "id" : {
+                        "type" : "integer"             
                     },
-                    &quot;isbn&quot; : {
-                         &quot;type&quot; : &quot;keyword&quot;                                       
+                    "isbn" : {
+                         "type" : "keyword"                                       
                     },
-                    &quot;price&quot; : {
-                         &quot;type&quot; : &quot;double&quot;                                                                
+                    "price" : {
+                         "type" : "double"                                                                
                     },
-                   &quot;bookId&quot; : {
-                         &quot;type&quot; : &quot;integer&quot;                     
+                   "bookId" : {
+                         "type" : "integer"                     
                     },
-                    &quot;operUser&quot; : {
-                         &quot;type&quot; : &quot;integer&quot;                     
+                    "operUser" : {
+                         "type" : "integer"                     
                     },
-                    &quot;customerId&quot; : {
-                         &quot;type&quot; : &quot;integer&quot;                     
+                    "customerId" : {
+                         "type" : "integer"                     
                     },
-                    &quot;barNumber&quot; : {
-                         &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;               
+                    "barNumber" : {
+                         "type" : "text",
+                         "analyzer": "keyword"               
                     },
-                    &quot;isChecked&quot; : {
-                         &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;               
+                    "isChecked" : {
+                         "type" : "text",
+                         "analyzer": "keyword"               
                     },
-                   &quot;checkedDate&quot; : {
-                         &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;               
+                   "checkedDate" : {
+                         "type" : "text",
+                         "analyzer": "keyword"               
                     },
-                    &quot;frameCode&quot; : {
-                         &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;                                                 
+                    "frameCode" : {
+                         "type" : "text",
+                         "analyzer": "keyword"                                                 
                     },
          
-                    &quot;isEffective&quot; : {
-                         &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;                                                 
+                    "isEffective" : {
+                         "type" : "text",
+                         "analyzer": "keyword"                                                 
                     },
-                    &quot;bookName&quot; : {
-                        &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;          
+                    "bookName" : {
+                        "type" : "text",
+                         "analyzer": "keyword"          
                     },
-                    &quot;author&quot; : {
-                        &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;                                              
+                    "author" : {
+                        "type" : "text",
+                         "analyzer": "keyword"                                              
                     },
-                    &quot;publisher&quot; : {
-                       &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;      
+                    "publisher" : {
+                       "type" : "text",
+                         "analyzer": "keyword"      
                     },
-                    &quot;publishDate&quot; : {
-                       &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;                                    
+                    "publishDate" : {
+                       "type" : "text",
+                         "analyzer": "keyword"                                    
                     },
-                   &quot;storageTime&quot; : {
-                       &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;                                    
+                   "storageTime" : {
+                       "type" : "text",
+                         "analyzer": "keyword"                                    
                     },
-                    &quot;categoryCode&quot; : {
-                      &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;      
+                    "categoryCode" : {
+                      "type" : "text",
+                         "analyzer": "keyword"      
                     },
-                    &quot;catalogueDate&quot; : {
-                       &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;                                           
+                    "catalogueDate" : {
+                       "type" : "text",
+                         "analyzer": "keyword"                                           
                     },
-                    &quot;bookState&quot; : {
-                        &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;                                       
+                    "bookState" : {
+                        "type" : "text",
+                         "analyzer": "keyword"                                       
                     },
-                   &quot;storeRoom&quot; : {
-                        &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot;                                         
+                   "storeRoom" : {
+                        "type" : "text",
+                         "analyzer": "keyword"                                         
                     },
              
-                    &quot;borrowNum&quot;:{
-                       &quot;type&quot; : &quot;integer&quot;  
+                    "borrowNum":{
+                       "type" : "integer"  
                    },
-                 &quot;canAppoint&quot;:{
-                       &quot;type&quot; : &quot;integer&quot;  
+                 "canAppoint":{
+                       "type" : "integer"  
                    },
                   
-                     &quot;praiseNum&quot;:{
-                        &quot;type&quot; : &quot;integer&quot;  
+                     "praiseNum":{
+                        "type" : "integer"  
                    },
-                    &quot;libCode&quot;:{
-                        &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot; 
+                    "libCode":{
+                        "type" : "text",
+                         "analyzer": "keyword" 
                    },
                    
-                    &quot;belongLibraryHallCode&quot;:{
-                        &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot; 
+                    "belongLibraryHallCode":{
+                        "type" : "text",
+                         "analyzer": "keyword" 
                    },
-                    &quot;callNumber&quot;:{
-                        &quot;type&quot; : &quot;text&quot;,
-                         &quot;analyzer&quot;: &quot;keyword&quot; 
+                    "callNumber":{
+                        "type" : "text",
+                         "analyzer": "keyword" 
                    },
-                    &quot;solrUpdate&quot; : {
-                        &quot;type&quot; : &quot;date&quot;                                      
+                    "solrUpdate" : {
+                        "type" : "date"                                      
                        
                     }
                        
             } 
     } 
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 <li>
 <p>数据初始化</p>
@@ -344,9 +340,8 @@ public class ImplementStrStr {
 <p><code>datax</code> 用于初始化数据量较大的表，如 <code>library_books</code></p>
 <ul>
 <li>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">python datax.py libraryBooks.json</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">python datax.py libraryBooks.json
+</code></pre>
 </li>
 </ul>
 </li>
@@ -354,9 +349,8 @@ public class ImplementStrStr {
 <p><code>logstash</code> 用于持续同步数据</p>
 <ul>
 <li>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">Logstash:usr/local/elk/logstash/mysql.conf 下yuntu-library-books.cfg, yuntu-librarys.cfg 的index 值</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">Logstash:usr/local/elk/logstash/mysql.conf 下yuntu-library-books.cfg, yuntu-librarys.cfg 的index 值
+</code></pre>
 </li>
 </ul>
 </li>
@@ -369,24 +363,23 @@ public class ImplementStrStr {
 <p><a href="http://47.106.164.212:9200/_aliases">http://47.106.164.212:9200/_aliases</a></p>
 </li>
 <li>
-<deckgo-highlight-code language="json" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">{
-   &quot;actions&quot; : [
-        { &quot;remove&quot; : 
+<pre><code class="language-json">{
+   "actions" : [
+        { "remove" : 
          	{ 
-                &quot;index&quot; : &quot;yuntu_library_books_v1&quot;, 
-                &quot;alias&quot; : &quot;yuntu_library_books&quot; 
+                "index" : "yuntu_library_books_v1", 
+                "alias" : "yuntu_library_books" 
             } 
         },
-        { &quot;add&quot; : 
+        { "add" : 
          	{ 
-                &quot;index&quot; : &quot;yuntu_library_books_v2&quot;, 
-                &quot;alias&quot; : &quot;yuntu_library_books&quot; 
+                "index" : "yuntu_library_books_v2", 
+                "alias" : "yuntu_library_books" 
             } 
         }
     ]
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 </li>
 </ul>
 </li>

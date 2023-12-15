@@ -102,8 +102,7 @@
 </ul></div></aside><article class="css-post"><h1>ARTS 第1周</h1><div class="css-info"><span style="padding-right:12px">2018-07-07</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <h3 id="two-sum-sulution" style="position:relative;"><a href="#two-sum-sulution" aria-label="two sum sulution permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Two Sum Sulution</h3>
 <p><a href="https://leetcode.com/problems/two-sum/description/">Two Sum</a></p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 1.Two Sum 
@@ -121,31 +120,31 @@
 public class TwoSumSolution {
 
     public static int[] twoSum1(int[] nums, int target) {
-        for (int i = 0; i &lt; nums.length; i++) {
-            for (int j = i + 1; j &lt; nums.length; j++) {
+        for (int i = 0; i &#x3C; nums.length; i++) {
+            for (int j = i + 1; j &#x3C; nums.length; j++) {
                 if ((nums[i] + nums[j]) == target) {
                     return new int[]{i, j};
                 }
             }
         }
-        throw new IllegalArgumentException(&quot;No solution!&quot;);
+        throw new IllegalArgumentException("No solution!");
     }
     
     public static int[] twoSum2(int[] nums, int target){
-        Map&lt;Integer, Integer&gt; resultMap = new HashMap&lt;&gt;();
-        for (int i = 0; i &lt; nums.length; i++) {
+        Map&#x3C;Integer, Integer> resultMap = new HashMap&#x3C;>();
+        for (int i = 0; i &#x3C; nums.length; i++) {
             int result = target - nums[i];
             if(resultMap.containsKey(result)){
                 return new int[]{resultMap.get(result), i};
             }
             resultMap.put(nums[i], i);
         }
-        throw new IllegalArgumentException(&quot;No solution!&quot;);
+        throw new IllegalArgumentException("No solution!");
     }
 }
 
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="understanding-mysql-queries-with-explain" style="position:relative;"><a href="#understanding-mysql-queries-with-explain" aria-label="understanding mysql queries with explain permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understanding MySQL Queries with Explain</h3>
 <blockquote>
@@ -189,16 +188,15 @@ public class TwoSumSolution {
 </ul>
 </li>
 </ul>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;resources&gt;
-    &lt;resource&gt;
-        &lt;directory&gt;src/main/java&lt;/directory&gt;
-        &lt;includes&gt;
-            &lt;include&gt;**/*.xml&lt;/include&gt;
-        &lt;/includes&gt;
-    &lt;/resource&gt;
-&lt;/resources&gt;</code>
-        </deckgo-highlight-code>
+<pre><code class="language-xml">&#x3C;resources>
+    &#x3C;resource>
+        &#x3C;directory>src/main/java&#x3C;/directory>
+        &#x3C;includes>
+            &#x3C;include>**/*.xml&#x3C;/include>
+        &#x3C;/includes>
+    &#x3C;/resource>
+&#x3C;/resources>
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <h3 id="adapter-design-pattern-in-java" style="position:relative;"><a href="#adapter-design-pattern-in-java" aria-label="adapter design pattern in java permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adapter Design Pattern in Java</h3>
 <p><a href="https://www.journaldev.com/1487/adapter-design-pattern-java">Adapter Design Pattern in Java</a></p>

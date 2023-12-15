@@ -99,8 +99,7 @@
 </ul>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第20周</h1><div class="css-info"><span style="padding-right:12px">2018-11-18</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.TreeMap;
 
@@ -121,7 +120,7 @@ import java.util.TreeMap;
  *
  * Example 1:
  *
- * Input: inputs = [&quot;RecentCounter&quot;,&quot;ping&quot;,&quot;ping&quot;,&quot;ping&quot;,&quot;ping&quot;], inputs = [[],[1],[100],[3001],[3002]]
+ * Input: inputs = ["RecentCounter","ping","ping","ping","ping"], inputs = [[],[1],[100],[3001],[3002]]
  * Output: [null,1,2,3,3]
  *
  *
@@ -129,7 +128,7 @@ import java.util.TreeMap;
  *
  * Each test case will have at most 10000 calls to ping.
  * Each test case will call ping with strictly increasing values of t.
- * Each call to ping will have 1 &lt;= t &lt;= 10^9.
+ * Each call to ping will have 1 &#x3C;= t &#x3C;= 10^9.
  *
  * @author jason
  * @date 2018/11/18.
@@ -138,10 +137,10 @@ public class NumbersOfRecentCalls {
 	
     class RecentCounter {
 
-    	TreeMap&lt;Integer, Integer&gt; tm;
+    	TreeMap&#x3C;Integer, Integer> tm;
     	
         public RecentCounter() {
-        	tm = new TreeMap&lt;&gt;();
+        	tm = new TreeMap&#x3C;>();
         }
 
         public int ping(int t) {
@@ -157,8 +156,8 @@ public class NumbersOfRecentCalls {
  */
 }
 
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="java-thread-pool-example-using-executors-and-threadpoolexecutor" style="position:relative;"><a href="#java-thread-pool-example-using-executors-and-threadpoolexecutor" aria-label="java thread pool example using executors and threadpoolexecutor permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://www.javacodegeeks.com/2013/01/java-thread-pool-example-using-executors-and-threadpoolexecutor.html">Java Thread Pool Example using Executors and ThreadPoolExecutor</a></h3>
 <p>线程池包含一个队列，用于保持任务等待执行。线程池管理Runnable线程的集合，工作线程从队列中执行Runnable。java.util.concurrent.Executors提供java.util.concurrent.Executor接口的实现，以在java中创建线程池。</p>
@@ -173,13 +172,12 @@ public class NumbersOfRecentCalls {
 <p><strong>Discard</strong>：抛弃该任务</p>
 <p><strong>Discard-Oldest</strong>：抛弃下一个奖杯执行的任务，然后尝试重新提交的新任务</p>
 <p><strong>Caller-Runs</strong>：实现了一种调节机制，不会抛弃任务，也不抛出异常，而是将任务退回到调用者，优调用者来执行，从而降低新任务的流量。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">ThreadPoolExecutor executor = new ThreadPoolExecutor(
+<pre><code class="language-java">ThreadPoolExecutor executor = new ThreadPoolExecutor(
 	N_THREADS, N_THREADS, 0L, TimeUnit.MILLISECONDS,
-	new LinkedBlockingQueue&lt;Runnable&gt;(CAPACITY));
+	new LinkedBlockingQueue&#x3C;Runnable>(CAPACITY));
 
-executor.setRejectExceptionHandler(new ThreadPoolExecutor.CallRunsPolicy());</code>
-        </deckgo-highlight-code>
+executor.setRejectExceptionHandler(new ThreadPoolExecutor.CallRunsPolicy());
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <h3 id="正确设置线程池的大小" style="position:relative;"><a href="#%E6%AD%A3%E7%A1%AE%E8%AE%BE%E7%BD%AE%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E5%A4%A7%E5%B0%8F" aria-label="正确设置线程池的大小 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>正确设置线程池的大小</h3>
 <p>最佳的线程池的大小，取决于被执行的任务和系统硬件。如果线程池过大，大量的线程将在相对很少的CPU和内存资源上发生竞争，这样会导致更多的内存消耗；如果线程池过小，许多空闲的处理器没有得到利用，降低了吞吐量。</p>

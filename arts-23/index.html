@@ -96,32 +96,31 @@
 </ul>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第23周</h1><div class="css-info"><span style="padding-right:12px">2018-12-08</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 876. Middle of the Linked List
- * &lt;p&gt;
+ * &#x3C;p>
  * Given a non-empty, singly linked list with head node head, return a middle node of linked list.
- * &lt;p&gt;
+ * &#x3C;p>
  * If there are two middle nodes, return the second middle node.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: [1,2,3,4,5]
  * Output: Node 3 from this list (Serialization: [3,4,5])
- * The returned node has value 3.  (The judge&#39;s serialization of this node is [3,4,5]).
+ * The returned node has value 3.  (The judge's serialization of this node is [3,4,5]).
  * Note that we returned a ListNode object ans, such that:
  * ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.
  * Example 2:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: [1,2,3,4,5,6]
  * Output: Node 4 from this list (Serialization: [4,5,6])
  * Since the list has two middle nodes with values 3 and 4, we return the second one.
- * &lt;p&gt;
- * &lt;p&gt;
+ * &#x3C;p>
+ * &#x3C;p>
  * Note:
- * &lt;p&gt;
+ * &#x3C;p>
  * The number of nodes in the given list will be between 1 and 100.
  *
  * @author jason
@@ -133,7 +132,7 @@ public class MiddleOfTheLinkedList {
         for (ListNode cur = head; cur != null; cur = cur.next) {
             count++;
         }
-        for (int i = count / 2; i &gt; 0; i--) {
+        for (int i = count / 2; i > 0; i--) {
             head = head.next;
         }
         return head;
@@ -149,49 +148,47 @@ class ListNode {
         val = x;
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="-the-composite-pattern" style="position:relative;"><a href="#-the-composite-pattern" aria-label=" the composite pattern permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://medium.com/@priya104/the-composite-pattern-2edec432dd58"> The Composite Pattern</a></h3>
 <p>模式通常被一起使用，并被组合在同一个设计解决方案中，复合模式在一个解决方案中结合多个设计模式，以解决一般或者重复发生的问题。</p>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <p>Python3 configparser 读取cfg文件时， 如果value包含百分号(%)，则需要另加一个百分号(%)来转义。</p>
 <p>假设有如下配置文件:</p>
-<deckgo-highlight-code language="python" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">[prod-server]
+<pre><code class="language-python">[prod-server]
 
 ip=192.168.28.123
 
 username=root
 
-password=7ice$%%18</code>
-        </deckgo-highlight-code>
+password=7ice$%%18
+</code></pre>
 <p>其中 <code>password</code> 真实值为 <code>7ice$%18</code>，包含百分号，就必须写成 <code>7ice$%%18</code>，否则会抛如下异常信息：</p>
-<deckgo-highlight-code language="python" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">Traceback (most recent call last):
+<pre><code class="language-python">Traceback (most recent call last):
 
-  File &quot;D:/usr/local/yuntu/clean-unused-docker-images/run.py&quot;, line 38, in &lt;module&gt;
+  File "D:/usr/local/yuntu/clean-unused-docker-images/run.py", line 38, in &#x3C;module>
 
-    main(&quot;conf/server.cfg&quot;)
+    main("conf/server.cfg")
 
-  File &quot;D:/usr/local/yuntu/clean-unused-docker-images/run.py&quot;, line 32, in main
+  File "D:/usr/local/yuntu/clean-unused-docker-images/run.py", line 32, in main
 
-    password = conf.get(section, &quot;password&quot;)
+    password = conf.get(section, "password")
 
-  File &quot;C:\Python37-32\lib\configparser.py&quot;, line 799, in get
+  File "C:\Python37-32\lib\configparser.py", line 799, in get
 
     d)
 
-  File &quot;C:\Python37-32\lib\configparser.py&quot;, line 394, in before_get
+  File "C:\Python37-32\lib\configparser.py", line 394, in before_get
 
     self._interpolate_some(parser, option, L, value, section, defaults, 1)
 
-  File &quot;C:\Python37-32\lib\configparser.py&quot;, line 444, in _interpolate_some
+  File "C:\Python37-32\lib\configparser.py", line 444, in _interpolate_some
 
-    &quot;found: %r&quot; % (rest,))
+    "found: %r" % (rest,))
 
-configparser.InterpolationSyntaxError: &#39;%&#39; must be followed by &#39;%&#39; or &#39;(&#39;, found: &#39;%hua&#39;</code>
-        </deckgo-highlight-code>
+configparser.InterpolationSyntaxError: '%' must be followed by '%' or '(', found: '%hua'
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <h3 id="spring-boot-设置跨域访问" style="position:relative;"><a href="#spring-boot-%E8%AE%BE%E7%BD%AE%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE" aria-label="spring boot 设置跨域访问 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Spring Boot 设置跨域访问</h3>
 <blockquote>
@@ -204,8 +201,7 @@ configparser.InterpolationSyntaxError: &#39;%&#39; must be followed by &#39;%&#3
 <p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
 </blockquote>
 <p>作者在文中给出的demo在<code>spring-boot2</code>里已经过时了，在<code>spring-boot2</code>中的解决方案如下：</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.blog.configuration;
+<pre><code class="language-java">package org.nocoder.blog.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -215,13 +211,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping(&quot;/**&quot;)
-                .allowedHeaders(&quot;*&quot;)
-                .allowedMethods(&quot;*&quot;)
-                .allowedOrigins(&quot;*&quot;);
+        registry.addMapping("/**")
+                .allowedHeaders("*")
+                .allowedMethods("*")
+                .allowedOrigins("*");
     }
-}</code>
-        </deckgo-highlight-code></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/arts-22/"><button>Prev: <!-- -->ARTS 第22周</button></a></li><li><a rel="next" href="/arts-24/"><button>Next: <!-- -->ARTS 第24周</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
+}
+</code></pre></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/arts-22/"><button>Prev: <!-- -->ARTS 第22周</button></a></li><li><a rel="next" href="/arts-24/"><button>Next: <!-- -->ARTS 第24周</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
       
       
       if(true) {

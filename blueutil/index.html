@@ -86,38 +86,33 @@
 </ul></div></aside><article class="css-post"><h1>MAC OSX 开机自动连接蓝牙音箱</h1><div class="css-info"><span style="padding-right:12px">2023-11-27</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span></div><div class="css-post-main"><p>我希望开机后自动连接小米蓝牙音箱，在MAC OSX的设置界面，没有找到相关的设置。于是在网上找到了<a href="https://github.com/toy/blueutil">blueutil</a>，分分钟轻松搞定。</p>
 <h3 id="安装blueutil" style="position:relative;"><a href="#%E5%AE%89%E8%A3%85blueutil" aria-label="安装blueutil permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>安装<code>blueutil</code></h3>
 <p>使用<code>homebrew</code>安装<code>blueutil</code></p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">brew install blueutil</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">brew install blueutil
+</code></pre>
 <h3 id="blueutil--h-查看使用说明" style="position:relative;"><a href="#blueutil--h-%E6%9F%A5%E7%9C%8B%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" aria-label="blueutil  h 查看使用说明 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>blueutil -h</code> 查看使用说明</h3>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">yangjl@Mac ~ % blueutil -h
+<pre><code class="language-shell">yangjl@Mac ~ % blueutil -h
 blueutil v2.9.1
 
 Usage:
   blueutil [options]
-...</code>
-        </deckgo-highlight-code>
+...
+</code></pre>
 <h3 id="查看配对设备-blueutil---paired" style="position:relative;"><a href="#%E6%9F%A5%E7%9C%8B%E9%85%8D%E5%AF%B9%E8%AE%BE%E5%A4%87-blueutil---paired" aria-label="查看配对设备 blueutil   paired permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>查看配对设备 <code>blueutil --paired</code></h3>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">yangjl@Mac ~ % blueutil --paired 
-address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: &quot;小米音箱-蓝牙&quot;, recent access date: 2023-11-27 10:57:15 +0000
-address: 74-45-ce-dd-37-e6, not connected, not favourite, paired, name: &quot;ATH-M20xBT &quot;, recent access date: 2023-11-27 10:57:15 +0000</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">yangjl@Mac ~ % blueutil --paired 
+address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: "小米音箱-蓝牙", recent access date: 2023-11-27 10:57:15 +0000
+address: 74-45-ce-dd-37-e6, not connected, not favourite, paired, name: "ATH-M20xBT ", recent access date: 2023-11-27 10:57:15 +0000
+</code></pre>
 <h3 id="通过id连接设备-blueutil---connect-id" style="position:relative;"><a href="#%E9%80%9A%E8%BF%87id%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87-blueutil---connect-id" aria-label="通过id连接设备 blueutil   connect id permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>通过ID连接设备 <code>blueutil --connect ID</code></h3>
 <p>上一步<code>address</code>的值就是ID，在终端输入 <code>blueutil --connect 设备ID</code>即可</p>
 <h3 id="查看已连接蓝牙设备-blueutil---connected-" style="position:relative;"><a href="#%E6%9F%A5%E7%9C%8B%E5%B7%B2%E8%BF%9E%E6%8E%A5%E8%93%9D%E7%89%99%E8%AE%BE%E5%A4%87-blueutil---connected-" aria-label="查看已连接蓝牙设备 blueutil   connected  permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>查看已连接蓝牙设备 <code>blueutil --connected </code></h3>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">yangjl@Mac ~ % blueutil --connected                
-address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: &quot;小米音箱-蓝牙&quot;, recent access date: 2023-11-27 10:59:40 +0000</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">yangjl@Mac ~ % blueutil --connected                
+address: 64-64-4a-7f-ad-85, connected (master, 0 dBm), not favourite, paired, name: "小米音箱-蓝牙", recent access date: 2023-11-27 10:59:40 +0000
+</code></pre>
 <h3 id="设置自动连接" style="position:relative;"><a href="#%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%8A%A8%E8%BF%9E%E6%8E%A5" aria-label="设置自动连接 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>设置自动连接</h3>
 <p>创建一个文件<code>auto_connect_bluetooth.sh</code>，文件内容如下，其中ID自行修改，</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">blueutil --connect 64-64-4a-7f-ad-85
-echo &#39;自动连接蓝牙至小米音箱&#39;
-exit</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">blueutil --connect 64-64-4a-7f-ad-85
+echo '自动连接蓝牙至小米音箱'
+exit
+</code></pre>
 <p>在终端执行<code>chmod +x auto_connect_bluetooth.sh</code>为文件增加执行权限。</p>
 <p><code>系统偏好设置</code> -> <code>用户与群组</code> -> <code>登陆项</code> -> <code>+</code> -> 选择 `auto_connect_bluetooth.sh“</p>
 <p><span

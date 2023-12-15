@@ -109,8 +109,7 @@
 </ul>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <h3 id="delete-columns-to-make-sorted" style="position:relative;"><a href="#delete-columns-to-make-sorted" aria-label="delete columns to make sorted permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://leetcode.com/problems/delete-columns-to-make-sorted/">Delete Columns to Make Sorted</a></h3>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 944. Delete Columns to Make Sorted
@@ -119,7 +118,7 @@
  *
  * Now, we may choose any set of deletion indices, and for each string, we delete all the characters in those indices.  The remaining rows of strings form columns when read north to south.
  *
- * For example, if we have an array A = [&quot;abcdef&quot;,&quot;uvwxyz&quot;] and deletion indices {0, 2, 3}, then the final array after deletions is [&quot;bef&quot;,&quot;vyz&quot;], and the remaining columns of A are [&quot;b&quot;,&quot;v&quot;], [&quot;e&quot;,&quot;y&quot;], and [&quot;f&quot;,&quot;z&quot;].  (Formally, the c-th column is [A[0][c], A[1][c], ..., A[A.length-1][c]].)
+ * For example, if we have an array A = ["abcdef","uvwxyz"] and deletion indices {0, 2, 3}, then the final array after deletions is ["bef","vyz"], and the remaining columns of A are ["b","v"], ["e","y"], and ["f","z"].  (Formally, the c-th column is [A[0][c], A[1][c], ..., A[A.length-1][c]].)
  *
  * Suppose we chose a set of deletion indices D such that after deletions, each remaining column in A is in non-decreasing sorted order.
  *
@@ -129,27 +128,27 @@
  *
  * Example 1:
  *
- * Input: [&quot;cba&quot;,&quot;daf&quot;,&quot;ghi&quot;]
+ * Input: ["cba","daf","ghi"]
  * Output: 1
  * Explanation:
- * After choosing D = {1}, each column [&quot;c&quot;,&quot;d&quot;,&quot;g&quot;] and [&quot;a&quot;,&quot;f&quot;,&quot;i&quot;] are in non-decreasing sorted order.
- * If we chose D = {}, then a column [&quot;b&quot;,&quot;a&quot;,&quot;h&quot;] would not be in non-decreasing sorted order.
+ * After choosing D = {1}, each column ["c","d","g"] and ["a","f","i"] are in non-decreasing sorted order.
+ * If we chose D = {}, then a column ["b","a","h"] would not be in non-decreasing sorted order.
  * Example 2:
  *
- * Input: [&quot;a&quot;,&quot;b&quot;]
+ * Input: ["a","b"]
  * Output: 0
  * Explanation: D = {}
  * Example 3:
  *
- * Input: [&quot;zyx&quot;,&quot;wvu&quot;,&quot;tsr&quot;]
+ * Input: ["zyx","wvu","tsr"]
  * Output: 3
  * Explanation: D = {0, 1, 2}
  *
  *
  * Note:
  *
- * 1 &lt;= A.length &lt;= 100
- * 1 &lt;= A[i].length &lt;= 1000
+ * 1 &#x3C;= A.length &#x3C;= 100
+ * 1 &#x3C;= A[i].length &#x3C;= 1000
  *
  * @author jason
  * @date 2018/11/24.
@@ -158,9 +157,9 @@ public class DeleteColumnsToMakeSorted {
 
     public static int minDeletionSize(String[] A) {
         int count = 0;
-        for (int i = 0; i &lt; A[0].length(); i++) {
-            for (int j = 1; j &lt; A.length; j++) {
-                if (A[j-1].charAt(i) &gt; A[j].charAt(i)) {
+        for (int i = 0; i &#x3C; A[0].length(); i++) {
+            for (int j = 1; j &#x3C; A.length; j++) {
+                if (A[j-1].charAt(i) > A[j].charAt(i)) {
                     count++;
                     break;
                 }
@@ -171,18 +170,18 @@ public class DeleteColumnsToMakeSorted {
     }
 
     public static void main(String[] args) {
-        String[] a1 = new String[]{&quot;cba&quot;,&quot;daf&quot;,&quot;ghi&quot;};
+        String[] a1 = new String[]{"cba","daf","ghi"};
         System.out.println(minDeletionSize(a1));
 
-        String[] a2 = new String[]{&quot;a&quot;,&quot;b&quot;};
+        String[] a2 = new String[]{"a","b"};
         System.out.println(minDeletionSize(a2));
 
-        String[] a3 = new String[]{&quot;zyx&quot;,&quot;wvu&quot;,&quot;tsr&quot;};
+        String[] a3 = new String[]{"zyx","wvu","tsr"};
         System.out.println(minDeletionSize(a3));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="graceful-shutdown-spring-boot-applications" style="position:relative;"><a href="#graceful-shutdown-spring-boot-applications" aria-label="graceful shutdown spring boot applications permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="http://blog.marcosbarbero.com/graceful-shutdown-spring-boot-apps/">Graceful Shutdown Spring Boot Applications</a></h3>
 <blockquote>
@@ -191,24 +190,22 @@ public class DeleteColumnsToMakeSorted {
 </blockquote>
 <p>作者在文中给出了springboot graceful shutdown的示例，但是如果我们的应用是跑在docker容器里的，还会生效吗？</p>
 <p>我们使用 docker start container 和 docker stop container 来启动和关闭容器，docker stop 有个选项 -t ，默认会等10s，，我们应用里设置了graceful shutdown，但是响应时间超过了默认值，同样客户端会拿不到响应；但是如果把 -t 的时间设置长一点，比如60s， 当请求全部响应完成后，即使没有到 60s ,docker 容器也会 stop。所以关闭容器的时候，还是加上-t，并且时间设置长一些，保证客户端请求能够处理完成。</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">jason@mac  ~/local/git/arts/2018   master  docker stop --help
+<pre><code>jason@mac  ~/local/git/arts/2018   master  docker stop --help
 
 Usage:	docker stop [OPTIONS] CONTAINER [CONTAINER...]
 
 Stop one or more running containers
 
 Options:
-  -t, --time int   Seconds to wait for stop before killing it (default 10)</code>
-        </deckgo-highlight-code>
+  -t, --time int   Seconds to wait for stop before killing it (default 10)
+</code></pre>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <h3 id="web-server-graceful-shutdown" style="position:relative;"><a href="#web-server-graceful-shutdown" aria-label="web server graceful shutdown permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Web Server Graceful Shutdown</h3>
 <p>当客户端请求已经到达服务端，并且服务端还没有处理完的时候，把 web server 停掉，这时候我们需要保证正在处理中的请求能够正常处理完毕并相应到客户端，同时不再接受新的请求，这种停服务的方式称为<code>graceful shutdown</code>。</p>
 <ul>
 <li>Tomcat</li>
 </ul>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">public class GracefulShutdown implements TomcatConnectorCustomizer, ApplicationListener&lt;ContextClosedEvent&gt; {
+<pre><code class="language-java">public class GracefulShutdown implements TomcatConnectorCustomizer, ApplicationListener&#x3C;ContextClosedEvent> {
     private static final Logger log = LoggerFactory.getLogger(GracefulShutdown.class);
     private volatile Connector connector;
     @Override
@@ -224,18 +221,17 @@ Options:
                 ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) executor;
                 threadPoolExecutor.shutdown();
                 if (!threadPoolExecutor.awaitTermination(30, TimeUnit.SECONDS)) {
-                    log.warn(&quot;Tomcat thread pool did not shut down gracefully within &quot;
-                            + &quot;30 seconds. Proceeding with forceful shutdown&quot;);
+                    log.warn("Tomcat thread pool did not shut down gracefully within "
+                            + "30 seconds. Proceeding with forceful shutdown");
                 }
             } catch (InterruptedException ex) {
                 Thread.currentThread().interrupt();
             }
         }
     }
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">@Bean
+}
+</code></pre>
+<pre><code class="language-java">@Bean
 public GracefulShutdown gracefulShutdown() {
     return new GracefulShutdown();
 }
@@ -245,14 +241,13 @@ public ConfigurableServletWebServerFactory webServerFactory(final GracefulShutdo
     factory.addConnectorCustomizers(gracefulShutdown);
     return factory;
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <ul>
 <li>Undertow</li>
 </ul>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">@Component
-    public class GracefulShutdown implements ApplicationListener&lt;ContextClosedEvent&gt; {
+<pre><code class="language-java">@Component
+    public class GracefulShutdown implements ApplicationListener&#x3C;ContextClosedEvent> {
 
         @Autowired
         private GracefulShutdownWrapper gracefulShutdownWrapper;
@@ -265,22 +260,21 @@ public ConfigurableServletWebServerFactory webServerFactory(final GracefulShutdo
             gracefulShutdownWrapper.getGracefulShutdownHandler().shutdown();
             try {
                 UndertowServletWebServer webServer = (UndertowServletWebServer)context.getWebServer();
-                Field field = webServer.getClass().getDeclaredField(&quot;undertow&quot;);
+                Field field = webServer.getClass().getDeclaredField("undertow");
                 field.setAccessible(true);
                 Undertow undertow = (Undertow) field.get(webServer);
-                List&lt;Undertow.ListenerInfo&gt; listenerInfo = undertow.getListenerInfo();
+                List&#x3C;Undertow.ListenerInfo> listenerInfo = undertow.getListenerInfo();
                 Undertow.ListenerInfo listener = listenerInfo.get(0);
                 ConnectorStatistics connectorStatistics = listener.getConnectorStatistics();
-                while (connectorStatistics.getActiveConnections() &gt; 0){}
+                while (connectorStatistics.getActiveConnections() > 0){}
                 // 此处也可以使用 Thread.sleep(30000) 来等待响应完毕
             }catch (Exception e){
                 // Application Shutdown
             }
         }
-    }</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">@Component
+    }
+</code></pre>
+<pre><code class="language-java">@Component
 public class GracefulShutdownWrapper implements HandlerWrapper{
 
     private GracefulShutdownHandler gracefulShutdownHandler;
@@ -297,10 +291,9 @@ public class GracefulShutdownWrapper implements HandlerWrapper{
         return gracefulShutdownHandler;
     }
 
-}</code>
-        </deckgo-highlight-code>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">@Component
+}
+</code></pre>
+<pre><code class="language-java">@Component
 @AllArgsConstructor
 public class UndertowExtraConfiguration {
 
@@ -309,13 +302,13 @@ public class UndertowExtraConfiguration {
     @Bean
     public UndertowServletWebServerFactory servletWebServerFactory() {
         UndertowServletWebServerFactory factory = new UndertowServletWebServerFactory();
-        factory.addDeploymentInfoCustomizers(deploymentInfo -&gt; deploymentInfo.addOuterHandlerChainWrapper(gracefulShutdownWrapper));
-        factory.addBuilderCustomizers(builder -&gt; builder.setServerOption(UndertowOptions.ENABLE_STATISTICS, true));
+        factory.addDeploymentInfoCustomizers(deploymentInfo -> deploymentInfo.addOuterHandlerChainWrapper(gracefulShutdownWrapper));
+        factory.addBuilderCustomizers(builder -> builder.setServerOption(UndertowOptions.ENABLE_STATISTICS, true));
         return factory;
     }
 
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <h3 id="spring-cloud-ribbon-负载均衡" style="position:relative;"><a href="#spring-cloud-ribbon-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1" aria-label="spring cloud ribbon 负载均衡 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Spring Cloud Ribbon 负载均衡</h3>
 <p>使用 Ribbon 做负载均衡。</p>

@@ -102,8 +102,7 @@
 <p><a href="#share">Share</a></p>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第22周</h1><div class="css-info"><span style="padding-right:12px">2018-12-01</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 136. Single Number
@@ -140,8 +139,8 @@ public class SingleNumber {
         System.out.println(singleNumber(arr1));
         System.out.println(singleNumber(arr2));
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <p><a href="https://www.joelonsoftware.com/2018/05/03/announcing-stack-overflow-for-teams/">Announcing Stack Overflow for Teams</a></p>
 <blockquote>
@@ -155,29 +154,26 @@ public class SingleNumber {
 <p>从 <code>Camden-SR2</code> 开始，Spring Cloud 整合了 <code>Spring Retry</code> 来增强 <code>RestTemplate</code> 的重试能力，通过简单的配置即可实现服务访问重试策略。我们项目中的 <code>Spring Cloud</code> 版本选择从 <code>Brixton.RELEASE</code> 升级至 <code>Camden-SR3</code>。</p>
 </blockquote>
 <p>pom.xml 中，将 <code>spring-cloud-dependencies</code> 的 <code>version</code> 修改为 <code>Camden.SR3</code></p>
-<deckgo-highlight-code language="xml" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">&lt;dependencyManagement&gt;
-    &lt;dependencies&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-cloud-dependencies&lt;/artifactId&gt;
-            &lt;version&gt;Camden.SR3&lt;/version&gt;
-            &lt;type&gt;pom&lt;/type&gt;
-            &lt;scope&gt;import&lt;/scope&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-&lt;/dependencyManagement&gt;</code>
-        </deckgo-highlight-code>
+<pre><code class="language-xml">&#x3C;dependencyManagement>
+    &#x3C;dependencies>
+        &#x3C;dependency>
+            &#x3C;groupId>org.springframework.cloud&#x3C;/groupId>
+            &#x3C;artifactId>spring-cloud-dependencies&#x3C;/artifactId>
+            &#x3C;version>Camden.SR3&#x3C;/version>
+            &#x3C;type>pom&#x3C;/type>
+            &#x3C;scope>import&#x3C;/scope>
+        &#x3C;/dependency>
+    &#x3C;/dependencies>
+&#x3C;/dependencyManagement>
+</code></pre>
 <h4 id="2增加配置文件" style="position:relative;"><a href="#2%E5%A2%9E%E5%8A%A0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6" aria-label="2增加配置文件 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>2、增加配置文件</h4>
-<deckgo-highlight-code language="conf" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code"># 开启重试机制，默认是false
+<pre><code class="language-conf"># 开启重试机制，默认是false
 spring.cloud.loadbalancer.retry.enabled=true
 # 对所有操作请求都进行重试
-ribbon.OkToRetryOnAllOperations=true</code>
-        </deckgo-highlight-code>
+ribbon.OkToRetryOnAllOperations=true
+</code></pre>
 <h3 id="ribbon-负载均衡重试配置文件说明" style="position:relative;"><a href="#ribbon-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E9%87%8D%E8%AF%95%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%B4%E6%98%8E" aria-label="ribbon 负载均衡重试配置文件说明 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Ribbon</code> 负载均衡重试配置文件说明</h3>
-<deckgo-highlight-code language="conf" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code"># 开启重试机制，默认是false
+<pre><code class="language-conf"># 开启重试机制，默认是false
 spring.cloud.loadbalancer.retry.enabled=true
 
 # 请求连接的超时时间
@@ -193,13 +189,12 @@ ribbon.OkToRetryOnAllOperations=true
 ribbon.MaxAutoRetriesNextServer=2
 
 # 对当前实例的重试次数，默认为1，可使用默认值
-ribbon.MaxAutoRetries=1</code>
-        </deckgo-highlight-code>
+ribbon.MaxAutoRetries=1
+</code></pre>
 <p><code>RestTemplate</code> 默认使用的是 <code>ClientHttpRequestFactory</code> 是 <code>SimpleClientHttpRequestFactory</code>， 此时 <code>ribbon.ConnectTimeout</code> ，<code>ribbon.ReadTimeout</code> 这两个参数配置是不生效的。</p>
 <p><img src="https://raw.githubusercontent.com/yangjinlong86/nocoder/master/data/images/201812/RestTemplate-SimpleClientHttpRequestFactory.png" alt="SimpleClientHttpRequestFactory"></p>
 <p>如需设置 <code>connectTimeout</code>，需要手动创建 <code>SimpleClientHttpRequestFactory</code> 实例，注入 <code>RestTemplate</code> 构造方法中。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">@Bean
+<pre><code class="language-java">@Bean
     @LoadBalanced
     RestTemplate restTemplate() {
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
@@ -208,8 +203,8 @@ ribbon.MaxAutoRetries=1</code>
         //自定义响应错误处理
         restTemplate.setErrorHandler(new LibraryResponseErrorHandler());
         return restTemplate;
-    }</code>
-        </deckgo-highlight-code>
+    }
+</code></pre>
 <p>另一种实现，把 <code>ribbon.httpclient.enabled</code> 设置为 <code>true</code>，<code>RestTemplate</code> 的 <code>ClientHttpRequestFactory</code> 就会使用 <code>RibbonClientHttpRequestFactory</code>，此时 <code>ribbon.ConnectTimeout</code> ，<code>ribbon.ReadTimeout</code> 这两个参数配置会生效（注： <code>SpringCloud</code> 版本：<code>Camden.SR3</code>）。</p>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <p>twitter上看到一个好玩的东西</p>

@@ -97,8 +97,7 @@
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第3周</h1><div class="css-info"><span style="padding-right:12px">2018-07-22</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <p>Longest Substring Without Repeating Characters</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.HashSet;
 
@@ -106,9 +105,9 @@ import java.util.HashSet;
  * 3. Longest Substring Without Repeating Characters
  * Given a string, find the length of the longest substring without repeating characters.
  * Examples:
- * Given &quot;abcabcbb&quot;, the answer is &quot;abc&quot;, which the length is 3.
- * Given &quot;bbbbb&quot;, the answer is &quot;b&quot;, with the length of 1.
- * Given &quot;pwwkew&quot;, the answer is &quot;wke&quot;, with the length of 3. Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.
+ * Given "abcabcbb", the answer is "abc", which the length is 3.
+ * Given "bbbbb", the answer is "b", with the length of 1.
+ * Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  *
  * @author jason
  * @date 18/7/23.
@@ -116,8 +115,8 @@ import java.util.HashSet;
 public class LongestSubstringWithoutRepeatingCharacters {
     public static int lengthOfLongestSubstring(String s) {
         int res = 0, left = 0, right = 0;
-        HashSet&lt;Character&gt; t = new HashSet&lt;&gt;();
-        while (right &lt; s.length()) {
+        HashSet&#x3C;Character> t = new HashSet&#x3C;>();
+        while (right &#x3C; s.length()) {
             if (!t.contains(s.charAt(right))) {
                 t.add(s.charAt(right++));
                 res = Math.max(res, t.size());
@@ -129,17 +128,17 @@ public class LongestSubstringWithoutRepeatingCharacters {
     }
 
     public static void main(String[] args) {
-        String s1 = &quot;abcabcbb&quot;;
+        String s1 = "abcabcbb";
         // expect: 3, actual: 3
         System.out.println(lengthOfLongestSubstring(s1));
 
-        String s2 = &quot;pwwkew&quot;;
+        String s2 = "pwwkew";
         // expect: 3, actual: 3
         System.out.println(lengthOfLongestSubstring(s2));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="top-10-best-practices-for-jenkins-pipeline-plugin" style="position:relative;"><a href="#top-10-best-practices-for-jenkins-pipeline-plugin" aria-label="top 10 best practices for jenkins pipeline plugin permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Top 10 Best Practices for Jenkins Pipeline Plugin</h3>
 <p><a href="https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin">https://www.cloudbees.com/blog/top-10-best-practices-jenkins-pipeline-plugin</a></p>
@@ -157,38 +156,37 @@ public class LongestSubstringWithoutRepeatingCharacters {
 </ul>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <h3 id="ci--cd-with-jenkins-pipline" style="position:relative;"><a href="#ci--cd-with-jenkins-pipline" aria-label="ci  cd with jenkins pipline permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CI &#x26; CD with Jenkins pipline</h3>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">node {
-   stage(&#39;Preparation&#39;) {
-      git credentialsId: &#39;gitlab&#39;, url: &#39;https://gitlab.com/yangjinlong86/springboot-docker.git&#39;
+<pre><code class="language-shell">node {
+   stage('Preparation') {
+      git credentialsId: 'gitlab', url: 'https://gitlab.com/yangjinlong86/springboot-docker.git'
    }
 
-   stage(&#39;Maven Package&#39;){
-       def mvnHome = tool name: &#39;maven3&#39;, type: &#39;maven&#39;
-       def mvnCMD = &quot;${mvnHome}/bin/mvn&quot;
-       sh &quot;${mvnCMD} clean package&quot;
+   stage('Maven Package'){
+       def mvnHome = tool name: 'maven3', type: 'maven'
+       def mvnCMD = "${mvnHome}/bin/mvn"
+       sh "${mvnCMD} clean package"
    }
 
-   stage(&#39;Docker Build Image&#39;){
-       sh &quot;docker build -t yangjinlong/springboot-docker:1.0.0 .&quot;
+   stage('Docker Build Image'){
+       sh "docker build -t yangjinlong/springboot-docker:1.0.0 ."
    }
 
-   stage(&#39;Docker Push Image&#39;){
-       withCredentials([string(credentialsId: &#39;docker-hub-password&#39;, variable: &#39;dockerHubPassword&#39;)]) {
-           sh &quot;docker login -u yangjinlong -p ${dockerHubPassword}&quot;
+   stage('Docker Push Image'){
+       withCredentials([string(credentialsId: 'docker-hub-password', variable: 'dockerHubPassword')]) {
+           sh "docker login -u yangjinlong -p ${dockerHubPassword}"
        }
-       sh &quot;docker push yangjinlong/springboot-docker:1.0.0&quot;
+       sh "docker push yangjinlong/springboot-docker:1.0.0"
    }
 
-   stage(&#39;Docker Run Container on Test Server&#39;){
-       def dockerRun = &#39;docker run -p 9901:9901 --name dockerapp -d yangjinlong/springboot-docker:1.0.0&#39;
-       sshagent([&#39;test-server&#39;]) {
-            sh &quot;ssh -o StrictHostKeyChecking=no jason@192.168.0.111 ${dockerRun}&quot;
+   stage('Docker Run Container on Test Server'){
+       def dockerRun = 'docker run -p 9901:9901 --name dockerapp -d yangjinlong/springboot-docker:1.0.0'
+       sshagent(['test-server']) {
+            sh "ssh -o StrictHostKeyChecking=no jason@192.168.0.111 ${dockerRun}"
         }
    }
    
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <ul>
 <li>在jenkins的系统设置增加JAVA_HOME变量</li>
 <li>pipline语法，带变量的命令必须使用双引号 <code>sh "${mvnCMD} clean package"</code></li>

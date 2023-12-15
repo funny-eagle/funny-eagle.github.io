@@ -99,8 +99,7 @@
 <p>Share: 近期学习kafka和分库分表的一些感受</p>
 </blockquote>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 27.Remove Element
@@ -109,7 +108,7 @@
  *
  * Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
  *
- * The order of elements can be changed. It doesn&#39;t matter what you leave beyond the new length.
+ * The order of elements can be changed. It doesn't matter what you leave beyond the new length.
  *
  * Example 1:
  *
@@ -117,7 +116,7 @@
  *
  * Your function should return length = 2, with the first two elements of nums being 2.
  *
- * It doesn&#39;t matter what you leave beyond the returned length.
+ * It doesn't matter what you leave beyond the returned length.
  * Example 2:
  *
  * Given nums = [0,1,2,2,3,0,4,2], val = 2,
@@ -126,7 +125,7 @@
  *
  * Note that the order of those five elements can be arbitrary.
  *
- * It doesn&#39;t matter what values are set beyond the returned length.
+ * It doesn't matter what values are set beyond the returned length.
  * Clarification:
  *
  * Confused why the returned value is an integer but your answer is an array?
@@ -140,7 +139,7 @@
  *
  * // any modification to nums in your function would be known by the caller.
  * // using the length returned by your function, it prints the first len elements.
- * for (int i = 0; i &lt; len; i++) {
+ * for (int i = 0; i &#x3C; len; i++) {
  *     print(nums[i]);
  * }
  * @author jason
@@ -153,7 +152,7 @@ public class RemoveElement {
         }
         int len = 0;
 
-        for (int i = 0; i &lt; nums.length ; i++) {
+        for (int i = 0; i &#x3C; nums.length ; i++) {
             if(nums[i] != val){
                 nums[len] = nums[i];
                 len ++;
@@ -168,8 +167,8 @@ public class RemoveElement {
         removeElement(nums, val);
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="what-is-the-java-9-module-system" style="position:relative;"><a href="#what-is-the-java-9-module-system" aria-label="what is the java 9 module system permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is the Java 9 Module System?</h3>
 <p><a href="https://medium.com/@nagillavenkatesh1234/what-is-the-java-9-module-system-2d07bfa00abf">https://medium.com/@nagillavenkatesh1234/what-is-the-java-9-module-system-2d07bfa00abf</a></p>

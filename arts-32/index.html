@@ -105,29 +105,28 @@
 <li>Share: 开源项目的选择和使用</li>
 </ul>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 977. Squares of a Sorted Array
- * &lt;p&gt;
+ * &#x3C;p>
  * Given an array of integers A sorted in non-decreasing order,
  * return an array of the squares of each number, also in sorted non-decreasing order.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: [-4,-1,0,3,10]
  * Output: [0,1,9,16,100]
  * Example 2:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: [-7,-3,2,3,11]
  * Output: [4,9,9,49,121]
- * &lt;p&gt;
- * &lt;p&gt;
+ * &#x3C;p>
+ * &#x3C;p>
  * Note:
- * &lt;p&gt;
- * 1 &lt;= A.length &lt;= 10000
- * -10000 &lt;= A[i] &lt;= 10000
+ * &#x3C;p>
+ * 1 &#x3C;= A.length &#x3C;= 10000
+ * -10000 &#x3C;= A[i] &#x3C;= 10000
  * A is sorted in non-decreasing order.
  *
  * @author yangjinlong
@@ -146,25 +145,25 @@ public class SquaresOfASortedArray {
     }
 
     private static int[] powArray(int[] arr) {
-        for (int i = 0; i &lt; arr.length; i++) {
+        for (int i = 0; i &#x3C; arr.length; i++) {
             arr[i] = (int) Math.pow(arr[i], 2);
         }
         return arr;
     }
 
     private static void sort(int[] arr, int head, int tail) {
-        if (head &gt;= tail || arr == null || arr.length &lt;= 1) {
+        if (head >= tail || arr == null || arr.length &#x3C;= 1) {
             return;
         }
         int i = head, j = tail, pivot = arr[(head + tail) / 2];
-        while (i &lt;= j) {
-            while (arr[i] &lt; pivot) {
+        while (i &#x3C;= j) {
+            while (arr[i] &#x3C; pivot) {
                 ++i;
             }
-            while (arr[j] &gt; pivot) {
+            while (arr[j] > pivot) {
                 --j;
             }
-            if (i &lt; j) {
+            if (i &#x3C; j) {
                 int t = arr[i];
                 arr[i] = arr[j];
                 arr[j] = t;
@@ -178,8 +177,8 @@ public class SquaresOfASortedArray {
         sort(arr, i, tail);
     }
 
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="readme-driven-development" style="position:relative;"><a href="#readme-driven-development" aria-label="readme driven development permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="http://tom.preston-werner.com/2010/08/23/readme-driven-development.html">Readme Driven Development</a></h3>
 <p><strong>RDD 开发</strong>的几个优势</p>

@@ -79,9 +79,8 @@
     </script><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><meta name="format-detection" content="email=no,telephone=no,address=no"/><meta name="baidu-site-verification" content="rVEuQMP8C6"/><link rel="apple-touch-icon" sizes="180x180" href="/icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/icon.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"/><meta name="msapplication-TileColor" content="#da532c"/><meta name="theme-color" content="#ffffff"/><meta name="baidu-site-verification" content="codeva-KiUgz2gAMo"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="css-main"><aside class="css-aside close"><header class="css-header"><div><a style="box-shadow:none;text-decoration:none;font-weight:200" class="usubeni" href="/"><span class="logo-mobile">Funny Eagle</span></a></div><div class="menu-button"><i class="iconfont icon-menu"></i></div></header><div class="css-menu column"><a href="/tag/coding/"><i class="iconfont icon-coding"></i>编程</a><a href="/tag/music/"><i class="iconfont icon-music"></i>音乐</a><a href="/tag/life/"><i class="iconfont icon-life"></i>生活</a><a href="/tags"><i class="iconfont icon-tag"></i>标签</a><a href="/archive"><i class="iconfont icon-archive"></i>归档</a><a href="/about"><i class="iconfont icon-person"></i>关于</a></div><div style="text-align:center;margin-bottom:20px"><input placeholder="关键字，然后 Enter"/></div></aside><article class="css-post"><h1>正则表达式</h1><div class="css-info"><span style="padding-right:12px">2017-04-30</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span></div><div class="css-post-main"><p>正则表达式在线测试工具 <a href="http://tool.chinaz.com/regex/">http://tool.chinaz.com/regex/</a></p>
 <p>上方的文本区是输入正则表达式的，下方的文本区域是用来输入目标文字的。
 在目标区域输入</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">138-0013-8000</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">138-0013-8000
+</code></pre>
 <p><strong>字符串字面值</strong></p>
 <blockquote>
 <p>字符串字面值，就是字面上看起来是什么就是什么。</p>
@@ -94,14 +93,12 @@
 <p>重复<code>\d</code>三次和四次就可以分别匹配三个和四个数字，该表达式中的连字符是一个字面值，因此会被原样匹配。</p>
 </blockquote>
 <p>用大写D可以匹配任何一个非数字字符</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">\d\d\d\D\d\d\d\d\D\d\d\d\d</code>
-        </deckgo-highlight-code>
+<pre><code>\d\d\d\D\d\d\d\d\D\d\d\d\d
+</code></pre>
 <p>还可以用点号(.)来匹配任意字符，英文下的句号，是一个通配符。</p>
 <p>接下来我们用<strong>捕获分组</strong>来匹配电话号码中的某一部分，使用后向引号对分组中的内容进行饮用。要创建捕获分组，先将一个<code>\d</code>放在一个圆括号里，这样就将它放入了一个分组中，后面可以用<code>\1</code>来对捕获的内容进行后向引用：</p>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">(\d)\d\1</code>
-        </deckgo-highlight-code>
+<pre><code>(\d)\d\1
+</code></pre>
 <p><code>\1</code>对括号内分组捕获分组的内容进行了反向引用。</p>
 <ul>
 <li><code>(\d)</code>匹配第一个数字并将其捕获</li>

@@ -98,8 +98,7 @@
 <p><a href="#share">Share</a></p>
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第45周</h1><div class="css-info"><span style="padding-right:12px">2021-09-08</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.codeabbey;
+<pre><code class="language-java">package org.nocoder.codeabbey;
 
 import java.util.Scanner;
 
@@ -114,24 +113,24 @@ public class SumsInLoop {
         System.out.println();
 
         String[] arr = new String[total];
-        for (int i = 0; i &lt; total; i++) {
+        for (int i = 0; i &#x3C; total; i++) {
             arr[i] = scanner.nextLine();
         }
 
-        for (int i = 0; i &lt; arr.length; i++) {
-            String[] nums = arr[i].split(&quot; &quot;);
+        for (int i = 0; i &#x3C; arr.length; i++) {
+            String[] nums = arr[i].split(" ");
             int sum = 0;
-            for (int j = 0; j &lt; nums.length; j++) {
+            for (int j = 0; j &#x3C; nums.length; j++) {
                 int intValue = Integer.parseInt(nums[j]);
                 sum += intValue;
             }
-            System.out.print(sum + &quot; &quot;);
+            System.out.print(sum + " ");
         }
 
         scanner.close();
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <p><strong>React Components</strong></p>
 <p>Components 像方法一样返回HTML元素。</p>
@@ -145,77 +144,70 @@ public class SumsInLoop {
 <p>类组件必须包含extends React.Component 语句。这个语句创建一个React.Component的继承者，可以访问React.Component的方法。</p>
 <p>组件还需要一个render()方法，该方法返回HTML。</p>
 <p>创建一个名为Car的类组件：</p>
-<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">class Car extends React.Component {
+<pre><code class="language-javascript">class Car extends React.Component {
 
     render(){
-        return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
+        return &#x3C;h2>Hi, I am a Car!&#x3C;/h2>;
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h3 id="function-component" style="position:relative;"><a href="#function-component" aria-label="function component permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Function Component</h3>
 <p>Function 组件也返回HTML，它的行为与类组件非常类似，但是Function组件可以用更少的代码实现，更容易理解。</p>
 <p>创建一个名为Car的Function组件</p>
-<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">function Car(){
-    return return &lt;h2&gt;Hi, I am a Car!&lt;/h2&gt;;
-}</code>
-        </deckgo-highlight-code>
+<pre><code class="language-javascript">function Car(){
+    return return &#x3C;h2>Hi, I am a Car!&#x3C;/h2>;
+}
+</code></pre>
 <h3 id="rendering-a-component" style="position:relative;"><a href="#rendering-a-component" aria-label="rendering a component permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rendering a Component</h3>
 <p>现在有一个名为Car的组件，返回一个<h2>元素。</p>
 <p>在程序中使用这个组件爱你，语法类似HTML:<code>&#x3C;Car/></code></p>
-<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">ReactDOM.render(&lt;Car/&gt;, document.getElementById(&#39;root&#39;));</code>
-        </deckgo-highlight-code>
+<pre><code class="language-javascript">ReactDOM.render(&#x3C;Car/>, document.getElementById('root'));
+</code></pre>
 <h3 id="props" style="position:relative;"><a href="#props" aria-label="props permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h3>
 <p>组件可以作为<code>props</code>传递，代表properties。</p>
 <p>Props 类似于方法参数，可以将它们作为属性传递到组件中。</p>
-<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">function Car(props){
-    return &lt;h2&gt;I am a {props.color} Car!&lt;/h2&gt;
+<pre><code class="language-javascript">function Car(props){
+    return &#x3C;h2>I am a {props.color} Car!&#x3C;/h2>
 }
 
-ReactDOM.render(&lt;Car color=&quot;red&quot;/&gt;, document.getElementById(&#39;root&#39;))</code>
-        </deckgo-highlight-code>
+ReactDOM.render(&#x3C;Car color="red"/>, document.getElementById('root'))
+</code></pre>
 <h3 id="components-in-components" style="position:relative;"><a href="#components-in-components" aria-label="components in components permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components in Components</h3>
 <p>我们可以引用其他组件中的组件</p>
 <p>使用Garage组件中的Car组件</p>
-<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">function Car(){
-    return &lt;h2&gt;I am a Car!&lt;/h2&gt;
+<pre><code class="language-javascript">function Car(){
+    return &#x3C;h2>I am a Car!&#x3C;/h2>
 }
 
 // 车库
 function Garage(){
     return (
-        &lt;&gt;
-            &lt;h1&gt;Who lives in my Garage?&lt;/h1&gt;
-            &lt;Car /&gt;
-        &lt;/&gt;
+        &#x3C;>
+            &#x3C;h1>Who lives in my Garage?&#x3C;/h1>
+            &#x3C;Car />
+        &#x3C;/>
     );
 }
 
-ReactDOM.render(&lt;Garage/&gt;, document.getElementById(&#39;root&#39;));</code>
-        </deckgo-highlight-code>
+ReactDOM.render(&#x3C;Garage/>, document.getElementById('root'));
+</code></pre>
 <h3 id="components-in-files" style="position:relative;"><a href="#components-in-files" aria-label="components in files permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Components in Files</h3>
 <p>React 都是关于重用代码，并且建议将组件拆分到单独的文件中。</p>
 <p>为此，创建一个扩展名为js的新文件，并将代码放进去。</p>
 <p>创建一个Car.js文件</p>
-<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">function Car(){
-    return &lt;h2&gt;Hi , I am a Car!&lt;/h2&gt;
+<pre><code class="language-javascript">function Car(){
+    return &#x3C;h2>Hi , I am a Car!&#x3C;/h2>
 }
 
-export default Car;</code>
-        </deckgo-highlight-code>
+export default Car;
+</code></pre>
 <p>为了能够使用Car组件，必须在程序import这个文件。</p>
-<deckgo-highlight-code language="javascript" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">import React from &#39;react&#39;;
-import ReactDOM from &#39;react-dom&#39;;
-import Car from &#39;./Car.js&#39;;
+<pre><code class="language-javascript">import React from 'react';
+import ReactDOM from 'react-dom';
+import Car from './Car.js';
 
-ReactDOM.render(&lt;Car/&gt;, document.getElementById(&#39;root&#39;));</code>
-        </deckgo-highlight-code>
+ReactDOM.render(&#x3C;Car/>, document.getElementById('root'));
+</code></pre>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <p>默认情况下，用<code>sudo dnf update</code> 或 <code>sudo yum update</code>后，会将Linux内核一起更新，过一段时间，grub2 就会生成好几个启动项，如果更新内核后使用系统没有问题，就可以把旧的内核删除。</p>
 <p>我遇到的问题是，每次更新内核后，都需要重新安装显卡驱动，不然进不了GUI，这个很烦人，浪费时间，搞得我每次都有冲动重装系统。今天更新到5.15.12，又进不了桌面了，还好grub2可以让我选择从5.15.11启动。</p>
@@ -226,13 +218,11 @@ ReactDOM.render(&lt;Car/&gt;, document.getElementById(&#39;root&#39;));</code>
 </blockquote>
 <p>冷静了一会儿，网上搜索试验了一番，把不用的内核都删除，然后dnf更新时排除内核，即不升级内核。</p>
 <p>使用<code>uname -r</code> 查看当前使用的内核</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">[yangjl@fedora ~]$ uname -r
-5.15.11-200.fc35.x86_64</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">[yangjl@fedora ~]$ uname -r
+5.15.11-200.fc35.x86_64
+</code></pre>
 <p>使用<code>rpm -aq|grep kernel</code>查看已经安装的内核</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">[yangjl@fedora ~]$ sudo rpm -aq | grep kernel
+<pre><code class="language-shell">[yangjl@fedora ~]$ sudo rpm -aq | grep kernel
 libreport-plugin-kerneloops-2.15.2-6.fc35.x86_64
 abrt-addon-kerneloops-2.14.6-9.fc35.x86_64
 kernel-headers-5.15.4-200.fc35.x86_64
@@ -242,30 +232,27 @@ kernel-modules-5.15.11-200.fc35.x86_64
 kernel-5.15.11-200.fc35.x86_64
 kernel-modules-extra-5.15.11-200.fc35.x86_64
 kernel-devel-5.15.11-200.fc35.x86_64
-kernel-devel-5.15.12-200.fc35.x86_64</code>
-        </deckgo-highlight-code>
+kernel-devel-5.15.12-200.fc35.x86_64
+</code></pre>
 <p>保留当前使用的内核，删除不用的内核 <code>sudo dnf remove -y kernel-core-5.15.12*</code></p>
 <p><code>dnf</code> 和 <code>yum</code> 更新时可以使用exclude命令排除你不希望更新的package，例如更新除了firefox以外的所有package，可以这样</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">sudo dnf update --exclude=firefox
-sudo yum update --exclude=firefox</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">sudo dnf update --exclude=firefox
+sudo yum update --exclude=firefox
+</code></pre>
 <p>再比如更新除了内核以外的所有package：</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">sudo dnf update --exclude=kernel*
-sudo yum update --exclude=kernel*</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">sudo dnf update --exclude=kernel*
+sudo yum update --exclude=kernel*
+</code></pre>
 <p>如果觉得麻烦，在fedora下，可以通过修改<code>/etc/dnf/dnf.conf</code>，在<code>[main]</code>下添加<code>exclude=kernel*</code>,这样在使用<code>dnf update</code>和<code>yum update</code>时会排除kernel package 的更新。</p>
 <p>/etc/dnf/dnf.conf</p>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">[main]
+<pre><code class="language-shell">[main]
 gpgcheck=1
 installonly_limit=3
 clean_requirements_on_remove=True
 best=False
 skip_if_unavailable=True
-exclude=kernel*</code>
-        </deckgo-highlight-code>
+exclude=kernel*
+</code></pre>
 <p>参考文献</p>
 <p><a href="https://chewett.co.uk/blog/800/exclude-fedora-packages-updating-dnf-yum/">https://chewett.co.uk/blog/800/exclude-fedora-packages-updating-dnf-yum/</a>
 <a href="https://laplacence.github.io/2017/02/27/Fedora_delete_redundancy_kernel/">https://laplacence.github.io/2017/02/27/Fedora_delete_redundancy_kernel/</a></p>

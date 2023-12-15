@@ -112,8 +112,7 @@
 <li>Share: AOP入门分享PPT</li>
 </ul>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -142,8 +141,8 @@ import java.util.Map;
  *
  * Note:
  *
- * 4 &lt;= A.length &lt;= 10000
- * 0 &lt;= A[i] &lt; 10000
+ * 4 &#x3C;= A.length &#x3C;= 10000
+ * 0 &#x3C;= A[i] &#x3C; 10000
  * A.length is even
  *
  * @author jason
@@ -152,15 +151,15 @@ import java.util.Map;
 public class NRepeatedElementinSize2NArray {
 
     public static int repeatedNTimes(int[] arr) {
-        // 4 &lt;= A.length &lt;= 10000, A.length is even
-        if(arr == null || (arr.length &lt; 4 || arr.length &gt; 10000) || (arr.length % 2 != 0)){
+        // 4 &#x3C;= A.length &#x3C;= 10000, A.length is even
+        if(arr == null || (arr.length &#x3C; 4 || arr.length > 10000) || (arr.length % 2 != 0)){
             throw new IllegalArgumentException();
         }
 
-        Map&lt;Integer, Integer&gt; elements = new HashMap&lt;&gt;();
+        Map&#x3C;Integer, Integer> elements = new HashMap&#x3C;>();
 
-        for (int i = 0; i &lt; arr.length; i++) {
-            if (arr[i] &lt; 0 || arr[i] &gt;= 10000){
+        for (int i = 0; i &#x3C; arr.length; i++) {
+            if (arr[i] &#x3C; 0 || arr[i] >= 10000){
                 throw new IllegalArgumentException();
             }
             if(elements.put(arr[i],1) != null){
@@ -176,8 +175,8 @@ public class NRepeatedElementinSize2NArray {
         System.out.println(repeatedNTimes(arr));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="thread-safe-collections" style="position:relative;"><a href="#thread-safe-collections" aria-label="thread safe collections permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://medium.com/elp-2018/thread-safe-collections-8f1f17c283e7">Thread-Safe Collections</a></h3>
 <ul>

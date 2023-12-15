@@ -82,8 +82,7 @@
 <li><a href="#tip">Tip</a></li>
 <li><a href="#share">Share</a></li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第26周</h1><div class="css-info"><span style="padding-right:12px">2018-12-29</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -91,60 +90,60 @@ import java.util.regex.Pattern;
 
 /**
  * Every email consists of a local name and a domain name, separated by the @ sign.
- * &lt;p&gt;
+ * &#x3C;p>
  * For example, in `alice@leetcode.com`, `alice` is the local name, and `leetcode.com` is the domain name.
- * &lt;p&gt;
- * Besides lowercase letters, these emails may contain `&#39;.&#39;`s or `&#39;+&#39;`s.
- * &lt;p&gt;
- * If you add periods (`&#39;.&#39;`) between some characters in the **local name** part of an email address,
+ * &#x3C;p>
+ * Besides lowercase letters, these emails may contain `'.'`s or `'+'`s.
+ * &#x3C;p>
+ * If you add periods (`'.'`) between some characters in the **local name** part of an email address,
  * mail sent there will be forwarded to the same address without dots in the local name.
- * For example, `&quot;alice.z@leetcode.com&quot;` and `&quot;alicez@leetcode.com&quot;` forward to the same email address.
+ * For example, `"alice.z@leetcode.com"` and `"alicez@leetcode.com"` forward to the same email address.
  * (Note that this rule does not apply for domain names.)
- * &lt;p&gt;
- * If you add a plus (`&#39;+&#39;`) in the **local name**, everything after the first plus sign will be **ignored**.
+ * &#x3C;p>
+ * If you add a plus (`'+'`) in the **local name**, everything after the first plus sign will be **ignored**.
  * This allows certain emails to be filtered, for example `m.y+name@email.com` will be forwarded to `my@email.com`.
  * (Again, this rule does not apply for domain names.)
- * &lt;p&gt;
+ * &#x3C;p>
  * It is possible to use both of these rules at the same time.
- * &lt;p&gt;
+ * &#x3C;p>
  * Given a list of `emails`, we send one email to each address in the list.
  * How many different addresses actually receive mails?
- * &lt;p&gt;
- * &lt;p&gt;
- * &lt;p&gt;
+ * &#x3C;p>
+ * &#x3C;p>
+ * &#x3C;p>
  * **Example 1:**
- * &lt;p&gt;
+ * &#x3C;p>
  * ```shell
- * Input: [&quot;test.email+alex@leetcode.com&quot;,&quot;test.e.mail+bob.cathy@leetcode.com&quot;,&quot;testemail+david@lee.tcode.com&quot;]
+ * Input: ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
  * Output: 2
- * Explanation: &quot;testemail@leetcode.com&quot; and &quot;testemail@lee.tcode.com&quot; actually receive mails
+ * Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive mails
  * ```
- * &lt;p&gt;
+ * &#x3C;p>
  * **Note:**
- * &lt;p&gt;
- * - `1 &lt;= emails[i].length &lt;= 100`
- * - `1 &lt;= emails.length &lt;= 100`
- * - Each `emails[i]` contains exactly one `&#39;@&#39;` character.
+ * &#x3C;p>
+ * - `1 &#x3C;= emails[i].length &#x3C;= 100`
+ * - `1 &#x3C;= emails.length &#x3C;= 100`
+ * - Each `emails[i]` contains exactly one `'@'` character.
  *
  * @author yangjinlong
  * @date 2019-01-02
  */
 public class UniqueEmailAddress {
     public int numUniqueEmails(String[] emails) {
-        if (emails == null || emails.length &gt; 100) {
+        if (emails == null || emails.length > 100) {
             throw new IllegalArgumentException();
         }
-        String pattern = &quot;^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$&quot;;
+        String pattern = "^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*$";
         Set emailSet = new HashSet();
-        for (int i = 0; i &lt; emails.length; i++) {
+        for (int i = 0; i &#x3C; emails.length; i++) {
             if (Pattern.matches(pattern, emails[i])) {
-                int plusIdx = emails[i].indexOf(&quot;+&quot;);
-                int atIdx = emails[i].indexOf(&quot;@&quot;);
+                int plusIdx = emails[i].indexOf("+");
+                int atIdx = emails[i].indexOf("@");
                 String ignoreContent = emails[i].substring(plusIdx, atIdx);
-                String email = emails[i].replace(ignoreContent, &quot;&quot;);
-                String localName = email.substring(0, email.indexOf(&quot;@&quot;));
-                String domainName = email.substring(email.indexOf(&quot;@&quot;), email.length() - 1);
-                email = localName.replace(&quot;.&quot;, &quot;&quot;).concat(domainName);
+                String email = emails[i].replace(ignoreContent, "");
+                String localName = email.substring(0, email.indexOf("@"));
+                String domainName = email.substring(email.indexOf("@"), email.length() - 1);
+                email = localName.replace(".", "").concat(domainName);
                 emailSet.add(email);
             }
         }
@@ -152,38 +151,37 @@ public class UniqueEmailAddress {
     }
 
     public static void main(String[] args) {
-        String[] emails = new String[]{&quot;test.email+alex@leetcode.com&quot;, &quot;test.e.mail+bob.cathy@leetcode.com&quot;, &quot;testemail+david@lee.tcode.com&quot;};
+        String[] emails = new String[]{"test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com"};
         UniqueEmailAddress uniqueEmailAddress = new UniqueEmailAddress();
         int n = uniqueEmailAddress.numUniqueEmails(emails);
         System.out.println(n);
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <p><a href="https://netty.io/wiki/user-guide-for-4.x.html#wiki-h2-0">https://netty.io/wiki/user-guide-for-4.x.html#wiki-h2-0</a></p>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <p>python 爬取当当图书信息</p>
-<deckgo-highlight-code language="python" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">import requests
+<pre><code class="language-python">import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 
 def crawl_book_info(isbn):
     agent = UserAgent()
-    headers = {&#39;User-Agent&#39;: agent.random}
-    url = &#39;http://search.dangdang.com/?act=input&amp;key=&#39; + isbn
+    headers = {'User-Agent': agent.random}
+    url = 'http://search.dangdang.com/?act=input&#x26;key=' + isbn
     data = requests.get(url, headers=headers)
-    soup = BeautifulSoup(data.text, &#39;lxml&#39;)
-    ul = soup.find_all(&#39;ul&#39;, {&#39;class&#39;: &#39;bigimg&#39;})
-    title = &#39;&#39;
-    image = &#39;&#39;
-    if len(ul) &gt; 0:
-        li = ul[0].find_all(&#39;li&#39;)
-        if len(li) &gt; 0:
-            title = li[0].find(&#39;a&#39;).get(&#39;title&#39;)
-            image = li[0].find(&#39;img&#39;).get(&#39;src&#39;)
-    return title, isbn, image</code>
-        </deckgo-highlight-code>
+    soup = BeautifulSoup(data.text, 'lxml')
+    ul = soup.find_all('ul', {'class': 'bigimg'})
+    title = ''
+    image = ''
+    if len(ul) > 0:
+        li = ul[0].find_all('li')
+        if len(li) > 0:
+            title = li[0].find('a').get('title')
+            image = li[0].find('img').get('src')
+    return title, isbn, image
+</code></pre>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <blockquote>
 <p>假如你是个医生，病人要求你在手术前不要洗手，因为病人认为洗手太耽误时间了，你会照做吗。当然不会，因为医生是专业的，知道病菌的危害有多大，手术风险有多大。同理，程序员盲目遵从不明风险的经理的要求，也是不专业的。 —《Clean Code》</p>

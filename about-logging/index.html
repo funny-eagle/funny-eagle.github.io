@@ -151,23 +151,21 @@
 <p>每条日志都要记录发生的时间、级别、日志内容、错误码、以及对应代码的位置，存储在文本文件或者数据库中。</p>
 <ul>
 <li>JSON
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">{
-	&quot;@timestamp&quot;: &quot;2017-07025 17:02:12&quot;,
-	&quot;level&quot;: &quot;error&quot;,
-	&quot;message&quot;: &quot;connection refused&quot;,
-	&quot;service&quot;: &quot;listener&quot;,
-	&quot;thread&quot;: &quot;125&quot;,
-	&quot;customerid&quot;: &quot;776622&quot;,
-	&quot;ip&quot;: &quot;34.124.233.12&quot;,
-	&quot;queryid&quot;: &quot;45&quot;
-}</code>
-        </deckgo-highlight-code>
+<pre><code>{
+	"@timestamp": "2017-07025 17:02:12",
+	"level": "error",
+	"message": "connection refused",
+	"service": "listener",
+	"thread": "125",
+	"customerid": "776622",
+	"ip": "34.124.233.12",
+	"queryid": "45"
+}
+</code></pre>
 </li>
 <li>键值对
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">	2017-07025 17:02:12 level=error message=&quot;connection refused&quot;</code>
-        </deckgo-highlight-code>
+<pre><code>	2017-07025 17:02:12 level=error message="connection refused"
+</code></pre>
 </li>
 </ul>
 <p>service=“listener” thread=125 customerid=776622 ip=34.124.233.12
@@ -214,10 +212,9 @@ queryid=45
 <ul>
 <li>使用占位符而不是字符串连接</li>
 </ul>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">logger.debug(&quot;Entry number: &quot; + i + &quot; is &quot; +  String.valueOf(entry[i])); 
-logger.debug(&quot;Entry number: {} is {}&quot;, i, entry[i]);</code>
-        </deckgo-highlight-code>
+<pre><code>logger.debug("Entry number: " + i + " is " +  String.valueOf(entry[i])); 
+logger.debug("Entry number: {} is {}", i, entry[i]);
+</code></pre>
 <p>上面两个语句输出的效果是一样的，但是性能却相差两个数量级，在关闭DEBUG日志时，它们的开销就不一样了，主要的影响在于字符串转换和字符串拼接上，无论是否生效，前者都会将变量转换为字符串并进行拼接，而后者则只会在需要时执行这些操作。</p>
 <ul>
 <li>避免无用的日志

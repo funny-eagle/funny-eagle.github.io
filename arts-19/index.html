@@ -104,8 +104,7 @@
 </blockquote>
 <h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <h3 id="937-reorder-log-files" style="position:relative;"><a href="#937-reorder-log-files" aria-label="937 reorder log files permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://leetcode.com/problems/reorder-log-files/">937. Reorder Log Files</a></h3>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 import java.util.ArrayList;
 import java.util.TreeMap;
@@ -133,14 +132,14 @@ import java.util.TreeMap;
  *
  * Example 1:
  *
- * Input: [&quot;a1 9 2 3 1&quot;,&quot;g1 act car&quot;,&quot;zo4 4 7&quot;,&quot;ab1 off key dog&quot;,&quot;a8 act zoo&quot;]
- * Output: [&quot;g1 act car&quot;,&quot;a8 act zoo&quot;,&quot;ab1 off key dog&quot;,&quot;a1 9 2 3 1&quot;,&quot;zo4 4 7&quot;]
+ * Input: ["a1 9 2 3 1","g1 act car","zo4 4 7","ab1 off key dog","a8 act zoo"]
+ * Output: ["g1 act car","a8 act zoo","ab1 off key dog","a1 9 2 3 1","zo4 4 7"]
  *
  *
  * Note:
  *
- * 0 &lt;= logs.length &lt;= 100
- * 3 &lt;= logs[i].length &lt;= 100
+ * 0 &#x3C;= logs.length &#x3C;= 100
+ * 3 &#x3C;= logs[i].length &#x3C;= 100
  * logs[i] is guaranteed to have an identifier, and a word after the identifier.
  *
  * @author jason
@@ -148,11 +147,11 @@ import java.util.TreeMap;
  */
 public class ReorderLogFiles {
     public static String[] reorderLogFiles(String[] logs) {
-        ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
-        TreeMap&lt;String, String&gt; map = new TreeMap&lt;&gt;();
+        ArrayList&#x3C;String> list = new ArrayList&#x3C;>();
+        TreeMap&#x3C;String, String> map = new TreeMap&#x3C;>();
 
         for (String str: logs) {
-            String[] tokens = str.split(&quot; &quot;);
+            String[] tokens = str.split(" ");
             if (!Character.isAlphabetic(tokens[1].charAt(0))) {
                 list.add(str);
             } else {
@@ -175,12 +174,12 @@ public class ReorderLogFiles {
     }
 
     public static void main(String[] args) {
-        String[] logs = new String[]{&quot;a1 9 2 3 1&quot;, &quot;g1 act car&quot;, &quot;zo4 4 7&quot;, &quot;ab1 off key dog&quot;, &quot;a8 act zoo&quot;};
+        String[] logs = new String[]{"a1 9 2 3 1", "g1 act car", "zo4 4 7", "ab1 off key dog", "a8 act zoo"};
         reorderLogFiles(logs);
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="30-best-practices-for-logging-at-scale" style="position:relative;"><a href="#30-best-practices-for-logging-at-scale" aria-label="30 best practices for logging at scale permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://www.loggly.com/blog/30-best-practices-logging-scale/">30 best practices for logging at scale</a></h3>
 <p>一篇来自 Jason Skowronski 的文章，大规模记录日志的一些最佳实践，包括日志的创建，传输，以及日志的管理，我主要理解了一下创建日志的最佳做法。</p>
@@ -223,10 +222,9 @@ public class ReorderLogFiles {
 </ul>
 <h2 id="tip" style="position:relative;"><a href="#tip" aria-label="tip permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tip</h2>
 <h3 id="ubuntu-启动界面修改" style="position:relative;"><a href="#ubuntu-%E5%90%AF%E5%8A%A8%E7%95%8C%E9%9D%A2%E4%BF%AE%E6%94%B9" aria-label="ubuntu 启动界面修改 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ubuntu 启动界面修改</h3>
-<deckgo-highlight-code language="shell" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">sudo update-alternatives --config default.plymouth
-sudo update-initramfs -u</code>
-        </deckgo-highlight-code>
+<pre><code class="language-shell">sudo update-alternatives --config default.plymouth
+sudo update-initramfs -u
+</code></pre>
 <h3 id="线程切换导致-canal-message-乱序消费问题" style="position:relative;"><a href="#%E7%BA%BF%E7%A8%8B%E5%88%87%E6%8D%A2%E5%AF%BC%E8%87%B4-canal-message-%E4%B9%B1%E5%BA%8F%E6%B6%88%E8%B4%B9%E9%97%AE%E9%A2%98" aria-label="线程切换导致 canal message 乱序消费问题 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>线程切换导致 Canal Message 乱序消费问题</h3>
 <p>这周遇到一个多线程问题，程序的一个BUG，Canal 要求顺序提交Message Batch Id，由于我在程序里使用了多线程进行提交 Canal Message Batch Id， 当线程切换时，会发生乱序提交的情况，于是 Canal Client 抛出 RuntimeException，导致主线程挂掉。解决办法就是把获取Message和提交BatchId改为同步执行，Ack操作之后，再开启新的线程处理Message。</p>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>

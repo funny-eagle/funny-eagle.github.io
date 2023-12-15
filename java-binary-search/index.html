@@ -84,8 +84,7 @@
 <li>如果关键字和中间元素相等，则匹配成功，查找结束。</li>
 <li>如果关键字大于中间元素，只需要在数组的后一半元素中继续查找关键字。</li>
 </ul>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.solution;
+<pre><code class="language-java">package org.nocoder.solution;
 
 /**
  * @author jason
@@ -96,9 +95,9 @@ public class BinarySearch {
         int low = 0;
         int high = list.length - 1;
 
-        while(high &gt;= low){
+        while(high >= low){
             int mid = (low + high) / 2;
-            if(key &lt; list[mid]){
+            if(key &#x3C; list[mid]){
                 high = mid - 1;
             }else if(key == list[mid]){
                 return mid;
@@ -115,8 +114,8 @@ public class BinarySearch {
         System.out.print(binarySearch(new int []{1,2,3,4,5}, 5));
     }
 }
-</code>
-        </deckgo-highlight-code>
+
+</code></pre>
 <p>再附上一道【剑指offer】的编程练习题及题解</p>
 <blockquote>
 <p>题目描述：二维数组中的查找</p>
@@ -124,8 +123,7 @@ public class BinarySearch {
 <p>对于一个有序数组，我们通常采用二分查找的方式来定位某一元素，请编写二分查找的算法，在数组中查找指定元素。
 给定一个整数数组A及它的大小n，同时给定要查找的元素val，请返回它在数组中的位置(从0开始)，若不存在该元素，返回-1。
 若该元素出现多次，请返回第一次出现的位置。</p>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.solution;
+<pre><code class="language-java">package org.nocoder.solution;
 
 /**
  * 题目描述
@@ -147,10 +145,10 @@ public class BinarySearch {
         // high:结束位置下标
         int high = n - 1;
 
-        while (high &gt; low) {
+        while (high > low) {
             // mid:中间位置下标
             int mid = (low + high) / 2;
-            if (val &lt; A[mid]) {
+            if (val &#x3C; A[mid]) {
                 // 如果目标值在左侧，结束位置下标修改为mid-1
                 high = mid - 1;
             } else if (val == A[mid]) {
@@ -170,8 +168,8 @@ public class BinarySearch {
         System.out.println(bs.getPos(array, 8, 10));
     }
 }
-</code>
-        </deckgo-highlight-code></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/java-interview-questions/"><button>Prev: <!-- -->几道Java相关的面试题</button></a></li><li><a rel="next" href="/sleepless-in-java/"><button>Next: <!-- -->读《Java夜未眠》部分笔记</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
+
+</code></pre></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/java-interview-questions/"><button>Prev: <!-- -->几道Java相关的面试题</button></a></li><li><a rel="next" href="/sleepless-in-java/"><button>Next: <!-- -->读《Java夜未眠》部分笔记</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
       
       
       if(true) {

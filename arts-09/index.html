@@ -100,30 +100,29 @@
 </li>
 </ul></div></aside><article class="css-post"><h1>ARTS 第9周</h1><div class="css-info"><span style="padding-right:12px">2018-09-01</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/arts/">#<!-- -->arts</a></span></div><div class="css-post-main"><h2 id="algorithm" style="position:relative;"><a href="#algorithm" aria-label="algorithm permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Algorithm</h2>
 <h3 id="palindrome-number" style="position:relative;"><a href="#palindrome-number" aria-label="palindrome number permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Palindrome Number</h3>
-<deckgo-highlight-code language="java" terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">package org.nocoder.leetcode.solution;
+<pre><code class="language-java">package org.nocoder.leetcode.solution;
 
 /**
  * 9.Palindrome Number
- * &lt;p&gt;
+ * &#x3C;p>
  * Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
- * &lt;p&gt;
+ * &#x3C;p>
  * Example 1:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 121
  * Output: true
  * Example 2:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: -121
  * Output: false
  * Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
  * Example 3:
- * &lt;p&gt;
+ * &#x3C;p>
  * Input: 10
  * Output: false
  * Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
  * Follow up:
- * &lt;p&gt;
+ * &#x3C;p>
  * Coud you solve it without converting the integer to a string?
  *
  * @author jason
@@ -131,12 +130,12 @@
  */
 public class PalindromeNumber {
     public static boolean isPalindrome(int x) {
-        if (x &lt; 0) {
+        if (x &#x3C; 0) {
             return false;
         }
 
         int div = 1;
-        while (x / div &gt;= 10) {
+        while (x / div >= 10) {
             div *= 10;
         }
 
@@ -160,8 +159,8 @@ public class PalindromeNumber {
         System.out.println(PalindromeNumber.isPalindrome(-121));
         System.out.println(PalindromeNumber.isPalindrome(10));
     }
-}</code>
-        </deckgo-highlight-code>
+}
+</code></pre>
 <h2 id="review" style="position:relative;"><a href="#review" aria-label="review permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Review</h2>
 <h3 id="using-command-pattern-in-java" style="position:relative;"><a href="#using-command-pattern-in-java" aria-label="using command pattern in java permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using Command Pattern in Java</h3>
 <blockquote>
@@ -176,8 +175,7 @@ public class PalindromeNumber {
 <ol>
 <li>一个 vue 项目 执行<code>npm run dev</code> 提示有几个 modules 和 dependencies 找不到，之前在 windows 下build run 都是没问题的，换了 ubuntu 之后，就运行不起来，检查后发现这几个路径的大小没写对，在 linux 环境下引入 module 和 dependencies 是要区分大小写的。当然这也是开发人员书写不规范问题，引入文件应当与实际文件大小写保持一致才是。</li>
 </ol>
-<deckgo-highlight-code  terminal="carbon" theme="one-dark" line-numbers="true"  >
-          <code slot="code">ERROR  Failed to compile with 5 errors
+<pre><code>ERROR  Failed to compile with 5 errors
 
 These dependencies were not found:
 
@@ -190,9 +188,9 @@ To install them, you can run: npm install --save @/components/login/Login.css @/
 
 These relative modules were not found:
 
-* ../../common/infoWindowLight.js in ./~/_babel-loader@7.1.5@babel-loader/lib!./~/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=script&amp;index=0!./src/components/common/scatterMap.vue
-* ../../common/infoWindow.js in ./~/_babel-loader@7.1.5@babel-loader/lib!./~/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=script&amp;index=0!./src/components/common/scatterMap.vue</code>
-        </deckgo-highlight-code>
+* ../../common/infoWindowLight.js in ./~/_babel-loader@7.1.5@babel-loader/lib!./~/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=script&#x26;index=0!./src/components/common/scatterMap.vue
+* ../../common/infoWindow.js in ./~/_babel-loader@7.1.5@babel-loader/lib!./~/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=script&#x26;index=0!./src/components/common/scatterMap.vue
+</code></pre>
 <p>2.为一个项目配置了nginx转发，80端口转发到8075端口，直接用ip访问，上传图片大小超过1M就会抛 <code>413 request entity too large</code>，修改nginx配置文件 <code>client_max_body_size=20M</code>，默认配置大小为1M，超过就会抛上述异常。</p>
 <h2 id="share" style="position:relative;"><a href="#share" aria-label="share permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Share</h2>
 <h3 id="command-pattern" style="position:relative;"><a href="#command-pattern" aria-label="command pattern permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Command Pattern</h3>
