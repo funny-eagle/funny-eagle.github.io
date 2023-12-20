@@ -87,7 +87,7 @@ class Layout extends React.Component {
             fontWeight: 200,
           }}
           className="usubeni"
-          to={'/'}
+          to={'/archive'}
         >
           <span className="logo-mobile">{siteName}</span>
         </Link>

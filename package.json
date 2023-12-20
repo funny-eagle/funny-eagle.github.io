@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Jason Yang <yangjinlong86@gmail.com>",
   "dependencies": {
-    "@deckdeckgo/highlight-code": "^3.6.0",
     "axios": "1.2.2",
     "fast-exif": "^1.0.1",
     "gatsby": "^5.4.1",
@@ -48,11 +47,11 @@
   ],
   "license": "MIT",
   "scripts": {
+    "start": "gatsby develop",
     "ser": "gatsby serve",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "dev": "gatsby develop",
     "build": "gatsby clean && gatsby build",
     "publish": "gatsby clean && gatsby build && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"

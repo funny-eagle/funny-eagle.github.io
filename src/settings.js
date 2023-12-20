@@ -1,6 +1,6 @@
 export const siteName = "Funny Eagle"
 export const author = 'Jason Yang'
-export const apiUrl = 'https://wwwiki.top'
+export const apiUrl = 'https://funnyeagle.cn'
 
 export const menu = [
   {

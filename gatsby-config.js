@@ -4,8 +4,8 @@ module.exports = {
   siteMetadata: {
     title: "Funny Eagle",
     author: 'Jason Yang',
-    description: "Funny Eagle",
-    siteUrl: 'http://funnyeagle.cn',
+    description: "Funny Eagle 技术博客;记录技术成长",
+    siteUrl: 'https://funnyeagle.cn',
     keywords: ['编程', '音乐', '生活'],
   },
   jsxRuntime: 'automatic',
