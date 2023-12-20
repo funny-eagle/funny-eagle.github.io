@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Gatsby 5.12.9"/><meta name="keywords" content="coding" data-gatsby-head="true"/><meta name="description" content="面向切面编程知识点整理。" data-gatsby-head="true"/><meta property="og:title" content="面向切面编程 | Funny Eagle" data-gatsby-head="true"/><meta property="og:description" content="面向切面编程知识点整理。" data-gatsby-head="true"/><meta name="twitter:title" content="面向切面编程 | Funny Eagle" data-gatsby-head="true"/><meta name="twitter:card" content="summary" data-gatsby-head="true"/><meta name="twitter:url" content="http://funnyeagle.cn/aspect-oriented-programming/" data-gatsby-head="true"/><meta name="twitter:description" content="面向切面编程知识点整理。" data-gatsby-head="true"/><meta name="twitter:creator" content="Jason Yang" data-gatsby-head="true"/><style data-href="/styles.4a78a689bc6a81440761.css" data-identity="gatsby-global-css">@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.woff2?t=1688391839150) format("woff2"),url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.woff?t=1688391839150) format("woff"),url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.ttf?t=1688391839150) format("truetype")}.iconfont{font-size:16px}.icon-rss:before{content:"\e739"}.icon-twitter:before{content:"\e743"}.icon-yinyong:before{content:"\e839"}.icon-menu:before{content:"\e677"}.icon-weibo:before{content:"\ea8c"}.icon-github-fill:before{content:"\eac8"}.icon-close:before{content:"\e6a7"}.icon-coding:before{content:"\e64c"}.icon-life:before{content:"\e627"}.icon-tag:before{content:"\e653"}.icon-person:before{content:"\e63a"}.icon-archive:before{content:"\eb4d"}.icon-music:before{content:"\e7c1"}:root{--radius:0.5rem}.light-theme{--backgroundColor:#f6f7fa;--backgroundColor2:#fff;--mainColor:#0a0a04;--mainDerive1:#046f3b;--mainDerive2:#0a0a04;--mainDerive3:#c6cb07;--linkColor:#046f3b;--fontColor:#543d5c;--codeBlock:#3c495b;--code:#c3c7cb;--divider:#d6d6d6;--buttonColor:#fff;--buttonBackgroundColor:#09aa6f;--hrColor:#dfdfdf;--tableHeadColor:#f8f9fa;--shadow:0 4px 10px rgba(0,2,4,.06),0 0 1px rgba(0,2,4,.11)}.dark-theme{--backgroundColor:#10171d;--backgroundColor2:#212327;--mainColor:#e8fa7f;--mainDerive1:#09aa6f;--mainDerive2:#e8fa7f;--mainDerive3:#e8fa7f;--linkColor:#09aa6f;--fontColor:#e5e5e5;--codeBlock:#181818;--code:#c3c7cb;--divider:#3e4b5e;--buttonColor:#fff;--buttonBackgroundColor:#09aa6f;--hrColor:#5c5c5c;--tableHeadColor:#3a3a3a;--shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.css-toc{color:var(--mainDerive1);display:block;font-size:14px;margin:0 20px;max-height:50vh;overflow-x:hidden;overflow-y:auto;position:sticky;top:40vh}.css-toc>ul>li{padding-left:6px}.css-toc a{box-shadow:none;color:var(--mainDerive1);display:inline-block;overflow:hidden;padding-top:2px;text-overflow:ellipsis;vertical-align:middle;width:100%}.css-toc .active{color:var(--mainColor)}.css-toc>ul{padding-left:0}.css-toc ul{list-style-type:none;margin-bottom:0}.css-toc ul p{display:inline-block;vertical-align:top}.css-toc li{white-space:nowrap}.css-toc li>p{margin:0;width:90%}.css-toc li>ul{opacity:.7;padding-left:1rem}.css-toc p{margin:0;padding:0}blockquote{border-left:4px solid var(--mainDerive2);box-shadow:0 2px 4px rgba(0,0,0,.14);box-sizing:border-box;color:var(--fontColor);margin:40px 20px;padding:35px 15px 10px;position:relative}blockquote:before{color:var(--mainDerive2);content:"\e839";display:inline-block;font-family:iconfont;font-size:35px;left:5px;line-height:1;position:absolute;top:5px;vertical-align:middle}blockquote p{line-height:1.7;margin:10px 0!important;padding:0}blockquote cite{color:#888;display:block;font-size:.9em;text-align:right}h1,h2,h3,h4,h5,h6{color:var(--linkColor);font-weight:600}h1{color:var(--mainColor);font-size:29px;font-weight:400;margin-bottom:0}h2,h3,h4,h5,h6{margin:.5em 0;position:relative}.list-item{background-color:var(--backgroundColor2);border-radius:var(--radius);margin:15px 0;padding:15px}.list-item .list-title{font-size:1.4rem;line-height:1.3;margin-bottom:.24rem}.list-item .list-title a{color:var(--mainColor)}.list-item .list-title a:hover{color:var(--mainDerive3)}.list-item .list-date{color:var(--mainDerive1);margin-bottom:16px;margin-top:6px}.list-item .list-excerpt{line-height:1.6;margin:10px 0 0;word-break:break-all}.say{align-items:center;display:flex;flex-direction:row;justify-content:center;margin:5px}.say .avatar{background-image:url(https://i.loli.net/2020/02/17/jrcMkuQxz6Z98H1.png);background-size:cover;height:80px;width:80px}.say .balloon2-left{background:#fff;border:3px solid #555;box-sizing:border-box;color:#555;display:inline-block;font-size:16px;margin:1.5em 0 1.5em 15px;padding:7px 10px;position:relative;width:calc(100% - 100px)}.say .balloon2-left:before{border:12px solid transparent;border-right-color:#fff;content:"";left:-24px;margin-top:-12px;position:absolute;top:50%;z-index:2}.say .balloon2-left:after{border:14px solid transparent;border-right-color:#555;content:"";left:-30px;margin-top:-14px;position:absolute;top:50%;z-index:1}.css-tags{display:flex;flex-wrap:wrap;justify-content:space-around;list-style:none;margin:10px 0;overflow:hidden;padding:0}.css-tag{border-radius:3px 0 0 3px;display:inline-block;font-size:1.1rem;font-weight:300;height:26px;line-height:26px;margin:0 10px 20px 0;padding:0 20px 0 23px;position:relative;text-decoration:none;transition:color .2s}.css-tag a{box-shadow:none;color:#999}.css-tag a:hover{color:var(--mainColor)}.css-comment-submit{margin:40px auto;max-width:400px}.css-comment-submit .title{margin-bottom:12px}.css-comment-submit button,.css-comment-submit input,.css-comment-submit textarea{box-sizing:border-box;display:block;width:100%}.css-comment-submit input,.css-comment-submit textarea{background-color:var(--backgroundColor2);border:none;border-radius:3px;font-family:sans-serif;height:2rem;line-height:2rem;margin:0 0 10px;padding:0 10px}.css-comment-submit textarea{height:6rem}.css-comment-submit .row{display:flex;justify-content:space-around}.css-comment-submit .row p{flex-basis:200px}.css-child-comment-display .css-reply,.css-comment-display .css-reply{opacity:0}.css-child-comment-display:hover .css-reply,.css-comment-display:hover .css-reply{opacity:1}.css-child-comment-display .name,.css-comment-display .name{color:var(--mainColor);font-weight:300}.css-child-comment-display .date,.css-comment-display .date{color:var(--mainDerive1);font:.8rem;padding:0 0 0 15px}.css-child-comment-display .message,.css-comment-display .message{white-space:pre-wrap}.css-child-comment-display,.css-comment-display{border-bottom:1px solid var(--hrColor);padding:20px}.css-child-comment-display{margin-left:30px}.title1{border-bottom:3px solid #000}.title2{border-bottom:3px solid #364e96;border-top:3px solid #364e96;color:#364e96;padding:.5em 0}.title3{background:transparent;padding:.25em .5em}.title3,.title4{border-left:5px solid #7db4e6;color:#494949}.title4{background:#f4f4f4;border-bottom:3px solid #d7d7d7;padding:.4em .5em}.title5{background:#dbebf8;border-radius:25px 0 0 25px;color:#505050;display:inline-block;line-height:1.3;padding:.5em;vertical-align:middle}.title5:before{color:#fff;content:"●";margin-right:8px}.title6{display:inline-block;margin-bottom:1em;position:relative}.title6:before{background-color:#000;border-radius:2px;bottom:-15px;content:"";display:inline-block;height:5px;left:50%;position:absolute;transform:translateX(-50%);width:60px}.title7{display:inline-block;padding:0 45px;position:relative}.title7:after,.title7:before{background-color:#000;content:"";display:inline-block;height:2px;position:absolute;top:50%;transform:rotate(-60deg);width:44px}.title7:before{left:0}.title7:after{right:0}.title8{padding:.25em 0;position:relative}.title8:after{background:linear-gradient(90deg,#e65a5a,transparent);content:"";display:block;height:4px}.title9{border-bottom:3px solid var(--mainDerive3);font-size:26px;font-weight:200;line-height:2;position:relative}.title9:after{border-bottom:3px solid var(--mainColor);bottom:-3px;content:" ";display:block;position:absolute;width:20%}.box1{border:3px solid #000;font-weight:700;margin:2em 0;padding:.5em 1em}.box1 p{margin:0;padding:0}.box2{background:#fff;border:3px solid #6091d3;border-radius:10px;color:#6091d3;font-weight:700;margin:2em 0;padding:.5em 1em}.box2 p{margin:0;padding:0}.box4{background:#cde4ff;border-bottom:5px solid #5989cf;border-top:5px solid #5989cf;color:#2c2c2f;margin:2em 0;padding:8px 19px}.box4 p{margin:0;padding:0}.box8{background:#fff8e8;border-left:10px solid #ffc06e;color:#232323;margin:2em 0;padding:.5em 1em}.box8 p{margin:0;padding:0}.box10{background:#e4fcff;border-top:6px solid #1dc1d6;box-shadow:0 3px 4px rgba(0,0,0,.32);color:#00bcd4;margin:2em 0;padding:.5em 1em}.box10 p{margin:0;padding:0}.box11{background:#fff;border-top:5px solid #5d627b;box-shadow:0 3px 5px rgba(0,0,0,.22);color:#5d627b;margin:2em 0;padding:.5em 1em}.box11 p{margin:0;padding:0}.box14{background:#d6ebff;border:2px dashed #fff;box-shadow:0 0 0 10px #d6ebff;margin:2em 0;padding:.2em .5em}.box14 p{margin:0;padding:0}.box16{background:repeating-linear-gradient(-45deg,#f0f8ff,#f0f8ff 3px,#e9f4ff 0,#e9f4ff 7px);margin:2em 0;padding:.5em 1em}.box16 p{margin:0;padding:0}.box17{border-bottom:2px solid #000;border-top:2px solid #000;margin:2em 0;padding:.5em 1.5em;position:relative}.box17:after,.box17:before{background-color:#000;content:"";height:calc(100% + 20px);position:absolute;top:-10px;width:2px}.box17:before{left:10px}.box17:after{right:10px}.box17 p{margin:0;padding:0}.box19{padding:.25em 1em;position:relative}.box19:after,.box19:before{content:"";display:inline-block;height:30px;position:absolute;width:20px}.box19:before{border-left:1px solid #5767bf;border-top:1px solid #5767bf;left:0;top:0}.box19:after{border-bottom:1px solid #5767bf;border-right:1px solid #5767bf;bottom:0;right:0}.box19 p{margin:0;padding:0}.box22{background:#f4f4f4;border-left:6px solid #5bb7ae;box-shadow:0 2px 3px rgba(0,0,0,.33);margin:1em 0;padding:.5em 1em}.box22 p{margin:0;padding:0}.box23{background:#fff0c6;border-radius:30px;margin:2em 0 2em 40px;padding:8px 15px;position:relative}.box23:before{font-size:15px;left:-40px}.box23:after,.box23:before{bottom:0;color:#fff0c6;content:"\e68a";font-family:iconfont;position:absolute}.box23:after{font-size:21px;left:-23px}.box23 p{margin:0;padding:0}.box24{background:#e6f4ff;color:#5c98d4;font-weight:700;margin:2em 0;padding:.5em .7em;position:relative}.box24:after{border:15px solid transparent;border-top-color:#e6f4ff;content:"";height:0;left:30px;position:absolute;top:100%;width:0}.box24 p{margin:0;padding:0}.box26{border:3px solid #5d627b;border-radius:8px;margin:2em;padding:1em;position:relative}.box26 a{color:#5d627b}.box26 .box-title{background:#fff;color:#5d627b;display:inline-block;font-size:19px;font-weight:700;left:10px;line-height:1;padding:0 9px;position:absolute;top:-13px}.box26 p{margin:0;padding:0}.box27{border:1px solid var(--mainColor);margin:2em 0;padding:.5em 1em;position:relative}.box27 pre{overflow-x:auto}.box27 .box-title{background:var(--mainColor);border-radius:5px 5px 0 0;color:#fff;display:inline-block;font-size:17px;height:25px;left:-1px;line-height:25px;padding:0 9px;position:absolute;top:-25px;vertical-align:middle}.box27 p{margin:0;padding:0}.box29{background:#dcefff;margin:2em 0}.box29 .box-title{background:#5fb3f5;color:#fff;font-size:1.2em;font-weight:700;letter-spacing:.05em;padding:4px;text-align:center}.box29 p{margin:0;padding:15px 20px}.link-card-wrapper{display:flex;flex-wrap:wrap}.link-card{align-items:center;background-color:var(--backgroundColor2);border-radius:3px;box-shadow:none;box-sizing:border-box;display:flex;flex-direction:row;justify-content:center;margin:10px;padding:12px;width:45%}.link-card .noimage,.link-card img{background-color:var(--backgroundColor);border-radius:3px;height:55px;width:55px}.link-card .noimage{flex-shrink:0;font-family:sans-serif;font-size:35px;font-weight:700;line-height:55px;text-align:center}.link-card img{margin:0!important;object-fit:contain}.link-card .info{flex-grow:1;min-width:0;padding-left:10px}.link-card .info .title{font-size:1.2rem}.link-card .info .description,.link-card .info .title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.link-card .info .description{color:#aaa;font-size:.7rem}.dark-theme .gatsby-code-title{background:var(--codeBlock)}.dark-theme code[class*=language-],.dark-theme pre[class*=language-]{word-wrap:normal;background:none;color:var(--code);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}.dark-theme :not(pre)>code[class*=language-],.dark-theme pre[class*=language-]{background:var(--codeBlock)}.dark-theme pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}.dark-theme pre[class*=language-]::selection{background:#27292a}.dark-theme code[class*=language-] ::selection,.dark-theme code[class*=language-]::selection,.dark-theme pre[class*=language-] ::selection,.dark-theme pre[class*=language-]::selection{background:hsla(0,0%,93%,.15)}.dark-theme :not(pre)>code[class*=language-]{border-radius:.3em;padding:.05em;white-space:normal}.dark-theme .token.cdata,.dark-theme .token.comment,.dark-theme .token.doctype,.dark-theme .token.prolog{color:#787878}.dark-theme .namespace,.dark-theme .token.punctuation{opacity:.7}.dark-theme .token.boolean,.dark-theme .token.deleted,.dark-theme .token.number,.dark-theme .token.tag{color:#cf694a}.dark-theme .token.builtin,.dark-theme .token.constant,.dark-theme .token.keyword,.dark-theme .token.property,.dark-theme .token.selector,.dark-theme .token.symbol{color:#f9ee9a}.dark-theme .language-css .token.string,.dark-theme .style .token.string,.dark-theme .token.attr-name,.dark-theme .token.attr-value,.dark-theme .token.char,.dark-theme .token.entity,.dark-theme .token.inserted,.dark-theme .token.operator,.dark-theme .token.string,.dark-theme .token.url,.dark-theme .token.variable{color:#919e6b}.dark-theme .token.atrule{color:#7386a5}.dark-theme .token.important,.dark-theme .token.regex{color:#e9c163}.dark-theme .token.bold,.dark-theme .token.important{font-weight:700}.dark-theme .token.italic{font-style:italic}.dark-theme .token.entity{cursor:help}.dark-theme pre[data-line]{padding:1em 0 1em 3em;position:relative}.dark-theme .language-markup .token.attr-name,.dark-theme .language-markup .token.punctuation,.dark-theme .language-markup .token.tag{color:#ad895c}.dark-theme .token{position:relative;z-index:1}.dark-theme .line-highlight{background:rgba(84,84,84,.25);background:linear-gradient(90deg,rgba(84,84,84,.1) 70%,rgba(84,84,84,0));border-bottom:1px dashed #545454;border-top:1px dashed #545454;left:0;line-height:inherit;margin-top:.75em;padding-bottom:inherit;padding-left:0;padding-right:0;padding-top:inherit;pointer-events:none;position:absolute;right:0;white-space:pre;z-index:0}.dark-theme .line-highlight:before,.dark-theme .line-highlight[data-end]:after{background-color:#8794a6;border-radius:999px;color:#f5f2f0;content:attr(data-start);font:700 65%/1.5 sans-serif;left:.6em;min-width:1em;padding:0 .5em;position:absolute;text-align:center;top:.4em;vertical-align:.3em}.dark-theme .line-highlight[data-end]:after{bottom:.4em;content:attr(data-end);top:auto}.dark-theme .language-text,.dark-theme a{word-break:break-all!important}.light-theme .gatsby-code-title{background:#faf8f5}.light-theme code[class*=language-],.light-theme pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}.light-theme pre[class*=language-]{margin:.5em 0;overflow:visible;padding:0;position:relative}.light-theme pre[class*=language-]>code{position:relative}.light-theme code[class*=language]{background:#faf8f5;border-radius:3px;display:block;height:inherit;margin:0;max-height:inherit;overflow:auto;padding:1em}.light-theme :not(pre)>code[class*=language-]{color:#c92c2c;display:inline;padding:.15em;position:relative;white-space:normal}.light-theme .token.block-comment,.light-theme .token.cdata,.light-theme .token.comment,.light-theme .token.doctype,.light-theme .token.prolog{color:#7d8b99}.light-theme .token.punctuation{color:#5f6364}.light-theme .token.boolean,.light-theme .token.constant,.light-theme .token.deleted,.light-theme .token.function-name,.light-theme .token.number,.light-theme .token.property,.light-theme .token.symbol,.light-theme .token.tag{color:#c92c2c}.light-theme .token.attr-name,.light-theme .token.builtin,.light-theme .token.char,.light-theme .token.function,.light-theme .token.inserted,.light-theme .token.selector,.light-theme .token.string{color:#2f9c0a}.light-theme .token.entity,.light-theme .token.operator,.light-theme .token.url,.light-theme .token.variable{background:hsla(0,0%,100%,.5);color:#a67f59}.light-theme .token.atrule,.light-theme .token.attr-value,.light-theme .token.class-name,.light-theme .token.keyword{color:#1990b8}.light-theme .token.important,.light-theme .token.regex{color:#e90}.light-theme .language-css .token.string,.light-theme .style .token.string{background:hsla(0,0%,100%,.5);color:#a67f59}.light-theme .token.important{font-weight:400}.light-theme .token.bold{font-weight:700}.light-theme .token.italic{font-style:italic}.light-theme .token.entity{cursor:help}.light-theme .namespace{opacity:.7}@media screen and (max-width:767px){.light-theme pre[class*=language-]:after,.light-theme pre[class*=language-]:before{bottom:14px;box-shadow:none}}.light-theme .token.cr:before,.light-theme .token.lf:before,.light-theme .token.tab:not(:empty):before{color:#e0d7d1}.light-theme pre[class*=language-].line-numbers.line-numbers{padding-left:0}.light-theme pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}.light-theme pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}.light-theme pre[class*=language-][data-line]{padding-bottom:0;padding-left:0;padding-top:0}.light-theme pre[data-line] code{padding-left:4em;position:relative}.light-theme pre .line-highlight{margin-top:0}.iconfont{-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale;font-family:iconfont!important;font-style:normal}::-webkit-scrollbar{height:10px;width:10px}::-webkit-scrollbar-track{background:#ddd}::-webkit-scrollbar-thumb{background:var(--mainDerive1)}.usubeni{color:grey}.inline-block{display:inline-block}article,aside,div,footer,header,p{box-sizing:border-box}body{-webkit-touch-callout:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-font-smoothing:antialiased!important;background-color:var(--backgroundColor);color:var(--fontColor);font-family:Courier New,SimSun,STSong,Hiragino Sans GB,Microsoft YaHei,Source Han Sans CN,WenQuanYi Micro Hei;font-size:16px;margin:0;outline:none;padding:0;transition:background-color .5s ease-in-out}.mask{animation:fade-out 4s linear;animation-fill-mode:forwards;background:linear-gradient(90deg,#fff,#fff 50%,hsla(0,0%,100%,0));height:100%;left:0;position:fixed;top:0;width:300%;z-index:20}@keyframes fade-out{0%{left:0;opacity:1}to{left:-300%;opacity:0;width:0}}img{background:var(--backgroundColor)}hr{background:var(--hrColor);border:none;color:var(--hrColor);height:1px;margin-top:40px;width:100%}a{color:var(--linkColor);text-decoration:none;word-break:break-all}footer{font-family:sans-serif;font-size:14px;padding:30px 0;text-align:center}table{border:1px solid #e9e9e9;border-collapse:collapse;font-size:15px;margin:1em 0;overflow-wrap:break-word;table-layout:fixed;width:100%}table th{background-color:var(--tableHeadColor);text-align:left}table tr>td,table tr>th{border:1px solid #e9e9e9;padding:.5em .8em}li>p{margin:0}button{background-color:var(--buttonBackgroundColor);border:none;border-radius:3px;color:var(--buttonColor);cursor:pointer;display:inline-block;margin-bottom:.3rem;padding:.5rem 1rem;text-decoration:none;transition:.4s}input,textarea{background:transparent;border:none;color:var(--fontColor);outline:none}button,input{text-align:center}.gatsby-resp-image-link{box-shadow:none}.page-name{color:#046f3b;font-size:1em;text-align:center}.css-aside{margin-top:30px;width:220px}.css-aside .column{align-items:center;flex-direction:column}.css-aside .row{flex-direction:row;flex-wrap:wrap;justify-content:space-around}.css-aside .row a{border:none!important}.css-aside .css-menu{display:flex;margin:10px auto}.css-aside .css-menu a{box-shadow:none;color:var(--mainDerive4);display:inline-block;font-size:1.1rem;letter-spacing:7px;line-height:1.8;padding:.25em 1em;position:relative;vertical-align:middle;word-spacing:5px}.css-aside .css-menu a:hover{color:var(--mainDerive3)}.css-aside .css-menu a .iconfont{font-size:1.5rem;margin-right:.3rem;vertical-align:middle}.css-aside .css-menu a+a{border-top:1px solid var(--divider)}.css-aside .css-bio{align-items:center;box-sizing:border-box;color:var(--linkColor);display:flex;padding:15px 15px 0;text-align:center}.css-aside .css-bio .css-avatar{border-radius:50%;margin-right:12px;overflow:hidden;width:60px}.css-aside .css-bio .author-wrapper{flex-grow:1}.css-aside .css-bio .author{font-size:1.2rem;text-align:left}.css-header a .logo{display:block;height:100%;transition:background-color .5s ease-in-out;width:100%}.css-header a .logo-mobile{color:#919404;display:block;font-size:1.5rem;font-weight:700;margin-left:2rem}.social-media{display:flex;justify-content:space-around;margin:auto;padding-top:.5rem;width:200px}.social-media a{box-shadow:none}.social-media .iconfont{color:var(--linkColor);font-size:1.3rem}.css-main{display:flex;justify-content:center;margin:auto;max-width:1200px}.css-post{flex-grow:1;line-height:1.8;margin:20px;max-width:900px}.css-post strong{margin:3px}.css-post .css-post-main{background-color:var(--backgroundColor2);border-radius:var(--radius);margin-top:3rem;padding:15px}.css-post .css-post-main p{word-wrap:break-word;margin-bottom:29px;word-break:break-word}.css-post .css-post-main ul{margin-bottom:29px}.css-post .css-post-main p+ol,.css-post .css-post-main p+ul{margin-bottom:1.5em;margin-top:-1.3em}.css-post .css-post-main p>img{display:block;left:-15px;margin:auto;max-height:650px;max-width:calc(100% + 30px);position:relative}.css-post .css-post-main .anchor{box-shadow:none}.css-post .css-post-main .anchor svg{fill:gray}.css-post .css-post-main a:active,.css-post .css-post-main a:hover{box-shadow:0 1px 0 0 currentColor}.css-post .css-archive{padding:15px 25px}.css-post .css-archive .item{background-color:var(--backgroundColor2);border-radius:var(--radius);display:flex;font-size:16px;margin-bottom:6px;padding:6px 12px}.css-post .css-archive .item .date{display:inline-block;margin-right:10px;opacity:.6;text-align:left;width:4em}.css-post .css-archive .item .title{box-shadow:none;flex-grow:1;width:300px}.css-post table{border:none;overflow:auto}.css-info{color:var(--mainDerive1);font-size:1em}.css-info .iconfont{padding:0 5px}.css-info .iconfont:first-of-type{padding:0 5px 0 0}.menu-button{display:none}.page-description{margin-bottom:.5rem}.inline-button{color:var(--linkColor);cursor:pointer;margin-left:1rem;transition:.4s}.inline-button:hover{color:var(--mainColor)}.theme-toggle{background-color:var(--backgroundColor);border-radius:50%;bottom:18px;box-shadow:var(--shadow);cursor:pointer;font-size:16px;font-weight:200;font-weight:bolder;padding:10px;position:fixed;right:12px}@keyframes fade-in{0%{filter:blur(8px);opacity:0}to{filter:blur(0);opacity:1}}@media screen and (max-width:1000px){.css-main{display:block;width:100%}.css-post{margin:45px auto auto;padding:15px;width:100%}.css-header{background-color:var(--backgroundColor2);height:60px;left:0;line-height:60px;padding:0 10px;position:fixed;top:0;width:100%;z-index:9}.css-header a{height:100%;padding-left:1rem;width:20%;word-break:normal!important}.css-header a .logo-mobile{color:#919404;display:inline;font-size:1rem;font-weight:700}.css-header .page-description,.css-header a .logo{display:none}.css-header .page-name{color:#046f3b;display:inline;margin-left:1em}.css-header .menu-button{cursor:pointer;display:block;position:inherit;top:0;-webkit-user-select:none;user-select:none}.css-header .menu-button .iconfont{font-size:30px}.css-aside{background-color:var(--backgroundColor2);bottom:0;overflow-y:auto;padding:50px 0 0;position:fixed;right:-100%;top:0;transition:all .6s ease-in-out;width:15rem;z-index:9}.open{left:0}.link-card-wrapper{width:100%}}.gatsby-resp-image-wrapper{max-width:100%!important}.language-text{word-break:break-all!important}.anchor.before{left:unset!important;right:0!important}.code-title{border-top-right-radius:.3em;display:block;margin-bottom:0;top:10px;width:100%}.code-title,.code-title span{border-top-left-radius:.3em;position:relative}.code-title span{border-bottom-right-radius:.3em;display:inline;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;opacity:.7;padding:3px 12px;top:1px}.button-wrapper{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding-top:30px}.button-wrapper .page-button{display:block}</style><link rel="alternate" type="application/rss+xml" title="Funny Eagle" href="/rss.xml"/><style type="text/css">
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Gatsby 5.4.1"/><meta name="keywords" content="coding" data-gatsby-head="true"/><meta name="description" content="面向切面编程知识点整理。" data-gatsby-head="true"/><meta property="og:title" content="面向切面编程 | Funny Eagle" data-gatsby-head="true"/><meta property="og:description" content="面向切面编程知识点整理。" data-gatsby-head="true"/><meta name="twitter:title" content="面向切面编程 | Funny Eagle" data-gatsby-head="true"/><meta name="twitter:card" content="summary" data-gatsby-head="true"/><meta name="twitter:url" content="https://funnyeagle.cn/aspect-oriented-programming/" data-gatsby-head="true"/><meta name="twitter:description" content="面向切面编程知识点整理。" data-gatsby-head="true"/><meta name="twitter:creator" content="Jason Yang" data-gatsby-head="true"/><style data-href="/styles.f8ca6e598f2cd78c849d.css" data-identity="gatsby-global-css">@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.woff2?t=1688391839150) format("woff2"),url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.woff?t=1688391839150) format("woff"),url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.ttf?t=1688391839150) format("truetype")}.iconfont{font-size:16px}.icon-rss:before{content:"\e739"}.icon-twitter:before{content:"\e743"}.icon-yinyong:before{content:"\e839"}.icon-menu:before{content:"\e677"}.icon-weibo:before{content:"\ea8c"}.icon-github-fill:before{content:"\eac8"}.icon-close:before{content:"\e6a7"}.icon-coding:before{content:"\e64c"}.icon-life:before{content:"\e627"}.icon-tag:before{content:"\e653"}.icon-person:before{content:"\e63a"}.icon-archive:before{content:"\eb4d"}.icon-music:before{content:"\e7c1"}:root{--radius:0.5rem}.light-theme{--backgroundColor:#f6f7fa;--backgroundColor2:#fff;--mainColor:#0a0a04;--mainDerive1:#046f3b;--mainDerive2:#0a0a04;--mainDerive3:#c6cb07;--linkColor:#046f3b;--fontColor:#543d5c;--codeBlock:#3c495b;--code:#c3c7cb;--divider:#d6d6d6;--buttonColor:#fff;--buttonBackgroundColor:#09aa6f;--hrColor:#dfdfdf;--tableHeadColor:#f8f9fa;--shadow:0 4px 10px rgba(0,2,4,.06),0 0 1px rgba(0,2,4,.11)}.dark-theme{--backgroundColor:#10171d;--backgroundColor2:#212327;--mainColor:#e8fa7f;--mainDerive1:#09aa6f;--mainDerive2:#e8fa7f;--mainDerive3:#e8fa7f;--linkColor:#09aa6f;--fontColor:#e5e5e5;--codeBlock:#181818;--code:#c3c7cb;--divider:#3e4b5e;--buttonColor:#fff;--buttonBackgroundColor:#09aa6f;--hrColor:#5c5c5c;--tableHeadColor:#3a3a3a;--shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.css-toc{color:var(--mainDerive1);display:block;font-size:14px;margin:0 20px;max-height:50vh;overflow-x:hidden;overflow-y:auto;position:-webkit-sticky;position:sticky;top:40vh}.css-toc>ul>li{padding-left:6px}.css-toc a{box-shadow:none;color:var(--mainDerive1);display:inline-block;overflow:hidden;padding-top:2px;text-overflow:ellipsis;vertical-align:middle;width:100%}.css-toc .active{color:var(--mainColor)}.css-toc>ul{padding-left:0}.css-toc ul{list-style-type:none;margin-bottom:0}.css-toc ul p{display:inline-block;vertical-align:top}.css-toc li{white-space:nowrap}.css-toc li>p{margin:0;width:90%}.css-toc li>ul{opacity:.7;padding-left:1rem}.css-toc p{margin:0;padding:0}blockquote{border-left:4px solid var(--mainDerive2);box-shadow:0 2px 4px rgba(0,0,0,.14);box-sizing:border-box;color:var(--fontColor);margin:40px 20px;padding:35px 15px 10px;position:relative}blockquote:before{color:var(--mainDerive2);content:"\e839";display:inline-block;font-family:iconfont;font-size:35px;left:5px;line-height:1;position:absolute;top:5px;vertical-align:middle}blockquote p{line-height:1.7;margin:10px 0!important;padding:0}blockquote cite{color:#888;display:block;font-size:.9em;text-align:right}h1,h2,h3,h4,h5,h6{color:var(--linkColor);font-weight:600}h1{color:var(--mainColor);font-size:29px;font-weight:400;margin-bottom:0}h2,h3,h4,h5,h6{margin:.5em 0;position:relative}.list-item{background-color:var(--backgroundColor2);border-radius:var(--radius);margin:15px 0;padding:15px}.list-item .list-title{font-size:1.4rem;line-height:1.3;margin-bottom:.24rem}.list-item .list-title a{color:var(--mainColor)}.list-item .list-title a:hover{color:var(--mainDerive3)}.list-item .list-date{color:var(--mainDerive1);margin-bottom:16px;margin-top:6px}.list-item .list-excerpt{line-height:1.6;margin:10px 0 0;word-break:break-all}.say{align-items:center;display:flex;flex-direction:row;justify-content:center;margin:5px}.say .avatar{background-image:url(https://i.loli.net/2020/02/17/jrcMkuQxz6Z98H1.png);background-size:cover;height:80px;width:80px}.say .balloon2-left{background:#fff;border:3px solid #555;box-sizing:border-box;color:#555;display:inline-block;font-size:16px;margin:1.5em 0 1.5em 15px;padding:7px 10px;position:relative;width:calc(100% - 100px)}.say .balloon2-left:before{border:12px solid transparent;border-right-color:#fff;content:"";left:-24px;margin-top:-12px;position:absolute;top:50%;z-index:2}.say .balloon2-left:after{border:14px solid transparent;border-right-color:#555;content:"";left:-30px;margin-top:-14px;position:absolute;top:50%;z-index:1}.css-tags{display:flex;flex-wrap:wrap;justify-content:space-around;list-style:none;margin:10px 0;overflow:hidden;padding:0}.css-tag{border-radius:3px 0 0 3px;display:inline-block;font-size:1.1rem;font-weight:300;height:26px;line-height:26px;margin:0 10px 20px 0;padding:0 20px 0 23px;position:relative;text-decoration:none;transition:color .2s}.css-tag a{box-shadow:none;color:#999}.css-tag a:hover{color:var(--mainColor)}.css-comment-submit{margin:40px auto;max-width:400px}.css-comment-submit .title{margin-bottom:12px}.css-comment-submit button,.css-comment-submit input,.css-comment-submit textarea{box-sizing:border-box;display:block;width:100%}.css-comment-submit input,.css-comment-submit textarea{background-color:var(--backgroundColor2);border:none;border-radius:3px;font-family:sans-serif;height:2rem;line-height:2rem;margin:0 0 10px;padding:0 10px}.css-comment-submit textarea{height:6rem}.css-comment-submit .row{display:flex;justify-content:space-around}.css-comment-submit .row p{flex-basis:200px}.css-child-comment-display .css-reply,.css-comment-display .css-reply{opacity:0}.css-child-comment-display:hover .css-reply,.css-comment-display:hover .css-reply{opacity:1}.css-child-comment-display .name,.css-comment-display .name{color:var(--mainColor);font-weight:300}.css-child-comment-display .date,.css-comment-display .date{color:var(--mainDerive1);font:.8rem;padding:0 0 0 15px}.css-child-comment-display .message,.css-comment-display .message{white-space:pre-wrap}.css-child-comment-display,.css-comment-display{border-bottom:1px solid var(--hrColor);padding:20px}.css-child-comment-display{margin-left:30px}.title1{border-bottom:3px solid #000}.title2{border-bottom:3px solid #364e96;border-top:3px solid #364e96;color:#364e96;padding:.5em 0}.title3{background:transparent;padding:.25em .5em}.title3,.title4{border-left:5px solid #7db4e6;color:#494949}.title4{background:#f4f4f4;border-bottom:3px solid #d7d7d7;padding:.4em .5em}.title5{background:#dbebf8;border-radius:25px 0 0 25px;color:#505050;display:inline-block;line-height:1.3;padding:.5em;vertical-align:middle}.title5:before{color:#fff;content:"●";margin-right:8px}.title6{display:inline-block;margin-bottom:1em;position:relative}.title6:before{background-color:#000;border-radius:2px;bottom:-15px;content:"";display:inline-block;height:5px;left:50%;position:absolute;transform:translateX(-50%);width:60px}.title7{display:inline-block;padding:0 45px;position:relative}.title7:after,.title7:before{background-color:#000;content:"";display:inline-block;height:2px;position:absolute;top:50%;transform:rotate(-60deg);width:44px}.title7:before{left:0}.title7:after{right:0}.title8{padding:.25em 0;position:relative}.title8:after{background:linear-gradient(90deg,#e65a5a,transparent);content:"";display:block;height:4px}.title9{border-bottom:3px solid var(--mainDerive3);font-size:26px;font-weight:200;line-height:2;position:relative}.title9:after{border-bottom:3px solid var(--mainColor);bottom:-3px;content:" ";display:block;position:absolute;width:20%}.box1{border:3px solid #000;font-weight:700;margin:2em 0;padding:.5em 1em}.box1 p{margin:0;padding:0}.box2{background:#fff;border:3px solid #6091d3;border-radius:10px;color:#6091d3;font-weight:700;margin:2em 0;padding:.5em 1em}.box2 p{margin:0;padding:0}.box4{background:#cde4ff;border-bottom:5px solid #5989cf;border-top:5px solid #5989cf;color:#2c2c2f;margin:2em 0;padding:8px 19px}.box4 p{margin:0;padding:0}.box8{background:#fff8e8;border-left:10px solid #ffc06e;color:#232323;margin:2em 0;padding:.5em 1em}.box8 p{margin:0;padding:0}.box10{background:#e4fcff;border-top:6px solid #1dc1d6;box-shadow:0 3px 4px rgba(0,0,0,.32);color:#00bcd4;margin:2em 0;padding:.5em 1em}.box10 p{margin:0;padding:0}.box11{background:#fff;border-top:5px solid #5d627b;box-shadow:0 3px 5px rgba(0,0,0,.22);color:#5d627b;margin:2em 0;padding:.5em 1em}.box11 p{margin:0;padding:0}.box14{background:#d6ebff;border:2px dashed #fff;box-shadow:0 0 0 10px #d6ebff;margin:2em 0;padding:.2em .5em}.box14 p{margin:0;padding:0}.box16{background:repeating-linear-gradient(-45deg,#f0f8ff,#f0f8ff 3px,#e9f4ff 0,#e9f4ff 7px);margin:2em 0;padding:.5em 1em}.box16 p{margin:0;padding:0}.box17{border-bottom:2px solid #000;border-top:2px solid #000;margin:2em 0;padding:.5em 1.5em;position:relative}.box17:after,.box17:before{background-color:#000;content:"";height:calc(100% + 20px);position:absolute;top:-10px;width:2px}.box17:before{left:10px}.box17:after{right:10px}.box17 p{margin:0;padding:0}.box19{padding:.25em 1em;position:relative}.box19:after,.box19:before{content:"";display:inline-block;height:30px;position:absolute;width:20px}.box19:before{border-left:1px solid #5767bf;border-top:1px solid #5767bf;left:0;top:0}.box19:after{border-bottom:1px solid #5767bf;border-right:1px solid #5767bf;bottom:0;right:0}.box19 p{margin:0;padding:0}.box22{background:#f4f4f4;border-left:6px solid #5bb7ae;box-shadow:0 2px 3px rgba(0,0,0,.33);margin:1em 0;padding:.5em 1em}.box22 p{margin:0;padding:0}.box23{background:#fff0c6;border-radius:30px;margin:2em 0 2em 40px;padding:8px 15px;position:relative}.box23:before{font-size:15px;left:-40px}.box23:after,.box23:before{bottom:0;color:#fff0c6;content:"\e68a";font-family:iconfont;position:absolute}.box23:after{font-size:21px;left:-23px}.box23 p{margin:0;padding:0}.box24{background:#e6f4ff;color:#5c98d4;font-weight:700;margin:2em 0;padding:.5em .7em;position:relative}.box24:after{border:15px solid transparent;border-top-color:#e6f4ff;content:"";height:0;left:30px;position:absolute;top:100%;width:0}.box24 p{margin:0;padding:0}.box26{border:3px solid #5d627b;border-radius:8px;margin:2em;padding:1em;position:relative}.box26 a{color:#5d627b}.box26 .box-title{background:#fff;color:#5d627b;display:inline-block;font-size:19px;font-weight:700;left:10px;line-height:1;padding:0 9px;position:absolute;top:-13px}.box26 p{margin:0;padding:0}.box27{border:1px solid var(--mainColor);margin:2em 0;padding:.5em 1em;position:relative}.box27 pre{overflow-x:auto}.box27 .box-title{background:var(--mainColor);border-radius:5px 5px 0 0;color:#fff;display:inline-block;font-size:17px;height:25px;left:-1px;line-height:25px;padding:0 9px;position:absolute;top:-25px;vertical-align:middle}.box27 p{margin:0;padding:0}.box29{background:#dcefff;margin:2em 0}.box29 .box-title{background:#5fb3f5;color:#fff;font-size:1.2em;font-weight:700;letter-spacing:.05em;padding:4px;text-align:center}.box29 p{margin:0;padding:15px 20px}.link-card-wrapper{display:flex;flex-wrap:wrap}.link-card{align-items:center;background-color:var(--backgroundColor2);border-radius:3px;box-shadow:none;box-sizing:border-box;display:flex;flex-direction:row;justify-content:center;margin:10px;padding:12px;width:45%}.link-card .noimage,.link-card img{background-color:var(--backgroundColor);border-radius:3px;height:55px;width:55px}.link-card .noimage{flex-shrink:0;font-family:sans-serif;font-size:35px;font-weight:700;line-height:55px;text-align:center}.link-card img{margin:0!important;object-fit:contain}.link-card .info{flex-grow:1;min-width:0;padding-left:10px}.link-card .info .title{font-size:1.2rem}.link-card .info .description,.link-card .info .title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.link-card .info .description{color:#aaa;font-size:.7rem}.dark-theme .gatsby-code-title{background:var(--codeBlock)}.dark-theme code[class*=language-],.dark-theme pre[class*=language-]{word-wrap:normal;background:none;color:var(--code);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}.dark-theme :not(pre)>code[class*=language-],.dark-theme pre[class*=language-]{background:var(--codeBlock)}.dark-theme pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}.dark-theme pre[class*=language-]::selection{background:#27292a}.dark-theme code[class*=language-] ::selection,.dark-theme code[class*=language-]::selection,.dark-theme pre[class*=language-] ::selection,.dark-theme pre[class*=language-]::selection{background:hsla(0,0%,93%,.15)}.dark-theme :not(pre)>code[class*=language-]{border-radius:.3em;padding:.05em;white-space:normal}.dark-theme .token.cdata,.dark-theme .token.comment,.dark-theme .token.doctype,.dark-theme .token.prolog{color:#787878}.dark-theme .namespace,.dark-theme .token.punctuation{opacity:.7}.dark-theme .token.boolean,.dark-theme .token.deleted,.dark-theme .token.number,.dark-theme .token.tag{color:#cf694a}.dark-theme .token.builtin,.dark-theme .token.constant,.dark-theme .token.keyword,.dark-theme .token.property,.dark-theme .token.selector,.dark-theme .token.symbol{color:#f9ee9a}.dark-theme .language-css .token.string,.dark-theme .style .token.string,.dark-theme .token.attr-name,.dark-theme .token.attr-value,.dark-theme .token.char,.dark-theme .token.entity,.dark-theme .token.inserted,.dark-theme .token.operator,.dark-theme .token.string,.dark-theme .token.url,.dark-theme .token.variable{color:#919e6b}.dark-theme .token.atrule{color:#7386a5}.dark-theme .token.important,.dark-theme .token.regex{color:#e9c163}.dark-theme .token.bold,.dark-theme .token.important{font-weight:700}.dark-theme .token.italic{font-style:italic}.dark-theme .token.entity{cursor:help}.dark-theme pre[data-line]{padding:1em 0 1em 3em;position:relative}.dark-theme .language-markup .token.attr-name,.dark-theme .language-markup .token.punctuation,.dark-theme .language-markup .token.tag{color:#ad895c}.dark-theme .token{position:relative;z-index:1}.dark-theme .line-highlight{background:rgba(84,84,84,.25);background:linear-gradient(90deg,rgba(84,84,84,.1) 70%,rgba(84,84,84,0));border-bottom:1px dashed #545454;border-top:1px dashed #545454;left:0;line-height:inherit;margin-top:.75em;padding-bottom:inherit;padding-left:0;padding-right:0;padding-top:inherit;pointer-events:none;position:absolute;right:0;white-space:pre;z-index:0}.dark-theme .line-highlight:before,.dark-theme .line-highlight[data-end]:after{background-color:#8794a6;border-radius:999px;color:#f5f2f0;content:attr(data-start);font:700 65%/1.5 sans-serif;left:.6em;min-width:1em;padding:0 .5em;position:absolute;text-align:center;top:.4em;vertical-align:.3em}.dark-theme .line-highlight[data-end]:after{bottom:.4em;content:attr(data-end);top:auto}.dark-theme .language-text,.dark-theme a{word-break:break-all!important}.light-theme .gatsby-code-title{background:#faf8f5}.light-theme code[class*=language-],.light-theme pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}.light-theme pre[class*=language-]{margin:.5em 0;overflow:visible;padding:0;position:relative}.light-theme pre[class*=language-]>code{position:relative}.light-theme code[class*=language]{background:#faf8f5;border-radius:3px;display:block;height:inherit;margin:0;max-height:inherit;overflow:auto;padding:1em}.light-theme :not(pre)>code[class*=language-]{color:#c92c2c;display:inline;padding:.15em;position:relative;white-space:normal}.light-theme .token.block-comment,.light-theme .token.cdata,.light-theme .token.comment,.light-theme .token.doctype,.light-theme .token.prolog{color:#7d8b99}.light-theme .token.punctuation{color:#5f6364}.light-theme .token.boolean,.light-theme .token.constant,.light-theme .token.deleted,.light-theme .token.function-name,.light-theme .token.number,.light-theme .token.property,.light-theme .token.symbol,.light-theme .token.tag{color:#c92c2c}.light-theme .token.attr-name,.light-theme .token.builtin,.light-theme .token.char,.light-theme .token.function,.light-theme .token.inserted,.light-theme .token.selector,.light-theme .token.string{color:#2f9c0a}.light-theme .token.entity,.light-theme .token.operator,.light-theme .token.url,.light-theme .token.variable{background:hsla(0,0%,100%,.5);color:#a67f59}.light-theme .token.atrule,.light-theme .token.attr-value,.light-theme .token.class-name,.light-theme .token.keyword{color:#1990b8}.light-theme .token.important,.light-theme .token.regex{color:#e90}.light-theme .language-css .token.string,.light-theme .style .token.string{background:hsla(0,0%,100%,.5);color:#a67f59}.light-theme .token.important{font-weight:400}.light-theme .token.bold{font-weight:700}.light-theme .token.italic{font-style:italic}.light-theme .token.entity{cursor:help}.light-theme .namespace{opacity:.7}@media screen and (max-width:767px){.light-theme pre[class*=language-]:after,.light-theme pre[class*=language-]:before{bottom:14px;box-shadow:none}}.light-theme .token.cr:before,.light-theme .token.lf:before,.light-theme .token.tab:not(:empty):before{color:#e0d7d1}.light-theme pre[class*=language-].line-numbers.line-numbers{padding-left:0}.light-theme pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}.light-theme pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}.light-theme pre[class*=language-][data-line]{padding-bottom:0;padding-left:0;padding-top:0}.light-theme pre[data-line] code{padding-left:4em;position:relative}.light-theme pre .line-highlight{margin-top:0}.iconfont{-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale;font-family:iconfont!important;font-style:normal}::-webkit-scrollbar{height:10px;width:10px}::-webkit-scrollbar-track{background:#ddd}::-webkit-scrollbar-thumb{background:var(--mainDerive1)}.usubeni{color:grey}.inline-block{display:inline-block}article,aside,div,footer,header,p{box-sizing:border-box}body{-webkit-touch-callout:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-font-smoothing:antialiased!important;background-color:var(--backgroundColor);color:var(--fontColor);font-family:Courier New,SimSun,STSong,Hiragino Sans GB,Microsoft YaHei,Source Han Sans CN,WenQuanYi Micro Hei;font-size:16px;margin:0;outline:none;padding:0;transition:background-color .5s ease-in-out}.mask{animation:fade-out 4s linear;animation-fill-mode:forwards;background:linear-gradient(90deg,#fff,#fff 50%,hsla(0,0%,100%,0));height:100%;left:0;position:fixed;top:0;width:300%;z-index:20}@keyframes fade-out{0%{left:0;opacity:1}to{left:-300%;opacity:0;width:0}}img{background:var(--backgroundColor)}hr{background:var(--hrColor);border:none;color:var(--hrColor);height:1px;margin-top:40px;width:100%}a{color:var(--linkColor);text-decoration:none;word-break:break-all}footer{font-family:sans-serif;font-size:14px;padding:30px 0;text-align:center}table{border:1px solid #e9e9e9;border-collapse:collapse;font-size:15px;margin:1em 0;overflow-wrap:break-word;table-layout:fixed;width:100%}table th{background-color:var(--tableHeadColor);text-align:left}table tr>td,table tr>th{border:1px solid #e9e9e9;padding:.5em .8em}li>p{margin:0}button{background-color:var(--buttonBackgroundColor);border:none;border-radius:3px;color:var(--buttonColor);cursor:pointer;display:inline-block;margin-bottom:.3rem;padding:.5rem 1rem;text-decoration:none;transition:.4s}input,textarea{background:transparent;border:none;color:var(--fontColor);outline:none}button,input{text-align:center}.gatsby-resp-image-link{box-shadow:none}.page-name{color:#046f3b;font-size:1em;text-align:center}.css-aside{margin-top:30px;width:220px}.css-aside .column{align-items:center;flex-direction:column}.css-aside .row{flex-direction:row;flex-wrap:wrap;justify-content:space-around}.css-aside .row a{border:none!important}.css-aside .css-menu{display:flex;margin:10px auto}.css-aside .css-menu a{box-shadow:none;color:var(--mainDerive4);display:inline-block;font-size:1.1rem;letter-spacing:7px;line-height:1.8;padding:.25em 1em;position:relative;vertical-align:middle;word-spacing:5px}.css-aside .css-menu a:hover{color:var(--mainDerive3)}.css-aside .css-menu a .iconfont{font-size:1.5rem;margin-right:.3rem;vertical-align:middle}.css-aside .css-menu a+a{border-top:1px solid var(--divider)}.css-aside .css-bio{align-items:center;box-sizing:border-box;color:var(--linkColor);display:flex;padding:15px 15px 0;text-align:center}.css-aside .css-bio .css-avatar{border-radius:50%;margin-right:12px;overflow:hidden;width:60px}.css-aside .css-bio .author-wrapper{flex-grow:1}.css-aside .css-bio .author{font-size:1.2rem;text-align:left}.css-header a .logo{display:block;height:100%;transition:background-color .5s ease-in-out;width:100%}.css-header a .logo-mobile{color:#919404;display:block;font-size:1.5rem;font-weight:700;margin-left:2rem}.social-media{display:flex;justify-content:space-around;margin:auto;padding-top:.5rem;width:200px}.social-media a{box-shadow:none}.social-media .iconfont{color:var(--linkColor);font-size:1.3rem}.css-main{display:flex;justify-content:center;margin:auto;max-width:1200px}.css-post{flex-grow:1;line-height:1.8;margin:20px;max-width:900px}.css-post strong{margin:3px}.css-post .css-post-main{background-color:var(--backgroundColor2);border-radius:var(--radius);margin-top:3rem;padding:15px}.css-post .css-post-main p{word-wrap:break-word;margin-bottom:29px;word-break:break-word}.css-post .css-post-main ul{margin-bottom:29px}.css-post .css-post-main p+ol,.css-post .css-post-main p+ul{margin-bottom:1.5em;margin-top:-1.3em}.css-post .css-post-main p>img{display:block;left:-15px;margin:auto;max-height:650px;max-width:calc(100% + 30px);position:relative}.css-post .css-post-main .anchor{box-shadow:none}.css-post .css-post-main .anchor svg{fill:gray}.css-post .css-post-main a:active,.css-post .css-post-main a:hover{box-shadow:0 1px 0 0 currentColor}.css-post .css-archive{padding:15px 25px}.css-post .css-archive .item{background-color:var(--backgroundColor2);border-radius:var(--radius);display:flex;font-size:16px;margin-bottom:6px;padding:6px 12px}.css-post .css-archive .item .date{display:inline-block;margin-right:10px;opacity:.6;text-align:left;width:4em}.css-post .css-archive .item .title{box-shadow:none;flex-grow:1;width:300px}.css-post table{border:none;overflow:auto}.css-info{color:var(--mainDerive1);font-size:1em}.css-info .iconfont{padding:0 5px}.css-info .iconfont:first-of-type{padding:0 5px 0 0}.menu-button{display:none}.page-description{margin-bottom:.5rem}.inline-button{color:var(--linkColor);cursor:pointer;margin-left:1rem;transition:.4s}.inline-button:hover{color:var(--mainColor)}.theme-toggle{background-color:var(--backgroundColor);border-radius:50%;bottom:18px;box-shadow:var(--shadow);cursor:pointer;font-size:16px;font-weight:200;font-weight:bolder;padding:10px;position:fixed;right:12px}@keyframes fade-in{0%{filter:blur(8px);opacity:0}to{filter:blur(0);opacity:1}}@media screen and (max-width:1000px){.css-main{display:block;width:100%}.css-post{margin:45px auto auto;padding:15px;width:100%}.css-header{background-color:var(--backgroundColor2);height:60px;left:0;line-height:60px;padding:0 10px;position:fixed;top:0;width:100%;z-index:9}.css-header a{height:100%;padding-left:1rem;width:20%;word-break:normal!important}.css-header a .logo-mobile{color:#919404;display:inline;font-size:1rem;font-weight:700}.css-header .page-description,.css-header a .logo{display:none}.css-header .page-name{color:#046f3b;display:inline;margin-left:1em}.css-header .menu-button{cursor:pointer;display:block;position:inherit;top:0;-webkit-user-select:none;user-select:none}.css-header .menu-button .iconfont{font-size:30px}.css-aside{background-color:var(--backgroundColor2);bottom:0;overflow-y:auto;padding:50px 0 0;position:fixed;right:-100%;top:0;transition:all .6s ease-in-out;width:15rem;z-index:9}.open{left:0}.link-card-wrapper{width:100%}}.gatsby-resp-image-wrapper{max-width:100%!important}.language-text{word-break:break-all!important}.anchor.before{left:unset!important;right:0!important}.code-title{border-top-right-radius:.3em;display:block;margin-bottom:0;top:10px;width:100%}.code-title,.code-title span{border-top-left-radius:.3em;position:relative}.code-title span{border-bottom-right-radius:.3em;display:inline;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;opacity:.7;padding:3px 12px;top:1px}.button-wrapper{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding-top:30px}.button-wrapper .page-button{display:block}</style><title data-gatsby-head="true">面向切面编程 | Funny Eagle</title><link rel="canonical" href="https://funnyeagle.cn/aspect-oriented-programming/" data-gatsby-head="true"/><link rel="alternate" type="application/rss+xml" title="Funny Eagle" href="/rss.xml"/><style type="text/css">
     .anchor.before {
       position: absolute;
       top: 0;
@@ -48,7 +48,7 @@
         }
       }
     })
-  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><link rel="preconnect" href="https://www.googletagmanager.com"/><link rel="dns-prefetch" href="https://www.googletagmanager.com"/><title data-gatsby-head="true">面向切面编程 | Funny Eagle</title><link rel="canonical" href="http://funnyeagle.cn/aspect-oriented-programming/" data-gatsby-head="true"/><script>       
+  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><link rel="preconnect" href="https://www.googletagmanager.com"/><link rel="dns-prefetch" href="https://www.googletagmanager.com"/><script>       
           var theme = 'light'
           let localTheme = localStorage.getItem('theme')
           if (localTheme) {
@@ -76,7 +76,7 @@
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);
           })();
-    </script><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><meta name="format-detection" content="email=no,telephone=no,address=no"/><meta name="baidu-site-verification" content="rVEuQMP8C6"/><link rel="apple-touch-icon" sizes="180x180" href="/icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/icon.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"/><meta name="msapplication-TileColor" content="#da532c"/><meta name="theme-color" content="#ffffff"/><meta name="baidu-site-verification" content="codeva-KiUgz2gAMo"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="css-main"><aside class="css-aside close"><header class="css-header"><div><a style="box-shadow:none;text-decoration:none;font-weight:200" class="usubeni" href="/"><span class="logo-mobile">Funny Eagle</span></a></div><div class="menu-button"><i class="iconfont icon-menu"></i></div></header><div class="css-toc"><ul>
+    </script><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><meta name="format-detection" content="email=no,telephone=no,address=no"/><meta name="baidu-site-verification" content="rVEuQMP8C6"/><link rel="apple-touch-icon" sizes="180x180" href="/icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/icon.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"/><meta name="msapplication-TileColor" content="#da532c"/><meta name="theme-color" content="#ffffff"/><meta name="baidu-site-verification" content="codeva-KiUgz2gAMo"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="css-main"><aside class="css-aside close"><header class="css-header"><div><a style="box-shadow:none;text-decoration:none;font-weight:200" class="usubeni" href="/archive/"><span class="logo-mobile">Funny Eagle</span></a></div><div class="menu-button"><i class="iconfont icon-menu"></i></div></header><div class="css-toc"><ul>
 <li>
 <p><a href="#aop-%E6%A6%82%E8%BF%B0">AOP 概述</a></p>
 </li>
@@ -103,9 +103,9 @@
 <ul>
 <li>
 <ul>
-<li><a href="#%E4%BD%BF%E7%94%A8aspect%E5%88%9B%E5%BB%BA%E5%88%87%E9%9D%A2%E7%B1%BB">使用<code>@Aspect</code>创建切面类</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8code-classlanguage-textaspectcode%E5%88%9B%E5%BB%BA%E5%88%87%E9%9D%A2%E7%B1%BB">使用<code class="language-text">@Aspect</code>创建切面类</a></li>
 <li><a href="#advice%E7%9A%845%E7%A7%8D%E6%B3%A8%E8%A7%A3">Advice的5种注解</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8pointcut%E5%A3%B0%E6%98%8E%E5%88%87%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F">使用<code>@Pointcut</code>声明切点表达式</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8code-classlanguage-textpointcutcode%E5%A3%B0%E6%98%8E%E5%88%87%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F">使用<code class="language-text">@Pointcut</code>声明切点表达式</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +134,7 @@
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAAChElEQVR42nWSSU+TARCG+ys8iZz8Cd5cANGoKEpMquDBKIl6MSEim1IDCC6ouJRdKMWqrLKDlEojBEzZKZRPSgvdqIVSoaUNFSg8foEzkzx5M5OZSSbzSjggQjvbLHltbO+ExCRAyD+7X9/wsbWycNAYkpX1f4za/Ew4AkzYA4zb/egdQfqN88jab6AxOjDPdrPed5QhJwjaepwFFxh2hhizrDJm9e4xvLCGczWIpGNskWMpzZzKaOFERisRsg5O5w5wuWiQO1+uclY+RHplNZaOME7K7WTlFzMsiySqcIFY+RQX5QZiCw1EvdGjGvyDZMbho6DLRKHahFxtFjFRrHHwvkfPvY9XyO8RaFQ3MvYlnPf9PmqUVfSmRfKh/y8lP6wU99op0dp5p7YyZF5FojW4iM37TkLBT6SvNMS/7SP+3S9ulveRWBFHgmKEPJWKybowpMpFXhSUok2LIEFp47bCwC2FQGKVwPXSab6NupAMmTzcr9SR8mmE5OphUlSjInrS63UkNUpFJqlsq8HVc4SkFjfKigp+50aT3OIis2mOx01mMpvNPKybQ2NYQTK6sErK5wkya/U8qhG1fgpZg5EnreMkNUhJbZ6iurOOpZ5wUts9qBQKhNwzZHQskd1iIqt1nuy2eTIaTfQK4kLNtJvoHA0xOZ3EPO0mJk/NxWd9SMsGuPs1jkslOrKUSmxdhzlfauP56yLGZSe5VGYhvmyGa2UC8eWC+KBpanXiyRubIdzrW3gCIVZE3P5N1jZg0ibw4Ns5dFYj3vnPBLSHcPr8ODUVuF4ex+lZx+3bZFlsXvYGWRI1ENxGcpBBd3d3cXkt7Ii6b2zjXn0nKBrbYzvQ2P8B+aqBXaCVhwwAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    style="padding-bottom: 49.32432432432432%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACe0lEQVR42n2Sx0/TAQCFf/+EB2PUi3+CV1CMHGRFTWTExDgS9WQwYkG0KksCURQqMy1bQTZaBVqKgGAoZZWWSmnppBRKhS4Ksj5jOONLvuTLS97tCRyZfVb9DuAACLMXNB7WO0F216xHroS1wDaT9iAzzhDTjn8E0Tq3+GFcRPzlOv1GJ+b5XgJDZ1C7wKBqZakoBo1rjynLOpNWH1M2HxrLBq71MIJ8comzaR1EZnQS8aSLc8/kXMgZIaF0lLuNV4kuGSNdWotVfoKIEjsvC8oYF0cRJbEQXzJLbImOeImeqNda6kddCHqnn7ffTLzv+4cZSZ+Jsn4nxQot96ouU6g00NbXxsSH0xQP+2mqq6E/PQrJ8G/KVTbKVA7KBxy8U9hQm9cRVDo38bk9JBd951qhguSiQZLf/uRG1RB3pFdIkY2TV9/ATPNJEmuWyH9Tjkp0npRaO7dkem7KDNyuNpBUoaNd40ZQm7w8kKkR1WtIqxvnccMkogYtGS1jpLYl8rB1BtnnJlYUp0jt9FAnlWLIvUhalxtx+wJP282IO8ykfVpAqV9DmLCsI2qcRtys5WnTDOIWHc9bjbzoniK1NRFR5yx18k+4FadJ/+KloboaQ140mfJVsrtMZHUvkv3ZQmabiYG5NQSlzkN0tpLYbDmxOT3E5fUS92qQpMoR7n+8SkL5GFm1NTi+HudShZ3816VMiSOJr7SSUjlHUqWBlKpfJEj0NKvdCOE/u3iCu3g39/GG9vAEd/CFQWuf41F7DGqbEd9iI6GBYyz7g7iUUtwFkSx7A3gC26z6wnj8W6z4woS2dhD4T5Y3LIdysMlecP7QtwPsem1HHvsv/VeBbXO9v9EAAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -167,7 +167,7 @@
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 48.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABl0lEQVR42q2S3WsaQRTF84f3qU+FQqAvhZa8lbakkBqs2qbWGGc39gvdmC2ahKaJ1UVj2S8EP3ad+XV2XU0ezEOhA4c7M/dw7p17Zov/vLbuS5wNG4iLPFV7H9HJY5wXMX8WcILLNK+U+jfBZq/Cu9ZznhW32d57zCvxlFJ7h19/7DQfxxGLxQIpZYq1YFJoE6RcdmC1Q3Z2r3FuZul5dd93HHq9Pt3ub4IgzOTU3Q7VOqp0L4lixV6xzYNHJcxv/Ywj18+dTifM5/NsBFmHs0iSYBIpphp342SuyJUdHj75itn00DR9l3F1MdcPGU8irkfTW8Fcfcgb06ci9skbHT6KAwpGg3ItR94851DkeFHqUKsXOBBHvBcGH0SVkqjzuuby9njIy8MB9tV4KVhteZStkM8nDY6sHseWjTi55Lt9ijgdUPtiYvwYULeamFYHwzrTsa3jBZXWmE+Wy664oTua3e9yMiPXC/Fcl9HIJfA9pHZ005IJdxxvcjkbtkbyDRIx3w8IA1+7GOgvEqe5FW+JWzNWgn8Bn6Tv9u5JOfcAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    style="padding-bottom: 48.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmUlEQVR42n2S3U8aQRTF9w/vU19MmrTpi0k/3tqY8CCUEsRYFJjdtTG2sgW1bo0a60rRwn5IVdiP2V8zgKs10JucnMzcMzPn3jsaMyJNU/4XKv8Yd/vaLKEK++Ir4keR2m4Bwy5i2CWMoxLn/tGdeqaJuRfuOBt8bL3m1cpzXuSfsaQvUt5/y3GvPc5HcUSSJBkyh7PsK0g5eWTv8Jo3uRN6/vTQdL/T6eA4Dj/PzvCDYFbJ6QNWkMRxynL5gCcLFczt8we5iTYcDYnC0T/VaaNIMooSbiIYRnCrEDJeKy5UOzx9uYXRdAkl3IQTjdL2vYA/txGnl8PMlpY3u+R0j2qjwAf9O2tilZL4wlq9QNGw2dDzvKsc0NgssSpqrAidiqhRFiZL9T7LRpf3679onQwmF9ZaHp+sKz5bO9QtB9NqI6xjtnfbiHaXxpaBuXfBZrOJ0dxHt2wMS/Eh698GVC2XnLjMXGrz/prrDfA9l9+9gKtp0+dFcB3fD0WqiY4bKu9ZSly3j+/7BIE/5iSJp42XGeSjT60c/gWIie9Jij1qxwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -186,7 +186,7 @@
     </span></p>
 <ul>
 <li>
-<p><code>advice</code> - 通知</p>
+<p><code class="language-text">advice</code> - 通知</p>
 <ul>
 <li>
 <blockquote>
@@ -196,7 +196,7 @@
 </ul>
 </li>
 <li>
-<p><code>pointcut</code> - 切点</p>
+<p><code class="language-text">pointcut</code> - 切点</p>
 <ul>
 <li>
 <blockquote>
@@ -206,7 +206,7 @@
 </ul>
 </li>
 <li>
-<p><code>join point</code> - 连接点</p>
+<p><code class="language-text">join point</code> - 连接点</p>
 <ul>
 <li>
 <blockquote>
@@ -216,7 +216,7 @@
 </ul>
 </li>
 <li>
-<p><code>aspect</code> - 切面</p>
+<p><code class="language-text">aspect</code> - 切面</p>
 <ul>
 <li>
 <blockquote>
@@ -226,7 +226,7 @@
 </ul>
 </li>
 <li>
-<p><code>target</code> - 目标对象</p>
+<p><code class="language-text">target</code> - 目标对象</p>
 <ul>
 <li>
 <blockquote>
@@ -236,7 +236,7 @@
 </ul>
 </li>
 <li>
-<p><code>introduction</code> - 引入</p>
+<p><code class="language-text">introduction</code> - 引入</p>
 <ul>
 <li>
 <blockquote>
@@ -246,7 +246,7 @@
 </ul>
 </li>
 <li>
-<p><code>weaving</code> - 织入</p>
+<p><code class="language-text">weaving</code> - 织入</p>
 <ul>
 <li>
 <blockquote>
@@ -272,7 +272,7 @@
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 35.13513513513513%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABbUlEQVR42o2R3ytDARTH75N/Q6TkwZNHK0mSB2rUnpRteWEReeAB+fFAKT9KXpYiW635kVr5EcmP8iu1lGRDErFifmy79267u/djrvmxIk59T6fO93zP6XwF/h2anlVVJRqXkoiiaanOR5EMIZ3+k8x75zl8z8LhKIMr1XQvGehdKmJs08z2mRslEftkC1pCRBHP0ORzEqIfTQnrEoqiEIvFkKUogeANfQtGLPZMrGMlWEas1I1bsTkM1LuymN7r+LpQCUwTWRO4mM/gaVEgcjlMWAZJDCFKEZ207Z+haS6bRnsrlTYvpbXLlFnWqWrZocVhpHU+n+ugPyX4vIN8XMXLUQ3iUQXx4Cqqfn0CVdMrfHcHNLpzaZgsp6ZnAlPbIqZ2D+aBIRqcBXR5iglJj+k//MuMLZ+LTk8hTTPZ2Fx5SeTSPJtD/3IlvsB+yhz1TfBtQP0G7XdjpAe8V2usn06x4XNycruLHBfTFr8CaSLmBR8dQMUAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    style="padding-bottom: 35.13513513513513%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABd0lEQVR42mWRzStEYRTG719CkpKtpZTCRkkkK2KmLMz4LMWGwkakKCxICDW+IpRQIpGQEmp8LYjMwmimmXfmunPv+9O9c10mT51Oved5n855HkVKiZTGn5JISHa7DGnwA90wEGqEmCqwiDZMngnFeeD/8C9CkSBr5yMM7lTSs51P73YBowcuju4XHb7ZFUMXJMQjMv6ELh6QetQaapqGqqrERJzAxyt96xW4JtNwjxXiGnZTP+7GO59Hgy+D+dOuX0HtfZrIrsLjssLnlkL0aYBIHEQ0jBBJ8UP/Ik0r6TROtFPquaaoZpfi2kPKW05pnSunbTWHl6A/eXIidELspoLwVTXiqhQtuGefLx0j7gJnNC9l45kpobpniqqOLao6N6jrH8KzkEv3ZiHhWDDVw1TIlFBMHN0v0bWZT/NyJl5fDl5fNq2rWfTvlPEQuLA4ZniK9UHqdsK6LWIZ4vjyIxoSH1w+77Hvn+XgboHbt2O+EqojZm74DdDG5Zn+IY0GAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -296,102 +296,97 @@
 <ol>
 <li>
 <p>定义一个艺人接口</p>
-<pre><code class="language-java">package org.nocoder.proxy.staticproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>staticproxy</span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * 艺人接口
  * @author jason
  * @date 2019/2/14.
- */
-public interface Artist {
-    /**
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">Artist</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
      * 表演
-     */
-    void perform();
-}
-</code></pre>
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">perform</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>定义艺人实现类刘德华</p>
-<pre><code class="language-java">package org.nocoder.proxy.staticproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>staticproxy</span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * 艺人刘德华
  *
  * @author jason
  * @date 2019/2/14.
- */
-public class LiuDehua implements Artist {
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LiuDehua</span> <span class="token keyword">implements</span> <span class="token class-name">Artist</span> <span class="token punctuation">{</span>
 
-    private LiuDehua() {
-    }
+    <span class="token keyword">private</span> <span class="token class-name">LiuDehua</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
 
-    public static LiuDehua getInstance() {
-        return new LiuDehua();
-    }
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">LiuDehua</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">LiuDehua</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    public void perform() {
-        System.out.println("刘德华出场演唱笨小孩...");
-    }
-}
-</code></pre>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">perform</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"刘德华出场演唱笨小孩..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>编写代理类</p>
-<pre><code class="language-java">package org.nocoder.proxy.staticproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>staticproxy</span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * 艺人助理（代理类）
  *
  * @author jason
  * @date 2019/2/14.
- */
-public class ArtistProxy implements Artist {
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArtistProxy</span> <span class="token keyword">implements</span> <span class="token class-name">Artist</span> <span class="token punctuation">{</span>
 
-    private LiuDehua liuDehua;
+    <span class="token keyword">private</span> <span class="token class-name">LiuDehua</span> liuDehua<span class="token punctuation">;</span>
 
-    private ArtistProxy() {
-    }
+    <span class="token keyword">private</span> <span class="token class-name">ArtistProxy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
 
-    public ArtistProxy(LiuDehua liuDehua) {
-        this.liuDehua = liuDehua;
-    }
+    <span class="token keyword">public</span> <span class="token class-name">ArtistProxy</span><span class="token punctuation">(</span><span class="token class-name">LiuDehua</span> liuDehua<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>liuDehua <span class="token operator">=</span> liuDehua<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
 
-    public void perform() {
-        System.out.println("助理出面谈价格，签合同...");
-        liuDehua.perform();
-        System.out.println("助理出面收钱...");
-    }
-}
-</code></pre>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">perform</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"助理出面谈价格，签合同..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        liuDehua<span class="token punctuation">.</span><span class="token function">perform</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"助理出面收钱..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
-<p>运行<code>main</code>方法，将艺人实例传入代理类的构造方法，然后调用代理类的<code>perform()</code></p>
-<pre><code class="language-java">package org.nocoder.proxy.staticproxy;
+<p>运行<code class="language-text">main</code>方法，将艺人实例传入代理类的构造方法，然后调用代理类的<code class="language-text">perform()</code></p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>staticproxy</span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * @author jason
  * @date 2019/2/14.
- */
-public class StaticProxyDemo {
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">StaticProxyDemo</span> <span class="token punctuation">{</span>
 
-    public static void main(String[] args) {
-        LiuDehua liuDehua = LiuDehua.getInstance();
-        ArtistProxy proxy = new ArtistProxy(liuDehua);
-        proxy.perform();
-    }
-}
-</code></pre>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">LiuDehua</span> liuDehua <span class="token operator">=</span> <span class="token class-name">LiuDehua</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">ArtistProxy</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArtistProxy</span><span class="token punctuation">(</span>liuDehua<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        proxy<span class="token punctuation">.</span><span class="token function">perform</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>运行结果</p>
-<pre><code class="language-java">助理出面谈价格，签合同...
-刘德华出场演唱笨小孩...
-助理出面收钱...
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">助理出面谈价格，签合同<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+刘德华出场演唱笨小孩<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+助理出面收钱<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 
-Process finished with exit code 0
-</code></pre>
+<span class="token class-name">Process</span> finished <span class="token keyword">with</span> <span class="token namespace">exit</span> code <span class="token number">0</span></code></pre></div>
 </li>
 </ol>
 <p><strong>静态代理的缺点</strong></p>
@@ -406,192 +401,182 @@ Process finished with exit code 0
 <ol>
 <li>
 <p>定义图书服务接口</p>
-<pre><code class="language-java">package org.nocoder.proxy.jdkproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>jdkproxy</span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * 图书服务接口
  * @author jason
  * @date 2019/2/14.
- */
-public interface BookService {
-    /**
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">BookService</span> <span class="token punctuation">{</span>
+    <span class="token comment">/**
      * 新增图书接口
-     */
-    void addBook();
-}
-</code></pre>
+     */</span>
+    <span class="token keyword">void</span> <span class="token function">addBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>编写图书服务实现类</p>
-<pre><code class="language-java">package org.nocoder.proxy.jdkproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>jdkproxy</span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * 图书服务实现类
  * @author jason
  * @date 2019/2/14.
- */
-public class BookServiceImpl implements BookService {
-    @Override
-    public void addBook() {
-        System.out.println("新增图书");
-    }
-}
-</code></pre>
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BookServiceImpl</span> <span class="token keyword">implements</span> <span class="token class-name">BookService</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"新增图书"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>编写InvocationHandler实现类</p>
-<pre><code class="language-java">package org.nocoder.proxy.jdkproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>jdkproxy</span><span class="token punctuation">;</span>
 
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>reflect<span class="token punctuation">.</span></span><span class="token class-name">InvocationHandler</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>reflect<span class="token punctuation">.</span></span><span class="token class-name">Method</span></span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * JDK 动态代理
  * @author jason
  * @date 2019/2/14.
- */
-public class BookServiceInvocationHandler implements InvocationHandler {
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BookServiceInvocationHandler</span> <span class="token keyword">implements</span> <span class="token class-name">InvocationHandler</span> <span class="token punctuation">{</span>
 
-    private Object target;
+    <span class="token keyword">private</span> <span class="token class-name">Object</span> target<span class="token punctuation">;</span>
 
 
-    public BookServiceInvocationHandler(Object target){
-        this.target = target;
-    }
+    <span class="token keyword">public</span> <span class="token class-name">BookServiceInvocationHandler</span><span class="token punctuation">(</span><span class="token class-name">Object</span> target<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>target <span class="token operator">=</span> target<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    @Override
-    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("事务开始");
-        Object result = method.invoke(target, args);
-        System.out.println("事务结束");
-        return result;
-    }
-}	
-</code></pre>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">invoke</span><span class="token punctuation">(</span><span class="token class-name">Object</span> proxy<span class="token punctuation">,</span> <span class="token class-name">Method</span> method<span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Throwable</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"事务开始"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">Object</span> result <span class="token operator">=</span> method<span class="token punctuation">.</span><span class="token function">invoke</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"事务结束"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>	</code></pre></div>
 </li>
 <li>
 <p>运行测试程序</p>
-<pre><code class="language-java">package org.nocoder.proxy.jdkproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>jdkproxy</span><span class="token punctuation">;</span>
 
-import java.lang.reflect.Proxy;
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>reflect<span class="token punctuation">.</span></span><span class="token class-name">Proxy</span></span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * JDK动态代理演示
  *
  * @author jason
  * @date 2019/2/14.
- */
-public class JdkProxyDemo {
-    public static void main(String[] args) {
-        BookServiceInvocationHandler invocationHandler = new BookServiceInvocationHandler(new BookServiceImpl());
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JdkProxyDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">BookServiceInvocationHandler</span> invocationHandler <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BookServiceInvocationHandler</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">BookServiceImpl</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        // JDK 动态代理只支持接口
-        BookService bookServiceProxy = (BookService) Proxy.newProxyInstance(
-                BookServiceImpl.class.getClassLoader(),
-                BookServiceImpl.class.getInterfaces(),
-                invocationHandler);
+        <span class="token comment">// JDK 动态代理只支持接口</span>
+        <span class="token class-name">BookService</span> bookServiceProxy <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">BookService</span><span class="token punctuation">)</span> <span class="token class-name">Proxy</span><span class="token punctuation">.</span><span class="token function">newProxyInstance</span><span class="token punctuation">(</span>
+                <span class="token class-name">BookServiceImpl</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getClassLoader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token class-name">BookServiceImpl</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getInterfaces</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                invocationHandler<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        bookServiceProxy.addBook();
-    }
-}
-</code></pre>
+        bookServiceProxy<span class="token punctuation">.</span><span class="token function">addBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>运行结果</p>
-<pre><code class="language-java">事务开始
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">事务开始
 新增图书
 事务结束
 
-Process finished with exit code 0
-</code></pre>
+<span class="token class-name">Process</span> finished <span class="token keyword">with</span> <span class="token namespace">exit</span> code <span class="token number">0</span></code></pre></div>
 </li>
 </ol>
 <h4 id="cglib动态代理" style="position:relative;"><a href="#cglib%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86" aria-label="cglib动态代理 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CGLIB动态代理</h4>
-<p>JDK的动态代理依靠接口实现，如果有些类并没有实现接口，则不能使用JDK代理，这时就要使用cglib动态代理了。使用cglib需要依赖<code>cglib</code>的jar，使用maven为例</p>
-<pre><code class="language-xml">&#x3C;dependency>
-  &#x3C;groupId>cglib&#x3C;/groupId>
-  &#x3C;artifactId>cglib-nodep&#x3C;/artifactId>
-  &#x3C;version>3.2.4&#x3C;/version>
-&#x3C;/dependency>
-</code></pre>
+<p>JDK的动态代理依靠接口实现，如果有些类并没有实现接口，则不能使用JDK代理，这时就要使用cglib动态代理了。使用cglib需要依赖<code class="language-text">cglib</code>的jar，使用maven为例</p>
+<div class="gatsby-highlight" data-language="xml"><pre class="language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>cglib<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>cglib-nodep<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>3.2.4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span></code></pre></div>
 <ol>
 <li>
 <p>定义图书服务类</p>
-<pre><code class="language-java">package org.nocoder.proxy.cglibproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>cglibproxy</span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * @author jason
  * @date 2019/2/14.
- */
-public class BookService {
-    public void addBook() {
-        System.out.println("新增图书");
-    }
-}
-</code></pre>
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BookService</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">addBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"新增图书"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>编写MethodInterceptor实现类</p>
-<pre><code class="language-java">package org.nocoder.proxy.cglibproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>cglibproxy</span><span class="token punctuation">;</span>
 
-import net.sf.cglib.proxy.MethodInterceptor;
-import net.sf.cglib.proxy.MethodProxy;
-import java.lang.reflect.Method;
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">net<span class="token punctuation">.</span>sf<span class="token punctuation">.</span>cglib<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span></span><span class="token class-name">MethodInterceptor</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">net<span class="token punctuation">.</span>sf<span class="token punctuation">.</span>cglib<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span></span><span class="token class-name">MethodProxy</span></span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>reflect<span class="token punctuation">.</span></span><span class="token class-name">Method</span></span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * @author jason
  * @date 2019/2/14.
- */
-public class BookServiceMethodInterceptor implements MethodInterceptor {
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BookServiceMethodInterceptor</span> <span class="token keyword">implements</span> <span class="token class-name">MethodInterceptor</span> <span class="token punctuation">{</span>
 
-    @Override
-    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-        System.out.println("事务开始");
-        methodProxy.invokeSuper(o, objects);
-        System.out.println("事务结束");
-        return null;
-    }
-}
-</code></pre>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">Object</span> <span class="token function">intercept</span><span class="token punctuation">(</span><span class="token class-name">Object</span> o<span class="token punctuation">,</span> <span class="token class-name">Method</span> method<span class="token punctuation">,</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> objects<span class="token punctuation">,</span> <span class="token class-name">MethodProxy</span> methodProxy<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">Throwable</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"事务开始"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        methodProxy<span class="token punctuation">.</span><span class="token function">invokeSuper</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span> objects<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"事务结束"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>运行测试程序</p>
-<pre><code class="language-java">package org.nocoder.proxy.cglibproxy;
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">org<span class="token punctuation">.</span>nocoder<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span>cglibproxy</span><span class="token punctuation">;</span>
 
-import net.sf.cglib.proxy.Enhancer;
+<span class="token keyword">import</span> <span class="token import"><span class="token namespace">net<span class="token punctuation">.</span>sf<span class="token punctuation">.</span>cglib<span class="token punctuation">.</span>proxy<span class="token punctuation">.</span></span><span class="token class-name">Enhancer</span></span><span class="token punctuation">;</span>
 
-/**
+<span class="token comment">/**
  * @author jason
  * @date 2019/2/14.
- */
-public class CglibProxyDemo {
-    public static void main(String[] args) {
-        BookServiceMethodInterceptor cglibInterceptor = new BookServiceMethodInterceptor();
-        //cglib 强化剂
-        Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(BookService.class);
-        // 创建代理对象
-        enhancer.setCallback(cglibInterceptor);
-        BookService bookServiceProxy = (BookService)enhancer.create();
-        bookServiceProxy.addBook();
-    }
-}
-</code></pre>
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CglibProxyDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">BookServiceMethodInterceptor</span> cglibInterceptor <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BookServiceMethodInterceptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//cglib 强化剂</span>
+        <span class="token class-name">Enhancer</span> enhancer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Enhancer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        enhancer<span class="token punctuation">.</span><span class="token function">setSuperclass</span><span class="token punctuation">(</span><span class="token class-name">BookService</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// 创建代理对象</span>
+        enhancer<span class="token punctuation">.</span><span class="token function">setCallback</span><span class="token punctuation">(</span>cglibInterceptor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">BookService</span> bookServiceProxy <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">BookService</span><span class="token punctuation">)</span>enhancer<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        bookServiceProxy<span class="token punctuation">.</span><span class="token function">addBook</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
 </li>
 <li>
 <p>运行结果</p>
-<pre><code class="language-shell">事务开始
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">事务开始
 新增图书
 事务结束
 
-Process finished with exit code 0
-</code></pre>
+Process finished with <span class="token builtin class-name">exit</span> code <span class="token number">0</span></code></pre></div>
 </li>
 </ol>
 <h2 id="spring-aop" style="position:relative;"><a href="#spring-aop" aria-label="spring aop permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Spring AOP</h2>
-<p>Spring 提供了4种 <code>AOP</code> 的支持，基于代理的经典SpringAOP，纯POJO切面，<code>@Aspect</code>注解驱动的切面，注入式AspectJ切面。前三种都是SpringAOP实现的变体，SpringAOP构建在动态代理基础之上，因此，Spring对AOP的支持局限于方法拦截。第四种实际是使用AspectJ的解决方案。提供了SpringAOP所不能支持的许多类型的切点。我们可以借助Spring的依赖注入把bean装配进AspectJ切面中。Spring借鉴了AspectJ的切面，以提供注解驱动的AOP。本质上，它依然是Spring基于代理的AOP。</p>
-<h4 id="使用aspect创建切面类" style="position:relative;"><a href="#%E4%BD%BF%E7%94%A8aspect%E5%88%9B%E5%BB%BA%E5%88%87%E9%9D%A2%E7%B1%BB" aria-label="使用aspect创建切面类 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用<code>@Aspect</code>创建切面类</h4>
-<p>Audience类使用<code>@Aspect</code>注解进行了标注。该注解表明Audience不仅仅是一个POJO，还是一个切面。Audience类中的方法都使用注解来定义切面的具体行为。Audience有四个方法，定义了一个观众在观看演出时可能会做的事情。在演出之前，观众要就坐（takeSeats()）并将手机调至静音状态（silenceCellPhones()）。如果演出很精彩的话，观众应该会鼓掌喝彩（applause()）。不过，如果演出没有达到观众预期的话，观众会要求退款（demandRefund()）。</p>
+<p>Spring 提供了4种 <code class="language-text">AOP</code> 的支持，基于代理的经典SpringAOP，纯POJO切面，<code class="language-text">@Aspect</code>注解驱动的切面，注入式AspectJ切面。前三种都是SpringAOP实现的变体，SpringAOP构建在动态代理基础之上，因此，Spring对AOP的支持局限于方法拦截。第四种实际是使用AspectJ的解决方案。提供了SpringAOP所不能支持的许多类型的切点。我们可以借助Spring的依赖注入把bean装配进AspectJ切面中。Spring借鉴了AspectJ的切面，以提供注解驱动的AOP。本质上，它依然是Spring基于代理的AOP。</p>
+<h4 id="使用code-classlanguage-textaspectcode创建切面类" style="position:relative;"><a href="#%E4%BD%BF%E7%94%A8code-classlanguage-textaspectcode%E5%88%9B%E5%BB%BA%E5%88%87%E9%9D%A2%E7%B1%BB" aria-label="使用code classlanguage textaspectcode创建切面类 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用<code class="language-text">@Aspect</code>创建切面类</h4>
+<p>Audience类使用<code class="language-text">@Aspect</code>注解进行了标注。该注解表明Audience不仅仅是一个POJO，还是一个切面。Audience类中的方法都使用注解来定义切面的具体行为。Audience有四个方法，定义了一个观众在观看演出时可能会做的事情。在演出之前，观众要就坐（takeSeats()）并将手机调至静音状态（silenceCellPhones()）。如果演出很精彩的话，观众应该会鼓掌喝彩（applause()）。不过，如果演出没有达到观众预期的话，观众会要求退款（demandRefund()）。</p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
@@ -605,7 +590,7 @@ Process finished with exit code 0
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 34.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA30lEQVR42o2R2QqDQAxF/f8PFNwQfHBfcF9QU05oLH0pDYTM3ElOEnXkbfd9y7Issm2brOsq53mqPs/z46ZN0yR1Xct1XdL3vQzDIF3Xaa1jQCC+70sUReJ5nozjqAVBEIjruqoBwmgMkBrywzDU97ZtP0C6A8ApYCLicRzaed93jWg4DckxnQ0xBQKpqkrKstTOOKvkea560zTPGxp3zrwRDf4AoTMhIhPhdLburIZzZm0ARPIYxqIC7cMWRSFZlqkzwS+z9ZIkkTiOv/IVyB9K01RhRFb5x5iSYWxdgC+SrB0bQcljlAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 34.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAABYlAAAWJQFJUiTwAAAA4UlEQVR42n1RRwrEQAzL//8XUgnkENIL6d2LBNrbrsF4xiPLssd539dgz/PYsiy277tt22bXdRnekJvnmfG+b2Jxb5qGNcMw2DRN1vc9ax0RgiQIAovj2DzPIwgFYRia67rm+z5zsHVdSYgIfBRFfG/b1hwAQKruUgVHwXEc7HyeJ6PyIMcZkwAjIyHIqqqysiytrms6RimKgmd0xjvOeZ7zLhx8HEeSfwlFiiSUqCsUaadyKJNrz4ia0NFioQbdpeCfae9pmlqSJNyn8iTsus6yLCMZIsYT4JfrtyFG44LwA//oHJEzwcUNAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -636,7 +621,7 @@ Process finished with exit code 0
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 77.70270270270271%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAABgElEQVR42pWUjY6CMBCE+/7PSEwI/6IgoCCKrvl6GYJwXjySTdttd7szs8Udj0frus6aprHz+WyPx2O25/P5tsamabK/PhcEgZVlaWEY2m63s/1+b3Ece0uSxNI0tSiK/Jp5VVWbJFyM+YR5nvvqiqKYA/DJuICEdV2/BX6sMMsy6/ve7ve73W43b0D79uOCy+ViwzD8JDwcDta2ra+S6k6nk98cx3E2ra/Xqzcuh0uS4QcJWrB28EdSHIyaQwHGBVQACo0kEZI1GscGKlOFgmSojo+qmHNmzSGVsi/1HckERcFcIp/8S1tyDVV0AxfOKuNAHEYUBSpUiFvG3zhUr24gr0WQEAQzckaKrvtukxARqAaFJRAjlZEQLqGFKhEI01wUUTFFeJXBThKCUJdkNDEJlwJ96k8QQBXnfYVqSvFDoPiSOKJELSNKxOMSuqMqnhyVIYzeMT6ggQADgdqIZBgxiKrH4CEzETxxRSCH8CuY/fWfhnOcIW7uw/+822++F3Qv2qxKhW3HAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    style="padding-bottom: 77.70270270270271%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAABjklEQVR42o2Ui46CQAxF+f9v1ISg8hARUEQBpZvTzSUTlk2cpOlY+rjt7RhVVWX3+92aprGu6+zz+dj7/Xat+1rmeTaOdHii3W5n5/PZ4ji2/X7v98Ph4HI8Hi1NU0uSxO+n08kAoGRbEmVZZm3bWlEUHny9Xi3Pc8OOxk7yuq43E/xBSODj8bBpmmwYBhfa+vaQlFE9n89fhGVZOkIEdMyy7/slOYLz6/VyjYzj6ABIwHc6YRRLwsvl4ga0ftMqjrRKB6GQhKQiL0QbUQmWqQwyBdEGdqHFhs/6kBQ7eXyGt9ttaUVBVKdFCfawmBCCjhGxAQBYSMGAZi1YEVplfShGAFozRIMGCXdyaZlKOIYkICBSEny22N1anUhEwDB3/YZ1EmqWek1CrG3Ah4KAcIQEkAAnmKZVrQ/fRJAC1ocOGBn+jlBEiABV464d1HcxrlGEK8PdEYKKJwdKEaQ3TNugU9tokqoIMRAIuuWlcFF7BNE6dxaahNpP/ROFBxuxxInxaO30zdv974+BGf4AGz3ZkluvUHEAAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -686,7 +671,7 @@ Process finished with exit code 0
 </tr>
 </tbody>
 </table>
-<h4 id="使用pointcut声明切点表达式" style="position:relative;"><a href="#%E4%BD%BF%E7%94%A8pointcut%E5%A3%B0%E6%98%8E%E5%88%87%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F" aria-label="使用pointcut声明切点表达式 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用<code>@Pointcut</code>声明切点表达式</h4>
+<h4 id="使用code-classlanguage-textpointcutcode声明切点表达式" style="position:relative;"><a href="#%E4%BD%BF%E7%94%A8code-classlanguage-textpointcutcode%E5%A3%B0%E6%98%8E%E5%88%87%E7%82%B9%E8%A1%A8%E8%BE%BE%E5%BC%8F" aria-label="使用code classlanguage textpointcutcode声明切点表达式 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>使用<code class="language-text">@Pointcut</code>声明切点表达式</h4>
 <p>@Pointcut 声明使用频繁的切点表达式后，在通知注解中引用即可</p>
 <p><span
       class="gatsby-resp-image-wrapper"
@@ -701,7 +686,7 @@ Process finished with exit code 0
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 85.8108108108108%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAABf0lEQVR42p2T6Y6CQBCEef835BeX4IWCijfQ5uukzKwrutlJyrmc6uquJjoej7bZbOxwOFjTNHY6nex+v0/idrvZMAw2NSJIsiyz9XptaZpaVVW2XC6tKAory9IWi4WD/Xw+d0A6Sdi2rf+5rusnIeBsNps5AcTsyebbiJTy+Xz2B8xakz5gz3y5XN6S9H3v98zRfr93FdSw6zrb7Xa+5nIcR69XCM6B9gzex3HsNY44ROF2u3VQSwAxwQgCWCsouF6vTgC5Zk+ZBbWCFCIMoIbslYYGiqWO9dsa8oMyTMFxiFgzr1arJzE1RaEc5r+kitIfhETiAReAwisd7gTVTnv15KtSr6F6TP2mvlST66GIRDyZspTxUOAsbJtPX8cvhdQqdFn1xFkCvarjDU6TDQHfmgIRJJCz5gvCBAAxpkD4VSGRSUmmhOYAkYRNrjfqgjCQE+q7pf/yPLckSdwYjEIdNUUhAUTKGWlzHtb3aYpaJTRGKlmj6E8pf+r6/4wHslcrYZnXe9YAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    style="padding-bottom: 85.8108108108108%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAABo0lEQVR42n2U666CMBCEef8n5J94R1TwAl4QXfNtMs0eDrHJ2pay09mZxaxtWzsej3a9Xq1pGrvdbvZ6vf5F3/cez+fT3u+3MT6fj0ccWV3XVhSF7fd7m81mttlsbLfb2XK5tPV6bdvt1sqy9D1n7AEVYAQmMljx8uFwcEBASFwsFglktVr5vuu6xCSC/GFIyYDd73djTclaA6A98+PxsKmBJJwPw2DZ5XLxMtAQkPP57Gt04nbmGNJUewZV5HnuGmc8hCFaEmhJACzweBFrArYAwEoXeMk8QCNAAcIAbsR5OR4H7xNTw01hQTKAGKQ1c1VVPqMlrJAHVgzeRSrpmlyGKkxoBQ4J1jCLTko76aq+HPekA8YeYz2fz718mKmZx8ACiv3oGvJDEq2hZGaYwlwRmUxplwARmC9j7DIa4WrUSK4Czlls9lSyTMEAAJmJ0+nkSRhBYMrY8SmWriHlyhSJLXNii6iZSSaHyugIOZ9MgTq9yHeMIXzT/GFgFA1NAqUBIlAuowKe69JUModqFZkiljILY8TkZ8mgTzn3K3EqxPALDGoqC6FmDGYAAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -746,7 +731,7 @@ Process finished with exit code 0
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 62.83783783783784%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABGnAAARpwHTd0PhAAAChElEQVR42n1TS2sTURjNbxHBhRs3gkWliuCirbWW2IZG2qpRa0VUMFR8oLRQkIqbImiahYLaNIVCoyTBhRoXWuqmxDZO0qap0ySTeeVtMjOZ9HjvDXUhMQOHuY+Zc88533ct2WwWmqahWCyiVqtBEAQGuk7n6+vrEEURyWSSrZumiVaPZXbWg2AwiFAoBI/Hg/l5L7xzcwgGAozU7Xbjnc8Hl8sFv9+PSqXCftzZ2WlOKIkCJDGNcikPWZJQrWrQDZ0pMQyDERg1E1XioqLpMMw6NMNkaEo4MtSB3s42XHX0o1KWUMkloP8WyJYGRVGRSCTAy0VwqSwivIxYSsUaeUfJvKH0X0LbQQx27sW404qvizPwTt8jKnSiUmOWI5EIZEVBfHMTS0tLbP59eRmyLDe1bnl4y4rHd/owebsHz8fO4PyFDiy8nQC3+gW5fAmxWBTpdAprqz/AcRx+8TxWVlZITCJ4MqYH0PVwOMwKa7k0bMU52ykM20/j4+Ir9HcdgOvZI8CsQpIVbGxsIC7kwCVV5EqNgpgkx3q9AZr1Lqhay3VHNxy2Y7h2uQ++mSmM3+gA9/Mb+1GWJUSjUfApAeEIh1SKFK9cbt02I8NdsPcehWOwG2+ejsH95CI+f3rNNjOZDLETxfY2j3w+z1RQVS0JezsP4WT7fth7jmDq/ln4vGNY8DyAWdOhqlmWE0UmI2KTFKZQKLTuwxOH9+F42x6MDrXD83ICocA0Prx/AUVKQiGEtG3i8Ti2trbIAerfxv6vwrvOK7g5OoDJcSdrkxKplJrNs6amlmOxGAPNkqqj39BrSPebEu4OqAWaT8NKww4tAFVFQe8zPUAit4lGoOt6U8I/fZaV3hNU5bIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    style="padding-bottom: 62.83783783783784%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABGnAAARpwHTd0PhAAACiklEQVR42n1T30tTcRS//0r00EMvPfRQWFgEEc5M1NTSUFPMrB6kYD5IYQYJIT0UwUZBQeWmIKxyxB6M9lAiBKY559zadrvb3f213c15vffu3n3i+42NVsMDh/P9ni/fz/nxOYeRZRmapiGfz8M0TfA8j3Q6DUVR6D0SiSAjCOA4jvotywKRcrlctZUzEcbr9SIQCCAYDGJ2dhZzc3PweDzw+/0U1O12w+fzweVywb+4SIP/kVqgKqAsiVBkEdruDmRJgm6YKJVMWLYNwzAogFmysKcb0HQDJcuGXrKgm1ZNhhVw5vpAMzrON2B0+BK0ooDd7E/oRR4o70GWFcTjcbBSHmFOQYgVEUkp2EgSm6UA9l+ARJlrXUdxpekgJm+344vPjfmnE7DKFnRDRzabRSgUgiRJiMZi+Lq8TO8rKyvUV0+Ye2MdmB7vxMM7rXA52zBwtQkLbx9gcz2IXG4Hka0t8OkUNn6sIxwOI5lMYnV1FYIggGVZGoD419bWUCgUwAz1t6O3uxn9PRew5HuFLscRuJ9NApYGUZIRjUYR43PY5BSoxT2aBWHatm2q5FxRWvLNwRYMdp/C6HAn3j2fwf1b57C9/Y1+FEWBRmdTPL5vbIJLpVEsFrGfMCN9DvS0ncRQXwvePHbixcwQPi29po+ZTIYC/mJZ5FW1mtW/7NaQ0uY4hrONh3G59QQeTVzE+3knFjx3YZUMOoekT8kkS8FjsRhUVf1vsGsyPNNwCKePH8BoXyM8L6fw+eMTBD64IIkcHZtEIk77mEgkKOu6rlc/1x3sCecIxm70YnpqnEbfKRSgKGp1DcnqVZSwSEDJGpL3uhnu12BCAAEgpYuiSMsmlowO2aJ6gL8BsNeVsWWVGLQAAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -780,7 +765,7 @@ Process finished with exit code 0
   >
     <span
     class="gatsby-resp-image-background-image"
-    style="padding-bottom: 64.86486486486486%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABFwAAARcAESNTyuAAACqklEQVR42oVT2W7aQBT1z1Z9qNqnPvS5UqJGzUuzNKoikSYVaqpGSASyKDSQKMQESNjBGAdDgsFmMTbYQDCY0/F0E62iXulqRjO6Z865cy7D8zyCwSBisRgikQjNcDiMy8tLFItFHB4e0rNQKASXy4X9fR8EQUC320UgEADLsri4uIDb7UY8Hgejqioc0FQqiWw2i2azCVmW6b7RaNCHyuUyAecQCp4ilUhAJueGYZCaFDiOQzqdxsnJCcVhuCIP9+dd+PwHlIVzcUBYffm6R9YjmKYJkxQPHiZQBxZapgWpO4Q1tfF3zGYzMOlMBts7n7C2vo7V1RVsbLzHyso7uLa24fX50Wq1IZR4SEoHidI92HQJUe4ena4GXddg2zYF+pXMZDKh6LdCBechFvueU5ydsvTSCV3XUSgUINUbRLqIG9Knu0qFyMwgGr+GORzNsWTG4zHMgYFoOIvrWApnZ2HSFwE8V0ZPN6ERFjz5nEanB66ho9Luo9zsoyQ7ewO1jjEPaFkW5LqCarWNj0uvsLf8FD1VAnueg0CkjUYDytD5oHw+j2wuB03TaLE9+7ePzHAwRDLGQ5Hr2Hn9BFcfnkOMk951VFroSHbsI4oiFEX53fzHgnkYjSArKiJHuzh2LUA4XkeZdSN5lYQoNNA3dArmpOO/OmE6te2fwD9yDtC2p7irdnDzzYvoeQDy7TWKNylI9y1MpxYcnzo+rJKPyKRTpK8aZrb9OMMEMera2iqW3yxicWERL188w9LCW2xubsHr9VKjO8yUtoq8UEVvaEEfjGGMyGPGA1q9eU8yjtM9Hg8dKZ/PRw3tAPn9fjqS7XYbUq0GRe0hK8pI8DVkbiXkxTrxZQ2CrGFkTf8A4j/R7/dRIXIVMo7FQh4lMl5ZIj2XSaMu1f6R/B3Fk6VV9nFwrQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    style="padding-bottom: 64.86486486486486%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABFwAAARcAESNTyuAAACqElEQVR42n2T7U/TUBSH988aExMTP/pV0MQYExEMagxojEQUQTZceAljRBw4NtjKYN1W1o5t3dq9tN3KWHnbY3oT8DWe5OTe3Pz63N855zaQy+VYXY0Qj8fZ3NwUubGxITKbzRIOh8XZ2lqUiYlJgsEghYKCZVmsrKwQi8WEdmpqikQiQcC2bYrFIul0moODAyFsNpti3263hOjw8JCcLLO+FiG9u0PDqOG6XVKpFLIsI0mSgOfzeQJyLsfU+2kWvoSJRqMsL68IVx9mPhFeXMLzPI5dF+98QOcUrP6AinXCgH9HIC1JvH7zltGxMUZHnzI+/oyRkSdMTL5mPhii0WigFPJUjCa7+TIxqUBcPqJl2Ti2zeXlJYPB4HoNXJGPtArRSIzQ3Brrkc3rG/2W+OXreo1iUSWZ2KakaUjSHvFEErfXFzofJoCed4p73OX7twzJbYlo1B+GQkEu0nFcAfQHV2t1yOoOpdYxRbNLvuagNVzKre7vwLOzM+p6nVKpwZtHd5l5fBOnXSG2vo8ilzk56Ylp1+s14TSTyYhL/B76ZV7BrnvY6/VIbecxalXeDt1g6+Vt1EQYs9nCti0cxxEOVVXFNE3x0RXoV9jVGvD6fQzTYmtpmsXJByhLY6hb70h9T6EqNbpdR8D8VBSFqq5zIQbws8xfoWIolbJFKhIk/nUVo5gktyOhl5u+BKttiXeoaSpSOkXHscX5n3HtMJlMMvJ0hIf3hxi+N8ydWzd5cO8hL56/Yu7zHIZhCGdGs82BUqLrXeCcnOH2z2m5HqbT4/T84qdDv+Gzs7MEQyFCCyGmP84wH5xnYSFEJBIRf021WsFod8hodXYLZfYOq+yrOjuFCoWaRf/0/PeS/xeu66JpGqZpkJez4pHv70nsZ/ao69W/Sv4Bopqk+/5NJWwAAAAASUVORK5CYII='); background-size: cover; display: block;"
   ></span>
   <img
         class="gatsby-resp-image-image"
@@ -827,6 +812,6 @@ Process finished with exit code 0
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-0ee853b5ceaa791fdc14.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-8496dea8368deb047d26.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-0eb07d6cb925d6e86ed8.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-cb145e3f4f34ecb668bf.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-02458d544a7e3b9cec66.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-99c395af068f989918a9.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-7491ed86cddf5aeba3b4.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-fe2c5f4a35109fa5d02b.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-ea1e2944252ed1e1ffda.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-b81586779339e2dd86bc.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-03dff12640c42a375801.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-39218d7f284e5a25cc41.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-e5441a3187a12371e306.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-9bcd925b14c678c9b352.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-8e89345a3850a085d237.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-397b9b04e801d18d9105.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="37ba8c5c0f2dc530e20b";</script><script src="/webpack-runtime-f148c06e07568e26bd6c.js" async></script><script src="/framework-62c40eb296095ffcef6b.js" async></script><script src="/app-0ee853b5ceaa791fdc14.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="47ff6d977030ca19e328";</script><script src="/webpack-runtime-ba829114841e1a70b5d7.js" async></script><script src="/framework-ebc0d138c46b9b8414fe.js" async></script><script src="/app-ea1e2944252ed1e1ffda.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
