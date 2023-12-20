@@ -1,4 +1,182 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle 技术博客;记录技术成长]]></description><link>https://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 20 Dec 2023 09:24:02 GMT</lastBuildDate><item><title><![CDATA[出成绩了]]></title><description><![CDATA[软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。 看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT…]]></description><link>https://funnyeagle.cn/chu-cheng-ji-le-2023/</link><guid isPermaLink="false">https://funnyeagle.cn/chu-cheng-ji-le-2023/</guid><pubDate>Fri, 08 Dec 2023 06:39:00 GMT</pubDate><content:encoded>&lt;p&gt;软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle 技术博客;记录技术成长]]></description><link>https://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 20 Dec 2023 13:51:51 GMT</lastBuildDate><item><title><![CDATA[[系统架构设计师] 操作系统考点总结]]></title><description><![CDATA[一、操作系统 操作系统是一种大型、复杂的软件，通常由操作系统内核和其他许多附加的配套软件所组成。操作系统内核是指能够提供进程管理、存储管理、设备管理和文件管理等功能的那些软件模块，它们是操作系统中最基本的部分，为众多应用程序访问计算机硬件提供服务。 操作系统的作用： （…]]></description><link>https://funnyeagle.cn/operating-system-knowledge/</link><guid isPermaLink="false">https://funnyeagle.cn/operating-system-knowledge/</guid><pubDate>Wed, 20 Dec 2023 00:00:00 GMT</pubDate><content:encoded>&lt;h2 id=&quot;一操作系统&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%B8%80%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&quot; aria-label=&quot;一操作系统 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;一、操作系统&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;操作系统&lt;/strong&gt;是一种大型、复杂的软件，通常由操作系统内核和其他许多附加的配套软件所组成。操作系统内核是指能够提供进程管理、存储管理、设备管理和文件管理等功能的那些软件模块，它们是操作系统中最基本的部分，为众多应用程序访问计算机硬件提供服务。&lt;/p&gt;
+&lt;h3 id=&quot;操作系统的作用&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E4%BD%9C%E7%94%A8&quot; aria-label=&quot;操作系统的作用 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;操作系统的作用：&lt;/h3&gt;
+&lt;p&gt;（1）管理计算机中运行的程序和分配各种软硬件资源&lt;/p&gt;
+&lt;p&gt;（2）为用户提供友善的人机界面&lt;/p&gt;
+&lt;p&gt;（3）为应用程序的开发和运行提供一个高效率的平台&lt;/p&gt;
+&lt;p&gt;（4）辅导用户操作、处理软硬件错误、监控系统性能、保护系统安全等&lt;/p&gt;
+&lt;h3 id=&quot;操作系统的特征&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%B9%E5%BE%81&quot; aria-label=&quot;操作系统的特征 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;操作系统的特征：&lt;/h3&gt;
+&lt;p&gt;（1）并发性：单CPU环境下，宏观上同时运行，微观上交替、轮流执行；多CPU环境下，可实现多个程序分配到不同的CPU上并行运行。&lt;/p&gt;
+&lt;p&gt;（2）共享性：资源（包括硬件资源和信息资源）可以被多个并发执行的进程共同使用，而不是被一个进程所独占。&lt;/p&gt;
+&lt;p&gt;（3）虚拟性：物理实体和逻辑对应物；目的是为用户提供易于使用且方便高效的操作环境。&lt;/p&gt;
+&lt;p&gt;（4）不确定性：并发执行导致进程何时执行、何时暂定、需要花多少时间执行，这些都是不可预知的&lt;/p&gt;
+&lt;h3 id=&quot;操作系统的分类&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E7%B1%BB&quot; aria-label=&quot;操作系统的分类 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;操作系统的分类&lt;/h3&gt;
+&lt;p&gt;（1）批处理操作系统：分为单道批处理和多道批处理。单道是指一次只有一个作业装入内存执行。多道指操作系统允许多个作业装入内存执行。多道批处理系统的3个特点：多道、宏观上并行运行和微观上串行运行。&lt;/p&gt;
+&lt;p&gt;（2）分时操作系统：将CPU的工作时间划分为许多很短的时间片，轮流为各个终端的用户服务。分时操作系统的4个特点：多路行、独立性、交互性和及时性。&lt;/p&gt;
+&lt;p&gt;（3）实时操作系统：实时是指计算机对于外来信息能够以足够快的速度进行处理，并在被控制对象允许的时间范围内做出快速反应。实时系统对交互能力要求不高，但要求可靠性有保障。分为实时控制系统和实时信息处理系统。&lt;/p&gt;
+&lt;p&gt;（4）网络操作系统：是使联网计算机能方便而有效的共享网络资源，为网络用户提供各种服务的软件和有关协议的集合。功能包括：高效可靠的网络通信；网络共享资源管理；提供电子邮件、文件传输、共享硬盘和打印机等服务；网络安全管理；提供互操作能力。&lt;/p&gt;
+&lt;p&gt;（5）分布式操作系统：由多个分散的计算机经连接而成的计算机系统，系统中的计算机无主次之分，任意两台计算机可以通过通信交换信息。&lt;/p&gt;
+&lt;p&gt;（6）微型计算机操作系统：简称微机操作系统，常用的有Windows、MacOS和Linux。&lt;/p&gt;
+&lt;p&gt;（7）嵌入式操作系统：运行在嵌入式智能设备环境中，特点有：微型化、可定制、实时性、可靠性和易移植性。&lt;/p&gt;
+&lt;h2 id=&quot;二进程管理&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BA%8C%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86&quot; aria-label=&quot;二进程管理 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;二、进程管理&lt;/h2&gt;
+&lt;h3 id=&quot;进程&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%BF%9B%E7%A8%8B&quot; aria-label=&quot;进程 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;进程&lt;/h3&gt;
+&lt;p&gt;进程由程序、数据集合、PCB（进程控制块）组成。PCB是一种数据结构，是进程存在的唯一标识。&lt;/p&gt;
+&lt;p&gt;进程的三种状态：运行态、就绪态、阻塞态。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运行态：一个进程在处理机上运行时；&lt;/li&gt;
+&lt;li&gt;就绪态：一个进程获得了除处理机以外的一切资源，一旦得到处理机就可以运行；&lt;/li&gt;
+&lt;li&gt;阻塞态：一个进程正在等待某一事件发生而暂时停止运行，此时即使得到处理机也无法运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;进程的三态模型
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 421px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d711f9d8a09e7c8f71101399931bd225/092ed/4caa907c23b54a33b0336575424edd9f.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.70270270270271%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAACB0lEQVR42mNgwAb+/2cEUROOHxefc+ZK6oLL1xvnnbucMuH4JXFkeaJA/f//TCB64qFzWouu3ni06dnL/5uev/qzEUiD+CBxZHUEwf7//1lA9Kr7Tyv2fPn2f8nVG98mHzz5bdmNm9/2fv3+HySOrI5oF7bsOmKy6OrNF5tfvP6/+eXrv5tfvAK58PmEQ2f1CLpw1apVzPX797OAaBA/tH4VD4NHLnvO3M36s85fyV545Ubz/AtXMzo2HZZjME5jDYWoYwTpQdaHFdjXz+cI7VjF71c6h7e+vh7DFR4Tt7G7lM/kxyYHjqzunUfF5p6/krbk+s2miYfOVhct3aEBst2+vp4FpGA/0AX7oS5hABkCjeGsWesNgPqyF1251TLn/JVUYGSJgg1dfOX6PVAMAvGfTc/BMfmi7+AZI2zhBONPOXLeABS+IH0bnr4Ep4DFV2/em3zoghrD/h+//i+9ev17144D3xZfvvb9wI+f/xfdeDwJpDFt5m5+e2B4wnD8/P0C4DB/+KJj/3eguotXwfqWXrvx/eCvP//XPn1TwLDoyvW7W169/b/j3cc/IBpo09P+IycNIAaeYQ0NXcUMwyA+SBwkD1IH0fcBqO8NyGd3e4+dVWFoO3lNeM6Fq0nzL19vmH32SlrXlpMSkPDFnhtg4l37T0qAwh6kb87Zq0n1m/aLgBQAAMVGX3hWHXXJAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;进程的三态模型.drawio.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d711f9d8a09e7c8f71101399931bd225/092ed/4caa907c23b54a33b0336575424edd9f.png&quot;
+        srcset=&quot;/static/d711f9d8a09e7c8f71101399931bd225/12f09/4caa907c23b54a33b0336575424edd9f.png 148w,
+/static/d711f9d8a09e7c8f71101399931bd225/e4a3f/4caa907c23b54a33b0336575424edd9f.png 295w,
+/static/d711f9d8a09e7c8f71101399931bd225/092ed/4caa907c23b54a33b0336575424edd9f.png 421w&quot;
+        sizes=&quot;(max-width: 421px) 100vw, 421px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;PCB（进程控制块）的三种组织方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线性方式：把所有的PCB组织在一张线性表中，每次查找时需要扫描全表，不论进程的状态如何，都将所有的PCB连续的存放在内存的系统区，适用于系统中进程数据较少的情况。&lt;/li&gt;
+&lt;li&gt;链接方式：通过链表的方式把相同状态的PCB连接起来。&lt;/li&gt;
+&lt;li&gt;索引方式：按进程的状态分为不同的索引表，把相同状态的进程归入同一个索引表中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;前趋图&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%89%8D%E8%B6%8B%E5%9B%BE&quot; aria-label=&quot;前趋图 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;前趋图&lt;/h3&gt;
+&lt;p&gt;前趋图(Precedence Graph)是一个有向无环图，记作&lt;code class=&quot;language-text&quot;&gt;-&gt;={(Pi, Pj) | Pi必须在Pj之前开始}&lt;/code&gt;，由节点和有向边组成，节点代表各程序段的操作，节点间的有向边表示两个程序段操作之间存在的前趋关系。&lt;/p&gt;
+&lt;p&gt;前趋图可以用来表示多个程序或进程的执行顺序。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/91e88baffb10d6106aa7cf7d8d341374/e4c9a/b206219664074929ad31d862a220c1fa.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 40.54054054054054%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvUlEQVR42mOYdf6q9tLrNzfPv3ItmwEIVq1axQyi51286r/k+s1d8y/ecGaAgu6jR8WWXL+1bOGlG60M9fVMUGFGBmSw4cXrOYf//f+/9c27F13bjiiDFKhE1/Otf/bq+qHf//9vfP7moExoLydI7dI7j2r3fv3xf/vbD/9XPXpkhuwAOJh34VrQkqs3Ps6/dHWZVmg92//6/0wQ8Ssti67c+LXw0rUimNqZp86ZLr524xFQ7EjrtkOiILH///+juhCs8MwZ1lCgTRaFvZz1UK+Ehq5i9m5fKoiu1mPiNvbQ+lVsIGxfP58DRRJsOJINIEN86mdygbxd//8/U/nuM/zoBubPXy+QO3EbH1g91GCQgzqPXOdlwAbSZs5kBVJM885fbVp05fr3uRevFcLkZpw8a7Lg8rXHC67cONB77JgQSAzkgDnnr65efPXGu4UXb/ijmwdxrUUo5/pnL28c+gOMlBdvDkr61HOBI+XWozpQpGwDRsqCq/fsQGI1G46ob3rx+v2h3/+AEfh6FoYLYWE4/8L14MXXbu6bd+GyO0xuyskrEkCxVYuv3uwIRYrdBZev5y+5dmv7vDPXdQFozetuBuV4kwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;前趋图.drawio.png&quot;
+        title=&quot;&quot;
+        src=&quot;/static/91e88baffb10d6106aa7cf7d8d341374/fcda8/b206219664074929ad31d862a220c1fa.png&quot;
+        srcset=&quot;/static/91e88baffb10d6106aa7cf7d8d341374/12f09/b206219664074929ad31d862a220c1fa.png 148w,
+/static/91e88baffb10d6106aa7cf7d8d341374/e4a3f/b206219664074929ad31d862a220c1fa.png 295w,
+/static/91e88baffb10d6106aa7cf7d8d341374/fcda8/b206219664074929ad31d862a220c1fa.png 590w,
+/static/91e88baffb10d6106aa7cf7d8d341374/e4c9a/b206219664074929ad31d862a220c1fa.png 591w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;进程的通信&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%BF%9B%E7%A8%8B%E7%9A%84%E9%80%9A%E4%BF%A1&quot; aria-label=&quot;进程的通信 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;进程的通信&lt;/h3&gt;
+&lt;p&gt;进程的互斥是指系统中多个进程因争用临界资源而互斥执行，其中临界资源指的是一次只能供一个进程使用的资源。例如两个进程A和B都需要使用打印机，进程A正在使用打印机，进程B尝试获取资源，此时进程B被阻塞，等待进程A释放资源。&lt;/p&gt;
+&lt;p&gt;进程的同步表现为多个进程协作，顺序执行。例如例如两个进程A和B，假设进程B依赖进程A的执行结果，当进程A执行时，进程B为阻塞状态，进程A执行完后，进程B被唤醒开始执行。&lt;/p&gt;
+&lt;p&gt;PV操作：实现进程之间互斥。
+P操作表示阻塞操作，将信号量S的值减1，S = S - 1。
+V操作表示唤醒操作，将信号量S的值加1，S = S + 1。&lt;/p&gt;
+&lt;h2 id=&quot;三存储管理&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%B8%89%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86&quot; aria-label=&quot;三存储管理 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;三、存储管理&lt;/h2&gt;
+&lt;p&gt;存储管理的主要目的是解决多个程序使用内存的问题。存储管理方案包括分区存储管理、分页存储管理、分段存储管理、段页存储管理和虚拟存储管理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分区存储管理&lt;/strong&gt;把内存的用户区划分为若干个连续的区域，每个区域分配给一个程序使用，并限定只能在此区域运行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分页存储管理&lt;/strong&gt;是将一个进程的地址空间划分为若干个大小相等的区域，称之为&lt;code class=&quot;language-text&quot;&gt;页&lt;/code&gt;，将内存空间划分为与页相同大小的若干个物理块，称之为&lt;code class=&quot;language-text&quot;&gt;块&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;页号和块号的对应关系表为页表&lt;/li&gt;
+&lt;li&gt;逻辑地址由页号和页内地址组成&lt;/li&gt;
+&lt;li&gt;物理地址由块号和块内地址组成&lt;/li&gt;
+&lt;li&gt;逻辑地址转换为物理地址时，根据页号查找块号，页内地址等于块内地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;分段存储管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;分段存储管理为每一个段分配一个连续的分区，而进程中的各个段可以离散的分配到内存的不同分区中，为每个进程建立一个段映射表（段表），进程执行时通过查询段表找到每个段所对应的内存分区。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;段页存储管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;段页存储管理中，地址结构由段号、段内页号和页内地址组成。将整个内存划分为大小相等的物理块，将程序按逻辑关系分为若干个段，再将每个段划分为若干页，以物理块为单位离散分配。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;虚拟存储管理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;虚拟存储是将外存虚拟为内存的方式，使用磁盘来虚拟内存。&lt;/p&gt;
+&lt;h2 id=&quot;四设备管理&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9B%9B%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86&quot; aria-label=&quot;四设备管理 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;四、设备管理&lt;/h2&gt;
+&lt;p&gt;设备管理的主要目标是提高设备的利用率，为用户提供方便、统一的界面。提高设备的利用率，就是提高CPU与I/O设备之间的并行操作程度。设备管理主要技术有：中断技术、DMA技术、通道技术和缓冲技术。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;中断技术&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;中断技术是一种使CPU中止正在执行的程序而转去处理特殊事件的操作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;磁盘调度&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;系统在每一时刻只允许一个进程对磁盘进行I/O操作，其它进程等待。操作系统采用适合的磁盘调度算法使各进程对磁盘的寻道时间最短。&lt;/p&gt;
+&lt;p&gt;磁盘调度分为&lt;strong&gt;移臂调度&lt;/strong&gt;和&lt;strong&gt;旋转调度&lt;/strong&gt;，先进行移臂调度，再进行旋转调度。移臂调度寻找磁道，旋转调度寻找扇区。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/146ab4c4ff7bfd6fd8d1db2b4b6c84d0/e49d1/4d23689ea40b4b7790db884ae9fdd9e1.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 83.1081081081081%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAARABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIFAwT/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB1XDzpqqLNAB//8QAHRAAAgEEAwAAAAAAAAAAAAAAAQIAAxAREhMhMf/aAAgBAQABBQKo+CkTwo84zqOg0Nv/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAbEAEAAgIDAAAAAAAAAAAAAAABABECICExUf/aAAgBAQAGPwIxO2VPY3yQFyuVp//EABsQAAIDAQEBAAAAAAAAAAAAAAERACExQWFx/9oACAEBAAE/IRCPw5EFDXS5ZydUfIsFi2Ay48ANXHAAA5NTAgyf/9oADAMBAAIAAwAAABBUDwD/xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAwEBPxAj/8QAFREBAQAAAAAAAAAAAAAAAAAAESD/2gAIAQIBAT8QY//EAB0QAQEBAQABBQAAAAAAAAAAAAERIQBBEDFRgZH/2gAIAQEAAT8QUqXKJEXXxZwEWjyc4rjCsDazgt0LifkXTPE5de3hFuD9T86sEAGPez6q/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;硬盘结构.jpeg&quot;
+        title=&quot;&quot;
+        src=&quot;/static/146ab4c4ff7bfd6fd8d1db2b4b6c84d0/1c72d/4d23689ea40b4b7790db884ae9fdd9e1.jpg&quot;
+        srcset=&quot;/static/146ab4c4ff7bfd6fd8d1db2b4b6c84d0/a80bd/4d23689ea40b4b7790db884ae9fdd9e1.jpg 148w,
+/static/146ab4c4ff7bfd6fd8d1db2b4b6c84d0/1c91a/4d23689ea40b4b7790db884ae9fdd9e1.jpg 295w,
+/static/146ab4c4ff7bfd6fd8d1db2b4b6c84d0/1c72d/4d23689ea40b4b7790db884ae9fdd9e1.jpg 590w,
+/static/146ab4c4ff7bfd6fd8d1db2b4b6c84d0/e49d1/4d23689ea40b4b7790db884ae9fdd9e1.jpg 602w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+spindle：主轴
+disk：磁盘
+saved file：数据（保存在扇区内）
+read/write head：读写头(磁头)
+arm：磁臂&lt;/p&gt;
+&lt;h2 id=&quot;五文件管理&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BA%94%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86&quot; aria-label=&quot;五文件管理 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;五、文件管理&lt;/h2&gt;
+&lt;p&gt;文件是具有符号名的、在逻辑上具有完整意义的一组相关信息项的集合。&lt;/p&gt;
+&lt;h3 id=&quot;文件的结构和组织&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%96%87%E4%BB%B6%E7%9A%84%E7%BB%93%E6%9E%84%E5%92%8C%E7%BB%84%E7%BB%87&quot; aria-label=&quot;文件的结构和组织 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;文件的结构和组织&lt;/h3&gt;
+&lt;p&gt;文件的结构是指文件的组织形式，分为逻辑结构和物理结构。逻辑结构是从用户角度看到的文件组织形式；物理结构是文件的内部组织形式，即文件在物理存储设备上的存放方法。&lt;/p&gt;
+&lt;p&gt;文件索引&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接索引：直接指向一个存储数据的磁盘块。&lt;/li&gt;
+&lt;li&gt;一级间接索引：指向一个内容全部都是直接地址索引的磁盘块。&lt;/li&gt;
+&lt;li&gt;二级间接索引：指向一个包含一级间接索引的磁盘块，每个一级间接索引再指向一个包含直接索引的磁盘块。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;文件的存取方法&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%96%87%E4%BB%B6%E7%9A%84%E5%AD%98%E5%8F%96%E6%96%B9%E6%B3%95&quot; aria-label=&quot;文件的存取方法 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;文件的存取方法&lt;/h3&gt;
+&lt;p&gt;文件的存取方法是指读/写文件存储器上的一个物理块的方法。通常有顺序存取和随机存取两种方法。顺序存取是对文件中的信息按顺序一次进行读/写；随机存取是对文件中的信息可以按任意的次序随机读/写。&lt;/p&gt;
+&lt;h3 id=&quot;文件存储空间的管理&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%96%87%E4%BB%B6%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%9A%84%E7%AE%A1%E7%90%86&quot; aria-label=&quot;文件存储空间的管理 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;文件存储空间的管理&lt;/h3&gt;
+&lt;p&gt;常用的空闲空间管理方法有空闲区表、位示图（Bitmap）、空闲块链和成组链接法。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[出成绩了]]></title><description><![CDATA[软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。 看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT…]]></description><link>https://funnyeagle.cn/chu-cheng-ji-le-2023/</link><guid isPermaLink="false">https://funnyeagle.cn/chu-cheng-ji-le-2023/</guid><pubDate>Fri, 08 Dec 2023 06:39:00 GMT</pubDate><content:encoded>&lt;p&gt;软考成绩出来了，上午成绩48分，案例分析38分，下午论文46分。&lt;/p&gt;
 &lt;p&gt;看到成绩并不惊讶，跟预想的差不多，案例分析的大数据架构图、Hibernate、JWT丢分严重，也确实是不该丢分的地方。&lt;/p&gt;
 &lt;p&gt;肯定会有一些遗憾，因为一年只有一次机会，又要继续折磨自己。&lt;/p&gt;
 &lt;p&gt;还是简单总结一下不足之处，为明年备考积累一些经验。&lt;/p&gt;
@@ -11,33 +189,107 @@
 &lt;/ol&gt;
 &lt;p&gt;孜孜不倦，重新来过，
 死磕架构，明年加油。&lt;/p&gt;
-&lt;p&gt;（完）&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Tribes] Englishman on Sunset Boulevard]]></title><description><![CDATA[原调C调，我唱稍微有点儿高，降成B调刚好]]></description><link>https://funnyeagle.cn/englishman-on-sunset-boulevard/</link><guid isPermaLink="false">https://funnyeagle.cn/englishman-on-sunset-boulevard/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;（完）&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Englishman on Sunset Boulevard]]></title><description><![CDATA[原调C调，我唱稍微有点儿高，降成B调刚好]]></description><link>https://funnyeagle.cn/englishman-on-sunset-boulevard/</link><guid isPermaLink="false">https://funnyeagle.cn/englishman-on-sunset-boulevard/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/76a49af1706967be5d2cfc7fb60e81c6/a847c/tribes-william-kennedy.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMGBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAAFrJ5YUJjhf/8QAGhABAAMAAwAAAAAAAAAAAAAAAQACAxESMf/aAAgBAQABBQI1oDvj24paLD2tln//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPwGH/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAEhMQIQUWH/2gAIAQEABj8CcY3Ho1FFLbfT/8QAGhAAAwEBAQEAAAAAAAAAAAAAAREhADFRYf/aAAgBAQABPyERX4+Pd3gAwK78xPJoIR4dWRPWmoKZzf/aAAwDAQACAAMAAAAQFz//xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAEDAQE/EFpGf//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/EIR//8QAHBABAAICAwEAAAAAAAAAAAAAAQARITFRYaFB/9oACAEBAAE/EAQgFy19fDB69jYXDuCQ21sGyOELZQHBfUXEoXyZep2Ki5//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;tribes&quot;
+        title=&quot;&quot;
+        src=&quot;/static/76a49af1706967be5d2cfc7fb60e81c6/1c72d/tribes-william-kennedy.jpg&quot;
+        srcset=&quot;/static/76a49af1706967be5d2cfc7fb60e81c6/a80bd/tribes-william-kennedy.jpg 148w,
+/static/76a49af1706967be5d2cfc7fb60e81c6/1c91a/tribes-william-kennedy.jpg 295w,
+/static/76a49af1706967be5d2cfc7fb60e81c6/1c72d/tribes-william-kennedy.jpg 590w,
+/static/76a49af1706967be5d2cfc7fb60e81c6/a847c/tribes-william-kennedy.jpg 846w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;原调C调，我唱稍微有点儿高，降成B调刚好&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;B                       E                #F            #Dm   
 Never thought I&apos;ll come down so hard  An Englishman on Sunset 
-     #G                    E            #F
+     #Gm                    E            #F
 Boulevard Now the raelians living by to say
 B                E            #F                   #Dm                
 When your world chews you up Spits you out and you blame it all on bad
 #Gm                    E            #F 
 luck You know no one&apos;s listening to you
-#Dm       #F                
+#Cm       #F                B              #Gm                
 I&apos;ve been travelling like a stranger to my ghost
-Just let me know  Yeah...I&apos;m never coming home again
+                  E     #F     
+Just let me know  Yeah......I&apos;m never coming home again
+B       #F      #Gm      #F     E          #F
 All you need is imagination So come on kid,tell them how it is
+B       #F      #Gm      #F     E          #F
 All you need is imagination So come on kid,tell them how it is
-
+B                       E             #F          #Dm                 #Gm
 Don&apos;t let it get you down A cup of salvation the strange face in the crowd
+                         E           #F
 You know it doesn&apos;t mean anything to me
+B               E               #F                     #Dm                 #Gm
 So wake up in a brand new place Lift your head let the sun beats down your face
+                   E            #F
 You know someone&apos;s listening to you
+#Cm       #F                B              #Gm   
 I&apos;ve been travelling like a stranger to my ghost
+                  E     #F     
 Just let me know Yeah...I&apos;m never coming home again
+B       #F      #Gm      #F     E          #F
 All you need is imagination So come on kid,tell them how it is
+B       #F      #Gm      #F     E          #F
 All you need is imagination So come on kid,tell them how it is
+        B             #F                 #Gm             #F
 It goes on and on and on and on til you recognize where it went wrong
-Every now and then who are misunderstood&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[Tribes] Dancehall]]></title><description><![CDATA[A E #Fm D]]></description><link>https://funnyeagle.cn/dancehall/</link><guid isPermaLink="false">https://funnyeagle.cn/dancehall/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;p&gt;A E #Fm D&lt;/p&gt;
+E                          #F
+Every now and then who are misunderstood&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Dancehall]]></title><description><![CDATA[A E #Fm D]]></description><link>https://funnyeagle.cn/dancehall/</link><guid isPermaLink="false">https://funnyeagle.cn/dancehall/</guid><pubDate>Thu, 30 Nov 2023 11:35:35 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/b77d094839e40d0d9abd2eba0078b3db/63ea1/tribes.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAQBAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAABA//aAAwDAQACEAMQAAABYjObnRwoF//EABoQAAICAwAAAAAAAAAAAAAAAAECAAMEERL/2gAIAQEAAQUCtyOWN5i5GxoF+FMFSz//xAAYEQACAwAAAAAAAAAAAAAAAAAAAQIREv/aAAgBAwEBPwFQswj/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEgH/2gAIAQIBAT8BrFP/xAAdEAABAwUBAAAAAAAAAAAAAAAAAhExARASIVFB/9oACAEBAAY/AmTWJMuWVlvfSPGIP//EABwQAQADAAIDAAAAAAAAAAAAAAEAESExQWGBwf/aAAgBAQABPyHCOyjLR9aRgm1vioOw+hA94OC+pR4z/9oADAMBAAIAAwAAABAMH//EABgRAQADAQAAAAAAAAAAAAAAAAEAESEx/9oACAEDAQE/EGA1kbuz/8QAFREBAQAAAAAAAAAAAAAAAAAAAQD/2gAIAQIBAT8QSi//xAAdEAEBAAIDAAMAAAAAAAAAAAABEQAxIVGBcZGh/9oACAEBAAE/EGUZIV5V0eYhg0WEIbT4NuOW+VHB9vUfcJK0StHsxneINoDH3+Of/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;tribes&quot;
+        title=&quot;&quot;
+        src=&quot;/static/b77d094839e40d0d9abd2eba0078b3db/1c72d/tribes.jpg&quot;
+        srcset=&quot;/static/b77d094839e40d0d9abd2eba0078b3db/a80bd/tribes.jpg 148w,
+/static/b77d094839e40d0d9abd2eba0078b3db/1c91a/tribes.jpg 295w,
+/static/b77d094839e40d0d9abd2eba0078b3db/1c72d/tribes.jpg 590w,
+/static/b77d094839e40d0d9abd2eba0078b3db/63ea1/tribes.jpg 696w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A E #Fm D&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Tribes Dancehall Chords A E #Fm D
 
 Verse 1:
@@ -137,7 +389,7 @@ address: &lt;span class=&quot;token number&quot;&gt;64&lt;/span&gt;-64-4a-7f-ad-
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACuUlEQVR42n2T23LjRBCG9RB7wW5sydZxJFnnkyXbsiI7W4QliYsEshjCA+zF3uwjUJgLqnjlj5pxwlIF7MVX0z3T09X994x2s9lwe7Wh7bZ0bc+yWTNs9xzuHvjp+Av33/1AWSxpl2uaeqWoq1bF9ZuR9WpQtkTe19IgJQ4iApEofC8m9FPSuKLIGtKkQnjn8yjMiaOCPGsIg1TFSV7uJVGJZs0CPDvCNDxMQyismc9cd5lPHbVaM4E9FzRlx254y/H9E8miYDaxsWS8uuvhmAFanJV8+3jg5+MTfb9lHHc0dUeSLLl+90Dd7lhvr7nc3TDub8nKnrkV44oC1y/wRH62vRzhxmi+SGiaNVXREohY4bsRi3JkM7zD93OiqMYTGYYu6LqRbrXD0D21txkPzGWVXoHwSzTXWhCKVLWpXzhM39gYE5uyv+Obhw+sd480/T0i2aM7K+r+nsenj/jS93c44wdm3gZzMSL8QmroY0wcxWzqMpt6mLpNvP2R5fFPwsPvBHcnFocT4vaEd3OiO/7B5O1vvLr8len1iVfjidf9J4SXoNlz/znRGZnYNkOcoMLWTRzD/he2bqnVndm4cjVMXDc+t2w9J3ypUCWcB7iLFinHC84zyrc/+44dqek6ojwn/O8KA5ywwdJdTIWjbMv4bJv/wJraOHLKqsKZz/SNxcVXphqKMTm/uyBdk1UD5XJH3V2R1yNpuaVq9+T1pdp/QfpO0CC8DM13Y9btwNBfEfqZmrZsuak2PHz/RLfas2xHyqonL9bU9Zai3FA3g7KbZqCqtzhOjHAiNOGmLOuB1XJLmbUU6ZI4LNQjzeIaKYn8BbLqLyHjpL5aHsbUcYL5/AU9JXKoZJi8Nv9+Ul9Cv7DVl/XdBG2VRXy9KkmTjio/V5hGlWpbJpYTlPb/IWOkTAs/J16U/AW0Hc/ZHljhgwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsTAAALEwEAmpwYAAACsElEQVR42o1UyVLbQBDVR3BJYmzJ2nfJ2hfLWjAVQgATwEk5kFy55JRPSMUcUpVffukZA5UEDhxedUvTetOvFwknTYPTZYOyXKAqG+R5ja5dYrW6xPXnL7i8WCOJc5TFHHlWI0srpEnJ/abpUdctCvKLfE7fLyAEdgjf9mFbIWwzgGX4cKwAgZ8gmuUI/RSm4cEyfXhOBN+LEYU5xVA8xTGwMxYTuDEEWbKgKx6mogH5HopkQhprHFMCe1YJeVxhaA+x+XQD34kh7quP30wnOlTZhuCFMU4+nuNmc0MSWvT9QHJK+EGBo+MrpMUB5ot36A5O0S/PEMYLSLIPzYyhEwwz4r5mRDA0DwKTyOqRRCUs3eMwNRduPKBp38OyInheBsOYQRRNVNWAql5y3zBnmPcrSOTLBiMnybriwDZCStvEZKRi/EbhUuLmDMcXt6iHNbLmHIbfY6IW5H/A+vobrKCHaHXQ+1tMjRqy2/FsBYVqKO5rf0GnuqnwFhsUm99wVnewz7ZktzBOCSd3KDe/MDr8ib3uB8ZHW+z1W7xqvlNjgucIVShTG5qdQp0o0CSNQ7+3DKqo/vNOFylOD3aSnxJqnFB3C2iK+zJQd9WHGjJCaaxzcMLRQ4Y5FBoFmYFGR37wJ9p/VodCJVJ16rKV7AhZI0avprwpjJQ1yA5rzNIOCY1NVh0iyno+MuyZ+czG+YC4GBBRHEuATYJg6j7qokXXLGlTdt1W6ZIsbXC1/spHpCgHJOkCUTRHlnWIkwZZ3iHNWuRFz62mejBUlxGGNIctqrxFHBaIghyeHdEsegi9lOTT1jB5bCMk2ghRf9yM3ZbsLIvTZAdC5PjI/ICCHT7pBt3EDpj8/dfKk4Y9BxbLlFmkVqhnHt5WCf0ESr4tLEuWmUqNeSkYmUsb5bsx/gBFxtHjiNCmSwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -169,7 +421,7 @@ address: &lt;span class=&quot;token number&quot;&gt;64&lt;/span&gt;-64-4a-7f-ad-
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 90.54054054054053%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAADAElEQVR42p2Uy24cRRSGhy2vAIk9fb9UX6vvc+mZyfS47dgxRiR2BIoUsKKwyY6IRQQSQkis2PAKiHfgGVjxQh/q6rEBR6CIxafqVtf5u+qc85/JcbOkaVqKvHmLupxTlQv64wt222PKYkZTL9V6d2+e1TT1gkme12RpQZFVt+SyoiznHO966t0VZf+M7aajXT5gtztRwTItyWSlGAUrZk3LxHESPFFguymW8xem7mFqLo6dEIUloZCKJMyRSUUc5gR+qjB1H1Pz8JyIiRsvWfRPyastuplw78DnviFxHInvxBhTlzjIR8KCXDa0iy1VsSCJCoU+ddEOXSxdMAmyOWdPtixmcwI3wdFdTDtFBCXrZUcSldhGgGtHOGaonodAyxDYZqAYvqnVCpmIbM72akvdzAk9iWP4WI7EsGLsfdAQ7JgC4SW3Iv/ACDB1gTMIWkHNNNkgRIGMSyzdV9eO4oaL88d89ulz+t1DqtkJhhGNuR1ydhfNHwXL2Zqff/qS074jT2fEIlUnFEHB2ck5Hz16zLrtkNkay4zUD4cT32UQVYKyXPPdN6/o1lu8obqax9SIcIOGrntEGhUq4dP7lvp2cxpD8zDUeoM3CqbFmtdfv2G76rA0F+2ejj4k3q9p257t5ohV27FZHzFvViwXG9XsQ4v4XozvxggvxrVDVbSJKE6oPv+FcnVJmjS4bo4TzND0gCpvOO5PyWRJOTgiq28bfzDDDbksiUM5CmrtS7Kr7zGvf+O9y9+ZXP7B+2e/YuuOupp24KAd2HucW/TDv7F/H9umOufJx9csL77C6t/wYfuaD6prrKFd9hW03sK7w+iUMYdJw4uHO9aZpIpDYlPDNofmTtRmVYh3RAmGcsWzL17R1BuEN9irYmqmmFb8/wSLuuOHb3/kaNOTJxWJ2A8HO1HDQT9030lsyKESDNKWi0+es9qcUtQPSOQCO6jR9UAZP40rZf6x7/6dYe/g6YljxYiwIpVLoniGJ0o1aYYp4zsJwk32hRH/SeBJ5es/AWOrNmm/vDKDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 90.54054054054053%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC+ElEQVR42p1UyW4TURCcAyd+AUIcz77vu9exPd4wWaREYVGkIKIgLjmyCAHiEIkbJ76AA//AL3Dih4p+z3FkAijAofw8T901PV3VLUzLLsqyhzQpkcTrKJBnbWRZB9PZLsajGbK0hbLoIqPYdA0sNo5yFHkHQhLniIIUSZT9BJY8rSco6vtIJ0cYViN0uwMinvPkkHLYybAiZC8TND2AaafQjAiKFl5CliwooglNC+C6GVw7JETw3QShn/HTMUNCAIViZYo1dQ+C4XfQmR0iyYeQlAB3GiY25RCaHsLSfUhNHb4Tw3MSTpKEJbrtIX1BG4GX0l0KacuAuKVDlW0ITtTGvYMh2q02HCLQJIMqDGA5GfrdESVlPFBXPWiKw/+zitjJwO501V2eBMGK2xg9GKEoidCgymQTih5BVnyoknlBQISyBdvweeIKK8LVSzih6uRo+hVsO0HEqqFebDQsuH6J3e19PHp4jEk9R1rOIMseJZo8+SpYDzlhVlb49PEZFtMacdiCR81nFVok1GK2g53tA/r0GmHch6K41xNGWYX3b89QV0MSgRRrGmiKLnSnRF1vc0UldrepQm6al8lXIa0Iw7SPl69eY9QfQW1qEDdESNQz1czJd1MMB2P0eiNU1Ritss8VzsnszCIW9XQFQ1sKI1jpHPnxZ6T9QwRBC7qRQnVaEEUbGRl2Mp4vjR/nF0bOqDUZN/YKET27TrSsUOw+RXz/HMrJV9w4/Abh8DtuLr6QwjoZ24LYoKo318CeG/qvIB/qKqsw38H+3gk6e8+hTN/gdu8FbhWnJICzFED8O3BRGGEYFDi9O0YVh8g9F77cJF/pkNWA+/CfCd2oj6MnZyiKASwzplHKsSWT2qr/H4QuhLSocf7uA8bVFHGQIbAvFgRVKNMcS9QbmWxzHVhvuShO2MPe/mP0BwukxRBB1IFmF2QdB77HNkvOffg7763Dp0Vh0LwLGv1YNH6MyPVKmFYKnTYN2yCm5nOzy3+YjnXYfA/Y+AH/1DjAYGtdCQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -200,7 +452,7 @@ address: &lt;span class=&quot;token number&quot;&gt;64&lt;/span&gt;-64-4a-7f-ad-
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 59.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACe0lEQVR42lWSO28TQRRGV1AiaHjIdrzrrO2d2Znd2c06TpwAsfNSeAURGzt2TMJDgCiQaGlpaOiABvEQClQ0VDQUFPwcfsVBOzZRKI7uTPPNPfeOc9X7wlb5kGHjJ/favxkvfOfl019kJ96yev69ZUcf0jj5hm3xiX52yPXaB0aLX9ksv6N16jXjpS8Mss9siw84unCLqNilFT5gPjhgUYy53nmIPNsjKtym4Q+5GI0Jz/VIvQFz3oCk3Ge+OiT1djHFHpk/xHh9ktIezvnCGc5dOI2OBY8e3+dye5nSTIlAVqkFs1TrPn511t7rokog60gVIJVEKZ/a3EXMkx+8PfzGfGMRp1icoVAooVXKxvo1UtNEBvGEel4NUhhblUwsOkyJVEakEsJoCXPlOXv3nmH0Ao5XnEG4swgZsdRskZoGItCEMp4gIltVTmgsWiU2TOsUHcaomk/F9RF1g+OWy7hlFx1GrF4bkTWWqc7WqVUlvi+o5VQlUkRHHD0mY6SIkTIhDHOjBMf1KlTKJTy1TPfjH5qjF2x2OozHd3lw/xG9nT53xge2ozzseKfqWGhupcM5HNd18dwydWHI9l+hLnVJI0NzfomF5jKNrGXP//TzED0N+y9QaEKR4lQqFbxKhVAoxv0+6+01rmzdYGN9i5vbO/R6u2xuXJ2oHgVOZ3psDCJQE2XP88hDg0DRaq0QR9nRnOIoJcsWMHE2XYYh0gmxTonzqsx/+jJIJh3m2onJ6HUHjEb7DPp7DId36O707UImnRmrms/SBtpNm6m+magH/5RdDxXGtFfWLCuXV+l01um016yK1ckR2v6GSMXEU0KhkYFGCIWoJfwFKeuA0UXbfrYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 59.45945945945946%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACeklEQVR42m2SO3PTQBSF3UAHNGHipxTZkvahlfx+TrBjJ+RFmIkdO34xCYEMNKmpaehoIA0TMkBCRUNHQUHBv+FfHK7WNpOC4pvdvZLOnnuPItvmNTaNKwyLP3Hc/I1J5TvenP1C4dY52ssXaEcv0FVXKN5+jz32CYP8NXbtS4yrX/Ew+QG1O+8wrV1R/TM9/4iIjO7Di3dRFc9Qco5QYVPstp6DL/WgYn0U0yM01JTOB8gZh5psaoBSZqj3fuwAeWuEIKzHx4jcj97D0vJdeIrh9MVTrDYbiCcScHkatmMhbVuwMhYcOjssQ3UbXLhgkkEIC3augeDlD5x/+YZioYpILJZANBqHFFl0OjvIBmUwRxH+DNcHnyNYoJEiB0/m4YkA3KvB33qF0fEZfFlGxIwnwIwVMK5Qr9RJsAjX9cCZIkIRRfgayWklJAl5MjtDUM3OYMXMgNkBIqlkEkYyRS97WNsZIl9sIG05yKQ5rS6tDDbtOVtcorToAl3j5JSHHWVJ0DCxkorDEHX0Lv+gPHqNjdYaxpNjnJycotftYzo50m4YOZc3BecXhLiOJFM5RAzDgJlKwabZFI/ewlvtIaeyKJfqqJYbKBVqeq+dEWHb/1q/IchcCeGSQ9M0YRCcCpN+H+utNrY2H2Gjs4XHe/vk8BAb69tg8w8XgvI/grrlUDAktFyrteD7hZkbGrav8vQrVBBQbRZEAEWtKy9LidIqwsRnIUkKlS8EU9Ry4OfJzQDj0RMcDsYYDaf6nNGBqHm6vp6lFtMJB7OU9QhCwdy8ZZpj+HKz2UGr1UHzQRtrrXWN6whN2BJnNHihtIgvZ4gw/bBdV+jf5i/ckYJR4eBLWwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -243,7 +495,7 @@ address: &lt;span class=&quot;token number&quot;&gt;64&lt;/span&gt;-64-4a-7f-ad-
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 61.48648648648649%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABvElEQVR42m1RWXKrMBD0cdAAQexYQhJCK4sNXl7l3f8kCWCn8pGpril9TGumu08IAAUBCgIAhBAQUitjuVSUMdLyqsq1dVKZsq7KqirLMoqi8F2noqoo54yLummCABkplsc/5QZpnDSek2a5PfRwcVbPy83PC8YpALzIlNJtThnScgTQcXG9f87r0wxzpy1tyLTe9XDx1s3r3U3XLMsB0IsMsB0eRREABEEgGb89/0/rU2rLpCJ17eer9jNnglBWVHUcx4De5L1HKcZJipME53mepllZlaRllPEzoYS2xSb1xYn3epHjKPRW2/HSW2/coIxTZvBazsvNjhepjJ/XXhlrjB4m7by2vjdOSEVbdorCUHDeKUNbTpk4IIXw46zdyITk+xxjnAm53UJZfaakZWVVb2cjhI6o3iFAknw05zNhvGWCcVEUJdqsgRBgTzTYgXbNUfQ7PQSQp8njfrs8PrX10/Loev1jUhhGb2xuw2748e/xgAyny3Kf1qd2o5uurJM/2f6uU4JxludZlsUfSZbnGGMAiOO4rpuqbrK8KPce/knuezXM106Zc9PYYWS8O5YcwjaBCP259pv8BbkQmidCVfPvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 61.48648648648649%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsTAAALEwEAmpwYAAABs0lEQVR42m1R6XKDIBDO43hWvMCAoCiX0cRE02nf/0m6atLpjzIr7Dj7wXec/CDwPQ8KTt8PKCW9NkL2jHNaC4xzZazsdUlwiXFZllEUhe91KjBmQnDRkKqCS7Rs5vWzt4PUVmonaDU/VjVcrVHT/HDTjFAaBMELzBjb5noN7wCLVjS35Wu6P/Uwtcqwio73BcDO2Om+2PGWZTlwfIGhgwIycJ/neZKLx/N7vD+lMlz2lBA33ZSbBG8o4wUmcRyDvhd436MUoSRFSYLyPE/TrMQlrTnj4kwZZXWxSX1h4n29wHEUOqPM5doZp+3Qa9vrwSkJCuEnyHHTvQMPtVbDqKxTxnXaNuBozU/gXSNE22tWC8abo2TTuMuk7AVasc9xDsTlxoVxcmbAq8Rkow0RHVG9QwiS5KM6nykXNW8giKIo/c2aIIRvS9Tby981R9Hf9GAqT5N1eVzXLyA5zmvbqV+TYPpdm9vBbvhx79EEGUrneQHPgTnEw1v5m+3fdUoQyvI8y7L4I4EGIQRz4CchFSZVlhflvof/gruuH6YbGHauKjNcuGiPRw5hm0Df//fZMAx/ALkQmid8Wl7SAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -901,7 +1153,7 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACWElEQVR42p2Sy2oUURCGG7IRom7EnRvfQteKrsSnyJUQ0BBFXLgQn0AExcuTiPtoLisXxgQzEwOT6Z4k06f73M/5pLtnzCSZYLDho+pUnUv9VZ1cunyD69ducuXqJEmS/BcTExNMTg7OP116xpPnL1h6/IiFhQWmp6eZmZmpmZubY3Z2lqmpqdoOGeYrqvXi4iLLy8vMz8+TcIEvy3p0OvsX2Uqiyz366VdEb4O8t36GKt7P1uh1Vgbr41wVrxAHG4jeGla1SaIv8TbF2wxnUvyAxs+wah+j9pu1zeqYG+TdyD5vukQvSEKIOBsIYbwEYzxSGpS2OBeJ/5Kci5z23i5CFngCgebQkOM+ZrRaOxSFwFqDc5YY4xmS6D2kAjJBTAWx21g6OXQEQYZ6o1IKKSVa65oQwlgSbwL5piPfcogfDvHTITYd6a7l954lF4NafYBcQV+eK7eu0IVIV0U6OtIzkQMT6epIx0YENC2IEaMNRioqRSEGYjgrt66wcjiv1YPU8EJtKqmR4Ks2nJR64sIGxja5+uqKPIQjcCn4YuTB05JHDw7t6IahddZhpSY4XwXGPn6iwuHB86o8FAXb+1ltZTVxperJj2KMGZFcX9hwuo1VsC8V3w8kW0clW4cF3bygL445EoJSqdGhHDO2SqNQUuKMxmoFugRzCqub36Z0AekbKj+M9mXw4OfU8PpXybsdydsdyce25FNb8r4l+dCSvPkl+ZIaEukjLRnY0w1tFf7KjvWEG//ltubWSsH91ZK7qyUPN0oerJfc+VZyb7Xk9krBq23NH/00GfUPg7g3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 89.86486486486487%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACT0lEQVR42qWUy27TQBSGvYuUVYTKAoklEu/AHhAreIpcVUWCKiCBxAbxBCCEuLwJ7EElLRsWiKY0KVYSOwm1x3P1zM9x3DRJFZogxvpyPOccj8/N8UqXr+HqlevY2rqEQqEAz/P+mWKxiFKplO8f7TzGwydPsfPgPra3t1GpVFCtVqfU6/WpLJfLZ7parXZ2P9s3m020Wi00Gg14WLOklBgMhvB9H5zzde7wFPcRhbtg46+Ix3sk90nuL8kobGPc/4x4lNtz2x6iUQ6bZLo2jOjBc5Yj1QERIlUkVTiHdFoMiQEM2awOz/kFU/1M52wMz1oHrS0yuWoppSlVCSE1tLFwzl2cchzH6B0fI04YUjd/wJ0y+x2FIbrdIzDGYLSGMXrBa47nUjokiJdAyIB+BDdgsILsdAkhpk1R1CSlFGVkV+KlyiH6bhAdGMQk2Q+CZNDT+OWTLs6jdCYFIgGciL+mm2XnGardkHz6wmEkHSYKCCTttQOjLOypo6aoFNXSpel0v4pphOuKPHtzlqYkXEoPpmsOdCvLu3ygMw7pBDAhRZ1ckPKmERptoDk1g0YH/5tytiYsQWcQ4nfMwGU2lzlyAU3jtNmB5BNRQ76NOTrU5c4kQRAxRGzOCY0Dp9HaOOVUCSQ0h1Ll0VhJfxRqkQROS5pDGhtGBecZ1L3EnKuLy1v0IdB4cZjg9U+OV8S7rsB74s2RwFvi5SHHx0DBE3Rgl74Gn2bQlxY9aZc6PPvEnx1I3PjEcOdLglu7Ce7tJbjb5rhJ97dJl9medxT+ADvjG4RFO6c1AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -961,7 +1213,7 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 85.13513513513513%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAAsTAAALEwEAmpwYAAACBElEQVR42nVS227aQBDl/z+gUpM2/ZG+tFKqqKQ0BpoLIcRADNjGZr2XmZ292JXtxgEaRqvR6pydnTOXXlVVxjlBBhqvra3+M2OdJAPeCzJkXYf3qqoapdnZYHj24/r8V3C1jquqKl9pX9bX30l6Phh++HZ1Pgj6m6R7UAePt9mnm9GXfnBxM/65x3XBQZpdBOOPl/3Pg9FxsHFOWcuJGKBQiFojkibTek2GSygAhbGCjHGHslvTxq6TfDJ7Ce5m90/LxzAK7maTMLqdLv5M5rPFhit91Itep4GDzjgUSjOFTOFO/jtMYqF0WshFyrZcAdUddd4fZCbr2gpPGZLlqO+fo6/fry/7Y6lwX/ZbMONy+hzN5qs0Y7W0Bk8L+bJlTMJTGK3irfdlr+MSJqMtzwVmHOJchKt0GeebnGccMg7bAnIBR9J6+6rIOuu8L9+elGX9tXXeOg9kWqKj36kZUUsJAK1HIaH9TRv7TuYWEEhMokD9OF8PH8Lbp+VoMr+dLoOHcCdgJyEt5MlRKU0SCbQxtlbeHutrzUhWIsU7kRaSSQDUgPrkqKx1ClABtvNsUYmUFmoZ59E6idNdWe5lLpTmoMk6JBPF2fA+vLmb5VyaBjHWbXKxyjiSPZTdJMy4SpisN6xZKYEkNBWq3jDWrFqh8HUEZRvyJnt/Qu+a800New37C4US0huC5ZgtAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 85.13513513513513%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAIAAABSJhvpAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB9ElEQVR42nVS6W7aQBDm/R+gUkObvEj/tFKqqKQUAyWEADEQA8YH9t7rtaGfvY05AqPxaDzHzjdHY7/fZ3lOdSYqqYzZf6DM5AwBRYEAbfLa3sDXC6Kbdvfm52Pzt/Ow8mHZvbuLXan+2QTNdvfT94dm22mtN3VAmdwPoy+d3l3Lue30fx356mQniG6d/uf71td27zwZsLkxROtESMqlVEpKrXRmJZgwkcKVGcBG8AlsSyozq008mr45T9PhZPHielBGrjcYz/+OZtP5mnB1NotGjYEIFRGRcpVwCd6y/5wwCWOQsnmQhIQLXU40L4qTyhij7fAaSW2IVMNX79uPx/tWn3F5DPuQnBA2fvWms2UQJSW0yo7ib2GSMDFxvaUfFsWuUfs2CfNCElMJ8H5M3WWw8ON1TPALDlMRU3EGrXGMCsiBvdgdQqDhD0aw0Jl11O4LPWNXjAkhrJSUCfsa1nGhsjVQqTFYKtXLbNV9dgeTRW80G4wXzrO7pWLLBHq+uiquNJNaqAwFUMEyagEQOoLL31LkY2BCKvDVVRmTcyHBdp/Wivwg5Ziit9r4wRaxh8q4BNwJnpA68/yoO3Q7T9OYsKyyQK5juoyI1OYUdlUwIhzbKi+sOimMgCqd8vLCkurUoL+vYGdTDrCPN3SR0EJxOrB/hRLSG+CDBsYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -987,161 +1239,4 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;li&gt;&lt;a href=&quot;https://auth0.com/resources/ebooks/jwt-handbook?_ga=2.186766504.1633974048.1699948492-2054291612.1699940448&amp;#x26;_gl=1*1c5u08o*rollup_ga*MjA1NDI5MTYxMi4xNjk5OTQwNDQ4*rollup_ga_F1G3E656YZ*MTY5OTk1MzQ2OS4yLjEuMTY5OTk1NDg3Mi42MC4wLjA.*_ga*MjA1NDI5MTYxMi4xNjk5OTQwNDQ4*_ga_QKMSDV5369*MTY5OTk1MzQ2OS4yLjEuMTY5OTk1NDg3My42MC4wLjA.&quot;&gt;JWT Handbook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/JSON_Web_Token&quot;&gt;wikipedia JSON Web Token&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.iana.org/assignments/jwt/jwt.xhtml&quot;&gt;JSON Web Token Claims&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[We Were Children]]></title><description><![CDATA[https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html]]></description><link>https://funnyeagle.cn/tribes-we-were-children-chords/</link><guid isPermaLink="false">https://funnyeagle.cn/tribes-we-were-children-chords/</guid><pubDate>Fri, 10 Nov 2023 04:30:30 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/66ba225cd380c904471570de835c60a2/b4294/tribes-band.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.89189189189189%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAUCAwQG/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHRLnrcrMShf//EABoQAAMAAwEAAAAAAAAAAAAAAAABAgMEERP/2gAIAQEAAQUCWyLZpyszs6etJdP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPwFH/8QAGxAAAgMAAwAAAAAAAAAAAAAAAAECERIQMUH/2gAIAQEABj8Ckk7fhF5Zo6KXH//EAB0QAAICAgMBAAAAAAAAAAAAAAABESFBYTFRcZH/2gAIAQEAAT8hrgefjs5oE4EG2xKrUH6LAkWaUf/aAAwDAQACAAMAAAAQeO//xAAWEQEBAQAAAAAAAAAAAAAAAAAAESH/2gAIAQMBAT8QxX//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAbEAEBAAIDAQAAAAAAAAAAAAABEQAhMUFhUf/aAAgBAQABPxDUYo4ClC9PkzrnDyrGX5xcVKg9XKTWNEWvMqpEtm1SOWaHr1z/2Q==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;tribes&quot;
-        title=&quot;&quot;
-        src=&quot;/static/66ba225cd380c904471570de835c60a2/1c72d/tribes-band.jpg&quot;
-        srcset=&quot;/static/66ba225cd380c904471570de835c60a2/a80bd/tribes-band.jpg 148w,
-/static/66ba225cd380c904471570de835c60a2/1c91a/tribes-band.jpg 295w,
-/static/66ba225cd380c904471570de835c60a2/1c72d/tribes-band.jpg 590w,
-/static/66ba225cd380c904471570de835c60a2/b4294/tribes-band.jpg 600w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-        decoding=&quot;async&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Intro : B F# E Eb x2
-e|-------------------------|--------------------------|
-B|-------------------------|--------------------------|
-G|-------4-----------3-----|-----0-----0-----1-----1--|
-D|----4-----4-----4-----4--|--1-----1-----2-----2-----|
-A|-2-----------2-----------|--------------------------|
-E|-------------------------|--------------------------|
-
-B                         F#  
-It was a day like today,
-               Abm            E 
-a sunday afternoon when they took you away
-B        F#         Eb 
-down to Hades in a shopping trolley
-E 
-with a magazine and a suitcase
-B              F# 
-They stole your clothes 
-            Abm 
-i took your watch 
-          E 
-i couldnt look you in the eye 
-B              F#             E               E 
-why its always those who you love the most you criticise
-
-
-Chorus
-
-B       F#         Abm         E 
-Oh no stranger your just like me,
-             B           F#          Abm            E 
-these things happen we were children in the mid 90&apos;s
-B       F#         Abm         E 
-Oh no stranger your just like me,
-       B           F#          Abm            E 
-we get older they get younger it was you or me
-
-Interlude: B F# E Eb x2
-
-e|-------------------------|--------------------------|
-B|-------------------------|--------------------------|
-G|-------4-----------3-----|-----0-----0-----1-----1--|
-D|----4-----4-----4-----4--|--1-----1-----2-----2-----|
-A|-2-----------2-----------|--------------------------|
-E|-------------------------|--------------------------|
-
-e|-------------------------|--------------------x--x--|
-B|-------------------------|--------------------x--x--|
-G|-------4-----------3-----|-----0-----0-----1--x--x--|
-D|----4-----4-----4-----4--|--1-----1-----2-----x--x--|
-A|-2-----------2-----------|--------------------x--x--|
-E|-------------------------|--------------------------|
-
-
-Verse 2
-B                       F#                Abm          E        
-We stood there throwing ice cream in your hair how i solemly swear
-B            F#                Eb (6th)    E (7th)
-its the thing in life i regret the most... leaving you standing there
-B                F#             Abm 
-And if you asked me id pull my eyes out 
-      E 
-and when i woke up blind
-B            F#           Eb (6th)
-if you forgave i would sleep at night 
-E (7th)
-knowing i&apos;d led a good life.
-
-
-Chorus
-
-B       F#         Abm         E 
-Oh no stranger your just like me,
-             B           F#          Abm            E 
-these things happen we were children in the mid 90&apos;s
-B       F#         Abm         E 
-Oh no stranger your just like me,
-       B           F#          Abm            E 
-we get older they get younger it was you or me
-
-
-Solo B F# E Eb x4
-
-e|--2-----2-----0-----0--------------------------|
-B|----0-----0-----0-----0--2-----2-----2---------|
-G|-----------------------------4-----4-----4--4--|
-D|-----------------------------------------------|
-A|-----------------------------------------------|
-E|-----------------------------------------------|
-
-
-e|-14------14------12------12-------------------------|
-B|-----12------12------12------12--14------14---------|
-G|-------------------------------------16------16--16-|
-D|----------------------------------------------------|
-A|----------------------------------------------------|
-E|----------------------------------------------------|
-
-
-Play both chords once
-
-B                  F# 
-Learning how to keep living
-
-
-Chorus - play power chords softly over the chorus
-
-B       F#         Abm         E 
-Oh no stranger your just like me,
-             B           F#          Abm            E 
-these things happen we were children in the mid 90&apos;s
-B       F#         Abm         E 
-Oh no stranger your just like me,
-       B           F#          Abm            E 
-we get older they get younger it was you or me
-
-B       F#         Abm         E 
-Oh no stranger your just like me,
-             B           F#          Abm            E 
-these things happen we were children in the mid 90&apos;s
-B       F#         Abm         E 
-Oh no stranger your just like me,
-       B           F#          Abm            E 
-we get older they get younger it was you or me
-
-End on - B &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&quot;&gt;https://www.azchords.com/t/tribes-tabs-47515/wewerechildren-tabs-711868.html&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;/ul&gt;</content:encoded></item></channel></rss>
