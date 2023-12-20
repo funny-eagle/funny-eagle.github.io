@@ -1,14 +1,16 @@
 ---
-title: "[Tribes] Dancehall"
+title: "Dancehall"
 date: "2023-11-30 19:35:35"
-description: "[Tribes] Dancehall 吉他和弦谱"
+description: "[Tribes] Dancehall guitar chords"
 tags: ['music']
 slug: ''
 ---
 
+![tribes](./tribes.jpeg)
+
 A E #Fm D
 
-```text
+```
 Tribes Dancehall Chords A E #Fm D
 
 Verse 1:
