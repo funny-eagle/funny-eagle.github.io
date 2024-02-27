@@ -9,8 +9,6 @@ slug: ''
 专业英语词汇汇总：
 - architect 架构，架构师
 - architecture 架构
-- AADDT
-
 - analysis 分析
 - architecture 架构
 - design 设计
@@ -21,16 +19,12 @@ slug: ''
 - system design 系统设计
 - system development 系统开发
 - system testing 系统测试
-- System Design
-
 - system design strategies 系统设计策略
 - devide-and-conquer strategy 分而治之策略
 - stepwise refinement strategy 逐步求精策略
 - top-down strategy 自顶向下策略
 - bottom-up strategy 自底向上策略
 - iterative and incremental approach 迭代增量方法
-- System Design
-
 - system design methods 系统设计方法
 - function-oriented design 面向功能的设计方法
 - structured design (SD) 结构化设计方法
@@ -41,8 +35,6 @@ slug: ''
 - architecture-based software design (ABSD) 基于架构的软件设计方法
 - aspect-oriented design 面向切面的设计方法
 - service-oriented design 面向服务的设计方法
-- Software Design
-
 - key issues in software design 软件设计中的关键问题
 - function concerns 功能关注点
 - quality concerns 质量关注点
@@ -53,8 +45,6 @@ slug: ''
 - error and exception handling and fault tolerance 错误和异常的处理以及容错
 - interaction and presentation 交互和展示
 - safty and security 安全和安全性
-- Software Design
-
 - software structure and architecture 软件结构和体系结构
 - architecture 体系结构，架构
 - software design at different levels of abstraction 不同抽象层次的软件设计
@@ -62,8 +52,6 @@ slug: ''
 - architectural styles 架构风格
 - detailed design 详细设计
 - design patterns 设计模式
-- Software Design
-
 - architectural structures and viewpoints 架构结构和视角
 - viewpoint 视角
 - different high-level facets of a software design 软件设计中不同的高层级方面
@@ -76,8 +64,6 @@ slug: ''
 - functional view 功能视图
 - structural view 结构视图
 - data modeling view 数据模型视图
-- Software Design
-
 - architectural styles 架构风格
 - providing the software's high-level organization 提供软件的高层级组织
 - Dataflow Systems 数据流风格
@@ -98,8 +84,6 @@ slug: ''
 - Databases 数据库
 - Blackboards 黑板
 - Hypertext Systems 超文本系统
-- Software Design
-
 - a common solution 常见的解决方案，普遍的解决方案
 - a common problem 常见的问题，普遍的问题
 - a given context 给定的上下文，给定的情境，给定的情况
@@ -109,18 +93,12 @@ slug: ''
 - creational patterns 创建型模式
 - structural patterns 结构性模式
 - behavioral patterns 行为型模式
-
-- Software Design
-
 - creational patterns 创建型模式
 - Abstract Factory 抽象工厂
 - Builder 建造者
 - Factory Method 工厂方法
 - Prototype 原型
 - Singleton 单例
-
-- Software Design
-
 - structural patterns 结构性模式
 - Adapter 适配器
 - Bridge 桥接
@@ -129,9 +107,6 @@ slug: ''
 - Facade 外观
 - Flyweight 享元
 - Proxy 代理
-
-- Software Design
-
 - bahavioral patterns 行为型模式
 - Chain of Resposibility 责任链
 - Command 命令
@@ -144,18 +119,12 @@ slug: ''
 - Strategy 策略
 - Template Method 模板方法
 - Visitor 访问者
-
-- Software Design
-
 - architecture design decisions 架构设计决策
 - architectural decisions 架构决策
 - system quality attributes 系统质量属性
 - architecture design strategies 架构设计策略
 - the impact on quality attributes 对质量属性产生的影响，与质量属性的冲突，对质量属性的冲击
 - tradeoffs among competing quality attributes 相互矛盾的质量属性间的权衡
-
-- Architecture Design
-
 - quantity attributes 质量属性
 - performance 性能
 - availability 可用性
@@ -171,8 +140,6 @@ slug: ''
 - changeability 可变性
 - testability 可测试性
 - interoperability 互操作性
-- Software Design Notations
-
 - software design artifacts 软件设计制品
 - software design notations 软件设计记录
 - static view 静态视图
@@ -221,7 +188,7 @@ slug: ''
 - scrum 敏捷开发
 - feature-driven development, FDD 功能驱动开发
 - Software Engineering
-software development life cycle, SDLC 软件开发生命周期
+- software development life cycle, SDLC 软件开发生命周期
 - classical 经典的
 - traditional 传统的
 - classical SDLC 经典软件开发生命周期
@@ -236,7 +203,7 @@ software development life cycle, SDLC 软件开发生命周期
 - incremental 增量的，递增的
 - rapid 快速的
 - Software Engineering
-Prototyping Model 原型模型
+- Prototyping Model 原型模型
 - rapid throwaway prototyping 快速抛弃原型
 - evolutionaly prototyping 进化原型
 - incremental prototyping 增量原型
@@ -269,7 +236,7 @@ Prototyping Model 原型模型
 - DevOps Model DevOps 模型
 - Lean Model 精益模型
 - Software Engineering
-software engineering 软件工程
+- software engineering 软件工程
 - process 过程
 - methods 方法
 - tools 工具
@@ -288,7 +255,7 @@ software engineering 软件工程
 - software engineering measurement 软件工程度量，软件工程测量
 - software engineering tools 软件工程工具
 - Software Engineering
-software engineering methods 软件工程方法
+- software engineering methods 软件工程方法
 - Heuristic methods 启发式方法
 - structured methods 结构化方法
 - data-oriented methods 面向数据的方法
@@ -331,7 +298,7 @@ software engineering methods 软件工程方法
 - organizational processes 组织过程
 - cross-project processes 跨项目过程
 - Software Engineering
-software modeling 软件建模
+- software modeling 软件建模
 - modeling principles 建模原则
 - types of models 模型类型
 - analysis of models 模型分析
@@ -382,7 +349,7 @@ software modeling 软件建模
 - identification of relevent relations and cardinality between entities 识别实体之间的相关关系和基数
 - definition of process or functional interfaces 过程或功能接口的定义
 - Software Engineering
-analysis of models 模型分析
+- analysis of models 模型分析
 - analyzing for completeness 完整性分析
 - analyzing for consistency 一致性分析
 - analyzing for correctness 正确性分析
@@ -417,7 +384,7 @@ analysis of models 模型分析
 - attribute 属性
 - domain 域，值域
 - Data Modeling & Design
-Normalization 范式，标准化
+- Normalization 范式，标准化
 - First normal form, 1NF 1 范式
 - Second normal form, 2NF 2 范式
 - Third normal form, 3NF 3 范式
@@ -443,8 +410,7 @@ Normalization 范式，标准化
 - Subtyping Relationship 子类型化的关系
 - implies that all the properties from the supertype are inherited by the subtype 暗示着超类型的所有属性都由子类型继承
 - Data Modeling & Design
-Data Modeling and Design Activities： 数据建模和设计活动
-- Part I
+- Data Modeling and Design Activities： 数据建模和设计活动
 - 1 Plan for Data Modeling 数据建模计划
 - evaluate organizational requirements 评估组织的需求
 - create standards 创建标准
@@ -507,8 +473,7 @@ Data Modeling and Design Activities： 数据建模和设计活动
 - Flat File Database 文件数据库
 - Key-Value Pair 键值对
 - Triplestore 三元组存储
-- Data Storage and Operations
-- 数据存储和操作
+- Data Storage and Operations 数据存储和操作
 - Data Storage and Operations Activities数据存储和操作活动
 - Manage Database Technology 管理数据库技术
 - understand database technology characteristics 了解数据库技术的特点
