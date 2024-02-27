@@ -1,0 +1,553 @@
+---
+title: "[系统架构设计师]英语词汇"
+date: "2024-02-27 22:57:47"
+description: "系统架构设计师英语词汇"
+tags: ['coding']
+slug: ''
+---
+
+专业英语词汇汇总：
+- architect 架构，架构师
+- architecture 架构
+- AADDT
+
+- analysis 分析
+- architecture 架构
+- design 设计
+- development 开发
+- testing 测试
+- system analysis 系统分析
+- system architecture 系统架构
+- system design 系统设计
+- system development 系统开发
+- system testing 系统测试
+- System Design
+
+- system design strategies 系统设计策略
+- devide-and-conquer strategy 分而治之策略
+- stepwise refinement strategy 逐步求精策略
+- top-down strategy 自顶向下策略
+- bottom-up strategy 自底向上策略
+- iterative and incremental approach 迭代增量方法
+- System Design
+
+- system design methods 系统设计方法
+- function-oriented design 面向功能的设计方法
+- structured design (SD) 结构化设计方法
+- data structure-centered design 数据结构为中心的设计方法
+- object-oriented design (OOD) 面向对象的设计方法
+- component-based software design (CBSD) 基于组件的软件设计方法
+- component-based design (CBD) 基于组件的设计方法
+- architecture-based software design (ABSD) 基于架构的软件设计方法
+- aspect-oriented design 面向切面的设计方法
+- service-oriented design 面向服务的设计方法
+- Software Design
+
+- key issues in software design 软件设计中的关键问题
+- function concerns 功能关注点
+- quality concerns 质量关注点
+- concurrency 并发性
+- control and handling of events 事件的控制和处理
+- data persistence 数据持久化
+- distribution of components 组件分布，组件分配
+- error and exception handling and fault tolerance 错误和异常的处理以及容错
+- interaction and presentation 交互和展示
+- safty and security 安全和安全性
+- Software Design
+
+- software structure and architecture 软件结构和体系结构
+- architecture 体系结构，架构
+- software design at different levels of abstraction 不同抽象层次的软件设计
+- architectural design 结构设计，架构设计
+- architectural styles 架构风格
+- detailed design 详细设计
+- design patterns 设计模式
+- Software Design
+
+- architectural structures and viewpoints 架构结构和视角
+- viewpoint 视角
+- different high-level facets of a software design 软件设计中不同的高层级方面
+- view 视图
+- logical view 逻辑视图
+- process view 过程视图
+- physical view 物理视图
+- development view 开发视图
+- behavioral view 行为视图
+- functional view 功能视图
+- structural view 结构视图
+- data modeling view 数据模型视图
+- Software Design
+
+- architectural styles 架构风格
+- providing the software's high-level organization 提供软件的高层级组织
+- Dataflow Systems 数据流风格
+- Batch Sequential 批处理
+- Pipes and Filters 管道过滤器
+- Call-and-Return Systems 调用返回风格
+- Main Program and Subroutine 主程序子程序
+- Object-Oriented Systems 面向对象的系统
+- Hierarchical Layers 层次结构
+- Independent Components 独立构建风格
+- Communicating Processes 进程通信
+- Event Systems 事件驱动
+- Virtual Machines 虚拟机风格
+- Interpreters 解释器
+- Rule-Based Systems 基于规则的系统
+- Repositories 仓库风格
+- (Data-Centered Systems) 数据共享风格
+- Databases 数据库
+- Blackboards 黑板
+- Hypertext Systems 超文本系统
+- Software Design
+
+- a common solution 常见的解决方案，普遍的解决方案
+- a common problem 常见的问题，普遍的问题
+- a given context 给定的上下文，给定的情境，给定的情况
+- design patterns 设计模式
+- a common solution to a common problem in a given context 在给定的上下文下，对于常见问题的普遍解决方案
+- software's organization details at a lower level 较低层级的软件组织细节
+- creational patterns 创建型模式
+- structural patterns 结构性模式
+- behavioral patterns 行为型模式
+
+- Software Design
+
+- creational patterns 创建型模式
+- Abstract Factory 抽象工厂
+- Builder 建造者
+- Factory Method 工厂方法
+- Prototype 原型
+- Singleton 单例
+
+- Software Design
+
+- structural patterns 结构性模式
+- Adapter 适配器
+- Bridge 桥接
+- Composite 组合
+- Decorator 装饰
+- Facade 外观
+- Flyweight 享元
+- Proxy 代理
+
+- Software Design
+
+- bahavioral patterns 行为型模式
+- Chain of Resposibility 责任链
+- Command 命令
+- Interpreter 解释器
+- Iterator 迭代器
+- Mediator 中介者
+- Memento 备忘录
+- Observer 观察者
+- State 状态
+- Strategy 策略
+- Template Method 模板方法
+- Visitor 访问者
+
+- Software Design
+
+- architecture design decisions 架构设计决策
+- architectural decisions 架构决策
+- system quality attributes 系统质量属性
+- architecture design strategies 架构设计策略
+- the impact on quality attributes 对质量属性产生的影响，与质量属性的冲突，对质量属性的冲击
+- tradeoffs among competing quality attributes 相互矛盾的质量属性间的权衡
+
+- Architecture Design
+
+- quantity attributes 质量属性
+- performance 性能
+- availability 可用性
+- security 安全性
+- modifiablity 可修改性
+- maintainability 可维护性
+- scalability 可扩展性
+- portability 可移植性
+- functionality 功能性
+- reliability 可靠性
+- faulttolerance 容错
+- robustness 健壮性
+- changeability 可变性
+- testability 可测试性
+- interoperability 互操作性
+- Software Design Notations
+
+- software design artifacts 软件设计制品
+- software design notations 软件设计记录
+- static view 静态视图
+- structural view 结构视图
+- describe structural organization 描述结构的组织
+- dynamic view 动态视图
+- behavioral view 行为视图
+- represent software behavior 展示软件行为
+- Software Design Notations
+- structural descriptions 结构描述
+- static view 静态视图
+- structural view 结构视图
+- architecture description language, ADL 架构描述语言
+- class and object diagrams 类图和对象图
+- component diagrams 组件图
+- class responsibility collaborator cards, CRCs 类职责协作卡
+- deployment diagrams 部署图
+- entity-relationship diagrams, ERDs 实体关系图，实体联系图
+- interface description languages, IDLs 接口描述语言
+- structure charts, SCs 结构图
+- Software Design Notations
+- behavioral descriptions 行为描述
+- dynamic view 动态视图
+- behavioral view 行为试图
+- activity diagrams 活动图
+- communication diagrams 通信图
+- data flow diagrams, DFDs 数据流图
+- decision tables and diagrams 决策表和决策图，判定表和判定图
+- flowcharts 流程图
+- sequence diagrams 时序图
+- state transition and state chart diagrams 状态转换和状态图
+- formal specification languages 形式化描述语言
+- pseudo codes 伪代码
+- program design languages, PDLs 程序设计语言
+- Software Engineering
+- software engineering methods 软件工程方法
+- heuristic methods 启发方法，启发式方法，探索方法，探索式方法
+- structured analysis and design methods 结构化分析和设计方法
+- data modeling methods 数据建模方法
+- object-oriented analysis and design methods 面向对象的分析和设计方法
+- formal methods 形式方法，形式化方法
+- prototyping methods 原型方法
+- agile methods 敏捷方法
+- rapid software development methods, RAD 快速软件开发方法
+- extreme programming, XP 极限编程
+- scrum 敏捷开发
+- feature-driven development, FDD 功能驱动开发
+- Software Engineering
+software development life cycle, SDLC 软件开发生命周期
+- classical 经典的
+- traditional 传统的
+- classical SDLC 经典软件开发生命周期
+- traditional SDLC 传统软件开发生命周期
+- big bang model 大爆炸模型
+- waterfall model 瀑布模型
+- incremental model 增量模型
+- prototyping model 原型模型
+- v-shaped model V 模型
+- sequential 顺序的，连续的
+- iterative 迭代的，重复的，反复的
+- incremental 增量的，递增的
+- rapid 快速的
+- Software Engineering
+Prototyping Model 原型模型
+- rapid throwaway prototyping 快速抛弃原型
+- evolutionaly prototyping 进化原型
+- incremental prototyping 增量原型
+- extreme prototyping 极限原型
+- Waterfall Model 瀑布模型
+- classical waterfall model 经典瀑布模型
+- iterative waterfall model 迭代瀑布模型
+- spiral model 螺旋模型
+- Incremental Model 增量模型
+- staged delivery model 阶段交付模型
+- parallel development model 并行开发模型
+- unified process model 统一过程模型
+- Software Engineering
+- SDLC 软件开发生命周期
+- Big Bang Model 大爆炸模型
+- Waterfall Model 瀑布模型
+- Fountain Model 喷泉模型
+- V Model,V-Shaped Model V 模型
+- W Model,W-Shaped Model W 模型
+- Iterative Model 迭代模型
+- Prototyping Model 原型模型
+- Rapid Prototyping Model 快速原型模型
+- Incremental Model 增量模型
+- Spiral Model 螺旋模型
+- Rapid Application Development Model，RAD Model 快速应用开发模型
+- Unified Process Model 统一过程模型
+- Rational Unified Process Model, RUP Model Rational 统一过程模型
+- Agile Model 敏捷模型
+- SCRUM Model 敏捷模型，SCRUM 模型，SCRUM 敏捷模型
+- DevOps Model DevOps 模型
+- Lean Model 精益模型
+- Software Engineering
+software engineering 软件工程
+- process 过程
+- methods 方法
+- tools 工具
+- software engineering features 软件工程特性
+- models 模型
+- methods 方法
+- tools 工具
+- metrics 度量
+- standards 标准
+- software engineering management 软件工程管理
+- initiation and scope definition 启动和范围定义
+- software project planning 软件项目计划
+- software project enactment 软件项目实施
+- review and evaluation 回顾和评价
+- closure 关闭，终止，结束
+- software engineering measurement 软件工程度量，软件工程测量
+- software engineering tools 软件工程工具
+- Software Engineering
+software engineering methods 软件工程方法
+- Heuristic methods 启发式方法
+- structured methods 结构化方法
+- data-oriented methods 面向数据的方法
+- object-oriented methods 面向对象的方法
+- domain-specific methods 领域特定方法
+- Formal methods 形式化方法
+- specification languages and notations 规范语言和符号
+- program refinement and derivation 程序精炼和推导
+- formal verification 形式验证，形式证明
+- logical inference 逻辑推理
+- Prototyping methods 原型方法
+- prototyping style 原型设计风格
+- prototyping target 原型设计目标
+- prototyping evaluation techniques 原型评估技术
+- Agile methods 敏捷方法
+- rapid software development, RAD 快速应用开发
+- extreme programming, XP 极限编程
+- scrum Scrum 方法
+- feature-driven development, FDD 功能驱动开发
+- Software Engineering
+- software engineering tools 软件工程工具
+- software requirements tools 软件需求工具
+- software design tools 软件设计工具
+- software construction tools 软件构造工具
+- software testing tools 软件测试工具
+- software maintenance tools 软件维护工具
+- software engineering process tools 软件工程过程工具
+- software quality tools 软件质量工具
+- software configuration management tools 软件配置管理工具
+- software engineering management tools 软件工程管理工具
+- infrastructure support tools 基础设施支持工具
+- Software Engineering
+- software engineering process 软件工程过程
+- software life cycles 软件生命周期
+- software development life cycle, SDLC 软件开发生命周期
+- software product life cycle, SPLC 软件产品生命周期
+- categories of software processes 软件过程类别
+- primary processes 主要过程
+- supporting processes 支持过程
+- organizational processes 组织过程
+- cross-project processes 跨项目过程
+- Software Engineering
+software modeling 软件建模
+- modeling principles 建模原则
+- types of models 模型类型
+- analysis of models 模型分析
+- software engineering methods 软件工程方法
+- modeling principles 建模原则
+- model the essentials 仅建必要模型
+- provide perspective 提供视角
+- enable effective communications 赋能有效沟通
+- properties and expression of models 模型的属性和表达
+- completeness 完整性
+- consistency 一致性
+- correctness 正确性
+- Software Engineering
+- types of modeling 建模类型
+- information modeling 信息建模
+- behavioral modeling 行为建模
+- structure modeling 结构建模
+- information modeling 信息建模
+- focus on data and information 关注数据和信息
+- identify and define a set of {} on data entities 识别和定义数据实体的{}集合
+- concepts 概念
+- properties 属性
+- relations 关系
+- constraints 约束
+- semantic or conceptual information model 语义或概念信息模型
+- from problem perspective 从问题视角
+- provide formalism and context 提供形式体系和上下文
+- subsequent transformations 随后的转换
+- lead to elaboration as implemented in the software 引导在软件中的实现细化
+- logical data models 逻辑数据模型
+- physical data models 物理数据模型
+- Software Engineering
+- behavioral modeling 行为建模
+- identify and define functions 识别并定义功能
+- 3 basic forms 三个基本形式
+- state machines 状态机
+- a collection of defined states, events and transitions 已定义状态、事件和转换的集合
+- control-flow 控制流
+- a sequence of events causes processes to be activated or deactivated 一系列事件导致处理被激活或停止
+- data-flow
+- a sequence of steps where data moves through processes toward data stores or data sinks 数据经过处理流向数据存储或数据接收器的一系列步骤
+- structure modeling 结构建模
+- illustrate the physical or logical composition 阐明物理或逻辑组成
+- composition of software from its various component parts 通过构件部件组成的软件构成
+- establish defined boundary between software and environment 在软件和环境之间建立已定义的边界
+- common structural constructs 常见的结构构造
+- composition, decomposition, generalization, specialization of entities 实体的组成、分解、泛化、特化
+- identification of relevent relations and cardinality between entities 识别实体之间的相关关系和基数
+- definition of process or functional interfaces 过程或功能接口的定义
+- Software Engineering
+analysis of models 模型分析
+- analyzing for completeness 完整性分析
+- analyzing for consistency 一致性分析
+- analyzing for correctness 正确性分析
+- traceablity 可追溯性，可追踪性，可跟踪性
+- interaction analysis 交互分析
+- Data Architecture 数据架构
+- Data Modeling and Design 数据建模与设计
+- Data Storage and Operations 数据存储与操作
+- Data Security 数据安全性
+- Data Integration and Interoperability 数据集成和互操作性
+- Document and Content Management 文档与内容管理
+- Reference and Master Data 参考和主数据
+- Data Warehousing and Business Intelligence 数据仓库和商业智能
+- Metadata Management 元数据管理
+- Data Quality 数据质量
+- Big Data and Data Science 大数据与数据科学
+- Data Management 数据管理
+- Data Handling Ethics 数据处理伦理
+- Data Governance 数据治理，数据管控
+- Data Management Maturity Assessment 数据管理成熟度评估
+- Data Management Organization and Role Expectations 数据管理中组织和角色期望
+- Data Management and Organizational Change Management 数据管理和组织变更管理
+- Data Modeling & Design
+- Types of Data that are Modeled 需要建模的数据的类型
+- category information 类别信息
+- resource information 资源信息
+- business event information 业务事件信息
+- detail transaction information 详细事务信息
+- Data Model Components 数据模型组件
+- entity 实体
+- relationship 关系
+- attribute 属性
+- domain 域，值域
+- Data Modeling & Design
+Normalization 范式，标准化
+- First normal form, 1NF 1 范式
+- Second normal form, 2NF 2 范式
+- Third normal form, 3NF 3 范式
+- Boyce/Codd normal form, BCNF BC 范式
+- Fourth normal form, 4NF 4 范式
+- Fifth normal form 5NF 5 范式
+- Abstraction 抽象，抽象概念，提取
+- from concepts or subjects 从概念或主题
+- the removal of details 移除细节，删除细节
+- preserving the important properties and essential nature 保留重要属性和必要本质
+- in such a way to broaden applicability to a wide class of situations 通过这种方法来扩大对各类情况的适用性
+- Generalization 泛化，普遍化，一般化
+- groups the common attributes and relationships of entities 对实体的公共属性和关系进行分组
+- groups into subtype entities 分组到子类型实体
+- Specialization 具体化，特化，特殊化
+- separates distinguishing attributes within an entity 在一个实体中分离有区别的属性
+- separates into subtype entities 分离到子类型实体
+- Subtypes 子类型
+- can be created using roles or classification 可以使用角色或分类创建
+- to separate instances of an entity into groups by function 按功能将一个实体的实例分成组
+- reduces redundancy on a data model 减少数据模型上的冗余
+- makes a data model easier to communicate similarities across 使数据模型更容易交流相似之处
+- Subtyping Relationship 子类型化的关系
+- implies that all the properties from the supertype are inherited by the subtype 暗示着超类型的所有属性都由子类型继承
+- Data Modeling & Design
+Data Modeling and Design Activities： 数据建模和设计活动
+- Part I
+- 1 Plan for Data Modeling 数据建模计划
+- evaluate organizational requirements 评估组织的需求
+- create standards 创建标准
+- determine data model storage 确定数据模型存储
+- define the deliverables 定义交付物
+- diagrams 图解，图表，示意图
+- definitions 定义
+- issues and outstanding questions 问题和未决问题
+- lineage 数据血统，数据族系
+- 2 Build the Data Model 构建数据模型
+- Forward Engineering 正向工程
+- Conceptual Data Modeling 概念数据建模
+- Select Scheme 选择方案
+- Select Notation 选择记号法
+- Complete Inital CDM 完成初始概念数据模型
+- Incorporate Enterprise Terminology 结合企业术语
+- Obtain Sign-off 获得批准
+- Logical Data Modeling 逻辑数据建模
+- Analyze Information Requirements 分析信息需求
+- Analyze Existing Documentation 分析现有文档
+- Add Associative Entities 添加关联实体
+- Add Attributes 添加属性
+- Assign Domains 分配值域
+- Assign Keys 分配键
+- Physical Data Modeling 物理数据建模
+- Resolve Logical Abstractions 解析逻辑抽象，分解逻辑抽象
+- Add Attribute Details 添加属性的细节
+- Add Reference Data Objects 添加引用数据对象
+- Assign Surrogate Keys 指定代理键
+- Denormalize for Performance 通过反范式化优化性能
+- Index for Performance 通过索引优化性能
+- Partition for Performance 通过分区优化性能
+- Create Views 创建视图
+- Reverse Engineering 逆向工程
+- Data Storage and Operations数据存储和操作
+- Database Storage Media数据库存储媒体
+- Disk 磁盘
+- Storage Area Network, SAN 存储区域网
+- In-Memory 内存
+- Columnar Compression Solution 列式压缩解决方案
+- Flash Memory 闪速存储器
+- Database Environments数据库环境
+- Production Environment 生产环境
+- Pre-production Environments 预生产环境
+- Development Environment 开发环境
+- Test Environment 测试环境
+- Sandboxes 沙箱，沙盒
+- Experimental Environment 实验环境
+- Database Organization数据结构
+- Hierarchical 分层结构
+- Relational 关系结构
+- Multi-Dimentional 多维结构
+- Temporal 时间结构
+- Valid Time 有效时间
+- Transaction Time 事务时间
+- Non-rational 非关系结构
+- Column-Oriented 面向列
+- Spatial 空间
+- Object / Multi-Media 对象/多媒体
+- Flat File Database 文件数据库
+- Key-Value Pair 键值对
+- Triplestore 三元组存储
+- Data Storage and Operations
+- 数据存储和操作
+- Data Storage and Operations Activities数据存储和操作活动
+- Manage Database Technology 管理数据库技术
+- understand database technology characteristics 了解数据库技术的特点
+- evaluate database technology 评估数据库技术
+- manage and monitor database technology 管理和监控数据库技术
+- Manage Databases 管理数据库
+- understand requirements 了解需求
+- define storage requirements 定义存储要求
+- identify usage patterns 识别使用模式
+- define access requirements 定义访问要求
+- plan for business continuity 计划业务连续性
+- make backups 备份
+- recover data 恢复数据
+- Develop database instances 开发数据库实例
+- manage the physical storage environment 管理物理存储环境
+- manage database access controls 管理数据库访问控制
+- create storage containers 创建存储容器
+- implement physical data models 实现物理数据模型
+- load data 加载数据
+- manage data replication 管理数据复制
+- Manage Database Performance 管理数据库性能
+- set database performance service levels 设置数据库性能服务级别
+- manage database availability 管理数据库可用性
+- manage database execution 管理数据库执行
+- maintain database performance service levels 维护数据库性能和服务级别
+- transaction performance vs. batch performance 事务性能与批处理性能
+- issue remediation 问题补救
+- maintain alternate environments 维护备用环境
+- Manage Test Data Sets 管理测试数据集
+- Manage Data Migration 管理数据迁移
+- Data Security 数据安全
+- Goals目标
+- enabling appropriate access and preventing inappropriate access to enterprise data assets 确保对企业数据资产的适当访问并防止不适当的访问
+- enabling compliance with regulations and policies for privacy, protection, and confidentiality 确保遵守有关隐私、保护和保密的法规和政策
+- ensuring that stakeholder requirements for privacy and confidentiality are met 确保满足利益相关者的隐私和保密要求
+- Principles原则
+- collaboration 协作
+- enterprise approach 企业方法
+- proactive management 主动管理
+- clear accountability 明确的责任
+- metadata-driven 元数据驱动
+- reduce risk by reducing exposure 通过减少接触降低风险
