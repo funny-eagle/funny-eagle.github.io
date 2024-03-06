@@ -1,4 +1,369 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle 技术博客;记录技术成长]]></description><link>https://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 27 Feb 2024 15:24:22 GMT</lastBuildDate><item><title><![CDATA[[系统架构设计师]英语词汇]]></title><description><![CDATA[专业英语词汇汇总： architect 架构，架构师 architecture 架构 analysis 分析 architecture 架构 design 设计 development 开发 testing 测试 system analysis 系统分析 system…]]></description><link>https://funnyeagle.cn/architecture-english-word/</link><guid isPermaLink="false">https://funnyeagle.cn/architecture-english-word/</guid><pubDate>Tue, 27 Feb 2024 14:57:47 GMT</pubDate><content:encoded>&lt;p&gt;专业英语词汇汇总：&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Funny Eagle]]></title><description><![CDATA[Funny Eagle 技术博客;记录技术成长]]></description><link>https://funnyeagle.cn</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 06 Mar 2024 14:49:21 GMT</lastBuildDate><item><title><![CDATA[[系统架构设计师]案例分析]]></title><description><![CDATA[一、架构风格比较与分析（202…]]></description><link>https://funnyeagle.cn/architecture-case-analysis/</link><guid isPermaLink="false">https://funnyeagle.cn/architecture-case-analysis/</guid><pubDate>Wed, 06 Mar 2024 13:11:47 GMT</pubDate><content:encoded>&lt;h2 id=&quot;一架构风格比较与分析2022年&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%B8%80%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC%E6%AF%94%E8%BE%83%E4%B8%8E%E5%88%86%E6%9E%902022%E5%B9%B4&quot; aria-label=&quot;一架构风格比较与分析2022年 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;一、架构风格比较与分析（2022年）：&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e5a77aa31fb1cf306239e0797983e73f/49217/q1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.108108108108105%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsTAAALEwEAmpwYAAABdklEQVR42m2RUXOiQBCE+f9/JtGgQiIqIkLkQEVE9MQyudKqqKCVe/BJv5sldVd5uK3q2u3Znt6ZWS3LMva7Hfl6TZIkLBYZWbbk/f0X6m4ymbLZbNiJZjyesBbdfL4gVUjVnjJP5lyvV263G1o8S7hcLqh1v9//gfsX/76+8/+d1a6FUUSe52y3W3kxZbX6SRzP2L69VfEwjKSilL+dLJerSpfnG3KpPAxDDh+HqjvViVav6YxGAb7vYxhGZeAOhlV73tDDbBrYvT6RxGdxwuh1RKfTw2p3cJwBz+YLvW6fVsskisZotdoTgYh8QfgjlGQbxx4I+hgi6glvt9uY5jND15Nkm9pjnXgaM5b5Nhstnup6ZTwVrj08POJ7Pp7A918ZOC7WiyWJXTpWtzJ1bIeG3qCp6wRBgOu6VaXK1LJUpQ6GaYphjLbb7zmeCoqi5ENmcT5fKMszJ4kpqPmcjkUVK8uSz9+fovk6KxSF3Ak/HI7V5/4BapztCAL76scAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/e5a77aa31fb1cf306239e0797983e73f/fcda8/q1.png&quot;
+        srcset=&quot;/static/e5a77aa31fb1cf306239e0797983e73f/12f09/q1.png 148w,
+/static/e5a77aa31fb1cf306239e0797983e73f/e4a3f/q1.png 295w,
+/static/e5a77aa31fb1cf306239e0797983e73f/fcda8/q1.png 590w,
+/static/e5a77aa31fb1cf306239e0797983e73f/49217/q1.png 701w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4ecb9f09722d3aae90e0198de4a3eefa/242e2/q2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLElEQVR42i2QSXOCQBCF+f//JMktLoiswiDbELQwyngwFzlIBXFJmSoFXtqpHF69mu6e6e+NUlUV1vknDocKZVnidvtF3/do21Z613Xo+k562z79We/weLRyRvb/9ZxXRFEgX+aIwhicc2y3W+x2X1gulsiyBZIkQRwn4KTsI6Mzx2ZTQBQC+WqFnGA41Xzfx56AFNu0MLNnMKY6wnkAnXzwPkDCUzDGoKoa1LGK0WCI0XAMbaJhQkpogWWYNDvEVNPx+vKG9XoDJSUq13HoIQPBPEQYBLBMG7pu0KWIqDNJZtFi5jJZD8JILnNsB97MA/N8eK6Lck+EQghCTilyRNFiipAjJTrHtuEzX8YV9A2n0xlNc0JdN6Qa9XeN47HBz/WKM/Uu5wvu9wf+AGAcXWmxUFRoAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/4ecb9f09722d3aae90e0198de4a3eefa/fcda8/q2.png&quot;
+        srcset=&quot;/static/4ecb9f09722d3aae90e0198de4a3eefa/12f09/q2.png 148w,
+/static/4ecb9f09722d3aae90e0198de4a3eefa/e4a3f/q2.png 295w,
+/static/4ecb9f09722d3aae90e0198de4a3eefa/fcda8/q2.png 590w,
+/static/4ecb9f09722d3aae90e0198de4a3eefa/242e2/q2.png 703w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;参考答案：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可修改性：&lt;/strong&gt;
+面向对象风格通过编写新的规则实现代码，并通过应用重启或热加载添加规则，可修改性稍差；解释器风格通过编写新的规则文件，并通过导入资源文件或外部配置添加规则，可修改性较好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;灵活性：&lt;/strong&gt;
+面向对象风格通过策略模式定义规则对象，规则以程序逻辑实现，灵活性较差；解释器风格可灵活定义规则计算表达式，灵活性较好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;性能：&lt;/strong&gt;
+面向对象风格以编译后的代码运算规则，性能较好；而解释器风格需要加载规则、解析规则后，再运算得出结果，性能较差。&lt;/p&gt;
+&lt;p&gt;该项目在系统性能方面不做过多考虑，更注重灵活性，因此建议采用解释器风格。&lt;/p&gt;
+&lt;h2 id=&quot;二数据流图的数据平衡原则2022年&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BA%8C%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E7%9A%84%E6%95%B0%E6%8D%AE%E5%B9%B3%E8%A1%A1%E5%8E%9F%E5%88%992022%E5%B9%B4&quot; aria-label=&quot;二数据流图的数据平衡原则2022年 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;二、数据流图的数据平衡原则（2022年）&lt;/h2&gt;
+&lt;p&gt;简要介绍数据流图在分层细化过程中遵循的数据平衡原则。&lt;/p&gt;
+&lt;p&gt;参考答案：教材P194&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;父图中描述过的数据流必须要在相应的子图中出现；&lt;/li&gt;
+&lt;li&gt;一个处理至少有一个输入流和一个输出流；&lt;/li&gt;
+&lt;li&gt;一个存储必定有输入的数据流和流出的数据流；&lt;/li&gt;
+&lt;li&gt;一个数据流至少有一端是处理端；&lt;/li&gt;
+&lt;li&gt;模型图中表达和描述的信息是全面的、完整的、正确的和一致的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;三数据流图和数据字典的作用2022年&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%B8%89%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE%E5%92%8C%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8%E7%9A%84%E4%BD%9C%E7%94%A82022%E5%B9%B4&quot; aria-label=&quot;三数据流图和数据字典的作用2022年 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;三、数据流图和数据字典的作用（2022年）&lt;/h2&gt;
+&lt;p&gt;在结构化分析和设计过程中，数据流图和数据字典是常用的技术手段，请简要说明它们在软件需求分析和设计阶段的作用。&lt;/p&gt;
+&lt;p&gt;参考答案：&lt;/p&gt;
+&lt;p&gt;需求分析阶段：数据流图的目的是描述系统的功能需求，利用应用问题域中数据及信息的提供者与使用者、信息的流向、处理、存储4中元素描述系统需求，建立应用系统的功能模型。&lt;/p&gt;
+&lt;p&gt;设计阶段：数据字典是描述数据的信息集合，是对系统中使用的所有数据元素定义的集合。数据字典最重要的作用是作为分析阶段的工具，在结构化分析中，数据字典给数据流图上的每个元素加以定义和说明。&lt;/p&gt;
+&lt;h2 id=&quot;四数据库缓存2022年&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%9B%9B%E6%95%B0%E6%8D%AE%E5%BA%93%E7%BC%93%E5%AD%982022%E5%B9%B4&quot; aria-label=&quot;四数据库缓存2022年 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;四、数据库缓存（2022年）&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/508dc18ad5242b543e33d1e269703a10/4d08a/q3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.10810810810811%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAACQklEQVR42l1TaVPiQBDN//8zi+UKhiSYQALENXKTgyMcCrhbBSjl8UF8+7ot9jBVU+n0zHS/o2O02x1sNg/I8xxPTwccj0e8v7/rkvj0/fV9ij8+Pv5bxmg0xnq9wWQyQRzH6PX6SJIESZzg/u4ey+VSc/l0itFopGem05z7sd6T59/mxnAwxMPPX7rxFdEpd+r+B9XxL6KvjxEPh+h0uuycIMtG7D7FbrfFbDZnLiWyHNI0SzMiWutbGPQHA/SJfD5f6LfUWCwWMMJmE5ZlofDtDJ5bhet6CIKAORsXF0XYZUvjQuEMKYvVgwbCZohazYdVtnETRah6Vd71kM9mMEqlS9TrLMqLtWoNFcdFdBMh8APGFbhXLpqNkLGj+x4vB35dEdmWo4VM00IYhkS4hOHYDrvWicLRA5clkyb0WKSJMpt4nqdF+sxJXCaqLouJIWLSkpRFnulkisPhIC5nmHFkRL8Jk0ma8sBM43gYI+HKsjF2260W+HT/DnPqtV6tOHIb1VamYb/fwzCJqEHKipKIXOpoU1Obukks1B27AoeUBbFP7QLfR9ksQ9g1qadpmirHcnkHo98bqHMpnUrTT5eF0qA/4Bpidb+ik3N0uz2iTYg60Vn8dDtVuuPxBI/7R7y9vcE4Pz/Xzhffiypwxbmifg20W206X8D19Q81QJyO6KjoaROZT0aOsKBpJbIsFYsqlSGONjk6gkqEjaKWopM/R4p2Ox20blvqvMydNBB5WrdtZfT8/Iwt9d3tdnh9ecVvvW1M4vLpDR0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/508dc18ad5242b543e33d1e269703a10/fcda8/q3.png&quot;
+        srcset=&quot;/static/508dc18ad5242b543e33d1e269703a10/12f09/q3.png 148w,
+/static/508dc18ad5242b543e33d1e269703a10/e4a3f/q3.png 295w,
+/static/508dc18ad5242b543e33d1e269703a10/fcda8/q3.png 590w,
+/static/508dc18ad5242b543e33d1e269703a10/4d08a/q3.png 709w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8f57a15b62b6b56e660a5f605a2f9445/4d08a/q3-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 21.62162162162162%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA8ElEQVR42iWQWW+CUBBG+f9/SdukYiJUZSmgCAiyCBVLRbbq0+nt7cNkznyZXWnbFn/vk+cFeZbT9z3jODIIP02T5Mfj8c/DwPP5FPEPg+Du3nH7vknfdXeZo8THI0t1yW63x3N3aJrGy/xVaou3BbPZHNu00PV31IWKaZgEQUBVVaRpKjiUi5yLgqZpUE5JimXZRFGE7/s4jkuSnAQfcF0PwzRxPhxcoXueh23bFMWZsiyFVVTCsiyTzdv2jpLEMauVhiuKNuu15CiMCMOQzWaLJmJLbGhsDXRN5yCG/p3bfDVc6yv1taauL1w+L/Jdv+BuIC+KL4ieAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/8f57a15b62b6b56e660a5f605a2f9445/fcda8/q3-1.png&quot;
+        srcset=&quot;/static/8f57a15b62b6b56e660a5f605a2f9445/12f09/q3-1.png 148w,
+/static/8f57a15b62b6b56e660a5f605a2f9445/e4a3f/q3-1.png 295w,
+/static/8f57a15b62b6b56e660a5f605a2f9445/fcda8/q3-1.png 590w,
+/static/8f57a15b62b6b56e660a5f605a2f9445/4d08a/q3-1.png 709w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+参考答案：&lt;/p&gt;
+&lt;p&gt;李工同步方案的思路：更新数据时在同一事务内一次完成删除缓存、更新数据库，再写入缓存。&lt;/p&gt;
+&lt;p&gt;张工异步准实时方案思路：更新数据时，首先通过消息队列发布待更新的数据消息给更新缓存的服务，然后再更新数据库；缓存更新服务订阅消息队列，等待收到更新事件后执行缓存更新。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/93a5ea573aa95b0f97eb7b8766b53f5b/8c557/q3-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.027027027027025%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAABIElEQVR42kWQW2+CQBCF+f+/piY+VFvQUAQs7HK/aoQmYGIfpMbIpTyczq4PfZjMTmb2O2dGadsWRVFA5PP5jHmeMQwDpukX0zhiHCdZixipfvYm3O93evd4PB7o+/++YugfCIMQqqrhdbVCGEZYr9/geT6Yy7DRNjJeFguZHceB7/vYbrdYLpfQNA3quwpd18lYCaU6nVDXXwQKYVs2yvKAgATiKEKaJIjiGEmcgDOOgMQu3xfkeY4sy+A6LhrarOs63H5u0qXi+wHyLJegNE3BGJNwzjkYfRCqAmaRmGVaBCtoLpNORZTUF4K73Y6M1VCc/Sdsew/ucbiuC8MwYJqmXEGcomlaiC0EWMCEcFXVOB6OKPLn7Vu6vXB8vXb4A/mRYQVYIUK2AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/93a5ea573aa95b0f97eb7b8766b53f5b/fcda8/q3-2.png&quot;
+        srcset=&quot;/static/93a5ea573aa95b0f97eb7b8766b53f5b/12f09/q3-2.png 148w,
+/static/93a5ea573aa95b0f97eb7b8766b53f5b/e4a3f/q3-2.png 295w,
+/static/93a5ea573aa95b0f97eb7b8766b53f5b/fcda8/q3-2.png 590w,
+/static/93a5ea573aa95b0f97eb7b8766b53f5b/8c557/q3-2.png 700w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+参考答案：&lt;/p&gt;
+&lt;p&gt;哈希算法通过某种哈希散列得到一个值，按该值将数据分配到集群响应节点进行缓存。&lt;/p&gt;
+&lt;p&gt;一致性哈希算法将这个那个哈希值空间映射成一个按顺时针方向组织的虚拟圆环，使用哈希算法计算出哈希值，然后根据哈希值的位置沿圆环顺时针查找，将数据分配到第一个遇到的集群节点进行缓存。&lt;/p&gt;
+&lt;p&gt;一致性哈希算法有两大优点：
+（1）可扩展性。保证了增加或者减少服务器时，数据存储的改变最少，相比传统哈希算法大大节省了数据迁移的开销；
+（2）更好的适应数据的快速增长。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d2334ae8c02b7893d163d2d07d50b00e/7422e/q3-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 20.27027027027027%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2ElEQVR42m2N207CUBBF+/9/AxoLrQQKKPSutCfRcpMnC33v9dDloYrhgUlWZs+enWwtyzJELPhOU47pESkll2nb9pc/fetd9fmOryUfnwR+iG3bavuKANf1eAtD4ihiv9sTBCGHrwNCCGJVvt3uuv96syFJ1niex2r1ThTFaJPxGGNo8tDrY00sDMNk8bpgoA+YWlPm1gzTHOGrIv1J51npocqP1F4uHeazF3SV7fcecRwX7XTKKMuyo6qqDnmW6q5o6oa6rhUXv6Qoiv9cnufdXTdN5131D1awIlsH0vPOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d2334ae8c02b7893d163d2d07d50b00e/fcda8/q3-3.png&quot;
+        srcset=&quot;/static/d2334ae8c02b7893d163d2d07d50b00e/12f09/q3-3.png 148w,
+/static/d2334ae8c02b7893d163d2d07d50b00e/e4a3f/q3-3.png 295w,
+/static/d2334ae8c02b7893d163d2d07d50b00e/fcda8/q3-3.png 590w,
+/static/d2334ae8c02b7893d163d2d07d50b00e/7422e/q3-3.png 697w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+参考答案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;工作原理：布隆过滤器是一种用于快速判断一个元素是否可能存在于一个集合中的数据结构，通过多个哈希函数将元素映射到位向量中，设置相应位置为 1。查询时，若所有位置都为 1 则判断可能存在，否则一定不存在。&lt;/li&gt;
+&lt;li&gt;优点：节省空间，判断速度快&lt;/li&gt;
+&lt;li&gt;缺点：存在误判可能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;五web系统架构设计2022年&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E4%BA%94web%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A12022%E5%B9%B4&quot; aria-label=&quot;五web系统架构设计2022年 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;五、Web系统架构设计（2022年）&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/76d347efa4cde9bc8d403cbab74880b2/7422e/q5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 71.62162162162163%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsTAAALEwEAmpwYAAACp0lEQVR42lWUCXOiYAyG+f+/Zafd6e5W0XqCFg9QvFBBrBcqtR2vdms93k3Ssttl5hvyhZAvefOA0u+7GA4fMBqNZO12O2w2G6zXa+z3e7m/vLzIiuzoeRT7+vobfF0uFygjSjbwBljM51gul5jNphgMfHiuh+l0Bt8fYk7PFosFXNfFZDKRAnx/IAX4vo8wDCXh+XyGsnoM0e326ORXOuHDyYtPO51OOB6POJ/OYlMNsj+x7zMmio9ilXq9jmq1ioJeQL/Xh2VZqFYqyOZyKJfLqFk1GPclFAsFVMg/pIr5nXQqI/GlewOmaaHZbKHTcaDomoZU6g7xuIpGo4li8R7pdEb2uq6jSb5YTEVCVRG7jVFsBskkxZNdMkpy4NX1NW5ufsAwylDa7TasWh1aPk+VVSWpVaUq6VSzaiKXy5NmQ2w3WwSzGek2hk8ah8tQtNvt9qL9ZDwWrRUO9jwPdt3GmIJZ9Kh1x3FkKDwQfmk6nSII5litnvD89Izdfvc5LI+GGcgB1LIOVU0gTm3lqZpMKg01kUQmk4Uaj4vv7i6NXz9voWuFj3Yp1iga8jx+q+Lq23fSNI0kvaeY1KZZMallTRKXDAO5bJ40pKSkZTaTQ4oSJtQkDceQTvgQjtHyOulcgEZFMWKr1YpappaGpEnP6cr0mKtWo4WG3SApBnBocj3Cyu17wibbLAfr9fZ2ELi32+0HRmcCO+KJF1/M01fG/rF2+c8XcRetw+GA9/d3KGG4JLC7Im4QBH8T8v1EQB8/IRag2ffF/voR8J2TKk6nA8s0aVnoUtu8Z3ScrkOgdgSHTruDh4eR0MCT59Z5ufQf4Bjbrstnyd+50iLCbdumhDWswkcsCIuAEOCK5/OFIMKoMBKMDvuZQbaXC9pTzIxwYpu1/AOy+vGvicoFMgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/76d347efa4cde9bc8d403cbab74880b2/fcda8/q5.png&quot;
+        srcset=&quot;/static/76d347efa4cde9bc8d403cbab74880b2/12f09/q5.png 148w,
+/static/76d347efa4cde9bc8d403cbab74880b2/e4a3f/q5.png 295w,
+/static/76d347efa4cde9bc8d403cbab74880b2/fcda8/q5.png 590w,
+/static/76d347efa4cde9bc8d403cbab74880b2/7422e/q5.png 697w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;MQTT（Message Queuing Telemetry Transport）协议是一种轻量级的发布/订阅消息协议，用于物联网（IoT）设备之间的通信。它基于 TCP/IP 协议，以简洁、高效的方式传输消息。
+MQTT 协议具有以下特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;发布/订阅模式：设备可以发布消息，其他设备可以订阅感兴趣的主题来接收消息。&lt;/li&gt;
+&lt;li&gt;轻量级：报文小，占用带宽少，适用于资源受限的设备。&lt;/li&gt;
+&lt;li&gt;可靠性：支持 QoS 级别，确保消息的可靠传输。&lt;/li&gt;
+&lt;li&gt;主题分层：支持主题的分层结构，方便消息的分类和管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MQTT 协议广泛应用于物联网领域，如智能家居、工业自动化等，使得设备之间的通信更加简单、高效。&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7e8ecf5bf18f68601799f2a6e649a464/cecac/q5-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 39.189189189189186%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsTAAALEwEAmpwYAAABwUlEQVR42k1S2ZKiQBDk/z9iY3Z2DQ8EAZVDBhEV5ZBBcXSF8Yjwmi/wfMmt7oid2IeKyi6yqyqzEbbbLbJsjvPpjN1uh8vlgvv9juv1isfjwfHz+fzG/+L/8+12+8bCbJZhnmXIVzkm8QTvkwT+0EeapEjTKcbjALPpDNk8w3g0wnazQUw8fzjEoD9AQvyPjyW8nocV9RBs+w21ighVbaJj24RrUBoqbMuGVJfx+vMVlXIVdseGKIqUHZTLFWiKArkuQaN7FnFLv37zwULf62NAkSQJLMOErhswDAOWaeKNhultnTdnnDCI0LEsyLIEg+qWaUFvtWHSPVmSkb6nENpUYOR2q4WXHy80UaPN6rRpFe1mC2K1hq7j8qZNTUO5VIKiqGRPjF7X5bI7ZgdN4i6XfyBMp1MkcYJxECAMQ04ckocBnSdRTL6NkZHPMWGfPIzp+2KxwPnrC4fDAfv9nufT6Yjj8QCBSTBIpu+PuAQms0uTTcKK3ODSmYoGYdd1wSxiMr1eD57nkRoJKvlp6Dr3WWArM99s2+Hrs1eNogiO4/ABURhhvV4jz3P+WxVFwWNDtQ29OKvn+QoF5c/iE38Br2sWDerHKUUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7e8ecf5bf18f68601799f2a6e649a464/fcda8/q5-2.png&quot;
+        srcset=&quot;/static/7e8ecf5bf18f68601799f2a6e649a464/12f09/q5-2.png 148w,
+/static/7e8ecf5bf18f68601799f2a6e649a464/e4a3f/q5-2.png 295w,
+/static/7e8ecf5bf18f68601799f2a6e649a464/fcda8/q5-2.png 590w,
+/static/7e8ecf5bf18f68601799f2a6e649a464/cecac/q5-2.png 728w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/805026ceb6d34c26233fc2f8f5cae49a/d2a60/q5-2-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.70270270270271%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABnUlEQVR42o1S0XKjMAzk/7/u+tBeZ0JyA5NAIAQoYBtsYKtV406u93LMeGQka7UrKcF/fuu6wc0LfFjlvmPddgTxhRCw7xuWZdF3Sd/3aJoG4zBi2zY9ESD+7/sO62bc21aABFju02Sx+CAFgsYJrIDn8wXpIcW1vMJ7r5We7TzPasnOuQV1VeP19Q2HwwFWfOuDQPySeGGVaPM8R5qmaO539B8fcNYpG+sc8izHUWJZlmGcjDJz4uchiSTKilJp2YLT6Q/KskTbdTDTpGDWEjDDy68XiZ+k2CDSzbdcKkl+Np9ByuwE6HI+wxijDzcZwrJ4KdDjUpRqjRRwfNt2ylgZFkWB4/GIQh4RiACtNL+uKvVfxQ4iexL/MAxyRk1mwVl6SNYEYi+V4SRyOOlx/JoyWfR9p6CUfrvdJEkmKsxD8JrEGC3BmB8HR5vEYTwPh7LXddUCQSx9nvYR1wLCan4woy+epK5rvP9+R3WtvicV1ybeeUaRzF00xoKr1txbmfz679qQDRN047f9L6bP7MmUPeM+GjuL9Qr4U+EnJdhV7pDxr58AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/805026ceb6d34c26233fc2f8f5cae49a/fcda8/q5-2-1.png&quot;
+        srcset=&quot;/static/805026ceb6d34c26233fc2f8f5cae49a/12f09/q5-2-1.png 148w,
+/static/805026ceb6d34c26233fc2f8f5cae49a/e4a3f/q5-2-1.png 295w,
+/static/805026ceb6d34c26233fc2f8f5cae49a/fcda8/q5-2-1.png 590w,
+/static/805026ceb6d34c26233fc2f8f5cae49a/d2a60/q5-2-1.png 807w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7f7f8254505c21348d4df782af015f1b/d0c0e/q5-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 14.18918918918919%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAnUlEQVR42lWLvQ6DIACEff8nchYHK5bf0joYB1lqAjI5oV4Rk6YdvtzlfoqHNrDWYpos1nXFcRzYti3ryb7vmTO7iD/+Isb41YIQAnq7oU00TQOtNIZhQFVVKMsSxjxT14IzDqUUpDgRYIxBSQ3W3XMuUjaOIwopVR53lKazQf/q85DSDjWp01lCcI73PGNZArxf4J2Hcy75fw0h4APaP9oEFPBGWQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;alt text&quot;
+        title=&quot;&quot;
+        src=&quot;/static/7f7f8254505c21348d4df782af015f1b/fcda8/q5-3.png&quot;
+        srcset=&quot;/static/7f7f8254505c21348d4df782af015f1b/12f09/q5-3.png 148w,
+/static/7f7f8254505c21348d4df782af015f1b/e4a3f/q5-3.png 295w,
+/static/7f7f8254505c21348d4df782af015f1b/fcda8/q5-3.png 590w,
+/static/7f7f8254505c21348d4df782af015f1b/d0c0e/q5-3.png 715w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;参考答案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据通信：减少数据传输延迟，提高实时性，因为边缘设备可在本地处理数据。&lt;/li&gt;
+&lt;li&gt;数据安全：增强数据安全性，数据在边缘端处理，减少云端数据暴露风险。&lt;/li&gt;
+&lt;li&gt;系统性能：减轻云端计算负担，提升系统整体效率，更好地应对大规模数据处理。&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[系统架构设计师]英语词汇]]></title><description><![CDATA[专业英语词汇汇总： architect 架构，架构师 architecture 架构 analysis 分析 architecture 架构 design 设计 development 开发 testing 测试 system analysis 系统分析 system…]]></description><link>https://funnyeagle.cn/architecture-english-word/</link><guid isPermaLink="false">https://funnyeagle.cn/architecture-english-word/</guid><pubDate>Tue, 27 Feb 2024 14:57:47 GMT</pubDate><content:encoded>&lt;p&gt;专业英语词汇汇总：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;architect 架构，架构师&lt;/li&gt;
 &lt;li&gt;architecture 架构&lt;/li&gt;
@@ -1110,14 +1475,4 @@ address: &lt;span class=&quot;token number&quot;&gt;64&lt;/span&gt;-64-4a-7f-ad-
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[如果今年过不了]]></title><description><![CDATA[计算机软考系统架构设计师的教材于2022年12月发布第2版（第1版是2009年6月发布），2023年下半年考试形式由笔试改成机试。今年出题套路变化比较大，下午的案例题不再考简单的架构风格和质量属性了，第一题直接上了大数据架构图，随后是web…]]></description><link>https://funnyeagle.cn/if-can-not-pass-in-2023/</link><guid isPermaLink="false">https://funnyeagle.cn/if-can-not-pass-in-2023/</guid><pubDate>Mon, 20 Nov 2023 13:17:00 GMT</pubDate><content:encoded>&lt;p&gt;计算机软考系统架构设计师的教材于2022年12月发布第2版（第1版是2009年6月发布），2023年下半年考试形式由笔试改成机试。今年出题套路变化比较大，下午的案例题不再考简单的架构风格和质量属性了，第一题直接上了大数据架构图，随后是web服务架构、数据库和缓存等偏实战的题。也有很多题是教材原图原话，整体难度并不算大。&lt;/p&gt;
-&lt;h3 id=&quot;我为什么要考架构师&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%80%83%E6%9E%B6%E6%9E%84%E5%B8%88&quot; aria-label=&quot;我为什么要考架构师 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;我为什么要考架构师&lt;/h3&gt;
-&lt;p&gt;为什么要考架构师，我并没有指望这个认证给我升职加薪，公司也没有要求。我主要是出于情怀，满足自己的虚荣心吧（这没什么不好意思的，我本来就是一个特别感性的人），另外就是希望能扩充一下知识域。我的理念是没有程序员不想成为架构师。从事软件开发十多年，认为自己在软件开发能力方面还是说的过去的，近两年也在做架构设计相关的工作，希望能在专业上对自己有一个能力认证。对口一下专业，中级是软件设计师，高级是系统架构设计师。2022年依然很忙，没什么时间准备，于是选择了报考2022年下半年的中级-软件设计师。花在考试准备的时间很少，加起来都不到一个星期，选择题在APP上刷题，案例题是临考前看了三天文老师的视频，考前的晚上把数据流图、ER图、算法效率和代码填空的历年真题过了一遍，第二天靠红牛和咖啡撑了一天，考完感觉基本能通过，成绩出来后上午49分、下午54分，说非常兴奋也谈不上，因为毕竟工作了十多年了，在公司也是高级开发，但通过了中级还是给自己增强了一些信心，因为接下来的目标就是系统架构设计师。&lt;/p&gt;
-&lt;h3 id=&quot;备考架构师&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%A4%87%E8%80%83%E6%9E%B6%E6%9E%84%E5%B8%88&quot; aria-label=&quot;备考架构师 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;备考架构师&lt;/h3&gt;
-&lt;p&gt;通过中级后感觉培训机构总结的经验还是很值得参考的，于是在淘宝上买了系统架构设计师的视频课。根据视频课中的建议定制了学习计划，第一阶段是基础知识，主要应对上午的选择题，学习方法是看视频和刷题；第二阶段是案例和论文，案例看视频，论文按模版准备；第三阶段是查漏补缺。7月中旬开始准备，3个多月的时间，看完所有的视频，刷完了历年所有的选择题，案例分析题主要就是反复做了架构风格和质量属性的，其它的就大概过了一下视频。论文只准备了一篇软件架构风格作为模版，其它的就打算套模板。临考前非常紧张，感觉还有很多知识点没有掌握，打印了好几页需要背的知识点反复的朗读；历年真题的答案有错误的很多；论文的考点准备的不充分。&lt;/p&gt;
-&lt;h3 id=&quot;考后感想&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E8%80%83%E5%90%8E%E6%84%9F%E6%83%B3&quot; aria-label=&quot;考后感想 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;考后感想&lt;/h3&gt;
-&lt;p&gt;今年的试题中，历年真题的很多内容都没考，计算题也不多，整体感觉是更加注重实践知识。书本上的内容倒是考的很多，架构风格和质量属性都改到上午选择题考了，就连英文题也是从层次架构那一章节抠的原话翻译成英文考的，下午的大数据、Hibernate都能从书上找到原话原图。考下来的感觉是复习的方向有些偏离，除了要做历年真题以外，一定要&lt;strong&gt;多看教材&lt;/strong&gt;，掌握教材下篇的八大架构。这种后知后觉的感觉真的非常不爽，早知道多看看那几个图。。。&lt;/p&gt;
-&lt;h3 id=&quot;如果今年过不了&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E5%A6%82%E6%9E%9C%E4%BB%8A%E5%B9%B4%E8%BF%87%E4%B8%8D%E4%BA%86&quot; aria-label=&quot;如果今年过不了 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;如果今年过不了&lt;/h3&gt;
-&lt;p&gt;和网上分享的上午的答案对了一下，感觉在45左右，下午的案例题答的真的很糟糕，大数据的lambda和kappa架构图填空、Hibernate架构填空、JWT填空题都错了；论文我写的是面向对象设计，之前准备的模版内容都。现在等成绩的过程很难熬，但是基本也不抱希望了。如果今年过不了，明年继续备考，今年就当是做一次小白鼠，积累一些经验。&lt;/p&gt;
-&lt;p&gt;死磕架构，明年加油。&lt;/p&gt;
-&lt;p&gt;（完）&lt;/p&gt;</content:encoded></item></channel></rss>
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
