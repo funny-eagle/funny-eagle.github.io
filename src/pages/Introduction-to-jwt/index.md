@@ -1,7 +1,7 @@
 ---
-title: "[JWT] JSON Web Token 入门简介"
+title: "[JWT] JSON Web Token 简介"
 date: "2023-11-14 17:52:10"
-description: "JSON Web Token 入门简介"
+description: "JSON Web Token 简介"
 tags: ['coding']
 slug: ''
 ---
