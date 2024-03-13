@@ -1,8 +1,8 @@
 ---
 title: "Byte Buddy"
 date: "2024-03-13"
-description: "使用 Byte Buddy 操作现有的类、按需创建新类，甚至拦截方法调用"
-tags: ['java']
+description: "使用 Byte Buddy 操作现有的类、创建新的类，甚至拦截方法调用"
+tags: ['coding','java']
 slug: ''
 ---
 
@@ -29,7 +29,7 @@ slug: ''
 在 Gradle 的项目，我们需要将相同的工件添加到 build.gradle 文件中：
 
 ```
-compile net.bytebuddy:byte-buddy:1.12.13
+compile net.bytebuddy:byte-buddy:1.14.6
 ```
 
 最新版本可以在  [Maven Central](https://mvnrepository.com/artifact/net.bytebuddy/byte-buddy) 上找到。
@@ -86,20 +86,24 @@ newInstance() 是一个 Java 反射方法，用于创建此 ByteBuddy 对象表�
 让我们创建一个动态类型，它是 Foo.class 的子类，它具有 sayHelloFoo() 方法：
 
 ```java
-public String sayHelloFoo() { 
-    return "Hello in Foo!"; 
+public class Foo {
+    public String sayHelloFoo() {
+        return "Hello in Foo!";
+    }
 }
 ```
 
-此外，让我们创建另一个类 Bar，它具有与 sayHelloFoo() 相同的签名和返回类型的静态 sayHelloBar()：
+再创建另一个类 Bar，它具有与 sayHelloFoo() 相同的签名和返回类型的静态方法 sayHelloBar()：
 
 ```java
-public static String sayHelloBar() { 
-    return "Holla in Bar!"; 
+public class Bar {
+    public static String sayHelloBar() {
+        return "Hello in Bar!";
+    }
 }
 ```
 
-现在，让我们使用 ByteBuddy 的 DSL 将 sayHelloFoo() 的所有调用委托给 sayHelloBar()。这允许我们在运行时向新创建的类提供用纯 Java 编写的自定义逻辑：
+现在我们使用 ByteBuddy 的 DSL 将 sayHelloFoo() 的所有调用委托给 sayHelloBar()。这允许我们在运行时向新创建的类提供用纯 Java 编写的自定义逻辑：
 
 ```java
 String r = new ByteBuddy()
@@ -119,7 +123,9 @@ assertEquals(r, Bar.sayHelloBar());
 
 调用 sayHelloFoo() 将相应地调用 sayHelloBar()。
 
-ByteBuddy 如何知道要调用 Bar.class 中的哪个方法？它根据方法签名、返回类型、方法名称和注释来选择匹配的方法。
+> ByteBuddy 如何知道要调用 Bar.class 中的哪个方法呢？
+
+它是根据方法签名、返回类型、方法名称和注释来选择匹配的方法。
   
 sayHelloFoo() 和 sayHelloBar() 方法没有相同的名称，但它们具有相同的方法签名和返回类型。
  
@@ -177,7 +183,7 @@ assertNotNull(type.getDeclaredField("x"));
 <dependency>
     <groupId>net.bytebuddy</groupId>
     <artifactId>byte-buddy-agent</artifactId>
-    <version>1.7.1</version>
+    <version>1.14.6</version>
 </dependency>
 ```
 
