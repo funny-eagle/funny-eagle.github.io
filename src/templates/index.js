@@ -19,14 +19,10 @@ class BlogIndex extends React.Component {
       // 使用布局组件
       <Layout>
         <div className="css-archive">
-          // 遍历文章列表
           {posts.map(({ node }, index) => {
-            // 获取文章标题
             const title = node.frontmatter.title || node.fields.slug
             return (
-              // 使用React片段包装，避免额外的DOM节点
               <React.Fragment key={node.fields.slug}>
-                // 如果是第一篇文章或年份与前一篇文章不同，则显示年份
                 {(index === 0 ||
                   (index > 0 &&
                     posts[index - 1].node.frontmatter.year !==
@@ -41,7 +37,6 @@ class BlogIndex extends React.Component {
                       {node.frontmatter.year}
                     </div>
                   )}
-                // 显示文章项
                 <div className="item">
                   <span className="date">{node.frontmatter.date}</span>
                   <Link className="title" to={node.fields.slug}>
@@ -52,7 +47,6 @@ class BlogIndex extends React.Component {
             )
           })}
         </div>
-        // 显示分页组件
         <Pagination
           currentPage={currentPage}
           totalPage={totalPage}
