@@ -43,15 +43,15 @@ Gatsby 的缺点：
 npm run start
 ```
 
-## 发布
+## 部署
 
 ```
-npm run build
+npm run deploy
 ```
 
-## 拒绝雷同
+## 配色
 
-修改 `src\css\global.scss` 文件夹的配色变量，用上自己喜欢的颜色！这是个性化主题最简单的方法！（也欢迎大家 PR 好看的配色）
+修改 `src\css\global.scss` 文件夹的配色变量，用上自己喜欢的颜色！这是个性化主题最简单的方法！
 
 其他排版优化可以参考 [Typography.js](https://github.com/kyleamathews/typography.js/)
 
