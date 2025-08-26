@@ -1,8 +1,11 @@
+// 引入所需模块
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const _ = require('lodash')
 const get = _.get
 const fastExif = require('fast-exif')
+
+// 定义GraphQL查询语句，用于获取所有Markdown文件的元数据
 const query = `
 {
   allMarkdownRemark(
@@ -28,22 +31,29 @@ const query = `
   }
 }
 `
+
+// Gatsby API，用于创建页面
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
+  // 定义模板文件路径
   const blogPost = path.resolve('./src/templates/blog-post.js')
   const homePaginate = path.resolve('./src/templates/index.js')
   const tagTemplate = path.resolve('./src/templates/tag.js')
 
+  // 执行GraphQL查询
   const result = await graphql(query)
 
+  // 如果查询出错，则抛出错误
   if (result.errors) {
     throw new Error(result.errors)
   }
+  
+  // 获取标签和文章数据
   const tags = result.data.allMarkdownRemark.group
   const posts = result.data.allMarkdownRemark.edges
 
-  // Create archive pages
+  // 创建归档页面
   const postsPerPage = 50
   const numPages = Math.ceil(posts.length / postsPerPage)
 
@@ -60,7 +70,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  // Create tag pages
+  // 创建标签页面
   const TagsPostsPerPage = 8
   tags.forEach((tag) => {
     const TagsTotal = tag.totalCount
@@ -83,7 +93,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  // Create blog posts pages.
+  // 创建博客文章页面
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
@@ -99,63 +109,17 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
+// Gatsby API，用于在创建节点时添加字段
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
+  // 如果节点类型是Markdown文件
   if (node.internal.type === `MarkdownRemark`) {
+    // 创建slug字段
     createNodeField({
       node,
       name: `slug`,
       value: node.frontmatter.slug || createFilePath({ node, getNode }),
     })
   }
-  // node contain the folder, eliminate it using node.extension
-  // if (node.extension && node.sourceInstanceName === 'gallery') {
-  //   const absolutePath = node.absolutePath
-  //   fastExif
-  //     .read(absolutePath)
-  //     .catch((err) =>
-  //       console.error(
-  //         '\n--------------\n' +
-  //           absolutePath +
-  //           node.extension +
-  //           '\n--------------\n' +
-  //           err +
-  //           '\n--------------\n'
-  //       )
-  //     )
-  //     .then((exifData) => {
-  //       if (!exifData) {
-  //         return
-  //       }
-  //       const { Make, Model, Software, ModifyDate } = exifData.image
-  //       const { ExposureTime, FNumber, ISO, FocalLength } = exifData.exif
-  //       createNodeField({
-  //         node,
-  //         name: 'exifData',
-  //         value: {
-  //           Make,
-  //           Model,
-  //           Software,
-  //           ModifyDate: ModifyDate ? String(ModifyDate).substr(0, 10) : null,
-  //           FocalLength: `${FocalLength + ' mm'}`,
-  //           ISO: `ISO-${ISO}`,
-  //           FNumber: `f/${FNumber}`,
-  //           ExposureTime: ExposureTime
-  //             ? `1/${(1 / ExposureTime).toFixed(0)} s`
-  //             : null,
-  //         },
-  //       })
-  //     })
-  //     .catch((err) =>
-  //       console.error(
-  //         '\n--------------\n' +
-  //           absolutePath +
-  //           node.extension +
-  //           '\n--------------\n' +
-  //           err +
-  //           '\n--------------\n'
-  //       )
-  //     )
-  // }
 }

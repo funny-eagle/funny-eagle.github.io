@@ -5,21 +5,28 @@ import SEO from '../components/Seo'
 
 import Layout from '../components/Layout'
 /**
- * Archive page
+ * 归档页面
  */
 class BlogIndex extends React.Component {
   render() {
+    // 获取页面数据和位置信息
     const { data, location } = this.props
+    // 获取文章列表
     const posts = data.allMarkdownRemark.edges
+    // 获取分页信息
     const { totalPage, currentPage } = this.props.pageContext
     return (
+      // 使用布局组件
       <Layout>
         <div className="css-archive">
+          // 遍历文章列表
           {posts.map(({ node }, index) => {
+            // 获取文章标题
             const title = node.frontmatter.title || node.fields.slug
             return (
-              // show year if it's different from the previous one
+              // 使用React片段包装，避免额外的DOM节点
               <React.Fragment key={node.fields.slug}>
+                // 如果是第一篇文章或年份与前一篇文章不同，则显示年份
                 {(index === 0 ||
                   (index > 0 &&
                     posts[index - 1].node.frontmatter.year !==
@@ -34,6 +41,7 @@ class BlogIndex extends React.Component {
                       {node.frontmatter.year}
                     </div>
                   )}
+                // 显示文章项
                 <div className="item">
                   <span className="date">{node.frontmatter.date}</span>
                   <Link className="title" to={node.fields.slug}>
@@ -44,6 +52,7 @@ class BlogIndex extends React.Component {
             )
           })}
         </div>
+        // 显示分页组件
         <Pagination
           currentPage={currentPage}
           totalPage={totalPage}
@@ -56,6 +65,7 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
+// 页面头部SEO信息
 export const Head = ({ location }) => (
   <SEO
     title="归档"
@@ -64,6 +74,7 @@ export const Head = ({ location }) => (
   />
 )
 
+// GraphQL查询，用于获取文章列表数据
 export const pageQuery = graphql`
   query ($skip: Int!, $limit: Int!) {
     site {

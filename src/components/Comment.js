@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { apiUrl } from '../settings'
 
+// 日期格式化函数，将日期对象格式化为 YYYY-MM-DD 格式
 const dateFormat = (date) => {
   date = new Date(date)
   let m = date.getMonth() + 1
@@ -12,17 +13,24 @@ const dateFormat = (date) => {
   d = d < 10 ? '0' + d : d
   return `${date.getFullYear()}-${m}-${d}`
 }
+
+// 评论组件，用于显示和管理文章评论
 export default function Comment({ slug }) {
+  // 回复数据状态，包含父评论ID和被回复的用户
   const [replyData, setReplyData] = useState({
     parentId: null,
     to: null,
   })
+  
+  // 取消回复操作
   const cancelReply = () => {
     setReplyData({
       parentId: null,
       to: null,
     })
   }
+  
+  // 设置回复操作，滚动到评论输入框并设置回复数据
   const reply = (parentId, to) => () => {
     document.querySelector('#comment-input').scrollIntoView()
     setReplyData({
@@ -31,7 +39,10 @@ export default function Comment({ slug }) {
     })
   }
 
+  // 评论数据状态
   const [comments, setComments] = useState([])
+  
+  // 获取评论数据的异步函数
   const getComment = async () => {
     try {
       const { data } = await axios.get(
@@ -42,10 +53,13 @@ export default function Comment({ slug }) {
       console.error(e)
     }
   }
+  
+  // 组件挂载时获取评论数据
   useEffect(() => {
     getComment()
   }, [])
 
+  // 评论显示组件，用于渲染单条评论
   const CommentDisplay = ({ item, comment }) => {
     const date = dateFormat(item.date)
     return (
@@ -75,6 +89,7 @@ export default function Comment({ slug }) {
       </div>
     )
   }
+  
   return (
     <>
       {comments.length > 0

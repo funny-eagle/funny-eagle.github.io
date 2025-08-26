@@ -5,34 +5,45 @@ import Layout from '../components/Layout'
 import Info from '../components/PostInfo'
 import Pagination from '../components/Pagination'
 
+// 标签描述映射表
 const tagDescriptionMap = {}
 
 /**
- * Blog list of specific Tag
+ * 特定标签的博客列表页面
  */
 class BlogIndex extends React.Component {
   render() {
+    // 获取页面数据
     const { data } = this.props
+    // 获取文章列表
     const posts = data.allMarkdownRemark.edges
+    // 获取分页信息和标签信息
     const { totalPage, currentPage, tag } = this.props.pageContext
     return (
+      // 使用布局组件，传入标签名和描述
       <Layout pageName={tag} pageDescript={tagDescriptionMap[tag]}>
+        // 遍历文章列表
         {posts.map(({ node }) => {
+          // 获取文章标题
           const title = node.frontmatter.title || node.fields.slug
           return (
+            // 显示文章项
             <div className="list-item" key={node.fields.slug}>
               <div className="list-title">
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </div>
+              // 显示文章信息（日期和标签）
               <Info date={node.frontmatter.date} tags={node.frontmatter.tags} />
+              // 显示文章摘要
               <p className="list-excerpt">
                 {node.frontmatter.description || node.excerpt}
               </p>
             </div>
           )
         })}
+        // 显示分页组件
         <Pagination
           currentPage={currentPage}
           totalPage={totalPage}
@@ -45,6 +56,7 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
+// 页面头部SEO信息
 export const Head = ({ location, pageContext }) => (
   <SEO
     title={pageContext.tag}
@@ -53,6 +65,7 @@ export const Head = ({ location, pageContext }) => (
   />
 )
 
+// GraphQL查询，用于获取特定标签的文章列表数据
 export const pageQuery = graphql`
   query ($tag: String!, $skip: Int!, $limit: Int!) {
     site {
