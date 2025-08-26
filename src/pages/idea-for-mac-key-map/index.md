@@ -1,9 +1,13 @@
 ---
+
+slug: "/idea-for-mac-key-map"
+
+description: "快捷键太多了，当个速查表用吧"
 title: 【转载】IntelliJ IDEA For Mac 快捷键
 date: "2017-07-19 12:59:50"
-description: "快捷键太多了，当个速查表用吧"
+summary: "快捷键太多了，当个速查表用吧"
 tags: ['coding']
-slug: ''
+
 ---
 
 > 原文地址：http://www.cnblogs.com/wxd0108/p/5295017.html

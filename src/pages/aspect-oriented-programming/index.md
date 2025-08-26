@@ -1,9 +1,13 @@
 ---
+
+slug: "/aspect-oriented-programming"
+
+description: "面向切面编程知识点整理。"
 title: 面向切面编程
 date: "2019-02-14 21:37:41"
-description: "面向切面编程知识点整理。"
+summary: "面向切面编程知识点整理。"
 tags: ['coding']
-slug: ''
+
 ---
 
 > AOP 被认为是对 OOP 的一个强大的补充，有了 AOP，我们可以把之前分散在应用各处的行为放在可重用的模块中，可以有效减少冗余代码，并让我们的类只关注自身的主要功能。

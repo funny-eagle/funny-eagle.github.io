@@ -1,9 +1,13 @@
 ---
+
+slug: "/basic-of-network"
+
+description: "介绍常见的网络协议、OSI网络参考模型以及相关的网络硬件。"
 title: 必须要掌握的网络通信原理
 date: "2023-03-20 23:14:00"
-description: "介绍常见的网络协议、OSI网络参考模型以及相关的网络硬件。"
+summary: "介绍常见的网络协议、OSI网络参考模型以及相关的网络硬件。"
 tags: ['coding']
-slug: ''
+
 ---
 
 ## 一、协议

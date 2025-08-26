@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-12"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第12周
 date: 2018-09-22
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > 小伙伴们中秋节快乐！终于可以放松几天，这两天带着老婆孩子玩疯了，满成都到处跑，当然`ARTS`绝不能落下，只是晚到了一天。（算法题做的很烂，一点点调试出来的）

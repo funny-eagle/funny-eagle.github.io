@@ -1,9 +1,13 @@
 ---
+
+slug: "/byte-buddy"
+
+description: "使用 Byte Buddy 操作和新建Java类，以及拦截方法调用"
 title: "Byte Buddy"
 date: "2024-03-13"
-description: "使用 Byte Buddy 操作现有的类、创建新的类，甚至拦截方法调用"
+summary: "使用 Byte Buddy 操作和新建Java类，以及拦截方法调用"
 tags: ['coding','java']
-slug: ''
+
 ---
 
 > 原文地址：https://www.baeldung.com/byte-buddy

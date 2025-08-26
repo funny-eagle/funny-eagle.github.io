@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-06"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第6周
 date: 2018-08-11
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 ## Algorithm
@@ -124,7 +128,7 @@ Let's Encrypt 提供了支持HTTPS连接的免费证书，并且已加密超过1
 
 项目的配置文件，日志，以及要写入的文件，不要直接写在docker container 内部，因为一旦镜像更新要运行新的容器或者容器被删除，那么容器写入到内部的文件内容会丢失，所以这些需要挂载到宿主机上以保证数据的持久化。
 
-目录挂载的使用非常容易，只需要遭docker run 命令后跟 `-v` 参数加上<宿主机目录路径>:<容器内目录路径>即可， 多个目录的挂载就使用 多个 `-v` 参数加上<宿主机目录路径>:<容器内目录路径>
+目录挂载的使用非常容易，只需要遭docker run 命令后跟 `-v` 参数加上`<宿主机目录路径>:<容器内目录路径>`即可， 多个目录的挂载就使用 多个 `-v` 参数加上`<宿主机目录路径>:<容器内目录路径>`
 
 ```
 docker run -it -p 8080:8080 -v /Users/jason/my-service/config/:/usr/local/my-service/config/ -v  /Users/jason/my-service/log:/usr/local/my-service/log 192.168.28.121:9090/my-service:1.0

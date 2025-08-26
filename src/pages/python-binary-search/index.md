@@ -1,9 +1,13 @@
 ---
+
+slug: "/python-binary-search"
+
+description: "Python 另一个经典递归：二分法查找。"
 title: Python 另一个经典递归：二分法查找
 date: "2017-04-07 05:42:47"
-description: "Python 另一个经典递归：二分法查找。"
+summary: "Python 另一个经典递归：二分法查找。"
 tags: ['coding']
-slug: ''
+
 ---
 
 先来玩个数字游戏，我从1～100中选一个整数，你来猜中这个数字。

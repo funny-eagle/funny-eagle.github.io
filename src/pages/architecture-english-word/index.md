@@ -1,12 +1,17 @@
 ---
-title: "[系统架构设计师]英语词汇"
-date: "2024-02-27 22:57:47"
+
+slug: "/architecture-english-word"
+
 description: "系统架构设计师英语词汇"
+title: "系统架构设计师-英语词汇"
+date: "2024-02-27 22:57:47"
+summary: "系统架构设计师英语词汇"
 tags: ['coding']
-slug: ''
+
 ---
 
 专业英语词汇汇总：
+
 - architect 架构，架构师
 - architecture 架构
 - analysis 分析
@@ -333,7 +338,6 @@ slug: ''
 - Software Engineering
 - behavioral modeling 行为建模
 - identify and define functions 识别并定义功能
-- 3 basic forms 三个基本形式
 - state machines 状态机
 - a collection of defined states, events and transitions 已定义状态、事件和转换的集合
 - control-flow 控制流

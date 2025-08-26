@@ -1,9 +1,13 @@
 ---
+
+slug: "/strongloop-compare-with-pm2-and-forever"
+
+description: "StrongLoop compare with pm2 and Forever"
 title: StrongLoop compare with pm2 and Forever
 date: "2018-06-12 11:02:30"
-description: "StrongLoop compare with pm2 and Forever"
+summary: "StrongLoop compare with pm2 and Forever"
 tags: ['coding']
-slug: ''
+
 ---
 
 | Feature                          | StrongLoop Process Manager                               | pm2                                                     | Forever                    |

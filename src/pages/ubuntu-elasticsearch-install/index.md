@@ -1,9 +1,13 @@
 ---
-title: ubuntu 安装 ElasticSearch 过程中的问题记录
-date: "2018-06-07 04:38:46.559+01"
+
+slug: "/ubuntu-elasticsearch-install"
+
 description: "ubuntu 安装 ElasticSearch 过程中的问题记录"
+title: ubuntu 安装 ElasticSearch 过程中的问题记录
+date: "2018-06-07 04:38:46"
+summary: "ubuntu 安装 ElasticSearch 过程中的问题记录"
 tags: ['coding']
-slug: ''
+
 ---
 
 **开放端口**

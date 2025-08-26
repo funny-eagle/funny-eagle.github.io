@@ -1,9 +1,13 @@
 ---
-title: 正则表达式
-date: "2017-04-30 06:32:45.077+01"
+
+slug: "/regular-expression"
+
 description: "正则表达式"
+title: 正则表达式
+date: "2017-04-30 06:32:45"
+summary: "正则表达式"
 tags: ['coding']
-slug: ''
+
 ---
 正则表达式在线测试工具 http://tool.chinaz.com/regex/
 

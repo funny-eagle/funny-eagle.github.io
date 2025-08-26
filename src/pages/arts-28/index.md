@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-28"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第28周
 date: 2019-01-12
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 ## Algorithm
@@ -172,6 +176,6 @@ public class AssociativeArray<K, V> {
 - 尺寸：表中当前存储的项数
 - 负载因子：尺寸/容量。空表的负载因子是0，半满表的负载因子是0.5，以此类推，HashMap 使用的默认负载因子是0.75，当表达到3/4满时，再进行rehash。
 
-> HashMap通常会用一个指针数组（假设为table[]）来做分散所有的key，当一个key被加入时，会通过Hash算法通过key算出这个数组的下标i，然后就把这个<key, value>插到table[i]中，如果有两个不同的key被算在了同一个i，那么就叫冲突，又叫碰撞，这样会在table[i]上形成一个链表。
+> HashMap通常会用一个指针数组（假设为`table[]`）来做分散所有的key，当一个key被加入时，会通过Hash算法通过key算出这个数组的下标i，然后就把这个`<key, value>`插到`table[i]`中，如果有两个不同的key被算在了同一个i，那么就叫冲突，又叫碰撞，这样会在`table[i]`上形成一个链表。
 
 HashMap是非线程安全的，所以在并发情况下，HashMap可能会出现死循环导致CPU占用100%，查看耗叔的[疫苗：JAVA HASHMAP的死循环 - CoolShell](https://coolshell.cn/articles/9606.html)文章可以了解导致死循环的细节。

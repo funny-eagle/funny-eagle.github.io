@@ -1,9 +1,13 @@
 ---
+
+slug: "/rss-feed"
+
+description: "技术类RSS源订阅推荐"
 title: 中文技术类RSS源订阅推荐
 date: "2023-06-26 00:00:00"
-description: "技术类RSS源订阅推荐"
+summary: "技术类RSS源订阅推荐"
 tags: ['coding']
-slug: ''
+
 ---
 
 ## RSS订阅源

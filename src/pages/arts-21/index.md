@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-21"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第21周
 date: 2018-11-24
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm: Delete Columns to Make Sorted. 

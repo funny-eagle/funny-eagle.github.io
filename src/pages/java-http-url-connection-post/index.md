@@ -1,9 +1,13 @@
 ---
+
+slug: "/java-http-url-connection-post"
+
+description: " JAVA HttpURLConnection Post方式提交传递参数"
 title: JAVA HttpURLConnection Post方式提交传递参数
 date: "2018-05-08 16:46:13"
-description: "如题，一段代码示例。"
-tags: ['coding']
-slug: ''
+summary: " JAVA HttpURLConnection Post方式提交传递参数"
+tags: ['coding','java']
+
 ---
 
 ```java

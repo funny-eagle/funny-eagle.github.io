@@ -1,9 +1,13 @@
 ---
+
+slug: "/python-factorail"
+
+description: "本文 Python 两个经典递归：阶乘和幂"
 title: Python 两个经典递归：阶乘和幂
 date: "2017-04-09 04:49:33"
-description: "本文 Python 两个经典递归：阶乘和幂"
+summary: "本文 Python 两个经典递归：阶乘和幂"
 tags: ['coding']
-slug: ''
+
 ---
 
 **递归**简单说来就是调用自身的意思。

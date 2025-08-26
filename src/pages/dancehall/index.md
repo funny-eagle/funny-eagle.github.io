@@ -1,9 +1,13 @@
 ---
+
+slug: "/dancehall"
+
+description: "[Tribes] Dancehall guitar chords"
 title: "Dancehall"
 date: "2023-11-30 19:35:35"
-description: "[Tribes] Dancehall guitar chords"
+summary: "[Tribes] Dancehall guitar chords"
 tags: ['music']
-slug: ''
+
 ---
 
 ![tribes](./tribes.jpeg)

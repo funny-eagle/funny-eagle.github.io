@@ -1,9 +1,12 @@
 ---
-title: WindTerm 2.5.0 输入用户名后假死卡住的解决办法
-date: "2023-07-07 15:51"
+
+slug: "/wind-term-hanging-problem"
 description: "WindTerm 2.5.0 输入用户名后假死卡住的解决办法"
+title: WindTerm 2.5.0 输入用户名后假死卡住的解决办法
+date: "2023-07-07 15:51:00"
+summary: "WindTerm 2.5.0 输入用户名后假死卡住的解决办法"
 tags: ['coding']
-slug: ''
+
 ---
 ## 问题描述
 

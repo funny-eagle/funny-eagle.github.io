@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-29"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第29周
 date: 2019-01-19
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > Algorithm: [804. Unique Morse Code Words](https://leetcode.com/problems/unique-morse-code-words/)

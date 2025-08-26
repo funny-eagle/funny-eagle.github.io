@@ -1,9 +1,13 @@
 ---
+
+slug: "/mac-osx-ruby-upgrade"
+
+description: "Mac下升级ruby"
 title: Mac 下 ruby 升级
 date: "2017-11-26 16:23:48"
-description: "Mac下升级ruby"
+summary: "Mac下升级ruby"
 tags: ['coding']
-slug: ''
+
 ---
 
 > 当时我要安装android-platform-tools `brew install android-platform-tools`，然后这玩意就开始更新，看来我确实很久没用homebrew装软件了。

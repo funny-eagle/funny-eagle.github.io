@@ -1,9 +1,13 @@
 ---
+
+slug: "/remembering-haoel"
+
+description: "纪念皓哥"
 title: 纪念皓哥
 date: "2023-06-19 00:00:00"
-description: "纪念皓哥"
+summary: "纪念皓哥"
 tags: ['life']
-slug: ''
+
 ---
 
 皓哥是我技术方面的偶像。

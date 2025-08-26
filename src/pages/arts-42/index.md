@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-42"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第43周
 date: 2019-08-11
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > - Algorithm: 1108. IP 地址无效化

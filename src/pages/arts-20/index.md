@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-20"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第20周
 date: 2018-11-18
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 
@@ -120,7 +124,7 @@ executor.setRejectExceptionHandler(new ThreadPoolExecutor.CallRunsPolicy());
 - 对于包含IO操作或者其他阻塞操作的任务，由于线程并不会一直执行，因此线程池的规模应该更大
   - 估算出任务的等待时间于计算时间的比值	
     - 在某个基准负载下，分别设置不同大小的线程池来运行程序，观察CPU利用率
-    - N = CPU的数量(可以通过`Runtime.getRuntime().availableProcessors()`获取CPU数量)
-    - U = CPU的使用率(0 <= U <= 1）
-    - W/C = 计算等待时间 / 计算时间
-    - 线程池的最优大小 = N * U * (1 + W/C)
+    - `N = CPU的数量(可以通过`Runtime.getRuntime().availableProcessors()`获取CPU数量)`
+    - `U = CPU的使用率(0 <= U <= 1）`
+    - `W/C = 计算等待时间 / 计算时间`
+    - `线程池的最优大小 = N * U * (1 + W/C)`

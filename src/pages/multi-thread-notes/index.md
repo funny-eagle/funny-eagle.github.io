@@ -1,9 +1,13 @@
 ---
+
+slug: "/multi-thread-notes"
+
+description: "Java线程和线程池基础知识。"
 title: Java 多线程
 date: "2018-04-07 23:11:04"
-description: "Java线程和线程池基础知识。"
+summary: "Java线程和线程池基础知识。"
 tags: ['coding']
-slug: ''
+
 ---
 
 Java的重要功能之一就是内部支持多线程-在一个程序中允许同时运行多个任务。

@@ -1,9 +1,13 @@
 ---
+
+slug: "/englishman-on-sunset-boulevard"
+
+description: "[Tribes] Englishman on Sunset Boulevard guitar chords"
 title: "Englishman on Sunset Boulevard"
 date: "2023-11-30 19:35:35"
-description: "[Tribes] Englishman on Sunset Boulevard guitar chords"
+summary: "[Tribes] Englishman on Sunset Boulevard guitar chords"
 tags: ['music']
-slug: ''
+
 ---
 
 ![tribes](./tribes-william-kennedy.jpeg)

@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-35"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第35周
 date: 2019-03-24
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm:[700. Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)

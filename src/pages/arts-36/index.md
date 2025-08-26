@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-36"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第36周
 date: 2019-04-06
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm: 654.Maximum Binary Tree

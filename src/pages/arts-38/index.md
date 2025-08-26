@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-38"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第38周
 date: 2019-05-04
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > - Algorithm: 617. Merge Two Binary Trees
@@ -83,39 +87,39 @@ public class MergeTwoBinaryTrees {
 
 **DRY-Don‘t repeat yourself** - 这可能是编程中最基本的一个原则，就是避免重复。许多编程结构仅用于此目的（例如循环，函数，类等）。一旦你开始重复自己（例如一个长表达式，一系列语句，相同的概念），就创建一个新的抽象。 [http://en.wikipedia.org/wiki/Don%27t_repeat_yourself](http://en.wikipedia.org/wiki/Don't_repeat_yourself)
 
-**抽象原则** - 与DRY相关的抽象原则是“程序中的每一个重要功能都应该在源代码中的一个地方实现”。<http://en.wikipedia.org/wiki/Abstraction_principle_(programming>）
+**抽象原则** - 与DRY相关的抽象原则是“程序中的每一个重要功能都应该在源代码中的一个地方实现”。http://en.wikipedia.org/wiki/Abstraction_principle_(programming>）
 
-**KISS（保持简单，愚蠢！）** - 简单（并避免复杂性）应始终是一个关键目标。简单的代码编写时间更短，错误更少，更容易修改。 <http://en.wikipedia.org/wiki/KISS_principle>
+**KISS（保持简单，愚蠢！）** - 简单（并避免复杂性）应始终是一个关键目标。简单的代码编写时间更短，错误更少，更容易修改。 http://en.wikipedia.org/wiki/KISS_principle>
 
-**避免创建 YAGNI（You aren‘t going to need it）** - 尝试在需要之前不添加功能。<http://en.wikipedia.org/wiki/YAGNI>
+**避免创建 YAGNI（You aren‘t going to need it）** - 尝试在需要之前不添加功能。http://en.wikipedia.org/wiki/YAGNI>
 
-**做最简单的事可能有用** - 在编程时问一个人自己的一个好问题是“什么是最简单的事情可能有用？”这有助于我们在设计中走向简单化的道路。<http://c2.com/xp/DoTheSimplestThingThatCouldPossiblyWork.html>
+**做最简单的事可能有用** - 在编程时问一个人自己的一个好问题是“什么是最简单的事情可能有用？”这有助于我们在设计中走向简单化的道路。http://c2.com/xp/DoTheSimplestThingThatCouldPossiblyWork.html>
 
-**不要让我思考** - 这实际上是一本关于web可用性的书的标题，它也与编程有关。关键是代码应该易于阅读和理解，只需要最少的努力。如果代码需要阅读者过多的思考才能理解，那么它可能会还需要再被简化。 <http://www.sensible.com/dmmt.html>
+**不要让我思考** - 这实际上是一本关于web可用性的书的标题，它也与编程有关。关键是代码应该易于阅读和理解，只需要最少的努力。如果代码需要阅读者过多的思考才能理解，那么它可能会还需要再被简化。 http://www.sensible.com/dmmt.html>
 
-**开闭原则** - 软件的类、模块、功能等应该对扩展开放，对修改关闭。换句话说，不要编写可以修改的类，而是编写可以扩展的类。<http://en.wikipedia.org/wiki/Open_Closed_Principle>
+**开闭原则** - 软件的类、模块、功能等应该对扩展开放，对修改关闭。换句话说，不要编写可以修改的类，而是编写可以扩展的类。http://en.wikipedia.org/wiki/Open_Closed_Principle>
 
-**为维护者编写代码** - 几乎所有值得编写的代码都值得在将来由你或其他人维护。未来你必须维护代码通常会记住尽可能多的代码，作为一个完全陌生的代码，所以你不妨总是为其他人写代码。记住这一点的一个令人难忘的方式是“总是编码，好像最终维护你的代码的人是一个知道你住在哪里的暴力精神病患者。“ <http://c2.com/cgi/wiki?CodeForTheMaintainer>
+**为维护者编写代码** - 几乎所有值得编写的代码都值得在将来由你或其他人维护。未来你必须维护代码通常会记住尽可能多的代码，作为一个完全陌生的代码，所以你不妨总是为其他人写代码。记住这一点的一个令人难忘的方式是“总是编码，好像最终维护你的代码的人是一个知道你住在哪里的暴力精神病患者。“ http://c2.com/cgi/wiki?CodeForTheMaintainer>
 
-**最不惊讶**的原则 - **最不惊讶**的原则通常在用户界面方面被引用，但同样的原则适用于书面代码。代码应该尽可能少地让读者感到惊讶。遵循标准惯例的方法，代码应该做注释和名称所暗示的，并且应该尽可能避免可能出人意料的副作用。 <http://en.wikipedia.org/wiki/Principle_of_least_astonishment>
+**最不惊讶**的原则 - **最不惊讶**的原则通常在用户界面方面被引用，但同样的原则适用于书面代码。代码应该尽可能少地让读者感到惊讶。遵循标准惯例的方法，代码应该做注释和名称所暗示的，并且应该尽可能避免可能出人意料的副作用。 http://en.wikipedia.org/wiki/Principle_of_least_astonishment>
 
-**单一责任原则** - 代码组件（例如类或函数）应执行单个定义良好的任务。 <http://en.wikipedia.org/wiki/Single_responsibility_principle>
+**单一责任原则** - 代码组件（例如类或函数）应执行单个定义良好的任务。 http://en.wikipedia.org/wiki/Single_responsibility_principle>
 
 **最小化耦合** - 代码的任何部分（代码块，函数，类等）应最小化对其他代码区域的依赖性。这是通过尽可能少地使用共享变量来实现的。“低耦合通常是结构良好的计算机系统和良好设计的标志，当与高内聚相结合时，支持高可读性和可维护性的一般目标” [http://en.wikipedia.org/wiki/Coupling_（ computer_programming](http://en.wikipedia.org/wiki/Coupling_(computer_programming)）
 
-**最大化内聚** - 应在同一组件中找到具有类似功能的代码。 <http://en.wikipedia.org/wiki/Cohesion_(computer_science>）
+**最大化内聚** - 应在同一组件中找到具有类似功能的代码。 http://en.wikipedia.org/wiki/Cohesion_(computer_science>）
 
-**隐藏实现详细信息** - 隐藏实现详细信息允许更改代码组件的实现，同时最小化影响使用该组件的任何其他模块。 <http://en.wikipedia.org/wiki/Information_Hiding>
+**隐藏实现详细信息** - 隐藏实现详细信息允许更改代码组件的实现，同时最小化影响使用该组件的任何其他模块。 http://en.wikipedia.org/wiki/Information_Hiding>
 
-**迪米特法则** - 代码组件只应与它们的直接关系进行通信（例如它们继承的类，它们包含的对象，通过参数传递的对象等） <http://en.wikipedia.org/wiki/Law_of_Demeter>
+**迪米特法则** - 代码组件只应与它们的直接关系进行通信（例如它们继承的类，它们包含的对象，通过参数传递的对象等） http://en.wikipedia.org/wiki/Law_of_Demeter>
 
-**避免过早优化** - 除非你的代码有效，否则不要考虑优化，但要比你想要的慢。只有这样才能开始考虑优化，然后才能借助经验数据。“我们应该忘记小的效率，大约97％的时间说：过早的优化是所有邪恶的根源” - 唐纳德克努特。 <http://en.wikipedia.org/wiki/Program_optimization>
+**避免过早优化** - 除非你的代码有效，否则不要考虑优化，但要比你想要的慢。只有这样才能开始考虑优化，然后才能借助经验数据。“我们应该忘记小的效率，大约97％的时间说：过早的优化是所有邪恶的根源” - 唐纳德克努特。 http://en.wikipedia.org/wiki/Program_optimization>
 
-**重用代码** - 重用代码可提高代码可靠性并缩短开发时间。 <http://en.wikipedia.org/wiki/Code_reuse>
+**重用代码** - 重用代码可提高代码可靠性并缩短开发时间。 http://en.wikipedia.org/wiki/Code_reuse>
 
-**关注点分离** - 不同的功能区域应该由不同且最小重叠的代码模块来管理。 <http://en.wikipedia.org/wiki/Separation_of_concerns>
+**关注点分离** - 不同的功能区域应该由不同且最小重叠的代码模块来管理。 http://en.wikipedia.org/wiki/Separation_of_concerns>
 
-**拥抱变化** - 这是Kent Beck的一本书的副标题，也被认为是极限编程和敏捷方法的一个原则。许多其他原则都基于您应该期待的概念并欢迎变革。事实上，最小化耦合等非常古老的软件工程原则与使代码更容易更改的要求直接相关。无论您是否是一名极限编程实践者，这种编写代码的方法都是有意义的。<http://www.amazon.com/gp/product/0321278658>
+**拥抱变化** - 这是Kent Beck的一本书的副标题，也被认为是极限编程和敏捷方法的一个原则。许多其他原则都基于您应该期待的概念并欢迎变革。事实上，最小化耦合等非常古老的软件工程原则与使代码更容易更改的要求直接相关。无论您是否是一名极限编程实践者，这种编写代码的方法都是有意义的。http://www.amazon.com/gp/product/0321278658>
 
 ## Tip
 
@@ -128,11 +132,11 @@ public class MergeTwoBinaryTrees {
 
 这要从软件模块的层次说起，我们在做项目时，会写很多的低层方法，例如访问数据库、处理某个业务的逻辑等等。再由高层的模块去调用这些方法。这就叫做高层次依赖低层次。
 
-![](./images/高层依赖低层.png)
+![](/images/高层依赖低层.png)
 
 一旦低层模块需要修改或更换，那么高层模块必然也要随之修改，两者的是高度耦合的，这种对于低层次组件的依赖限制了高层组件被重用的可行性。如果将高层组件依赖于抽象的接口或者抽象类，根据里氏替换原则，使用父类的地方都可以用子类来替换。这样就可以将高层组件和低层组件进行解耦，便于重用不同层级的组件，降低软件的维护成本，更加灵活。
 
-![](./images/依赖倒置-高层依赖接口.png)
+![](/images/依赖倒置-高层依赖接口.png)
 
 依赖倒置可以说是面向对象设计的标志，编程时要考虑针对抽象编程而不是针对细节编程，即程序中所有的依赖关系都终止与抽象类或者接口。
 

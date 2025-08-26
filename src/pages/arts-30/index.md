@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-30"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第30周
 date: 2019-01-27
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm: [961. N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/)

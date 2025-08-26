@@ -1,9 +1,13 @@
 ---
+
+slug: "/Introduction-to-spring-cloud-load-balancer"
+
+description: "Spring Cloud Load Balancer 简介"
 title: Spring Cloud Load Balancer 简介
 date: "2024-01-30 21:05:19"
-description: "Spring Cloud Load Balancer 简介"
+summary: "Spring Cloud Load Balancer 简介"
 tags: ['coding']
-slug: ''
+
 ---
 
 原文链接：https://www.baeldung.com/spring-cloud-load-balancer

@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-33"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第33周
 date: 2019-03-09
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm:[832. Flipping an Image](https://leetcode.com/problems/flipping-an-image/)

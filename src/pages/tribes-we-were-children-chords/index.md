@@ -1,9 +1,13 @@
 ---
+
+slug: "/tribes-we-were-children-chords"
+
+description: "[Tribes] We Were Children 吉他和弦谱"
 title: We Were Children
 date: "2023-11-10 12:30:30"
-description: "[Tribes] We Were Children 吉他和弦谱"
+summary: "[Tribes] We Were Children 吉他和弦谱"
 tags: ['music', 'chords']
-slug: ''
+
 ---
 ![tribes](./tribes-band.jpg)
 

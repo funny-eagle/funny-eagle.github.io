@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-46"
+
+description: "时隔两年后的第46篇ARTS，纪念陈皓老师。"
 title: ARTS 第46周
 date: 2023-06-02
-description: "时隔两年后的第46篇ARTS，纪念陈皓老师。"
+summary: "时隔两年后的第46篇ARTS，纪念陈皓老师。"
 tags: ['coding', 'arts']
-slug: ''
+
 ---
 
 > [历史ARTS](https://github.com/funny-eagle/arts)

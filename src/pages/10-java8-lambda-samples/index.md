@@ -1,9 +1,13 @@
 ---
+
+slug: "/10-java8-lambda-samples"
+
+description: "本文由 ImportNew - lemeilleur 翻译自 javarevisited。"
 title: 【转载】Java8 lambda表达式10个示例
 date: "2017-06-10 05:36:20"
-description: "本文由 ImportNew - lemeilleur 翻译自 javarevisited。"
+summary: "本文由 ImportNew - lemeilleur 翻译自 javarevisited。"
 tags: ['coding']
-slug: ''
+
 ---
 
 > 本文由 ImportNew - lemeilleur 翻译自 javarevisited。欢迎加入翻译小组。转载请见文末要求。

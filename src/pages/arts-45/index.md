@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-45"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第45周
 date: 2021-09-08
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 ## Algorithm
@@ -89,7 +93,7 @@ function Car(){
 
 ### Rendering a Component
 
-现在有一个名为Car的组件，返回一个<h2>元素。
+现在有一个名为Car的组件，返回一个`<h2>`元素。
 
 在程序中使用这个组件爱你，语法类似HTML:`<Car/>`
 

@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-31"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第31周
 date: 2019-02-16
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm: [905. Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/)

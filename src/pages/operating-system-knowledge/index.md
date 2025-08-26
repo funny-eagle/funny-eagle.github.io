@@ -1,9 +1,13 @@
 ---
-title: "[系统架构设计师] 操作系统考点总结"
+
+slug: "/operating-system-knowledge"
+
+description: "系统架构设计师操作系统考点总结"
+title: "系统架构设计师-操作系统考点总结"
 date: 2023-12-20
-description: "[系统架构设计师] 操作系统考点总结"
+summary: "系统架构设计师操作系统考点总结"
 tags: ['coding']
-slug: ''
+
 ---
 ## 一、操作系统
 

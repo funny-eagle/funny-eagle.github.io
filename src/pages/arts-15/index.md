@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-15"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第15周
 date: 2018-10-13
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > 第十五周 ARTS。这周约了几个好久不见的“狱友”聚餐（因为我们同在的上家公司是做司法行业业务系统的，所以调侃称为“狱友”），聊了很多，让我感触最深刻的就是关于读书和学习的思维力和金字塔原理，怎么样高效的读书学习也是有套路可寻的，掌握一些模式可以更快的掌握书中的有效信息，本周的Share分享几本相关的书，与大家共勉。

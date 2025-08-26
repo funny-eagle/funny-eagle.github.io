@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-32"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第32周
 date: 2019-03-02
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm:[977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)

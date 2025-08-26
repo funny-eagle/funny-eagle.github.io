@@ -1,9 +1,13 @@
 ---
+
+slug: "/quartz-ui"
+
+description: "基于Quartz的定时任务UI组件"
 title: 基于Quartz的定时任务UI组件
 date: "2023-07-07 17:14"
-description: "基于Quartz的定时任务UI组件"
+summary: "基于Quartz的定时任务UI组件"
 tags: ['coding']
-slug: ''
+
 ---
 
 ## 需求

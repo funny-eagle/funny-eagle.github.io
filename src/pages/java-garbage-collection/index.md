@@ -1,9 +1,13 @@
 ---
+
+slug: "/java-garbage-collection"
+
+description: "Java 垃圾收集器"
 title: Java 垃圾收集器
 date: 2019-05-21
-description: "Java 垃圾收集器"
-tags: ['coding']
-slug: ''
+summary: "Java 垃圾收集器"
+tags: ['coding','java']
+
 ---
 
 **Serial收集器** 

@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-19"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第19周
 date: 2018-11-11
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > 这期各种日志相关。。。

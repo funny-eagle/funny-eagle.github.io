@@ -1,9 +1,13 @@
 ---
+
+slug: "/open-mysql-binlog-for-mac"
+
+description: "Mac 下 MySQL 开启 binlog"
 title: Mac 下 MySQL 开启 binlog
 date: "2018-07-23 17:51:00"
-description: "Mac 下 MySQL 开启 binlog"
+summary: "Mac 下 MySQL 开启 binlog"
 tags: ['coding']
-slug: ''
+
 ---
 
 MySQL for Mac 默认 binlog 是关闭的，使用以下命令查看 binlog 是否开启：

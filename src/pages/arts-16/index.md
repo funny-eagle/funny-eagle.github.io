@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-16"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第16周
 date: 2018-10-21
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > 第十六周ARTS。这个周末也不消停，一家人都得了感冒，前两天吃了药就会很困，实在坚持不住。乘着这会儿孩子睡着了，赶紧把ARTS写了，这一周已经积累了arts的素材，应该不会耗时太久。

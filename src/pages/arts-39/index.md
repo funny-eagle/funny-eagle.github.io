@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-39"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第39周
 date: 2019-05-11
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > - Algorithm: 563. Binary Tree Tilt

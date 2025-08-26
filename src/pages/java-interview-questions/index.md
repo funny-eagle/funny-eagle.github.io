@@ -1,9 +1,13 @@
 ---
+
+slug: "/java-interview-questions"
+
+description: "这些是我被问到的面试题，比较基础。"
 title: 几道Java相关的面试题
 date: "2018-04-11 21:19:10"
-description: "这些是我被问到的面试题，比较基础。"
+summary: "这些是我被问到的面试题，比较基础。"
 tags: ['coding']
-slug: ''
+
 ---
 ### 1. 数据库编码和服务端代码编码一致情况下，Get请求可能产生乱码的原因及解决办法？
 

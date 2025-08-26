@@ -1,9 +1,13 @@
 ---
+
+slug: "/jwt-example"
+
+description: "使用spring-boot, spring security, jjtw 搭建的JWT示例项目"
 title: '[JWT] 基于SpringBoot的JSON Web Token使用示例'
 date: "2023-11-16 09:37:10"
-description: "使用spring-boot, spring security, jjtw 搭建的JWT示例项目"
+summary: "使用spring-boot, spring security, jjtw 搭建的JWT示例项目"
 tags: ['coding']
-slug: ''
+
 ---
 
 > 上一篇[JSON Web Token 入门简介](http://www.funnyeagle.cn/Introduction-to-jwt/)中，我们了解了什么是 JWT 以及使用场景等。本示例项目中，我们会搭建一个`spring-boot` 应用，利用 `JWT` 身份验证来保护公开的 `REST API`。该项目没有使用数据库，用硬编码的用户名和密码进行用户身份验证。只有客户端发起携带有效的 `JSON Web Token` （JWT） 请求时，它才能使用此 API。

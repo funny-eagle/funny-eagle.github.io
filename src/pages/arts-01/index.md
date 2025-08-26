@@ -1,26 +1,28 @@
 ---
+
+slug: "/arts-01"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第1周
 date: 2018-07-07
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 ## Algorithm
 
-
 ### Two Sum Sulution
 
 [Two Sum](https://leetcode.com/problems/two-sum/description/)
-
 
 ```java
 package org.nocoder.leetcode.solution;
 
 /**
  * 1.Two Sum 
- * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
- * You may assume that each input would have exactly one solution, and you may not use the same element twice.
+ * 给定一个整数数组，返回两个数的索引，使它们的和等于指定目标值。
+ * 假设每个输入只会有一个解决方案，且不能重复使用同一个元素。
  * 
  * Example:
  * Given nums = [2, 7, 11, 15], target = 9,
@@ -32,26 +34,50 @@ package org.nocoder.leetcode.solution;
  */
 public class TwoSumSolution {
 
+    /**
+     * 暴力解法：
+     * 两层循环，枚举所有可能的两个数的组合，判断其和是否等于目标值。
+     * 时间复杂度：O(n^2)
+     * 空间复杂度：O(1)
+     * @param nums 输入的整数数组
+     * @param target 目标和
+     * @return 满足条件的两个数的索引
+     */
     public static int[] twoSum1(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
+                // 判断 nums[i] + nums[j] 是否等于目标值
                 if ((nums[i] + nums[j]) == target) {
+                    // 找到后直接返回两个索引
                     return new int[]{i, j};
                 }
             }
         }
+        // 如果没有找到，抛出异常
         throw new IllegalArgumentException("No solution!");
     }
     
+    /**
+     * 哈希表优化解法：
+     * 用一个 Map 存储已遍历过的数字及其索引，查找当前数字所需的补数是否已存在。
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
+     * @param nums 输入的整数数组
+     * @param target 目标和
+     * @return 满足条件的两个数的索引
+     */
     public static int[] twoSum2(int[] nums, int target){
-        Map<Integer, Integer> resultMap = new HashMap<>();
+        Map<Integer, Integer> resultMap = new HashMap<>(); // key: 数值, value: 索引
         for (int i = 0; i < nums.length; i++) {
-            int result = target - nums[i];
+            int result = target - nums[i]; // 计算当前数字所需的补数
             if(resultMap.containsKey(result)){
+                // 如果补数已存在，返回补数索引和当前索引
                 return new int[]{resultMap.get(result), i};
             }
+            // 将当前数字和索引存入 map
             resultMap.put(nums[i], i);
         }
+        // 如果没有找到，抛出异常
         throw new IllegalArgumentException("No solution!");
     }
 }
@@ -116,4 +142,3 @@ The main points for long-term performance summarized:
 ### 架构师的自我修养
 
 [架构师的自我修养](https://mp.weixin.qq.com/s/KLDUdbo2RpXIDE4k6jR1iw)
-

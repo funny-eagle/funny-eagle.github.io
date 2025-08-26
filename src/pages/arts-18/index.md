@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-18"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第18周
 date: 2018-11-04
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm: Reverse String

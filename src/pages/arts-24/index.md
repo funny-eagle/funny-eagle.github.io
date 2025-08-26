@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-24"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第24周
 date: 2018-12-15
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 ## Algorithm

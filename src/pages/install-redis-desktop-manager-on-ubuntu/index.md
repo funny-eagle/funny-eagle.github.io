@@ -1,9 +1,13 @@
 ---
+
+slug: "/install-redis-desktop-manager-on-ubuntu"
+
+description: "Install Redis Desktop Manager On Ubuntu 18.04."
 title: Install Redis Desktop Manager On Ubuntu 18.04 
 date: 2019-08-20
-description: "Install Redis Desktop Manager On Ubuntu 18.04."
+summary: "Install Redis Desktop Manager On Ubuntu 18.04."
 tags: ['coding']
-slug: ''
+
 ---
 
 1. 下载 redis-desktop-manager_0.8.3-120_amd64.deb，链接: https://pan.baidu.com/s/1U_bFloEEV5ERtZ-Wv5yj8g 提取码: ufjp

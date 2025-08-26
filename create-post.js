@@ -23,10 +23,10 @@ tags: ['tag']
 description: 'description'
 ---`
 
-fs.mkdirSync(`./src/pages/${DATE || yyyymmdd}-${title}`)
+fs.mkdirSync(`./src/posts/${DATE || yyyymmdd}-${title}`)
 
 fs.appendFile(
-  `./src/pages/${DATE || yyyymmdd}-${title}/index.md`,
+  `./src/posts/${DATE || yyyymmdd}-${title}/index.md`,
   template,
   err => {
     if (err) throw err

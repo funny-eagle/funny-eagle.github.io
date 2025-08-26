@@ -1,9 +1,13 @@
 ---
+
+slug: "/mac-uninstall-postgresql"
+
+description: " Mac 卸载 postgresql"
 title: Mac 卸载 postgresql
 date: "2018-02-02 17:23:41"
-description: " Mac 卸载 postgresql"
+summary: " Mac 卸载 postgresql"
 tags: ['coding']
-slug: ''
+
 ---
 
 这里针对的是 9.6 版本。如是其他版下面的仅供参考。

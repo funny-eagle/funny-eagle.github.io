@@ -10,6 +10,6 @@ date: '2019-02-14T00:00:00.000Z'
 
 欢迎加入`FunnyEagle`博客交流QQ群！
 
-![qq](./IMG_2096.JPG)
+![qq](./IMG_2096.jpeg)
 
 <iframe style="border-radius:12px" src="//music.163.com/outchain/player?type=2&id=2029572640&auto=1&height=66" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

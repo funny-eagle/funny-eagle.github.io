@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-14"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第14周
 date: 2018-10-06
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 > 第十四周ARTS。国庆节接近尾声了，这个十一过得有点痛苦，给孩子断奶、孩子发烧，折腾了5天，心疼宝宝啊，感慨下为人父母的不容易

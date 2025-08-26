@@ -1,9 +1,13 @@
 ---
+
+slug: "/some-tips"
+
+description: "2018年在云图用到的技术"
 title: 云图web项目技术栈盘点
 date: "2018-09-29 15:06:05"
-description: "2018年在云图用到的技术"
+summary: "2018年在云图用到的技术"
 tags: ['coding']
-slug: ''
+
 ---
 
 > 记得有一次春哥笑着跟我说，“你要相信，别人能做出来的东西，你也可以。”

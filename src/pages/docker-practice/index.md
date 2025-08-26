@@ -1,9 +1,13 @@
 ---
+
+slug: "/docker-practice"
+
+description: "Docker的基本用法。"
 title: Docker的基本用法
 date: "2018-07-13 18:37:12"
-description: "Docker的基本用法。"
+summary: "Docker的基本用法。"
 tags: ['coding']
-slug: ''
+
 ---
 ## Docker的三个基本概念
 

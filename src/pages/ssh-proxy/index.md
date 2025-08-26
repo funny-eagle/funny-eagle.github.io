@@ -1,9 +1,13 @@
 ---
+
+slug: "/ssh-proxy"
+
+description: "直接使用命令行ssh开启代理服务"
 title: 开启ssh代理服务
 date: "2018-08-09 03:03:05"
-description: "直接使用命令行ssh开启代理服务"
+summary: "直接使用命令行ssh开启代理服务"
 tags: ['coding']
-slug: ''
+
 ---
 
 使用命令行ssh开启代理服务

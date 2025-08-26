@@ -1,9 +1,13 @@
 ---
+
+slug: "/windows-exe-to-service"
+
+description: "Windows下把exe程序注册成服务"
 title: Windows下把exe程序注册成服务
 date: "2017-12-08 06:51:49"
-description: "Windows下把exe程序注册成服务"
+summary: "Windows下把exe程序注册成服务"
 tags: ['coding']
-slug: ''
+
 ---
 
 1、下载`instsrv.exe`和`srvany.exe`这两个文件，放在`C:\WINDOWS\SysWOW64`目录下

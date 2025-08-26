@@ -1,9 +1,13 @@
 ---
+
+slug: "/google-java-coding-guide"
+
+description: "这没撒好说的，好好学习遵守就对了。"
 title: 【转载】Google Java编程风格指南
 date: "2018-06-28 10:25:09"
-description: "这没撒好说的，好好学习遵守就对了。"
+summary: "这没撒好说的，好好学习遵守就对了。"
 tags: ['coding']
-slug: ''
+
 ---
 
 > 出处：[http://hawstein.com/posts/google-java-style.html](http://www.hawstein.com/posts/google-java-style.html)
@@ -233,7 +237,7 @@ void doNothing() {}
 #### 4.6.2 水平空白
 
 除了语言需求和其它规则，并且除了文字，注释和Javadoc用到单个空格，单个ASCII空格也出现在以下几个地方： 
-
+```
 - 分隔任何保留字与紧随其后的左括号(()(如if, for catch等)。
 - 分隔任何保留字与其前面的右大括号(})(如else, catch)。
 - 在任何左大括号前({)，两个例外：
@@ -247,7 +251,7 @@ void doNothing() {}
 - 如果在一条语句后做注释，则双斜杠(//)两边都要空格。这里可以允许多个空格，但没有必要。
 - 类型和变量之间：List list。
 - 数组初始化中，大括号内的空格是可选的，即new int[] {5, 6}和new int[] { 5, 6 }都是可以的。
-
+```
 > Note：这个规则并不要求或禁止一行的开关或结尾需要额外的空格，只对内部空格做要求。 
 
 #### 4.6.3 水平对齐：不做要求

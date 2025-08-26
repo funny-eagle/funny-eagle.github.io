@@ -1,9 +1,13 @@
 ---
+
+slug: "/20-database-design-best-practice"
+
+description: "20条数据库设计最佳实践。"
 title: 20条数据库设计最佳实践
 date: "2018-06-13 06:29:29"
-description: "20条数据库设计最佳实践。"
+summary: "20条数据库设计最佳实践。"
 tags: ['coding']
-slug: ''
+
 ---
 
 > 翻译自 https://dzone.com/articles/20-database-design-best

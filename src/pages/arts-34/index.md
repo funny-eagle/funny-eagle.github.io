@@ -1,9 +1,13 @@
 ---
+
+slug: "/arts-34"
+
+description: "Algorithm, Reiview, Tip and Share"
 title: ARTS 第34周
 date: 2019-03-16
-description: "Algorithm, Reiview, Tip and Share"
+summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-slug: ''
+
 ---
 
 - Algorithm: [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)

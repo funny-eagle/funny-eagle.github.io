@@ -1,9 +1,13 @@
 ---
+
+slug: "/java-binary-search"
+
+description: "Java实现二分查找法。"
 title: Java 二分查找法
 date: "2018-04-18 17:06:19"
-description: "Java实现二分查找法。"
-tags: ['coding']
-slug: ''
+summary: "Java实现二分查找法。"
+tags: ['coding','java']
+
 ---
 
 > 二分查找法是一种常见的对数值列表的查找方法。使用二分查找法的前提条件是数组中的元素必须已经排好序。二分查找法首先将关键字与数组的中间元素进行比较。考虑一下三种情况：

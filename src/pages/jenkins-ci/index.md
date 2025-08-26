@@ -1,9 +1,13 @@
 ---
+
+slug: "/jenkins-ci"
+
+description: "Jenkins持续集成"
 title: Jenkins持续集成
 date: "2018-04-03 21:16:08"
-description: "Jenkins持续集成"
+summary: "Jenkins持续集成"
 tags: ['coding']
-slug: ''
+
 ---
 
 **使用jenkins进行持续集成**
@@ -54,7 +58,7 @@ jenkins : Depends: default-jre-headless (>= 2:1.8) but 2:1.7-51 is to be install
 ```
 
 
-To search for a particular package by name or description:
+To search for a particular package by name or summary:
 
 From the command-line, use:
 ```

@@ -1,9 +1,13 @@
 ---
+
+slug: "/architecture-style"
+
+description: "系统架构设计师论文"
 title: 论软件系统架构风格
 date: "2023-10-19 16:25:54"
-description: "系统架构设计师论文"
+summary: "系统架构设计师论文"
 tags: ['coding']
-slug: ''
+
 ---
 
 **摘要**
