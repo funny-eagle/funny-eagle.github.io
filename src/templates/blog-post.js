@@ -80,7 +80,6 @@ class BlogPostTemplate extends React.Component {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
         <hr />
-        // 显示上一篇和下一篇文章链接
         <ul className="button-wrapper">
           <li>
             {previous && (
