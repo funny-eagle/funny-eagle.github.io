@@ -22,28 +22,22 @@ class BlogIndex extends React.Component {
     return (
       // 使用布局组件，传入标签名和描述
       <Layout pageName={tag} pageDescript={tagDescriptionMap[tag]}>
-        // 遍历文章列表
         {posts.map(({ node }) => {
-          // 获取文章标题
           const title = node.frontmatter.title || node.fields.slug
           return (
-            // 显示文章项
             <div className="list-item" key={node.fields.slug}>
               <div className="list-title">
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </div>
-              // 显示文章信息（日期和标签）
               <Info date={node.frontmatter.date} tags={node.frontmatter.tags} />
-              // 显示文章摘要
               <p className="list-excerpt">
                 {node.frontmatter.description || node.excerpt}
               </p>
             </div>
           )
         })}
-        // 显示分页组件
         <Pagination
           currentPage={currentPage}
           totalPage={totalPage}
