@@ -1,13 +1,10 @@
 ---
-
 slug: "/arts-08"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第8周
+title: "ARTS 第8周：字符串转整数算法、Docker网络模式、观察者模式实践"
+description: "本周ARTS包含LeetCode字符串转整数(atoi)算法解析、Docker网络模式详解与主机网络配置、以及观察者设计模式的Java实现与应用案例。"
+summary: "本周ARTS包含LeetCode字符串转整数(atoi)算法解析、Docker网络模式详解与主机网络配置、以及观察者设计模式的Java实现与应用案例。"
 date: 2018-08-26
-summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-
 ---
 
 ## Algorithm

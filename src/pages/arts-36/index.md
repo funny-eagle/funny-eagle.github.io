@@ -2,10 +2,10 @@
 
 slug: "/arts-36"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第36周
+description: "本周ARTS包含LeetCode最大二叉树算法解析、RESTful API最佳实践分享、递归与调用栈详解，以及分布式系统技术栈探讨。"
+title: ARTS 第36周：最大二叉树算法、RESTful API最佳实践、递归与分布式系统
 date: 2019-04-06
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode最大二叉树算法解析、RESTful API最佳实践分享、递归与调用栈详解，以及分布式系统技术栈探讨。"
 tags: ['coding','arts']
 
 ---

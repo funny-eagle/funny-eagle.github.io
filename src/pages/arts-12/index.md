@@ -1,16 +1,14 @@
 ---
-
 slug: "/arts-12"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第12周
+description: "本周ARTS包含LeetCode最长公共前缀算法解析、代理设计模式详解与应用、Springboot项目打包配置问题解决，以及静态代理模式的实践分享。"
+title: ARTS 第12周：最长公共前缀算法、代理模式、Springboot打包配置
 date: 2018-09-22
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode最长公共前缀算法解析、代理设计模式详解与应用、Springboot项目打包配置问题解决，以及静态代理模式的实践分享。"
 tags: ['coding','arts']
 
 ---
 
-> 小伙伴们中秋节快乐！终于可以放松几天，这两天带着老婆孩子玩疯了，满成都到处跑，当然`ARTS`绝不能落下，只是晚到了一天。（算法题做的很烂，一点点调试出来的）
+> 小伙伴们中秋节快乐！终于可以放松几天，这两天带着老婆孩子玩疯了，满成都 everywhere run，当然`ARTS`绝不能落下，只是晚到了一天。（算法题做的很烂，一点点调试出来的）
 
 ## Algorithm
 
@@ -150,7 +148,6 @@ public class LongestCommonPrefix {
     </executions>
 </plugin>
 ```
-
 附上官方文档：
 [68. Spring Boot Maven Plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html)
 

@@ -1,11 +1,9 @@
 ---
-
 slug: "/arts-42"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第43周
+description: "本周ARTS包含LeetCode IP地址无效化算法解析和Redis Sentinel高可用方案详解。"
+title: ARTS 第42周：IP地址无效化算法与Redis Sentinel高可用
 date: 2019-08-11
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode IP地址无效化算法解析和Redis Sentinel高可用方案详解。"
 tags: ['coding','arts']
 
 ---

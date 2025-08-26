@@ -1,13 +1,10 @@
 ---
-
 slug: "/arts-03"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第3周
+title: "ARTS 第3周：无重复字符最长子串算法、Jenkins Pipeline最佳实践、CI/CD自动化部署与架构分享"
+description: "本周ARTS包含LeetCode无重复字符最长子串算法解析、Jenkins Pipeline插件10大最佳实践、基于Jenkins Pipeline的CI/CD自动化部署实践，以及完整的自动化部署架构分享。"
 date: 2018-07-22
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode无重复字符最长子串算法解析、Jenkins Pipeline插件10大最佳实践、基于Jenkins Pipeline的CI/CD自动化部署实践，以及完整的自动化部署架构分享。"
 tags: ['coding','arts']
-
 ---
 
 ## Algorithm
@@ -55,7 +52,6 @@ public class LongestSubstringWithoutRepeatingCharacters {
         System.out.println(lengthOfLongestSubstring(s2));
     }
 }
-
 ```
 
 ## Review
@@ -109,7 +105,6 @@ node {
             sh "ssh -o StrictHostKeyChecking=no jason@192.168.0.111 ${dockerRun}"
         }
    }
-   
 }
 ```
 

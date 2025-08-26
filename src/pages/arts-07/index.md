@@ -1,13 +1,10 @@
 ---
-
 slug: "/arts-07"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第7周
+title: "ARTS 第7周：整数反转算法、容器网络概述、Maven Profile配置"
+description: "本周ARTS包含LeetCode整数反转算法解析、容器网络工作原理概述、以及使用Maven Profile管理不同环境配置的技巧。"
+summary: "本周ARTS包含LeetCode整数反转算法解析、容器网络工作原理概述、以及使用Maven Profile管理不同环境配置的技巧。"
 date: 2018-08-18
-summary: "Algorithm, Reiview, Tip and Share"
 tags: ['coding','arts']
-
 ---
 
 ## Algorithm

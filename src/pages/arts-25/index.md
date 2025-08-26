@@ -2,10 +2,10 @@
 
 slug: "/arts-25"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第25周
+description: "本周ARTS包含LeetCode整数转罗马数字算法解析、10种常见软件架构模式分享、Spring Boot静态资源路径配置详解，以及GitHub ImgBot应用推荐。"
+title: "ARTS 第25周：整数转罗马数字算法、10种常见软件架构模式、Spring Boot静态资源路径配置与GitHub ImgBot应用推荐"
 date: 2018-12-22
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode整数转罗马数字算法解析、10种常见软件架构模式分享、Spring Boot静态资源路径配置详解，以及GitHub ImgBot应用推荐。"
 tags: ['coding','arts']
 
 ---

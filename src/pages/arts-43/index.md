@@ -1,11 +1,9 @@
 ---
-
 slug: "/arts-43"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第43周
+description: "本周ARTS包含LeetCode正则表达式匹配算法解析。"
+title: ARTS 第43周：正则表达式匹配算法
 date: 2019-10-03
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode正则表达式匹配算法解析。"
 tags: ['coding','arts']
 
 ---

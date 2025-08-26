@@ -2,10 +2,10 @@
 
 slug: "/arts-33"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第33周
+description: "本周ARTS包含LeetCode翻转图像算法解析、倒排索引分享、聚合模式详解，以及数据库设计范式化与反范式化探讨。"
+title: ARTS 第33周：翻转图像算法、倒排索引、聚合模式与数据库设计范式化
 date: 2019-03-09
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode翻转图像算法解析、倒排索引分享、聚合模式详解，以及数据库设计范式化与反范式化探讨。"
 tags: ['coding','arts']
 
 ---
@@ -99,7 +99,7 @@ public class FlippingAnImage {
 
 倒排索引是索引数据结构，其存储从诸如单词或数字的内容到其在文档或一组文档中的位置的映射。简单来说，它是一个类似于数据结构的散列图，可以将您从单词引导到文档或网页。
 
-假设我们要搜索文本“hello everyone, ” “this article is based on inverted index, ” “which is hashmap like data structure”. 按照（文本，文本中的单词的位置）来构建索引，带有文本位置的索引如下：
+假设我们要搜索文本“hello everyone, ” “this article is based on inverted index, ” “which is hashmap like data structure”。按照（文本，文本中的单词的位置）来构建索引，带有文本位置的索引如下：
 
 ```
  hello                (1, 1)

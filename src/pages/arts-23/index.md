@@ -2,10 +2,10 @@
 
 slug: "/arts-23"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第23周
+description: "本周ARTS包含LeetCode链表中间节点算法解析、复合模式介绍、Python3 configparser读取包含百分号的配置文件详解，以及Spring Boot设置跨域访问方法。"
+title: ARTS 第23周：链表中间节点算法、复合模式、Python3 configparser读取包含百分号的配置文件与Spring Boot设置跨域访问
 date: 2018-12-08
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode链表中间节点算法解析、复合模式介绍、Python3 configparser读取包含百分号的配置文件详解，以及Spring Boot设置跨域访问方法。"
 tags: ['coding','arts']
 
 ---

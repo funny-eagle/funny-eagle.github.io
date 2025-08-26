@@ -5,32 +5,37 @@ export const apiUrl = 'https://funnyeagle.cn'
 export const menu = [
   {
     icon: 'coding',
-    name: '编程',
+    name: 'Coding',
     href: '/tag/coding/',
   },
   {
+    icon: 'archive',
+    name: 'ARTS',
+    href: '/tag/arts/',
+  },
+  {
     icon: 'music',
-    name: '音乐',
+    name: 'Music',
     href: '/tag/music/',
   },
   {
     icon: 'life',
-    name: '生活',
+    name: 'Life',
     href: '/tag/life/',
   },
   {
     icon: 'tag',
-    name: '标签',
+    name: 'Tags',
     href: '/tags',
   },
   {
     icon: 'archive',
-    name: '归档',
+    name: 'Archive',
     href: '/archive',
   },
   {
     icon: 'person',
-    name: '关于',
+    name: 'About',
     href: '/about',
   },
 ]

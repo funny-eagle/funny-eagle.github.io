@@ -1,7 +1,7 @@
 {
   "name": "FunnyEagle",
   "description": "Funny Eagle",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Jason Yang <yangjinlong86@gmail.com>",
   "dependencies": {
     "axios": "1.2.2",
@@ -53,7 +53,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "build": "gatsby clean && gatsby build",
-    "publish": "gatsby clean && gatsby build && gh-pages -d public",
+    "pub": "gatsby clean && gatsby build && gh-pages -d public",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }

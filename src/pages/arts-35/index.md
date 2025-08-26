@@ -2,10 +2,10 @@
 
 slug: "/arts-35"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第35周
+description: "本周ARTS包含LeetCode二叉搜索树查找算法解析、React中AJAX调用的最佳库推荐、二叉查找树基本概念复习，以及UML类图详解。"
+title: ARTS 第35周：二叉搜索树查找算法、React AJAX库、二叉查找树与UML类图
 date: 2019-03-24
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode二叉搜索树查找算法解析、React中AJAX调用的最佳库推荐、二叉查找树基本概念复习，以及UML类图详解。"
 tags: ['coding','arts']
 
 ---

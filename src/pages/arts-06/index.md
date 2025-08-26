@@ -1,13 +1,10 @@
 ---
-
 slug: "/arts-06"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第6周
 date: 2018-08-11
-summary: "Algorithm, Reiview, Tip and Share"
+title: "ARTS 第6周：ZigZag转换算法、Chrome安全策略、Docker挂载与负载均衡架构"
+description: "本周ARTS包含LeetCode ZigZag转换算法解析、Google Chrome标记HTTP网站为不安全的分析、Docker容器多目录挂载技巧，以及基于阿里负载均衡和Nginx的系统架构分享。"
+summary: "本周ARTS包含LeetCode ZigZag转换算法解析、Google Chrome标记HTTP网站为不安全的分析、Docker容器多目录挂载技巧，以及基于阿里负载均衡和Nginx的系统架构分享。"
 tags: ['coding','arts']
-
 ---
 
 ## Algorithm
@@ -117,7 +114,7 @@ https://www.wired.com/story/google-chrome-https-not-secure-label/
 
 两年前，谷歌实现了一个承诺，chrome浏览器在未加密的网站前面贴上警告标志，来标识非https网站为不安全网站。
 
-但是居然还有骂声，“他们只是科技行业，网络比科技行业大得多，这就是傲慢。“来自Dave Winer，他是RSS的创造者之一。
+但是居然还有骂声，"他们只是科技行业，网络比科技行业大得多，这就是傲慢。"来自Dave Winer，他是RSS的创造者之一。
 
 Let's Encrypt 提供了支持HTTPS连接的免费证书，并且已加密超过1.13亿个网站。
 

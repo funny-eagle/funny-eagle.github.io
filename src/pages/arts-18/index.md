@@ -2,10 +2,10 @@
 
 slug: "/arts-18"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第18周
-date: 2018-11-04
-summary: "Algorithm, Reiview, Tip and Share"
+description: "本周ARTS包含LeetCode反转字符串算法解析、数据库分片架构分享、Sharding-Sphere分库分表框架详解，以及MyCat分库分表实践分析。"
+title: ARTS 第18周：反转字符串算法、数据库分片架构、Sharding-Sphere分库分表框架与MyCat分库分表实践
+date: 2018-11-03
+summary: "本周ARTS包含LeetCode反转字符串算法解析、数据库分片架构分享、Sharding-Sphere分库分表框架详解，以及MyCat分库分表实践分析。"
 tags: ['coding','arts']
 
 ---

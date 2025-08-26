@@ -1,7 +1,5 @@
 ---
-
 slug: "/86-wubi-jian-ma"
-
 description: "86版五笔简码"
 title: "86版五笔简码"
 date: 2025-06-16

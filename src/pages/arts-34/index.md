@@ -2,10 +2,10 @@
 
 slug: "/arts-34"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第34周
+description: "本周ARTS包含LeetCode搜索插入位置算法解析、网关聚合模式分享、Spring Cloud Gateway使用详解，以及云服务设计模式探讨。"
+title: ARTS 第34周：搜索插入位置算法、网关聚合模式、Spring Cloud Gateway与云服务设计模式
 date: 2019-03-16
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode搜索插入位置算法解析、网关聚合模式分享、Spring Cloud Gateway使用详解，以及云服务设计模式探讨。"
 tags: ['coding','arts']
 
 ---

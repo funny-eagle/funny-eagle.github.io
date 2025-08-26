@@ -2,10 +2,10 @@
 
 slug: "/arts-28"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第28周
+description: "本周ARTS包含LeetCode最大周长三角形算法解析、美丽的竞态条件文章分享、MySQL自带性能测试工具mysqlslap详解，以及Java Map集合的理解与实现。"
+title: "ARTS 第28周：最大周长三角形算法、美丽的竞态条件、MySQL性能测试工具mysqlslap与Java Map集合理解"
 date: 2019-01-12
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode最大周三角形的算法解析、美丽的竞态条件文章分享、MySQL自带性能测试工具mysqlslap详解，以及Java Map集合的理解与实现。"
 tags: ['coding','arts']
 
 ---

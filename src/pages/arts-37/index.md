@@ -2,10 +2,10 @@
 
 slug: "/arts-37"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第37周
+description: "本周ARTS包含LeetCode DI字符串匹配算法解析、测试驱动开发(TDD)介绍、Springboot多环境日志配置详解，以及阮一峰每周分享第52期。"
+title: ARTS 第37周：DI字符串匹配算法、测试驱动开发、Springboot日志配置与技术分享
 date: 2019-04-19
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode DI字符串匹配算法解析、测试驱动开发(TDD)介绍、Springboot多环境日志配置详解，以及阮一峰每周分享第52期。"
 tags: ['coding','arts']
 
 ---
@@ -77,7 +77,6 @@ public class DIStringMatch {
         }
     }
 }
-
 ```
 
 

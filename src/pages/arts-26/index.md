@@ -2,10 +2,10 @@
 
 slug: "/arts-26"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第26周
+description: "本周ARTS包含LeetCode唯一电子邮件地址算法解析、Netty 4.x用户指南分享、Python爬取当当图书信息详解，以及专业精神与保持思考习惯的感悟。"
+title: "ARTS 第26周：唯一电子邮件地址算法、Netty 4.x用户指南、Python爬取当当图书信息与专业精神和保持思考习惯感悟"
 date: 2018-12-29
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode唯一电子邮件地址算法解析、Netty 4.x用户指南分享、Python爬取当当图书信息详解，以及专业精神与保持思考习惯的感悟。"
 tags: ['coding','arts']
 
 ---
@@ -28,7 +28,7 @@ import java.util.regex.Pattern;
  * <p>
  * If you add periods (`'.'`) between some characters in the **local name** part of an email address,
  * mail sent there will be forwarded to the same address without dots in the local name.
- * For example, `"alice.z@leetcode.com"` and `"alicez@leetcode.com"` forward to the same email address.
+ * For example, "alice.z@leetcode.com" and "alicez@leetcode.com" forward to the same email address.
  * (Note that this rule does not apply for domain names.)
  * <p>
  * If you add a plus (`'+'`) in the **local name**, everything after the first plus sign will be **ignored**.
@@ -124,6 +124,6 @@ def crawl_book_info(isbn):
 
 ## Share
 
-> 假如你是个医生，病人要求你在手术前不要洗手，因为病人认为洗手太耽误时间了，你会照做吗。当然不会，因为医生是专业的，知道病菌的危害有多大，手术风险有多大。同理，程序员盲目遵从不明风险的经理的要求，也是不专业的。 --《Clean Code》
+> 假如你是个医生，病人要求你在手术前不要洗手，因为病人认为洗手太耽误时间了，你会照做吗。当然不会，因为医生是专业的，知道病菌危害有多大，手术风险有多大。同理，程序员盲目遵从不明风险的经理的要求，也是不专业的。 --《Clean Code》
 
 > 如果你让你自己陷入忙忙忙的境地，你要特别小心了。你没有时间好好思考，你就不会成长，你就不会渐渐做出调整，你就可能无法适应外面的世界，你就会在危机来临时不堪一击。... 保持思考的习惯，思考一些大的东西。「打小算盘」并不是有价值的思考。--蔡学镛

@@ -2,10 +2,10 @@
 
 slug: "/arts-16"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第16周
-date: 2018-10-21
-summary: "Algorithm, Reiview, Tip and Share"
+description: "本周ARTS包含LeetCode单词拆分算法解析、Kafka客户端操作封装分享、Jenkins Pipeline定时清除Docker镜像详解，以及分库分表策略探讨。"
+title: ARTS 第16周：单词拆分算法、Kafka客户端操作封装、Jenkins Pipeline定时清除Docker镜像与分库分表策略
+date: 2018-10-20
+summary: "本周ARTS包含LeetCode单词拆分算法解析、Kafka客户端操作封装分享、Jenkins Pipeline定时清除Docker镜像详解，以及分库分表策略探讨。"
 tags: ['coding','arts']
 
 ---
@@ -67,7 +67,7 @@ https://dzone.com/articles/writing-a-kafka-consumer-in-java
 
 ### 使用 jenkins pipeline 定时运行python脚本
 
-> 每次pull 新的docker image下来运行起来后，如果image的标签没有变化，那么在本地旧的image会变成标签为none的镜像，留着基本没什么用，堆积多了之后非常占用存储空间，这类镜像是需要我们手动清除的。正好测试服务器上安装了jenkins，就使用jenkins pipeline 项目来运行写好的python脚本
+> 每次pull 新的docker image下来运行起来后，如果image的标签没有变化，那么在本地旧的image会变成标签为none的镜像，留着基本Nothing用，堆积多了之后非常占用存储空间，这类镜像是需要我们手动清除的。正好测试服务器上安装了jenkins，就使用jenkins pipeline 项目来运行写好的python脚本
 
 - 在 jenkins 上创建 pipeline 项目
 - sh 'python ssh_cmd.py'

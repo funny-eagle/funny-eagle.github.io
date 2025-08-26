@@ -2,10 +2,10 @@
 
 slug: "/arts-22"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第22周
+description: "本周ARTS包含LeetCode只出现一次的数字算法解析、Stack Overflow for Teams介绍、Spring Cloud Ribbon负载均衡重试机制详解，以及ByteScout SQL Trainer分享。"
+title: ARTS 第22周：只出现一次的数字算法、Stack Overflow for Teams、Spring Cloud Ribbon负载均衡重试机制与ByteScout SQL Trainer
 date: 2018-12-01
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode只出现一次的数字算法解析、Stack Overflow for Teams介绍、Spring Cloud Ribbon负载均衡重试机制详解，以及ByteScout SQL Trainer分享。"
 tags: ['coding','arts']
 
 ---

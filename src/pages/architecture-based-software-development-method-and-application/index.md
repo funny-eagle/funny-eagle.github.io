@@ -6,7 +6,7 @@ description: "2024年架构师备考论文"
 title: '论基于架构的软件开发方法及应用'
 date: "2024-05-25 21:53:00"
 summary: "2024年架构师备考论文"
-tags: ['life']
+tags: ['coding']
 draft: false
 ---
 

@@ -2,10 +2,10 @@
 
 slug: "/arts-29"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第29周
+description: "本周ARTS包含LeetCode唯一摩尔斯密码词算法解析、线程安全集合详解，以及10进制与2进制计数法的介绍。"
+title: "ARTS 第29周：唯一摩尔斯密码词算法、线程安全集合详解与10进制2进制计数法介绍"
 date: 2019-01-19
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode唯一摩尔斯密码词算法解析、线程安全集合详解，以及10进制与2进制计数法的介绍。"
 tags: ['coding','arts']
 
 ---
@@ -43,7 +43,7 @@ import java.util.Set;
  * "gig" -> "--...--."
  * "msg" -> "--...--."
  * <p>
- * There are 2 different transformations, "--...-." and "--...--.".
+ * There are 2 different transformations, "--...-." and "--...--."
  * Note:
  * <p>
  * The length of words will be at most 100.

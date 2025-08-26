@@ -1,11 +1,9 @@
 ---
-
 slug: "/arts-40"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第40周
+description: "本周ARTS包含LeetCode数组配对和工资交换算法解析、Nginx访问日志实时监控分析方案。"
+title: ARTS 第40周：数组配对与工资交换算法、Nginx日志实时监控分析
 date: 2019-06-16
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode数组配对和工资交换算法解析、Nginx访问日志实时监控分析方案。"
 tags: ['coding','arts']
 
 ---
@@ -141,33 +139,33 @@ log_format  main  remote_addr - remote_user [time_local] "request" status body_b
 
    ```yaml
     filebeat.prospectors:
-   
+
    - type: log
-   
+
    enabled: true
-   
+
    fields:
-   
+
        log_topic: nginx-access-log
-   
+
    paths:
-   
+
    - /usr/local/nginx/logs/access.log
-   
+
    output.kafka:
-   
+
        hosts: ["127.0.0.1:9092"]
-   
+
        topic: '%{[fields.log_topic]}'
-   
+
        partition.round_robin:
-   
+
            reachable_only: false
-   
+
        required_acks: 1
-   
+
        compression: gzip
-   
+
        max_message_bytes: 100000000
    ```
 
@@ -247,6 +245,10 @@ output {
         }
 
 }  
+```
+
+
+
 ```
 
 

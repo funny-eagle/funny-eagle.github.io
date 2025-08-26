@@ -1,11 +1,9 @@
 ---
-
 slug: "/arts-38"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第38周
+description: "本周ARTS包含LeetCode合并二叉树算法解析、良好编程原则分享、依赖倒置原则详解，以及《Don't Make Me Think》读后感。"
+title: ARTS 第38周：合并二叉树算法、良好编程原则、依赖倒置与可用性设计
 date: 2019-05-04
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode合并二叉树算法解析、良好编程原则分享、依赖倒置原则详解，以及《Don't Make Me Think》读后感。"
 tags: ['coding','arts']
 
 ---
@@ -32,7 +30,7 @@ package org.nocoder.leetcode.solution;
  * Example 1:
  *
  * Input:
- * 	Tree 1                     Tree 2
+ *	Tree 1                     Tree 2
  *           1                         2
  *          / \                       / \
  *         3   2                     1   3
@@ -40,11 +38,11 @@ package org.nocoder.leetcode.solution;
  *       5                             4   7
  * Output:
  * Merged tree:
- * 	     3
- * 	    / \
- * 	   4   5
- * 	  / \   \
- * 	 5   4   7
+ *	     3
+ *	    / \
+ *	   4   5
+ *	  / \   \
+ *	 5   4   7
  *
  *
  * Note: The merging process must start from the root nodes of both trees.
@@ -83,7 +81,7 @@ public class MergeTwoBinaryTrees {
 
 长久以来，不论是初出茅庐还是业界的老前辈，都依然强调着编程原则和设计原则。Bob大叔在他的《整洁架构之道》中提到，写这本书就是为了讲述这些规则，这些永恒的，不变的软件架构规则。
 
-在学习各种编程原则的时候，看到了 Christopher Diggins 的这篇良好编程的原则，其中罗列了各种原则以及相应的链接，认为多年来这些编程原则帮助让其成为更好的程序员，且可以帮助任何开发人员来提高效率，写出更加易于维护、BUG更少的代码。
+在学习各种编程原则的时候，看到了 Christopher Diggins 的这篇良好编程的原则，其中罗列了各种原则以及相应的链接，认为多年以来这些编程原则帮助让其成为更好的程序员，且可以帮助任何开发人员来提高效率，写出更加易于维护、BUG更少的代码。
 
 **DRY-Don‘t repeat yourself** - 这可能是编程中最基本的一个原则，就是避免重复。许多编程结构仅用于此目的（例如循环，函数，类等）。一旦你开始重复自己（例如一个长表达式，一系列语句，相同的概念），就创建一个新的抽象。 [http://en.wikipedia.org/wiki/Don%27t_repeat_yourself](http://en.wikipedia.org/wiki/Don't_repeat_yourself)
 
@@ -99,7 +97,7 @@ public class MergeTwoBinaryTrees {
 
 **开闭原则** - 软件的类、模块、功能等应该对扩展开放，对修改关闭。换句话说，不要编写可以修改的类，而是编写可以扩展的类。http://en.wikipedia.org/wiki/Open_Closed_Principle>
 
-**为维护者编写代码** - 几乎所有值得编写的代码都值得在将来由你或其他人维护。未来你必须维护代码通常会记住尽可能多的代码，作为一个完全陌生的代码，所以你不妨总是为其他人写代码。记住这一点的一个令人难忘的方式是“总是编码，好像最终维护你的代码的人是一个知道你住在哪里的暴力精神病患者。“ http://c2.com/cgi/wiki?CodeForTheMaintainer>
+**为维护者编写代码** - 几乎所有值得编写的代码都值得在将来由你或其他人维护。未来你必须维护代码通常会记住尽可能多的代码，作为一个完全陌生人的代码，所以你不妨总是为其他人写代码。记住这一点的一个令人难忘的方式是“总是编码，好像最终维护你的代码的人是一个知道你住在哪里的暴力精神病患者。“ http://c2.com/cgi/wiki?CodeForTheMaintainer>
 
 **最不惊讶**的原则 - **最不惊讶**的原则通常在用户界面方面被引用，但同样的原则适用于书面代码。代码应该尽可能少地让读者感到惊讶。遵循标准惯例的方法，代码应该做注释和名称所暗示的，并且应该尽可能避免可能出人意料的副作用。 http://en.wikipedia.org/wiki/Principle_of_least_astonishment>
 

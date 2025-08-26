@@ -2,10 +2,10 @@
 
 slug: "/arts-24"
 
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第24周
+description: "本周ARTS包含LeetCode实现strStr算法解析、Netty User guide分享、使用datax将mysql数据导入elasticsearch详解，以及Netty 4.x用户指南中文翻译。"
+title: ARTS 第24周：实现strStr算法、Netty User guide、使用datax将mysql数据导入elasticsearch与Netty 4.x用户指南中文翻译
 date: 2018-12-15
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode实现strStr算法解析、Netty User guide分享、使用datax将mysql数据导入elasticsearch详解，以及Netty 4.x用户指南中文翻译。"
 tags: ['coding','arts']
 
 ---

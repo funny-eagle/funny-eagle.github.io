@@ -1,13 +1,10 @@
 ---
-
 slug: "/arts-02"
-
-description: "Algorithm, Reiview, Tip and Share"
-title: ARTS 第2周
+title: "ARTS 第2周：链表加法算法、代码审查最佳实践、OSS对象列举与数据库设计"
+description: "本周ARTS包含LeetCode链表加法问题解析、代码审查最佳实践探讨、阿里云OSS对象列举实现技巧，以及20条数据库设计最佳实践分享。"
 date: 2018-07-15
-summary: "Algorithm, Reiview, Tip and Share"
+summary: "本周ARTS包含LeetCode链表加法问题解析、代码审查最佳实践探讨、阿里云OSS对象列举实现技巧，以及20条数据库设计最佳实践分享。"
 tags: ['coding','arts']
-
 ---
 
 ## Algorithm
@@ -220,7 +217,7 @@ ossClient.shutdown();
 
 1. 对`table`和`column`使用明确定义的单词并且风格一致的命名。
 2. 表名使用单数（例如：使用`StudentCourse` 而不是`StudentCourses`），`table`代表着一个实体的集合，不需要用复数命名。
-3. 表名不要用空格，否则，您将不得不使用`'{'，'['，'''`等字符来定义表，访问时还需要用引号`“Student Course”`， 直接用`StudentCourse`会更好。
+3. 表名不要用空格，否则，您将不得不使用`'{'，'['，'''`等字符来定义表，访问时还需要用引号`"Student Course"`， 直接用`StudentCourse`会更好。
 4. 表名不要使用不必要的前缀或者后缀，例如使用`School`而不是`TblSchool, SchoolTable`。
 5. 保持密码的安全性，需要用的时候在程序里解密
 6. 所有表使用`integer`类型ID字段。 即使暂时不需要ID，将来也可能会需要，例如关联表，索引等。
