@@ -73,11 +73,8 @@ class BlogPostTemplate extends React.Component {
     return (
       // 使用布局组件，传入目录内容
       <Layout aside={post.tableOfContents}>
-        // 显示文章标题
         <h1>{post.frontmatter.title}</h1>
-        // 显示文章信息（日期和标签）
         <Info date={post.frontmatter.date} tags={post.frontmatter.tags} />
-        // 显示文章内容
         <div
           className="css-post-main"
           dangerouslySetInnerHTML={{ __html: post.html }}
