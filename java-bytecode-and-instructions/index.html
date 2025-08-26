@@ -1,0 +1,1053 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Gatsby 5.4.1"/><meta name="keywords" content="coding,java" data-gatsby-head="true"/><meta name="description" content="理解字节码以及理解Java编译器如何生成Java字节码与学习汇编知识对于C/C++程序员有一样的意义。" data-gatsby-head="true"/><meta property="og:title" content="Java字节码和指令集 | Funny Eagle" data-gatsby-head="true"/><meta property="og:description" content="理解字节码以及理解Java编译器如何生成Java字节码与学习汇编知识对于C/C++程序员有一样的意义。" data-gatsby-head="true"/><meta name="twitter:title" content="Java字节码和指令集 | Funny Eagle" data-gatsby-head="true"/><meta name="twitter:card" content="summary" data-gatsby-head="true"/><meta name="twitter:url" content="https://funnyeagle.cn/java-bytecode-and-instructions/" data-gatsby-head="true"/><meta name="twitter:description" content="理解字节码以及理解Java编译器如何生成Java字节码与学习汇编知识对于C/C++程序员有一样的意义。" data-gatsby-head="true"/><meta name="twitter:creator" content="Jason Yang" data-gatsby-head="true"/><style data-href="/styles.182bf4389bad891b9698.css" data-identity="gatsby-global-css">@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.woff2?t=1688391839150) format("woff2"),url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.woff?t=1688391839150) format("woff"),url(//at.alicdn.com/t/c/font_4148646_r5782wuawno.ttf?t=1688391839150) format("truetype")}.iconfont{font-size:16px}.icon-rss:before{content:"\e739"}.icon-twitter:before{content:"\e743"}.icon-yinyong:before{content:"\e839"}.icon-menu:before{content:"\e677"}.icon-weibo:before{content:"\ea8c"}.icon-github-fill:before{content:"\eac8"}.icon-close:before{content:"\e6a7"}.icon-coding:before{content:"\e64c"}.icon-life:before{content:"\e627"}.icon-tag:before{content:"\e653"}.icon-person:before{content:"\e63a"}.icon-archive:before{content:"\eb4d"}.icon-music:before{content:"\e7c1"}:root{--radius:0.5rem}.light-theme{--backgroundColor:#f6f7fa;--backgroundColor2:#fff;--mainColor:#0a0a04;--mainDerive1:#046f3b;--mainDerive2:#0a0a04;--mainDerive3:#c6cb07;--linkColor:#046f3b;--fontColor:#543d5c;--codeBlock:#3c495b;--code:#c3c7cb;--divider:#d6d6d6;--buttonColor:#fff;--buttonBackgroundColor:#09aa6f;--hrColor:#dfdfdf;--tableHeadColor:#f8f9fa;--shadow:0 4px 10px rgba(0,2,4,.06),0 0 1px rgba(0,2,4,.11)}.dark-theme{--backgroundColor:#10171d;--backgroundColor2:#212327;--mainColor:#e8fa7f;--mainDerive1:#09aa6f;--mainDerive2:#e8fa7f;--mainDerive3:#e8fa7f;--linkColor:#09aa6f;--fontColor:#e5e5e5;--codeBlock:#181818;--code:#c3c7cb;--divider:#3e4b5e;--buttonColor:#fff;--buttonBackgroundColor:#09aa6f;--hrColor:#5c5c5c;--tableHeadColor:#3a3a3a;--shadow:0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.css-toc{color:var(--mainDerive1);display:block;font-size:14px;margin:0 20px;max-height:50vh;overflow-x:hidden;overflow-y:auto;position:-webkit-sticky;position:sticky;top:40vh}.css-toc>ul>li{padding-left:6px}.css-toc a{box-shadow:none;color:var(--mainDerive1);display:inline-block;overflow:hidden;padding-top:2px;text-overflow:ellipsis;vertical-align:middle;width:100%}.css-toc .active{color:var(--mainColor)}.css-toc>ul{padding-left:0}.css-toc ul{list-style-type:none;margin-bottom:0}.css-toc ul p{display:inline-block;vertical-align:top}.css-toc li{white-space:nowrap}.css-toc li>p{margin:0;width:90%}.css-toc li>ul{opacity:.7;padding-left:1rem}.css-toc p{margin:0;padding:0}blockquote{border-left:4px solid var(--mainDerive2);box-shadow:0 2px 4px rgba(0,0,0,.14);box-sizing:border-box;color:var(--fontColor);margin:40px 20px;padding:35px 15px 10px;position:relative}blockquote:before{color:var(--mainDerive2);content:"\e839";display:inline-block;font-family:iconfont;font-size:35px;left:5px;line-height:1;position:absolute;top:5px;vertical-align:middle}blockquote p{line-height:1.7;margin:10px 0!important;padding:0}blockquote cite{color:#888;display:block;font-size:.9em;text-align:right}h1,h2,h3,h4,h5,h6{color:var(--linkColor);font-weight:600}h1{color:var(--mainColor);font-size:29px;font-weight:400;margin-bottom:0}h2,h3,h4,h5,h6{margin:.5em 0;position:relative}.list-item{background-color:var(--backgroundColor2);border-radius:var(--radius);margin:15px 0;padding:15px}.list-item .list-title{font-size:1.4rem;line-height:1.3;margin-bottom:.24rem}.list-item .list-title a{color:var(--mainColor)}.list-item .list-title a:hover{color:var(--mainDerive3)}.list-item .list-date{color:var(--mainDerive1);margin-bottom:16px;margin-top:6px}.list-item .list-excerpt{line-height:1.6;margin:10px 0 0;word-break:break-all}.say{align-items:center;display:flex;flex-direction:row;justify-content:center;margin:5px}.say .avatar{background-image:url(https://i.loli.net/2020/02/17/jrcMkuQxz6Z98H1.png);background-size:cover;height:80px;width:80px}.say .balloon2-left{background:#fff;border:3px solid #555;box-sizing:border-box;color:#555;display:inline-block;font-size:16px;margin:1.5em 0 1.5em 15px;padding:7px 10px;position:relative;width:calc(100% - 100px)}.say .balloon2-left:before{border:12px solid transparent;border-right-color:#fff;content:"";left:-24px;margin-top:-12px;position:absolute;top:50%;z-index:2}.say .balloon2-left:after{border:14px solid transparent;border-right-color:#555;content:"";left:-30px;margin-top:-14px;position:absolute;top:50%;z-index:1}.css-tags{display:flex;flex-wrap:wrap;justify-content:space-around;list-style:none;margin:10px 0;overflow:hidden;padding:0}.css-tag{border-radius:3px 0 0 3px;display:inline-block;font-size:1.1rem;font-weight:300;height:26px;line-height:26px;margin:0 10px 20px 0;padding:0 20px 0 23px;position:relative;text-decoration:none;transition:color .2s}.css-tag a{box-shadow:none;color:#999}.css-tag a:hover{color:var(--mainColor)}.css-comment-submit{margin:40px auto;max-width:400px}.css-comment-submit .title{margin-bottom:12px}.css-comment-submit button,.css-comment-submit input,.css-comment-submit textarea{box-sizing:border-box;display:block;width:100%}.css-comment-submit input,.css-comment-submit textarea{background-color:var(--backgroundColor2);border:none;border-radius:3px;font-family:sans-serif;height:2rem;line-height:2rem;margin:0 0 10px;padding:0 10px}.css-comment-submit textarea{height:6rem}.css-comment-submit .row{display:flex;justify-content:space-around}.css-comment-submit .row p{flex-basis:200px}.css-child-comment-display .css-reply,.css-comment-display .css-reply{opacity:0}.css-child-comment-display:hover .css-reply,.css-comment-display:hover .css-reply{opacity:1}.css-child-comment-display .name,.css-comment-display .name{color:var(--mainColor);font-weight:300}.css-child-comment-display .date,.css-comment-display .date{color:var(--mainDerive1);font:.8rem;padding:0 0 0 15px}.css-child-comment-display .message,.css-comment-display .message{white-space:pre-wrap}.css-child-comment-display,.css-comment-display{border-bottom:1px solid var(--hrColor);padding:20px}.css-child-comment-display{margin-left:30px}.title1{border-bottom:3px solid #000}.title2{border-bottom:3px solid #364e96;border-top:3px solid #364e96;color:#364e96;padding:.5em 0}.title3{background:transparent;padding:.25em .5em}.title3,.title4{border-left:5px solid #7db4e6;color:#494949}.title4{background:#f4f4f4;border-bottom:3px solid #d7d7d7;padding:.4em .5em}.title5{background:#dbebf8;border-radius:25px 0 0 25px;color:#505050;display:inline-block;line-height:1.3;padding:.5em;vertical-align:middle}.title5:before{color:#fff;content:"●";margin-right:8px}.title6{display:inline-block;margin-bottom:1em;position:relative}.title6:before{background-color:#000;border-radius:2px;bottom:-15px;content:"";display:inline-block;height:5px;left:50%;position:absolute;transform:translateX(-50%);width:60px}.title7{display:inline-block;padding:0 45px;position:relative}.title7:after,.title7:before{background-color:#000;content:"";display:inline-block;height:2px;position:absolute;top:50%;transform:rotate(-60deg);width:44px}.title7:before{left:0}.title7:after{right:0}.title8{padding:.25em 0;position:relative}.title8:after{background:linear-gradient(90deg,#e65a5a,transparent);content:"";display:block;height:4px}.title9{border-bottom:3px solid var(--mainDerive3);font-size:26px;font-weight:200;line-height:2;position:relative}.title9:after{border-bottom:3px solid var(--mainColor);bottom:-3px;content:" ";display:block;position:absolute;width:20%}.box1{border:3px solid #000;font-weight:700;margin:2em 0;padding:.5em 1em}.box1 p{margin:0;padding:0}.box2{background:#fff;border:3px solid #6091d3;border-radius:10px;color:#6091d3;font-weight:700;margin:2em 0;padding:.5em 1em}.box2 p{margin:0;padding:0}.box4{background:#cde4ff;border-bottom:5px solid #5989cf;border-top:5px solid #5989cf;color:#2c2c2f;margin:2em 0;padding:8px 19px}.box4 p{margin:0;padding:0}.box8{background:#fff8e8;border-left:10px solid #ffc06e;color:#232323;margin:2em 0;padding:.5em 1em}.box8 p{margin:0;padding:0}.box10{background:#e4fcff;border-top:6px solid #1dc1d6;box-shadow:0 3px 4px rgba(0,0,0,.32);color:#00bcd4;margin:2em 0;padding:.5em 1em}.box10 p{margin:0;padding:0}.box11{background:#fff;border-top:5px solid #5d627b;box-shadow:0 3px 5px rgba(0,0,0,.22);color:#5d627b;margin:2em 0;padding:.5em 1em}.box11 p{margin:0;padding:0}.box14{background:#d6ebff;border:2px dashed #fff;box-shadow:0 0 0 10px #d6ebff;margin:2em 0;padding:.2em .5em}.box14 p{margin:0;padding:0}.box16{background:repeating-linear-gradient(-45deg,#f0f8ff,#f0f8ff 3px,#e9f4ff 0,#e9f4ff 7px);margin:2em 0;padding:.5em 1em}.box16 p{margin:0;padding:0}.box17{border-bottom:2px solid #000;border-top:2px solid #000;margin:2em 0;padding:.5em 1.5em;position:relative}.box17:after,.box17:before{background-color:#000;content:"";height:calc(100% + 20px);position:absolute;top:-10px;width:2px}.box17:before{left:10px}.box17:after{right:10px}.box17 p{margin:0;padding:0}.box19{padding:.25em 1em;position:relative}.box19:after,.box19:before{content:"";display:inline-block;height:30px;position:absolute;width:20px}.box19:before{border-left:1px solid #5767bf;border-top:1px solid #5767bf;left:0;top:0}.box19:after{border-bottom:1px solid #5767bf;border-right:1px solid #5767bf;bottom:0;right:0}.box19 p{margin:0;padding:0}.box22{background:#f4f4f4;border-left:6px solid #5bb7ae;box-shadow:0 2px 3px rgba(0,0,0,.33);margin:1em 0;padding:.5em 1em}.box22 p{margin:0;padding:0}.box23{background:#fff0c6;border-radius:30px;margin:2em 0 2em 40px;padding:8px 15px;position:relative}.box23:before{font-size:15px;left:-40px}.box23:after,.box23:before{bottom:0;color:#fff0c6;content:"\e68a";font-family:iconfont;position:absolute}.box23:after{font-size:21px;left:-23px}.box23 p{margin:0;padding:0}.box24{background:#e6f4ff;color:#5c98d4;font-weight:700;margin:2em 0;padding:.5em .7em;position:relative}.box24:after{border:15px solid transparent;border-top-color:#e6f4ff;content:"";height:0;left:30px;position:absolute;top:100%;width:0}.box24 p{margin:0;padding:0}.box26{border:3px solid #5d627b;border-radius:8px;margin:2em;padding:1em;position:relative}.box26 a{color:#5d627b}.box26 .box-title{background:#fff;color:#5d627b;display:inline-block;font-size:19px;font-weight:700;left:10px;line-height:1;padding:0 9px;position:absolute;top:-13px}.box26 p{margin:0;padding:0}.box27{border:1px solid var(--mainColor);margin:2em 0;padding:.5em 1em;position:relative}.box27 pre{overflow-x:auto}.box27 .box-title{background:var(--mainColor);border-radius:5px 5px 0 0;color:#fff;display:inline-block;font-size:17px;height:25px;left:-1px;line-height:25px;padding:0 9px;position:absolute;top:-25px;vertical-align:middle}.box27 p{margin:0;padding:0}.box29{background:#dcefff;margin:2em 0}.box29 .box-title{background:#5fb3f5;color:#fff;font-size:1.2em;font-weight:700;letter-spacing:.05em;padding:4px;text-align:center}.box29 p{margin:0;padding:15px 20px}.link-card-wrapper{display:flex;flex-wrap:wrap}.link-card{align-items:center;background-color:var(--backgroundColor2);border-radius:3px;box-shadow:none;box-sizing:border-box;display:flex;flex-direction:row;justify-content:center;margin:10px;padding:12px;width:45%}.link-card .noimage,.link-card img{background-color:var(--backgroundColor);border-radius:3px;height:55px;width:55px}.link-card .noimage{flex-shrink:0;font-family:sans-serif;font-size:35px;font-weight:700;line-height:55px;text-align:center}.link-card img{margin:0!important;object-fit:contain}.link-card .info{flex-grow:1;min-width:0;padding-left:10px}.link-card .info .title{font-size:1.2rem}.link-card .info .description,.link-card .info .title{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.link-card .info .description{color:#aaa;font-size:.7rem}.dark-theme .gatsby-code-title{background:var(--codeBlock)}.dark-theme code[class*=language-],.dark-theme pre[class*=language-]{word-wrap:normal;background:none;color:var(--code);font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}.dark-theme :not(pre)>code[class*=language-],.dark-theme pre[class*=language-]{background:var(--codeBlock)}.dark-theme pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}.dark-theme pre[class*=language-]::selection{background:#27292a}.dark-theme code[class*=language-] ::selection,.dark-theme code[class*=language-]::selection,.dark-theme pre[class*=language-] ::selection,.dark-theme pre[class*=language-]::selection{background:hsla(0,0%,93%,.15)}.dark-theme :not(pre)>code[class*=language-]{border-radius:.3em;padding:.05em;white-space:normal}.dark-theme .token.cdata,.dark-theme .token.comment,.dark-theme .token.doctype,.dark-theme .token.prolog{color:#787878}.dark-theme .namespace,.dark-theme .token.punctuation{opacity:.7}.dark-theme .token.boolean,.dark-theme .token.deleted,.dark-theme .token.number,.dark-theme .token.tag{color:#cf694a}.dark-theme .token.builtin,.dark-theme .token.constant,.dark-theme .token.keyword,.dark-theme .token.property,.dark-theme .token.selector,.dark-theme .token.symbol{color:#f9ee9a}.dark-theme .language-css .token.string,.dark-theme .style .token.string,.dark-theme .token.attr-name,.dark-theme .token.attr-value,.dark-theme .token.char,.dark-theme .token.entity,.dark-theme .token.inserted,.dark-theme .token.operator,.dark-theme .token.string,.dark-theme .token.url,.dark-theme .token.variable{color:#919e6b}.dark-theme .token.atrule{color:#7386a5}.dark-theme .token.important,.dark-theme .token.regex{color:#e9c163}.dark-theme .token.bold,.dark-theme .token.important{font-weight:700}.dark-theme .token.italic{font-style:italic}.dark-theme .token.entity{cursor:help}.dark-theme pre[data-line]{padding:1em 0 1em 3em;position:relative}.dark-theme .language-markup .token.attr-name,.dark-theme .language-markup .token.punctuation,.dark-theme .language-markup .token.tag{color:#ad895c}.dark-theme .token{position:relative;z-index:1}.dark-theme .line-highlight{background:rgba(84,84,84,.25);background:linear-gradient(90deg,rgba(84,84,84,.1) 70%,rgba(84,84,84,0));border-bottom:1px dashed #545454;border-top:1px dashed #545454;left:0;line-height:inherit;margin-top:.75em;padding-bottom:inherit;padding-left:0;padding-right:0;padding-top:inherit;pointer-events:none;position:absolute;right:0;white-space:pre;z-index:0}.dark-theme .line-highlight:before,.dark-theme .line-highlight[data-end]:after{background-color:#8794a6;border-radius:999px;color:#f5f2f0;content:attr(data-start);font:700 65%/1.5 sans-serif;left:.6em;min-width:1em;padding:0 .5em;position:absolute;text-align:center;top:.4em;vertical-align:.3em}.dark-theme .line-highlight[data-end]:after{bottom:.4em;content:attr(data-end);top:auto}.dark-theme .language-text,.dark-theme a{word-break:break-all!important}.light-theme .gatsby-code-title{background:#faf8f5}.light-theme code[class*=language-],.light-theme pre[class*=language-]{word-wrap:normal;background:none;color:#000;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}.light-theme pre[class*=language-]{margin:.5em 0;overflow:visible;padding:0;position:relative}.light-theme pre[class*=language-]>code{position:relative}.light-theme code[class*=language]{background:#faf8f5;border-radius:3px;display:block;height:inherit;margin:0;max-height:inherit;overflow:auto;padding:1em}.light-theme :not(pre)>code[class*=language-]{color:#c92c2c;display:inline;padding:.15em;position:relative;white-space:normal}.light-theme .token.block-comment,.light-theme .token.cdata,.light-theme .token.comment,.light-theme .token.doctype,.light-theme .token.prolog{color:#7d8b99}.light-theme .token.punctuation{color:#5f6364}.light-theme .token.boolean,.light-theme .token.constant,.light-theme .token.deleted,.light-theme .token.function-name,.light-theme .token.number,.light-theme .token.property,.light-theme .token.symbol,.light-theme .token.tag{color:#c92c2c}.light-theme .token.attr-name,.light-theme .token.builtin,.light-theme .token.char,.light-theme .token.function,.light-theme .token.inserted,.light-theme .token.selector,.light-theme .token.string{color:#2f9c0a}.light-theme .token.entity,.light-theme .token.operator,.light-theme .token.url,.light-theme .token.variable{background:hsla(0,0%,100%,.5);color:#a67f59}.light-theme .token.atrule,.light-theme .token.attr-value,.light-theme .token.class-name,.light-theme .token.keyword{color:#1990b8}.light-theme .token.important,.light-theme .token.regex{color:#e90}.light-theme .language-css .token.string,.light-theme .style .token.string{background:hsla(0,0%,100%,.5);color:#a67f59}.light-theme .token.important{font-weight:400}.light-theme .token.bold{font-weight:700}.light-theme .token.italic{font-style:italic}.light-theme .token.entity{cursor:help}.light-theme .namespace{opacity:.7}@media screen and (max-width:767px){.light-theme pre[class*=language-]:after,.light-theme pre[class*=language-]:before{bottom:14px;box-shadow:none}}.light-theme .token.cr:before,.light-theme .token.lf:before,.light-theme .token.tab:not(:empty):before{color:#e0d7d1}.light-theme pre[class*=language-].line-numbers.line-numbers{padding-left:0}.light-theme pre[class*=language-].line-numbers.line-numbers code{padding-left:3.8em}.light-theme pre[class*=language-].line-numbers.line-numbers .line-numbers-rows{left:0}.light-theme pre[class*=language-][data-line]{padding-bottom:0;padding-left:0;padding-top:0}.light-theme pre[data-line] code{padding-left:4em;position:relative}.light-theme pre .line-highlight{margin-top:0}.iconfont{-webkit-font-smoothing:antialiased;-webkit-text-stroke-width:.2px;-moz-osx-font-smoothing:grayscale;font-family:iconfont!important;font-style:normal}::-webkit-scrollbar{height:10px;width:10px}::-webkit-scrollbar-track{background:#ddd}::-webkit-scrollbar-thumb{background:var(--mainDerive1)}.usubeni{color:grey}.inline-block{display:inline-block}article,aside,div,footer,header,p{box-sizing:border-box}body{-webkit-touch-callout:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-font-smoothing:antialiased!important;background-color:var(--backgroundColor);color:var(--fontColor);font-family:Source Han Sans CN,PingFang SC,Hiragino Sans GB,Microsoft Yahei,WenQuanYi Micro Hei,Microsoft YaHei,Courier New,SimSun,STSong;font-size:16px;margin:0;outline:none;padding:0;transition:background-color .5s ease-in-out}.mask{animation:fade-out 4s linear;animation-fill-mode:forwards;background:linear-gradient(90deg,#fff,#fff 50%,hsla(0,0%,100%,0));height:100%;left:0;position:fixed;top:0;width:300%;z-index:20}@keyframes fade-out{0%{left:0;opacity:1}to{left:-300%;opacity:0;width:0}}img{background:var(--backgroundColor)}hr{background:var(--hrColor);border:none;color:var(--hrColor);height:1px;margin-top:40px;width:100%}a{color:var(--linkColor);text-decoration:none;word-break:break-all}footer{font-family:sans-serif;font-size:14px;padding:30px 0;text-align:center}table{border:1px solid #e9e9e9;border-collapse:collapse;font-size:15px;margin:1em 0;overflow-wrap:break-word;table-layout:fixed;width:100%}table th{background-color:var(--tableHeadColor);text-align:left}table tr>td,table tr>th{border:1px solid #e9e9e9;padding:.5em .8em}li>p{margin:0}button{background-color:var(--buttonBackgroundColor);border:none;border-radius:3px;color:var(--buttonColor);cursor:pointer;display:inline-block;margin-bottom:.3rem;padding:.5rem 1rem;text-decoration:none;transition:.4s}input,textarea{background:transparent;border:none;color:var(--fontColor);outline:none}button,input{text-align:center}.gatsby-resp-image-link{box-shadow:none}.page-name{color:#046f3b;font-size:1em;text-align:center}.css-aside{margin-top:30px;width:220px}.css-aside .column{align-items:center;flex-direction:column}.css-aside .row{flex-direction:row;flex-wrap:wrap;justify-content:space-around}.css-aside .row a{border:none!important}.css-aside .css-menu{display:flex;margin:10px auto}.css-aside .css-menu a{box-shadow:none;color:var(--mainDerive4);display:inline-block;font-size:1.1rem;letter-spacing:7px;line-height:1.8;padding:.25em 1em;position:relative;vertical-align:middle;word-spacing:5px}.css-aside .css-menu a:hover{color:var(--mainDerive3)}.css-aside .css-menu a .iconfont{font-size:1.5rem;margin-right:.3rem;vertical-align:middle}.css-aside .css-menu a+a{border-top:1px solid var(--divider)}.css-aside .css-bio{align-items:center;box-sizing:border-box;color:var(--linkColor);display:flex;padding:15px 15px 0;text-align:center}.css-aside .css-bio .css-avatar{border-radius:50%;margin-right:12px;overflow:hidden;width:60px}.css-aside .css-bio .author-wrapper{flex-grow:1}.css-aside .css-bio .author{font-size:1.2rem;text-align:left}.css-header a .logo{display:block;height:100%;transition:background-color .5s ease-in-out;width:100%}.css-header a .logo-mobile{color:#919404;display:block;font-size:1.5rem;font-weight:700;margin-left:2rem}.social-media{display:flex;justify-content:space-around;margin:auto;padding-top:.5rem;width:200px}.social-media a{box-shadow:none}.social-media .iconfont{color:var(--linkColor);font-size:1.3rem}.css-main{display:flex;justify-content:center;margin:auto;max-width:1200px}.css-post{flex-grow:1;line-height:1.8;margin:20px;max-width:900px}.css-post strong{margin:3px}.css-post .css-post-main{background-color:var(--backgroundColor2);border-radius:var(--radius);margin-top:3rem;padding:15px}.css-post .css-post-main p{word-wrap:break-word;margin-bottom:29px;word-break:break-word}.css-post .css-post-main ul{margin-bottom:29px}.css-post .css-post-main p+ol,.css-post .css-post-main p+ul{margin-bottom:1.5em;margin-top:-1.3em}.css-post .css-post-main p>img{display:block;left:-15px;margin:auto;max-height:650px;max-width:calc(100% + 30px);position:relative}.css-post .css-post-main .anchor{box-shadow:none}.css-post .css-post-main .anchor svg{fill:gray}.css-post .css-post-main a:active,.css-post .css-post-main a:hover{box-shadow:0 1px 0 0 currentColor}.css-post .css-archive{padding:15px 25px}.css-post .css-archive .item{background-color:var(--backgroundColor2);border-radius:var(--radius);display:flex;font-size:16px;margin-bottom:6px;padding:6px 12px}.css-post .css-archive .item .date{display:inline-block;margin-right:10px;opacity:.6;text-align:left;width:4em}.css-post .css-archive .item .title{box-shadow:none;flex-grow:1;width:300px}.css-post table{border:none;overflow:auto}.css-info{color:var(--mainDerive1);font-size:1em}.css-info .iconfont{padding:0 5px}.css-info .iconfont:first-of-type{padding:0 5px 0 0}.menu-button{display:none}.page-description{margin-bottom:.5rem}.inline-button{color:var(--linkColor);cursor:pointer;margin-left:1rem;transition:.4s}.inline-button:hover{color:var(--mainColor)}.theme-toggle{background-color:var(--backgroundColor);border-radius:50%;bottom:18px;box-shadow:var(--shadow);cursor:pointer;font-size:16px;font-weight:200;font-weight:bolder;padding:10px;position:fixed;right:12px}@keyframes fade-in{0%{filter:blur(8px);opacity:0}to{filter:blur(0);opacity:1}}@media screen and (max-width:1000px){.css-main{display:block;width:100%}.css-post{margin:45px auto auto;padding:15px;width:100%}.css-header{background-color:var(--backgroundColor2);height:60px;left:0;line-height:60px;padding:0 10px;position:fixed;top:0;width:100%;z-index:9}.css-header a{height:100%;padding-left:1rem;width:20%;word-break:normal!important}.css-header a .logo-mobile{color:#919404;display:inline;font-size:1rem;font-weight:700}.css-header .page-description,.css-header a .logo{display:none}.css-header .page-name{color:#046f3b;display:inline;margin-left:1em}.css-header .menu-button{cursor:pointer;display:block;position:inherit;top:0;-webkit-user-select:none;user-select:none}.css-header .menu-button .iconfont{font-size:30px}.css-aside{background-color:var(--backgroundColor2);bottom:0;overflow-y:auto;padding:50px 0 0;position:fixed;right:-100%;top:0;transition:all .6s ease-in-out;width:15rem;z-index:9}.open{left:0}.link-card-wrapper{width:100%}}.gatsby-resp-image-wrapper{max-width:100%!important}.language-text{word-break:break-all!important}.anchor.before{left:unset!important;right:0!important}.code-title{border-top-right-radius:.3em;display:block;margin-bottom:0;top:10px;width:100%}.code-title,.code-title span{border-top-left-radius:.3em;position:relative}.code-title span{border-bottom-right-radius:.3em;display:inline;font-family:Hiragino Sans GB,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;opacity:.7;padding:3px 12px;top:1px}.button-wrapper{align-items:center;display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding-top:30px}.button-wrapper .page-button{display:block}</style><title data-gatsby-head="true">Java字节码和指令集 | Funny Eagle</title><link rel="canonical" href="https://funnyeagle.cn/java-bytecode-and-instructions/" data-gatsby-head="true"/><link rel="alternate" type="application/rss+xml" title="Funny Eagle" href="/rss.xml"/><style type="text/css">
+    .anchor.before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      padding-right: 4px;
+    }
+    .anchor.after {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg,
+    h1 .anchor:focus svg,
+    h2 .anchor:focus svg,
+    h3 .anchor:focus svg,
+    h4 .anchor:focus svg,
+    h5 .anchor:focus svg,
+    h6 .anchor:focus svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+          var clientTop = document.documentElement.clientTop || document.body.clientTop || 0
+          var offset = element.getBoundingClientRect().top + scrollTop - clientTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><link rel="preconnect" href="https://www.googletagmanager.com"/><link rel="dns-prefetch" href="https://www.googletagmanager.com"/><script>       
+          var theme = 'light'
+          let localTheme = localStorage.getItem('theme')
+          if (localTheme) {
+            if (localTheme === 'light') {
+              theme = 'light'
+            } else {
+              theme = 'dark'
+            }
+          } else if (window.matchMedia) {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              theme = 'dark'
+            } else {
+              theme = 'light'
+            }
+          } else {
+            // default light
+            theme = 'light'
+          }
+          document.documentElement.className = theme + '-theme'
+
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?065ec4ac737fe35f7a9a97a6aabec697";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+    </script><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/><meta name="format-detection" content="email=no,telephone=no,address=no"/><meta name="baidu-site-verification" content="rVEuQMP8C6"/><link rel="apple-touch-icon" sizes="180x180" href="/icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/icon.png"/><link rel="icon" type="image/png" sizes="16x16" href="/icon.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous"/><meta name="msapplication-TileColor" content="#da532c"/><meta name="theme-color" content="#ffffff"/><meta name="baidu-site-verification" content="codeva-KiUgz2gAMo"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div><div class="css-main"><aside class="css-aside close"><header class="css-header"><div><a style="box-shadow:none;text-decoration:none;font-weight:200" class="usubeni" href="/archive/"><span class="logo-mobile">Funny Eagle</span></a></div><div class="menu-button"><i class="iconfont icon-menu"></i></div></header><div class="css-toc"><ul>
+<li><a href="#%E6%8C%87%E4%BB%A4">指令</a></li>
+<li><a href="#%E6%8C%87%E4%BB%A4%E9%9B%86">指令集</a></li>
+<li><a href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B">计算模型</a></li>
+<li><a href="#%E4%BE%8B%E5%AD%90">例子</a></li>
+<li><a href="#%E5%9F%BA%E4%BA%8Ejava%E5%AD%97%E8%8A%82%E7%A0%81%E7%9A%84%E8%AF%AD%E8%A8%80">基于Java字节码的语言</a></li>
+<li><a href="#%E5%AF%B9%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80%E7%9A%84%E6%94%AF%E6%8C%81">对动态语言的支持</a></li>
+<li><a href="#%E5%8F%82%E8%80%83%E8%BF%9E%E6%8E%A5">参考连接</a></li>
+</ul></div></aside><article class="css-post"><h1>Java字节码和指令集</h1><div class="css-info"><span style="padding-right:12px">2023-06-30</span><span style="padding-right:8px"><a href="/tag/coding/">#<!-- -->coding</a></span><span style="padding-right:8px"><a href="/tag/java/">#<!-- -->java</a></span></div><div class="css-post-main"><blockquote>
+<p>Java 字节码是Java虚拟机执行的一种指令格式。大多数操作码都是一个字节长，而有些操作需要参数，导致了有一些多字节的操作码。而且并不是所有可能的256个操作码都被使用；其中有51个操作码被保留做将来使用。除此之外，Sun 公司额外保留了3个代码永久不使用。</p>
+</blockquote>
+<h2 id="指令" style="position:relative;"><a href="#%E6%8C%87%E4%BB%A4" aria-label="指令 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>指令</h2>
+<p>每一个字节，有256个可能的代码值（2^8=256），因此一个字节的操作码最多可能有256种不同的操作。其中，0x00、0xFE、0xCA、0xFF被指定保留。例如0xCA作为一个Java调试器的中断指令而从未被语言使用。相似地，0xFE和0xFF也未被语言使用。</p>
+<p>指令可以基本分为以下几类：</p>
+<ul>
+<li>存储指令 （例如：aload_0, istore）</li>
+<li>算术与逻辑指令 （例如: ladd, fcmpl）</li>
+<li>类型转换指令 （例如：i2b, d2i）</li>
+<li>对象创建与操作指令 （例如：new, putfield）</li>
+<li>堆栈操作指令 （例如：swap, dup2）</li>
+<li>控制转移指令 （例如：ifeq, goto）</li>
+<li>方法调用与返回指令 （例如：invokespecial, areturn)</li>
+</ul>
+<p>除此之外，还有一些更特殊的指令，作为异常抛出或同步等作用。</p>
+<p>大多数的指令有前缀和（或）后缀来表明其操作数的类型。如下表</p>
+<table>
+<thead>
+<tr>
+<th>前/后缀</th>
+<th>操作数类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>i</td>
+<td>整数</td>
+</tr>
+<tr>
+<td>l</td>
+<td>长整数</td>
+</tr>
+<tr>
+<td>s</td>
+<td>短整数</td>
+</tr>
+<tr>
+<td>b</td>
+<td>字节</td>
+</tr>
+<tr>
+<td>c</td>
+<td>字符</td>
+</tr>
+<tr>
+<td>f</td>
+<td>单精度浮点数</td>
+</tr>
+<tr>
+<td>d</td>
+<td>双精度浮点数</td>
+</tr>
+<tr>
+<td>z</td>
+<td>布尔值</td>
+</tr>
+<tr>
+<td>a</td>
+<td>引用</td>
+</tr>
+</tbody>
+</table>
+<p>例如，“iadd”指令将两个整数相加；而”dadd”指令将两个double浮点数相加。
+此外，“const”、 “load”、 “store”等命令还会使用”_n”后缀，其中 “load”和”store”命令中的n可以为0到3之间的整数；而”const”命令中的n由类型指定。 const”指令把一个指定类型的值放入堆栈。例如”iconst_5”指令将一个整数5放入堆栈；而”dconst_1”将一个双精度浮点数1放入堆栈。
+此外还有”aconst_null”指令，放入一个null进堆栈。而对于”load” “store”指令中的n，指定了变量表中的存储位置。“aload_0”指令把在变量0中的对象（通常是”this”对象）放入堆栈，“istore_1”指令把栈顶的一个整数放入变量1.对于更高的变量，后缀将被去除，而这条指令将需要操作数。</p>
+<h2 id="指令集" style="position:relative;"><a href="#%E6%8C%87%E4%BB%A4%E9%9B%86" aria-label="指令集 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>指令集</h2>
+<table>
+<thead>
+<tr>
+<th>助记词</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nop</td>
+<td>None</td>
+</tr>
+<tr>
+<td>aconst_null</td>
+<td>将null推送至栈顶</td>
+</tr>
+<tr>
+<td>iconst_m1</td>
+<td>将int型-1推送至栈顶</td>
+</tr>
+<tr>
+<td>iconst_0</td>
+<td>将int型0推送至栈顶</td>
+</tr>
+<tr>
+<td>iconst_1</td>
+<td>将int型1推送至栈顶</td>
+</tr>
+<tr>
+<td>iconst_2</td>
+<td>将int型2推送至栈顶</td>
+</tr>
+<tr>
+<td>iconst_3</td>
+<td>将int型3推送至栈顶</td>
+</tr>
+<tr>
+<td>iconst_4</td>
+<td>将int型4推送至栈顶</td>
+</tr>
+<tr>
+<td>iconst_5</td>
+<td>将int型5推送至栈顶</td>
+</tr>
+<tr>
+<td>lconst_0</td>
+<td>将long型0推送至栈顶</td>
+</tr>
+<tr>
+<td>lconst_1</td>
+<td>将long型1推送至栈顶</td>
+</tr>
+<tr>
+<td>fconst_0</td>
+<td>将float型0推送至栈顶</td>
+</tr>
+<tr>
+<td>fconst_1</td>
+<td>将float型1推送至栈顶</td>
+</tr>
+<tr>
+<td>fconst_2</td>
+<td>将float型2推送至栈顶</td>
+</tr>
+<tr>
+<td>dconst_0</td>
+<td>将double型0推送至栈顶</td>
+</tr>
+<tr>
+<td>dconst_1</td>
+<td>将double型1推送至栈顶</td>
+</tr>
+<tr>
+<td>bipush</td>
+<td>将单字节的常量值(-128~127)推送至栈顶</td>
+</tr>
+<tr>
+<td>sipush</td>
+<td>将一个短整型常量(-32768~32767)推送至栈顶</td>
+</tr>
+<tr>
+<td>ldc</td>
+<td>将int,float或String型常量值从常量池中推送至栈顶</td>
+</tr>
+<tr>
+<td>ldc_w</td>
+<td>将int,float或String型常量值从常量池中推送至栈顶(宽索引)</td>
+</tr>
+<tr>
+<td>ldc2_w</td>
+<td>将long或double型常量值从常量池中推送至栈顶(宽索引)</td>
+</tr>
+<tr>
+<td>iload</td>
+<td>将指定的int型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>lload</td>
+<td>将指定的long型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>fload</td>
+<td>将指定的float型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>dload</td>
+<td>将指定的double型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>aload</td>
+<td>将指定的引用类型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>iload_0</td>
+<td>将第一个int型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>iload_1</td>
+<td>将第二个int型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>iload_2</td>
+<td>将第三个int型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>iload_3</td>
+<td>将第四个int型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>lload_0</td>
+<td>将第一个long型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>lload_1</td>
+<td>将第二个long型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>lload_2</td>
+<td>将第三个long型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>lload_3</td>
+<td>将第四个long型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>fload_0</td>
+<td>将第一个float型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>fload_1</td>
+<td>将第二个float型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>fload_2</td>
+<td>将第三个float型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>fload_3</td>
+<td>将第四个float型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>dload_0</td>
+<td>将第一个double型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>dload_1</td>
+<td>将第二个double型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>dload_2</td>
+<td>将第三个double型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>dload_3</td>
+<td>将第四个double型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>aload_0</td>
+<td>将第一个引用类型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>aload_1</td>
+<td>将第二个引用类型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>aload_2</td>
+<td>将第三个引用类型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>aload_3</td>
+<td>将第四个引用类型本地变量推送至栈顶</td>
+</tr>
+<tr>
+<td>iaload</td>
+<td>将int型数组指定索引的值推送至栈顶</td>
+</tr>
+<tr>
+<td>laload</td>
+<td>将long型数组指定索引的值推送至栈顶</td>
+</tr>
+<tr>
+<td>faload</td>
+<td>将float型数组指定索引的值推送至栈顶</td>
+</tr>
+<tr>
+<td>daload</td>
+<td>将double型数组指定索引的值推送至栈顶</td>
+</tr>
+<tr>
+<td>aaload</td>
+<td>将引用类型数组指定索引的值推送至栈顶</td>
+</tr>
+<tr>
+<td>baload</td>
+<td>将boolean或byte型数组指定索引的值推送至栈顶</td>
+</tr>
+<tr>
+<td>caload</td>
+<td>将char型数组指定索引的值推送至栈顶</td>
+</tr>
+<tr>
+<td>saload</td>
+<td>将short型数组指定索引的值推送至栈顶</td>
+</tr>
+<tr>
+<td>istore</td>
+<td>将栈顶int型数值存入指定本地变量</td>
+</tr>
+<tr>
+<td>lstore</td>
+<td>将栈顶long型数值存入指定本地变量</td>
+</tr>
+<tr>
+<td>fstore</td>
+<td>将栈顶float型数值存入指定本地变量</td>
+</tr>
+<tr>
+<td>dstore</td>
+<td>将栈顶double型数值存入指定本地变量</td>
+</tr>
+<tr>
+<td>astore</td>
+<td>将栈顶引用类型数值存入指定本地变量</td>
+</tr>
+<tr>
+<td>istore_0</td>
+<td>将栈顶int型数值存入第一个本地变量</td>
+</tr>
+<tr>
+<td>istore_1</td>
+<td>将栈顶int型数值存入第二个本地变量</td>
+</tr>
+<tr>
+<td>istore_2</td>
+<td>将栈顶int型数值存入第三个本地变量</td>
+</tr>
+<tr>
+<td>istore_3</td>
+<td>将栈顶int型数值存入第四个本地变量</td>
+</tr>
+<tr>
+<td>lstore_0</td>
+<td>将栈顶long型数值存入第一个本地变量</td>
+</tr>
+<tr>
+<td>lstore_1</td>
+<td>将栈顶long型数值存入第二个本地变量</td>
+</tr>
+<tr>
+<td>lstore_2</td>
+<td>将栈顶long型数值存入第三个本地变量</td>
+</tr>
+<tr>
+<td>lstore_3</td>
+<td>将栈顶long型数值存入第四个本地变量</td>
+</tr>
+<tr>
+<td>fstore_0</td>
+<td>将栈顶float型数值存入第一个本地变量</td>
+</tr>
+<tr>
+<td>fstore_1</td>
+<td>将栈顶float型数值存入第二个本地变量</td>
+</tr>
+<tr>
+<td>fstore_2</td>
+<td>将栈顶float型数值存入第三个本地变量</td>
+</tr>
+<tr>
+<td>fstore_3</td>
+<td>将栈顶float型数值存入第四个本地变量</td>
+</tr>
+<tr>
+<td>dstore_0</td>
+<td>将栈顶double型数值存入第一个本地变量</td>
+</tr>
+<tr>
+<td>dstore_1</td>
+<td>将栈顶double型数值存入第二个本地变量</td>
+</tr>
+<tr>
+<td>dstore_2</td>
+<td>将栈顶double型数值存入第三个本地变量</td>
+</tr>
+<tr>
+<td>dstore_3</td>
+<td>将栈顶double型数值存入第四个本地变量</td>
+</tr>
+<tr>
+<td>astore_0</td>
+<td>将栈顶引用型数值存入第一个本地变量</td>
+</tr>
+<tr>
+<td>astore_1</td>
+<td>将栈顶引用型数值存入第二个本地变量</td>
+</tr>
+<tr>
+<td>astore_2</td>
+<td>将栈顶引用型数值存入第三个本地变量</td>
+</tr>
+<tr>
+<td>astore_3</td>
+<td>将栈顶引用型数值存入第四个本地变量</td>
+</tr>
+<tr>
+<td>iastore</td>
+<td>将栈顶int型数值存入指定数组的指定索引位置</td>
+</tr>
+<tr>
+<td>lastore</td>
+<td>将栈顶long型数值存入指定数组的指定索引位置</td>
+</tr>
+<tr>
+<td>fastore</td>
+<td>将栈顶float型数值存入指定数组的指定索引位置</td>
+</tr>
+<tr>
+<td>dastore</td>
+<td>将栈顶double型数值存入指定数组的指定索引位置</td>
+</tr>
+<tr>
+<td>aastore</td>
+<td>将栈顶引用型数值存入指定数组的指定索引位置</td>
+</tr>
+<tr>
+<td>bastore</td>
+<td>将栈顶boolean或byte型数值存入指定数组的指定索引位置</td>
+</tr>
+<tr>
+<td>castore</td>
+<td>将栈顶char型数值存入指定数组的指定索引位置</td>
+</tr>
+<tr>
+<td>sastore</td>
+<td>将栈顶short型数值存入指定数组的指定索引位置</td>
+</tr>
+<tr>
+<td>pop</td>
+<td>将栈顶数值弹出(数值不能是long或double类型的)</td>
+</tr>
+<tr>
+<td>pop2</td>
+<td>将栈顶的一个(对于非long或double类型)或两个数值(对于非long或double的其他类型)弹出</td>
+</tr>
+<tr>
+<td>dup</td>
+<td>复制栈顶数值并将复制值压入栈顶</td>
+</tr>
+<tr>
+<td>dup_x1	复制栈顶数值并将两个复制值压入栈顶</td>
+<td></td>
+</tr>
+<tr>
+<td>dup_x2	复制栈顶数值并将三个(或两个)复制值压入栈顶</td>
+<td></td>
+</tr>
+<tr>
+<td>dup2</td>
+<td>复制栈顶一个(对于long或double类型)或两个(对于非long或double的其他类型)数值并将复制值压入栈顶</td>
+</tr>
+<tr>
+<td>dup2_x1</td>
+<td>dup_x1指令的双倍版本</td>
+</tr>
+<tr>
+<td>dup2_x2</td>
+<td>dup_x2指令的双倍版本</td>
+</tr>
+<tr>
+<td>swap</td>
+<td>将栈顶最顶端的两个数值互换(数值不能是long或double类型)</td>
+</tr>
+<tr>
+<td>iadd</td>
+<td>将栈顶两int型数值相加并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>ladd</td>
+<td>将栈顶两long型数值相加并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>fadd</td>
+<td>将栈顶两float型数值相加并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>dadd</td>
+<td>将栈顶两double型数值相加并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>isub</td>
+<td>将栈顶两int型数值相减并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lsub</td>
+<td>将栈顶两long型数值相减并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>fsub</td>
+<td>将栈顶两float型数值相减并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>dsub</td>
+<td>将栈顶两double型数值相减并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>imul</td>
+<td>将栈顶两int型数值相乘并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lmul</td>
+<td>将栈顶两long型数值相乘并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>fmul</td>
+<td>将栈顶两float型数值相乘并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>dmul</td>
+<td>将栈顶两double型数值相乘并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>idiv</td>
+<td>将栈顶两int型数值相除并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>ldiv</td>
+<td>将栈顶两long型数值相除并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>fdiv</td>
+<td>将栈顶两float型数值相除并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>ddiv</td>
+<td>将栈顶两double型数值相除并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>irem</td>
+<td>将栈顶两int型数值作取模运算并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lrem</td>
+<td>将栈顶两long型数值作取模运算并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>frem</td>
+<td>将栈顶两float型数值作取模运算并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>drem</td>
+<td>将栈顶两double型数值作取模运算并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>ineg</td>
+<td>将栈顶int型数值取负并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lneg</td>
+<td>将栈顶long型数值取负并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>fneg</td>
+<td>将栈顶float型数值取负并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>dneg</td>
+<td>将栈顶double型数值取负并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>ishl</td>
+<td>将int型数值左移指定位数并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lshl</td>
+<td>将long型数值左移指定位数并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>ishr</td>
+<td>将int型数值右(带符号)移指定位数并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lshr</td>
+<td>将long型数值右(带符号)移指定位数并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>iushr</td>
+<td>将int型数值右(无符号)移指定位数并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lushr</td>
+<td>将long型数值右(无符号)移指定位数并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>iand</td>
+<td>将栈顶两int型数值”按位与”并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>land</td>
+<td>将栈顶两long型数值”按位与”并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>ior</td>
+<td>将栈顶两int型数值”按位或”并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lor</td>
+<td>将栈顶两long型数值”按位或”并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>ixor</td>
+<td>将栈顶两int型数值”按位异或”并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lxor</td>
+<td>将栈顶两long型数值”按位异或”并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>iinc</td>
+<td>将指定int型变量增加指定值(如i++, i—, i+=2等)</td>
+</tr>
+<tr>
+<td>i2l</td>
+<td>将栈顶int型数值强制转换为long型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>i2f</td>
+<td>将栈顶int型数值强制转换为float型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>i2d</td>
+<td>将栈顶int型数值强制转换为double型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>l2i</td>
+<td>将栈顶long型数值强制转换为int型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>l2f</td>
+<td>将栈顶long型数值强制转换为float型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>l2d</td>
+<td>将栈顶long型数值强制转换为double型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>f2i</td>
+<td>将栈顶float型数值强制转换为int型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>f2l</td>
+<td>将栈顶float型数值强制转换为long型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>f2d</td>
+<td>将栈顶float型数值强制转换为double型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>d2i</td>
+<td>将栈顶double型数值强制转换为int型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>d2l</td>
+<td>将栈顶double型数值强制转换为long型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>d2f</td>
+<td>将栈顶double型数值强制转换为float型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>i2b</td>
+<td>将栈顶int型数值强制转换为byte型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>i2c</td>
+<td>将栈顶int型数值强制转换为char型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>i2s</td>
+<td>将栈顶int型数值强制转换为short型数值并将结果压入栈顶</td>
+</tr>
+<tr>
+<td>lcmp</td>
+<td>比较栈顶两long型数值大小, 并将结果(1, 0或-1)压入栈顶</td>
+</tr>
+<tr>
+<td>fcmpl</td>
+<td>比较栈顶两float型数值大小, 并将结果(1, 0或-1)压入栈顶; 当其中一个数值为NaN时, 将-1压入栈顶</td>
+</tr>
+<tr>
+<td>fcmpg</td>
+<td>比较栈顶两float型数值大小, 并将结果(1, 0或-1)压入栈顶; 当其中一个数值为NaN时, 将1压入栈顶</td>
+</tr>
+<tr>
+<td>dcmpl</td>
+<td>比较栈顶两double型数值大小, 并将结果(1, 0或-1)压入栈顶; 当其中一个数值为NaN时, 将-1压入栈顶</td>
+</tr>
+<tr>
+<td>dcmpg</td>
+<td>比较栈顶两double型数值大小, 并将结果(1, 0或-1)压入栈顶; 当其中一个数值为NaN时, 将1压入栈顶</td>
+</tr>
+<tr>
+<td>ifeq</td>
+<td>当栈顶int型数值等于0时跳转</td>
+</tr>
+<tr>
+<td>ifne</td>
+<td>当栈顶int型数值不等于0时跳转</td>
+</tr>
+<tr>
+<td>iflt</td>
+<td>当栈顶int型数值小于0时跳转</td>
+</tr>
+<tr>
+<td>ifge</td>
+<td>当栈顶int型数值大于等于0时跳转</td>
+</tr>
+<tr>
+<td>ifgt</td>
+<td>当栈顶int型数值大于0时跳转</td>
+</tr>
+<tr>
+<td>ifle</td>
+<td>当栈顶int型数值小于等于0时跳转</td>
+</tr>
+<tr>
+<td>if_icmpeq</td>
+<td>比较栈顶两int型数值大小, 当结果等于0时跳转</td>
+</tr>
+<tr>
+<td>if_icmpne</td>
+<td>比较栈顶两int型数值大小, 当结果不等于0时跳转</td>
+</tr>
+<tr>
+<td>if_icmplt</td>
+<td>比较栈顶两int型数值大小, 当结果小于0时跳转</td>
+</tr>
+<tr>
+<td>if_icmpge</td>
+<td>比较栈顶两int型数值大小, 当结果大于等于0时跳转</td>
+</tr>
+<tr>
+<td>if_icmpgt</td>
+<td>比较栈顶两int型数值大小, 当结果大于0时跳转</td>
+</tr>
+<tr>
+<td>if_icmple</td>
+<td>比较栈顶两int型数值大小, 当结果小于等于0时跳转</td>
+</tr>
+<tr>
+<td>if_acmpeq</td>
+<td>比较栈顶两引用型数值, 当结果相等时跳转</td>
+</tr>
+<tr>
+<td>if_acmpne</td>
+<td>比较栈顶两引用型数值, 当结果不相等时跳转</td>
+</tr>
+<tr>
+<td>goto</td>
+<td>无条件跳转</td>
+</tr>
+<tr>
+<td>jsr</td>
+<td>跳转至指定的16位offset位置, 并将jsr的下一条指令地址压入栈顶</td>
+</tr>
+<tr>
+<td>ret</td>
+<td>返回至本地变量指定的index的指令位置(一般与jsr或jsr_w联合使用)</td>
+</tr>
+<tr>
+<td>tableswitch</td>
+<td>用于switch条件跳转, case值连续(可变长度指令)</td>
+</tr>
+<tr>
+<td>lookupswitch</td>
+<td>用于switch条件跳转, case值不连续(可变长度指令)</td>
+</tr>
+<tr>
+<td>ireturn</td>
+<td>从当前方法返回int</td>
+</tr>
+<tr>
+<td>lreturn</td>
+<td>从当前方法返回long</td>
+</tr>
+<tr>
+<td>freturn</td>
+<td>从当前方法返回float</td>
+</tr>
+<tr>
+<td>dreturn</td>
+<td>从当前方法返回double</td>
+</tr>
+<tr>
+<td>areturn</td>
+<td>从当前方法返回对象引用</td>
+</tr>
+<tr>
+<td>return</td>
+<td>从当前方法返回void</td>
+</tr>
+<tr>
+<td>getstatic</td>
+<td>获取指定类的静态域, 并将其压入栈顶</td>
+</tr>
+<tr>
+<td>putstatic</td>
+<td>为指定类的静态域赋值</td>
+</tr>
+<tr>
+<td>getfield</td>
+<td>获取指定类的实例域, 并将其压入栈顶</td>
+</tr>
+<tr>
+<td>putfield</td>
+<td>为指定类的实例域赋值</td>
+</tr>
+<tr>
+<td>invokevirtual</td>
+<td>调用实例方法</td>
+</tr>
+<tr>
+<td>invokespecial</td>
+<td>调用超类构建方法, 实例初始化方法, 私有方法</td>
+</tr>
+<tr>
+<td>invokestatic</td>
+<td>调用静态方法</td>
+</tr>
+<tr>
+<td>invokeinterface</td>
+<td>调用接口方法</td>
+</tr>
+<tr>
+<td>invokedynamic</td>
+<td>调用动态方法</td>
+</tr>
+<tr>
+<td>new</td>
+<td>创建一个对象, 并将其引用引用值压入栈顶</td>
+</tr>
+<tr>
+<td>newarray</td>
+<td>创建一个指定的原始类型(如int, float, char等)的数组, 并将其引用值压入栈顶</td>
+</tr>
+<tr>
+<td>anewarray</td>
+<td>创建一个引用型(如类, 接口, 数组)的数组, 并将其引用值压入栈顶</td>
+</tr>
+<tr>
+<td>arraylength</td>
+<td>获取数组的长度值并压入栈顶</td>
+</tr>
+<tr>
+<td>athrow</td>
+<td>将栈顶的异常抛出</td>
+</tr>
+<tr>
+<td>checkcast</td>
+<td>检验类型转换, 检验未通过将抛出 ClassCastException</td>
+</tr>
+<tr>
+<td>instanceof</td>
+<td>检验对象是否是指定类的实际, 如果是将1压入栈顶, 否则将0压入栈顶</td>
+</tr>
+<tr>
+<td>monitorenter</td>
+<td>获得对象的锁, 用于同步方法或同步块</td>
+</tr>
+<tr>
+<td>monitorexit</td>
+<td>释放对象的锁, 用于同步方法或同步块</td>
+</tr>
+<tr>
+<td>wide</td>
+<td>扩展本地变量的宽度</td>
+</tr>
+<tr>
+<td>multianewarray</td>
+<td>创建指定类型和指定维度的多维数组(执行该指令时, 操作栈中必须包含各维度的长度值), 并将其引用压入栈顶</td>
+</tr>
+<tr>
+<td>ifnull</td>
+<td>为null时跳转</td>
+</tr>
+<tr>
+<td>ifnonnull</td>
+<td>不为null时跳转</td>
+</tr>
+<tr>
+<td>goto_w</td>
+<td>无条件跳转(宽索引)</td>
+</tr>
+<tr>
+<td>jsr_w</td>
+<td>跳转至指定的32位offset位置, 并将jsr_w的下一条指令地址压入栈顶</td>
+</tr>
+</tbody>
+</table>
+<h2 id="计算模型" style="position:relative;"><a href="#%E8%AE%A1%E7%AE%97%E6%A8%A1%E5%9E%8B" aria-label="计算模型 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>计算模型</h2>
+<p>Java字节码的计算模型是面向堆栈结构计算机的。例如，一个x86处理器的汇编代码如下</p>
+<div class="gatsby-highlight" data-language="shell"><pre class="language-shell"><code class="language-shell">mov eax, byte <span class="token punctuation">[</span>ebp-4<span class="token punctuation">]</span>
+mov edx, byte <span class="token punctuation">[</span>ebp-8<span class="token punctuation">]</span>
+<span class="token function">add</span> eax, edx
+mov ecx, eax</code></pre></div>
+<p>这段代码将两个数值相加，并存入另一个地址。相似的反汇编字节码如下</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"><span class="token number">0</span> iload_1
+<span class="token number">1</span> iload_2
+<span class="token number">2</span> iadd
+<span class="token number">3</span> istore_3</code></pre></div>
+<p>在这里，需要相加的两个操作数被放入堆栈，而相加操作就在栈中进行，其结果也被放入堆栈。存储指令之后把栈顶的数据放入一个变量地址。在每条指令前面的数字仅仅是表示这条指令到方法开始处的偏移值。这种堆栈结构也可以推广到面向对象模型上。例如，有一个”getName”方法如下</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java"> <span class="token class-name">Method</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span></span>String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+ <span class="token number">0</span> aload_0       <span class="token comment">// "this"对象被存入变量0</span>
+ <span class="token number">1</span> getfield #<span class="token number">5</span> <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Field</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>lang<span class="token punctuation">.</span></span>String</span> name<span class="token punctuation">></span></span>
+                 <span class="token comment">// 这个指令从栈顶取出一个对象，并从中搜索一个指定的域</span>
+                 <span class="token comment">// 并将相应的数据存入栈顶。</span>
+                 <span class="token comment">// 这个例子中，"name"域对应于该类中的第五个常量。</span>
+ 
+ <span class="token number">4</span> areturn  	 <span class="token comment">// 返回栈顶的对象作为函数的返回值</span></code></pre></div>
+<h2 id="例子" style="position:relative;"><a href="#%E4%BE%8B%E5%AD%90" aria-label="例子 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例子</h2>
+<p>考虑如下Java代码</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">  outer<span class="token operator">:</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">1000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">%</span> j <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+              <span class="token keyword">continue</span> outer<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span>println <span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre></div>
+<p>假设上述代码位于一个函数中，Java编译器可能将代码翻译成下述的Java字节码。</p>
+<div class="gatsby-highlight" data-language="java"><pre class="language-java"><code class="language-java">  <span class="token number">0</span><span class="token operator">:</span>   iconst_2
+  <span class="token number">1</span><span class="token operator">:</span>   istore_1
+  <span class="token number">2</span><span class="token operator">:</span>   iload_1
+  <span class="token number">3</span><span class="token operator">:</span>   sipush  <span class="token number">1000</span>
+  <span class="token number">6</span><span class="token operator">:</span>   if_icmpge       <span class="token number">44</span>
+  <span class="token number">9</span><span class="token operator">:</span>   iconst_2
+  <span class="token number">10</span><span class="token operator">:</span>  istore_2
+  <span class="token number">11</span><span class="token operator">:</span>  iload_2
+  <span class="token number">12</span><span class="token operator">:</span>  iload_1
+  <span class="token number">13</span><span class="token operator">:</span>  if_icmpge       <span class="token number">31</span>
+  <span class="token number">16</span><span class="token operator">:</span>  iload_1
+  <span class="token number">17</span><span class="token operator">:</span>  iload_2
+  <span class="token number">18</span><span class="token operator">:</span>  irem
+  <span class="token number">19</span><span class="token operator">:</span>  ifne    <span class="token number">25</span>
+  <span class="token number">22</span><span class="token operator">:</span>  <span class="token keyword">goto</span>    <span class="token number">38</span>
+  <span class="token number">25</span><span class="token operator">:</span>  iinc    <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span>
+  <span class="token number">28</span><span class="token operator">:</span>  <span class="token keyword">goto</span>    <span class="token number">11</span>
+  <span class="token number">31</span><span class="token operator">:</span>  getstatic       #<span class="token number">84</span><span class="token punctuation">;</span> <span class="token comment">//Field java/lang/System.out:Ljava/io/PrintStream;</span>
+  <span class="token number">34</span><span class="token operator">:</span>  iload_1
+  <span class="token number">35</span><span class="token operator">:</span>  invokevirtual   #<span class="token number">85</span><span class="token punctuation">;</span> <span class="token comment">//Method java/io/PrintStream.println:(I)V</span>
+  <span class="token number">38</span><span class="token operator">:</span>  iinc    <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span>
+  <span class="token number">41</span><span class="token operator">:</span>  <span class="token keyword">goto</span>    <span class="token number">2</span>
+  <span class="token number">44</span><span class="token operator">:</span>  <span class="token keyword">return</span></code></pre></div>
+<h2 id="基于java字节码的语言" style="position:relative;"><a href="#%E5%9F%BA%E4%BA%8Ejava%E5%AD%97%E8%8A%82%E7%A0%81%E7%9A%84%E8%AF%AD%E8%A8%80" aria-label="基于java字节码的语言 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>基于Java字节码的语言</h2>
+<p>Groovy, 一种基于Java的脚本语言
+Scala,一种类型安全的通用编程语言，支持面向对象编程和函数式编程
+Clojure, 一种函数式的通用编程语言，提供优秀的并发性。是一种LISP方言</p>
+<h2 id="对动态语言的支持" style="position:relative;"><a href="#%E5%AF%B9%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80%E7%9A%84%E6%94%AF%E6%8C%81" aria-label="对动态语言的支持 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>对动态语言的支持</h2>
+<p>Java虚拟机对动态类型语言提供了一定的支持。但绝大多数的Java虚拟机指令集是基于静态类型语言的。在静态类型机制下，方法调用中的类型分析都是在编译时执行的，而且缺乏一种机制在运行时确定一个类型已经确定相应的方法。</p>
+<p>JSR292中，在Java虚拟机层次增加了一种支持动态类型的指令<code class="language-text">invokedynamic</code>，以支持在动态类型检测中的方法调用。 达芬奇机器则是一种支持这种动态类型调用的虚拟机。 而所有支持JSE 7的Java虚拟机都应支持<code class="language-text">invokedynamic</code>操作码。</p>
+<h2 id="参考连接" style="position:relative;"><a href="#%E5%8F%82%E8%80%83%E8%BF%9E%E6%8E%A5" aria-label="参考连接 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参考连接</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions">https://en.wikipedia.org/wiki/List_of_Java_bytecode_instructions</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/Java%E5%AD%97%E8%8A%82%E7%A0%81#cite_note-5">https://zh.wikipedia.org/wiki/Java%E5%AD%97%E8%8A%82%E7%A0%81#cite_note-5</a></li>
+</ul></div><hr/><ul class="button-wrapper"><li><a rel="prev" href="/software-architecture-summarize/"><button>Prev: <!-- -->软件架构的概述和构件</button></a></li><li><a rel="next" href="/wind-term-hanging-problem/"><button>Next: <!-- -->WindTerm 2.5.0 输入用户名后假死卡住的解决办法</button></a></li></ul></article></div><footer><div class="social-media" style="margin-bottom:1rem"><a target="_blank" href="https://weibo.com/227307890"><i class="iconfont icon-weibo"></i></a><a target="_blank" href="https://github.com/funny-eagle"><i class="iconfont icon-github-fill"></i></a><a target="_blank" href="https://twitter.com/yangjinlong86"><i class="iconfont icon-twitter"></i></a><a target="_blank" href="http://funnyeagle.cn/rss.xml"><i class="iconfont icon-rss"></i></a></div><div style="margin-bottom:1rem">© <!-- --> funnyeagle.cn • Theme<!-- --> <a class="usubeni" target="_blank" href="https://github.com/ssshooter/gatsby-theme-usubeni">usubeni</a> <!-- -->• Powered by<!-- --> <a class="usubeni" target="_blank" href="https://www.gatsbyjs.org/">Gatsbyjs</a><br/><a href="https://beian.miit.gov.cn">蜀ICP备2023036051号-1</a></div></footer><div class="theme-toggle">☾</div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script async="" src="https://www.googletagmanager.com/gtag/js?id="></script><script>
+      
+      
+      if(true) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        
+      }
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/java-bytecode-and-instructions/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-ea1e2944252ed1e1ffda.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-b81586779339e2dd86bc.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-03dff12640c42a375801.js\"],\"component---src-pages-links-js\":[\"/component---src-pages-links-js-39218d7f284e5a25cc41.js\"],\"component---src-pages-tags-js\":[\"/component---src-pages-tags-js-e5441a3187a12371e306.js\"],\"component---src-templates-blog-post-js\":[\"/component---src-templates-blog-post-js-9bcd925b14c678c9b352.js\"],\"component---src-templates-index-js\":[\"/component---src-templates-index-js-8e89345a3850a085d237.js\"],\"component---src-templates-tag-js\":[\"/component---src-templates-tag-js-397b9b04e801d18d9105.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="9ec9ff17e67c2e3fd03b";</script><script src="/webpack-runtime-fb4a5761ed62d3a52abe.js" async></script><script src="/framework-ebc0d138c46b9b8414fe.js" async></script><script src="/app-ea1e2944252ed1e1ffda.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
