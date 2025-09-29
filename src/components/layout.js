@@ -8,6 +8,19 @@ let footerStyle = {
   marginBottom: '1rem',
 }
 
+// 布局容器样式
+const layoutContainerStyle = {
+  minHeight: '100vh', // 确保容器至少占满整个视口高度
+  display: 'flex',
+  flexDirection: 'column',
+}
+
+// 主内容区域样式
+const mainContentStyle = {
+  flexGrow: 1, // 让主内容区域自动填充剩余空间
+  width: '100%',
+}
+
 // 布局组件，用于管理网站的整体布局
 class Layout extends React.Component {
   // 组件状态，包含菜单状态、搜索关键词、动画、年份、天数、主题和logo等
@@ -126,8 +139,8 @@ class Layout extends React.Component {
     const descript = <div className="page-description">{pageDescript}</div>
     
     return (
-      <div className={className}>
-        <div className="css-main">
+      <div className={className} style={layoutContainerStyle}>
+        <div className="css-main" style={mainContentStyle}>
           {/* 侧边栏 */}
           <aside className={'css-aside ' + (menuState ? 'open' : 'close')}>
             <header className="css-header">
@@ -164,7 +177,7 @@ class Layout extends React.Component {
           {/* 主内容区域 */}
           <article className="css-post">{children}</article>
         </div>
-        {/* 页脚 */}
+        {/* 页脚 - 现在会始终显示在页面底部 */}
         <footer>
           <div className="social-media" style={footerStyle}>
             {socialMedia.map((item) => (
