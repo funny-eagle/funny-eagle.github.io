@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Comment from '../components/Comment'
+import GiscusComment from '../components/GiscusComment'
 import { recommend, friends } from '../settings'
 import SEO from '../components/Seo'
 
@@ -39,7 +39,7 @@ const Links = ({ location: { pathname } }) => (
     <LinkList list={recommend} />
     <h2>友链</h2>
     <LinkList list={friends} />
-    <Comment slug={'/links/'} />
+    <GiscusComment slug={'/links/'} />
   </Layout>
 )
 

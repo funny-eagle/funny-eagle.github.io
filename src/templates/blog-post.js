@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Info from '../components/PostInfo'
 import SEO from '../components/Seo'
+import GiscusComment from '../components/GiscusComment'
 // 引入代码高亮组件
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader";
 // 初始化代码高亮组件
@@ -96,6 +97,9 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        
+        {/* 添加Giscus评论组件 */}
+        <GiscusComment slug={slug} />
       </Layout>
     )
   }
