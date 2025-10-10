@@ -4,19 +4,19 @@ export const apiUrl = 'https://funnyeagle.cn'
 
 // Giscus评论系统配置
 export const giscusConfig = {
-  enabled: true, 
-  repo: 'funny-eagle/funny-eagle.github.io', 
-  repoId: 'MDEwOlJlcG9zaXRvcnk1NTI1NDYxMg==', 
-  category: 'Comments', 
-  categoryId: 'DIC_kwDOA0seVM4CwBGj',
-  mapping: 'pathname',
-  reactionsEnabled: '1',
-  emitMetadata: '0', 
-  inputPosition: 'bottom',
-  theme: 'preferred_color_scheme', // 主题 ('light', 'dark', 'preferred_color_scheme', 'transparent_dark'等)
-  lang: 'zh-CN', 
-  loading: 'lazy'
-}
+    enabled: true, 
+    repo: 'funny-eagle/funny-eagle.github.io', 
+    repoId: 'MDEwOlJlcG9zaXRvcnk1NTI1NDYxMg==', 
+    category: 'Comments', 
+    categoryId: 'DIC_kwDOA0seVM4CwBGj',
+    mapping: 'pathname',
+    reactionsEnabled: '1',
+    emitMetadata: '0', 
+    inputPosition: 'bottom',
+    theme: 'dark', // 修改为dark主题
+    lang: 'zh-CN', 
+    loading: 'lazy'
+  }
 
 export const menu = [
   {

@@ -2,14 +2,28 @@
 title: '关于'
 date: '2019-02-14T00:00:00.000Z'
 ---
-> 写写代码，弹弹吉他。
 
-<iframe style="border-radius:12px" src="//music.163.com/outchain/player?type=2&id=2029572640&auto=1&height=66" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+欢迎来访 Funny Eagle
 
-你好，欢迎来访 Funny Eagle Blog。
+本站主要发布一些个人技术成长相关内容。
 
-本站主要发布一些个人技术成长的短文和日常练琴的相关内容。
+### 微信小程序
 
-欢迎加入`FunnyEagle`博客交流QQ群！
+节拍器、吉他调音器，提升吉他练习效率。
 
-![qq](./IMG_2096.jpeg)
+<div style="text-align: center;width: 100px;height: 100px">
+    <img src="./weapp.png" alt="节拍器微信小程序">
+</div>
+
+
+### 博客交流群
+
+欢迎加群交流 QQ群：131630208
+
+<div style="text-align: center;width: 100px;height: 150px">
+    <img src="./qqgroup.png" alt="QQ群">
+</div>
+
+
+
+

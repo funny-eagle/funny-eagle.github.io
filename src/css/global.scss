@@ -5,33 +5,15 @@
   --radius: 0.5rem;
 }
 
-.light-theme {
-  --backgroundColor: #f6f7fa;
-  --backgroundColor2: #ffffff;
-  --mainColor: #0a0a04;
-  --mainDerive1: #046f3b;
-  --mainDerive2: #0a0a04;
-  --mainDerive3: #c6cb07;
-  --linkColor: #046f3b;
-  --fontColor: hsl(284, 20%, 30%);
-  --codeBlock: #3c495b;
-  --code: #c3c7cb;
-  --divider: rgb(214, 214, 214);
-  --buttonColor: #ffffff;
-  --buttonBackgroundColor: #09aa6f;
-  --hrColor: #dfdfdf;
-  --tableHeadColor: #f8f9fa;
-  --shadow: 0 4px 10px rgba(0, 2, 4, 0.06), 0 0 1px rgba(0, 2, 4, 0.11);
-}
-
+// 只保留dark-theme，移除light-theme
 .dark-theme {
   --backgroundColor: rgb(40 40 40);
   --backgroundColor2: #212327;
-  --mainColor: #e8fa7f;
+  --mainColor: #ceee1c;
   --mainDerive1: #09aa6f;
-  --mainDerive2: #e8fa7f;
-  --mainDerive3: #e8fa7f;
-  --linkColor: #09aa6f;
+  --mainDerive2: #09aa6f;
+  --mainDerive3: #09aa6f;
+  --linkColor: #0ccc6f;
   --fontColor: #e5e5e5;
   --codeBlock: #181818;
   --code: #c3c7cb;
@@ -56,9 +38,7 @@
 @import './boxes.scss';
 
 @import './link.scss';
-@import './prism-dark.scss';
-@import './prism-light.scss';
-
+@import './prism-dark.scss'; // 只保留暗色主题的代码高亮样式
 .iconfont {
   font-family: 'iconfont' !important;
   font-style: normal;
@@ -265,7 +245,7 @@ button {
       display: block;
       font-size: 1.5rem;
       font-weight: bold;
-      color: #e8fa7f;
+      color: #ceee1c;
       margin-left: 2rem;
     }
   }

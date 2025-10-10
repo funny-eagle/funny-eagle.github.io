@@ -36,40 +36,23 @@ class Layout extends React.Component {
   
   // 组件挂载后执行的生命周期方法
   componentDidMount() {
+    // 直接设置为dark主题，不再支持切换
+    this.setTheme('dark');
+    
     this.setState({
-      theme: window.theme,
+      theme: 'dark',
       year: new Date().getFullYear(),
       logo: "/funny-eagle-light.jpg",
-    })
-
-    // 监听系统暗色模式变化
-    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    darkModeMediaQuery.addListener((e) => {
-      const darkModeOn = e.matches
-      if (darkModeOn) {
-        this.setTheme('dark')
-      } else {
-        this.setTheme('light')
-      }
-    })
+    });
   }
   
-  // 切换主题模式
-  toggleTheme = () => {
-    if (this.state.theme === 'light') {
-      this.setTheme('dark')
-    } else {
-      this.setTheme('light')
-    }
-  }
-  
-  // 设置主题
+  // 设置主题（只保留dark主题设置）
   setTheme = (themeName) => {
-    localStorage.setItem('theme', themeName)
-    document.documentElement.className = themeName + '-theme'
+    localStorage.setItem('theme', 'dark'); // 强制使用dark主题
+    document.documentElement.className = 'dark-theme';
     this.setState({
-      theme: themeName,
-    })
+      theme: 'dark',
+    });
   }
   
   // 切换菜单状态
@@ -209,11 +192,6 @@ class Layout extends React.Component {
             
           </div>
         </footer>
-      
-        {/* 主题切换按钮 */}
-        <div className="theme-toggle" onClick={this.toggleTheme}>
-          {theme === 'light' ? '☀' : '☾'}
-        </div>
       </div>
     )
   }

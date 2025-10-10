@@ -12,17 +12,6 @@
   > ul > li {
     padding-left: 6px;
   }
-  // > ul > li:before {
-  //   content: '';
-  //   position: relative;
-  //   display: inline-block;
-  //   width: 5px;
-  //   height: 5px;
-  //   left: -4px;
-  //   background-color: var(--mainColor);
-  //   border-radius: 50%;
-  //   margin-right: 5px;
-  // }
   a {
     display: inline-block;
     width: 100%;
@@ -30,7 +19,7 @@
     box-shadow: none;
     text-overflow: ellipsis;
     overflow: hidden;
-    padding-top: 2px; // 不知道为啥 a 就是不在 p 中间
+    padding-top: 2px;
     vertical-align: middle;
   }
   .active {
