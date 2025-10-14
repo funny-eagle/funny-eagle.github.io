@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Menu from './Menu'
+import HackerBackground from './HackerBackground'
 import { siteName, socialMedia } from '../settings'
 
 // 页脚样式
@@ -104,7 +105,7 @@ class Layout extends React.Component {
             textDecoration: 'none',
             fontWeight: 200,
           }}
-          className="usubeni"
+          className="funnyeagle"
           to={'/'}
         >
           <span className="logo-mobile">{siteName}</span>
@@ -123,6 +124,7 @@ class Layout extends React.Component {
     
     return (
       <div className={className} style={layoutContainerStyle}>
+        <HackerBackground />
         <div className="css-main" style={mainContentStyle}>
           {/* 侧边栏 */}
           <aside className={'css-aside ' + (menuState ? 'open' : 'close')}>
@@ -160,7 +162,7 @@ class Layout extends React.Component {
           {/* 主内容区域 */}
           <article className="css-post">{children}</article>
         </div>
-        {/* 页脚 - 现在会始终显示在页面底部 */}
+        {/* 页脚 */}
         <footer>
           <div className="social-media" style={footerStyle}>
             {socialMedia.map((item) => (
@@ -171,17 +173,10 @@ class Layout extends React.Component {
           </div>
           <div style={footerStyle}>
             
-            © {year} funnyeagle.cn • Theme{' '}
-            <a
-              className="usubeni"
-              target="_blank"
-              href="https://github.com/ssshooter/gatsby-theme-usubeni"
-            >
-              usubeni
-            </a>{' '}
+            © <span className="year">{year}</span> funnyeagle.cn {' '}
             • Powered by{' '}
             <a
-              className="usubeni"
+              className="funnyeagle"
               target="_blank"
               href="https://www.gatsbyjs.org/"
             >

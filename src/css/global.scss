@@ -1,34 +1,41 @@
 @import './iconfont.css';
+@import './hacker-animate.scss';
 
-// USUBENI #e87a90
 :root {
   --radius: 0.5rem;
 }
 
-// 只保留dark-theme，移除light-theme
+// 黑客风格主题
 .dark-theme {
-  --backgroundColor: rgb(40 40 40);
-  --backgroundColor2: #212327;
-  --mainColor: #ceee1c;
-  --mainDerive1: #09aa6f;
-  --mainDerive2: #09aa6f;
-  --mainDerive3: #09aa6f;
-  --linkColor: #0ccc6f;
-  --fontColor: #e5e5e5;
-  --codeBlock: #181818;
-  --code: #c3c7cb;
-  --divider: #3e4b5e;
-  --buttonColor: #ffffff;
-  --buttonBackgroundColor: #09aa6f;
-  --hrColor: #5c5c5c;
-  --tableHeadColor: #3a3a3a;
-  --shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%);
+  --backgroundColor: #0a0a0a;
+  --backgroundColor2: #161b22;
+  --mainColor: #00ff41;
+  --mainDerive1: #00ff41;
+  --mainDerive2: #00ff41;
+  --mainDerive3: #00ff41;
+  --linkColor: #00ff41;
+  --fontColor: #e8e8e8;
+  --codeBlock: #000000;
+  --code: #e8e8e8;
+  --divider: #003b1f;
+  --buttonColor: #000000;
+  --buttonBackgroundColor: #00ff41;
+  --hrColor: #003b1f;
+  --tableHeadColor: #001a0d;
+  --shadow: 0 0 10px rgba(0, 255, 65, 0.3);
 }
 
 @import './toc.scss';
 @import './blockquote.scss';
-@import './h.scss';
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--mainColor);
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.8px;
+}
 @import './list.scss';
 @import './balloon.scss';
 @import './tag.scss';
@@ -60,7 +67,7 @@
   background: var(--mainDerive1);
 }
 
-.usubeni {
+.funnyeagle {
   color: grey;
 }
 .inline-block {
@@ -84,12 +91,14 @@ body {
   outline: none; // 去除点击外边框,点击无轮廓
   -webkit-touch-callout: none; // 长按链接不弹出菜单
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 去除点击高亮
-  font-family: 'Source Han Sans CN','PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei','Microsoft YaHei', 'Courier New', 'SimSun','STSong', 'Hiragino Sans GB', ;
+  font-family: 'Source Han Sans CN','PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei','Microsoft YaHei', 'SimSun','STSong', 'Hiragino Sans GB', sans-serif;
   -webkit-font-smoothing: antialiased !important;
   font-size: 16px;
   background-color: var(--backgroundColor);
   color: var(--fontColor);
   transition: background-color 0.5s ease-in-out;
+  text-shadow: 0 0 3px rgba(0, 255, 65, 0.3);
+  letter-spacing: 0.5px;
 }
 
 .mask {
@@ -146,6 +155,13 @@ footer {
   font-size: 14px;
   padding: 30px 0;
   text-align: center;
+  
+  .year {
+    font-family: 'Orbitron', monospace;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #cccccc;
+  }
 }
 
 table {
@@ -244,9 +260,12 @@ button {
     .logo-mobile {
       display: block;
       font-size: 1.5rem;
-      font-weight: bold;
-      color: #ceee1c;
+      font-weight: 900;
+      color: #00ff41;
       margin-left: 2rem;
+      text-shadow: 0 0 10px #00ff41;
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 1px;
     }
   }
 }
@@ -324,6 +343,17 @@ button {
   }
   .css-archive {
     padding: 15px 25px;
+    
+    .year-title {
+      font-family: 'Orbitron', monospace !important;
+      font-weight: 100 !important;
+      letter-spacing: 2px !important;
+      color: #cccccc !important;
+      text-shadow: 0 0 15px #cccccc !important;
+      text-transform: uppercase;
+      font-size: 1.5em !important;
+    }
+    
     .item {
       background-color: var(--backgroundColor2);
       border-radius: var(--radius);
@@ -337,6 +367,10 @@ button {
         text-align: left;
         margin-right: 10px;
         opacity: 0.6;
+        font-family: 'Orbitron', monospace;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: #00ff41;
       }
       .title {
         flex-grow: 1;

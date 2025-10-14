@@ -78,11 +78,12 @@
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    color: hsl(0, 0%, 47%); /* #777777 */
+    color: #6A9955; /* 绿色注释 */
   }
 
   .token.punctuation {
     opacity: 0.7;
+    color: #D4D4D4; /* 浅灰色标点 */
   }
 
   .namespace {
@@ -93,7 +94,7 @@
   .token.boolean,
   .token.number,
   .token.deleted {
-    color: hsl(14, 58%, 55%); /* #CF6A4C */
+    color: #569CD6; /* 蓝色标签和数字 */
   }
 
   .token.keyword,
@@ -102,7 +103,7 @@
   .token.constant,
   .token.symbol,
   .token.builtin {
-    color: hsl(53, 89%, 79%); /* #F9EE98 */
+    color: #C586C0; /* 紫色关键字 */
   }
 
   .token.attr-name,
@@ -116,16 +117,16 @@
   .style .token.string,
   .token.variable,
   .token.inserted {
-    color: hsl(76, 21%, 52%); /* #8F9D6A */
+    color: #CE9178; /* 橙色字符串 */
   }
 
   .token.atrule {
-    color: hsl(218, 22%, 55%); /* #7587A6 */
+    color: #DCDCAA; /* 浅黄色规则 */
   }
 
   .token.regex,
   .token.important {
-    color: hsl(42, 75%, 65%); /* #E9C062 */
+    color: #D16969; /* 红色正则 */
   }
 
   .token.important,

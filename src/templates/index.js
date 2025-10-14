@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Pagination from '../components/Pagination'
 import SEO from '../components/Seo'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 /**
  * 归档页面
  */
@@ -28,8 +28,8 @@ class BlogIndex extends React.Component {
                     posts[index - 1].node.frontmatter.year !==
                     node.frontmatter.year)) && (
                     <div
+                      className="year-title"
                       style={{
-                        fontSize: '1.8em',
                         marginTop: index === 0 ? '0rem' : '2rem',
                         marginBottom: '1.2rem',
                       }}

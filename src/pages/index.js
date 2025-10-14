@@ -18,6 +18,7 @@ function IndexPage({ data }) {
                   posts[index - 1].node.frontmatter.year !==
                   node.frontmatter.year)) && (
                     <div
+                      className="year-title"
                       style={{
                         fontSize: '1.8em',
                         marginTop: index === 0 ? '0rem' : '2rem',
