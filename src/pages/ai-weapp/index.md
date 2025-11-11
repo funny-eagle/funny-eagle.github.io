@@ -3,7 +3,7 @@ slug: "/ai-weapp"
 title: 使用CodeBuddy开发节拍器与调音器微信小程序
 date: 2025-10-10
 description: "使用CodeBuddy 开发微信小程序及使用感受。"
-tags: ['coding','ai','metronome','tuner']
+tags: ['coding','AI','metronome','tuner']
 
 ---
 
