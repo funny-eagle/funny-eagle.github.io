@@ -78,7 +78,7 @@ src/
 
 ## 🌐 在线访问
 
-项目部署在：https://funnyeagle.cn
+项目部署在：[https://funnyeagle.cn](https://funny-eagle.github.io/)
 
 ## 📄 许可证
 
